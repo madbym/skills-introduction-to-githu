@@ -1,0 +1,276 @@
+{% liquid
+  assign bundle_products = block.settings.products
+
+  if request.visual_preview_mode
+    assign bundle_products = collections.all.products | where: 'available' | slice: 0, 5
+    if block.settings.title != 'Bundle'
+      assign bundle_products = bundle_products | slice: 0, 1
+    endif
+  endif
+%}
+
+{% if bundle_products.size > 0 %}
+  <div
+    class="
+      cross-sell-block
+      {%- if block.settings.show_on_display == 'desktop_only' %} mobile-hide{% endif -%}
+      {%- if block.settings.show_on_display == 'mobile_only' %} desktop-hide{% endif -%}
+      {%- if block.settings.additional_class != blank %} {{ block.settings.additional_class }}{% endif -%}
+    "
+    style="
+      --margin-top: {{ block.settings.margin_top }}px;
+      --margin-bottom: {{ block.settings.margin_bottom }}px;
+    "
+    {{ block.shopify_attributes }}
+    {% if request.visual_preview_mode %}
+      data-visual-preview-mode
+    {% endif %}
+  >
+    {% render 'cross-sell', bundle_products: bundle_products, block: block %}
+  </div>
+{% endif %}
+
+{% stylesheet %}
+  .cross-sell-block {
+    display: block;
+    width: 100%;
+    margin-top: var(--margin-top);
+    margin-bottom: var(--margin-bottom);
+  }
+
+  shopify-visual-preview-block-list .cross-sell-block[data-visual-preview-mode] {
+    width: 400px;
+  }
+
+  shopify-visual-preview-block-list .cross-sell-block[data-visual-preview-mode]:has(cross-sell-component.cross-sell--column) {
+    width: 200px;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:cross_sell",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "show_on_display",
+      "label": "t:show_on_display",
+      "default": "desktop_and_mobile",
+      "options": [
+        { "value": "desktop_and_mobile", "label": "t:desktop_and_mobile" },
+        { "value": "desktop_only", "label": "t:desktop_only" },
+        { "value": "mobile_only", "label": "t:mobile_only" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:style"
+    },
+    {
+      "type": "select",
+      "id": "display_mode",
+      "label": "t:display_mode",
+      "default": "row",
+      "options": [
+        {
+          "value": "row",
+          "label": "t:row"
+        },
+        {
+          "value": "column",
+          "label": "t:column"
+        }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_card_border",
+      "label": "t:show_card_border",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:content"
+    },
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "t:products",
+      "info": "t:cross_sell_products_info"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:title_optional"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:description_optional"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "label": "t:show_image",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "t:image_width",
+      "default": 75,
+      "min": 60,
+      "max": 90,
+      "step": 5,
+      "unit": "px",
+      "visible_if": "{{ block.settings.show_image }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:image_optional",
+      "info": "t:image_cross_sell_optional_info",
+      "visible_if": "{{ block.settings.show_image }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_label",
+      "label": "t:show_product_label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_options_label",
+      "label": "t:show_options_label",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "price_position",
+      "label": "t:cross_sell_price_position",
+      "options": [
+        { "value": "next_to_title", "label": "t:next_to_title" },
+        { "value": "below_title", "label": "t:below_title" },
+        { "value": "inside_cart_add_button", "label": "t:inside_cart_add_button" }
+      ],
+      "default": "next_to_title"
+    },
+    {
+      "type": "select",
+      "id": "button_position",
+      "label": "t:cross_sell_button_position",
+      "options": [
+        { "value": "next_to_variant_select", "label": "t:next_to_variant_select" },
+        { "value": "below_variant_select", "label": "t:below_variant_select" }
+      ],
+      "default": "next_to_variant_select",
+      "visible_if": "{{ block.settings.display_mode == 'row' }}"
+    },
+    {
+      "type": "select",
+      "id": "button_content_type",
+      "label": "t:button_content_type",
+      "options": [
+        { "value": "text", "label": "t:text" },
+        { "value": "icon", "label": "t:icon" }
+      ],
+      "default": "text"
+    },
+    {
+      "type": "select",
+      "id": "button_content_icon",
+      "label": "t:icon",
+      "options": [
+        { "value": "local_mall", "label": "t:icons_list.local_mall" },
+        { "value": "garden_cart", "label": "t:icons_list.garden_cart" },
+        { "value": "shopping_cart", "label": "t:icons_list.shopping_cart" },
+        { "value": "shop", "label": "t:icons_list.shop" },
+        { "value": "work", "label": "t:icons_list.work" },
+        { "value": "money_bag", "label": "t:icons_list.money_bag" },
+        { "value": "luggage", "label": "t:icons_list.luggage" },
+        { "value": "shopping_bag", "label": "t:icons_list.shopping_bag" },
+        { "value": "shopping_basket", "label": "t:icons_list.shopping_basket" },
+        { "value": "shopping_bag_speed", "label": "t:icons_list.shopping_bag_speed" },
+        { "value": "store", "label": "t:icons_list.store" },
+        { "value": "storefront", "label": "t:icons_list.storefront" },
+        { "value": "add", "label": "t:icons_list.add" },
+        { "value": "bolt", "label": "t:icons_list.bolt" }
+      ],
+      "default": "add",
+      "visible_if": "{{ block.settings.button_content_type == 'icon' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:margins"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "t:margin_top",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "t:margin_bottom",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "t:advanced_settings"
+    },
+    {
+      "type": "text",
+      "id": "additional_class",
+      "label": "t:additional_class",
+      "info": "t:additional_class_info"
+    },
+    {
+      "type": "header",
+      "content": "t:go_further"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:go_further_description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:cross_sell",
+      "category": "t:cross_sell_and_upsell"
+    },
+    {
+      "name": "t:cross_sell_column",
+      "category": "t:cross_sell_and_upsell",
+      "settings": {
+        "display_mode": "column"
+      }
+    },
+    {
+      "name": "t:up_sell",
+      "category": "t:cross_sell_and_upsell",
+      "settings": {
+        "title": "t:presets.cross_sell.bundle_title_default",
+        "description": "t:presets.cross_sell.bundle_description_default",
+        "show_product_label": true,
+        "button_position": "below_variant_select"
+      }
+    }
+  ]
+}
+{% endschema %}

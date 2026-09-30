@@ -1,0 +1,1204 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "group_VW4Hi3": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_justify_desktop": "space-between",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "column-reverse"
+          },
+          "blocks": {
+            "badges_i9hDat": {
+              "type": "badges",
+              "name": "t:badges",
+              "settings": {},
+              "blocks": {
+                "badge_VEGRNK": {
+                  "type": "_badge",
+                  "settings": {
+                    "text": "LES RECHARGES ESSENTIELLES",
+                    "badge_style": "secondary"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "badge_VEGRNK"
+              ]
+            }
+          },
+          "block_order": [
+            "badges_i9hDat"
+          ]
+        },
+        "text_zLqMQw": {
+          "type": "text",
+          "name": "Titre",
+          "settings": {
+            "text": "<p>{{ product.title }}</p>",
+            "text_style": "h3",
+            "read_more_length": 200,
+            "read_more_text": "Voir plus",
+            "read_less_text": "Voir moins"
+          },
+          "blocks": {}
+        },
+        "text_yQdqF8": {
+          "type": "text",
+          "name": "Texte",
+          "settings": {
+            "text": "<p>La recharge triple de ton Filtre Robinet Lavabo : 6 à 9 mois de filtration d'avance.</p>",
+            "text_style": "paragraph",
+            "paragraph_font_size": "large",
+            "read_more_length": 60,
+            "read_more_text": "Voir plus",
+            "read_less_text": "Voir moins"
+          },
+          "blocks": {}
+        },
+        "price_yEeMeb": {
+          "type": "product-price",
+          "name": "t:price",
+          "settings": {
+            "product": "{{ closest.product }}",
+            "sales_badge": "percentage",
+            "show_sales_badge_text": true,
+            "text_style": "h6"
+          },
+          "blocks": {}
+        },
+        "group_pills": {
+          "type": "group",
+          "name": "Points forts",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_wrap_desktop": "wrap",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "row",
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "blocks": {
+            "icon_with_text_Th7tkP": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>3 sédiments</p>",
+                "font_weight": 500
+              }
+            },
+            "icon_with_text_hXzz18": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Un sédiment tous les 2 à 3 mois</p>",
+                "font_weight": 500
+              }
+            },
+            "icon_with_text_FZvw3l": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Installation en quelques secondes</p>",
+                "font_weight": 500
+              }
+            }
+          },
+          "block_order": [
+            "icon_with_text_Th7tkP",
+            "icon_with_text_hXzz18",
+            "icon_with_text_FZvw3l"
+          ]
+        },
+        "separator_AKgbEA": {
+          "type": "separator",
+          "name": "t:separator",
+          "settings": {},
+          "blocks": {}
+        },
+        "product_form_grYQk6": {
+          "type": "_product-form",
+          "name": "Formulaire de produit",
+          "settings": {},
+          "blocks": {
+            "product_variant_picker_xWC3wF": {
+              "type": "_product-variant-picker",
+              "name": "Sélecteur de variantes",
+              "settings": {
+                "show_selected_value": true
+              },
+              "blocks": {
+                "product-variant-popup": {
+                  "type": "_product-variant-popup",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {
+                    "show_on_option_name": "Taille",
+                    "button_label": "Guide des tailles"
+                  },
+                  "blocks": {
+                    "text_LfyX9A": {
+                      "type": "text",
+                      "name": "Titre",
+                      "settings": {
+                        "text": "<h1>Guide des tailles</h1>",
+                        "text_style": "h3",
+                        "read_more_length": 200,
+                        "read_more_text": "Voir plus",
+                        "read_less_text": "Voir moins",
+                        "margin_bottom": 10
+                      },
+                      "blocks": {}
+                    },
+                    "text_99rHbT": {
+                      "type": "text",
+                      "name": "Texte",
+                      "settings": {
+                        "text": "",
+                        "text_style": "paragraph",
+                        "read_more_length": 200,
+                        "read_more_text": "Voir plus",
+                        "read_less_text": "Voir moins"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_LfyX9A",
+                    "text_99rHbT"
+                  ]
+                }
+              },
+              "block_order": []
+            },
+            "product-add-to-cart-button": {
+              "type": "_product-add-to-cart-button",
+              "static": true,
+              "settings": {
+                "enable_sticky_add_to_cart": true,
+                "show_price": false,
+                "preorder_cart_message": "Livraison à partir du JJ/MM"
+              },
+              "blocks": {
+                "product-quantity-selector": {
+                  "type": "_product-quantity-selector",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-wishlist-button": {
+                  "type": "_add-to-wishlist-button",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "accelerated-checkout": {
+              "type": "_accelerated-checkout",
+              "disabled": true,
+              "static": true,
+              "settings": {},
+              "blocks": {}
+            },
+            "quantity_breaks": {
+              "type": "_quantity-breaks",
+              "name": "Réduction par quantité",
+              "settings": {
+                "label": "Choisis ta quantité :"
+              },
+              "blocks": {
+                "quantity_breaks_item_T3jIVH": {
+                  "type": "_quantity-breaks-item",
+                  "name": "1 pack",
+                  "settings": {
+                    "discount_type": "none",
+                    "discount_percentage": 0,
+                    "badge_position": "top",
+                    "badge_display": "overlap",
+                    "product_small_title": "pack",
+                    "product_small_title_plural": "pack",
+                    "unit_price_text": "par article",
+                    "show_image": false
+                  },
+                  "blocks": {}
+                },
+                "quantity_breaks_item_AQ75si": {
+                  "type": "_quantity-breaks-item",
+                  "name": "2 packs",
+                  "settings": {
+                    "quantity": 2,
+                    "discount_percentage": 5,
+                    "badge": "-5 %",
+                    "badge_position": "top",
+                    "badge_display": "overlap",
+                    "product_small_title": "pack",
+                    "product_small_title_plural": "packs",
+                    "show_unit_price": true,
+                    "unit_price_text": "par article",
+                    "show_image": false
+                  },
+                  "blocks": {}
+                },
+                "quantity_breaks_item_nvRe7A": {
+                  "type": "_quantity-breaks-item",
+                  "name": "4 packs",
+                  "settings": {
+                    "quantity": 4,
+                    "discount_percentage": 10,
+                    "badge": "-10 %",
+                    "badge_position": "top",
+                    "badge_display": "overlap",
+                    "product_small_title": "pack",
+                    "product_small_title_plural": "packs",
+                    "show_unit_price": true,
+                    "unit_price_text": "par article",
+                    "show_image": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "quantity_breaks_item_T3jIVH",
+                "quantity_breaks_item_AQ75si",
+                "quantity_breaks_item_nvRe7A"
+              ]
+            },
+            "toggle_cross_sell": {
+              "type": "_toggle-cross-sell",
+              "name": "t:toggle_cross_sell",
+              "settings": {
+                "title": "Pas encore de filtre robinet ?",
+                "description": "<p>Le filtre qui accueille tes sédiments.</p>",
+                "product_list": [
+                  "filtre-a-robinet-faucet-sullab-sunsoari"
+                ]
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_variant_picker_xWC3wF",
+            "quantity_breaks",
+            "toggle_cross_sell"
+          ]
+        },
+        "delivery_estimation_A43yiG": {
+          "type": "delivery-estimation",
+          "name": "Estimation de livraison",
+          "settings": {
+            "icon": "bolt",
+            "show_weekday": false,
+            "delivery_estimation_text": "Livraison estimée entre le",
+            "translation_between_dates": "et le",
+            "margin_bottom": 10
+          },
+          "blocks": {}
+        },
+        "accordions_KKUaHK": {
+          "type": "accordions",
+          "name": "Accordéons",
+          "settings": {
+            "icon": "add",
+            "accordion_padding": "medium"
+          },
+          "blocks": {
+            "accordion_eGa2KQ": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Description"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Le Pack 3 Sédiments est la recharge de ton Filtre Robinet Lavabo. Avec trois sédiments, tu as 6 à 9 mois de filtration d'avance.</p><p>Chaque sédiment dure environ 2 à 3 mois. Quand l'eau devient moins claire ou que le débit ralentit, glisse un nouveau sédiment dans la coque.</p>",
+                    "text_style": "paragraph",
+                    "read_more_length": 60,
+                    "read_more_text": "Voir plus",
+                    "read_less_text": "Voir moins"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_pKBznK": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Composition"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Sédiments de filtration mécanique multi-couches, conçus pour retenir les impuretés visibles de l'eau. Usage externe uniquement.</p><p>Conçus en Corée pour le Filtre Robinet Lavabo.</p>",
+                    "text_style": "paragraph",
+                    "read_more_length": 60,
+                    "read_more_text": "Voir plus",
+                    "read_less_text": "Voir moins"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_UrY2RY": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Livraison & retours"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p><p>Retour possible sous 14 jours, produit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
+                    "text_style": "paragraph",
+                    "read_more_length": 60,
+                    "read_more_text": "Voir plus",
+                    "read_less_text": "Voir moins"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_eGa2KQ",
+            "accordion_pKBznK",
+            "accordion_UrY2RY"
+          ]
+        },
+        "group_kLziPN": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 10,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 10,
+            "margin_top": 10
+          },
+          "blocks": {
+            "marquee_QE4fL7": {
+              "type": "marquee",
+              "name": "t:marquee",
+              "settings": {
+                "movement_direction": "reverse",
+                "gap": 30,
+                "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
+              },
+              "blocks": {
+                "icon_with_text_21ijoQ": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>SÉLECTION SUNSOARI · PRODUITS CORÉENS CHOISIS AVEC EXIGENCE</p>",
+                    "font_weight": 500
+                  },
+                  "blocks": {}
+                },
+                "icon_with_text_2WpGh5": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>LIVRAISON SUIVIE · PARTOUT EN FRANCE MÉTROPOLITAINE</p>",
+                    "font_weight": 500
+                  },
+                  "blocks": {}
+                },
+                "icon_with_text_s5cV07": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>PAIEMENT SÉCURISÉ · APPLE PAY, PAYPAL, CB</p>",
+                    "font_weight": 500
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "icon_with_text_21ijoQ",
+                "icon_with_text_2WpGh5",
+                "icon_with_text_s5cV07"
+              ]
+            }
+          },
+          "block_order": [
+            "marquee_QE4fL7"
+          ]
+        }
+      },
+      "block_order": [
+        "group_VW4Hi3",
+        "text_zLqMQw",
+        "text_yQdqF8",
+        "price_yEeMeb",
+        "group_pills",
+        "separator_AKgbEA",
+        "product_form_grYQk6",
+        "delivery_estimation_A43yiG",
+        "accordions_KKUaHK",
+        "group_kLziPN"
+      ],
+      "settings": {
+        "color_scheme_product_info": "",
+        "image_position": "row-reverse",
+        "product_info_width": 45,
+        "gap": 100,
+        "padding_top": 30,
+        "padding_bottom": 80,
+        "anchor_id": "buy"
+      }
+    },
+    "videos_pratiques": {
+      "type": "custom-section",
+      "blocks": {
+        "text_4ZfxbS": {
+          "type": "text",
+          "name": "Titre",
+          "settings": {
+            "text": "<h2>En vidéo</h2>",
+            "text_style": "h3",
+            "read_more_length": 100,
+            "read_more_text": "Voir plus",
+            "read_less_text": "Voir moins"
+          },
+          "blocks": {}
+        },
+        "tabs_naDOWi": {
+          "type": "tabs",
+          "name": "Vidéos",
+          "settings": {
+            "display_type": "tabs",
+            "wrap_content_in_card": true
+          },
+          "blocks": {
+            "tab_0GrMn5": {
+              "type": "_tab",
+              "name": "Remplace ta recharge",
+              "settings": {
+                "tab_name": "Remplace ta recharge"
+              },
+              "blocks": {
+                "video_T4TyN5": {
+                  "type": "video",
+                  "settings": {
+                    "source": "shopify",
+                    "video_autoplay": true,
+                    "enable_video_controls": false,
+                    "alt": "Remplace ta recharge",
+                    "aspect_ratio": "9/16"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "video_T4TyN5"
+              ]
+            }
+          },
+          "block_order": [
+            "tab_0GrMn5"
+          ]
+        }
+      },
+      "block_order": [
+        "text_4ZfxbS",
+        "tabs_naDOWi"
+      ],
+      "disabled": true,
+      "name": "Vidéos pratiques",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "comment_ca_marche": {
+      "type": "custom-section",
+      "blocks": {
+        "text_lSwA5b": {
+          "type": "text",
+          "name": "Titre",
+          "settings": {
+            "text": "<h2>Comment ça marche ?</h2>",
+            "text_style": "h3",
+            "read_more_length": 100,
+            "read_more_text": "Voir plus",
+            "read_less_text": "Voir moins"
+          },
+          "blocks": {}
+        },
+        "group_g2jxX4": {
+          "type": "group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_gap_desktop": 50,
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "blocks": {
+            "image_wnAa13": {
+              "type": "image",
+              "settings": {
+                "image_width_desktop": 80,
+                "image_width_mobile": 80,
+                "image": "shopify://shop_images/filtre-a-robinet-faucet-9303094.jpg"
+              },
+              "blocks": {}
+            },
+            "group_JwOkKO": {
+              "type": "group",
+              "settings": {
+                "color_scheme": "",
+                "layout_align_items_desktop": "center",
+                "same_as_desktop": false,
+                "layout_wrap_mobile": "wrap",
+                "use_global_container_padding": false,
+                "padding_horizontal": 0,
+                "padding_vertical": 0,
+                "padding_horizontal_mobile": 0,
+                "padding_vertical_mobile": 0
+              },
+              "blocks": {
+                "timeline_sVY8b6": {
+                  "type": "timeline",
+                  "name": "Étapes",
+                  "settings": {},
+                  "blocks": {
+                    "timeline_step_BDR4TN": {
+                      "type": "_timeline-step",
+                      "name": "Étape 1",
+                      "settings": {},
+                      "blocks": {
+                        "text_JMZccI": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 1</strong></p>",
+                            "text_style": "paragraph",
+                            "read_more_length": 60,
+                            "read_more_text": "Voir plus",
+                            "read_less_text": "Voir moins"
+                          },
+                          "blocks": {}
+                        },
+                        "text_O7v9vH": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Ouvre la coque du filtre robinet.</p>",
+                            "text_style": "paragraph",
+                            "read_more_length": 60,
+                            "read_more_text": "Voir plus",
+                            "read_less_text": "Voir moins"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_JMZccI",
+                        "text_O7v9vH"
+                      ]
+                    },
+                    "timeline_step_zksWme": {
+                      "type": "_timeline-step",
+                      "name": "Étape 2",
+                      "settings": {},
+                      "blocks": {
+                        "text_ns1ZKI": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 2</strong></p>",
+                            "text_style": "paragraph",
+                            "read_more_length": 60,
+                            "read_more_text": "Voir plus",
+                            "read_less_text": "Voir moins"
+                          },
+                          "blocks": {}
+                        },
+                        "text_ZGrBxe": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Retire le sédiment usagé et insère le nouveau.</p>",
+                            "text_style": "paragraph",
+                            "read_more_length": 60,
+                            "read_more_text": "Voir plus",
+                            "read_less_text": "Voir moins"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_ns1ZKI",
+                        "text_ZGrBxe"
+                      ]
+                    },
+                    "timeline_step_mYTVmX": {
+                      "type": "_timeline-step",
+                      "name": "Étape 3",
+                      "settings": {},
+                      "blocks": {
+                        "text_hzyG9L": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 3</strong></p>",
+                            "text_style": "paragraph",
+                            "read_more_length": 60,
+                            "read_more_text": "Voir plus",
+                            "read_less_text": "Voir moins"
+                          },
+                          "blocks": {}
+                        },
+                        "text_Zx9IvQ": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Referme : ton eau est filtrée à nouveau.</p>",
+                            "text_style": "paragraph",
+                            "read_more_length": 60,
+                            "read_more_text": "Voir plus",
+                            "read_less_text": "Voir moins"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_hzyG9L",
+                        "text_Zx9IvQ"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "timeline_step_BDR4TN",
+                    "timeline_step_zksWme",
+                    "timeline_step_mYTVmX"
+                  ]
+                }
+              },
+              "block_order": [
+                "timeline_sVY8b6"
+              ]
+            }
+          },
+          "block_order": [
+            "image_wnAa13",
+            "group_JwOkKO"
+          ]
+        }
+      },
+      "block_order": [
+        "text_lSwA5b",
+        "group_g2jxX4"
+      ],
+      "name": "Comment ça marche",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "avant_apres": {
+      "type": "custom-section",
+      "blocks": {
+        "text_uE50i2": {
+          "type": "text",
+          "name": "Titre",
+          "settings": {
+            "text": "<h2>Ce que le filtre capture</h2>",
+            "text_style": "h3",
+            "read_more_length": 100,
+            "read_more_text": "Voir plus",
+            "read_less_text": "Voir moins"
+          },
+          "blocks": {}
+        },
+        "before_after_nwqQb8": {
+          "type": "before-after",
+          "settings": {
+            "image_ratio": "portrait",
+            "label_before": "Avant",
+            "label_after": "Après",
+            "label_badge_style": "primary"
+          },
+          "blocks": {}
+        },
+        "text_HBXUUy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Photo réelle, non retouchée.</p>",
+            "text_style": "paragraph",
+            "alignment": "center",
+            "alignment_mobile": "center",
+            "read_more_length": 60,
+            "read_more_text": "Voir plus",
+            "read_less_text": "Voir moins"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_uE50i2",
+        "before_after_nwqQb8",
+        "text_HBXUUy"
+      ],
+      "disabled": true,
+      "name": "Avant / Après",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "en_situation": {
+      "type": "custom-section",
+      "blocks": {
+        "text_iahnUL": {
+          "type": "text",
+          "name": "Titre",
+          "settings": {
+            "text": "<h2>Dans vos salles de bain</h2>",
+            "text_style": "h3",
+            "read_more_length": 100,
+            "read_more_text": "Voir plus",
+            "read_less_text": "Voir moins"
+          },
+          "blocks": {}
+        },
+        "stories_YfDXcn": {
+          "type": "stories",
+          "name": "Stories UGC",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_iahnUL",
+        "stories_YfDXcn"
+      ],
+      "disabled": true,
+      "name": "En situation (UGC)",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "avis": {
+      "type": "reviews",
+      "disabled": true,
+      "name": "Avis clients",
+      "settings": {}
+    },
+    "decouvre_aussi": {
+      "type": "product-recommendations",
+      "blocks": {
+        "title": {
+          "type": "text",
+          "static": true,
+          "settings": {
+            "text": "<p>Découvre aussi</p>",
+            "text_style": "h2",
+            "alignment": "center",
+            "alignment_mobile": "center",
+            "read_more_length": 200,
+            "read_more_text": "Voir plus",
+            "read_less_text": "Voir moins",
+            "margin_bottom": 40
+          },
+          "blocks": {}
+        },
+        "product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+            "layout_gap": 15
+          },
+          "blocks": {
+            "product_card_group_EcgVgX": {
+              "type": "_product-card-group",
+              "name": "t:group",
+              "settings": {
+                "color_scheme": "",
+                "layout_direction_desktop": "column",
+                "layout_gap_desktop": 5,
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "margin_top": 0
+              },
+              "blocks": {
+                "text_cxYhee": {
+                  "type": "text",
+                  "name": "t:text",
+                  "settings": {
+                    "text": "<h2>{{ closest.product.title }}</h2>",
+                    "text_style": "paragraph",
+                    "paragraph_font_size": "large",
+                    "font_weight": 300,
+                    "read_more_length": 100,
+                    "read_more_text": "Voir plus",
+                    "read_less_text": "Voir moins"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_cxYhee"
+              ]
+            },
+            "product_card_media_gallery_L3zV7a": {
+              "type": "_product-card-media-gallery",
+              "name": "t:product_card_gallery",
+              "settings": {
+                "media_ratio": "4 / 5"
+              },
+              "blocks": {}
+            },
+            "product_card_quick_add_dY48RT": {
+              "type": "_product-card-quick-add",
+              "name": "t:product_card_quick_add",
+              "settings": {},
+              "blocks": {}
+            },
+            "product_card_group_LHFtbz": {
+              "type": "_product-card-group",
+              "name": "t:group",
+              "settings": {
+                "color_scheme": "",
+                "layout_direction_desktop": "column",
+                "layout_gap_desktop": 5,
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "margin_top": 0
+              },
+              "blocks": {
+                "product_price_eFDeNW": {
+                  "type": "product-price",
+                  "name": "t:product_price",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "sales_badge": "percentage"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_price_eFDeNW"
+              ]
+            }
+          },
+          "block_order": [
+            "product_card_group_EcgVgX",
+            "product_card_media_gallery_L3zV7a",
+            "product_card_quick_add_dY48RT",
+            "product_card_group_LHFtbz"
+          ]
+        }
+      },
+      "name": "t:product_recommendations",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "max_products": 3,
+        "grid_columns": 3,
+        "grid_columns_mobile": "1",
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
+    },
+    "faq": {
+      "type": "custom-section",
+      "blocks": {
+        "group_ampbiX": {
+          "type": "group",
+          "name": "Groupe",
+          "settings": {
+            "color_scheme": ""
+          },
+          "blocks": {
+            "text_ahfQKN": {
+              "type": "text",
+              "name": "Titre",
+              "settings": {
+                "text": "<h3>Questions fréquentes</h3>",
+                "text_style": "h2",
+                "read_more_text": "Voir plus",
+                "read_less_text": "Voir moins",
+                "margin_bottom": 10
+              },
+              "blocks": {}
+            },
+            "accordions_hpBMaf": {
+              "type": "accordions",
+              "name": "Accordéons",
+              "settings": {
+                "icon": "add",
+                "accordion_padding": "medium"
+              },
+              "blocks": {
+                "accordion_4KI6e2": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Combien de temps durent ces sédiments ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Environ 2 à 3 mois chacun. Avec ce pack de 3, tu as 6 à 9 mois d'avance.</p>",
+                        "text_style": "paragraph",
+                        "read_more_length": 60,
+                        "read_more_text": "Voir plus",
+                        "read_less_text": "Voir moins"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_uvNJ4D": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Sont-ils compatibles avec mon Filtre Robinet Lavabo ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Oui, ils sont conçus pour le Filtre Robinet Lavabo.</p>",
+                        "text_style": "paragraph",
+                        "read_more_length": 60,
+                        "read_more_text": "Voir plus",
+                        "read_less_text": "Voir moins"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_FXO5na": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Comment savoir quand les remplacer ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Quand l'eau devient moins claire, que le débit ralentit, ou que le sédiment change de couleur.</p>",
+                        "text_style": "paragraph",
+                        "read_more_length": 60,
+                        "read_more_text": "Voir plus",
+                        "read_less_text": "Voir moins"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_pn5wy4": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Puis-je les stocker longtemps ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Oui. Garde-les au sec, dans leur emballage d'origine, à température ambiante.</p>",
+                        "text_style": "paragraph",
+                        "read_more_length": 60,
+                        "read_more_text": "Voir plus",
+                        "read_less_text": "Voir moins"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_4KI6e2",
+                "accordion_uvNJ4D",
+                "accordion_FXO5na",
+                "accordion_pn5wy4"
+              ]
+            }
+          },
+          "block_order": [
+            "text_ahfQKN",
+            "accordions_hpBMaf"
+          ]
+        },
+        "group_NkNJJg": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-2",
+            "width_desktop": 55,
+            "layout_justify_desktop": "center",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "use_global_container_padding": false,
+            "padding_horizontal": 40,
+            "padding_vertical": 50
+          },
+          "blocks": {
+            "icon_MrVn8A": {
+              "type": "icon",
+              "name": "t:icon",
+              "settings": {
+                "icon": "support_agent"
+              },
+              "blocks": {}
+            },
+            "text_VLtRib": {
+              "type": "text",
+              "name": "t:title",
+              "settings": {
+                "text": "<h4>Besoin d'aide ?</h4>",
+                "text_style": "h4",
+                "alignment": "center",
+                "read_more_length": 100,
+                "read_more_text": "Voir plus",
+                "read_less_text": "Voir moins"
+              },
+              "blocks": {}
+            },
+            "text_FyFaMj": {
+              "type": "text",
+              "name": "t:text",
+              "settings": {
+                "text": "<p>Écris-nous, on te répond avec plaisir pour choisir le bon système ou la bonne recharge.</p>",
+                "text_style": "paragraph",
+                "alignment": "center",
+                "read_more_length": 100,
+                "read_more_text": "Voir plus",
+                "read_less_text": "Voir moins",
+                "margin_bottom": 20
+              },
+              "blocks": {}
+            },
+            "button_Q3UxFk": {
+              "type": "button",
+              "name": "t:button",
+              "settings": {
+                "link": "shopify://pages/contact",
+                "label": "Nous contacter",
+                "button_shape": "full-width"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "icon_MrVn8A",
+            "text_VLtRib",
+            "text_FyFaMj",
+            "button_Q3UxFk"
+          ]
+        }
+      },
+      "block_order": [
+        "group_ampbiX",
+        "group_NkNJJg"
+      ],
+      "name": "t:faq_2",
+      "settings": {
+        "color_scheme_card": "",
+        "layout_flex_direction_desktop": "row",
+        "layout_gap_desktop": 50,
+        "same_as_desktop": false,
+        "layout_flex_direction_mobile": "column-reverse",
+        "layout_gap_mobile": 30,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "videos_pratiques",
+    "comment_ca_marche",
+    "avant_apres",
+    "en_situation",
+    "avis",
+    "decouvre_aussi",
+    "faq"
+  ]
+}

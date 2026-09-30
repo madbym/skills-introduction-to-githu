@@ -1,0 +1,691 @@
+{
+  "type": "header",
+  "name": "En-tête",
+  "sections": {
+    "announcement_bar_r8QCCw": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_y7tnxm": {
+          "type": "_announcement",
+          "settings": {
+            "layout_gap": 10,
+            "additional_class": ""
+          },
+          "blocks": {
+            "text_Lk3QUw": {
+              "type": "text",
+              "settings": {
+                "show_on_display": "desktop_and_mobile",
+                "text": "<p>Livraison suivie partout en France métropolitaine</p>",
+                "text_style": "paragraph",
+                "paragraph_font_size": "normal",
+                "font_weight": 400,
+                "alignment": "center",
+                "alignment_mobile": "center",
+                "show_read_more": false,
+                "read_more_length": 200,
+                "read_more_text": "Voir plus",
+                "read_less_text": "Voir moins",
+                "truncate": false,
+                "truncate_length": 2,
+                "margin_top": 0,
+                "margin_bottom": 0,
+                "additional_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_Lk3QUw"
+          ]
+        },
+        "announcement_VprFGF": {
+          "type": "_announcement",
+          "settings": {
+            "layout_gap": 10,
+            "additional_class": ""
+          },
+          "blocks": {
+            "text_ndz4fN": {
+              "type": "text",
+              "settings": {
+                "show_on_display": "desktop_and_mobile",
+                "text": "<p>Nouveau : le filtre thermal sans senteur</p>",
+                "text_style": "paragraph",
+                "paragraph_font_size": "normal",
+                "font_weight": 400,
+                "alignment": "center",
+                "alignment_mobile": "center",
+                "show_read_more": false,
+                "read_more_length": 200,
+                "read_more_text": "Voir plus",
+                "read_less_text": "Voir moins",
+                "truncate": false,
+                "truncate_length": 2,
+                "margin_top": 0,
+                "margin_bottom": 0,
+                "additional_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_ndz4fN"
+          ]
+        }
+      },
+      "block_order": [
+        "announcement_y7tnxm",
+        "announcement_VprFGF"
+      ],
+      "name": "Barre d'annonce",
+      "settings": {
+        "show_on_display": "desktop_and_mobile",
+        "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316",
+        "show_arrows": true,
+        "arrows_button_style": "secondary",
+        "rewind": true,
+        "autoplay": true,
+        "autoplay_speed": 4,
+        "padding_top": 10,
+        "padding_bottom": 10,
+        "additional_class": ""
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "button-header": {
+          "type": "button",
+          "static": true,
+          "settings": {
+            "show_on_display": "desktop_and_mobile",
+            "link": "",
+            "open_in_new_tab": false,
+            "label": "Diagnostic",
+            "button_style": "primary",
+            "button_shape": "small",
+            "icon": "none",
+            "icon_custom": "",
+            "icon_position": "end",
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "additional_class": ""
+          },
+          "blocks": {},
+          "disabled": true
+        },
+        "header-advanced-megamenus": {
+          "type": "_header-advanced-megamenus",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "header_megamenu_ebFAi4": {
+              "type": "_header-megamenu",
+              "name": "t:megamenu_collection_featured",
+              "settings": {
+                "title": "Rituels de douche",
+                "position_within_the_menu": "0",
+                "layout_type": "flex",
+                "layout_direction": "row",
+                "layout_grid_columns": 4,
+                "layout_gap": 30,
+                "layout_wrap": "nowrap",
+                "layout_justify": "flex-start",
+                "layout_align_items": "flex-start",
+                "additional_class": ""
+              },
+              "blocks": {
+                "collection_featured_P6npMc": {
+                  "type": "collection-featured",
+                  "name": "t:collection_featured",
+                  "settings": {
+                    "show_on_display": "desktop_and_mobile",
+                    "collection": "kit-de-douche",
+                    "max_products": 3,
+                    "layout_type": "grid",
+                    "grid_columns": 3,
+                    "grid_columns_mobile": "1",
+                    "slider_items": 3,
+                    "slider_items_mobile": "1",
+                    "show_arrows": true,
+                    "arrows_button_style": "secondary",
+                    "show_pagination": false,
+                    "rewind": false,
+                    "padding_top": 0,
+                    "padding_bottom": 0,
+                    "margin_top": 0,
+                    "margin_bottom": 0,
+                    "additional_class": ""
+                  },
+                  "blocks": {
+                    "product-card": {
+                      "type": "_product-card",
+                      "static": true,
+                      "settings": {
+                        "wrap_in_card": true,
+                        "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+                        "layout_gap": 15
+                      },
+                      "blocks": {
+                        "product_card_group_aXrw46": {
+                          "type": "_product-card-group",
+                          "name": "t:group",
+                          "settings": {
+                            "show_on_display": "desktop_and_mobile",
+                            "wrap_in_card": false,
+                            "color_scheme": "",
+                            "layout_direction_desktop": "column",
+                            "layout_gap_desktop": 5,
+                            "layout_wrap_desktop": "nowrap",
+                            "layout_justify_desktop": "center",
+                            "layout_align_items_desktop": "center",
+                            "same_as_desktop": true,
+                            "layout_direction_mobile": "column",
+                            "layout_gap_mobile": 10,
+                            "layout_wrap_mobile": "nowrap",
+                            "layout_justify_mobile": "flex-start",
+                            "layout_align_items_mobile": "flex-start",
+                            "margin_top": 0,
+                            "margin_bottom": 0,
+                            "additional_class": ""
+                          },
+                          "blocks": {
+                            "text_EcHgEB": {
+                              "type": "text",
+                              "name": "t:text",
+                              "settings": {
+                                "show_on_display": "desktop_and_mobile",
+                                "text": "<h2>{{ closest.product.title }}</h2>",
+                                "text_style": "paragraph",
+                                "paragraph_font_size": "large",
+                                "font_weight": 400,
+                                "alignment": "center",
+                                "alignment_mobile": "center",
+                                "show_read_more": false,
+                                "read_more_length": 50,
+                                "read_more_text": "Voir plus",
+                                "read_less_text": "Voir moins",
+                                "truncate": false,
+                                "truncate_length": 2,
+                                "margin_top": 0,
+                                "margin_bottom": 0,
+                                "additional_class": ""
+                              },
+                              "blocks": {}
+                            }
+                          },
+                          "block_order": [
+                            "text_EcHgEB"
+                          ]
+                        },
+                        "product_card_media_gallery_MY84V8": {
+                          "type": "_product-card-media-gallery",
+                          "name": "t:product_card_gallery",
+                          "settings": {
+                            "show_on_display": "desktop_and_mobile",
+                            "show_slider": false,
+                            "media_rounded": true,
+                            "show_badges": true,
+                            "media_ratio": "4 / 5",
+                            "additional_class": ""
+                          },
+                          "blocks": {}
+                        },
+                        "product_card_group_rWTKnp": {
+                          "type": "_product-card-group",
+                          "name": "t:group",
+                          "settings": {
+                            "show_on_display": "desktop_and_mobile",
+                            "wrap_in_card": false,
+                            "color_scheme": "",
+                            "layout_direction_desktop": "column",
+                            "layout_gap_desktop": 5,
+                            "layout_wrap_desktop": "nowrap",
+                            "layout_justify_desktop": "center",
+                            "layout_align_items_desktop": "center",
+                            "same_as_desktop": true,
+                            "layout_direction_mobile": "column",
+                            "layout_gap_mobile": 10,
+                            "layout_wrap_mobile": "nowrap",
+                            "layout_justify_mobile": "flex-start",
+                            "layout_align_items_mobile": "flex-start",
+                            "margin_top": 0,
+                            "margin_bottom": 0,
+                            "additional_class": ""
+                          },
+                          "blocks": {
+                            "product_price_jpmk93": {
+                              "type": "product-price",
+                              "name": "t:product_price",
+                              "settings": {
+                                "show_on_display": "desktop_and_mobile",
+                                "product": "{{ closest.product }}",
+                                "sales_badge": "amount",
+                                "show_sales_badge_text": false,
+                                "show_unit_price": false,
+                                "text_style": "paragraph",
+                                "additional_class": ""
+                              },
+                              "blocks": {}
+                            }
+                          },
+                          "block_order": [
+                            "product_price_jpmk93"
+                          ]
+                        }
+                      },
+                      "block_order": [
+                        "product_card_group_aXrw46",
+                        "product_card_media_gallery_MY84V8",
+                        "product_card_group_rWTKnp"
+                      ]
+                    }
+                  },
+                  "block_order": []
+                },
+                "header_megamenu_group_UGnQ9h": {
+                  "type": "_header-megamenu-group",
+                  "name": "t:group",
+                  "settings": {
+                    "wrap_in_card": false,
+                    "card_link": "",
+                    "color_scheme": "",
+                    "show_card_border": false,
+                    "layout_type": "flex",
+                    "width": 70,
+                    "layout_direction": "column",
+                    "layout_grid_columns": 3,
+                    "layout_gap": 10,
+                    "layout_wrap": "nowrap",
+                    "layout_justify": "flex-start",
+                    "layout_align_items": "flex-start",
+                    "use_global_container_padding": true,
+                    "padding_horizontal": 30,
+                    "padding_vertical": 30,
+                    "margin_top": 0,
+                    "margin_bottom": 0,
+                    "additional_class": ""
+                  },
+                  "blocks": {
+                    "image_card_IAoCLr": {
+                      "type": "image-card",
+                      "name": "t:image_card",
+                      "settings": {
+                        "show_on_display": "desktop_and_mobile",
+                        "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+                        "image": "shopify://shop_images/coffret-home-4366097.jpg",
+                        "card_height": "medium",
+                        "card_height_mobile": "medium",
+                        "card_link": "shopify://collections/onsha",
+                        "image_filter_opacity": 20,
+                        "image_filter_color": "#032B59",
+                        "layout_justify": "flex-end",
+                        "layout_align_items": "flex-start",
+                        "use_global_container_padding": true,
+                        "padding_horizontal": 20,
+                        "padding_vertical": 20,
+                        "padding_horizontal_mobile": 20,
+                        "padding_vertical_mobile": 20,
+                        "margin_top": 0,
+                        "margin_bottom": 0,
+                        "additional_class": ""
+                      },
+                      "blocks": {
+                        "text_gMxpcc": {
+                          "type": "text",
+                          "name": "t:title",
+                          "settings": {
+                            "show_on_display": "desktop_and_mobile",
+                            "text": "<h3>Rituel Home</h3>",
+                            "text_style": "h4",
+                            "paragraph_font_size": "normal",
+                            "font_weight": 400,
+                            "alignment": "left",
+                            "alignment_mobile": "left",
+                            "show_read_more": false,
+                            "read_more_length": 50,
+                            "read_more_text": "Voir plus",
+                            "read_less_text": "Voir moins",
+                            "truncate": false,
+                            "truncate_length": 2,
+                            "margin_top": 0,
+                            "margin_bottom": 0,
+                            "additional_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_gMxpcc"
+                      ]
+                    },
+                    "image_card_Z3aWZk": {
+                      "type": "image-card",
+                      "name": "t:image_card",
+                      "settings": {
+                        "show_on_display": "desktop_and_mobile",
+                        "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+                        "image": "shopify://shop_images/coffret-mini-2893257.png",
+                        "card_height": "medium",
+                        "card_height_mobile": "medium",
+                        "card_link": "shopify://collections/onsha",
+                        "image_filter_opacity": 20,
+                        "image_filter_color": "#032B59",
+                        "layout_justify": "flex-end",
+                        "layout_align_items": "flex-start",
+                        "use_global_container_padding": true,
+                        "padding_horizontal": 20,
+                        "padding_vertical": 20,
+                        "padding_horizontal_mobile": 20,
+                        "padding_vertical_mobile": 20,
+                        "margin_top": 0,
+                        "margin_bottom": 0,
+                        "additional_class": ""
+                      },
+                      "blocks": {
+                        "text_gMxpcc": {
+                          "type": "text",
+                          "name": "t:title",
+                          "settings": {
+                            "show_on_display": "desktop_and_mobile",
+                            "text": "<h3>Rituel Nomade</h3>",
+                            "text_style": "h4",
+                            "paragraph_font_size": "normal",
+                            "font_weight": 400,
+                            "alignment": "left",
+                            "alignment_mobile": "left",
+                            "show_read_more": false,
+                            "read_more_length": 50,
+                            "read_more_text": "Voir plus",
+                            "read_less_text": "Voir moins",
+                            "truncate": false,
+                            "truncate_length": 2,
+                            "margin_top": 0,
+                            "margin_bottom": 0,
+                            "additional_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_gMxpcc"
+                      ]
+                    },
+                    "image_card_SBvrjn": {
+                      "type": "image-card",
+                      "name": "t:image_card",
+                      "settings": {
+                        "show_on_display": "desktop_and_mobile",
+                        "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+                        "image": "shopify://shop_images/260310-SHIFT_Felt_Black_Launch_Cover_Website-03.jpg",
+                        "card_height": "medium",
+                        "card_height_mobile": "medium",
+                        "card_link": "shopify://collections/shift",
+                        "image_filter_opacity": 20,
+                        "image_filter_color": "#032B59",
+                        "layout_justify": "flex-end",
+                        "layout_align_items": "flex-start",
+                        "use_global_container_padding": true,
+                        "padding_horizontal": 20,
+                        "padding_vertical": 20,
+                        "padding_horizontal_mobile": 20,
+                        "padding_vertical_mobile": 20,
+                        "margin_top": 0,
+                        "margin_bottom": 0,
+                        "additional_class": ""
+                      },
+                      "blocks": {
+                        "text_gMxpcc": {
+                          "type": "text",
+                          "name": "t:title",
+                          "settings": {
+                            "show_on_display": "desktop_and_mobile",
+                            "text": "<h3>SHIFT</h3>",
+                            "text_style": "h4",
+                            "paragraph_font_size": "normal",
+                            "font_weight": 400,
+                            "alignment": "left",
+                            "alignment_mobile": "left",
+                            "show_read_more": false,
+                            "read_more_length": 50,
+                            "read_more_text": "Voir plus",
+                            "read_less_text": "Voir moins",
+                            "truncate": false,
+                            "truncate_length": 2,
+                            "margin_top": 0,
+                            "margin_bottom": 0,
+                            "additional_class": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_gMxpcc"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "image_card_IAoCLr",
+                    "image_card_Z3aWZk",
+                    "image_card_SBvrjn"
+                  ]
+                }
+              },
+              "block_order": [
+                "collection_featured_P6npMc",
+                "header_megamenu_group_UGnQ9h"
+              ]
+            }
+          },
+          "block_order": [
+            "header_megamenu_ebFAi4"
+          ]
+        },
+        "header-notifications": {
+          "type": "_header-notifications",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "enable_notifications_bubble": true
+          },
+          "blocks": {}
+        },
+        "header-drawer-menu": {
+          "type": "_header-drawer-menu",
+          "static": true,
+          "settings": {
+            "color_scheme": "scheme-1"
+          },
+          "blocks": {
+            "header-drawer-menu-header": {
+              "type": "_header-drawer-menu-header",
+              "static": true,
+              "settings": {
+                "wrap_in_card": false,
+                "color_scheme": "",
+                "margin_top": 0,
+                "margin_bottom": 0
+              },
+              "blocks": {
+                "image_card_t7cipJ": {
+                  "type": "image-card",
+                  "name": "t:image_card",
+                  "settings": {
+                    "show_on_display": "desktop_and_mobile",
+                    "color_scheme": "scheme-3",
+                    "image": "shopify://shop_images/58caeeca-881a-4295-8f44-f33ab4429be8_111e670a-9bc7-427e-a141-70f9d159766f.png",
+                    "card_height": "small",
+                    "card_height_mobile": "auto",
+                    "card_link": "shopify://collections/all",
+                    "image_filter_opacity": 25,
+                    "image_filter_color": "#1c3a13",
+                    "layout_justify": "flex-end",
+                    "layout_align_items": "flex-start",
+                    "use_global_container_padding": true,
+                    "padding_horizontal": 20,
+                    "padding_vertical": 20,
+                    "padding_horizontal_mobile": 20,
+                    "padding_vertical_mobile": 20,
+                    "margin_top": 0,
+                    "margin_bottom": 0,
+                    "additional_class": ""
+                  },
+                  "blocks": {
+                    "text_qk4rmW": {
+                      "type": "text",
+                      "name": "t:title",
+                      "settings": {
+                        "show_on_display": "desktop_and_mobile",
+                        "text": "<h3>Gamme complète</h3>",
+                        "text_style": "h4",
+                        "paragraph_font_size": "normal",
+                        "font_weight": 400,
+                        "alignment": "left",
+                        "alignment_mobile": "left",
+                        "show_read_more": false,
+                        "read_more_length": 50,
+                        "read_more_text": "Voir plus",
+                        "read_less_text": "Voir moins",
+                        "truncate": false,
+                        "truncate_length": 2,
+                        "margin_top": 0,
+                        "margin_bottom": 0,
+                        "additional_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_qk4rmW"
+                  ]
+                }
+              },
+              "block_order": [
+                "image_card_t7cipJ"
+              ]
+            },
+            "header-drawer-menu-under-menu": {
+              "type": "_header-drawer-menu-under-menu",
+              "static": true,
+              "settings": {
+                "wrap_in_card": false,
+                "color_scheme": "",
+                "margin_top": 0,
+                "margin_bottom": 0
+              },
+              "blocks": {
+                "separator_3xJ7hT": {
+                  "type": "separator",
+                  "name": "t:separator",
+                  "settings": {
+                    "show_on_display": "desktop_and_mobile",
+                    "width": 100,
+                    "separator_style": "solid",
+                    "margin_top": 10,
+                    "margin_bottom": 10,
+                    "additional_class": ""
+                  },
+                  "blocks": {}
+                },
+                "logo_eeR9EE": {
+                  "type": "logo",
+                  "name": "t:logo",
+                  "settings": {
+                    "show_on_display": "desktop_and_mobile",
+                    "logo_height": 22,
+                    "inverse": false,
+                    "activate_link": true,
+                    "margin_top": 10,
+                    "margin_bottom": 10,
+                    "additional_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_36hFJP": {
+                  "type": "text",
+                  "name": "t:text",
+                  "settings": {
+                    "show_on_display": "desktop_and_mobile",
+                    "text": "<p>Découvrez les secrets millénaires de la beauté coréenne, où innovation et tradition se rencontrent pour transformer votre peau.</p>",
+                    "text_style": "paragraph",
+                    "paragraph_font_size": "normal",
+                    "font_weight": 400,
+                    "alignment": "left",
+                    "alignment_mobile": "left",
+                    "show_read_more": false,
+                    "read_more_length": 50,
+                    "read_more_text": "Voir plus",
+                    "read_less_text": "Voir moins",
+                    "truncate": false,
+                    "truncate_length": 2,
+                    "margin_top": 0,
+                    "margin_bottom": 10,
+                    "additional_class": ""
+                  },
+                  "blocks": {}
+                },
+                "reviews_badge_dxb6dj": {
+                  "type": "reviews-badge",
+                  "name": "t:reviews_badge",
+                  "settings": {
+                    "review_badge_style": "custom",
+                    "wrap_in_a_badge": true,
+                    "color_scheme": "scheme-2",
+                    "show_badge_border": false,
+                    "text_1": "Noté 4,5/5",
+                    "stars": "4,5",
+                    "text_2": "sur 1988 avis",
+                    "link": "",
+                    "margin_top": 0,
+                    "margin_bottom": 0,
+                    "additional_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "separator_3xJ7hT",
+                "logo_eeR9EE",
+                "text_36hFJP",
+                "reviews_badge_dxb6dj"
+              ]
+            }
+          },
+          "block_order": []
+        }
+      },
+      "settings": {
+        "color_scheme": "scheme-1",
+        "header_layout": "logo_left_menu_left",
+        "header_height": 55,
+        "enable_sticky_header": true,
+        "enable_transparent_header": false,
+        "transparent_header_color_scheme": "scheme-3",
+        "show_bottom_border": false,
+        "use_inverse_logo": false,
+        "logo_height": 24,
+        "logo_height_mobile": 22,
+        "header_menu_style": "dropdown",
+        "menu_font_weight": 400,
+        "uppercase_menu_items": false,
+        "menu_items_gap": "loose",
+        "show_menus_caret_icons": false,
+        "menu": "menu-sunsoari",
+        "menu_2": "",
+        "menu_mobile": "menu-sunsoari",
+        "show_search": true,
+        "enable_predictive_search": true,
+        "show_country": true,
+        "show_country_icon": true,
+        "show_language": true,
+        "cart_icon": "shopping_bag",
+        "account_icon": "person"
+      }
+    }
+  },
+  "order": [
+    "announcement_bar_r8QCCw",
+    "header"
+  ]
+}

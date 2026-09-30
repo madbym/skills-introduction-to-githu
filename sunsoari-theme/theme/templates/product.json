@@ -23,7 +23,7 @@
                 "badge_VEGRNK": {
                   "type": "_badge",
                   "settings": {
-                    "text": "LES RECHARGES SENSORIELLES",
+                    "text": "LA BASE DU RITUEL",
                     "badge_style": "secondary"
                   }
                 }
@@ -49,7 +49,7 @@
           "type": "text",
           "name": "Texte",
           "settings": {
-            "text": "<p>Six capsules de soin et d'aromathérapie SHIFT, chacune une expérience sensorielle à découvrir.</p>",
+            "text": "<p>Cette pomme filtrante au design transparent délivre un jet fin et uniforme, pour une douche plus douce au quotidien.</p>",
             "text_style": "paragraph",
             "paragraph_font_size": "large"
           }
@@ -82,44 +82,44 @@
           },
           "name": "Points forts",
           "blocks": {
-            "icon_with_text_yQFXxi": {
+            "icon_with_text_e0IgxL": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>6 capsules par boîte</p>",
+                "text": "<p>Jet fin et régulier</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_cGi4zN": {
+            "icon_with_text_BAepfJ": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Se change en quelques secondes</p>",
+                "text": "<p>Design transparent</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_8vKIww": {
+            "icon_with_text_oOOL8d": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>5 collections au choix</p>",
+                "text": "<p>Installation sans outil</p>",
                 "font_weight": 500
               }
             }
           },
           "block_order": [
-            "icon_with_text_yQFXxi",
-            "icon_with_text_cGi4zN",
-            "icon_with_text_8vKIww"
+            "icon_with_text_e0IgxL",
+            "icon_with_text_BAepfJ",
+            "icon_with_text_oOOL8d"
           ]
         },
         "separator_AKgbEA": {
@@ -204,10 +204,10 @@
               "type": "_toggle-cross-sell",
               "name": "t:toggle_cross_sell",
               "settings": {
-                "title": "Pas encore de pommeau SHIFT ?",
-                "description": "<p>Pommeau, capsule et filtre pour commencer.</p>",
+                "title": "Complète ton rituel thermal",
+                "description": "<p>Accueille les filtres thermaux vitaminés. Se visse entre ton flexible et le pommeau.</p>",
                 "product_list": [
-                  "pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie"
+                  "coque-de-diffusion"
                 ]
               }
             }
@@ -216,6 +216,20 @@
             "product_variant_picker_xWC3wF",
             "toggle_cross_sell"
           ]
+        },
+        "cross_sell_QcpW8C": {
+          "type": "cross-sell",
+          "name": "t:cross_sell",
+          "settings": {
+            "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+            "products": [
+              "coffret-home-onsha-sullab-sunsoari"
+            ],
+            "title": "Le rituel complet en un coffret",
+            "description": "<p>Pommeau, flexible, coque et 4 filtres réunis.</p>",
+            "image_width": 90,
+            "button_content_type": "icon"
+          }
         },
         "delivery_estimation_A43yiG": {
           "type": "delivery-estimation",
@@ -236,17 +250,17 @@
             "accordion_padding": "medium"
           },
           "blocks": {
-            "accordion_TWBulZ": {
+            "accordion_KLzdoc": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
-                "heading": "Les collections"
+                "heading": "Caractéristiques & matériaux"
               },
               "blocks": {
                 "text_acc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Fruits Therapy :</strong> 2 Petitgrain Tangerine, 2 Mint Apple, 1 Lemon Wave, 1 Ginger Bergamot. Fruité et hespéridé.</p><p><strong>Discovery :</strong> Cedarwood Moss, Frankincense Fig, Carrot Seed Plum, Mandarin Neroli, Petitgrain Tangerine, Geranium Muguet. Six senteurs à découvrir.</p><p><strong>Patchouli & Rose :</strong> 6 capsules. Patchouli, rose de Damas, fond d'ambre doux, cèdre et musc blanc.</p><p><strong>Cherry Blossom :</strong> 6 capsules. Fleur de cerisier, pivoine et muguet, fond de muscs légers et bois blanc.</p><p><strong>Hinoki Spring :</strong> 6 capsules. Cyprès hinoki, épicéa, fond de bois blanc et muscs.</p>",
+                    "text": "<p>Polycarbonate (PC), polypropylène (PP), inox (SS), billes filtrantes intégrées. Matériaux conformes FDA selon le fabricant.</p><p>Compatible avec tous les flexibles de douche standard, ainsi qu'avec la coque de diffusion Onsha Home et les filtres thermaux vitaminés.</p><p>Usage domestique uniquement. L'eau de la douche n'est pas destinée à la consommation. Ne pas forcer le vissage.</p>",
                     "text_style": "paragraph"
                   }
                 }
@@ -255,45 +269,7 @@
                 "text_acc"
               ]
             },
-            "accordion_ESbRRX": {
-              "type": "_accordion",
-              "name": "Accordéon",
-              "settings": {
-                "heading": "Actifs & INCI"
-              },
-              "blocks": {
-                "text_acc": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Chaque capsule associe ses huiles essentielles à une base commune : vitamine C, glycérine, acide hyaluronique.</p><p>La liste complète des ingrédients (INCI) par senteur et les allergènes figurent sur l'emballage. Usage externe, dans le système SHIFT compatible uniquement.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_acc"
-              ]
-            },
-            "accordion_kzxh9O": {
-              "type": "_accordion",
-              "name": "Accordéon",
-              "settings": {
-                "heading": "Compatibilité & entretien"
-              },
-              "blocks": {
-                "text_acc": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Compatible uniquement avec le Pommeau de Douche Filtrant SHIFT. La capsule ne remplace pas le filtre Pure Water, les deux travaillent ensemble.</p><p>Conçu en Corée pour le rituel SHIFT.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_acc"
-              ]
-            },
-            "accordion_Xs1JPn": {
+            "accordion_J2isAj": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
@@ -314,10 +290,8 @@
             }
           },
           "block_order": [
-            "accordion_TWBulZ",
-            "accordion_ESbRRX",
-            "accordion_kzxh9O",
-            "accordion_Xs1JPn"
+            "accordion_KLzdoc",
+            "accordion_J2isAj"
           ]
         },
         "group_kLziPN": {
@@ -343,7 +317,7 @@
                 "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
               },
               "blocks": {
-                "icon_with_text_OpTL9X": {
+                "icon_with_text_IhKtJ0": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -355,7 +329,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_mxX2tP": {
+                "icon_with_text_RlgLKO": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -367,7 +341,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_qk0eMD": {
+                "icon_with_text_mxgJTe": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -381,9 +355,9 @@
                 }
               },
               "block_order": [
-                "icon_with_text_OpTL9X",
-                "icon_with_text_mxX2tP",
-                "icon_with_text_qk0eMD"
+                "icon_with_text_IhKtJ0",
+                "icon_with_text_RlgLKO",
+                "icon_with_text_mxgJTe"
               ]
             }
           },
@@ -400,6 +374,7 @@
         "group_pills",
         "separator_AKgbEA",
         "product_form_grYQk6",
+        "cross_sell_QcpW8C",
         "delivery_estimation_A43yiG",
         "accordions_KKUaHK",
         "group_kLziPN"
@@ -425,17 +400,16 @@
         "padding_bottom": 60
       },
       "name": "Vidéos pratiques",
-      "disabled": true,
       "blocks": {
-        "text_TYpbbh": {
+        "text_uvSwMF": {
           "type": "text",
           "settings": {
-            "text": "<h2>En vidéo</h2>",
+            "text": "<h2>Les gestes en vidéo</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "tabs_veHwus": {
+        "tabs_8rESQe": {
           "type": "tabs",
           "settings": {
             "display_type": "tabs",
@@ -443,40 +417,63 @@
           },
           "name": "Vidéos",
           "blocks": {
-            "tab_a1lfSp": {
+            "tab_CsMehG": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Remplace ta recharge"
+                "tab_name": "Installez votre produit"
               },
-              "name": "Remplace ta recharge",
+              "name": "Installez votre produit",
               "blocks": {
-                "video_m5aMIA": {
+                "video_IBXuDL": {
                   "type": "video",
                   "settings": {
                     "source": "shopify",
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Remplace ta recharge"
+                    "alt": "Installez votre produit"
                   }
                 }
               },
               "block_order": [
-                "video_m5aMIA"
+                "video_IBXuDL"
+              ]
+            },
+            "tab_FAc9Qe": {
+              "type": "_tab",
+              "settings": {
+                "tab_name": "Remplacez votre recharge"
+              },
+              "name": "Remplacez votre recharge",
+              "blocks": {
+                "video_lSXpfK": {
+                  "type": "video",
+                  "settings": {
+                    "source": "shopify",
+                    "video_autoplay": true,
+                    "enable_video_controls": false,
+                    "aspect_ratio": "9/16",
+                    "alt": "Remplacez votre recharge"
+                  }
+                }
+              },
+              "block_order": [
+                "video_lSXpfK"
               ]
             }
           },
           "block_order": [
-            "tab_a1lfSp"
+            "tab_CsMehG",
+            "tab_FAc9Qe"
           ]
         }
       },
       "block_order": [
-        "text_TYpbbh",
-        "tabs_veHwus"
+        "text_uvSwMF",
+        "tabs_8rESQe"
       ]
     },
-    "ingr_dients_cl_s": {
+    "la_technologie_onsha": {
       "type": "custom-section",
       "settings": {
         "color_scheme": "",
@@ -486,356 +483,180 @@
         "padding_top": 60,
         "padding_bottom": 60
       },
-      "name": "Ingrédients clés",
+      "name": "La technologie Onsha",
       "blocks": {
-        "text_hYGTH3": {
+        "text_mZp0zV": {
           "type": "text",
           "settings": {
-            "text": "<h2>Ingrédients clés</h2>",
+            "text": "<h2>La technologie Onsha</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "text_XegQeN": {
+        "text_UbbYrE": {
           "type": "text",
           "settings": {
-            "text": "<p>La liste complète des ingrédients (INCI) figure sur l'emballage.</p>",
+            "text": "<p>Un pommeau pensé en Corée comme base de ton rituel : un jet précis, un système qui évolue avec toi.</p>",
             "text_style": "paragraph"
           }
         },
-        "slider_QGoCu2": {
+        "slider_CZ7Uw9": {
           "type": "slider",
           "settings": {
             "per_page_desktop": 4,
             "per_page_mobile": "1.8"
           },
-          "name": "Ingrédients clés",
+          "name": "La technologie Onsha",
           "blocks": {
-            "slide_Xv0TTR": {
+            "slide_VvVqE1": {
               "type": "_slide",
               "settings": {},
-              "name": "Vitamine C",
+              "name": "197 micro-trous de précision",
               "blocks": {
-                "image_d7fqkq": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 35,
-                    "image_width_mobile": 35
-                  }
-                },
-                "text_iY3Uvv": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Vitamine C</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_JZdWj1": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>6000 mg selon le fabricant.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_d7fqkq",
-                "text_iY3Uvv",
-                "text_JZdWj1"
-              ]
-            },
-            "slide_uHUtdX": {
-              "type": "_slide",
-              "settings": {},
-              "name": "Glycérine & acide hyaluronique",
-              "blocks": {
-                "image_otZeZE": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 35,
-                    "image_width_mobile": 35
-                  }
-                },
-                "text_TCZDY0": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Glycérine & acide hyaluronique</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_KBiam7": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Base hydratante commune aux collections.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_otZeZE",
-                "text_TCZDY0",
-                "text_KBiam7"
-              ]
-            },
-            "slide_Gpjl7O": {
-              "type": "_slide",
-              "settings": {},
-              "name": "Huiles essentielles",
-              "blocks": {
-                "image_pWqGBH": {
+                "image_R0CsTy": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Tea-tree_lavande.png"
+                    "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-8777658.png"
                   }
                 },
-                "text_UboGsn": {
+                "text_wkNhFd": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Huiles essentielles</strong></p>",
+                    "text": "<p><strong>197 micro-trous de précision</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_5lntQ5": {
+                "text_zz63Ff": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Selon la collection choisie.</p>",
+                    "text": "<p>Un jet fin et régulier.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_pWqGBH",
-                "text_UboGsn",
-                "text_5lntQ5"
+                "image_R0CsTy",
+                "text_wkNhFd",
+                "text_zz63Ff"
+              ]
+            },
+            "slide_8HxjSI": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Billes filtrantes intégrées",
+              "blocks": {
+                "image_i0B3Jr": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-7897741.png"
+                  }
+                },
+                "text_9ojflj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Billes filtrantes intégrées</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_Llqsaj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Logées dans le corps du pommeau.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_i0B3Jr",
+                "text_9ojflj",
+                "text_Llqsaj"
+              ]
+            },
+            "slide_3fS2qH": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Design transparent",
+              "blocks": {
+                "image_8iS2G8": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-7837412.png"
+                  }
+                },
+                "text_53X83R": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Design transparent</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_gEOzdm": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Tu vois ton système travailler.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_8iS2G8",
+                "text_53X83R",
+                "text_gEOzdm"
+              ]
+            },
+            "slide_IIXGvO": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Compatible recharges thermales",
+              "blocks": {
+                "image_MdgaKj": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-8724387.jpg"
+                  }
+                },
+                "text_e3nNyj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Compatible recharges thermales</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_Ehh2FD": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Avec la coque Home et les filtres vitaminés.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_MdgaKj",
+                "text_e3nNyj",
+                "text_Ehh2FD"
               ]
             }
           },
           "block_order": [
-            "slide_Xv0TTR",
-            "slide_uHUtdX",
-            "slide_Gpjl7O"
+            "slide_VvVqE1",
+            "slide_8HxjSI",
+            "slide_3fS2qH",
+            "slide_IIXGvO"
           ]
         }
       },
       "block_order": [
-        "text_hYGTH3",
-        "text_XegQeN",
-        "slider_QGoCu2"
-      ]
-    },
-    "notes_olfactives_par_col": {
-      "type": "custom-section",
-      "settings": {
-        "color_scheme": "",
-        "color_scheme_card": "",
-        "layout_gap_desktop": 10,
-        "layout_flex_direction_mobile": "row",
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
-      "name": "Notes olfactives par collection",
-      "blocks": {
-        "text_DYV31n": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Notes olfactives par collection</h2>",
-            "text_style": "h3"
-          },
-          "name": "Titre"
-        },
-        "slider_hu4b5Y": {
-          "type": "slider",
-          "settings": {
-            "per_page_desktop": 4,
-            "per_page_mobile": "1.8"
-          },
-          "name": "Notes olfactives par collection",
-          "blocks": {
-            "slide_KW6p06": {
-              "type": "_slide",
-              "settings": {},
-              "name": "Fruits Therapy",
-              "blocks": {
-                "image_xICX7U": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-2851269.png"
-                  }
-                },
-                "text_DfO7ri": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Fruits Therapy</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_eDRNct": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Petitgrain Tangerine, Mint Apple, Lemon Wave, Ginger & Bergamot : frais et pétillant.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_xICX7U",
-                "text_DfO7ri",
-                "text_eDRNct"
-              ]
-            },
-            "slide_Wj0tqG": {
-              "type": "_slide",
-              "settings": {},
-              "name": "Discovery",
-              "blocks": {
-                "image_vBHfjz": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-1086856.jpg"
-                  }
-                },
-                "text_cs6XQi": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Discovery</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_0IM1Ak": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Cedarwood Moss, Frankincense Fig, Carrot Seed Plum, Mandarin Neroli, Petitgrain Tangerine, Geranium Muguet.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_vBHfjz",
-                "text_cs6XQi",
-                "text_0IM1Ak"
-              ]
-            },
-            "slide_ipITvQ": {
-              "type": "_slide",
-              "settings": {},
-              "name": "Patchouli & Rose",
-              "blocks": {
-                "image_Tvxh5p": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-1755093.png"
-                  }
-                },
-                "text_V85U5y": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Patchouli & Rose</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_sWDzTm": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Patchouli, rose de Damas, ambre doux, cèdre, musc blanc.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_Tvxh5p",
-                "text_V85U5y",
-                "text_sWDzTm"
-              ]
-            },
-            "slide_2u4Xi2": {
-              "type": "_slide",
-              "settings": {},
-              "name": "Cherry Blossom",
-              "blocks": {
-                "image_9Fg30G": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-3834627.jpg"
-                  }
-                },
-                "text_E0Sj2N": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Cherry Blossom</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_vRmQAd": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Fleur de cerisier, pivoine, muguet, muscs légers.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_9Fg30G",
-                "text_E0Sj2N",
-                "text_vRmQAd"
-              ]
-            },
-            "slide_P6dY31": {
-              "type": "_slide",
-              "settings": {},
-              "name": "Hinoki Spring",
-              "blocks": {
-                "image_aYWqMc": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-4851165.png"
-                  }
-                },
-                "text_u04r8x": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Hinoki Spring</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_sh8oa6": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Cyprès hinoki, épicéa, bois blanc, muscs.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_aYWqMc",
-                "text_u04r8x",
-                "text_sh8oa6"
-              ]
-            }
-          },
-          "block_order": [
-            "slide_KW6p06",
-            "slide_Wj0tqG",
-            "slide_ipITvQ",
-            "slide_2u4Xi2",
-            "slide_P6dY31"
-          ]
-        }
-      },
-      "block_order": [
-        "text_DYV31n",
-        "slider_hu4b5Y"
+        "text_mZp0zV",
+        "text_UbbYrE",
+        "slider_CZ7Uw9"
       ]
     },
     "comment_ca_marche": {
@@ -850,7 +671,7 @@
       },
       "name": "Comment ça marche",
       "blocks": {
-        "text_T9nGD7": {
+        "text_W56eCu": {
           "type": "text",
           "settings": {
             "text": "<h2>Comment ça marche ?</h2>",
@@ -858,7 +679,7 @@
           },
           "name": "Titre"
         },
-        "group_CZbBiM": {
+        "group_rCGIZE": {
           "type": "group",
           "settings": {
             "color_scheme": "",
@@ -874,15 +695,15 @@
             "padding_vertical_mobile": 0
           },
           "blocks": {
-            "image_klb6PJ": {
+            "image_JduRHH": {
               "type": "image",
               "settings": {
                 "image_width_desktop": 80,
                 "image_width_mobile": 80,
-                "image": "shopify://shop_images/CAPSULE-STEP_01_IMAGE.jpg"
+                "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-5452678.png"
               }
             },
-            "group_d7dnGb": {
+            "group_Jdpmrc": {
               "type": "group",
               "settings": {
                 "color_scheme": "",
@@ -896,109 +717,451 @@
                 "padding_vertical_mobile": 0
               },
               "blocks": {
-                "timeline_GaQ3jM": {
+                "timeline_64GiIj": {
                   "type": "timeline",
                   "settings": {},
                   "name": "Étapes",
                   "blocks": {
-                    "timeline_step_s0GYVw": {
+                    "timeline_step_V7iB3m": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 1",
                       "blocks": {
-                        "text_FVdm3D": {
+                        "text_mvnEN5": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 1</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_ytOO45": {
+                        "text_wZPf1Q": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Ouvre le compartiment de ton pommeau SHIFT.</p>",
+                            "text": "<p><strong>Dévisse</strong> ton pommeau de douche actuel.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_FVdm3D",
-                        "text_ytOO45"
+                        "text_mvnEN5",
+                        "text_wZPf1Q"
                       ]
                     },
-                    "timeline_step_dox48V": {
+                    "timeline_step_sGpWLu": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 2",
                       "blocks": {
-                        "text_1tV3wK": {
+                        "text_mE4lBY": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 2</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_HeECAa": {
+                        "text_zDzV8f": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Retire la capsule vide et transparente.</p>",
+                            "text": "<p><strong>Visse</strong> le pommeau Onsha sur ton flexible, à la main, sans forcer.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_1tV3wK",
-                        "text_HeECAa"
+                        "text_mE4lBY",
+                        "text_zDzV8f"
                       ]
                     },
-                    "timeline_step_7Amutv": {
+                    "timeline_step_6Vw5DQ": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 3",
                       "blocks": {
-                        "text_xIx79Q": {
+                        "text_L5DZPj": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 3</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_cDLKBb": {
+                        "text_wjJJib": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Insère la nouvelle capsule : moins de 5 secondes.</p>",
+                            "text": "<p><strong>Fais couler l'eau</strong> quelques secondes et vérifie l'étanchéité. Ton rituel peut commencer.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_xIx79Q",
-                        "text_cDLKBb"
+                        "text_L5DZPj",
+                        "text_wjJJib"
                       ]
                     }
                   },
                   "block_order": [
-                    "timeline_step_s0GYVw",
-                    "timeline_step_dox48V",
-                    "timeline_step_7Amutv"
+                    "timeline_step_V7iB3m",
+                    "timeline_step_sGpWLu",
+                    "timeline_step_6Vw5DQ"
                   ]
+                },
+                "text_lMaXZj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Le conseil Sunsoari</strong></p><p>Pour vivre le rituel thermal complet, fixe d'abord la coque de diffusion sur ton flexible, insère ton filtre thermal vitaminé (Hinoki, Océan, Pin ou Fleur de Prunier), puis visse le pommeau sur la coque. Deux minutes, pas plus.</p>",
+                    "text_style": "paragraph"
+                  }
                 }
               },
               "block_order": [
-                "timeline_GaQ3jM"
+                "timeline_64GiIj",
+                "text_lMaXZj"
               ]
             }
           },
           "block_order": [
-            "image_klb6PJ",
-            "group_d7dnGb"
+            "image_JduRHH",
+            "group_Jdpmrc"
           ]
         }
       },
       "block_order": [
-        "text_T9nGD7",
-        "group_CZbBiM"
+        "text_W56eCu",
+        "group_rCGIZE"
       ]
+    },
+    "home_ou_nomade": {
+      "type": "comparison-table",
+      "blocks": {
+        "comparison_table_row_4gfqrc": {
+          "type": "_comparison-table-row",
+          "name": "En-tête",
+          "settings": {},
+          "blocks": {
+            "comparison_table_data_G8pSH4": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p></p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_487q7J": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Home</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_58m1Ci": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Nomade</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            }
+          },
+          "block_order": [
+            "comparison_table_data_G8pSH4",
+            "comparison_table_data_487q7J",
+            "comparison_table_data_58m1Ci"
+          ]
+        },
+        "comparison_table_row_5XlrWi": {
+          "type": "_comparison-table-row",
+          "name": "Pièce principale",
+          "settings": {},
+          "blocks": {
+            "comparison_table_data_AhzCue": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pièce principale</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_QpBenQ": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pommeau filtrant</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_tYh5Xj": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Douchette filtrante</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            }
+          },
+          "block_order": [
+            "comparison_table_data_AhzCue",
+            "comparison_table_data_QpBenQ",
+            "comparison_table_data_tYh5Xj"
+          ]
+        },
+        "comparison_table_row_0B26R0": {
+          "type": "_comparison-table-row",
+          "name": "Recharge",
+          "settings": {},
+          "blocks": {
+            "comparison_table_data_8TPQxj": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Recharge</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_q4i9Do": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Filtre Thermal Vitaminé (Home)</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_V8gz4F": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Capsule Thermale (Nomade) + disque</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            }
+          },
+          "block_order": [
+            "comparison_table_data_8TPQxj",
+            "comparison_table_data_q4i9Do",
+            "comparison_table_data_V8gz4F"
+          ]
+        },
+        "comparison_table_row_8qzjI6": {
+          "type": "_comparison-table-row",
+          "name": "Durée d'une recharge",
+          "settings": {},
+          "blocks": {
+            "comparison_table_data_kQ1okT": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Durée d'une recharge</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_BGzvAm": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>3 à 4 semaines</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_wufUxb": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>10 à 15 jours</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            }
+          },
+          "block_order": [
+            "comparison_table_data_kQ1okT",
+            "comparison_table_data_BGzvAm",
+            "comparison_table_data_wufUxb"
+          ]
+        },
+        "comparison_table_row_GKFSuf": {
+          "type": "_comparison-table-row",
+          "name": "Idéal pour",
+          "settings": {},
+          "blocks": {
+            "comparison_table_data_vJDCTb": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Idéal pour</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_yvHNsG": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Rester installé à la maison</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_9eh6Yo": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Voyager, louer, emporter</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            }
+          },
+          "block_order": [
+            "comparison_table_data_vJDCTb",
+            "comparison_table_data_yvHNsG",
+            "comparison_table_data_9eh6Yo"
+          ]
+        }
+      },
+      "block_order": [
+        "comparison_table_row_4gfqrc",
+        "comparison_table_row_5XlrWi",
+        "comparison_table_row_0B26R0",
+        "comparison_table_row_8qzjI6",
+        "comparison_table_row_GKFSuf"
+      ],
+      "name": "Home ou Nomade ?",
+      "settings": {
+        "color_highlighted_column": "#032B59",
+        "color_highlighted_background_column": "#FBFAF7",
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
     },
     "en_situation": {
       "type": "custom-section",
@@ -1013,7 +1176,7 @@
       "name": "En situation (UGC)",
       "disabled": true,
       "blocks": {
-        "text_nGODdf": {
+        "text_5er8bO": {
           "type": "text",
           "settings": {
             "text": "<h2>Dans vos salles de bain</h2>",
@@ -1021,15 +1184,15 @@
           },
           "name": "Titre"
         },
-        "stories_kVYpIq": {
+        "stories_oeq3hD": {
           "type": "stories",
           "settings": {},
           "name": "Stories UGC"
         }
       },
       "block_order": [
-        "text_nGODdf",
-        "stories_kVYpIq"
+        "text_5er8bO",
+        "stories_oeq3hD"
       ]
     },
     "avis": {
@@ -1171,16 +1334,16 @@
                 "accordion_padding": "medium"
               },
               "blocks": {
-                "accordion_oH0loM": {
+                "accordion_avJA76": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Combien de temps dure une capsule ?"
+                    "heading": "Est-ce que je peux l'installer moi-même ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Selon ta fréquence de douche, quelques semaines. Quand la capsule est vide et transparente, remplace-la.</p>",
+                        "text": "<p>Oui ! Il se visse à la main sur ton flexible standard, en quelques secondes, sans outil ni plombier. Vérifie simplement l'étanchéité à la première utilisation.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1189,16 +1352,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_l53mLU": {
+                "accordion_rNicHT": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Puis-je alterner les collections ?"
+                    "heading": "Le pommeau filtre-t-il l'eau tout seul ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Bien sûr ! Tu peux varier les senteurs selon tes envies et les saisons.</p>",
+                        "text": "<p>Ses billes filtrantes intégrées font partie du système de filtration. Pour l'expérience thermale complète (eau enrichie et senteurs coréennes), associe-le à la coque de diffusion et à un filtre thermal vitaminé Onsha.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1207,16 +1370,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_UhVDTM": {
+                "accordion_p8hkqd": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Les senteurs conviennent-elles aux peaux sensibles ?"
+                    "heading": "Quelle senteur choisir pour commencer ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Les capsules contiennent des huiles essentielles et s'utilisent diffusées dans l'eau de la douche. En cas de sensibilité connue aux parfums, consulte la liste INCI avant utilisation.</p>",
+                        "text": "<p>Hinoki si tu cherches le calme, Océan ou Pin pour l'énergie du matin, Fleur de Prunier pour la douceur du soir. Si tu hésites, le Coffret Douche Thermal Coréen (Home) te permet de toutes les découvrir.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1225,16 +1388,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_Tnr11B": {
+                "accordion_lm7tOt": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Avec quel pommeau sont-elles compatibles ?"
+                    "heading": "À quelle fréquence remplacer les recharges ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Uniquement avec le Pommeau de Douche Filtrant SHIFT, dont le compartiment est spécifique.</p>",
+                        "text": "<p>Le pommeau lui-même ne se remplace pas. Le filtre thermal vitaminé se change environ toutes les 3 à 4 semaines, selon ta fréquence de douche.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1245,10 +1408,10 @@
                 }
               },
               "block_order": [
-                "accordion_oH0loM",
-                "accordion_l53mLU",
-                "accordion_UhVDTM",
-                "accordion_Tnr11B"
+                "accordion_avJA76",
+                "accordion_rNicHT",
+                "accordion_p8hkqd",
+                "accordion_lm7tOt"
               ]
             }
           },
@@ -1336,9 +1499,9 @@
   "order": [
     "main",
     "videos_pratiques",
-    "ingr_dients_cl_s",
-    "notes_olfactives_par_col",
+    "la_technologie_onsha",
     "comment_ca_marche",
+    "home_ou_nomade",
     "en_situation",
     "avis",
     "decouvre_aussi",

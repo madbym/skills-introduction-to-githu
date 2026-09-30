@@ -1949,7 +1949,7 @@
     "nos_marques": {
       "type": "custom-section",
       "blocks": {
-        "text_bfnoGM": {
+        "text_XjY5Ma": {
           "type": "text",
           "name": "t:title",
           "settings": {
@@ -1972,7 +1972,7 @@
           },
           "blocks": {}
         },
-        "group_bJmTPS": {
+        "group_r2jiIq": {
           "type": "group",
           "name": "t:group",
           "settings": {
@@ -2007,7 +2007,7 @@
             "additional_class": ""
           },
           "blocks": {
-            "image_card_OhbVrp": {
+            "image_card_YvpiYK": {
               "type": "image-card",
               "name": "t:image_card",
               "settings": {
@@ -2059,7 +2059,7 @@
                 "text_gMxpcc"
               ]
             },
-            "image_card_oiVgRV": {
+            "image_card_ne1WJn": {
               "type": "image-card",
               "name": "t:image_card",
               "settings": {
@@ -2111,7 +2111,7 @@
                 "text_gMxpcc"
               ]
             },
-            "image_card_5IfLBc": {
+            "image_card_Ln03ov": {
               "type": "image-card",
               "name": "t:image_card",
               "settings": {
@@ -2165,15 +2165,15 @@
             }
           },
           "block_order": [
-            "image_card_OhbVrp",
-            "image_card_oiVgRV",
-            "image_card_5IfLBc"
+            "image_card_YvpiYK",
+            "image_card_ne1WJn",
+            "image_card_Ln03ov"
           ]
         }
       },
       "block_order": [
-        "text_bfnoGM",
-        "group_bJmTPS"
+        "text_XjY5Ma",
+        "group_r2jiIq"
       ],
       "name": "Nos marques",
       "settings": {

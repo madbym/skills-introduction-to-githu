@@ -91,7 +91,7 @@
                   "name": "Texte",
                   "settings": {
                     "show_on_display": "desktop_and_mobile",
-                    "text": "<p>Livraison suivie</p>",
+                    "text": "<p>Livraison offerte dès 80 €</p>",
                     "text_style": "h6",
                     "paragraph_font_size": "normal",
                     "font_weight": 400,
@@ -114,7 +114,7 @@
                   "name": "Texte",
                   "settings": {
                     "show_on_display": "desktop_and_mobile",
-                    "text": "<p>Partout en France métropolitaine. Délais et frais affichés au paiement.</p>",
+                    "text": "<p>Livraison suivie en France métropolitaine. Délais et frais affichés au paiement.</p>",
                     "text_style": "paragraph",
                     "paragraph_font_size": "small",
                     "font_weight": 400,

@@ -23,7 +23,7 @@
                 "badge_VEGRNK": {
                   "type": "_badge",
                   "settings": {
-                    "text": "LE RITUEL THERMAL PORTABLE",
+                    "text": "DÉBUTE TON RITUEL NOMADE",
                     "badge_style": "secondary"
                   }
                 }
@@ -49,7 +49,7 @@
           "type": "text",
           "name": "Texte",
           "settings": {
-            "text": "<p>Douchette, housse personnalisable, coque nomade et 4 capsules thermales : le rituel thermal qui te suit partout.</p>",
+            "text": "<p>La coque nomade et 4 capsules thermales avec leurs disques sédiment : tout pour débuter ton rituel Nomade.</p>",
             "text_style": "paragraph",
             "paragraph_font_size": "large"
           }
@@ -89,7 +89,7 @@
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Douchette + housse + coque + 4 capsules</p>",
+                "text": "<p>Coque nomade + 4 capsules</p>",
                 "font_weight": 500
               }
             },
@@ -100,7 +100,7 @@
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>10 à 15 jours de soin par capsule</p>",
+                "text": "<p>Les 4 senteurs coréennes</p>",
                 "font_weight": 500
               }
             },
@@ -111,7 +111,7 @@
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Installation sans outil</p>",
+                "text": "<p>Prix plus doux qu'à l'unité</p>",
                 "font_weight": 500
               }
             }
@@ -204,10 +204,10 @@
               "type": "_toggle-cross-sell",
               "name": "t:toggle_cross_sell",
               "settings": {
-                "title": "Pense à tes recharges",
-                "description": "<p>Les capsules thermales nomades, dans ta senteur préférée.</p>",
+                "title": "Passe au rituel Nomade complet",
+                "description": "<p>La douchette filtrante sur laquelle se fixe ta coque.</p>",
                 "product_list": [
-                  "capsule-vitaminee-shower-filter-sunsoari"
+                  "douchette-filtrante"
                 ]
               }
             }
@@ -236,52 +236,52 @@
             "accordion_padding": "medium"
           },
           "blocks": {
-            "accordion_3e9Xrw": {
+            "accordion_z8TmeL": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
-                "heading": "Composition & principes actifs"
+                "heading": "Contenu du set"
               },
               "blocks": {
-                "text_bQmzvr": {
+                "text_tKR69y": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Douchette filtrante :</strong> ABS, polycarbonate (PC), polypropylène (PP), inox (SS).</p><p><strong>Housse :</strong> silicone souple, sans BPA.</p><p><strong>Capsules thermales :</strong> eau thermale soufrée extraite à 808 m dans le granit coréen, lyophilisée et concentrée 4 fois, vitamine C, acide hyaluronique, glycérine, MSM et senteur inspirée des régions thermales coréennes. Chaque capsule est livrée avec son disque sédiment. La liste complète des ingrédients (INCI) figure sur chaque emballage.</p><p>Usage externe uniquement. Tenir hors de portée des enfants. En cas de sensibilité connue aux parfums, consulte la liste INCI avant utilisation.</p>",
+                    "text": "<p><strong>1 coque de diffusion (Nomade) :</strong> la pièce compacte qui accueille tes capsules et leurs disques sédiment.</p><p><strong>4 capsules thermales coréennes (Nomade) :</strong> une de chaque senteur, Hinoki, Océan, Pin et Fleur de Prunier.</p><p><strong>4 disques sédiment :</strong> un par capsule, dans le même sachet. Ils se changent ensemble.</p><p>À associer avec la Douchette Filtrante Onsha pour le système Nomade complet.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "text_bQmzvr"
+                "text_tKR69y"
               ]
             },
-            "accordion_v8bh4q": {
+            "accordion_Xt2RMZ": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
-                "heading": "Durée & entretien"
+                "heading": "Composition & sécurité"
               },
               "blocks": {
-                "text_PGzR1I": {
+                "text_S1OpgS": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Capsules :</strong> environ 10 à 15 jours chacune selon ta fréquence de douche. Change le disque sédiment en même temps que la capsule.</p><p><strong>Housse :</strong> lavable à l'eau tiède, clips interchangeables.</p><p><strong>Entretien :</strong> rince régulièrement la coque nomade.</p>",
+                    "text": "<p><strong>Coque (Nomade) :</strong> polypropylène (PP) et silicone, sans BPA.</p><p><strong>Capsules thermales :</strong> eau thermale soufrée lyophilisée concentrée 4 fois, vitamine C, acide hyaluronique, glycérine, senteur inspirée des régions thermales coréennes. La liste complète des ingrédients (INCI) figure sur chaque emballage.</p><p><strong>Disques sédiment :</strong> filtration mécanique multicouche des sédiments et impuretés visibles.</p><p>Usage externe uniquement. Tenir hors de portée des enfants. En cas de sensibilité connue aux parfums, consulte la liste INCI avant utilisation.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "text_PGzR1I"
+                "text_S1OpgS"
               ]
             },
-            "accordion_MBwUYu": {
+            "accordion_IBQxeG": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
                 "heading": "Découvre tes 4 senteurs"
               },
               "blocks": {
-                "text_lL9qcg": {
+                "text_hYKYcw": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Hinoki (calme absolu) :</strong> cyprès, bois chaud, musc doux. Idéale le soir.</p><p><strong>Océan (fraîcheur marine) :</strong> embruns marins, sel minéral, végétal aquatique. Parfaite le matin.</p><p><strong>Pin (énergie des forêts) :</strong> pin frais, résine, terre humide. Tonique dès le réveil.</p><p><strong>Fleur de Prunier (douceur florale) :</strong> fleur de prunier, poudré doux, bois blanc. Apaisante et délicate.</p>",
@@ -290,17 +290,17 @@
                 }
               },
               "block_order": [
-                "text_lL9qcg"
+                "text_hYKYcw"
               ]
             },
-            "accordion_KmqcTB": {
+            "accordion_FgB9xO": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
                 "heading": "Livraison & retours"
               },
               "blocks": {
-                "text_BMGhy5": {
+                "text_Pva2A0": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p><p>Retour possible sous 14 jours, produit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
@@ -309,15 +309,15 @@
                 }
               },
               "block_order": [
-                "text_BMGhy5"
+                "text_Pva2A0"
               ]
             }
           },
           "block_order": [
-            "accordion_3e9Xrw",
-            "accordion_v8bh4q",
-            "accordion_MBwUYu",
-            "accordion_KmqcTB"
+            "accordion_z8TmeL",
+            "accordion_Xt2RMZ",
+            "accordion_IBQxeG",
+            "accordion_FgB9xO"
           ]
         },
         "group_kLziPN": {
@@ -390,6 +390,48 @@
           "block_order": [
             "marquee_QE4fL7"
           ]
+        },
+        "this_pack_contains_1FNA88": {
+          "type": "this-pack-contains",
+          "name": "Dans votre coffret",
+          "settings": {
+            "title": "Dans votre coffret",
+            "description": "<p>Tout ce que tu reçois, en un coup d'œil.</p>",
+            "margin_top": 0,
+            "margin_bottom": 10
+          },
+          "blocks": {
+            "product_mini_card_S8IALV": {
+              "type": "product-mini-card",
+              "settings": {
+                "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+                "display_mode": "column",
+                "product": "coque-de-diffusion",
+                "link_to_product": true,
+                "show_image": true,
+                "show_price": false,
+                "image_width": 80,
+                "title": "Coque nomade ×1"
+              }
+            },
+            "product_mini_card_Uj4APg": {
+              "type": "product-mini-card",
+              "settings": {
+                "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+                "display_mode": "column",
+                "product": "capsule-vitaminee-shower-filter-sunsoari",
+                "link_to_product": true,
+                "show_image": true,
+                "show_price": false,
+                "image_width": 80,
+                "title": "Capsules + disques ×4"
+              }
+            }
+          },
+          "block_order": [
+            "product_mini_card_S8IALV",
+            "product_mini_card_Uj4APg"
+          ]
         }
       },
       "block_order": [
@@ -398,6 +440,7 @@
         "text_yQdqF8",
         "price_yEeMeb",
         "group_pills",
+        "this_pack_contains_1FNA88",
         "separator_AKgbEA",
         "product_form_grYQk6",
         "delivery_estimation_A43yiG",
@@ -414,238 +457,6 @@
         "anchor_id": "buy"
       }
     },
-    "dans_ton_coffret": {
-      "type": "custom-section",
-      "settings": {
-        "color_scheme": "",
-        "color_scheme_card": "",
-        "layout_gap_desktop": 10,
-        "layout_flex_direction_mobile": "row",
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
-      "name": "Dans ton coffret",
-      "blocks": {
-        "text_ErYOTO": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Dans ton coffret</h2>",
-            "text_style": "h3"
-          },
-          "name": "Titre"
-        },
-        "group_aAXJLh": {
-          "type": "group",
-          "settings": {
-            "color_scheme": "",
-            "layout_type": "grid",
-            "layout_direction_desktop": "row",
-            "layout_grid_columns_desktop": 4,
-            "layout_gap_desktop": 16,
-            "layout_wrap_desktop": "wrap",
-            "layout_align_items_desktop": "center",
-            "same_as_desktop": false,
-            "layout_direction_mobile": "row",
-            "layout_grid_columns_mobile": 2,
-            "layout_wrap_mobile": "wrap",
-            "use_global_container_padding": false,
-            "padding_horizontal": 0,
-            "padding_vertical": 0,
-            "padding_horizontal_mobile": 0,
-            "padding_vertical_mobile": 0
-          },
-          "name": "Éléments",
-          "blocks": {
-            "group_vNuQ2h": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Douchette Filtrante Onsha ×1",
-              "blocks": {
-                "image_aH7ZIR": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-douchette-filtrante-5144667.png"
-                  }
-                },
-                "text_U8VVQm": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Douchette Filtrante Onsha ×1</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_xBe8Q6": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Le système portable</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_aH7ZIR",
-                "text_U8VVQm",
-                "text_xBe8Q6"
-              ]
-            },
-            "group_RV5lNK": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Housse personnalisable ×1",
-              "blocks": {
-                "image_U5tGtQ": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-coque-pour-douchette-filtrante-4176027.jpg"
-                  }
-                },
-                "text_AuzSsJ": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Housse personnalisable ×1</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_imAQ8y": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Protège ta douchette</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_U5tGtQ",
-                "text_AuzSsJ",
-                "text_imAQ8y"
-              ]
-            },
-            "group_nGEY59": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Coque de diffusion Nomade ×1",
-              "blocks": {
-                "image_tzJ1at": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/coffret-mini-9416210.jpg"
-                  }
-                },
-                "text_snBYLM": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Coque de diffusion Nomade ×1</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_PuDCCR": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Accueille les capsules</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_tzJ1at",
-                "text_snBYLM",
-                "text_PuDCCR"
-              ]
-            },
-            "group_oZmjbc": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Capsules thermales ×4",
-              "blocks": {
-                "image_YVkQfs": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/capsule-vitaminee-3625758.jpg"
-                  }
-                },
-                "text_GQONvf": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Capsules thermales ×4</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_08WpRt": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Hinoki, Océan, Pin, Fleur de Prunier</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_YVkQfs",
-                "text_GQONvf",
-                "text_08WpRt"
-              ]
-            }
-          },
-          "block_order": [
-            "group_vNuQ2h",
-            "group_RV5lNK",
-            "group_nGEY59",
-            "group_oZmjbc"
-          ]
-        }
-      },
-      "block_order": [
-        "text_ErYOTO",
-        "group_aAXJLh"
-      ]
-    },
     "videos_pratiques": {
       "type": "custom-section",
       "settings": {
@@ -657,12 +468,11 @@
         "padding_bottom": 60
       },
       "name": "Vidéos pratiques",
-      "disabled": true,
       "blocks": {
         "text_M1p9un": {
           "type": "text",
           "settings": {
-            "text": "<h2>En vidéo</h2>",
+            "text": "<h2>Les gestes en vidéo</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
@@ -678,9 +488,9 @@
             "tab_aYV2Fy": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Découvre ton coffret"
+                "tab_name": "Découvrez votre coffret"
               },
-              "name": "Découvre ton coffret",
+              "name": "Découvrez votre coffret",
               "blocks": {
                 "video_2Yr3NM": {
                   "type": "video",
@@ -689,7 +499,7 @@
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Découvre ton coffret"
+                    "alt": "Découvrez votre coffret"
                   }
                 }
               },
@@ -700,9 +510,9 @@
             "tab_jBKyLo": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Installe ton produit"
+                "tab_name": "Installez votre produit"
               },
-              "name": "Installe ton produit",
+              "name": "Installez votre produit",
               "blocks": {
                 "video_sUwswz": {
                   "type": "video",
@@ -711,7 +521,7 @@
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Installe ton produit"
+                    "alt": "Installez votre produit"
                   }
                 }
               },
@@ -941,12 +751,12 @@
           },
           "name": "Tes 4 senteurs",
           "blocks": {
-            "slide_jPSa5W": {
+            "slide_JHwBVJ": {
               "type": "_slide",
               "settings": {},
               "name": "Hinoki · Calme absolu",
               "blocks": {
-                "image_pEN2Xe": {
+                "image_EPTFCY": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -954,14 +764,14 @@
                     "image": "shopify://shop_images/Hinoki.jpg"
                   }
                 },
-                "text_DA4OKm": {
+                "text_bfsozS": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Hinoki · Calme absolu</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_TSyFzp": {
+                "text_ptQLxE": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Cyprès, bois chaud, musc doux. Pour les soirs de détente.</p>",
@@ -970,17 +780,17 @@
                 }
               },
               "block_order": [
-                "image_pEN2Xe",
-                "text_DA4OKm",
-                "text_TSyFzp"
+                "image_EPTFCY",
+                "text_bfsozS",
+                "text_ptQLxE"
               ]
             },
-            "slide_hDiZDQ": {
+            "slide_lmnVEr": {
               "type": "_slide",
               "settings": {},
               "name": "Océan · Fraîcheur marine",
               "blocks": {
-                "image_3X4gXB": {
+                "image_vwSDrt": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -988,14 +798,14 @@
                     "image": "shopify://shop_images/Ocean.jpg"
                   }
                 },
-                "text_olZ9SH": {
+                "text_qohUmu": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Océan · Fraîcheur marine</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_DdJp62": {
+                "text_hVI8WS": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Embruns marins, sel minéral, végétal aquatique. Pour les matins.</p>",
@@ -1004,17 +814,17 @@
                 }
               },
               "block_order": [
-                "image_3X4gXB",
-                "text_olZ9SH",
-                "text_DdJp62"
+                "image_vwSDrt",
+                "text_qohUmu",
+                "text_hVI8WS"
               ]
             },
-            "slide_5kV3EC": {
+            "slide_rcdJsS": {
               "type": "_slide",
               "settings": {},
               "name": "Pin · Énergie des forêts",
               "blocks": {
-                "image_HJMu8W": {
+                "image_ULWHMs": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -1022,14 +832,14 @@
                     "image": "shopify://shop_images/Pin.jpg"
                   }
                 },
-                "text_5CN0U5": {
+                "text_g1msox": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Pin · Énergie des forêts</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_GB16JC": {
+                "text_ltaTIi": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Pin frais, résine, terre humide. Pour bien démarrer la journée.</p>",
@@ -1038,17 +848,17 @@
                 }
               },
               "block_order": [
-                "image_HJMu8W",
-                "text_5CN0U5",
-                "text_GB16JC"
+                "image_ULWHMs",
+                "text_g1msox",
+                "text_ltaTIi"
               ]
             },
-            "slide_rvu5If": {
+            "slide_q83Eh0": {
               "type": "_slide",
               "settings": {},
               "name": "Fleur de Prunier · Douceur florale",
               "blocks": {
-                "image_qWp1Or": {
+                "image_8iO3WF": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -1056,14 +866,14 @@
                     "image": "shopify://shop_images/Onsha_Fleur_de_prunier.png"
                   }
                 },
-                "text_XXHFOp": {
+                "text_g3aKsE": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Fleur de Prunier · Douceur florale</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_rCeTsp": {
+                "text_ECvl9d": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Fleur de prunier, poudré doux, bois blanc. Pour un moment tout en douceur.</p>",
@@ -1072,17 +882,17 @@
                 }
               },
               "block_order": [
-                "image_qWp1Or",
-                "text_XXHFOp",
-                "text_rCeTsp"
+                "image_8iO3WF",
+                "text_g3aKsE",
+                "text_ECvl9d"
               ]
             }
           },
           "block_order": [
-            "slide_jPSa5W",
-            "slide_hDiZDQ",
-            "slide_5kV3EC",
-            "slide_rvu5If"
+            "slide_JHwBVJ",
+            "slide_lmnVEr",
+            "slide_rcdJsS",
+            "slide_q83Eh0"
           ]
         }
       },
@@ -1132,7 +942,7 @@
               "settings": {
                 "image_width_desktop": 80,
                 "image_width_mobile": 80,
-                "image": "shopify://shop_images/Copie_de_IMG_2100.gif"
+                "image": "shopify://shop_images/Copie_de_IMG_2103.gif"
               }
             },
             "group_LKpvO0": {
@@ -1154,112 +964,112 @@
                   "settings": {},
                   "name": "Étapes",
                   "blocks": {
-                    "timeline_step_IDAdn1": {
+                    "timeline_step_8tfphJ": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 1",
                       "blocks": {
-                        "text_ijoySj": {
+                        "text_ezFeKO": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 1</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_TneAAv": {
+                        "text_RdjjZK": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Ouvre</strong> la coque nomade et <strong>insère</strong> une capsule avec son disque sédiment.</p>",
+                            "text": "<p><strong>Ouvre</strong> la coque nomade.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_ijoySj",
-                        "text_TneAAv"
+                        "text_ezFeKO",
+                        "text_RdjjZK"
                       ]
                     },
-                    "timeline_step_yEa8wt": {
+                    "timeline_step_Ct3LBt": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 2",
                       "blocks": {
-                        "text_Ay5XL8": {
+                        "text_WAMMYN": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 2</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_Sb24WK": {
+                        "text_oXHyC6": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Ferme</strong> la coque et fixe-la sur la douchette.</p>",
+                            "text": "<p><strong>Insère</strong> le disque sédiment puis la capsule, dans la senteur de ton choix.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_Ay5XL8",
-                        "text_Sb24WK"
+                        "text_WAMMYN",
+                        "text_oXHyC6"
                       ]
                     },
-                    "timeline_step_M5oFor": {
+                    "timeline_step_qQfkpl": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 3",
                       "blocks": {
-                        "text_Wy2591": {
+                        "text_KNdN9V": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 3</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_AIVVIZ": {
+                        "text_g8WnOn": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Visse</strong> le tout sur ton flexible de douche standard, sans outil.</p>",
+                            "text": "<p><strong>Referme</strong> et fixe la coque sur ta douchette.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_Wy2591",
-                        "text_AIVVIZ"
+                        "text_KNdN9V",
+                        "text_g8WnOn"
                       ]
                     },
-                    "timeline_step_D6iNIb": {
+                    "timeline_step_sTsS3D": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 4",
                       "blocks": {
-                        "text_BFbyvQ": {
+                        "text_JekaAC": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 4</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_RZzUk1": {
+                        "text_SMEsco": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Ouvre l'eau</strong> : ton rituel commence, à la maison comme en voyage.</p>",
+                            "text": "<p><strong>Ouvre l'eau</strong> : ton rituel commence.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_BFbyvQ",
-                        "text_RZzUk1"
+                        "text_JekaAC",
+                        "text_SMEsco"
                       ]
                     }
                   },
                   "block_order": [
-                    "timeline_step_IDAdn1",
-                    "timeline_step_yEa8wt",
-                    "timeline_step_M5oFor",
-                    "timeline_step_D6iNIb"
+                    "timeline_step_8tfphJ",
+                    "timeline_step_Ct3LBt",
+                    "timeline_step_qQfkpl",
+                    "timeline_step_sTsS3D"
                   ]
                 }
               },
@@ -1450,103 +1260,85 @@
                 "accordion_padding": "medium"
               },
               "blocks": {
-                "accordion_fPBi3D": {
+                "accordion_YOLQZ7": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Pourquoi ce set plutôt que chaque pièce seule ?"
+                  },
+                  "blocks": {
+                    "text_eRo7qY": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Le Set Découverte Nomade regroupe la coque et 4 capsules avec leurs disques à un prix plus doux que l'achat séparé. Parfait pour démarrer et explorer les quatre senteurs.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_eRo7qY"
+                  ]
+                },
+                "accordion_j6r0je": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Avec quelle douchette l'associer ?"
+                  },
+                  "blocks": {
+                    "text_mBhIoP": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Avec la Douchette Filtrante Onsha, pour le système Nomade complet. Tu peux aussi choisir le Coffret Douche Thermal Coréen (Nomade), qui réunit tout.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_mBhIoP"
+                  ]
+                },
+                "accordion_0K6sCh": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Combien de temps dure chaque capsule ?"
                   },
                   "blocks": {
-                    "text_6zLKQb": {
+                    "text_dkYtMV": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Environ 10 à 15 jours selon ta fréquence de douche. Quand la capsule est vide et transparente, remplace-la avec son disque sédiment.</p>",
+                        "text": "<p>Environ 10 à 15 jours selon ta fréquence de douche. Avec 4 capsules, tu as 40 à 60 jours de rituel.</p>",
                         "text_style": "paragraph"
                       }
                     }
                   },
                   "block_order": [
-                    "text_6zLKQb"
+                    "text_dkYtMV"
                   ]
                 },
-                "accordion_DuvW4y": {
+                "accordion_rGIFCf": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Puis-je commander juste les recharges ensuite ?"
+                    "heading": "Pourquoi un disque sédiment avec chaque capsule ?"
                   },
                   "blocks": {
-                    "text_ldqyun": {
+                    "text_DStSz8": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Oui. Les Capsules Thermales Coréennes (Nomade) sont disponibles à l'unité ou en pack, dans chacune des quatre senteurs.</p>",
+                        "text": "<p>Capsule et disque fonctionnent ensemble : la capsule apporte le soin et la senteur, le disque retient les sédiments. Ils se remplacent en même temps.</p>",
                         "text_style": "paragraph"
                       }
                     }
                   },
                   "block_order": [
-                    "text_ldqyun"
+                    "text_DStSz8"
                   ]
                 },
-                "accordion_1fEbVI": {
-                  "type": "_accordion",
-                  "settings": {
-                    "heading": "Les 4 senteurs sont-elles incluses ?"
-                  },
-                  "blocks": {
-                    "text_rW81Aq": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Oui : Hinoki, Océan, Pin et Fleur de Prunier, une de chaque pour explorer.</p>",
-                        "text_style": "paragraph"
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "text_rW81Aq"
-                  ]
-                },
-                "accordion_X9PcWb": {
-                  "type": "_accordion",
-                  "settings": {
-                    "heading": "Puis-je changer la couleur de ma housse ?"
-                  },
-                  "blocks": {
-                    "text_d8woPe": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Oui : la Housse Personnalisable existe en plusieurs coloris, avec des clips interchangeables.</p>",
-                        "text_style": "paragraph"
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "text_d8woPe"
-                  ]
-                },
-                "accordion_jpiEQh": {
-                  "type": "_accordion",
-                  "settings": {
-                    "heading": "Peut-on l'utiliser en voyage ou en résidence secondaire ?"
-                  },
-                  "blocks": {
-                    "text_8pm1bN": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Oui, c'est tout l'esprit du Nomade : tu ranges le coffret, tu le sors n'importe où et tu l'installes en quelques secondes.</p>",
-                        "text_style": "paragraph"
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "text_8pm1bN"
-                  ]
-                },
-                "accordion_XxkMM9": {
+                "accordion_Mqbfo9": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Quels sont les délais de livraison ?"
                   },
                   "blocks": {
-                    "text_K8nDSq": {
+                    "text_Mc4BVu": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p>",
@@ -1555,16 +1347,16 @@
                     }
                   },
                   "block_order": [
-                    "text_K8nDSq"
+                    "text_Mc4BVu"
                   ]
                 },
-                "accordion_9tgLb7": {
+                "accordion_bWR0rK": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Puis-je retourner le produit ?"
                   },
                   "blocks": {
-                    "text_VThX0k": {
+                    "text_R13KL8": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Oui, sous 14 jours, à condition que le produit soit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
@@ -1573,18 +1365,17 @@
                     }
                   },
                   "block_order": [
-                    "text_VThX0k"
+                    "text_R13KL8"
                   ]
                 }
               },
               "block_order": [
-                "accordion_fPBi3D",
-                "accordion_DuvW4y",
-                "accordion_1fEbVI",
-                "accordion_X9PcWb",
-                "accordion_jpiEQh",
-                "accordion_XxkMM9",
-                "accordion_9tgLb7"
+                "accordion_YOLQZ7",
+                "accordion_j6r0je",
+                "accordion_0K6sCh",
+                "accordion_rGIFCf",
+                "accordion_Mqbfo9",
+                "accordion_bWR0rK"
               ]
             }
           },
@@ -1671,7 +1462,6 @@
   },
   "order": [
     "main",
-    "dans_ton_coffret",
     "videos_pratiques",
     "ingr_dients_cl_s",
     "tes_senteurs",

@@ -23,7 +23,7 @@
                 "badge_VEGRNK": {
                   "type": "_badge",
                   "settings": {
-                    "text": "L'ACCESSOIRE À TON IMAGE",
+                    "text": "DÉBUTE TON RITUEL HOME",
                     "badge_style": "secondary"
                   }
                 }
@@ -49,7 +49,7 @@
           "type": "text",
           "name": "Texte",
           "settings": {
-            "text": "<p>La housse en silicone qui protège ta douchette Onsha et en fait un objet à ton image, à personnaliser, à collectionner, à offrir.</p>",
+            "text": "<p>La coque de diffusion et 4 filtres thermaux, un de chaque senteur : tout pour débuter ton rituel Home.</p>",
             "text_style": "paragraph",
             "paragraph_font_size": "large"
           }
@@ -82,44 +82,44 @@
           },
           "name": "Points forts",
           "blocks": {
-            "icon_with_text_FzNRZv": {
+            "icon_with_text_iAzX7D": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>6 coloris</p>",
+                "text": "<p>Coque + 4 filtres thermaux</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_fONvXF": {
+            "icon_with_text_c3PNr6": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Clips interchangeables</p>",
+                "text": "<p>Les 4 senteurs coréennes</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_ab7uKP": {
+            "icon_with_text_7cNgqh": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Silicone souple</p>",
+                "text": "<p>Prix plus doux qu'à l'unité</p>",
                 "font_weight": 500
               }
             }
           },
           "block_order": [
-            "icon_with_text_FzNRZv",
-            "icon_with_text_fONvXF",
-            "icon_with_text_ab7uKP"
+            "icon_with_text_iAzX7D",
+            "icon_with_text_c3PNr6",
+            "icon_with_text_7cNgqh"
           ]
         },
         "separator_AKgbEA": {
@@ -204,10 +204,10 @@
               "type": "_toggle-cross-sell",
               "name": "t:toggle_cross_sell",
               "settings": {
-                "title": "La douchette qui va avec",
-                "description": "<p>La housse s'adapte uniquement à la douchette Onsha.</p>",
+                "title": "Passe au système complet",
+                "description": "<p>Le pommeau qui se visse sur ta coque.</p>",
                 "product_list": [
-                  "douchette-filtrante"
+                  "pommeau-de-douche-filtrant"
                 ]
               }
             }
@@ -236,17 +236,17 @@
             "accordion_padding": "medium"
           },
           "blocks": {
-            "accordion_udANTU": {
+            "accordion_HaBp8c": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
-                "heading": "Caractéristiques & matières"
+                "heading": "Découvre tes 4 senteurs"
               },
               "blocks": {
                 "text_acc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Silicone souple et résistant, sans BPA, conforme FDA selon le fabricant. Clips décoratifs inclus selon le coloris choisi.</p><p>Compatible uniquement avec la Douchette Filtrante Onsha. Elle protège ta douchette des chocs et des rayures.</p><p>Lavable à l'eau tiède. Tenir les clips hors de portée des enfants (petites pièces).</p>",
+                    "text": "<p><strong>Hinoki (calme absolu) :</strong> cyprès, bois chaud, musc doux. Idéale le soir.</p><p><strong>Océan (fraîcheur marine) :</strong> embruns marins, sel minéral, végétal aquatique. Parfaite le matin.</p><p><strong>Pin (énergie des forêts) :</strong> pin frais, résine, terre humide. Tonique dès le réveil.</p><p><strong>Fleur de Prunier (douceur florale) :</strong> fleur de prunier, poudré doux, bois blanc. Tout en douceur.</p>",
                     "text_style": "paragraph"
                   }
                 }
@@ -255,7 +255,26 @@
                 "text_acc"
               ]
             },
-            "accordion_1vkfbj": {
+            "accordion_shtwPk": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Composition & sécurité"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Coque de Diffusion (Home) :</strong> polypropylène (PP) et silicone, sans BPA, conformes FDA selon le fabricant. Compatible tous flexibles standard.</p><p><strong>Filtres Thermaux Vitaminés :</strong> eau thermale soufrée lyophilisée concentrée 4x, vitamine C, acide hyaluronique, glycérine, MSM, senteur inspirée des régions thermales coréennes. Les listes INCI complètes figurent sur chaque emballage.</p><p>Usage externe uniquement. Tenir hors de portée des enfants. En cas de sensibilité connue aux parfums, consulte les INCI avant utilisation.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_hdM996": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
@@ -276,8 +295,9 @@
             }
           },
           "block_order": [
-            "accordion_udANTU",
-            "accordion_1vkfbj"
+            "accordion_HaBp8c",
+            "accordion_shtwPk",
+            "accordion_hdM996"
           ]
         },
         "group_kLziPN": {
@@ -303,7 +323,7 @@
                 "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
               },
               "blocks": {
-                "icon_with_text_njHX1f": {
+                "icon_with_text_G5rfDL": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -315,7 +335,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_w0xBwI": {
+                "icon_with_text_I7jChG": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -327,7 +347,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_RL3JjQ": {
+                "icon_with_text_i4s6AK": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -341,14 +361,56 @@
                 }
               },
               "block_order": [
-                "icon_with_text_njHX1f",
-                "icon_with_text_w0xBwI",
-                "icon_with_text_RL3JjQ"
+                "icon_with_text_G5rfDL",
+                "icon_with_text_I7jChG",
+                "icon_with_text_i4s6AK"
               ]
             }
           },
           "block_order": [
             "marquee_QE4fL7"
+          ]
+        },
+        "this_pack_contains_yDxQ8V": {
+          "type": "this-pack-contains",
+          "name": "Dans votre coffret",
+          "settings": {
+            "title": "Dans votre coffret",
+            "description": "<p>Tout ce que tu reçois, en un coup d'œil.</p>",
+            "margin_top": 0,
+            "margin_bottom": 10
+          },
+          "blocks": {
+            "product_mini_card_ic8ctF": {
+              "type": "product-mini-card",
+              "settings": {
+                "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+                "display_mode": "column",
+                "product": "coque-de-diffusion",
+                "link_to_product": true,
+                "show_image": true,
+                "show_price": false,
+                "image_width": 80,
+                "title": "Coque de diffusion ×1"
+              }
+            },
+            "product_mini_card_hgp4Ii": {
+              "type": "product-mini-card",
+              "settings": {
+                "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+                "display_mode": "column",
+                "product": "filtre-vitamine-showerfilter-sunsoari",
+                "link_to_product": true,
+                "show_image": true,
+                "show_price": false,
+                "image_width": 80,
+                "title": "Filtres thermaux ×4"
+              }
+            }
+          },
+          "block_order": [
+            "product_mini_card_ic8ctF",
+            "product_mini_card_hgp4Ii"
           ]
         }
       },
@@ -358,6 +420,7 @@
         "text_yQdqF8",
         "price_yEeMeb",
         "group_pills",
+        "this_pack_contains_yDxQ8V",
         "separator_AKgbEA",
         "product_form_grYQk6",
         "delivery_estimation_A43yiG",
@@ -385,17 +448,16 @@
         "padding_bottom": 60
       },
       "name": "Vidéos pratiques",
-      "disabled": true,
       "blocks": {
-        "text_JEgPZX": {
+        "text_M1p9un": {
           "type": "text",
           "settings": {
-            "text": "<h2>En vidéo</h2>",
+            "text": "<h2>Les gestes en vidéo</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "tabs_f7bNih": {
+        "tabs_dqK5Ft": {
           "type": "tabs",
           "settings": {
             "display_type": "tabs",
@@ -403,40 +465,63 @@
           },
           "name": "Vidéos",
           "blocks": {
-            "tab_TDJrxH": {
+            "tab_aYV2Fy": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Installe ta housse"
+                "tab_name": "Découvrez votre coffret"
               },
-              "name": "Installe ta housse",
+              "name": "Découvrez votre coffret",
               "blocks": {
-                "video_q0TEWc": {
+                "video_2Yr3NM": {
                   "type": "video",
                   "settings": {
                     "source": "shopify",
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Installe ta housse"
+                    "alt": "Découvrez votre coffret"
                   }
                 }
               },
               "block_order": [
-                "video_q0TEWc"
+                "video_2Yr3NM"
+              ]
+            },
+            "tab_jBKyLo": {
+              "type": "_tab",
+              "settings": {
+                "tab_name": "Installez votre produit"
+              },
+              "name": "Installez votre produit",
+              "blocks": {
+                "video_sUwswz": {
+                  "type": "video",
+                  "settings": {
+                    "source": "shopify",
+                    "video_autoplay": true,
+                    "enable_video_controls": false,
+                    "aspect_ratio": "9/16",
+                    "alt": "Installez votre produit"
+                  }
+                }
+              },
+              "block_order": [
+                "video_sUwswz"
               ]
             }
           },
           "block_order": [
-            "tab_TDJrxH"
+            "tab_aYV2Fy",
+            "tab_jBKyLo"
           ]
         }
       },
       "block_order": [
-        "text_JEgPZX",
-        "tabs_f7bNih"
+        "text_M1p9un",
+        "tabs_dqK5Ft"
       ]
     },
-    "le_style_onsha": {
+    "ingr_dients_cl_s": {
       "type": "custom-section",
       "settings": {
         "color_scheme": "",
@@ -446,180 +531,354 @@
         "padding_top": 60,
         "padding_bottom": 60
       },
-      "name": "Le style Onsha",
+      "name": "Ingrédients clés",
       "blocks": {
-        "text_BaloRI": {
+        "text_L2lua5": {
           "type": "text",
           "settings": {
-            "text": "<h2>Le style Onsha</h2>",
+            "text": "<h2>Ingrédients clés</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "text_Hw1F96": {
+        "text_q94F8e": {
           "type": "text",
           "settings": {
-            "text": "<p>Prendre soin de soi, c'est aussi une question de style : la housse transforme un objet du quotidien en détail de décoration.</p>",
+            "text": "<p>La liste complète des ingrédients (INCI) figure sur l'emballage.</p>",
             "text_style": "paragraph"
           }
         },
-        "slider_oUerTl": {
+        "slider_oAtz4T": {
           "type": "slider",
           "settings": {
             "per_page_desktop": 4,
             "per_page_mobile": "1.8"
           },
-          "name": "Le style Onsha",
+          "name": "Ingrédients clés",
           "blocks": {
-            "slide_wgWkDR": {
+            "slide_BZZdPa": {
               "type": "_slide",
               "settings": {},
-              "name": "Silicone protecteur",
+              "name": "Eau thermale soufrée",
               "blocks": {
-                "image_lq8MxV": {
+                "image_BH0HUR": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Travel-Head_Cover_01.jpg"
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
                   }
                 },
-                "text_6XkHbw": {
+                "text_RwC8aR": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Silicone protecteur</strong></p>",
+                    "text": "<p><strong>Eau thermale soufrée</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_nO6w5Z": {
+                "text_GzPJ7K": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Contre les chocs et rayures.</p>",
+                    "text": "<p>Extraite à 808 m dans le granit coréen, lyophilisée et concentrée 4 fois.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_lq8MxV",
-                "text_6XkHbw",
-                "text_nO6w5Z"
+                "image_BH0HUR",
+                "text_RwC8aR",
+                "text_GzPJ7K"
               ]
             },
-            "slide_QTz4v5": {
+            "slide_pwrkcr": {
               "type": "_slide",
               "settings": {},
-              "name": "6 coloris",
+              "name": "Vitamine C",
               "blocks": {
-                "image_bgQUae": {
+                "image_zCXN5L": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Travel-Head_Cover_03.jpg"
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
                   }
                 },
-                "text_wdoKyA": {
+                "text_kxuxe0": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>6 coloris</strong></p>",
+                    "text": "<p><strong>Vitamine C</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_3obqbq": {
+                "text_sSv07G": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Du blanc au rose.</p>",
+                    "text": "<p>Intégrée à la capsule, dans l'eau de ta douche.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_bgQUae",
-                "text_wdoKyA",
-                "text_3obqbq"
+                "image_zCXN5L",
+                "text_kxuxe0",
+                "text_sSv07G"
               ]
             },
-            "slide_SaciGM": {
+            "slide_ewmCNy": {
               "type": "_slide",
               "settings": {},
-              "name": "Clips interchangeables",
+              "name": "Acide hyaluronique & glycérine",
               "blocks": {
-                "image_uWBPrt": {
+                "image_0GnG5m": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Travel-Head_Cover_05.jpg"
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
                   }
                 },
-                "text_E373Xr": {
+                "text_gwKOOU": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Clips interchangeables</strong></p>",
+                    "text": "<p><strong>Acide hyaluronique & glycérine</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_fvaF35": {
+                "text_tTSJa6": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>À combiner entre coloris.</p>",
+                    "text": "<p>Des actifs hydratants bien connus en cosmétique.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_uWBPrt",
-                "text_E373Xr",
-                "text_fvaF35"
+                "image_0GnG5m",
+                "text_gwKOOU",
+                "text_tTSJa6"
               ]
             },
-            "slide_bd5ue4": {
+            "slide_W9cCdN": {
               "type": "_slide",
               "settings": {},
-              "name": "L'idée cadeau",
+              "name": "MSM",
               "blocks": {
-                "image_9CnLd4": {
+                "image_QbmlFX": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Travel-Head_Cover_07.jpg"
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
                   }
                 },
-                "text_cXX3Cl": {
+                "text_IGjKmA": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>L'idée cadeau</strong></p>",
+                    "text": "<p><strong>MSM</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_bZhj6a": {
+                "text_Ggbgek": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Utile, jolie, à petit prix.</p>",
+                    "text": "<p>Présent dans la composition thermale Onsha.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_9CnLd4",
-                "text_cXX3Cl",
-                "text_bZhj6a"
+                "image_QbmlFX",
+                "text_IGjKmA",
+                "text_Ggbgek"
               ]
             }
           },
           "block_order": [
-            "slide_wgWkDR",
-            "slide_QTz4v5",
-            "slide_SaciGM",
-            "slide_bd5ue4"
+            "slide_BZZdPa",
+            "slide_pwrkcr",
+            "slide_ewmCNy",
+            "slide_W9cCdN"
           ]
         }
       },
       "block_order": [
-        "text_BaloRI",
-        "text_Hw1F96",
-        "slider_oUerTl"
+        "text_L2lua5",
+        "text_q94F8e",
+        "slider_oAtz4T"
+      ]
+    },
+    "tes_senteurs": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Tes 4 senteurs",
+      "blocks": {
+        "text_TRczcM": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Tes 4 senteurs</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "slider_yVcJtO": {
+          "type": "slider",
+          "settings": {
+            "per_page_desktop": 4,
+            "per_page_mobile": "1.8"
+          },
+          "name": "Tes 4 senteurs",
+          "blocks": {
+            "slide_0Tzswz": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Hinoki · Calme absolu",
+              "blocks": {
+                "image_lkwyla": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Hinoki.jpg"
+                  }
+                },
+                "text_vI3yvz": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Hinoki · Calme absolu</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_6wJpym": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Cyprès, bois chaud, musc doux. Pour les soirs de détente.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_lkwyla",
+                "text_vI3yvz",
+                "text_6wJpym"
+              ]
+            },
+            "slide_O33i7r": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Océan · Fraîcheur marine",
+              "blocks": {
+                "image_rQbvZj": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Ocean.jpg"
+                  }
+                },
+                "text_I1YiJC": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Océan · Fraîcheur marine</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_xwnUzy": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Embruns marins, sel minéral, végétal aquatique. Pour les matins.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_rQbvZj",
+                "text_I1YiJC",
+                "text_xwnUzy"
+              ]
+            },
+            "slide_Sw5AbQ": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Pin · Énergie des forêts",
+              "blocks": {
+                "image_EGno2C": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Pin.jpg"
+                  }
+                },
+                "text_5CLxIp": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Pin · Énergie des forêts</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_WhRGfI": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pin frais, résine, terre humide. Pour bien démarrer la journée.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_EGno2C",
+                "text_5CLxIp",
+                "text_WhRGfI"
+              ]
+            },
+            "slide_w5Ogls": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Fleur de Prunier · Douceur florale",
+              "blocks": {
+                "image_bQTKjt": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Onsha_Fleur_de_prunier.png"
+                  }
+                },
+                "text_X2oumQ": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Fleur de Prunier · Douceur florale</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_ZGWtme": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Fleur de prunier, poudré doux, bois blanc. Pour un moment tout en douceur.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_bQTKjt",
+                "text_X2oumQ",
+                "text_ZGWtme"
+              ]
+            }
+          },
+          "block_order": [
+            "slide_0Tzswz",
+            "slide_O33i7r",
+            "slide_Sw5AbQ",
+            "slide_w5Ogls"
+          ]
+        }
+      },
+      "block_order": [
+        "text_TRczcM",
+        "slider_yVcJtO"
       ]
     },
     "comment_ca_marche": {
@@ -634,7 +893,7 @@
       },
       "name": "Comment ça marche",
       "blocks": {
-        "text_uyx130": {
+        "text_RQjMD1": {
           "type": "text",
           "settings": {
             "text": "<h2>Comment ça marche ?</h2>",
@@ -642,7 +901,7 @@
           },
           "name": "Titre"
         },
-        "group_ygxwQZ": {
+        "group_saxFnc": {
           "type": "group",
           "settings": {
             "color_scheme": "",
@@ -658,15 +917,15 @@
             "padding_vertical_mobile": 0
           },
           "blocks": {
-            "image_xHnHk0": {
+            "image_SCi7Pw": {
               "type": "image",
               "settings": {
                 "image_width_desktop": 80,
                 "image_width_mobile": 80,
-                "image": "shopify://shop_images/onsha-coque-pour-douchette-filtrante-6832553.jpg"
+                "image": "shopify://shop_images/Comment_installer_la_recharge.gif"
               }
             },
-            "group_QDlO80": {
+            "group_LKpvO0": {
               "type": "group",
               "settings": {
                 "color_scheme": "",
@@ -680,116 +939,108 @@
                 "padding_vertical_mobile": 0
               },
               "blocks": {
-                "timeline_IQo7NW": {
+                "timeline_iiRTFQ": {
                   "type": "timeline",
                   "settings": {},
                   "name": "Étapes",
                   "blocks": {
-                    "timeline_step_QuDKaE": {
+                    "timeline_step_BRG27X": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 1",
                       "blocks": {
-                        "text_mGdAYJ": {
+                        "text_KFTHq7": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 1</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_cPDIsJ": {
+                        "text_ah1WXP": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Glisse</strong> la housse sur ta Douchette Filtrante Onsha.</p>",
+                            "text": "<p>Dévisse ton pommeau et fixe la coque sur le flexible.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_mGdAYJ",
-                        "text_cPDIsJ"
+                        "text_KFTHq7",
+                        "text_ah1WXP"
                       ]
                     },
-                    "timeline_step_LIyp0O": {
+                    "timeline_step_S0ZJql": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 2",
                       "blocks": {
-                        "text_rzBuIA": {
+                        "text_MSdpRh": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 2</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_AZj5Oa": {
+                        "text_wV6fAS": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Fixe</strong> les clips décoratifs selon tes envies.</p>",
+                            "text": "<p>Insère un filtre, dans la senteur de ton choix.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_rzBuIA",
-                        "text_AZj5Oa"
+                        "text_MSdpRh",
+                        "text_wV6fAS"
                       ]
                     },
-                    "timeline_step_ezHrNQ": {
+                    "timeline_step_qp9dkw": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 3",
                       "blocks": {
-                        "text_NUyp0m": {
+                        "text_rHfw88": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 3</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_c6TdzS": {
+                        "text_VS11OO": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Change, combine, renouvelle</strong> au fil des saisons et de ta déco.</p>",
+                            "text": "<p>Visse ton pommeau sur la coque et ouvre l'eau.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_NUyp0m",
-                        "text_c6TdzS"
+                        "text_rHfw88",
+                        "text_VS11OO"
                       ]
                     }
                   },
                   "block_order": [
-                    "timeline_step_QuDKaE",
-                    "timeline_step_LIyp0O",
-                    "timeline_step_ezHrNQ"
+                    "timeline_step_BRG27X",
+                    "timeline_step_S0ZJql",
+                    "timeline_step_qp9dkw"
                   ]
-                },
-                "text_UwHLEK": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Le conseil Sunsoari</strong></p><p>Assortis ta housse à ta salle de bain, ou change de coloris selon les saisons. Pour une petite attention à glisser avec un coffret Onsha, la housse est un joli complément.</p>",
-                    "text_style": "paragraph"
-                  }
                 }
               },
               "block_order": [
-                "timeline_IQo7NW",
-                "text_UwHLEK"
+                "timeline_iiRTFQ"
               ]
             }
           },
           "block_order": [
-            "image_xHnHk0",
-            "group_QDlO80"
+            "image_SCi7Pw",
+            "group_LKpvO0"
           ]
         }
       },
       "block_order": [
-        "text_uyx130",
-        "group_ygxwQZ"
+        "text_RQjMD1",
+        "group_saxFnc"
       ]
     },
     "en_situation": {
@@ -805,7 +1056,7 @@
       "name": "En situation (UGC)",
       "disabled": true,
       "blocks": {
-        "text_rzsCSh": {
+        "text_StC9hk": {
           "type": "text",
           "settings": {
             "text": "<h2>Dans vos salles de bain</h2>",
@@ -813,15 +1064,15 @@
           },
           "name": "Titre"
         },
-        "stories_WHjaRi": {
+        "stories_kJecaD": {
           "type": "stories",
           "settings": {},
           "name": "Stories UGC"
         }
       },
       "block_order": [
-        "text_rzsCSh",
-        "stories_WHjaRi"
+        "text_StC9hk",
+        "stories_kJecaD"
       ]
     },
     "avis": {
@@ -963,16 +1214,16 @@
                 "accordion_padding": "medium"
               },
               "blocks": {
-                "accordion_xFHQpN": {
+                "accordion_WFfVTv": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Avec quels produits la housse est-elle compatible ?"
+                    "heading": "Pourquoi ce set plutôt que chaque pièce seule ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Elle est conçue uniquement pour la Douchette Filtrante Onsha, dont elle épouse la forme.</p>",
+                        "text": "<p>Le Set Découverte Home regroupe la coque et 4 filtres à un prix plus doux que l'achat séparé. Parfait pour démarrer et explorer les quatre senteurs.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -981,16 +1232,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_xHvZyq": {
+                "accordion_VKqgPF": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Les clips sont-ils inclus ?"
+                    "heading": "Avec quel pommeau associer ce set ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Oui, des clips décoratifs sont inclus selon le coloris choisi. Tu peux ensuite les combiner entre coloris.</p>",
+                        "text": "<p>Avec le Pommeau de Douche Filtrant Onsha, pour le système complet Home. Tu peux aussi choisir le Coffret Douche Thermal Coréen (Home), qui réunit tout.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -999,16 +1250,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_bJmaKq": {
+                "accordion_9BFmYI": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Comment l'entretenir ?"
+                    "heading": "Combien de temps dure chaque filtre ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Un simple lavage à l'eau tiède suffit.</p>",
+                        "text": "<p>Environ 3 à 4 semaines par filtre. Avec 4 filtres, tu as 3 à 4 mois de rituel.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1017,16 +1268,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_dLltTI": {
+                "accordion_uaw6fP": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Gêne-t-elle l'utilisation de la douchette ?"
+                    "heading": "Puis-je racheter des senteurs ensuite ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Non : elle épouse la forme de la douchette sans gêner la prise en main, le jet ni le changement de filtre.</p>",
+                        "text": "<p>Oui ! Les Filtres Thermaux Vitaminés (Home) sont vendus à l'unité ou en pack de 2 ou 4, dans chacune des quatre senteurs.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1037,10 +1288,10 @@
                 }
               },
               "block_order": [
-                "accordion_xFHQpN",
-                "accordion_xHvZyq",
-                "accordion_bJmaKq",
-                "accordion_dLltTI"
+                "accordion_WFfVTv",
+                "accordion_VKqgPF",
+                "accordion_9BFmYI",
+                "accordion_uaw6fP"
               ]
             }
           },
@@ -1128,7 +1379,8 @@
   "order": [
     "main",
     "videos_pratiques",
-    "le_style_onsha",
+    "ingr_dients_cl_s",
+    "tes_senteurs",
     "comment_ca_marche",
     "en_situation",
     "avis",

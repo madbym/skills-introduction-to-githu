@@ -23,7 +23,7 @@
                 "badge_VEGRNK": {
                   "type": "_badge",
                   "settings": {
-                    "text": "LE CŒUR DU RITUEL NOMADE",
+                    "text": "LES RECHARGES SENSORIELLES",
                     "badge_style": "secondary"
                   }
                 }
@@ -49,7 +49,7 @@
           "type": "text",
           "name": "Texte",
           "settings": {
-            "text": "<p>Le cœur de ton rituel Nomade : une capsule inspirée des sources thermales coréennes, qui se change en quelques secondes.</p>",
+            "text": "<p>Six capsules de soin et d'aromathérapie SHIFT, chacune une expérience sensorielle à découvrir.</p>",
             "text_style": "paragraph",
             "paragraph_font_size": "large"
           }
@@ -82,18 +82,18 @@
           },
           "name": "Points forts",
           "blocks": {
-            "icon_with_text_xV5EbO": {
+            "icon_with_text_yQFXxi": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Inspirée des sources thermales coréennes</p>",
+                "text": "<p>6 capsules par boîte</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_cycDeZ": {
+            "icon_with_text_cGi4zN": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
@@ -104,22 +104,22 @@
                 "font_weight": 500
               }
             },
-            "icon_with_text_5Mvxrv": {
+            "icon_with_text_8vKIww": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>10 à 15 jours de rituel</p>",
+                "text": "<p>5 collections au choix</p>",
                 "font_weight": 500
               }
             }
           },
           "block_order": [
-            "icon_with_text_xV5EbO",
-            "icon_with_text_cycDeZ",
-            "icon_with_text_5Mvxrv"
+            "icon_with_text_yQFXxi",
+            "icon_with_text_cGi4zN",
+            "icon_with_text_8vKIww"
           ]
         },
         "separator_AKgbEA": {
@@ -200,98 +200,22 @@
               "static": true,
               "settings": {}
             },
-            "quantity_breaks": {
-              "type": "_quantity-breaks",
-              "name": "Réduction par quantité",
+            "toggle_cross_sell": {
+              "type": "_toggle-cross-sell",
+              "name": "t:toggle_cross_sell",
               "settings": {
-                "label": "Choisis ta quantité :"
-              },
-              "blocks": {
-                "quantity_breaks_item_99NcqV": {
-                  "type": "_quantity-breaks-item",
-                  "settings": {
-                    "discount_type": "none",
-                    "discount_percentage": 0,
-                    "badge_position": "top",
-                    "badge_display": "overlap",
-                    "product_small_title": "capsule",
-                    "product_small_title_plural": "capsule",
-                    "show_image": false
-                  },
-                  "name": "1 capsule"
-                },
-                "quantity_breaks_item_TSu7rt": {
-                  "type": "_quantity-breaks-item",
-                  "settings": {
-                    "quantity": 2,
-                    "discount_percentage": 5,
-                    "badge": "-5 %",
-                    "badge_position": "top",
-                    "badge_display": "overlap",
-                    "product_small_title": "capsule",
-                    "product_small_title_plural": "capsules",
-                    "show_unit_price": true,
-                    "show_image": false
-                  },
-                  "name": "2 capsules"
-                },
-                "quantity_breaks_item_aUWM6Z": {
-                  "type": "_quantity-breaks-item",
-                  "settings": {
-                    "quantity": 4,
-                    "discount_percentage": 10,
-                    "badge": "Les 4 senteurs",
-                    "badge_position": "top",
-                    "badge_display": "overlap",
-                    "product_small_title": "capsule",
-                    "product_small_title_plural": "capsules",
-                    "show_unit_price": true,
-                    "show_image": false
-                  },
-                  "name": "4 capsules"
-                },
-                "quantity_breaks_item_O88eb0": {
-                  "type": "_quantity-breaks-item",
-                  "settings": {
-                    "quantity": 6,
-                    "discount_percentage": 15,
-                    "badge": "-15 %",
-                    "badge_position": "top",
-                    "badge_display": "overlap",
-                    "product_small_title": "capsule",
-                    "product_small_title_plural": "capsules",
-                    "show_unit_price": true,
-                    "show_image": false
-                  },
-                  "name": "6 capsules"
-                }
-              },
-              "block_order": [
-                "quantity_breaks_item_99NcqV",
-                "quantity_breaks_item_TSu7rt",
-                "quantity_breaks_item_aUWM6Z",
-                "quantity_breaks_item_O88eb0"
-              ]
+                "title": "Pas encore de pommeau SHIFT ?",
+                "description": "<p>Pommeau, capsule et filtre pour commencer.</p>",
+                "product_list": [
+                  "pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie"
+                ]
+              }
             }
           },
           "block_order": [
             "product_variant_picker_xWC3wF",
-            "quantity_breaks"
+            "toggle_cross_sell"
           ]
-        },
-        "cross_sell_QcpW8C": {
-          "type": "cross-sell",
-          "name": "t:cross_sell",
-          "settings": {
-            "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
-            "products": [
-              "coffret-mini"
-            ],
-            "title": "Pas encore équipée ?",
-            "description": "<p>Le système complet qui accueille tes capsules.</p>",
-            "image_width": 90,
-            "button_content_type": "icon"
-          }
         },
         "delivery_estimation_A43yiG": {
           "type": "delivery-estimation",
@@ -312,17 +236,17 @@
             "accordion_padding": "medium"
           },
           "blocks": {
-            "accordion_ogET9D": {
+            "accordion_TWBulZ": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
-                "heading": "Description"
+                "heading": "Les collections"
               },
               "blocks": {
                 "text_acc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>La Capsule Thermale Coréenne est le cœur de ton rituel Onsha en format compact.</p><p>En Corée, les sources thermales font partie des rituels de soin depuis des siècles. Onsha a réuni cette tradition dans une capsule : une eau thermale soufrée extraite à 808 mètres de profondeur dans le granit coréen, lyophilisée et concentrée 4 fois, associée à des actifs de soin et à une senteur inspirée des régions thermales.</p><p>À chaque douche, l'eau traverse la capsule et s'enrichit, pendant que la senteur parfume ta salle de bain. Ultra-compacte, elle glisse dans un sac, une trousse, une valise.</p>",
+                    "text": "<p><strong>Fruits Therapy :</strong> 2 Petitgrain Tangerine, 2 Mint Apple, 1 Lemon Wave, 1 Ginger Bergamot. Fruité et hespéridé.</p><p><strong>Discovery :</strong> Cedarwood Moss, Frankincense Fig, Carrot Seed Plum, Mandarin Neroli, Petitgrain Tangerine, Geranium Muguet. Six senteurs à découvrir.</p><p><strong>Patchouli & Rose :</strong> 6 capsules. Patchouli, rose de Damas, fond d'ambre doux, cèdre et musc blanc.</p><p><strong>Cherry Blossom :</strong> 6 capsules. Fleur de cerisier, pivoine et muguet, fond de muscs légers et bois blanc.</p><p><strong>Hinoki Spring :</strong> 6 capsules. Cyprès hinoki, épicéa, fond de bois blanc et muscs.</p>",
                     "text_style": "paragraph"
                   }
                 }
@@ -331,17 +255,17 @@
                 "text_acc"
               ]
             },
-            "accordion_9XyYq6": {
+            "accordion_ESbRRX": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
-                "heading": "Composition"
+                "heading": "Actifs & INCI"
               },
               "blocks": {
                 "text_acc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Eau thermale soufrée lyophilisée concentrée 4x, vitamine C, acide hyaluronique, glycérine et MSM, avec une senteur inspirée des régions thermales coréennes.</p><p><strong>Inclus avec chaque capsule :</strong> un petit disque sédiment (filtration légère) à glisser dans la coque Nomade avant la capsule.</p><p>La liste complète des ingrédients (INCI) de chaque senteur figure sur l'emballage. Usage externe uniquement, dans le système Onsha compatible. Tenir hors de portée des enfants. En cas de sensibilité connue aux parfums, consulte la liste INCI avant utilisation.</p><p>Conçue en Corée pour le rituel de douche Onsha.</p>",
+                    "text": "<p>Chaque capsule associe ses huiles essentielles à une base commune : vitamine C, glycérine, acide hyaluronique.</p><p>La liste complète des ingrédients (INCI) par senteur et les allergènes figurent sur l'emballage. Usage externe, dans le système SHIFT compatible uniquement.</p>",
                     "text_style": "paragraph"
                   }
                 }
@@ -350,7 +274,26 @@
                 "text_acc"
               ]
             },
-            "accordion_B0Fi7F": {
+            "accordion_kzxh9O": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Compatibilité & entretien"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Compatible uniquement avec le Pommeau de Douche Filtrant SHIFT. La capsule ne remplace pas le filtre Pure Water, les deux travaillent ensemble.</p><p>Conçu en Corée pour le rituel SHIFT.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_Xs1JPn": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
@@ -371,9 +314,10 @@
             }
           },
           "block_order": [
-            "accordion_ogET9D",
-            "accordion_9XyYq6",
-            "accordion_B0Fi7F"
+            "accordion_TWBulZ",
+            "accordion_ESbRRX",
+            "accordion_kzxh9O",
+            "accordion_Xs1JPn"
           ]
         },
         "group_kLziPN": {
@@ -399,7 +343,7 @@
                 "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
               },
               "blocks": {
-                "icon_with_text_laZ7Vt": {
+                "icon_with_text_OpTL9X": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -411,7 +355,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_0SXjMp": {
+                "icon_with_text_mxX2tP": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -423,7 +367,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_u3uDxY": {
+                "icon_with_text_qk0eMD": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -437,9 +381,9 @@
                 }
               },
               "block_order": [
-                "icon_with_text_laZ7Vt",
-                "icon_with_text_0SXjMp",
-                "icon_with_text_u3uDxY"
+                "icon_with_text_OpTL9X",
+                "icon_with_text_mxX2tP",
+                "icon_with_text_qk0eMD"
               ]
             }
           },
@@ -456,7 +400,6 @@
         "group_pills",
         "separator_AKgbEA",
         "product_form_grYQk6",
-        "cross_sell_QcpW8C",
         "delivery_estimation_A43yiG",
         "accordions_KKUaHK",
         "group_kLziPN"
@@ -482,17 +425,16 @@
         "padding_bottom": 60
       },
       "name": "Vidéos pratiques",
-      "disabled": true,
       "blocks": {
-        "text_CloiAD": {
+        "text_TYpbbh": {
           "type": "text",
           "settings": {
-            "text": "<h2>En vidéo</h2>",
+            "text": "<h2>Les gestes en vidéo</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "tabs_2XQWhX": {
+        "tabs_veHwus": {
           "type": "tabs",
           "settings": {
             "display_type": "tabs",
@@ -500,37 +442,37 @@
           },
           "name": "Vidéos",
           "blocks": {
-            "tab_B4geqN": {
+            "tab_a1lfSp": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Remplace ta recharge"
+                "tab_name": "Remplacez votre recharge"
               },
-              "name": "Remplace ta recharge",
+              "name": "Remplacez votre recharge",
               "blocks": {
-                "video_WkpAeP": {
+                "video_m5aMIA": {
                   "type": "video",
                   "settings": {
                     "source": "shopify",
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Remplace ta recharge"
+                    "alt": "Remplacez votre recharge"
                   }
                 }
               },
               "block_order": [
-                "video_WkpAeP"
+                "video_m5aMIA"
               ]
             }
           },
           "block_order": [
-            "tab_B4geqN"
+            "tab_a1lfSp"
           ]
         }
       },
       "block_order": [
-        "text_CloiAD",
-        "tabs_2XQWhX"
+        "text_TYpbbh",
+        "tabs_veHwus"
       ]
     },
     "ingr_dients_cl_s": {
@@ -545,7 +487,7 @@
       },
       "name": "Ingrédients clés",
       "blocks": {
-        "text_mti18c": {
+        "text_hYGTH3": {
           "type": "text",
           "settings": {
             "text": "<h2>Ingrédients clés</h2>",
@@ -553,14 +495,14 @@
           },
           "name": "Titre"
         },
-        "text_Oyf5TN": {
+        "text_XegQeN": {
           "type": "text",
           "settings": {
             "text": "<p>La liste complète des ingrédients (INCI) figure sur l'emballage.</p>",
             "text_style": "paragraph"
           }
         },
-        "slider_2oNzN2": {
+        "slider_QGoCu2": {
           "type": "slider",
           "settings": {
             "per_page_desktop": 4,
@@ -568,154 +510,121 @@
           },
           "name": "Ingrédients clés",
           "blocks": {
-            "slide_aB5kBh": {
-              "type": "_slide",
-              "settings": {},
-              "name": "Eau thermale soufrée",
-              "blocks": {
-                "image_xqVqmC": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 35,
-                    "image_width_mobile": 35
-                  }
-                },
-                "text_46Lmue": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Eau thermale soufrée</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_PZgPDc": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Extraite à 808 m dans le granit coréen, lyophilisée et concentrée 4 fois.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_xqVqmC",
-                "text_46Lmue",
-                "text_PZgPDc"
-              ]
-            },
-            "slide_DXkiad": {
+            "slide_Xv0TTR": {
               "type": "_slide",
               "settings": {},
               "name": "Vitamine C",
               "blocks": {
-                "image_1C6xc4": {
+                "image_d7fqkq": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35
                   }
                 },
-                "text_0Lm7ex": {
+                "text_iY3Uvv": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Vitamine C</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_XXQ8ag": {
+                "text_JZdWj1": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Intégrée à la capsule, dans l'eau de ta douche.</p>",
+                    "text": "<p>6000 mg selon le fabricant.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_1C6xc4",
-                "text_0Lm7ex",
-                "text_XXQ8ag"
+                "image_d7fqkq",
+                "text_iY3Uvv",
+                "text_JZdWj1"
               ]
             },
-            "slide_fKN7xV": {
+            "slide_uHUtdX": {
               "type": "_slide",
               "settings": {},
-              "name": "Acide hyaluronique & glycérine",
+              "name": "Glycérine & acide hyaluronique",
               "blocks": {
-                "image_cxvjcn": {
+                "image_otZeZE": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35
                   }
                 },
-                "text_n0a0uA": {
+                "text_TCZDY0": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Acide hyaluronique & glycérine</strong></p>",
+                    "text": "<p><strong>Glycérine & acide hyaluronique</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_ncYFJE": {
+                "text_KBiam7": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Des actifs hydratants bien connus en cosmétique.</p>",
+                    "text": "<p>Base hydratante commune aux collections.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_cxvjcn",
-                "text_n0a0uA",
-                "text_ncYFJE"
+                "image_otZeZE",
+                "text_TCZDY0",
+                "text_KBiam7"
               ]
             },
-            "slide_Hk7egy": {
+            "slide_Gpjl7O": {
               "type": "_slide",
               "settings": {},
-              "name": "MSM",
+              "name": "Huiles essentielles",
               "blocks": {
-                "image_JjOIfP": {
+                "image_pWqGBH": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Tea-tree_lavande.png"
                   }
                 },
-                "text_QtA9dt": {
+                "text_UboGsn": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>MSM</strong></p>",
+                    "text": "<p><strong>Huiles essentielles</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_b3XZxP": {
+                "text_5lntQ5": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Présent dans la composition thermale Onsha.</p>",
+                    "text": "<p>Selon la collection choisie.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_JjOIfP",
-                "text_QtA9dt",
-                "text_b3XZxP"
+                "image_pWqGBH",
+                "text_UboGsn",
+                "text_5lntQ5"
               ]
             }
           },
           "block_order": [
-            "slide_aB5kBh",
-            "slide_DXkiad",
-            "slide_fKN7xV",
-            "slide_Hk7egy"
+            "slide_Xv0TTR",
+            "slide_uHUtdX",
+            "slide_Gpjl7O"
           ]
         }
       },
       "block_order": [
-        "text_mti18c",
-        "text_Oyf5TN",
-        "slider_2oNzN2"
+        "text_hYGTH3",
+        "text_XegQeN",
+        "slider_QGoCu2"
       ]
     },
-    "nos_diff_rentes_senteurs": {
+    "notes_olfactives_par_col": {
       "type": "custom-section",
       "settings": {
         "color_scheme": "",
@@ -725,172 +634,207 @@
         "padding_top": 60,
         "padding_bottom": 60
       },
-      "name": "Nos différentes senteurs",
+      "name": "Notes olfactives par collection",
       "blocks": {
-        "text_jxvWfC": {
+        "text_DYV31n": {
           "type": "text",
           "settings": {
-            "text": "<h2>Nos différentes senteurs</h2>",
+            "text": "<h2>Notes olfactives par collection</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "slider_s0HqtO": {
+        "slider_hu4b5Y": {
           "type": "slider",
           "settings": {
             "per_page_desktop": 4,
             "per_page_mobile": "1.8"
           },
-          "name": "Nos différentes senteurs",
+          "name": "Notes olfactives par collection",
           "blocks": {
-            "slide_puxcml": {
+            "slide_KW6p06": {
               "type": "_slide",
               "settings": {},
-              "name": "Hinoki · Calme absolu",
+              "name": "Fruits Therapy",
               "blocks": {
-                "image_cz8Hky": {
+                "image_xICX7U": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Hinoki.jpg"
+                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-2851269.png"
                   }
                 },
-                "text_5mc4J1": {
+                "text_DfO7ri": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Hinoki · Calme absolu</strong></p>",
+                    "text": "<p><strong>Fruits Therapy</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_hyMDJ2": {
+                "text_eDRNct": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Cyprès, bois chaud, musc doux. Pour les soirs de détente.</p>",
+                    "text": "<p>Petitgrain Tangerine, Mint Apple, Lemon Wave, Ginger & Bergamot : frais et pétillant.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_cz8Hky",
-                "text_5mc4J1",
-                "text_hyMDJ2"
+                "image_xICX7U",
+                "text_DfO7ri",
+                "text_eDRNct"
               ]
             },
-            "slide_u5ykYY": {
+            "slide_Wj0tqG": {
               "type": "_slide",
               "settings": {},
-              "name": "Océan · Fraîcheur marine",
+              "name": "Discovery",
               "blocks": {
-                "image_LpByQx": {
+                "image_vBHfjz": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Ocean.jpg"
+                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-1086856.jpg"
                   }
                 },
-                "text_NFDpCW": {
+                "text_cs6XQi": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Océan · Fraîcheur marine</strong></p>",
+                    "text": "<p><strong>Discovery</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_ZEzgei": {
+                "text_0IM1Ak": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Embruns marins, sel minéral, végétal aquatique. Pour les matins.</p>",
+                    "text": "<p>Cedarwood Moss, Frankincense Fig, Carrot Seed Plum, Mandarin Neroli, Petitgrain Tangerine, Geranium Muguet.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_LpByQx",
-                "text_NFDpCW",
-                "text_ZEzgei"
+                "image_vBHfjz",
+                "text_cs6XQi",
+                "text_0IM1Ak"
               ]
             },
-            "slide_2x93CJ": {
+            "slide_ipITvQ": {
               "type": "_slide",
               "settings": {},
-              "name": "Pin · Énergie des forêts",
+              "name": "Patchouli & Rose",
               "blocks": {
-                "image_GGQccO": {
+                "image_Tvxh5p": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Pin.jpg"
+                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-1755093.png"
                   }
                 },
-                "text_UGfdWG": {
+                "text_V85U5y": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Pin · Énergie des forêts</strong></p>",
+                    "text": "<p><strong>Patchouli & Rose</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_b2eNUS": {
+                "text_sWDzTm": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Pin frais, résine, terre humide. Pour bien démarrer la journée.</p>",
+                    "text": "<p>Patchouli, rose de Damas, ambre doux, cèdre, musc blanc.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_GGQccO",
-                "text_UGfdWG",
-                "text_b2eNUS"
+                "image_Tvxh5p",
+                "text_V85U5y",
+                "text_sWDzTm"
               ]
             },
-            "slide_qIO2zV": {
+            "slide_2u4Xi2": {
               "type": "_slide",
               "settings": {},
-              "name": "Fleur de Prunier · Douceur florale",
+              "name": "Cherry Blossom",
               "blocks": {
-                "image_s9Z6Yk": {
+                "image_9Fg30G": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Onsha_Fleur_de_prunier.png"
+                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-3834627.jpg"
                   }
                 },
-                "text_1wNWqk": {
+                "text_E0Sj2N": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Fleur de Prunier · Douceur florale</strong></p>",
+                    "text": "<p><strong>Cherry Blossom</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_DjqG96": {
+                "text_vRmQAd": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Fleur de prunier, poudré doux, bois blanc. Pour un moment tout en douceur.</p>",
+                    "text": "<p>Fleur de cerisier, pivoine, muguet, muscs légers.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_s9Z6Yk",
-                "text_1wNWqk",
-                "text_DjqG96"
+                "image_9Fg30G",
+                "text_E0Sj2N",
+                "text_vRmQAd"
+              ]
+            },
+            "slide_P6dY31": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Hinoki Spring",
+              "blocks": {
+                "image_aYWqMc": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-4851165.png"
+                  }
+                },
+                "text_u04r8x": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Hinoki Spring</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_sh8oa6": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Cyprès hinoki, épicéa, bois blanc, muscs.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_aYWqMc",
+                "text_u04r8x",
+                "text_sh8oa6"
               ]
             }
           },
           "block_order": [
-            "slide_puxcml",
-            "slide_u5ykYY",
-            "slide_2x93CJ",
-            "slide_qIO2zV"
+            "slide_KW6p06",
+            "slide_Wj0tqG",
+            "slide_ipITvQ",
+            "slide_2u4Xi2",
+            "slide_P6dY31"
           ]
         }
       },
       "block_order": [
-        "text_jxvWfC",
-        "slider_s0HqtO"
+        "text_DYV31n",
+        "slider_hu4b5Y"
       ]
     },
     "comment_ca_marche": {
@@ -905,7 +849,7 @@
       },
       "name": "Comment ça marche",
       "blocks": {
-        "text_chv5V7": {
+        "text_T9nGD7": {
           "type": "text",
           "settings": {
             "text": "<h2>Comment ça marche ?</h2>",
@@ -913,7 +857,7 @@
           },
           "name": "Titre"
         },
-        "group_rOJRBR": {
+        "group_CZbBiM": {
           "type": "group",
           "settings": {
             "color_scheme": "",
@@ -929,15 +873,15 @@
             "padding_vertical_mobile": 0
           },
           "blocks": {
-            "image_d4UYET": {
+            "image_klb6PJ": {
               "type": "image",
               "settings": {
                 "image_width_desktop": 80,
                 "image_width_mobile": 80,
-                "image": "shopify://shop_images/Copie_de_IMG_2103.gif"
+                "image": "shopify://shop_images/CAPSULE-STEP_01_IMAGE.jpg"
               }
             },
-            "group_6DfVPC": {
+            "group_d7dnGb": {
               "type": "group",
               "settings": {
                 "color_scheme": "",
@@ -951,108 +895,108 @@
                 "padding_vertical_mobile": 0
               },
               "blocks": {
-                "timeline_GPPA0N": {
+                "timeline_GaQ3jM": {
                   "type": "timeline",
                   "settings": {},
                   "name": "Étapes",
                   "blocks": {
-                    "timeline_step_PLCM7H": {
+                    "timeline_step_s0GYVw": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 1",
                       "blocks": {
-                        "text_uUaVco": {
+                        "text_FVdm3D": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 1</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_Gx5diF": {
+                        "text_ytOO45": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Ouvre la coque Nomade et retire la capsule usagée avec son disque.</p>",
+                            "text": "<p>Ouvre le compartiment de ton pommeau SHIFT.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_uUaVco",
-                        "text_Gx5diF"
+                        "text_FVdm3D",
+                        "text_ytOO45"
                       ]
                     },
-                    "timeline_step_cdIbzl": {
+                    "timeline_step_dox48V": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 2",
                       "blocks": {
-                        "text_aKwtgH": {
+                        "text_1tV3wK": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 2</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_LinxN1": {
+                        "text_HeECAa": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Insère la nouvelle capsule avec son disque sédiment.</p>",
+                            "text": "<p>Retire la capsule vide et transparente.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_aKwtgH",
-                        "text_LinxN1"
+                        "text_1tV3wK",
+                        "text_HeECAa"
                       ]
                     },
-                    "timeline_step_aNJQ8m": {
+                    "timeline_step_7Amutv": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 3",
                       "blocks": {
-                        "text_pTjCge": {
+                        "text_xIx79Q": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 3</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_zZq9ad": {
+                        "text_cDLKBb": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Referme : ton rituel reprend. Change dès que la capsule est vide.</p>",
+                            "text": "<p>Insère la nouvelle capsule : moins de 5 secondes.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_pTjCge",
-                        "text_zZq9ad"
+                        "text_xIx79Q",
+                        "text_cDLKBb"
                       ]
                     }
                   },
                   "block_order": [
-                    "timeline_step_PLCM7H",
-                    "timeline_step_cdIbzl",
-                    "timeline_step_aNJQ8m"
+                    "timeline_step_s0GYVw",
+                    "timeline_step_dox48V",
+                    "timeline_step_7Amutv"
                   ]
                 }
               },
               "block_order": [
-                "timeline_GPPA0N"
+                "timeline_GaQ3jM"
               ]
             }
           },
           "block_order": [
-            "image_d4UYET",
-            "group_6DfVPC"
+            "image_klb6PJ",
+            "group_d7dnGb"
           ]
         }
       },
       "block_order": [
-        "text_chv5V7",
-        "group_rOJRBR"
+        "text_T9nGD7",
+        "group_CZbBiM"
       ]
     },
     "en_situation": {
@@ -1068,7 +1012,7 @@
       "name": "En situation (UGC)",
       "disabled": true,
       "blocks": {
-        "text_795nf4": {
+        "text_nGODdf": {
           "type": "text",
           "settings": {
             "text": "<h2>Dans vos salles de bain</h2>",
@@ -1076,15 +1020,15 @@
           },
           "name": "Titre"
         },
-        "stories_1Vm8kV": {
+        "stories_kVYpIq": {
           "type": "stories",
           "settings": {},
           "name": "Stories UGC"
         }
       },
       "block_order": [
-        "text_795nf4",
-        "stories_1Vm8kV"
+        "text_nGODdf",
+        "stories_kVYpIq"
       ]
     },
     "avis": {
@@ -1226,25 +1170,7 @@
                 "accordion_padding": "medium"
               },
               "blocks": {
-                "accordion_6um4yv": {
-                  "type": "_accordion",
-                  "settings": {
-                    "heading": "Avec quel système la capsule est-elle compatible ?"
-                  },
-                  "blocks": {
-                    "text_faq": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Elle s'insère dans la coque de diffusion Nomade, incluse dans le Coffret Douche Thermal Coréen (Nomade) et le Set Découverte Nomade. Attention : le format Nomade est distinct du format Home, vérifie ton système avant de commander.</p>",
-                        "text_style": "paragraph"
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "text_faq"
-                  ]
-                },
-                "accordion_Mpy62O": {
+                "accordion_oH0loM": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Combien de temps dure une capsule ?"
@@ -1253,7 +1179,7 @@
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Environ 10 à 15 jours, selon ta fréquence de douche.</p>",
+                        "text": "<p>Selon ta fréquence de douche, quelques semaines. Quand la capsule est vide et transparente, remplace-la.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1262,16 +1188,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_6SQ1IE": {
+                "accordion_l53mLU": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Puis-je changer de senteur à chaque capsule ?"
+                    "heading": "Puis-je alterner les collections ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Bien sûr, c'est tout l'esprit du rituel. Le pack de 4 est parfait pour explorer les quatre régions thermales.</p>",
+                        "text": "<p>Bien sûr ! Tu peux varier les senteurs selon tes envies et les saisons.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1280,16 +1206,34 @@
                     "text_faq"
                   ]
                 },
-                "accordion_E1HSa2": {
+                "accordion_UhVDTM": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "La capsule convient-elle aux peaux sensibles ?"
+                    "heading": "Les senteurs conviennent-elles aux peaux sensibles ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Elle s'utilise en usage externe, diffusée dans l'eau de la douche. Si tu as une sensibilité connue aux parfums, consulte la liste INCI sur l'emballage avant utilisation.</p>",
+                        "text": "<p>Les capsules contiennent des huiles essentielles et s'utilisent diffusées dans l'eau de la douche. En cas de sensibilité connue aux parfums, consulte la liste INCI avant utilisation.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_Tnr11B": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Avec quel pommeau sont-elles compatibles ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Uniquement avec le Pommeau de Douche Filtrant SHIFT, dont le compartiment est spécifique.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1300,10 +1244,10 @@
                 }
               },
               "block_order": [
-                "accordion_6um4yv",
-                "accordion_Mpy62O",
-                "accordion_6SQ1IE",
-                "accordion_E1HSa2"
+                "accordion_oH0loM",
+                "accordion_l53mLU",
+                "accordion_UhVDTM",
+                "accordion_Tnr11B"
               ]
             }
           },
@@ -1392,7 +1336,7 @@
     "main",
     "videos_pratiques",
     "ingr_dients_cl_s",
-    "nos_diff_rentes_senteurs",
+    "notes_olfactives_par_col",
     "comment_ca_marche",
     "en_situation",
     "avis",

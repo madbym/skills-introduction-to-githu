@@ -23,7 +23,7 @@
                 "badge_VEGRNK": {
                   "type": "_badge",
                   "settings": {
-                    "text": "LA RECHARGE ESSENTIELLE",
+                    "text": "L'ACCESSOIRE À TON IMAGE",
                     "badge_style": "secondary"
                   }
                 }
@@ -49,7 +49,7 @@
           "type": "text",
           "name": "Texte",
           "settings": {
-            "text": "<p>La recharge essentielle de ta douchette Onsha : une filtration mécanique qui retient les sédiments et impuretés visibles de l'eau.</p>",
+            "text": "<p>La housse en silicone qui protège ta douchette Onsha et en fait un objet à ton image, à personnaliser, à collectionner, à offrir.</p>",
             "text_style": "paragraph",
             "paragraph_font_size": "large"
           }
@@ -82,44 +82,44 @@
           },
           "name": "Points forts",
           "blocks": {
-            "icon_with_text_1CfHOF": {
+            "icon_with_text_FzNRZv": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Filtration mécanique</p>",
+                "text": "<p>6 coloris</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_YsNXx6": {
+            "icon_with_text_fONvXF": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Se change toutes les 4 à 6 semaines</p>",
+                "text": "<p>Clips interchangeables</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_TWsABP": {
+            "icon_with_text_ab7uKP": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Installation en quelques secondes</p>",
+                "text": "<p>Silicone souple</p>",
                 "font_weight": 500
               }
             }
           },
           "block_order": [
-            "icon_with_text_1CfHOF",
-            "icon_with_text_YsNXx6",
-            "icon_with_text_TWsABP"
+            "icon_with_text_FzNRZv",
+            "icon_with_text_fONvXF",
+            "icon_with_text_ab7uKP"
           ]
         },
         "separator_AKgbEA": {
@@ -200,69 +200,12 @@
               "static": true,
               "settings": {}
             },
-            "quantity_breaks": {
-              "type": "_quantity-breaks",
-              "name": "Réduction par quantité",
-              "settings": {
-                "label": "Choisis ta quantité :"
-              },
-              "blocks": {
-                "quantity_breaks_item_MZqwpy": {
-                  "type": "_quantity-breaks-item",
-                  "settings": {
-                    "discount_type": "none",
-                    "discount_percentage": 0,
-                    "badge_position": "top",
-                    "badge_display": "overlap",
-                    "product_small_title": "filtre",
-                    "product_small_title_plural": "filtre",
-                    "show_image": false
-                  },
-                  "name": "1 filtre"
-                },
-                "quantity_breaks_item_2Li7Nm": {
-                  "type": "_quantity-breaks-item",
-                  "settings": {
-                    "quantity": 2,
-                    "discount_percentage": 5,
-                    "badge": "-5 %",
-                    "badge_position": "top",
-                    "badge_display": "overlap",
-                    "product_small_title": "filtre",
-                    "product_small_title_plural": "filtres",
-                    "show_unit_price": true,
-                    "show_image": false
-                  },
-                  "name": "2 filtres"
-                },
-                "quantity_breaks_item_2TLxeQ": {
-                  "type": "_quantity-breaks-item",
-                  "settings": {
-                    "quantity": 4,
-                    "discount_percentage": 10,
-                    "badge": "-10 %",
-                    "badge_position": "top",
-                    "badge_display": "overlap",
-                    "product_small_title": "filtre",
-                    "product_small_title_plural": "filtres",
-                    "show_unit_price": true,
-                    "show_image": false
-                  },
-                  "name": "4 filtres"
-                }
-              },
-              "block_order": [
-                "quantity_breaks_item_MZqwpy",
-                "quantity_breaks_item_2Li7Nm",
-                "quantity_breaks_item_2TLxeQ"
-              ]
-            },
             "toggle_cross_sell": {
               "type": "_toggle-cross-sell",
               "name": "t:toggle_cross_sell",
               "settings": {
-                "title": "Pas encore de douchette ?",
-                "description": "<p>Le système qui accueille ce filtre.</p>",
+                "title": "La douchette qui va avec",
+                "description": "<p>La housse s'adapte uniquement à la douchette Onsha.</p>",
                 "product_list": [
                   "douchette-filtrante"
                 ]
@@ -271,7 +214,6 @@
           },
           "block_order": [
             "product_variant_picker_xWC3wF",
-            "quantity_breaks",
             "toggle_cross_sell"
           ]
         },
@@ -294,17 +236,17 @@
             "accordion_padding": "medium"
           },
           "blocks": {
-            "accordion_nv3efW": {
+            "accordion_udANTU": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
-                "heading": "Description"
+                "heading": "Caractéristiques & matières"
               },
               "blocks": {
                 "text_acc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Le Filtre Sédiment est la recharge de ta Douchette Filtrante Onsha : il retient les sédiments et impuretés de l'eau avant qu'elle ne soit diffusée par la douchette.</p><p>En travaillant, il change visiblement de couleur. Quand le débit baisse ou que le filtre est chargé, remplace-le : quelques secondes, sans outil.</p>",
+                    "text": "<p>Silicone souple et résistant, sans BPA, conforme FDA selon le fabricant. Clips décoratifs inclus selon le coloris choisi.</p><p>Compatible uniquement avec la Douchette Filtrante Onsha. Elle protège ta douchette des chocs et des rayures.</p><p>Lavable à l'eau tiède. Tenir les clips hors de portée des enfants (petites pièces).</p>",
                     "text_style": "paragraph"
                   }
                 }
@@ -313,26 +255,7 @@
                 "text_acc"
               ]
             },
-            "accordion_CyzHAF": {
-              "type": "_accordion",
-              "name": "Accordéon",
-              "settings": {
-                "heading": "Composition"
-              },
-              "blocks": {
-                "text_acc": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Filtration mécanique multi-couches, conçue pour retenir les sédiments visibles présents dans l'eau. Usage externe uniquement, dans le système Onsha compatible. L'eau filtrée n'est pas destinée à la consommation.</p><p>Conçu en Corée pour la Douchette Filtrante Onsha.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_acc"
-              ]
-            },
-            "accordion_75PWYb": {
+            "accordion_1vkfbj": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
@@ -353,9 +276,8 @@
             }
           },
           "block_order": [
-            "accordion_nv3efW",
-            "accordion_CyzHAF",
-            "accordion_75PWYb"
+            "accordion_udANTU",
+            "accordion_1vkfbj"
           ]
         },
         "group_kLziPN": {
@@ -381,7 +303,7 @@
                 "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
               },
               "blocks": {
-                "icon_with_text_gLKD7D": {
+                "icon_with_text_njHX1f": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -393,7 +315,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_S1BAEl": {
+                "icon_with_text_w0xBwI": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -405,7 +327,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_4eCzFi": {
+                "icon_with_text_RL3JjQ": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -419,9 +341,9 @@
                 }
               },
               "block_order": [
-                "icon_with_text_gLKD7D",
-                "icon_with_text_S1BAEl",
-                "icon_with_text_4eCzFi"
+                "icon_with_text_njHX1f",
+                "icon_with_text_w0xBwI",
+                "icon_with_text_RL3JjQ"
               ]
             }
           },
@@ -463,17 +385,16 @@
         "padding_bottom": 60
       },
       "name": "Vidéos pratiques",
-      "disabled": true,
       "blocks": {
-        "text_f2WnKD": {
+        "text_JEgPZX": {
           "type": "text",
           "settings": {
-            "text": "<h2>En vidéo</h2>",
+            "text": "<h2>Les gestes en vidéo</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "tabs_E3dJSV": {
+        "tabs_f7bNih": {
           "type": "tabs",
           "settings": {
             "display_type": "tabs",
@@ -481,37 +402,223 @@
           },
           "name": "Vidéos",
           "blocks": {
-            "tab_XDhfo2": {
+            "tab_TDJrxH": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Remplace ta recharge"
+                "tab_name": "Remplacez votre recharge"
               },
-              "name": "Remplace ta recharge",
+              "name": "Remplacez votre recharge",
               "blocks": {
-                "video_VmzIc7": {
+                "video_q0TEWc": {
                   "type": "video",
                   "settings": {
                     "source": "shopify",
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Remplace ta recharge"
+                    "alt": "Remplacez votre recharge"
                   }
                 }
               },
               "block_order": [
-                "video_VmzIc7"
+                "video_q0TEWc"
               ]
             }
           },
           "block_order": [
-            "tab_XDhfo2"
+            "tab_TDJrxH"
           ]
         }
       },
       "block_order": [
-        "text_f2WnKD",
-        "tabs_E3dJSV"
+        "text_JEgPZX",
+        "tabs_f7bNih"
+      ]
+    },
+    "le_style_onsha": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Le style Onsha",
+      "blocks": {
+        "text_BaloRI": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Le style Onsha</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "text_Hw1F96": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Prendre soin de soi, c'est aussi une question de style : la housse transforme un objet du quotidien en détail de décoration.</p>",
+            "text_style": "paragraph"
+          }
+        },
+        "slider_oUerTl": {
+          "type": "slider",
+          "settings": {
+            "per_page_desktop": 4,
+            "per_page_mobile": "1.8"
+          },
+          "name": "Le style Onsha",
+          "blocks": {
+            "slide_wgWkDR": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Silicone protecteur",
+              "blocks": {
+                "image_lq8MxV": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Travel-Head_Cover_01.jpg"
+                  }
+                },
+                "text_6XkHbw": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Silicone protecteur</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_nO6w5Z": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Contre les chocs et rayures.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_lq8MxV",
+                "text_6XkHbw",
+                "text_nO6w5Z"
+              ]
+            },
+            "slide_QTz4v5": {
+              "type": "_slide",
+              "settings": {},
+              "name": "6 coloris",
+              "blocks": {
+                "image_bgQUae": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Travel-Head_Cover_03.jpg"
+                  }
+                },
+                "text_wdoKyA": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>6 coloris</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_3obqbq": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Du blanc au rose.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_bgQUae",
+                "text_wdoKyA",
+                "text_3obqbq"
+              ]
+            },
+            "slide_SaciGM": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Clips interchangeables",
+              "blocks": {
+                "image_uWBPrt": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Travel-Head_Cover_05.jpg"
+                  }
+                },
+                "text_E373Xr": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Clips interchangeables</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_fvaF35": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>À combiner entre coloris.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_uWBPrt",
+                "text_E373Xr",
+                "text_fvaF35"
+              ]
+            },
+            "slide_bd5ue4": {
+              "type": "_slide",
+              "settings": {},
+              "name": "L'idée cadeau",
+              "blocks": {
+                "image_9CnLd4": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Travel-Head_Cover_07.jpg"
+                  }
+                },
+                "text_cXX3Cl": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>L'idée cadeau</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_bZhj6a": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Utile, jolie, à petit prix.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_9CnLd4",
+                "text_cXX3Cl",
+                "text_bZhj6a"
+              ]
+            }
+          },
+          "block_order": [
+            "slide_wgWkDR",
+            "slide_QTz4v5",
+            "slide_SaciGM",
+            "slide_bd5ue4"
+          ]
+        }
+      },
+      "block_order": [
+        "text_BaloRI",
+        "text_Hw1F96",
+        "slider_oUerTl"
       ]
     },
     "comment_ca_marche": {
@@ -526,7 +633,7 @@
       },
       "name": "Comment ça marche",
       "blocks": {
-        "text_oPISfm": {
+        "text_uyx130": {
           "type": "text",
           "settings": {
             "text": "<h2>Comment ça marche ?</h2>",
@@ -534,7 +641,7 @@
           },
           "name": "Titre"
         },
-        "group_Rzhc1w": {
+        "group_ygxwQZ": {
           "type": "group",
           "settings": {
             "color_scheme": "",
@@ -550,15 +657,15 @@
             "padding_vertical_mobile": 0
           },
           "blocks": {
-            "image_uTJUjt": {
+            "image_xHnHk0": {
               "type": "image",
               "settings": {
                 "image_width_desktop": 80,
                 "image_width_mobile": 80,
-                "image": "shopify://shop_images/onsha-filtre-sediment-recharge-9193355.jpg"
+                "image": "shopify://shop_images/onsha-coque-pour-douchette-filtrante-6832553.jpg"
               }
             },
-            "group_j8ZQoz": {
+            "group_QDlO80": {
               "type": "group",
               "settings": {
                 "color_scheme": "",
@@ -572,188 +679,116 @@
                 "padding_vertical_mobile": 0
               },
               "blocks": {
-                "timeline_Q1qT5C": {
+                "timeline_IQo7NW": {
                   "type": "timeline",
                   "settings": {},
                   "name": "Étapes",
                   "blocks": {
-                    "timeline_step_B2Ohdi": {
+                    "timeline_step_QuDKaE": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 1",
                       "blocks": {
-                        "text_d3Ojuv": {
+                        "text_mGdAYJ": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 1</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_Hqfuyq": {
+                        "text_cPDIsJ": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Ouvre</strong> le compartiment de ta douchette Onsha.</p>",
+                            "text": "<p><strong>Glisse</strong> la housse sur ta Douchette Filtrante Onsha.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_d3Ojuv",
-                        "text_Hqfuyq"
+                        "text_mGdAYJ",
+                        "text_cPDIsJ"
                       ]
                     },
-                    "timeline_step_la7UJV": {
+                    "timeline_step_LIyp0O": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 2",
                       "blocks": {
-                        "text_4ARdtt": {
+                        "text_rzBuIA": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 2</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_Iqtmid": {
+                        "text_AZj5Oa": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Retire</strong> le filtre sédiment usagé.</p>",
+                            "text": "<p><strong>Fixe</strong> les clips décoratifs selon tes envies.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_4ARdtt",
-                        "text_Iqtmid"
+                        "text_rzBuIA",
+                        "text_AZj5Oa"
                       ]
                     },
-                    "timeline_step_RVsZnI": {
+                    "timeline_step_ezHrNQ": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 3",
                       "blocks": {
-                        "text_QFTLjx": {
+                        "text_NUyp0m": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 3</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_TJQdUu": {
+                        "text_c6TdzS": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Insère</strong> le nouveau filtre.</p>",
+                            "text": "<p><strong>Change, combine, renouvelle</strong> au fil des saisons et de ta déco.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_QFTLjx",
-                        "text_TJQdUu"
-                      ]
-                    },
-                    "timeline_step_nHgDgm": {
-                      "type": "_timeline-step",
-                      "settings": {},
-                      "name": "Étape 4",
-                      "blocks": {
-                        "text_0ucroY": {
-                          "type": "text",
-                          "settings": {
-                            "text": "<p><strong>Étape 4</strong></p>",
-                            "text_style": "paragraph"
-                          }
-                        },
-                        "text_LNDz7U": {
-                          "type": "text",
-                          "settings": {
-                            "text": "<p><strong>Referme</strong>. Ton rituel reprend immédiatement.</p>",
-                            "text_style": "paragraph"
-                          }
-                        }
-                      },
-                      "block_order": [
-                        "text_0ucroY",
-                        "text_LNDz7U"
+                        "text_NUyp0m",
+                        "text_c6TdzS"
                       ]
                     }
                   },
                   "block_order": [
-                    "timeline_step_B2Ohdi",
-                    "timeline_step_la7UJV",
-                    "timeline_step_RVsZnI",
-                    "timeline_step_nHgDgm"
+                    "timeline_step_QuDKaE",
+                    "timeline_step_LIyp0O",
+                    "timeline_step_ezHrNQ"
                   ]
                 },
-                "text_Sick1C": {
+                "text_UwHLEK": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Le conseil Sunsoari</strong></p><p>Garde toujours une recharge d'avance dans ta trousse. Quand le filtre change de couleur, c'est le signal qu'il a bien travaillé : remplace-le sans hésiter.</p>",
+                    "text": "<p><strong>Le conseil Sunsoari</strong></p><p>Assortis ta housse à ta salle de bain, ou change de coloris selon les saisons. Pour une petite attention à glisser avec un coffret Onsha, la housse est un joli complément.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "timeline_Q1qT5C",
-                "text_Sick1C"
+                "timeline_IQo7NW",
+                "text_UwHLEK"
               ]
             }
           },
           "block_order": [
-            "image_uTJUjt",
-            "group_j8ZQoz"
+            "image_xHnHk0",
+            "group_QDlO80"
           ]
         }
       },
       "block_order": [
-        "text_oPISfm",
-        "group_Rzhc1w"
-      ]
-    },
-    "avant_apres": {
-      "type": "custom-section",
-      "settings": {
-        "color_scheme": "",
-        "color_scheme_card": "",
-        "layout_gap_desktop": 10,
-        "layout_flex_direction_mobile": "row",
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
-      "name": "Avant / Après",
-      "disabled": true,
-      "blocks": {
-        "text_HHesFw": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Ce que le filtre capture</h2>",
-            "text_style": "h3"
-          },
-          "name": "Titre"
-        },
-        "before_after_6fmFr3": {
-          "type": "before-after",
-          "settings": {
-            "image_ratio": "portrait",
-            "label_before": "Avant",
-            "label_after": "Après",
-            "label_badge_style": "primary"
-          }
-        },
-        "text_miErX5": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Photo réelle, non retouchée.</p>",
-            "text_style": "paragraph",
-            "alignment": "center",
-            "alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "text_HHesFw",
-        "before_after_6fmFr3",
-        "text_miErX5"
+        "text_uyx130",
+        "group_ygxwQZ"
       ]
     },
     "en_situation": {
@@ -769,7 +804,7 @@
       "name": "En situation (UGC)",
       "disabled": true,
       "blocks": {
-        "text_tcLMg9": {
+        "text_rzsCSh": {
           "type": "text",
           "settings": {
             "text": "<h2>Dans vos salles de bain</h2>",
@@ -777,15 +812,15 @@
           },
           "name": "Titre"
         },
-        "stories_tdlvwC": {
+        "stories_WHjaRi": {
           "type": "stories",
           "settings": {},
           "name": "Stories UGC"
         }
       },
       "block_order": [
-        "text_tcLMg9",
-        "stories_tdlvwC"
+        "text_rzsCSh",
+        "stories_WHjaRi"
       ]
     },
     "avis": {
@@ -927,16 +962,16 @@
                 "accordion_padding": "medium"
               },
               "blocks": {
-                "accordion_EpvVxl": {
+                "accordion_xFHQpN": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Avec quel système ce filtre est-il compatible ?"
+                    "heading": "Avec quels produits la housse est-elle compatible ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Il s'insère dans la Douchette Filtrante Onsha. Attention : ce n'est pas le Filtre Thermal Vitaminé du système Home.</p>",
+                        "text": "<p>Elle est conçue uniquement pour la Douchette Filtrante Onsha, dont elle épouse la forme.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -945,16 +980,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_hY1tZe": {
+                "accordion_xHvZyq": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Combien de temps dure un filtre ?"
+                    "heading": "Les clips sont-ils inclus ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Environ 4 à 6 semaines selon ta fréquence de douche et la qualité de ton eau.</p>",
+                        "text": "<p>Oui, des clips décoratifs sont inclus selon le coloris choisi. Tu peux ensuite les combiner entre coloris.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -963,16 +998,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_UJDgVJ": {
+                "accordion_bJmaKq": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Pourquoi le filtre change-t-il de couleur ?"
+                    "heading": "Comment l'entretenir ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Parce qu'il retient les sédiments de l'eau : c'est le signe que ta filtration travaille.</p>",
+                        "text": "<p>Un simple lavage à l'eau tiède suffit.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -981,16 +1016,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_hYkMzD": {
+                "accordion_dLltTI": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Existe-t-il plusieurs versions ?"
+                    "heading": "Gêne-t-elle l'utilisation de la douchette ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Non, une seule version, compatible avec la Douchette Filtrante Onsha.</p>",
+                        "text": "<p>Non : elle épouse la forme de la douchette sans gêner la prise en main, le jet ni le changement de filtre.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1001,10 +1036,10 @@
                 }
               },
               "block_order": [
-                "accordion_EpvVxl",
-                "accordion_hY1tZe",
-                "accordion_UJDgVJ",
-                "accordion_hYkMzD"
+                "accordion_xFHQpN",
+                "accordion_xHvZyq",
+                "accordion_bJmaKq",
+                "accordion_dLltTI"
               ]
             }
           },
@@ -1092,8 +1127,8 @@
   "order": [
     "main",
     "videos_pratiques",
+    "le_style_onsha",
     "comment_ca_marche",
-    "avant_apres",
     "en_situation",
     "avis",
     "decouvre_aussi",

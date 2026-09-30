@@ -23,7 +23,7 @@
                 "badge_VEGRNK": {
                   "type": "_badge",
                   "settings": {
-                    "text": "LE SYSTÈME SHIFT COMPLET",
+                    "text": "LE CŒUR DU RITUEL HOME",
                     "badge_style": "secondary"
                   }
                 }
@@ -49,7 +49,7 @@
           "type": "text",
           "name": "Texte",
           "settings": {
-            "text": "<p>Pommeau, flexible 2 m, 3 filtres Pure Water et 6 capsules : le système SHIFT complet, prêt à installer.</p>",
+            "text": "<p>Le cœur de ton rituel Home : un filtre 2-en-1, sédiments et soin, inspiré des sources thermales coréennes.</p>",
             "text_style": "paragraph",
             "paragraph_font_size": "large"
           }
@@ -82,44 +82,44 @@
           },
           "name": "Points forts",
           "blocks": {
-            "icon_with_text_mCDKL6": {
+            "icon_with_text_4tYnzN": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Pommeau + flexible 2 m + 3 filtres + 6 capsules</p>",
+                "text": "<p>Inspiré des sources thermales coréennes</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_eKUUd3": {
+            "icon_with_text_cbhgN7": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Soin, filtration et senteurs inclus</p>",
+                "text": "<p>Filtre 2-en-1 : sédiments + soin</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_TpTPES": {
+            "icon_with_text_ciSPOc": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Prêt à installer</p>",
+                "text": "<p>3 à 4 semaines de rituel</p>",
                 "font_weight": 500
               }
             }
           },
           "block_order": [
-            "icon_with_text_mCDKL6",
-            "icon_with_text_eKUUd3",
-            "icon_with_text_TpTPES"
+            "icon_with_text_4tYnzN",
+            "icon_with_text_cbhgN7",
+            "icon_with_text_ciSPOc"
           ]
         },
         "separator_AKgbEA": {
@@ -199,10 +199,80 @@
               "disabled": true,
               "static": true,
               "settings": {}
+            },
+            "quantity_breaks": {
+              "type": "_quantity-breaks",
+              "name": "Réduction par quantité",
+              "settings": {
+                "label": "Choisis ta quantité :"
+              },
+              "blocks": {
+                "quantity_breaks_item_SeVce2": {
+                  "type": "_quantity-breaks-item",
+                  "settings": {
+                    "discount_type": "none",
+                    "discount_percentage": 0,
+                    "badge_position": "top",
+                    "badge_display": "overlap",
+                    "product_small_title": "filtre",
+                    "product_small_title_plural": "filtre",
+                    "show_image": false
+                  },
+                  "name": "1 filtre"
+                },
+                "quantity_breaks_item_LWxm09": {
+                  "type": "_quantity-breaks-item",
+                  "settings": {
+                    "quantity": 2,
+                    "discount_percentage": 5,
+                    "badge": "-5 %",
+                    "badge_position": "top",
+                    "badge_display": "overlap",
+                    "product_small_title": "filtre",
+                    "product_small_title_plural": "filtres",
+                    "show_unit_price": true,
+                    "show_image": false
+                  },
+                  "name": "2 filtres"
+                },
+                "quantity_breaks_item_0I5Qe4": {
+                  "type": "_quantity-breaks-item",
+                  "settings": {
+                    "quantity": 4,
+                    "discount_percentage": 10,
+                    "badge": "Les 4 senteurs",
+                    "badge_position": "top",
+                    "badge_display": "overlap",
+                    "product_small_title": "filtre",
+                    "product_small_title_plural": "filtres",
+                    "show_unit_price": true,
+                    "show_image": false
+                  },
+                  "name": "4 filtres"
+                }
+              },
+              "block_order": [
+                "quantity_breaks_item_SeVce2",
+                "quantity_breaks_item_LWxm09",
+                "quantity_breaks_item_0I5Qe4"
+              ]
+            },
+            "toggle_cross_sell": {
+              "type": "_toggle-cross-sell",
+              "name": "t:toggle_cross_sell",
+              "settings": {
+                "title": "Pas encore équipée ?",
+                "description": "<p>Indispensable pour accueillir ton filtre.</p>",
+                "product_list": [
+                  "coque-de-diffusion"
+                ]
+              }
             }
           },
           "block_order": [
-            "product_variant_picker_xWC3wF"
+            "product_variant_picker_xWC3wF",
+            "quantity_breaks",
+            "toggle_cross_sell"
           ]
         },
         "cross_sell_QcpW8C": {
@@ -211,10 +281,10 @@
           "settings": {
             "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
             "products": [
-              "pack-6-capsules-vitaminees-shift-sunsoari"
+              "coffret-home-onsha-sullab-sunsoari"
             ],
-            "title": "Tes prochaines capsules",
-            "description": "<p>5 collections de senteurs à découvrir.</p>",
+            "title": "Le rituel Home complet",
+            "description": "<p>Pommeau, flexible, coque et 4 filtres.</p>",
             "image_width": 90,
             "button_content_type": "icon"
           }
@@ -238,71 +308,52 @@
             "accordion_padding": "medium"
           },
           "blocks": {
-            "accordion_PC6rlL": {
+            "accordion_3W6T8y": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
-                "heading": "Ce qu'il y a dans le coffret"
+                "heading": "Description"
               },
               "blocks": {
-                "text_cWWlEH": {
+                "text_acc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>1 pommeau de douche filtrant SHIFT, le système réutilisable.</p><p>1 flexible silicone 2 m.</p><p>3 filtres Pure Water, pour 6 à 9 mois de filtration.</p><p>6 capsules de soin & aromathérapie : 2 Tea Tree & Lavender, 2 Basil & Grass, 2 Ginger & Bergamote.</p>",
+                    "text": "<p>Le Filtre Thermal Vitaminé est le cœur du rituel Onsha à la maison.</p><p>En Corée, les sources thermales font partie des rituels de soin depuis des siècles. Onsha a réuni cette tradition dans un filtre 2-en-1 : une première couche retient les sédiments et impuretés de l'eau, puis la capsule thermale l'enrichit en eau de source soufrée (extraite à 808 mètres dans le granit coréen, lyophilisée et concentrée 4 fois) et en actifs de soin.</p><p>Choisis ta senteur, insère ton filtre dans la coque de diffusion, et ta salle de bain prend des airs de source coréenne.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "text_cWWlEH"
+                "text_acc"
               ]
             },
-            "accordion_wAvuQg": {
+            "accordion_gpnnhc": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
-                "heading": "Actifs & INCI"
+                "heading": "Composition"
               },
               "blocks": {
-                "text_BO0FfE": {
+                "text_acc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Chaque capsule associe une senteur à base d'huiles essentielles à des actifs hydratants : glycérine et acide hyaluronique.</p><p><strong>Tea Tree & Lavender :</strong> huiles essentielles de tea tree et de lavande. <strong>Basil & Grass :</strong> huile essentielle de basilic et notes d'herbes fraîches. <strong>Ginger & Bergamote :</strong> huiles essentielles de gingembre et de bergamote.</p><p>La liste complète des ingrédients (INCI) et des allergènes figure sur l'emballage.</p>",
+                    "text": "<p>Filtration mécanique des sédiments et capsule thermale : eau thermale soufrée lyophilisée concentrée 4x, vitamine C, acide hyaluronique, glycérine et MSM, avec une senteur inspirée des régions thermales coréennes.</p><p>La liste complète des ingrédients (INCI) de chaque senteur figure sur l'emballage. Usage externe uniquement, dans le système Onsha Home compatible. Tenir hors de portée des enfants. En cas de sensibilité connue aux parfums, consulte la liste INCI avant utilisation.</p><p>Conçu en Corée pour le rituel de douche Onsha Home.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "text_BO0FfE"
+                "text_acc"
               ]
             },
-            "accordion_sQ8z0W": {
-              "type": "_accordion",
-              "name": "Accordéon",
-              "settings": {
-                "heading": "Filtration & entretien"
-              },
-              "blocks": {
-                "text_2kvASF": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Le filtre Pure Water et la capsule travaillent ensemble : l'eau est d'abord filtrée, puis enrichie. Le filtre se change environ tous les 2 à 3 mois selon ton eau ; la capsule quand elle est vide.</p><p>Usage externe et domestique uniquement. En cas de sensibilité connue aux parfums ou aux huiles essentielles, consulte la liste INCI avant utilisation. Ne force pas le vissage.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_2kvASF"
-              ]
-            },
-            "accordion_uhXz3G": {
+            "accordion_c826ZW": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
                 "heading": "Livraison & retours"
               },
               "blocks": {
-                "text_JcDfuq": {
+                "text_acc": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p><p>Retour possible sous 14 jours, produit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
@@ -311,15 +362,14 @@
                 }
               },
               "block_order": [
-                "text_JcDfuq"
+                "text_acc"
               ]
             }
           },
           "block_order": [
-            "accordion_PC6rlL",
-            "accordion_wAvuQg",
-            "accordion_sQ8z0W",
-            "accordion_uhXz3G"
+            "accordion_3W6T8y",
+            "accordion_gpnnhc",
+            "accordion_c826ZW"
           ]
         },
         "group_kLziPN": {
@@ -345,7 +395,7 @@
                 "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
               },
               "blocks": {
-                "icon_with_text_FMyeSp": {
+                "icon_with_text_Of0WOO": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -357,7 +407,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_Z4oazK": {
+                "icon_with_text_sEgigY": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -369,7 +419,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_YV0oOV": {
+                "icon_with_text_WPnsuv": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -383,9 +433,9 @@
                 }
               },
               "block_order": [
-                "icon_with_text_FMyeSp",
-                "icon_with_text_Z4oazK",
-                "icon_with_text_YV0oOV"
+                "icon_with_text_Of0WOO",
+                "icon_with_text_sEgigY",
+                "icon_with_text_WPnsuv"
               ]
             }
           },
@@ -417,238 +467,6 @@
         "anchor_id": "buy"
       }
     },
-    "dans_ton_coffret": {
-      "type": "custom-section",
-      "settings": {
-        "color_scheme": "",
-        "color_scheme_card": "",
-        "layout_gap_desktop": 10,
-        "layout_flex_direction_mobile": "row",
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
-      "name": "Dans ton coffret",
-      "blocks": {
-        "text_WUWYf6": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Les 4 éléments de ton coffret</h2>",
-            "text_style": "h3"
-          },
-          "name": "Titre"
-        },
-        "group_QRi26B": {
-          "type": "group",
-          "settings": {
-            "color_scheme": "",
-            "layout_type": "grid",
-            "layout_direction_desktop": "row",
-            "layout_grid_columns_desktop": 4,
-            "layout_gap_desktop": 16,
-            "layout_wrap_desktop": "wrap",
-            "layout_align_items_desktop": "center",
-            "same_as_desktop": false,
-            "layout_direction_mobile": "row",
-            "layout_grid_columns_mobile": 2,
-            "layout_wrap_mobile": "wrap",
-            "use_global_container_padding": false,
-            "padding_horizontal": 0,
-            "padding_vertical": 0,
-            "padding_horizontal_mobile": 0,
-            "padding_vertical_mobile": 0
-          },
-          "name": "Éléments",
-          "blocks": {
-            "group_nrJi7s": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Pommeau de douche filtrant ×1",
-              "blocks": {
-                "image_0aQ3ID": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/shift-coffret-douche-aromatherapie-3669659.png"
-                  }
-                },
-                "text_AdmHxN": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Pommeau de douche filtrant ×1</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_WFOCWd": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>La base réutilisable</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_0aQ3ID",
-                "text_AdmHxN",
-                "text_WFOCWd"
-              ]
-            },
-            "group_o16hD8": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Flexible silicone 2 m ×1",
-              "blocks": {
-                "image_C4SFhb": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/SHIFT--_info_flexible.png"
-                  }
-                },
-                "text_OMZpTk": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Flexible silicone 2 m ×1</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_tJaJAf": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Se raccorde sur ta douche</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_C4SFhb",
-                "text_OMZpTk",
-                "text_tJaJAf"
-              ]
-            },
-            "group_jym6MG": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Filtres Pure Water ×3",
-              "blocks": {
-                "image_hP1jF7": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Filtre-a_sediments_3_pieces.jpg"
-                  }
-                },
-                "text_TsGTrA": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Filtres Pure Water ×3</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_1EEpDJ": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>6 à 9 mois de filtration</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_hP1jF7",
-                "text_TsGTrA",
-                "text_1EEpDJ"
-              ]
-            },
-            "group_Ut1LLQ": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Capsules soin & aromathérapie ×6",
-              "blocks": {
-                "image_V4i3er": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/h201-shift-filtre-douche-vitamine-c-pack-6-capsules-5890576.jpg"
-                  }
-                },
-                "text_XY2Av7": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Capsules soin & aromathérapie ×6</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_YGr0as": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>3 senteurs, 2 de chaque</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_V4i3er",
-                "text_XY2Av7",
-                "text_YGr0as"
-              ]
-            }
-          },
-          "block_order": [
-            "group_nrJi7s",
-            "group_o16hD8",
-            "group_jym6MG",
-            "group_Ut1LLQ"
-          ]
-        }
-      },
-      "block_order": [
-        "text_WUWYf6",
-        "group_QRi26B"
-      ]
-    },
     "videos_pratiques": {
       "type": "custom-section",
       "settings": {
@@ -660,17 +478,16 @@
         "padding_bottom": 60
       },
       "name": "Vidéos pratiques",
-      "disabled": true,
       "blocks": {
-        "text_dPQIp8": {
+        "text_wETdIK": {
           "type": "text",
           "settings": {
-            "text": "<h2>En vidéo</h2>",
+            "text": "<h2>Les gestes en vidéo</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "tabs_X9OfPn": {
+        "tabs_0skBaH": {
           "type": "tabs",
           "settings": {
             "display_type": "tabs",
@@ -678,83 +495,37 @@
           },
           "name": "Vidéos",
           "blocks": {
-            "tab_voI4w6": {
+            "tab_2sNVbY": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Découvre ton coffret"
+                "tab_name": "Remplacez votre recharge"
               },
-              "name": "Découvre ton coffret",
+              "name": "Remplacez votre recharge",
               "blocks": {
-                "video_sCqTiq": {
+                "video_sdTWx6": {
                   "type": "video",
                   "settings": {
                     "source": "shopify",
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Découvre ton coffret"
+                    "alt": "Remplacez votre recharge"
                   }
                 }
               },
               "block_order": [
-                "video_sCqTiq"
-              ]
-            },
-            "tab_p4vYfI": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Installe ton produit"
-              },
-              "name": "Installe ton produit",
-              "blocks": {
-                "video_ygkCk8": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Installe ton produit"
-                  }
-                }
-              },
-              "block_order": [
-                "video_ygkCk8"
-              ]
-            },
-            "tab_BOvxeI": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Remplace ta recharge"
-              },
-              "name": "Remplace ta recharge",
-              "blocks": {
-                "video_1WWWur": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Remplace ta recharge"
-                  }
-                }
-              },
-              "block_order": [
-                "video_1WWWur"
+                "video_sdTWx6"
               ]
             }
           },
           "block_order": [
-            "tab_voI4w6",
-            "tab_p4vYfI",
-            "tab_BOvxeI"
+            "tab_2sNVbY"
           ]
         }
       },
       "block_order": [
-        "text_dPQIp8",
-        "tabs_X9OfPn"
+        "text_wETdIK",
+        "tabs_0skBaH"
       ]
     },
     "ingr_dients_cl_s": {
@@ -769,22 +540,22 @@
       },
       "name": "Ingrédients clés",
       "blocks": {
-        "text_xYVqxx": {
+        "text_XPSL2o": {
           "type": "text",
           "settings": {
-            "text": "<h2>Les 3 senteurs du coffret</h2>",
+            "text": "<h2>Ingrédients clés</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "text_6YksWy": {
+        "text_uqOSg5": {
           "type": "text",
           "settings": {
             "text": "<p>La liste complète des ingrédients (INCI) figure sur l'emballage.</p>",
             "text_style": "paragraph"
           }
         },
-        "slider_4oWy2x": {
+        "slider_Okq2BE": {
           "type": "slider",
           "settings": {
             "per_page_desktop": 4,
@@ -792,118 +563,329 @@
           },
           "name": "Ingrédients clés",
           "blocks": {
-            "slide_pKyo2X": {
+            "slide_rmgO6g": {
               "type": "_slide",
               "settings": {},
-              "name": "Tea Tree & Lavender",
+              "name": "Eau thermale soufrée",
               "blocks": {
-                "image_F3jCIE": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Tea-tree_lavande.png"
-                  }
-                },
-                "text_wvJWIy": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Tea Tree & Lavender</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_D7u3mS": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Apaisant et frais. Parfait pour les douches du soir.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_F3jCIE",
-                "text_wvJWIy",
-                "text_D7u3mS"
-              ]
-            },
-            "slide_iG9Lv3": {
-              "type": "_slide",
-              "settings": {},
-              "name": "Basil & Grass",
-              "blocks": {
-                "image_AcuVET": {
+                "image_wFgFSY": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35
                   }
                 },
-                "text_6ZyyQY": {
+                "text_91GqK8": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Basil & Grass</strong></p>",
+                    "text": "<p><strong>Eau thermale soufrée</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_0PjF9c": {
+                "text_oFkh8O": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Herbacé et vivifiant. Idéal pour bien commencer la journée.</p>",
+                    "text": "<p>Extraite à 808 m dans le granit coréen, lyophilisée et concentrée 4 fois.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_AcuVET",
-                "text_6ZyyQY",
-                "text_0PjF9c"
+                "image_wFgFSY",
+                "text_91GqK8",
+                "text_oFkh8O"
               ]
             },
-            "slide_qvNSzP": {
+            "slide_az2YBS": {
               "type": "_slide",
               "settings": {},
-              "name": "Ginger & Bergamote",
+              "name": "Vitamine C",
               "blocks": {
-                "image_g32CgH": {
+                "image_YgOuwg": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35
                   }
                 },
-                "text_6DaUjA": {
+                "text_fB4Pbx": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Ginger & Bergamote</strong></p>",
+                    "text": "<p><strong>Vitamine C</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_3PjeEY": {
+                "text_Gky4Oo": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Tonifiant et solaire. Pour les douches qui réveillent.</p>",
+                    "text": "<p>Intégrée à la capsule, dans l'eau de ta douche.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_g32CgH",
-                "text_6DaUjA",
-                "text_3PjeEY"
+                "image_YgOuwg",
+                "text_fB4Pbx",
+                "text_Gky4Oo"
+              ]
+            },
+            "slide_jqMVza": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Acide hyaluronique & glycérine",
+              "blocks": {
+                "image_SWMPcw": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_CQJVuk": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Acide hyaluronique & glycérine</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_oivDP4": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Des actifs hydratants bien connus en cosmétique.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_SWMPcw",
+                "text_CQJVuk",
+                "text_oivDP4"
+              ]
+            },
+            "slide_KLVPA2": {
+              "type": "_slide",
+              "settings": {},
+              "name": "MSM",
+              "blocks": {
+                "image_WT01Nj": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_Hwkpu9": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>MSM</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_9Qgmyj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Présent dans la composition thermale Onsha.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_WT01Nj",
+                "text_Hwkpu9",
+                "text_9Qgmyj"
               ]
             }
           },
           "block_order": [
-            "slide_pKyo2X",
-            "slide_iG9Lv3",
-            "slide_qvNSzP"
+            "slide_rmgO6g",
+            "slide_az2YBS",
+            "slide_jqMVza",
+            "slide_KLVPA2"
           ]
         }
       },
       "block_order": [
-        "text_xYVqxx",
-        "text_6YksWy",
-        "slider_4oWy2x"
+        "text_XPSL2o",
+        "text_uqOSg5",
+        "slider_Okq2BE"
+      ]
+    },
+    "nos_diff_rentes_senteurs": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Nos différentes senteurs",
+      "blocks": {
+        "text_CwYjn5": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Nos différentes senteurs</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "slider_SMYfQ5": {
+          "type": "slider",
+          "settings": {
+            "per_page_desktop": 4,
+            "per_page_mobile": "1.8"
+          },
+          "name": "Nos différentes senteurs",
+          "blocks": {
+            "slide_PtuEFB": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Hinoki · Calme absolu",
+              "blocks": {
+                "image_RQ73l5": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Hinoki.jpg"
+                  }
+                },
+                "text_F6gcqI": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Hinoki · Calme absolu</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_mHwg2K": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Cyprès, bois chaud, musc doux. Pour les soirs de détente.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_RQ73l5",
+                "text_F6gcqI",
+                "text_mHwg2K"
+              ]
+            },
+            "slide_j7t2yd": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Océan · Fraîcheur marine",
+              "blocks": {
+                "image_bOY1xH": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Ocean.jpg"
+                  }
+                },
+                "text_RlzGW7": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Océan · Fraîcheur marine</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_qryzda": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Embruns marins, sel minéral, végétal aquatique. Pour les matins.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_bOY1xH",
+                "text_RlzGW7",
+                "text_qryzda"
+              ]
+            },
+            "slide_8iH1wO": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Pin · Énergie des forêts",
+              "blocks": {
+                "image_RwLqgo": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Pin.jpg"
+                  }
+                },
+                "text_oZ9zDn": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Pin · Énergie des forêts</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_ZOmEPJ": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pin frais, résine, terre humide. Pour bien démarrer la journée.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_RwLqgo",
+                "text_oZ9zDn",
+                "text_ZOmEPJ"
+              ]
+            },
+            "slide_ePsqMg": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Fleur de Prunier · Douceur florale",
+              "blocks": {
+                "image_QO10Y0": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Onsha_Fleur_de_prunier.png"
+                  }
+                },
+                "text_iX1EwY": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Fleur de Prunier · Douceur florale</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_qBRlEa": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Fleur de prunier, poudré doux, bois blanc. Pour un moment tout en douceur.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_QO10Y0",
+                "text_iX1EwY",
+                "text_qBRlEa"
+              ]
+            }
+          },
+          "block_order": [
+            "slide_PtuEFB",
+            "slide_j7t2yd",
+            "slide_8iH1wO",
+            "slide_ePsqMg"
+          ]
+        }
+      },
+      "block_order": [
+        "text_CwYjn5",
+        "slider_SMYfQ5"
       ]
     },
     "comment_ca_marche": {
@@ -918,7 +900,7 @@
       },
       "name": "Comment ça marche",
       "blocks": {
-        "text_Cn2csC": {
+        "text_06EMXQ": {
           "type": "text",
           "settings": {
             "text": "<h2>Comment ça marche ?</h2>",
@@ -926,7 +908,7 @@
           },
           "name": "Titre"
         },
-        "group_Lm8ezb": {
+        "group_yNjORS": {
           "type": "group",
           "settings": {
             "color_scheme": "",
@@ -942,15 +924,15 @@
             "padding_vertical_mobile": 0
           },
           "blocks": {
-            "image_xjyZ48": {
+            "image_muTtiL": {
               "type": "image",
               "settings": {
                 "image_width_desktop": 80,
                 "image_width_mobile": 80,
-                "image": "shopify://shop_images/4HowtoUse.gif"
+                "image": "shopify://shop_images/Comment_installer_la_recharge.gif"
               }
             },
-            "group_Q5PlSo": {
+            "group_J4zIKd": {
               "type": "group",
               "settings": {
                 "color_scheme": "",
@@ -964,297 +946,108 @@
                 "padding_vertical_mobile": 0
               },
               "blocks": {
-                "timeline_RVcIPo": {
+                "timeline_vGr3Gw": {
                   "type": "timeline",
                   "settings": {},
                   "name": "Étapes",
                   "blocks": {
-                    "timeline_step_4WF3Ic": {
+                    "timeline_step_W5jcnT": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 1",
                       "blocks": {
-                        "text_f2v2R2": {
+                        "text_mFSnHf": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 1</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_Iy9uOT": {
+                        "text_JhqAo0": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Raccorde</strong> le flexible à ta douche, sans outil ni plombier.</p>",
+                            "text": "<p>Ouvre la coque de diffusion Home.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_f2v2R2",
-                        "text_Iy9uOT"
+                        "text_mFSnHf",
+                        "text_JhqAo0"
                       ]
                     },
-                    "timeline_step_WOT3gC": {
+                    "timeline_step_QxvEXH": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 2",
                       "blocks": {
-                        "text_NepOR6": {
+                        "text_D5jSFp": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 2</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_soVfBg": {
+                        "text_ak1uDS": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Visse</strong> le pommeau SHIFT à l'autre bout du flexible.</p>",
+                            "text": "<p>Retire le filtre usagé et insère le nouveau.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_NepOR6",
-                        "text_soVfBg"
+                        "text_D5jSFp",
+                        "text_ak1uDS"
                       ]
                     },
-                    "timeline_step_BjpHAK": {
+                    "timeline_step_vBqJd0": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 3",
                       "blocks": {
-                        "text_kSt5bc": {
+                        "text_xBA9Re": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 3</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_uYdswx": {
+                        "text_bNcRV7": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Insère</strong> un filtre Pure Water dans le compartiment du pommeau.</p>",
+                            "text": "<p>Referme : ton rituel reprend en quelques secondes.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_kSt5bc",
-                        "text_uYdswx"
-                      ]
-                    },
-                    "timeline_step_F6LjoD": {
-                      "type": "_timeline-step",
-                      "settings": {},
-                      "name": "Étape 4",
-                      "blocks": {
-                        "text_RYlklf": {
-                          "type": "text",
-                          "settings": {
-                            "text": "<p><strong>Étape 4</strong></p>",
-                            "text_style": "paragraph"
-                          }
-                        },
-                        "text_N3yNRp": {
-                          "type": "text",
-                          "settings": {
-                            "text": "<p><strong>Glisse</strong> une capsule de soin dans le second compartiment et ouvre l'eau.</p>",
-                            "text_style": "paragraph"
-                          }
-                        }
-                      },
-                      "block_order": [
-                        "text_RYlklf",
-                        "text_N3yNRp"
+                        "text_xBA9Re",
+                        "text_bNcRV7"
                       ]
                     }
                   },
                   "block_order": [
-                    "timeline_step_4WF3Ic",
-                    "timeline_step_WOT3gC",
-                    "timeline_step_BjpHAK",
-                    "timeline_step_F6LjoD"
+                    "timeline_step_W5jcnT",
+                    "timeline_step_QxvEXH",
+                    "timeline_step_vBqJd0"
                   ]
                 }
               },
               "block_order": [
-                "timeline_RVcIPo"
+                "timeline_vGr3Gw"
               ]
             }
           },
           "block_order": [
-            "image_xjyZ48",
-            "group_Q5PlSo"
+            "image_muTtiL",
+            "group_J4zIKd"
           ]
         }
       },
       "block_order": [
-        "text_Cn2csC",
-        "group_Lm8ezb"
-      ]
-    },
-    "pourquoi": {
-      "type": "custom-section",
-      "settings": {
-        "color_scheme": "",
-        "color_scheme_card": "",
-        "layout_gap_desktop": 10,
-        "layout_flex_direction_mobile": "row",
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
-      "name": "Pourquoi ce coffret ?",
-      "blocks": {
-        "text_dB60g9": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Pourquoi ce coffret ?</h2>",
-            "text_style": "h3"
-          },
-          "name": "Titre"
-        },
-        "group_9l3iAe": {
-          "type": "group",
-          "settings": {
-            "color_scheme": "",
-            "layout_type": "grid",
-            "layout_direction_desktop": "row",
-            "layout_grid_columns_desktop": 4,
-            "layout_gap_desktop": 16,
-            "layout_wrap_desktop": "wrap",
-            "layout_align_items_desktop": "center",
-            "same_as_desktop": false,
-            "layout_direction_mobile": "row",
-            "layout_grid_columns_mobile": 2,
-            "layout_wrap_mobile": "wrap",
-            "use_global_container_padding": false,
-            "padding_horizontal": 0,
-            "padding_vertical": 0,
-            "padding_horizontal_mobile": 0,
-            "padding_vertical_mobile": 0
-          },
-          "blocks": {
-            "group_5ZD5sR": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Dès le premier jour",
-              "blocks": {
-                "text_OqDqQa": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Dès le premier jour</strong></p><p>Tout est dans la boîte : tu raccordes et c'est prêt.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_OqDqQa"
-              ]
-            },
-            "group_LtO9BS": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "3 mois de capsules",
-              "blocks": {
-                "text_IkeC8w": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>3 mois de capsules</strong></p><p>6 capsules pour explorer trois senteurs au fil de tes envies.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_IkeC8w"
-              ]
-            },
-            "group_2EgpyK": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "6 à 9 mois de filtres",
-              "blocks": {
-                "text_qD2tmy": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>6 à 9 mois de filtres</strong></p><p>3 filtres Pure Water d'avance, sans interruption.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_qD2tmy"
-              ]
-            },
-            "group_1QzraK": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Un système qui dure",
-              "blocks": {
-                "text_wKsSsb": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Un système qui dure</strong></p><p>Seules les capsules et les filtres se remplacent.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_wKsSsb"
-              ]
-            }
-          },
-          "block_order": [
-            "group_5ZD5sR",
-            "group_LtO9BS",
-            "group_2EgpyK",
-            "group_1QzraK"
-          ]
-        }
-      },
-      "block_order": [
-        "text_dB60g9",
-        "group_9l3iAe"
+        "text_06EMXQ",
+        "group_yNjORS"
       ]
     },
     "avant_apres": {
@@ -1270,7 +1063,7 @@
       "name": "Avant / Après",
       "disabled": true,
       "blocks": {
-        "text_PTGLhC": {
+        "text_cQODOW": {
           "type": "text",
           "settings": {
             "text": "<h2>L'efficacité en image</h2>",
@@ -1278,7 +1071,7 @@
           },
           "name": "Titre"
         },
-        "before_after_Zx5H9J": {
+        "before_after_AXg67P": {
           "type": "before-after",
           "settings": {
             "image_ratio": "portrait",
@@ -1287,7 +1080,7 @@
             "label_badge_style": "primary"
           }
         },
-        "text_Kyl3S9": {
+        "text_tJTq3t": {
           "type": "text",
           "settings": {
             "text": "<p>Photo réelle, non retouchée.</p>",
@@ -1298,9 +1091,9 @@
         }
       },
       "block_order": [
-        "text_PTGLhC",
-        "before_after_Zx5H9J",
-        "text_Kyl3S9"
+        "text_cQODOW",
+        "before_after_AXg67P",
+        "text_tJTq3t"
       ]
     },
     "en_situation": {
@@ -1316,7 +1109,7 @@
       "name": "En situation (UGC)",
       "disabled": true,
       "blocks": {
-        "text_HqR0eS": {
+        "text_KPL76d": {
           "type": "text",
           "settings": {
             "text": "<h2>Dans vos salles de bain</h2>",
@@ -1324,15 +1117,15 @@
           },
           "name": "Titre"
         },
-        "stories_RuZ6aC": {
+        "stories_XZAKS6": {
           "type": "stories",
           "settings": {},
           "name": "Stories UGC"
         }
       },
       "block_order": [
-        "text_HqR0eS",
-        "stories_RuZ6aC"
+        "text_KPL76d",
+        "stories_XZAKS6"
       ]
     },
     "avis": {
@@ -1474,141 +1267,103 @@
                 "accordion_padding": "medium"
               },
               "blocks": {
-                "accordion_MVF155": {
+                "accordion_zCeaRy": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Le coffret contient-il tout pour commencer ?"
+                    "heading": "Quelle est la différence entre le filtre Home et la capsule Nomade ?"
                   },
                   "blocks": {
-                    "text_3RXVd6": {
+                    "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Oui ! Flexible, pommeau, filtres et capsules : tu raccordes et c'est prêt.</p>",
+                        "text": "<p>Le filtre Home est le format maison : plus grand, 2-en-1 (sédiments + soin), il dure 3 à 4 semaines et s'insère dans la coque de diffusion Home. La capsule Nomade est le format compact du système Nomade. Les deux formats ne sont pas interchangeables.</p>",
                         "text_style": "paragraph"
                       }
                     }
                   },
                   "block_order": [
-                    "text_3RXVd6"
+                    "text_faq"
                   ]
                 },
-                "accordion_woOmNq": {
+                "accordion_ML8QjE": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Combien de temps durent filtres et capsules ?"
+                    "heading": "Avec quel système ce filtre est-il compatible ?"
                   },
                   "blocks": {
-                    "text_sXZoMZ": {
+                    "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Filtres : environ 2 à 3 mois chacun, soit 6 à 9 mois pour les 3. Capsules : selon ta fréquence de douche, tu vois le niveau baisser et tu la remplaces quand elle est vide.</p>",
+                        "text": "<p>Il s'insère dans la Coque de Diffusion (Home), à associer au Pommeau de Douche Filtrant Onsha. Tu retrouves l'ensemble dans le Coffret Douche Thermal Coréen (Home).</p>",
                         "text_style": "paragraph"
                       }
                     }
                   },
                   "block_order": [
-                    "text_sXZoMZ"
+                    "text_faq"
                   ]
                 },
-                "accordion_1iOg5O": {
+                "accordion_XAJgfP": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Est-ce compatible avec ma douche ?"
+                    "heading": "Combien de temps dure un filtre ?"
                   },
                   "blocks": {
-                    "text_RWUXQR": {
+                    "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Le système se raccorde sur les installations de douche standard, à la main, sans outil ni plombier.</p>",
+                        "text": "<p>Environ 3 à 4 semaines, selon ta fréquence de douche.</p>",
                         "text_style": "paragraph"
                       }
                     }
                   },
                   "block_order": [
-                    "text_RWUXQR"
+                    "text_faq"
                   ]
                 },
-                "accordion_LxUif6": {
+                "accordion_En5jOa": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Puis-je changer de senteur selon mon humeur ?"
+                    "heading": "Puis-je changer de senteur à chaque filtre ?"
                   },
                   "blocks": {
-                    "text_PctYCc": {
+                    "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Oui, c'est tout l'intérêt : avec 6 capsules tu as trois senteurs. Tu peux aussi commander des packs de capsules pour découvrir d'autres collections SHIFT.</p>",
+                        "text": "<p>Bien sûr ! Le pack de 4 permet d'explorer les quatre senteurs.</p>",
                         "text_style": "paragraph"
                       }
                     }
                   },
                   "block_order": [
-                    "text_PctYCc"
+                    "text_faq"
                   ]
                 },
-                "accordion_iYI4xH": {
+                "accordion_BaaRQh": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Les senteurs conviennent-elles aux peaux sensibles ?"
+                    "heading": "Le filtre convient-il aux peaux sensibles ?"
                   },
                   "blocks": {
-                    "text_suVAlm": {
+                    "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Les capsules s'utilisent diffusées dans l'eau de la douche et contiennent des huiles essentielles. En cas de sensibilité connue, consulte la liste INCI avant utilisation.</p>",
+                        "text": "<p>Il s'utilise en usage externe, diffusé dans l'eau de la douche. Si tu as une sensibilité connue aux parfums, consulte la liste INCI sur l'emballage avant utilisation.</p>",
                         "text_style": "paragraph"
                       }
                     }
                   },
                   "block_order": [
-                    "text_suVAlm"
-                  ]
-                },
-                "accordion_608E9Z": {
-                  "type": "_accordion",
-                  "settings": {
-                    "heading": "Quels sont les délais de livraison ?"
-                  },
-                  "blocks": {
-                    "text_G6r1kq": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p>",
-                        "text_style": "paragraph"
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "text_G6r1kq"
-                  ]
-                },
-                "accordion_D9ejW9": {
-                  "type": "_accordion",
-                  "settings": {
-                    "heading": "Puis-je retourner le produit ?"
-                  },
-                  "blocks": {
-                    "text_sV3vZh": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Oui, sous 14 jours, à condition que le produit soit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
-                        "text_style": "paragraph"
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "text_sV3vZh"
+                    "text_faq"
                   ]
                 }
               },
               "block_order": [
-                "accordion_MVF155",
-                "accordion_woOmNq",
-                "accordion_1iOg5O",
-                "accordion_LxUif6",
-                "accordion_iYI4xH",
-                "accordion_608E9Z",
-                "accordion_D9ejW9"
+                "accordion_zCeaRy",
+                "accordion_ML8QjE",
+                "accordion_XAJgfP",
+                "accordion_En5jOa",
+                "accordion_BaaRQh"
               ]
             }
           },
@@ -1695,11 +1450,10 @@
   },
   "order": [
     "main",
-    "dans_ton_coffret",
     "videos_pratiques",
     "ingr_dients_cl_s",
+    "nos_diff_rentes_senteurs",
     "comment_ca_marche",
-    "pourquoi",
     "avant_apres",
     "en_situation",
     "avis",

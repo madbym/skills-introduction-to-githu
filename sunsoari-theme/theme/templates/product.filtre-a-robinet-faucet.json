@@ -23,7 +23,7 @@
                 "badge_VEGRNK": {
                   "type": "_badge",
                   "settings": {
-                    "text": "LE RITUEL COMPLET SHIFT",
+                    "text": "LA FILTRATION À LA SOURCE",
                     "badge_style": "secondary"
                   }
                 }
@@ -49,7 +49,7 @@
           "type": "text",
           "name": "Texte",
           "settings": {
-            "text": "<p>Pommeau filtrant, capsule Tea Tree & Lavender et filtre Pure Water : le rituel SHIFT complet, prêt à installer.</p>",
+            "text": "<p>Le filtre qui retient les sédiments et impuretés visibles de l'eau, directement au robinet de ton lavabo. Sans outil, sans plombier.</p>",
             "text_style": "paragraph",
             "paragraph_font_size": "large"
           }
@@ -82,44 +82,44 @@
           },
           "name": "Points forts",
           "blocks": {
-            "icon_with_text_mCDKL6": {
+            "icon_with_text_APSiAK": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Pommeau + capsule + filtre</p>",
+                "text": "<p>Installation sans outil</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_eKUUd3": {
+            "icon_with_text_UkxkQ8": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Soin et filtration combinés</p>",
+                "text": "<p>Adaptateurs fournis</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_TpTPES": {
+            "icon_with_text_1Etjqg": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Installation sans plombier</p>",
+                "text": "<p>Recharge facile</p>",
                 "font_weight": 500
               }
             }
           },
           "block_order": [
-            "icon_with_text_mCDKL6",
-            "icon_with_text_eKUUd3",
-            "icon_with_text_TpTPES"
+            "icon_with_text_APSiAK",
+            "icon_with_text_UkxkQ8",
+            "icon_with_text_1Etjqg"
           ]
         },
         "separator_AKgbEA": {
@@ -199,10 +199,52 @@
               "disabled": true,
               "static": true,
               "settings": {}
+            },
+            "quantity_breaks": {
+              "type": "_quantity-breaks",
+              "name": "Réduction par quantité",
+              "settings": {
+                "label": "Choisis ton offre :"
+              },
+              "blocks": {
+                "quantity_breaks_item_g4phjF": {
+                  "type": "_quantity-breaks-item",
+                  "settings": {
+                    "discount_type": "none",
+                    "discount_percentage": 0,
+                    "badge_position": "top",
+                    "badge_display": "overlap",
+                    "product_small_title": "filtre",
+                    "product_small_title_plural": "filtres",
+                    "badge_next_to_title": "Filtre seul",
+                    "show_image": false
+                  },
+                  "name": "Filtre seul"
+                },
+                "quantity_breaks_item_rIIhuD": {
+                  "type": "_quantity-breaks-item",
+                  "settings": {
+                    "discount_percentage": 10,
+                    "badge": "6 à 9 mois d'avance",
+                    "badge_position": "top",
+                    "badge_display": "overlap",
+                    "product_small_title": "filtre",
+                    "product_small_title_plural": "filtres",
+                    "badge_next_to_title": "Filtre + Pack 3 sédiments",
+                    "show_image": false
+                  },
+                  "name": "Filtre + Pack 3 sédiments"
+                }
+              },
+              "block_order": [
+                "quantity_breaks_item_g4phjF",
+                "quantity_breaks_item_rIIhuD"
+              ]
             }
           },
           "block_order": [
-            "product_variant_picker_xWC3wF"
+            "product_variant_picker_xWC3wF",
+            "quantity_breaks"
           ]
         },
         "cross_sell_QcpW8C": {
@@ -211,10 +253,10 @@
           "settings": {
             "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
             "products": [
-              "pack-6-capsules-vitaminees-shift-sunsoari"
+              "douchette-filtrante"
             ],
-            "title": "Tes prochaines capsules",
-            "description": "<p>5 collections de senteurs.</p>",
+            "title": "Étends ta filtration à la douche",
+            "description": "<p>Le même geste, sous la douche.</p>",
             "image_width": 90,
             "button_content_type": "icon"
           }
@@ -238,7 +280,64 @@
             "accordion_padding": "medium"
           },
           "blocks": {
-            "accordion_4EMjh6": {
+            "accordion_pkKIcG": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Description"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Le Filtre Robinet Lavabo, conçu en Corée, retient en continu les sédiments et impuretés visibles de l'eau de ton lavabo, pour te laver le visage, les mains et les dents avec une eau plus claire.</p><p>Pas de plombier, pas de travaux : il se fixe en quelques secondes sur la majorité des robinets standard, grâce aux adaptateurs fournis. La coque se garde longtemps, seul le sédiment se remplace tous les 2 à 3 mois.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_qx8msz": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Compatibilité"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Compatible avec la majorité des robinets standard. Les adaptateurs fournis s'ajustent à la plupart des diamètres. Installation sans outil.</p><p>Conseil : essaie d'abord le plus petit adaptateur, puis monte en taille si besoin.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_Jni6pU": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Entretien & précautions"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>La coque se garde longtemps, ne la remplace que si elle se détériore. Seul le sédiment se remplace tous les 2 à 3 mois. Nettoyage extérieur doux à l'eau.</p><p>Usage domestique. Ce filtre n'est pas un système de potabilisation : l'eau filtrée est destinée au lavage et au rinçage.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_3IGp4g": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
@@ -259,7 +358,10 @@
             }
           },
           "block_order": [
-            "accordion_4EMjh6"
+            "accordion_pkKIcG",
+            "accordion_qx8msz",
+            "accordion_Jni6pU",
+            "accordion_3IGp4g"
           ]
         },
         "group_kLziPN": {
@@ -285,7 +387,7 @@
                 "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
               },
               "blocks": {
-                "icon_with_text_FMyeSp": {
+                "icon_with_text_ag8dFY": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -297,7 +399,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_Z4oazK": {
+                "icon_with_text_YSKnSV": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -309,7 +411,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_YV0oOV": {
+                "icon_with_text_ofWkj1": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -323,9 +425,9 @@
                 }
               },
               "block_order": [
-                "icon_with_text_FMyeSp",
-                "icon_with_text_Z4oazK",
-                "icon_with_text_YV0oOV"
+                "icon_with_text_ag8dFY",
+                "icon_with_text_YSKnSV",
+                "icon_with_text_ofWkj1"
               ]
             }
           },
@@ -357,193 +459,6 @@
         "anchor_id": "buy"
       }
     },
-    "dans_ton_coffret": {
-      "type": "custom-section",
-      "settings": {
-        "color_scheme": "",
-        "color_scheme_card": "",
-        "layout_gap_desktop": 10,
-        "layout_flex_direction_mobile": "row",
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
-      "name": "Dans ton coffret",
-      "blocks": {
-        "text_WUWYf6": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Dans ton coffret</h2>",
-            "text_style": "h3"
-          },
-          "name": "Titre"
-        },
-        "group_QRi26B": {
-          "type": "group",
-          "settings": {
-            "color_scheme": "",
-            "layout_type": "grid",
-            "layout_direction_desktop": "row",
-            "layout_grid_columns_desktop": 4,
-            "layout_gap_desktop": 16,
-            "layout_wrap_desktop": "wrap",
-            "layout_align_items_desktop": "center",
-            "same_as_desktop": false,
-            "layout_direction_mobile": "row",
-            "layout_grid_columns_mobile": 2,
-            "layout_wrap_mobile": "wrap",
-            "use_global_container_padding": false,
-            "padding_horizontal": 0,
-            "padding_vertical": 0,
-            "padding_horizontal_mobile": 0,
-            "padding_vertical_mobile": 0
-          },
-          "name": "Éléments",
-          "blocks": {
-            "group_2gfxrt": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Pommeau de Douche Filtrant SHIFT",
-              "blocks": {
-                "image_mZacDd": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/pommeau-de-douche-filtrant-a-vitamine-c-8567410.png"
-                  }
-                },
-                "text_XRc7JO": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Pommeau de Douche Filtrant SHIFT</strong> ×1</p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_DbEW9g": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Jet fin, réutilisable</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_mZacDd",
-                "text_XRc7JO",
-                "text_DbEW9g"
-              ]
-            },
-            "group_KvXmaf": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Capsule Tea Tree & Lavender",
-              "blocks": {
-                "image_ZHkNGu": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Tea-tree_lavande.png"
-                  }
-                },
-                "text_64ae2b": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Capsule Tea Tree & Lavender</strong> ×1</p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_NNMYZI": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Soin et senteur</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_ZHkNGu",
-                "text_64ae2b",
-                "text_NNMYZI"
-              ]
-            },
-            "group_MnHyDA": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Filtre Pure Water",
-              "blocks": {
-                "image_sDzQaJ": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/pack-3-sediments-pure-water-2921452.jpg"
-                  }
-                },
-                "text_Z1DnhT": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Filtre Pure Water</strong> ×1</p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_NfIHwR": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Retient les sédiments</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_sDzQaJ",
-                "text_Z1DnhT",
-                "text_NfIHwR"
-              ]
-            }
-          },
-          "block_order": [
-            "group_2gfxrt",
-            "group_KvXmaf",
-            "group_MnHyDA"
-          ]
-        }
-      },
-      "block_order": [
-        "text_WUWYf6",
-        "group_QRi26B"
-      ]
-    },
     "videos_pratiques": {
       "type": "custom-section",
       "settings": {
@@ -555,17 +470,16 @@
         "padding_bottom": 60
       },
       "name": "Vidéos pratiques",
-      "disabled": true,
       "blocks": {
-        "text_dPQIp8": {
+        "text_fYpjUG": {
           "type": "text",
           "settings": {
-            "text": "<h2>En vidéo</h2>",
+            "text": "<h2>Les gestes en vidéo</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "tabs_X9OfPn": {
+        "tabs_inm7oR": {
           "type": "tabs",
           "settings": {
             "display_type": "tabs",
@@ -573,86 +487,63 @@
           },
           "name": "Vidéos",
           "blocks": {
-            "tab_voI4w6": {
+            "tab_cnNXSl": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Découvre ton coffret"
+                "tab_name": "Installez votre produit"
               },
-              "name": "Découvre ton coffret",
+              "name": "Installez votre produit",
               "blocks": {
-                "video_sCqTiq": {
+                "video_hsK4hf": {
                   "type": "video",
                   "settings": {
                     "source": "shopify",
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Découvre ton coffret"
+                    "alt": "Installez votre produit"
                   }
                 }
               },
               "block_order": [
-                "video_sCqTiq"
+                "video_hsK4hf"
               ]
             },
-            "tab_p4vYfI": {
+            "tab_DL6lau": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Installe ton produit"
+                "tab_name": "Remplacez votre recharge"
               },
-              "name": "Installe ton produit",
+              "name": "Remplacez votre recharge",
               "blocks": {
-                "video_ygkCk8": {
+                "video_XYGT0d": {
                   "type": "video",
                   "settings": {
                     "source": "shopify",
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Installe ton produit"
+                    "alt": "Remplacez votre recharge"
                   }
                 }
               },
               "block_order": [
-                "video_ygkCk8"
-              ]
-            },
-            "tab_BOvxeI": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Remplace ta recharge"
-              },
-              "name": "Remplace ta recharge",
-              "blocks": {
-                "video_1WWWur": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Remplace ta recharge"
-                  }
-                }
-              },
-              "block_order": [
-                "video_1WWWur"
+                "video_XYGT0d"
               ]
             }
           },
           "block_order": [
-            "tab_voI4w6",
-            "tab_p4vYfI",
-            "tab_BOvxeI"
+            "tab_cnNXSl",
+            "tab_DL6lau"
           ]
         }
       },
       "block_order": [
-        "text_dPQIp8",
-        "tabs_X9OfPn"
+        "text_fYpjUG",
+        "tabs_inm7oR"
       ]
     },
-    "ingr_dients_cl_s": {
+    "la_base_du_rituel_skinca": {
       "type": "custom-section",
       "settings": {
         "color_scheme": "",
@@ -662,143 +553,145 @@
         "padding_top": 60,
         "padding_bottom": 60
       },
-      "name": "Ingrédients clés",
+      "name": "La base du rituel skincare",
       "blocks": {
-        "text_xYVqxx": {
+        "text_csvfrl": {
           "type": "text",
           "settings": {
-            "text": "<h2>Ingrédients clés</h2>",
+            "text": "<h2>La base du rituel skincare</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "text_6YksWy": {
+        "text_ZphnRO": {
           "type": "text",
           "settings": {
-            "text": "<p>La liste complète des ingrédients (INCI) figure sur l'emballage.</p>",
+            "text": "<p>Tout rituel beauté commence par l'eau qui sert à te laver et te rincer. Filtrer l'eau de ton lavabo, c'est prendre soin de cette première étape.</p>",
             "text_style": "paragraph"
           }
         },
-        "slider_4oWy2x": {
+        "slider_rv9jxk": {
           "type": "slider",
           "settings": {
             "per_page_desktop": 4,
             "per_page_mobile": "1.8"
           },
-          "name": "Ingrédients clés",
+          "name": "La base du rituel skincare",
           "blocks": {
-            "slide_QQLtQq": {
+            "slide_R1YvQM": {
               "type": "_slide",
               "settings": {},
-              "name": "Tea tree & lavande",
+              "name": "Une eau plus claire",
               "blocks": {
-                "image_TqBTh8": {
+                "image_EcFHXv": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Tea-tree_lavande.png"
+                    "image": "shopify://shop_images/filtre-a-robinet-faucet-4552924.jpg"
                   }
                 },
-                "text_S8VsWz": {
+                "text_m3Od2x": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Tea tree & lavande</strong></p>",
+                    "text": "<p><strong>Une eau plus claire</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_S3nPqN": {
+                "text_LkZ9FR": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Huiles essentielles de la capsule, pour la senteur.</p>",
+                    "text": "<p>Sédiments visibles retenus.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_TqBTh8",
-                "text_S8VsWz",
-                "text_S3nPqN"
+                "image_EcFHXv",
+                "text_m3Od2x",
+                "text_LkZ9FR"
               ]
             },
-            "slide_dyqPfK": {
+            "slide_tFMb8h": {
               "type": "_slide",
               "settings": {},
-              "name": "Glycérine",
+              "name": "Un geste simple",
               "blocks": {
-                "image_PeMeSz": {
+                "image_S7t5dV": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/filtre-a-robinet-faucet-9303094.jpg"
                   }
                 },
-                "text_aexejJ": {
+                "text_kBy0OY": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Glycérine</strong></p>",
+                    "text": "<p><strong>Un geste simple</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_4r6XCl": {
+                "text_LIP8Oh": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Actif hydratant bien connu en cosmétique.</p>",
+                    "text": "<p>Installé en quelques secondes.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_PeMeSz",
-                "text_aexejJ",
-                "text_4r6XCl"
+                "image_S7t5dV",
+                "text_kBy0OY",
+                "text_LIP8Oh"
               ]
             },
-            "slide_r27i79": {
+            "slide_tDjvIn": {
               "type": "_slide",
               "settings": {},
-              "name": "Acide hyaluronique",
+              "name": "Une recharge facile",
               "blocks": {
-                "image_SSlCU4": {
+                "image_W12opm": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/filtre-a-robinet-faucet-3469708.jpg"
                   }
                 },
-                "text_1nby1Y": {
+                "text_K67R4T": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Acide hyaluronique</strong></p>",
+                    "text": "<p><strong>Une recharge facile</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_QvrNa2": {
+                "text_ORX8v0": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Actif hydratant de la capsule.</p>",
+                    "text": "<p>Un sédiment tous les 2 à 3 mois.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_SSlCU4",
-                "text_1nby1Y",
-                "text_QvrNa2"
+                "image_W12opm",
+                "text_K67R4T",
+                "text_ORX8v0"
               ]
             }
           },
           "block_order": [
-            "slide_QQLtQq",
-            "slide_dyqPfK",
-            "slide_r27i79"
+            "slide_R1YvQM",
+            "slide_tFMb8h",
+            "slide_tDjvIn"
           ]
         }
       },
       "block_order": [
-        "text_xYVqxx",
-        "text_6YksWy",
-        "slider_4oWy2x"
+        "text_csvfrl",
+        "text_ZphnRO",
+        "slider_rv9jxk"
       ]
     },
     "comment_ca_marche": {
@@ -813,7 +706,7 @@
       },
       "name": "Comment ça marche",
       "blocks": {
-        "text_Cn2csC": {
+        "text_yY9Erh": {
           "type": "text",
           "settings": {
             "text": "<h2>Comment ça marche ?</h2>",
@@ -821,7 +714,7 @@
           },
           "name": "Titre"
         },
-        "group_Lm8ezb": {
+        "group_1AOkX5": {
           "type": "group",
           "settings": {
             "color_scheme": "",
@@ -837,15 +730,15 @@
             "padding_vertical_mobile": 0
           },
           "blocks": {
-            "image_xjyZ48": {
+            "image_yX9x9S": {
               "type": "image",
               "settings": {
                 "image_width_desktop": 80,
                 "image_width_mobile": 80,
-                "image": "shopify://shop_images/HOSE-STEP_01_IMAGE.jpg"
+                "image": "shopify://shop_images/filtre-a-robinet-faucet-1719253.jpg"
               }
             },
-            "group_Q5PlSo": {
+            "group_mNu7Cz": {
               "type": "group",
               "settings": {
                 "color_scheme": "",
@@ -859,317 +752,142 @@
                 "padding_vertical_mobile": 0
               },
               "blocks": {
-                "timeline_RVcIPo": {
+                "timeline_F0dYIw": {
                   "type": "timeline",
                   "settings": {},
                   "name": "Étapes",
                   "blocks": {
-                    "timeline_step_qD78DY": {
+                    "timeline_step_Eia875": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 1",
                       "blocks": {
-                        "text_adgQy1": {
+                        "text_59ztFu": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 1</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_FhhDJT": {
+                        "text_219kzH": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Visse le pommeau SHIFT sur ton flexible.</p>",
+                            "text": "<p><strong>Choisis</strong> l'adaptateur qui correspond à ton robinet.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_adgQy1",
-                        "text_FhhDJT"
+                        "text_59ztFu",
+                        "text_219kzH"
                       ]
                     },
-                    "timeline_step_ugnrQY": {
+                    "timeline_step_GczlVL": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 2",
                       "blocks": {
-                        "text_7l6oBC": {
+                        "text_pDKZQq": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 2</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_CEp7vJ": {
+                        "text_3WGQyi": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Insère le filtre Pure Water.</p>",
+                            "text": "<p><strong>Visse</strong> la coque du filtre sur le robinet, en quelques secondes, sans outil.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_7l6oBC",
-                        "text_CEp7vJ"
+                        "text_pDKZQq",
+                        "text_3WGQyi"
                       ]
                     },
-                    "timeline_step_qlGaOP": {
+                    "timeline_step_XIbAJA": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 3",
                       "blocks": {
-                        "text_nKN397": {
+                        "text_eGNvCr": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 3</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_HdpHkG": {
+                        "text_ORy8HZ": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Glisse la capsule dans son compartiment et ouvre l'eau.</p>",
+                            "text": "<p><strong>Insère</strong> le sédiment.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_nKN397",
-                        "text_HdpHkG"
+                        "text_eGNvCr",
+                        "text_ORy8HZ"
+                      ]
+                    },
+                    "timeline_step_yF9TxS": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 4",
+                      "blocks": {
+                        "text_xSbd41": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 4</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_tWG5jU": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Ouvre l'eau</strong>, c'est prêt !</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_xSbd41",
+                        "text_tWG5jU"
                       ]
                     }
                   },
                   "block_order": [
-                    "timeline_step_qD78DY",
-                    "timeline_step_ugnrQY",
-                    "timeline_step_qlGaOP"
+                    "timeline_step_Eia875",
+                    "timeline_step_GczlVL",
+                    "timeline_step_XIbAJA",
+                    "timeline_step_yF9TxS"
                   ]
+                },
+                "text_dktVHk": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Le conseil Sunsoari</strong></p><p>Commence avec le plus petit adaptateur, puis passe au suivant si nécessaire. Garde les adaptateurs inutilisés pour un autre robinet. Remplace le sédiment dès que l'eau devient moins claire ou que le débit baisse.</p>",
+                    "text_style": "paragraph"
+                  }
                 }
               },
               "block_order": [
-                "timeline_RVcIPo"
+                "timeline_F0dYIw",
+                "text_dktVHk"
               ]
             }
           },
           "block_order": [
-            "image_xjyZ48",
-            "group_Q5PlSo"
+            "image_yX9x9S",
+            "group_mNu7Cz"
           ]
         }
       },
       "block_order": [
-        "text_Cn2csC",
-        "group_Lm8ezb"
-      ]
-    },
-    "pourquoi": {
-      "type": "custom-section",
-      "settings": {
-        "color_scheme": "",
-        "color_scheme_card": "",
-        "layout_gap_desktop": 10,
-        "layout_flex_direction_mobile": "row",
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
-      "name": "Pourquoi ce coffret ?",
-      "blocks": {
-        "text_dB60g9": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Pourquoi ce coffret ?</h2>",
-            "text_style": "h3"
-          },
-          "name": "Titre"
-        },
-        "group_9l3iAe": {
-          "type": "group",
-          "settings": {
-            "color_scheme": "",
-            "layout_type": "grid",
-            "layout_direction_desktop": "row",
-            "layout_grid_columns_desktop": 4,
-            "layout_gap_desktop": 16,
-            "layout_wrap_desktop": "wrap",
-            "layout_align_items_desktop": "center",
-            "same_as_desktop": false,
-            "layout_direction_mobile": "row",
-            "layout_grid_columns_mobile": 2,
-            "layout_wrap_mobile": "wrap",
-            "use_global_container_padding": false,
-            "padding_horizontal": 0,
-            "padding_vertical": 0,
-            "padding_horizontal_mobile": 0,
-            "padding_vertical_mobile": 0
-          },
-          "blocks": {
-            "group_EJJTyi": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Dès le premier jour",
-              "blocks": {
-                "text_oeExG2": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Dès le premier jour</strong></p><p>Tout est dans la boîte, sans travaux.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_oeExG2"
-              ]
-            },
-            "group_Aj6iHi": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Le pommeau",
-              "blocks": {
-                "text_5nm1Em": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Le pommeau</strong></p><p>Installé une fois, là pour durer.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_5nm1Em"
-              ]
-            },
-            "group_oBkfL0": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "La capsule",
-              "blocks": {
-                "text_WucAlv": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>La capsule</strong></p><p>À changer selon tes envies.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_WucAlv"
-              ]
-            },
-            "group_Qo3j9V": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Le filtre",
-              "blocks": {
-                "text_Xkp01a": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Le filtre</strong></p><p>Retient les sédiments avant l'étape de soin.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_Xkp01a"
-              ]
-            }
-          },
-          "block_order": [
-            "group_EJJTyi",
-            "group_Aj6iHi",
-            "group_oBkfL0",
-            "group_Qo3j9V"
-          ]
-        }
-      },
-      "block_order": [
-        "text_dB60g9",
-        "group_9l3iAe"
-      ]
-    },
-    "avant_apres": {
-      "type": "custom-section",
-      "settings": {
-        "color_scheme": "",
-        "color_scheme_card": "",
-        "layout_gap_desktop": 10,
-        "layout_flex_direction_mobile": "row",
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
-      "name": "Avant / Après",
-      "disabled": true,
-      "blocks": {
-        "text_PTGLhC": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>L'efficacité en image</h2>",
-            "text_style": "h3"
-          },
-          "name": "Titre"
-        },
-        "before_after_Zx5H9J": {
-          "type": "before-after",
-          "settings": {
-            "image_ratio": "portrait",
-            "label_before": "Avant",
-            "label_after": "Après",
-            "label_badge_style": "primary"
-          }
-        },
-        "text_Kyl3S9": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Photo réelle, non retouchée.</p>",
-            "text_style": "paragraph",
-            "alignment": "center",
-            "alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "text_PTGLhC",
-        "before_after_Zx5H9J",
-        "text_Kyl3S9"
+        "text_yY9Erh",
+        "group_1AOkX5"
       ]
     },
     "en_situation": {
@@ -1185,7 +903,7 @@
       "name": "En situation (UGC)",
       "disabled": true,
       "blocks": {
-        "text_HqR0eS": {
+        "text_EQJ2QA": {
           "type": "text",
           "settings": {
             "text": "<h2>Dans vos salles de bain</h2>",
@@ -1193,15 +911,15 @@
           },
           "name": "Titre"
         },
-        "stories_RuZ6aC": {
+        "stories_6zHZs2": {
           "type": "stories",
           "settings": {},
           "name": "Stories UGC"
         }
       },
       "block_order": [
-        "text_HqR0eS",
-        "stories_RuZ6aC"
+        "text_EQJ2QA",
+        "stories_6zHZs2"
       ]
     },
     "avis": {
@@ -1343,16 +1061,16 @@
                 "accordion_padding": "medium"
               },
               "blocks": {
-                "accordion_EvRWT9": {
+                "accordion_OhqCXa": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Le coffret contient-il tout pour commencer ?"
+                    "heading": "Est-ce compatible avec mon robinet ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Oui ! Pommeau, capsule de soin et filtre : tu installes et ton rituel commence. Aucun autre achat nécessaire.</p>",
+                        "text": "<p>Il s'adapte à la majorité des robinets standard, grâce aux adaptateurs fournis. Essaie le plus petit d'abord, puis monte en taille si nécessaire.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1361,16 +1079,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_P4lD9u": {
+                "accordion_cI0SKt": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Combien de temps durent la capsule et le filtre ?"
+                    "heading": "Combien de temps dure un sédiment ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>La capsule dure selon ta fréquence de douche, tu la remplaces par une autre senteur SHIFT quand elle est vide. Le filtre Pure Water se change environ tous les 2 à 3 mois.</p>",
+                        "text": "<p>Environ 2 à 3 mois selon la qualité de l'eau et ton utilisation. Quand l'eau devient moins claire ou que le débit ralentit, remplace-le.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1379,16 +1097,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_YoBf9n": {
+                "accordion_wM8xqp": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Est-ce compatible avec ma douche ?"
+                    "heading": "Est-ce un filtre pour l'eau de boisson ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Le système s'installe sur tous les flexibles de douche standard, à la main, sans outil, en deux minutes.</p>",
+                        "text": "<p>Non. C'est une filtration mécanique des sédiments et impuretés visibles, pour le lavage et le rinçage. Ce n'est ni un dispositif médical ni un système de potabilisation.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1397,16 +1115,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_IAz9i5": {
+                "accordion_4e4JgW": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Les senteurs conviennent-elles aux peaux sensibles ?"
+                    "heading": "Puis-je laisser le filtre en permanence ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>La capsule s'utilise diffusée dans l'eau de la douche. Elle contient des huiles essentielles : en cas de sensibilité connue aux parfums, consulte la liste INCI avant utilisation.</p>",
+                        "text": "<p>Oui ! La coque se démonte facilement si tu as besoin d'accéder au robinet.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -1417,10 +1135,10 @@
                 }
               },
               "block_order": [
-                "accordion_EvRWT9",
-                "accordion_P4lD9u",
-                "accordion_YoBf9n",
-                "accordion_IAz9i5"
+                "accordion_OhqCXa",
+                "accordion_cI0SKt",
+                "accordion_wM8xqp",
+                "accordion_4e4JgW"
               ]
             }
           },
@@ -1507,12 +1225,9 @@
   },
   "order": [
     "main",
-    "dans_ton_coffret",
     "videos_pratiques",
-    "ingr_dients_cl_s",
+    "la_base_du_rituel_skinca",
     "comment_ca_marche",
-    "pourquoi",
-    "avant_apres",
     "en_situation",
     "avis",
     "decouvre_aussi",

@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "rituel": {
+      "type": "sunsoari-rituel-builder",
+      "blocks": {
+        "cat_systemes": {
+          "type": "category",
+          "settings": {
+            "label": "1 · Mon système",
+            "collection": "douchette",
+            "note": "Home : pommeau + coque + filtres. Nomade : douchette + capsules. Les recharges Home et Nomade ne sont pas interchangeables."
+          }
+        },
+        "cat_recharges": {
+          "type": "category",
+          "settings": {
+            "label": "2 · Mes recharges",
+            "collection": "recharge-filtre",
+            "note": "Choisis les recharges de ton système : filtres thermaux pour Home, capsules pour Nomade, Pure Water et capsules pour SHIFT."
+          }
+        },
+        "cat_capsules": {
+          "type": "category",
+          "settings": {
+            "label": "3 · Mes senteurs",
+            "collection": "capsule-vitamine",
+            "note": ""
+          }
+        },
+        "cat_accessoires": {
+          "type": "category",
+          "settings": {
+            "label": "4 · Mes accessoires",
+            "collection": "accessoires",
+            "note": ""
+          }
+        }
+      },
+      "block_order": [
+        "cat_systemes",
+        "cat_recharges",
+        "cat_capsules",
+        "cat_accessoires"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "rituel"
+  ]
+}

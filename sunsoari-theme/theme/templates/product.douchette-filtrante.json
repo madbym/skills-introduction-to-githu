@@ -400,12 +400,11 @@
         "padding_bottom": 60
       },
       "name": "Vidéos pratiques",
-      "disabled": true,
       "blocks": {
         "text_uvSwMF": {
           "type": "text",
           "settings": {
-            "text": "<h2>En vidéo</h2>",
+            "text": "<h2>Les gestes en vidéo</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
@@ -421,9 +420,9 @@
             "tab_CsMehG": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Installe ton produit"
+                "tab_name": "Installez votre produit"
               },
-              "name": "Installe ton produit",
+              "name": "Installez votre produit",
               "blocks": {
                 "video_IBXuDL": {
                   "type": "video",
@@ -432,7 +431,7 @@
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Installe ton produit"
+                    "alt": "Installez votre produit"
                   }
                 }
               },
@@ -443,9 +442,9 @@
             "tab_FAc9Qe": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Remplace ta recharge"
+                "tab_name": "Remplacez votre recharge"
               },
-              "name": "Remplace ta recharge",
+              "name": "Remplacez votre recharge",
               "blocks": {
                 "video_lSXpfK": {
                   "type": "video",
@@ -454,7 +453,7 @@
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Remplace ta recharge"
+                    "alt": "Remplacez votre recharge"
                   }
                 }
               },

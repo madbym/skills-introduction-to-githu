@@ -16,7 +16,7 @@
               "type": "text",
               "settings": {
                 "show_on_display": "desktop_and_mobile",
-                "text": "<p>Livraison suivie partout en France métropolitaine</p>",
+                "text": "<p>Livraison offerte dès 80 € d'achat</p>",
                 "text_style": "paragraph",
                 "paragraph_font_size": "normal",
                 "font_weight": 400,
@@ -308,7 +308,7 @@
                     "additional_class": ""
                   },
                   "blocks": {
-                    "image_card_IAoCLr": {
+                    "image_card_ZlhQ3b": {
                       "type": "image-card",
                       "name": "t:image_card",
                       "settings": {
@@ -360,7 +360,7 @@
                         "text_gMxpcc"
                       ]
                     },
-                    "image_card_Z3aWZk": {
+                    "image_card_iawYYp": {
                       "type": "image-card",
                       "name": "t:image_card",
                       "settings": {
@@ -412,7 +412,7 @@
                         "text_gMxpcc"
                       ]
                     },
-                    "image_card_SBvrjn": {
+                    "image_card_Lublqd": {
                       "type": "image-card",
                       "name": "t:image_card",
                       "settings": {
@@ -466,9 +466,9 @@
                     }
                   },
                   "block_order": [
-                    "image_card_IAoCLr",
-                    "image_card_Z3aWZk",
-                    "image_card_SBvrjn"
+                    "image_card_ZlhQ3b",
+                    "image_card_iawYYp",
+                    "image_card_Lublqd"
                   ]
                 }
               },

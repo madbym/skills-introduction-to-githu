@@ -325,3 +325,74 @@ def build():
 if __name__ == "__main__":
     build()
     print("index, collections, header")
+
+
+# --------------------------------------------------------------------------
+# V2 additions: pack builder page, cart drawer, free shipping (80 €, real discount)
+# --------------------------------------------------------------------------
+
+def builder_page():
+    t = {
+        "sections": {
+            "rituel": {
+                "type": "sunsoari-rituel-builder",
+                "blocks": {
+                    "cat_systemes": {"type": "category", "settings": {
+                        "label": "1 · Mon système", "collection": "douchette",
+                        "note": "Home : pommeau + coque + filtres. Nomade : douchette + capsules. Les recharges Home et Nomade ne sont pas interchangeables."}},
+                    "cat_recharges": {"type": "category", "settings": {
+                        "label": "2 · Mes recharges", "collection": "recharge-filtre",
+                        "note": "Choisis les recharges de ton système : filtres thermaux pour Home, capsules pour Nomade, Pure Water et capsules pour SHIFT."}},
+                    "cat_capsules": {"type": "category", "settings": {
+                        "label": "3 · Mes senteurs", "collection": "capsule-vitamine", "note": ""}},
+                    "cat_accessoires": {"type": "category", "settings": {
+                        "label": "4 · Mes accessoires", "collection": "accessoires", "note": ""}},
+                },
+                "block_order": ["cat_systemes", "cat_recharges", "cat_capsules", "cat_accessoires"],
+                "settings": {},
+            }
+        },
+        "order": ["rituel"],
+    }
+    save("templates/page.composez-votre-rituel.json", t)
+
+
+def cart_drawer():
+    c = load("sections/cart-drawer-group.json")
+    d = c["sections"]["cart-drawer"]
+    xs = d["blocks"]["cart_footer_resume_blocks"]["blocks"]["cross_sells_DkGxFb"]["settings"]
+    xs.update(products=[
+        "filtre-vitamine-showerfilter-sunsoari",
+        "capsule-vitaminee-shower-filter-sunsoari",
+        "filtre-sediment-recharge",
+        "pack-6-capsules-vitaminees-shift-sunsoari",
+    ])
+    bar = d["blocks"]["cart_header_blocks"]["blocks"]["cart_progress_bar_dtN84U"]["settings"]
+    bar.update(step1_text="Plus que # pour la livraison offerte", step1_value=80,
+               step_completed_text="Ta livraison est offerte")
+    save("sections/cart-drawer-group.json", c)
+
+
+def shipping_texts():
+    """Free shipping from 80 € exists (automatic discount « Expédition gratuite fr /eu »)."""
+    import json as _json, os as _os
+    from lib import OUT as _OUT
+    hp = _os.path.join(_OUT, "sections/header-group.json")
+    h = _json.load(open(hp, encoding="utf-8"))
+    texts_ = find_all(h["sections"]["announcement_bar_r8QCCw"], by_type("text"))
+    set_text(texts_[0], "<p>Livraison offerte dès 80 € d'achat</p>")
+    save("sections/header-group.json", h)
+    fp = _os.path.join(_OUT, "sections/footer-group.json")
+    f = _json.load(open(fp, encoding="utf-8"))
+    g = [x for x in children(f["sections"]["custom_section_VHtWr9"]) if x["type"] == "group"][0]
+    tx = find_all(g, by_type("text"))
+    set_text(tx[0], "<p>Livraison offerte dès 80 €</p>")
+    set_text(tx[1], "<p>Livraison suivie en France métropolitaine. Délais et frais affichés au paiement.</p>")
+    save("sections/footer-group.json", f)
+
+
+def build_v2():
+    build()
+    builder_page()
+    cart_drawer()
+    shipping_texts()

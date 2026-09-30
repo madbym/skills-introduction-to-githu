@@ -23,7 +23,7 @@
                 "badge_VEGRNK": {
                   "type": "_badge",
                   "settings": {
-                    "text": "LES RECHARGES TECHNIQUES",
+                    "text": "LA RECHARGE ESSENTIELLE",
                     "badge_style": "secondary"
                   }
                 }
@@ -49,7 +49,7 @@
           "type": "text",
           "name": "Texte",
           "settings": {
-            "text": "<p>La recharge triple de ton pommeau SHIFT : 6 à 9 mois de filtration d'avance.</p>",
+            "text": "<p>La recharge essentielle de ta douchette Onsha : une filtration mécanique qui retient les sédiments et impuretés visibles de l'eau.</p>",
             "text_style": "paragraph",
             "paragraph_font_size": "large"
           }
@@ -82,7 +82,7 @@
           },
           "name": "Points forts",
           "blocks": {
-            "icon_with_text_C3f3e5": {
+            "icon_with_text_1CfHOF": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
@@ -93,18 +93,18 @@
                 "font_weight": 500
               }
             },
-            "icon_with_text_DkOnIv": {
+            "icon_with_text_YsNXx6": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Un filtre tous les 2 à 3 mois</p>",
+                "text": "<p>Se change toutes les 4 à 6 semaines</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_k3AwNB": {
+            "icon_with_text_TWsABP": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
@@ -117,9 +117,9 @@
             }
           },
           "block_order": [
-            "icon_with_text_C3f3e5",
-            "icon_with_text_DkOnIv",
-            "icon_with_text_k3AwNB"
+            "icon_with_text_1CfHOF",
+            "icon_with_text_YsNXx6",
+            "icon_with_text_TWsABP"
           ]
         },
         "separator_AKgbEA": {
@@ -207,20 +207,20 @@
                 "label": "Choisis ta quantité :"
               },
               "blocks": {
-                "quantity_breaks_item_ttkOnC": {
+                "quantity_breaks_item_MZqwpy": {
                   "type": "_quantity-breaks-item",
                   "settings": {
                     "discount_type": "none",
                     "discount_percentage": 0,
                     "badge_position": "top",
                     "badge_display": "overlap",
-                    "product_small_title": "pack",
-                    "product_small_title_plural": "pack",
+                    "product_small_title": "filtre",
+                    "product_small_title_plural": "filtre",
                     "show_image": false
                   },
-                  "name": "1 pack"
+                  "name": "1 filtre"
                 },
-                "quantity_breaks_item_fjmLuh": {
+                "quantity_breaks_item_2Li7Nm": {
                   "type": "_quantity-breaks-item",
                   "settings": {
                     "quantity": 2,
@@ -228,27 +228,43 @@
                     "badge": "-5 %",
                     "badge_position": "top",
                     "badge_display": "overlap",
-                    "product_small_title": "pack",
-                    "product_small_title_plural": "packs",
+                    "product_small_title": "filtre",
+                    "product_small_title_plural": "filtres",
                     "show_unit_price": true,
                     "show_image": false
                   },
-                  "name": "2 packs"
+                  "name": "2 filtres"
+                },
+                "quantity_breaks_item_2TLxeQ": {
+                  "type": "_quantity-breaks-item",
+                  "settings": {
+                    "quantity": 4,
+                    "discount_percentage": 10,
+                    "badge": "-10 %",
+                    "badge_position": "top",
+                    "badge_display": "overlap",
+                    "product_small_title": "filtre",
+                    "product_small_title_plural": "filtres",
+                    "show_unit_price": true,
+                    "show_image": false
+                  },
+                  "name": "4 filtres"
                 }
               },
               "block_order": [
-                "quantity_breaks_item_ttkOnC",
-                "quantity_breaks_item_fjmLuh"
+                "quantity_breaks_item_MZqwpy",
+                "quantity_breaks_item_2Li7Nm",
+                "quantity_breaks_item_2TLxeQ"
               ]
             },
             "toggle_cross_sell": {
               "type": "_toggle-cross-sell",
               "name": "t:toggle_cross_sell",
               "settings": {
-                "title": "Pas encore de pommeau SHIFT ?",
-                "description": "<p>Pommeau, capsule et filtre pour commencer.</p>",
+                "title": "Pas encore de douchette ?",
+                "description": "<p>Le système qui accueille ce filtre.</p>",
                 "product_list": [
-                  "pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie"
+                  "douchette-filtrante"
                 ]
               }
             }
@@ -278,7 +294,7 @@
             "accordion_padding": "medium"
           },
           "blocks": {
-            "accordion_GslAE1": {
+            "accordion_nv3efW": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
@@ -288,7 +304,7 @@
                 "text_acc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Le Pack 3 Filtres Pure Water est la recharge de ton pommeau SHIFT. Avec trois filtres, tu as 6 à 9 mois de filtration d'avance.</p><p>Chaque filtre dure environ 2 à 3 mois. Quand le débit baisse ou que le filtre change de couleur, glisse un nouveau filtre dans le pommeau.</p>",
+                    "text": "<p>Le Filtre Sédiment est la recharge de ta Douchette Filtrante Onsha : il retient les sédiments et impuretés de l'eau avant qu'elle ne soit diffusée par la douchette.</p><p>En travaillant, il change visiblement de couleur. Quand le débit baisse ou que le filtre est chargé, remplace-le : quelques secondes, sans outil.</p>",
                     "text_style": "paragraph"
                   }
                 }
@@ -297,7 +313,7 @@
                 "text_acc"
               ]
             },
-            "accordion_CXLFE8": {
+            "accordion_CyzHAF": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
@@ -307,7 +323,7 @@
                 "text_acc": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Filtration mécanique multi-couches, conçue pour retenir les sédiments et impuretés visibles. Usage externe uniquement.</p><p>Le filtre Pure Water est distinct de la capsule de soin parfumée : les deux travaillent ensemble.</p><p>Conçu en Corée pour le pommeau SHIFT.</p>",
+                    "text": "<p>Filtration mécanique multi-couches, conçue pour retenir les sédiments visibles présents dans l'eau. Usage externe uniquement, dans le système Onsha compatible. L'eau filtrée n'est pas destinée à la consommation.</p><p>Conçu en Corée pour la Douchette Filtrante Onsha.</p>",
                     "text_style": "paragraph"
                   }
                 }
@@ -316,7 +332,7 @@
                 "text_acc"
               ]
             },
-            "accordion_rEHmEL": {
+            "accordion_75PWYb": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
@@ -337,9 +353,9 @@
             }
           },
           "block_order": [
-            "accordion_GslAE1",
-            "accordion_CXLFE8",
-            "accordion_rEHmEL"
+            "accordion_nv3efW",
+            "accordion_CyzHAF",
+            "accordion_75PWYb"
           ]
         },
         "group_kLziPN": {
@@ -365,7 +381,7 @@
                 "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
               },
               "blocks": {
-                "icon_with_text_GjGkoe": {
+                "icon_with_text_gLKD7D": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -377,7 +393,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_wSy9ez": {
+                "icon_with_text_S1BAEl": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -389,7 +405,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_gwUBvw": {
+                "icon_with_text_4eCzFi": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -403,9 +419,9 @@
                 }
               },
               "block_order": [
-                "icon_with_text_GjGkoe",
-                "icon_with_text_wSy9ez",
-                "icon_with_text_gwUBvw"
+                "icon_with_text_gLKD7D",
+                "icon_with_text_S1BAEl",
+                "icon_with_text_4eCzFi"
               ]
             }
           },
@@ -447,17 +463,16 @@
         "padding_bottom": 60
       },
       "name": "Vidéos pratiques",
-      "disabled": true,
       "blocks": {
-        "text_PQVVa8": {
+        "text_f2WnKD": {
           "type": "text",
           "settings": {
-            "text": "<h2>En vidéo</h2>",
+            "text": "<h2>Les gestes en vidéo</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "tabs_zYuLKR": {
+        "tabs_E3dJSV": {
           "type": "tabs",
           "settings": {
             "display_type": "tabs",
@@ -465,37 +480,37 @@
           },
           "name": "Vidéos",
           "blocks": {
-            "tab_GOT6Rz": {
+            "tab_XDhfo2": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Remplace ta recharge"
+                "tab_name": "Remplacez votre recharge"
               },
-              "name": "Remplace ta recharge",
+              "name": "Remplacez votre recharge",
               "blocks": {
-                "video_D31KJa": {
+                "video_VmzIc7": {
                   "type": "video",
                   "settings": {
                     "source": "shopify",
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Remplace ta recharge"
+                    "alt": "Remplacez votre recharge"
                   }
                 }
               },
               "block_order": [
-                "video_D31KJa"
+                "video_VmzIc7"
               ]
             }
           },
           "block_order": [
-            "tab_GOT6Rz"
+            "tab_XDhfo2"
           ]
         }
       },
       "block_order": [
-        "text_PQVVa8",
-        "tabs_zYuLKR"
+        "text_f2WnKD",
+        "tabs_E3dJSV"
       ]
     },
     "comment_ca_marche": {
@@ -510,7 +525,7 @@
       },
       "name": "Comment ça marche",
       "blocks": {
-        "text_EbRT5l": {
+        "text_oPISfm": {
           "type": "text",
           "settings": {
             "text": "<h2>Comment ça marche ?</h2>",
@@ -518,7 +533,7 @@
           },
           "name": "Titre"
         },
-        "group_OVPdCH": {
+        "group_Rzhc1w": {
           "type": "group",
           "settings": {
             "color_scheme": "",
@@ -534,15 +549,15 @@
             "padding_vertical_mobile": 0
           },
           "blocks": {
-            "image_SOkhDk": {
+            "image_uTJUjt": {
               "type": "image",
               "settings": {
                 "image_width_desktop": 80,
                 "image_width_mobile": 80,
-                "image": "shopify://shop_images/FILTER-STEP_01_IMAGE.jpg"
+                "image": "shopify://shop_images/onsha-filtre-sediment-recharge-9193355.jpg"
               }
             },
-            "group_8mxh2B": {
+            "group_j8ZQoz": {
               "type": "group",
               "settings": {
                 "color_scheme": "",
@@ -556,108 +571,142 @@
                 "padding_vertical_mobile": 0
               },
               "blocks": {
-                "timeline_Mitcfd": {
+                "timeline_Q1qT5C": {
                   "type": "timeline",
                   "settings": {},
                   "name": "Étapes",
                   "blocks": {
-                    "timeline_step_oodBqh": {
+                    "timeline_step_B2Ohdi": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 1",
                       "blocks": {
-                        "text_JzPlsh": {
+                        "text_d3Ojuv": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 1</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_uZECFr": {
+                        "text_Hqfuyq": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Ouvre le compartiment du pommeau SHIFT.</p>",
+                            "text": "<p><strong>Ouvre</strong> le compartiment de ta douchette Onsha.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_JzPlsh",
-                        "text_uZECFr"
+                        "text_d3Ojuv",
+                        "text_Hqfuyq"
                       ]
                     },
-                    "timeline_step_jJJ7fX": {
+                    "timeline_step_la7UJV": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 2",
                       "blocks": {
-                        "text_IY7uO8": {
+                        "text_4ARdtt": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 2</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_MKY2qb": {
+                        "text_Iqtmid": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Retire le filtre usagé.</p>",
+                            "text": "<p><strong>Retire</strong> le filtre sédiment usagé.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_IY7uO8",
-                        "text_MKY2qb"
+                        "text_4ARdtt",
+                        "text_Iqtmid"
                       ]
                     },
-                    "timeline_step_VF2UyB": {
+                    "timeline_step_RVsZnI": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 3",
                       "blocks": {
-                        "text_6OIar5": {
+                        "text_QFTLjx": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 3</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_Sybemn": {
+                        "text_TJQdUu": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Insère le nouveau filtre et referme.</p>",
+                            "text": "<p><strong>Insère</strong> le nouveau filtre.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_6OIar5",
-                        "text_Sybemn"
+                        "text_QFTLjx",
+                        "text_TJQdUu"
+                      ]
+                    },
+                    "timeline_step_nHgDgm": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 4",
+                      "blocks": {
+                        "text_0ucroY": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 4</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_LNDz7U": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Referme</strong>. Ton rituel reprend immédiatement.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_0ucroY",
+                        "text_LNDz7U"
                       ]
                     }
                   },
                   "block_order": [
-                    "timeline_step_oodBqh",
-                    "timeline_step_jJJ7fX",
-                    "timeline_step_VF2UyB"
+                    "timeline_step_B2Ohdi",
+                    "timeline_step_la7UJV",
+                    "timeline_step_RVsZnI",
+                    "timeline_step_nHgDgm"
                   ]
+                },
+                "text_Sick1C": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Le conseil Sunsoari</strong></p><p>Garde toujours une recharge d'avance dans ta trousse. Quand le filtre change de couleur, c'est le signal qu'il a bien travaillé : remplace-le sans hésiter.</p>",
+                    "text_style": "paragraph"
+                  }
                 }
               },
               "block_order": [
-                "timeline_Mitcfd"
+                "timeline_Q1qT5C",
+                "text_Sick1C"
               ]
             }
           },
           "block_order": [
-            "image_SOkhDk",
-            "group_8mxh2B"
+            "image_uTJUjt",
+            "group_j8ZQoz"
           ]
         }
       },
       "block_order": [
-        "text_EbRT5l",
-        "group_OVPdCH"
+        "text_oPISfm",
+        "group_Rzhc1w"
       ]
     },
     "avant_apres": {
@@ -673,7 +722,7 @@
       "name": "Avant / Après",
       "disabled": true,
       "blocks": {
-        "text_JY4KaC": {
+        "text_HHesFw": {
           "type": "text",
           "settings": {
             "text": "<h2>Ce que le filtre capture</h2>",
@@ -681,7 +730,7 @@
           },
           "name": "Titre"
         },
-        "before_after_QzG8j3": {
+        "before_after_6fmFr3": {
           "type": "before-after",
           "settings": {
             "image_ratio": "portrait",
@@ -690,7 +739,7 @@
             "label_badge_style": "primary"
           }
         },
-        "text_FlSykS": {
+        "text_miErX5": {
           "type": "text",
           "settings": {
             "text": "<p>Photo réelle, non retouchée.</p>",
@@ -701,9 +750,9 @@
         }
       },
       "block_order": [
-        "text_JY4KaC",
-        "before_after_QzG8j3",
-        "text_FlSykS"
+        "text_HHesFw",
+        "before_after_6fmFr3",
+        "text_miErX5"
       ]
     },
     "en_situation": {
@@ -719,7 +768,7 @@
       "name": "En situation (UGC)",
       "disabled": true,
       "blocks": {
-        "text_SG8a2Z": {
+        "text_tcLMg9": {
           "type": "text",
           "settings": {
             "text": "<h2>Dans vos salles de bain</h2>",
@@ -727,15 +776,15 @@
           },
           "name": "Titre"
         },
-        "stories_yUQAv9": {
+        "stories_tdlvwC": {
           "type": "stories",
           "settings": {},
           "name": "Stories UGC"
         }
       },
       "block_order": [
-        "text_SG8a2Z",
-        "stories_yUQAv9"
+        "text_tcLMg9",
+        "stories_tdlvwC"
       ]
     },
     "avis": {
@@ -877,16 +926,16 @@
                 "accordion_padding": "medium"
               },
               "blocks": {
-                "accordion_E9L7Nk": {
+                "accordion_EpvVxl": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Combien de temps durent ces filtres ?"
+                    "heading": "Avec quel système ce filtre est-il compatible ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Environ 2 à 3 mois chacun. Avec ce pack de 3, tu as 6 à 9 mois d'avance.</p>",
+                        "text": "<p>Il s'insère dans la Douchette Filtrante Onsha. Attention : ce n'est pas le Filtre Thermal Vitaminé du système Home.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -895,16 +944,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_u5ymr5": {
+                "accordion_hY1tZe": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Sont-ils compatibles avec mon pommeau SHIFT ?"
+                    "heading": "Combien de temps dure un filtre ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Oui, ils sont conçus pour le Pommeau de Douche Filtrant SHIFT.</p>",
+                        "text": "<p>Environ 4 à 6 semaines selon ta fréquence de douche et la qualité de ton eau.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -913,16 +962,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_nYQYN0": {
+                "accordion_UJDgVJ": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Comment savoir quand les remplacer ?"
+                    "heading": "Pourquoi le filtre change-t-il de couleur ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Quand l'eau devient moins claire, que le débit ralentit, ou que le filtre change de couleur.</p>",
+                        "text": "<p>Parce qu'il retient les sédiments de l'eau : c'est le signe que ta filtration travaille.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -931,34 +980,16 @@
                     "text_faq"
                   ]
                 },
-                "accordion_aLSuuP": {
+                "accordion_hYkMzD": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Les filtres remplacent-ils les capsules de soin ?"
+                    "heading": "Existe-t-il plusieurs versions ?"
                   },
                   "blocks": {
                     "text_faq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Non. Le filtre retient les sédiments, la capsule apporte le soin et la senteur. Ils travaillent ensemble.</p>",
-                        "text_style": "paragraph"
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "text_faq"
-                  ]
-                },
-                "accordion_WJqZNv": {
-                  "type": "_accordion",
-                  "settings": {
-                    "heading": "Puis-je les stocker longtemps ?"
-                  },
-                  "blocks": {
-                    "text_faq": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Oui. Garde-les au sec, dans leur emballage d'origine, à température ambiante.</p>",
+                        "text": "<p>Non, une seule version, compatible avec la Douchette Filtrante Onsha.</p>",
                         "text_style": "paragraph"
                       }
                     }
@@ -969,11 +1000,10 @@
                 }
               },
               "block_order": [
-                "accordion_E9L7Nk",
-                "accordion_u5ymr5",
-                "accordion_nYQYN0",
-                "accordion_aLSuuP",
-                "accordion_WJqZNv"
+                "accordion_EpvVxl",
+                "accordion_hY1tZe",
+                "accordion_UJDgVJ",
+                "accordion_hYkMzD"
               ]
             }
           },

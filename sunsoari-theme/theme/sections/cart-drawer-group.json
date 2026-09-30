@@ -1,0 +1,158 @@
+{
+  "type": "custom.cart_drawer",
+  "name": "Panier sur le côté",
+  "sections": {
+    "cart-drawer": {
+      "type": "cart-drawer",
+      "blocks": {
+        "cart_header_blocks": {
+          "type": "_cart-header-blocks",
+          "static": true,
+          "settings": {
+            "wrap_in_card": false,
+            "color_scheme": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {
+            "cart_progress_bar_dtN84U": {
+              "type": "_cart-progress-bar",
+              "name": "Jauge de progression",
+              "settings": {
+                "show_on_display": "desktop_and_mobile",
+                "progress_bar_based_on": "value",
+                "collection": "",
+                "step1_text": "Plus que # pour la livraison offerte",
+                "step1_value": 80,
+                "step1_quantity": 3,
+                "step1_label": "",
+                "step2_text": "",
+                "step2_quantity": 0,
+                "step2_label": "",
+                "step3_text": "",
+                "step3_quantity": 0,
+                "step3_label": "",
+                "step_completed_text": "Ta livraison est offerte",
+                "margin_top": 0,
+                "margin_bottom": 0,
+                "additional_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "cart_progress_bar_dtN84U"
+          ]
+        },
+        "cart_footer_resume_blocks": {
+          "type": "_cart-footer-resume-blocks",
+          "static": true,
+          "settings": {
+            "wrap_in_card": false,
+            "color_scheme": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {
+            "cross_sells_DkGxFb": {
+              "type": "cross-sells",
+              "name": "t:cross_sells_slider",
+              "settings": {
+                "show_on_display": "desktop_and_mobile",
+                "products": [
+                  "filtre-vitamine-showerfilter-sunsoari",
+                  "capsule-vitaminee-shower-filter-sunsoari",
+                  "filtre-sediment-recharge",
+                  "pack-6-capsules-vitaminees-shift-sunsoari"
+                ],
+                "max_products": 4,
+                "layout_type": "slider",
+                "per_page_desktop": 1,
+                "per_page_mobile": "1",
+                "gap": 15,
+                "show_arrows": false,
+                "arrows_button_style": "secondary",
+                "show_pagination": true,
+                "rewind": false,
+                "autoplay": false,
+                "autoplay_speed": 4,
+                "display_mode": "row",
+                "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+                "show_card_border": false,
+                "show_image": true,
+                "image_width": 60,
+                "show_options_label": false,
+                "price_position": "next_to_title",
+                "button_content_type": "icon",
+                "button_content_icon": "add",
+                "margin_top": 0,
+                "margin_bottom": 0,
+                "additional_class": ""
+              },
+              "blocks": {}
+            },
+            "discount_code_GBacFY": {
+              "type": "_discount-code",
+              "name": "Code de réduction",
+              "settings": {
+                "style": "in_accordion",
+                "accordion_heading": "Ajouter un code de réduction",
+                "button_text": "Appliquer",
+                "placeholder": "Code de réduction",
+                "margin_top": 0,
+                "margin_bottom": 10,
+                "additional_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "cross_sells_DkGxFb",
+            "discount_code_GBacFY"
+          ]
+        },
+        "cart_footer_blocks": {
+          "type": "_cart-drawer-footer-blocks",
+          "static": true,
+          "settings": {
+            "wrap_in_card": false,
+            "color_scheme": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        },
+        "cart_drawer_empty_blocks": {
+          "type": "_cart-drawer-empty-blocks",
+          "static": true,
+          "settings": {
+            "show_continue_shopping_button": true,
+            "wrap_in_card": false,
+            "color_scheme": "",
+            "margin_top": 0,
+            "margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "settings": {
+        "cart_style": "floating",
+        "cart_drawer_width_on_desktop": "440",
+        "full_width_on_mobile": false,
+        "products_media_ratio": "1 / 1",
+        "show_variant_options_labels": true,
+        "show_remove_button": true,
+        "show_cart_count": true,
+        "color_scheme_header": "scheme-1",
+        "show_cart_header_bottom_border": true,
+        "color_scheme_body": "",
+        "color_scheme_elements": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+        "color_scheme_footer": "scheme-1",
+        "show_cart_footer_top_border": true
+      }
+    }
+  },
+  "order": [
+    "cart-drawer"
+  ]
+}

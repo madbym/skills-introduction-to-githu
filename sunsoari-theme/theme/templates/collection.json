@@ -8,7 +8,7 @@
           "name": "t:image_banner",
           "settings": {
             "media_type": "image",
-            "image": "{{ closest.collection.featured_image }}",
+            "image": "shopify://shop_images/Copie_de_Copie_de_Hot_Spring_Filter___Shower_Head_03.jpg",
             "source": "uploaded",
             "color_scheme": "scheme-3",
             "banner_height": "very_small",

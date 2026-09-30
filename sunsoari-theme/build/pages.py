@@ -183,7 +183,7 @@ def collection(banner_image=None, title=None, text=None, extra=None):
     if banner_image:
         b["settings"]["image"] = img(banner_image)
     else:
-        b["settings"]["image"] = "{{ closest.collection.featured_image }}"
+        b["settings"]["image"] = img(LIFESTYLE["onsha_hot_spring"])
     tx = find_all(banner, by_type("text"))
     set_text(tx[0], f"<h1>{title}</h1>" if title else "<h1>{{ closest.collection.title }}</h1>")
     set_text(tx[1], f"<p>{text}</p>" if text else "{{ closest.collection.description }}")

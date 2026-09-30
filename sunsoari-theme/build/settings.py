@@ -1,5 +1,7 @@
 """Global look: Sunsoari palette (charte graphique V1), Montserrat, rounded corners."""
-from lib import load, save
+import os
+
+from lib import REMOTE, load, save
 
 # Charte graphique Sunsoari V1
 INDIGO = "#032B59"      # signature: text, titles, buttons (never a large flat area)
@@ -100,7 +102,11 @@ def build():
         # Links to the real Sunsoari accounts
         instagram_url="https://www.instagram.com/sunsoari/",
     )
-    save("config/settings_data.json", data)
+    path = save("config/settings_data.json", data)
+    # Shopify only accepts this file with its original header comment.
+    raw = open(os.path.join(REMOTE, "config/settings_data.json"), encoding="utf-8").read()
+    body = open(path, encoding="utf-8").read()
+    open(path, "w", encoding="utf-8").write(raw[: raw.index("*/") + 2] + "\n" + body)
 
 
 if __name__ == "__main__":

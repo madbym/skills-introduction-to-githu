@@ -1,0 +1,1142 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "group_VW4Hi3": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_justify_desktop": "space-between",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "column-reverse"
+          },
+          "blocks": {
+            "badges_i9hDat": {
+              "type": "badges",
+              "name": "t:badges",
+              "settings": {},
+              "blocks": {
+                "badge_VEGRNK": {
+                  "type": "_badge",
+                  "settings": {
+                    "text": "L'ACCESSOIRE À TON IMAGE",
+                    "badge_style": "secondary"
+                  }
+                }
+              },
+              "block_order": [
+                "badge_VEGRNK"
+              ]
+            }
+          },
+          "block_order": [
+            "badges_i9hDat"
+          ]
+        },
+        "text_zLqMQw": {
+          "type": "text",
+          "name": "Titre",
+          "settings": {
+            "text": "<p>{{ product.title }}</p>",
+            "text_style": "h3"
+          }
+        },
+        "text_yQdqF8": {
+          "type": "text",
+          "name": "Texte",
+          "settings": {
+            "text": "<p>{{ closest.product.description }}</p>",
+            "text_style": "paragraph",
+            "paragraph_font_size": "large"
+          }
+        },
+        "price_yEeMeb": {
+          "type": "product-price",
+          "name": "t:price",
+          "settings": {
+            "product": "{{ closest.product }}",
+            "sales_badge": "percentage",
+            "show_sales_badge_text": true,
+            "text_style": "h6"
+          }
+        },
+        "group_pills": {
+          "type": "group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_wrap_desktop": "wrap",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "row",
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "name": "Points forts",
+          "blocks": {
+            "icon_with_text_FzNRZv": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>6 coloris</p>",
+                "font_weight": 500
+              }
+            },
+            "icon_with_text_fONvXF": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Clips interchangeables</p>",
+                "font_weight": 500
+              }
+            },
+            "icon_with_text_ab7uKP": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Silicone souple</p>",
+                "font_weight": 500
+              }
+            }
+          },
+          "block_order": [
+            "icon_with_text_FzNRZv",
+            "icon_with_text_fONvXF",
+            "icon_with_text_ab7uKP"
+          ]
+        },
+        "separator_AKgbEA": {
+          "type": "separator",
+          "name": "t:separator",
+          "settings": {}
+        },
+        "product_form_grYQk6": {
+          "type": "_product-form",
+          "name": "Formulaire de produit",
+          "settings": {},
+          "blocks": {
+            "product_variant_picker_xWC3wF": {
+              "type": "_product-variant-picker",
+              "name": "Sélecteur de variantes",
+              "settings": {
+                "show_selected_value": true
+              },
+              "blocks": {
+                "product-variant-popup": {
+                  "type": "_product-variant-popup",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {
+                    "show_on_option_name": "Taille",
+                    "button_label": "Guide des tailles"
+                  },
+                  "blocks": {
+                    "text_LfyX9A": {
+                      "type": "text",
+                      "name": "Titre",
+                      "settings": {
+                        "text": "<h1>Guide des tailles</h1>",
+                        "text_style": "h3",
+                        "margin_bottom": 10
+                      }
+                    },
+                    "text_99rHbT": {
+                      "type": "text",
+                      "name": "Texte",
+                      "settings": {
+                        "text": "",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_LfyX9A",
+                    "text_99rHbT"
+                  ]
+                }
+              }
+            },
+            "product-add-to-cart-button": {
+              "type": "_product-add-to-cart-button",
+              "static": true,
+              "settings": {
+                "enable_sticky_add_to_cart": true,
+                "show_price": false
+              },
+              "blocks": {
+                "product-quantity-selector": {
+                  "type": "_product-quantity-selector",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {}
+                },
+                "add-to-wishlist-button": {
+                  "type": "_add-to-wishlist-button",
+                  "static": true,
+                  "settings": {}
+                }
+              }
+            },
+            "accelerated-checkout": {
+              "type": "_accelerated-checkout",
+              "disabled": true,
+              "static": true,
+              "settings": {}
+            },
+            "toggle_cross_sell": {
+              "type": "_toggle-cross-sell",
+              "name": "t:toggle_cross_sell",
+              "settings": {
+                "title": "La douchette qui va avec",
+                "description": "<p>La housse s'adapte uniquement à la douchette Onsha.</p>",
+                "product_list": [
+                  "douchette-filtrante"
+                ]
+              }
+            }
+          },
+          "block_order": [
+            "product_variant_picker_xWC3wF",
+            "toggle_cross_sell"
+          ]
+        },
+        "delivery_estimation_A43yiG": {
+          "type": "delivery-estimation",
+          "name": "Estimation de livraison",
+          "settings": {
+            "icon": "bolt",
+            "show_weekday": false,
+            "delivery_estimation_text": "Livraison estimée entre le",
+            "translation_between_dates": "et le",
+            "margin_bottom": 10
+          }
+        },
+        "accordions_KKUaHK": {
+          "type": "accordions",
+          "name": "Accordéons",
+          "settings": {
+            "icon": "add",
+            "accordion_padding": "medium"
+          },
+          "blocks": {
+            "accordion_udANTU": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Caractéristiques & matières"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Silicone souple et résistant, sans BPA, conforme FDA selon le fabricant. Clips décoratifs inclus selon le coloris choisi.</p><p>Compatible uniquement avec la Douchette Filtrante Onsha. Elle protège ta douchette des chocs et des rayures.</p><p>Lavable à l'eau tiède. Tenir les clips hors de portée des enfants (petites pièces).</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_1vkfbj": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Livraison & retours"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p><p>Retour possible sous 14 jours, produit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_udANTU",
+            "accordion_1vkfbj"
+          ]
+        },
+        "group_kLziPN": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 10,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 10,
+            "margin_top": 10
+          },
+          "blocks": {
+            "marquee_QE4fL7": {
+              "type": "marquee",
+              "name": "t:marquee",
+              "settings": {
+                "movement_direction": "reverse",
+                "gap": 30,
+                "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
+              },
+              "blocks": {
+                "icon_with_text_njHX1f": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>SÉLECTION SUNSOARI · PRODUITS CORÉENS CHOISIS AVEC EXIGENCE</p>",
+                    "font_weight": 500
+                  }
+                },
+                "icon_with_text_w0xBwI": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>LIVRAISON SUIVIE · PARTOUT EN FRANCE MÉTROPOLITAINE</p>",
+                    "font_weight": 500
+                  }
+                },
+                "icon_with_text_RL3JjQ": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>PAIEMENT SÉCURISÉ · APPLE PAY, PAYPAL, CB</p>",
+                    "font_weight": 500
+                  }
+                }
+              },
+              "block_order": [
+                "icon_with_text_njHX1f",
+                "icon_with_text_w0xBwI",
+                "icon_with_text_RL3JjQ"
+              ]
+            }
+          },
+          "block_order": [
+            "marquee_QE4fL7"
+          ]
+        }
+      },
+      "block_order": [
+        "group_VW4Hi3",
+        "text_zLqMQw",
+        "text_yQdqF8",
+        "price_yEeMeb",
+        "group_pills",
+        "separator_AKgbEA",
+        "product_form_grYQk6",
+        "delivery_estimation_A43yiG",
+        "accordions_KKUaHK",
+        "group_kLziPN"
+      ],
+      "settings": {
+        "color_scheme_product_info": "",
+        "image_position": "row-reverse",
+        "product_info_width": 45,
+        "gap": 100,
+        "padding_top": 30,
+        "padding_bottom": 80,
+        "anchor_id": "buy"
+      }
+    },
+    "videos_pratiques": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Vidéos pratiques",
+      "disabled": true,
+      "blocks": {
+        "text_JEgPZX": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>En vidéo</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "tabs_f7bNih": {
+          "type": "tabs",
+          "settings": {
+            "display_type": "tabs",
+            "wrap_content_in_card": true
+          },
+          "name": "Vidéos",
+          "blocks": {
+            "tab_TDJrxH": {
+              "type": "_tab",
+              "settings": {
+                "tab_name": "Installe ta housse"
+              },
+              "name": "Installe ta housse",
+              "blocks": {
+                "video_q0TEWc": {
+                  "type": "video",
+                  "settings": {
+                    "source": "shopify",
+                    "video_autoplay": true,
+                    "enable_video_controls": false,
+                    "aspect_ratio": "9/16",
+                    "alt": "Installe ta housse"
+                  }
+                }
+              },
+              "block_order": [
+                "video_q0TEWc"
+              ]
+            }
+          },
+          "block_order": [
+            "tab_TDJrxH"
+          ]
+        }
+      },
+      "block_order": [
+        "text_JEgPZX",
+        "tabs_f7bNih"
+      ]
+    },
+    "le_style_onsha": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Le style Onsha",
+      "blocks": {
+        "text_BaloRI": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Le style Onsha</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "text_Hw1F96": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Prendre soin de soi, c'est aussi une question de style : la housse transforme un objet du quotidien en détail de décoration.</p>",
+            "text_style": "paragraph"
+          }
+        },
+        "slider_oUerTl": {
+          "type": "slider",
+          "settings": {
+            "per_page_desktop": 4,
+            "per_page_mobile": "1.8"
+          },
+          "name": "Le style Onsha",
+          "blocks": {
+            "slide_wgWkDR": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Silicone protecteur",
+              "blocks": {
+                "image_lq8MxV": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_6XkHbw": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Silicone protecteur</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_nO6w5Z": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Contre les chocs et rayures.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_lq8MxV",
+                "text_6XkHbw",
+                "text_nO6w5Z"
+              ]
+            },
+            "slide_QTz4v5": {
+              "type": "_slide",
+              "settings": {},
+              "name": "6 coloris",
+              "blocks": {
+                "image_bgQUae": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_wdoKyA": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>6 coloris</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_3obqbq": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Du blanc au rose.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_bgQUae",
+                "text_wdoKyA",
+                "text_3obqbq"
+              ]
+            },
+            "slide_SaciGM": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Clips interchangeables",
+              "blocks": {
+                "image_uWBPrt": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_E373Xr": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Clips interchangeables</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_fvaF35": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>À combiner entre coloris.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_uWBPrt",
+                "text_E373Xr",
+                "text_fvaF35"
+              ]
+            },
+            "slide_bd5ue4": {
+              "type": "_slide",
+              "settings": {},
+              "name": "L'idée cadeau",
+              "blocks": {
+                "image_9CnLd4": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_cXX3Cl": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>L'idée cadeau</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_bZhj6a": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Utile, jolie, à petit prix.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_9CnLd4",
+                "text_cXX3Cl",
+                "text_bZhj6a"
+              ]
+            }
+          },
+          "block_order": [
+            "slide_wgWkDR",
+            "slide_QTz4v5",
+            "slide_SaciGM",
+            "slide_bd5ue4"
+          ]
+        }
+      },
+      "block_order": [
+        "text_BaloRI",
+        "text_Hw1F96",
+        "slider_oUerTl"
+      ]
+    },
+    "comment_ca_marche": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Comment ça marche",
+      "blocks": {
+        "text_uyx130": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Comment ça marche ?</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "group_ygxwQZ": {
+          "type": "group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_gap_desktop": 50,
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "blocks": {
+            "image_xHnHk0": {
+              "type": "image",
+              "settings": {
+                "image_width_desktop": 35,
+                "image_width_mobile": 35
+              }
+            },
+            "group_QDlO80": {
+              "type": "group",
+              "settings": {
+                "color_scheme": "",
+                "layout_align_items_desktop": "center",
+                "same_as_desktop": false,
+                "layout_wrap_mobile": "wrap",
+                "use_global_container_padding": false,
+                "padding_horizontal": 0,
+                "padding_vertical": 0,
+                "padding_horizontal_mobile": 0,
+                "padding_vertical_mobile": 0
+              },
+              "blocks": {
+                "timeline_IQo7NW": {
+                  "type": "timeline",
+                  "settings": {},
+                  "name": "Étapes",
+                  "blocks": {
+                    "timeline_step_QuDKaE": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 1",
+                      "blocks": {
+                        "text_mGdAYJ": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 1</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_cPDIsJ": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Glisse</strong> la housse sur ta Douchette Filtrante Onsha.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_mGdAYJ",
+                        "text_cPDIsJ"
+                      ]
+                    },
+                    "timeline_step_LIyp0O": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 2",
+                      "blocks": {
+                        "text_rzBuIA": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 2</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_AZj5Oa": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Fixe</strong> les clips décoratifs selon tes envies.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_rzBuIA",
+                        "text_AZj5Oa"
+                      ]
+                    },
+                    "timeline_step_ezHrNQ": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 3",
+                      "blocks": {
+                        "text_NUyp0m": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 3</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_c6TdzS": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Change, combine, renouvelle</strong> au fil des saisons et de ta déco.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_NUyp0m",
+                        "text_c6TdzS"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "timeline_step_QuDKaE",
+                    "timeline_step_LIyp0O",
+                    "timeline_step_ezHrNQ"
+                  ]
+                },
+                "text_UwHLEK": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Le conseil Sunsoari</strong></p><p>Assortis ta housse à ta salle de bain, ou change de coloris selon les saisons. Pour une petite attention à glisser avec un coffret Onsha, la housse est un joli complément.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "timeline_IQo7NW",
+                "text_UwHLEK"
+              ]
+            }
+          },
+          "block_order": [
+            "image_xHnHk0",
+            "group_QDlO80"
+          ]
+        }
+      },
+      "block_order": [
+        "text_uyx130",
+        "group_ygxwQZ"
+      ]
+    },
+    "en_situation": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "En situation (UGC)",
+      "disabled": true,
+      "blocks": {
+        "text_rzsCSh": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Dans vos salles de bain</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "stories_WHjaRi": {
+          "type": "stories",
+          "settings": {},
+          "name": "Stories UGC"
+        }
+      },
+      "block_order": [
+        "text_rzsCSh",
+        "stories_WHjaRi"
+      ]
+    },
+    "avis": {
+      "type": "reviews",
+      "name": "Avis clients",
+      "disabled": true,
+      "settings": {}
+    },
+    "decouvre_aussi": {
+      "type": "product-recommendations",
+      "blocks": {
+        "title": {
+          "type": "text",
+          "static": true,
+          "settings": {
+            "text": "<p>Découvre aussi</p>",
+            "text_style": "h2",
+            "alignment": "center",
+            "alignment_mobile": "center",
+            "margin_bottom": 40
+          }
+        },
+        "product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+            "layout_gap": 15
+          },
+          "blocks": {
+            "product_card_group_EcgVgX": {
+              "type": "_product-card-group",
+              "name": "t:group",
+              "settings": {
+                "color_scheme": "",
+                "layout_direction_desktop": "column",
+                "layout_gap_desktop": 5,
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "margin_top": 0
+              },
+              "blocks": {
+                "text_cxYhee": {
+                  "type": "text",
+                  "name": "t:text",
+                  "settings": {
+                    "text": "<h2>{{ closest.product.title }}</h2>",
+                    "text_style": "paragraph",
+                    "paragraph_font_size": "large",
+                    "font_weight": 300
+                  }
+                }
+              },
+              "block_order": [
+                "text_cxYhee"
+              ]
+            },
+            "product_card_media_gallery_L3zV7a": {
+              "type": "_product-card-media-gallery",
+              "name": "t:product_card_gallery",
+              "settings": {
+                "media_ratio": "4 / 5"
+              }
+            },
+            "product_card_quick_add_dY48RT": {
+              "type": "_product-card-quick-add",
+              "name": "t:product_card_quick_add",
+              "settings": {}
+            },
+            "product_card_group_LHFtbz": {
+              "type": "_product-card-group",
+              "name": "t:group",
+              "settings": {
+                "color_scheme": "",
+                "layout_direction_desktop": "column",
+                "layout_gap_desktop": 5,
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "margin_top": 0
+              },
+              "blocks": {
+                "product_price_eFDeNW": {
+                  "type": "product-price",
+                  "name": "t:product_price",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "sales_badge": "percentage"
+                  }
+                }
+              },
+              "block_order": [
+                "product_price_eFDeNW"
+              ]
+            }
+          },
+          "block_order": [
+            "product_card_group_EcgVgX",
+            "product_card_media_gallery_L3zV7a",
+            "product_card_quick_add_dY48RT",
+            "product_card_group_LHFtbz"
+          ]
+        }
+      },
+      "name": "t:product_recommendations",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "max_products": 3,
+        "grid_columns": 3,
+        "grid_columns_mobile": "1",
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
+    },
+    "faq": {
+      "type": "custom-section",
+      "blocks": {
+        "group_ampbiX": {
+          "type": "group",
+          "name": "Groupe",
+          "settings": {
+            "color_scheme": ""
+          },
+          "blocks": {
+            "text_ahfQKN": {
+              "type": "text",
+              "name": "Titre",
+              "settings": {
+                "text": "<h3>Questions fréquentes</h3>",
+                "text_style": "h2",
+                "margin_bottom": 10
+              }
+            },
+            "accordions_hpBMaf": {
+              "type": "accordions",
+              "name": "Accordéons",
+              "settings": {
+                "icon": "add",
+                "accordion_padding": "medium"
+              },
+              "blocks": {
+                "accordion_xFHQpN": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Avec quels produits la housse est-elle compatible ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Elle est conçue uniquement pour la Douchette Filtrante Onsha, dont elle épouse la forme.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_xHvZyq": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Les clips sont-ils inclus ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Oui, des clips décoratifs sont inclus selon le coloris choisi. Tu peux ensuite les combiner entre coloris.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_bJmaKq": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Comment l'entretenir ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Un simple lavage à l'eau tiède suffit.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_dLltTI": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Gêne-t-elle l'utilisation de la douchette ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Non : elle épouse la forme de la douchette sans gêner la prise en main, le jet ni le changement de filtre.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_xFHQpN",
+                "accordion_xHvZyq",
+                "accordion_bJmaKq",
+                "accordion_dLltTI"
+              ]
+            }
+          },
+          "block_order": [
+            "text_ahfQKN",
+            "accordions_hpBMaf"
+          ]
+        },
+        "group_NkNJJg": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-2",
+            "width_desktop": 55,
+            "layout_justify_desktop": "center",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "use_global_container_padding": false,
+            "padding_horizontal": 40,
+            "padding_vertical": 50
+          },
+          "blocks": {
+            "icon_MrVn8A": {
+              "type": "icon",
+              "name": "t:icon",
+              "settings": {
+                "icon": "support_agent"
+              }
+            },
+            "text_VLtRib": {
+              "type": "text",
+              "name": "t:title",
+              "settings": {
+                "text": "<h4>Besoin d'aide ?</h4>",
+                "text_style": "h4",
+                "alignment": "center"
+              }
+            },
+            "text_FyFaMj": {
+              "type": "text",
+              "name": "t:text",
+              "settings": {
+                "text": "<p>Écris-nous, on te répond avec plaisir pour choisir le bon système ou la bonne recharge.</p>",
+                "text_style": "paragraph",
+                "alignment": "center",
+                "margin_bottom": 20
+              }
+            },
+            "button_Q3UxFk": {
+              "type": "button",
+              "name": "t:button",
+              "settings": {
+                "link": "shopify://pages/contact",
+                "label": "Nous contacter",
+                "button_shape": "full-width"
+              }
+            }
+          },
+          "block_order": [
+            "icon_MrVn8A",
+            "text_VLtRib",
+            "text_FyFaMj",
+            "button_Q3UxFk"
+          ]
+        }
+      },
+      "block_order": [
+        "group_ampbiX",
+        "group_NkNJJg"
+      ],
+      "name": "t:faq_2",
+      "settings": {
+        "color_scheme_card": "",
+        "layout_flex_direction_desktop": "row",
+        "layout_gap_desktop": 50,
+        "same_as_desktop": false,
+        "layout_flex_direction_mobile": "column-reverse",
+        "layout_gap_mobile": 30,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "videos_pratiques",
+    "le_style_onsha",
+    "comment_ca_marche",
+    "en_situation",
+    "avis",
+    "decouvre_aussi",
+    "faq"
+  ]
+}

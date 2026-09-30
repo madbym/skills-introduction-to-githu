@@ -1,0 +1,1515 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "group_VW4Hi3": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_justify_desktop": "space-between",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "column-reverse"
+          },
+          "blocks": {
+            "badges_i9hDat": {
+              "type": "badges",
+              "name": "t:badges",
+              "settings": {},
+              "blocks": {
+                "badge_VEGRNK": {
+                  "type": "_badge",
+                  "settings": {
+                    "text": "LA BASE DU RITUEL",
+                    "badge_style": "secondary"
+                  }
+                }
+              },
+              "block_order": [
+                "badge_VEGRNK"
+              ]
+            }
+          },
+          "block_order": [
+            "badges_i9hDat"
+          ]
+        },
+        "text_zLqMQw": {
+          "type": "text",
+          "name": "Titre",
+          "settings": {
+            "text": "<p>{{ product.title }}</p>",
+            "text_style": "h3"
+          }
+        },
+        "text_yQdqF8": {
+          "type": "text",
+          "name": "Texte",
+          "settings": {
+            "text": "<p>{{ closest.product.description }}</p>",
+            "text_style": "paragraph",
+            "paragraph_font_size": "large"
+          }
+        },
+        "price_yEeMeb": {
+          "type": "product-price",
+          "name": "t:price",
+          "settings": {
+            "product": "{{ closest.product }}",
+            "sales_badge": "percentage",
+            "show_sales_badge_text": true,
+            "text_style": "h6"
+          }
+        },
+        "group_pills": {
+          "type": "group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_wrap_desktop": "wrap",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "row",
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "name": "Points forts",
+          "blocks": {
+            "icon_with_text_e0IgxL": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Jet fin et régulier</p>",
+                "font_weight": 500
+              }
+            },
+            "icon_with_text_BAepfJ": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Design transparent</p>",
+                "font_weight": 500
+              }
+            },
+            "icon_with_text_oOOL8d": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Installation sans outil</p>",
+                "font_weight": 500
+              }
+            }
+          },
+          "block_order": [
+            "icon_with_text_e0IgxL",
+            "icon_with_text_BAepfJ",
+            "icon_with_text_oOOL8d"
+          ]
+        },
+        "separator_AKgbEA": {
+          "type": "separator",
+          "name": "t:separator",
+          "settings": {}
+        },
+        "product_form_grYQk6": {
+          "type": "_product-form",
+          "name": "Formulaire de produit",
+          "settings": {},
+          "blocks": {
+            "product_variant_picker_xWC3wF": {
+              "type": "_product-variant-picker",
+              "name": "Sélecteur de variantes",
+              "settings": {
+                "show_selected_value": true
+              },
+              "blocks": {
+                "product-variant-popup": {
+                  "type": "_product-variant-popup",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {
+                    "show_on_option_name": "Taille",
+                    "button_label": "Guide des tailles"
+                  },
+                  "blocks": {
+                    "text_LfyX9A": {
+                      "type": "text",
+                      "name": "Titre",
+                      "settings": {
+                        "text": "<h1>Guide des tailles</h1>",
+                        "text_style": "h3",
+                        "margin_bottom": 10
+                      }
+                    },
+                    "text_99rHbT": {
+                      "type": "text",
+                      "name": "Texte",
+                      "settings": {
+                        "text": "",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_LfyX9A",
+                    "text_99rHbT"
+                  ]
+                }
+              }
+            },
+            "product-add-to-cart-button": {
+              "type": "_product-add-to-cart-button",
+              "static": true,
+              "settings": {
+                "enable_sticky_add_to_cart": true,
+                "show_price": false
+              },
+              "blocks": {
+                "product-quantity-selector": {
+                  "type": "_product-quantity-selector",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {}
+                },
+                "add-to-wishlist-button": {
+                  "type": "_add-to-wishlist-button",
+                  "static": true,
+                  "settings": {}
+                }
+              }
+            },
+            "accelerated-checkout": {
+              "type": "_accelerated-checkout",
+              "disabled": true,
+              "static": true,
+              "settings": {}
+            },
+            "toggle_cross_sell": {
+              "type": "_toggle-cross-sell",
+              "name": "t:toggle_cross_sell",
+              "settings": {
+                "title": "Complète ton rituel thermal",
+                "description": "<p>Accueille les filtres thermaux vitaminés. Se visse entre ton flexible et le pommeau.</p>",
+                "product_list": [
+                  "coque-de-diffusion"
+                ]
+              }
+            }
+          },
+          "block_order": [
+            "product_variant_picker_xWC3wF",
+            "toggle_cross_sell"
+          ]
+        },
+        "cross_sell_QcpW8C": {
+          "type": "cross-sell",
+          "name": "t:cross_sell",
+          "settings": {
+            "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+            "products": [
+              "coffret-home-onsha-sullab-sunsoari"
+            ],
+            "title": "Le rituel complet en un coffret",
+            "description": "<p>Pommeau, flexible, coque et 4 filtres réunis.</p>",
+            "image_width": 90,
+            "button_content_type": "icon"
+          }
+        },
+        "delivery_estimation_A43yiG": {
+          "type": "delivery-estimation",
+          "name": "Estimation de livraison",
+          "settings": {
+            "icon": "bolt",
+            "show_weekday": false,
+            "delivery_estimation_text": "Livraison estimée entre le",
+            "translation_between_dates": "et le",
+            "margin_bottom": 10
+          }
+        },
+        "accordions_KKUaHK": {
+          "type": "accordions",
+          "name": "Accordéons",
+          "settings": {
+            "icon": "add",
+            "accordion_padding": "medium"
+          },
+          "blocks": {
+            "accordion_KLzdoc": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Caractéristiques & matériaux"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Polycarbonate (PC), polypropylène (PP), inox (SS), billes filtrantes intégrées. Matériaux conformes FDA selon le fabricant.</p><p>Compatible avec tous les flexibles de douche standard, ainsi qu'avec la coque de diffusion Onsha Home et les filtres thermaux vitaminés.</p><p>Usage domestique uniquement. L'eau de la douche n'est pas destinée à la consommation. Ne pas forcer le vissage.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_J2isAj": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Livraison & retours"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p><p>Retour possible sous 14 jours, produit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_KLzdoc",
+            "accordion_J2isAj"
+          ]
+        },
+        "group_kLziPN": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 10,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 10,
+            "margin_top": 10
+          },
+          "blocks": {
+            "marquee_QE4fL7": {
+              "type": "marquee",
+              "name": "t:marquee",
+              "settings": {
+                "movement_direction": "reverse",
+                "gap": 30,
+                "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
+              },
+              "blocks": {
+                "icon_with_text_IhKtJ0": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>SÉLECTION SUNSOARI · PRODUITS CORÉENS CHOISIS AVEC EXIGENCE</p>",
+                    "font_weight": 500
+                  }
+                },
+                "icon_with_text_RlgLKO": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>LIVRAISON SUIVIE · PARTOUT EN FRANCE MÉTROPOLITAINE</p>",
+                    "font_weight": 500
+                  }
+                },
+                "icon_with_text_mxgJTe": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>PAIEMENT SÉCURISÉ · APPLE PAY, PAYPAL, CB</p>",
+                    "font_weight": 500
+                  }
+                }
+              },
+              "block_order": [
+                "icon_with_text_IhKtJ0",
+                "icon_with_text_RlgLKO",
+                "icon_with_text_mxgJTe"
+              ]
+            }
+          },
+          "block_order": [
+            "marquee_QE4fL7"
+          ]
+        }
+      },
+      "block_order": [
+        "group_VW4Hi3",
+        "text_zLqMQw",
+        "text_yQdqF8",
+        "price_yEeMeb",
+        "group_pills",
+        "separator_AKgbEA",
+        "product_form_grYQk6",
+        "cross_sell_QcpW8C",
+        "delivery_estimation_A43yiG",
+        "accordions_KKUaHK",
+        "group_kLziPN"
+      ],
+      "settings": {
+        "color_scheme_product_info": "",
+        "image_position": "row-reverse",
+        "product_info_width": 45,
+        "gap": 100,
+        "padding_top": 30,
+        "padding_bottom": 80,
+        "anchor_id": "buy"
+      }
+    },
+    "videos_pratiques": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Vidéos pratiques",
+      "disabled": true,
+      "blocks": {
+        "text_uvSwMF": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>En vidéo</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "tabs_8rESQe": {
+          "type": "tabs",
+          "settings": {
+            "display_type": "tabs",
+            "wrap_content_in_card": true
+          },
+          "name": "Vidéos",
+          "blocks": {
+            "tab_CsMehG": {
+              "type": "_tab",
+              "settings": {
+                "tab_name": "Installe ton produit"
+              },
+              "name": "Installe ton produit",
+              "blocks": {
+                "video_IBXuDL": {
+                  "type": "video",
+                  "settings": {
+                    "source": "shopify",
+                    "video_autoplay": true,
+                    "enable_video_controls": false,
+                    "aspect_ratio": "9/16",
+                    "alt": "Installe ton produit"
+                  }
+                }
+              },
+              "block_order": [
+                "video_IBXuDL"
+              ]
+            },
+            "tab_FAc9Qe": {
+              "type": "_tab",
+              "settings": {
+                "tab_name": "Remplace ta recharge"
+              },
+              "name": "Remplace ta recharge",
+              "blocks": {
+                "video_lSXpfK": {
+                  "type": "video",
+                  "settings": {
+                    "source": "shopify",
+                    "video_autoplay": true,
+                    "enable_video_controls": false,
+                    "aspect_ratio": "9/16",
+                    "alt": "Remplace ta recharge"
+                  }
+                }
+              },
+              "block_order": [
+                "video_lSXpfK"
+              ]
+            }
+          },
+          "block_order": [
+            "tab_CsMehG",
+            "tab_FAc9Qe"
+          ]
+        }
+      },
+      "block_order": [
+        "text_uvSwMF",
+        "tabs_8rESQe"
+      ]
+    },
+    "la_technologie_onsha": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "La technologie Onsha",
+      "blocks": {
+        "text_mZp0zV": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>La technologie Onsha</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "text_UbbYrE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Un pommeau pensé en Corée comme base de ton rituel : un jet précis, un système qui évolue avec toi.</p>",
+            "text_style": "paragraph"
+          }
+        },
+        "slider_CZ7Uw9": {
+          "type": "slider",
+          "settings": {
+            "per_page_desktop": 4,
+            "per_page_mobile": "1.8"
+          },
+          "name": "La technologie Onsha",
+          "blocks": {
+            "slide_VvVqE1": {
+              "type": "_slide",
+              "settings": {},
+              "name": "197 micro-trous de précision",
+              "blocks": {
+                "image_R0CsTy": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_wkNhFd": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>197 micro-trous de précision</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_zz63Ff": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Un jet fin et régulier.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_R0CsTy",
+                "text_wkNhFd",
+                "text_zz63Ff"
+              ]
+            },
+            "slide_8HxjSI": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Billes filtrantes intégrées",
+              "blocks": {
+                "image_i0B3Jr": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_9ojflj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Billes filtrantes intégrées</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_Llqsaj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Logées dans le corps du pommeau.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_i0B3Jr",
+                "text_9ojflj",
+                "text_Llqsaj"
+              ]
+            },
+            "slide_3fS2qH": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Design transparent",
+              "blocks": {
+                "image_8iS2G8": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_53X83R": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Design transparent</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_gEOzdm": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Tu vois ton système travailler.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_8iS2G8",
+                "text_53X83R",
+                "text_gEOzdm"
+              ]
+            },
+            "slide_IIXGvO": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Compatible recharges thermales",
+              "blocks": {
+                "image_MdgaKj": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_e3nNyj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Compatible recharges thermales</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_Ehh2FD": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Avec la coque Home et les filtres vitaminés.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_MdgaKj",
+                "text_e3nNyj",
+                "text_Ehh2FD"
+              ]
+            }
+          },
+          "block_order": [
+            "slide_VvVqE1",
+            "slide_8HxjSI",
+            "slide_3fS2qH",
+            "slide_IIXGvO"
+          ]
+        }
+      },
+      "block_order": [
+        "text_mZp0zV",
+        "text_UbbYrE",
+        "slider_CZ7Uw9"
+      ]
+    },
+    "comment_ca_marche": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Comment ça marche",
+      "blocks": {
+        "text_W56eCu": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Comment ça marche ?</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "group_rCGIZE": {
+          "type": "group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_gap_desktop": 50,
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "blocks": {
+            "image_JduRHH": {
+              "type": "image",
+              "settings": {
+                "image_width_desktop": 35,
+                "image_width_mobile": 35
+              }
+            },
+            "group_Jdpmrc": {
+              "type": "group",
+              "settings": {
+                "color_scheme": "",
+                "layout_align_items_desktop": "center",
+                "same_as_desktop": false,
+                "layout_wrap_mobile": "wrap",
+                "use_global_container_padding": false,
+                "padding_horizontal": 0,
+                "padding_vertical": 0,
+                "padding_horizontal_mobile": 0,
+                "padding_vertical_mobile": 0
+              },
+              "blocks": {
+                "timeline_64GiIj": {
+                  "type": "timeline",
+                  "settings": {},
+                  "name": "Étapes",
+                  "blocks": {
+                    "timeline_step_V7iB3m": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 1",
+                      "blocks": {
+                        "text_mvnEN5": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 1</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_wZPf1Q": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Dévisse</strong> ton pommeau de douche actuel.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_mvnEN5",
+                        "text_wZPf1Q"
+                      ]
+                    },
+                    "timeline_step_sGpWLu": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 2",
+                      "blocks": {
+                        "text_mE4lBY": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 2</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_zDzV8f": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Visse</strong> le pommeau Onsha sur ton flexible, à la main, sans forcer.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_mE4lBY",
+                        "text_zDzV8f"
+                      ]
+                    },
+                    "timeline_step_6Vw5DQ": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 3",
+                      "blocks": {
+                        "text_L5DZPj": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 3</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_wjJJib": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Fais couler l'eau</strong> quelques secondes et vérifie l'étanchéité. Ton rituel peut commencer.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_L5DZPj",
+                        "text_wjJJib"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "timeline_step_V7iB3m",
+                    "timeline_step_sGpWLu",
+                    "timeline_step_6Vw5DQ"
+                  ]
+                },
+                "text_lMaXZj": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Le conseil Sunsoari</strong></p><p>Pour vivre le rituel thermal complet, fixe d'abord la coque de diffusion sur ton flexible, insère ton filtre thermal vitaminé (Hinoki, Océan, Pin ou Fleur de Prunier), puis visse le pommeau sur la coque. Deux minutes, pas plus.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "timeline_64GiIj",
+                "text_lMaXZj"
+              ]
+            }
+          },
+          "block_order": [
+            "image_JduRHH",
+            "group_Jdpmrc"
+          ]
+        }
+      },
+      "block_order": [
+        "text_W56eCu",
+        "group_rCGIZE"
+      ]
+    },
+    "home_ou_nomade": {
+      "type": "comparison-table",
+      "blocks": {
+        "comparison_table_row_4gfqrc": {
+          "type": "_comparison-table-row",
+          "name": "En-tête",
+          "settings": {},
+          "blocks": {
+            "comparison_table_data_G8pSH4": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p></p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_487q7J": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Home</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_58m1Ci": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Nomade</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            }
+          },
+          "block_order": [
+            "comparison_table_data_G8pSH4",
+            "comparison_table_data_487q7J",
+            "comparison_table_data_58m1Ci"
+          ]
+        },
+        "comparison_table_row_5XlrWi": {
+          "type": "_comparison-table-row",
+          "name": "Pièce principale",
+          "settings": {},
+          "blocks": {
+            "comparison_table_data_AhzCue": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pièce principale</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_QpBenQ": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pommeau filtrant</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_tYh5Xj": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Douchette filtrante</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            }
+          },
+          "block_order": [
+            "comparison_table_data_AhzCue",
+            "comparison_table_data_QpBenQ",
+            "comparison_table_data_tYh5Xj"
+          ]
+        },
+        "comparison_table_row_0B26R0": {
+          "type": "_comparison-table-row",
+          "name": "Recharge",
+          "settings": {},
+          "blocks": {
+            "comparison_table_data_8TPQxj": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Recharge</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_q4i9Do": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Filtre Thermal Vitaminé (Home)</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_V8gz4F": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Capsule Thermale (Nomade) + disque</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            }
+          },
+          "block_order": [
+            "comparison_table_data_8TPQxj",
+            "comparison_table_data_q4i9Do",
+            "comparison_table_data_V8gz4F"
+          ]
+        },
+        "comparison_table_row_8qzjI6": {
+          "type": "_comparison-table-row",
+          "name": "Durée d'une recharge",
+          "settings": {},
+          "blocks": {
+            "comparison_table_data_kQ1okT": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Durée d'une recharge</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_BGzvAm": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>3 à 4 semaines</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_wufUxb": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>10 à 15 jours</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            }
+          },
+          "block_order": [
+            "comparison_table_data_kQ1okT",
+            "comparison_table_data_BGzvAm",
+            "comparison_table_data_wufUxb"
+          ]
+        },
+        "comparison_table_row_GKFSuf": {
+          "type": "_comparison-table-row",
+          "name": "Idéal pour",
+          "settings": {},
+          "blocks": {
+            "comparison_table_data_vJDCTb": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Idéal pour</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_yvHNsG": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Rester installé à la maison</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            },
+            "comparison_table_data_9eh6Yo": {
+              "type": "_comparison-table-data",
+              "name": "Cellule",
+              "settings": {},
+              "blocks": {
+                "text_cell": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Voyager, louer, emporter</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_cell"
+              ]
+            }
+          },
+          "block_order": [
+            "comparison_table_data_vJDCTb",
+            "comparison_table_data_yvHNsG",
+            "comparison_table_data_9eh6Yo"
+          ]
+        }
+      },
+      "block_order": [
+        "comparison_table_row_4gfqrc",
+        "comparison_table_row_5XlrWi",
+        "comparison_table_row_0B26R0",
+        "comparison_table_row_8qzjI6",
+        "comparison_table_row_GKFSuf"
+      ],
+      "name": "Home ou Nomade ?",
+      "settings": {
+        "color_highlighted_column": "#032B59",
+        "color_highlighted_background_column": "#FBFAF7",
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
+    },
+    "en_situation": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "En situation (UGC)",
+      "disabled": true,
+      "blocks": {
+        "text_5er8bO": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Dans vos salles de bain</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "stories_oeq3hD": {
+          "type": "stories",
+          "settings": {},
+          "name": "Stories UGC"
+        }
+      },
+      "block_order": [
+        "text_5er8bO",
+        "stories_oeq3hD"
+      ]
+    },
+    "avis": {
+      "type": "reviews",
+      "name": "Avis clients",
+      "disabled": true,
+      "settings": {}
+    },
+    "decouvre_aussi": {
+      "type": "product-recommendations",
+      "blocks": {
+        "title": {
+          "type": "text",
+          "static": true,
+          "settings": {
+            "text": "<p>Découvre aussi</p>",
+            "text_style": "h2",
+            "alignment": "center",
+            "alignment_mobile": "center",
+            "margin_bottom": 40
+          }
+        },
+        "product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+            "layout_gap": 15
+          },
+          "blocks": {
+            "product_card_group_EcgVgX": {
+              "type": "_product-card-group",
+              "name": "t:group",
+              "settings": {
+                "color_scheme": "",
+                "layout_direction_desktop": "column",
+                "layout_gap_desktop": 5,
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "margin_top": 0
+              },
+              "blocks": {
+                "text_cxYhee": {
+                  "type": "text",
+                  "name": "t:text",
+                  "settings": {
+                    "text": "<h2>{{ closest.product.title }}</h2>",
+                    "text_style": "paragraph",
+                    "paragraph_font_size": "large",
+                    "font_weight": 300
+                  }
+                }
+              },
+              "block_order": [
+                "text_cxYhee"
+              ]
+            },
+            "product_card_media_gallery_L3zV7a": {
+              "type": "_product-card-media-gallery",
+              "name": "t:product_card_gallery",
+              "settings": {
+                "media_ratio": "4 / 5"
+              }
+            },
+            "product_card_quick_add_dY48RT": {
+              "type": "_product-card-quick-add",
+              "name": "t:product_card_quick_add",
+              "settings": {}
+            },
+            "product_card_group_LHFtbz": {
+              "type": "_product-card-group",
+              "name": "t:group",
+              "settings": {
+                "color_scheme": "",
+                "layout_direction_desktop": "column",
+                "layout_gap_desktop": 5,
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "margin_top": 0
+              },
+              "blocks": {
+                "product_price_eFDeNW": {
+                  "type": "product-price",
+                  "name": "t:product_price",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "sales_badge": "percentage"
+                  }
+                }
+              },
+              "block_order": [
+                "product_price_eFDeNW"
+              ]
+            }
+          },
+          "block_order": [
+            "product_card_group_EcgVgX",
+            "product_card_media_gallery_L3zV7a",
+            "product_card_quick_add_dY48RT",
+            "product_card_group_LHFtbz"
+          ]
+        }
+      },
+      "name": "t:product_recommendations",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "max_products": 3,
+        "grid_columns": 3,
+        "grid_columns_mobile": "1",
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
+    },
+    "faq": {
+      "type": "custom-section",
+      "blocks": {
+        "group_ampbiX": {
+          "type": "group",
+          "name": "Groupe",
+          "settings": {
+            "color_scheme": ""
+          },
+          "blocks": {
+            "text_ahfQKN": {
+              "type": "text",
+              "name": "Titre",
+              "settings": {
+                "text": "<h3>Questions fréquentes</h3>",
+                "text_style": "h2",
+                "margin_bottom": 10
+              }
+            },
+            "accordions_hpBMaf": {
+              "type": "accordions",
+              "name": "Accordéons",
+              "settings": {
+                "icon": "add",
+                "accordion_padding": "medium"
+              },
+              "blocks": {
+                "accordion_avJA76": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Est-ce que je peux l'installer moi-même ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Oui ! Il se visse à la main sur ton flexible standard, en quelques secondes, sans outil ni plombier. Vérifie simplement l'étanchéité à la première utilisation.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_rNicHT": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Le pommeau filtre-t-il l'eau tout seul ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Ses billes filtrantes intégrées font partie du système de filtration. Pour l'expérience thermale complète (eau enrichie et senteurs coréennes), associe-le à la coque de diffusion et à un filtre thermal vitaminé Onsha.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_p8hkqd": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Quelle senteur choisir pour commencer ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Hinoki si tu cherches le calme, Océan ou Pin pour l'énergie du matin, Fleur de Prunier pour la douceur du soir. Si tu hésites, le Coffret Douche Thermal Coréen (Home) te permet de toutes les découvrir.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_lm7tOt": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "À quelle fréquence remplacer les recharges ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Le pommeau lui-même ne se remplace pas. Le filtre thermal vitaminé se change environ toutes les 3 à 4 semaines, selon ta fréquence de douche.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_avJA76",
+                "accordion_rNicHT",
+                "accordion_p8hkqd",
+                "accordion_lm7tOt"
+              ]
+            }
+          },
+          "block_order": [
+            "text_ahfQKN",
+            "accordions_hpBMaf"
+          ]
+        },
+        "group_NkNJJg": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-2",
+            "width_desktop": 55,
+            "layout_justify_desktop": "center",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "use_global_container_padding": false,
+            "padding_horizontal": 40,
+            "padding_vertical": 50
+          },
+          "blocks": {
+            "icon_MrVn8A": {
+              "type": "icon",
+              "name": "t:icon",
+              "settings": {
+                "icon": "support_agent"
+              }
+            },
+            "text_VLtRib": {
+              "type": "text",
+              "name": "t:title",
+              "settings": {
+                "text": "<h4>Besoin d'aide ?</h4>",
+                "text_style": "h4",
+                "alignment": "center"
+              }
+            },
+            "text_FyFaMj": {
+              "type": "text",
+              "name": "t:text",
+              "settings": {
+                "text": "<p>Écris-nous, on te répond avec plaisir pour choisir le bon système ou la bonne recharge.</p>",
+                "text_style": "paragraph",
+                "alignment": "center",
+                "margin_bottom": 20
+              }
+            },
+            "button_Q3UxFk": {
+              "type": "button",
+              "name": "t:button",
+              "settings": {
+                "link": "shopify://pages/contact",
+                "label": "Nous contacter",
+                "button_shape": "full-width"
+              }
+            }
+          },
+          "block_order": [
+            "icon_MrVn8A",
+            "text_VLtRib",
+            "text_FyFaMj",
+            "button_Q3UxFk"
+          ]
+        }
+      },
+      "block_order": [
+        "group_ampbiX",
+        "group_NkNJJg"
+      ],
+      "name": "t:faq_2",
+      "settings": {
+        "color_scheme_card": "",
+        "layout_flex_direction_desktop": "row",
+        "layout_gap_desktop": 50,
+        "same_as_desktop": false,
+        "layout_flex_direction_mobile": "column-reverse",
+        "layout_gap_mobile": 30,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "videos_pratiques",
+    "la_technologie_onsha",
+    "comment_ca_marche",
+    "home_ou_nomade",
+    "en_situation",
+    "avis",
+    "decouvre_aussi",
+    "faq"
+  ]
+}

@@ -83,12 +83,12 @@ def build():
     cur["type_body_font"] = "montserrat_n4"
     cur["font_from"] = "shopify"
     cur.update(
-        type_size_h1=56,
-        type_size_h2=40,
-        type_size_h3=32,
-        type_size_h4=24,
-        type_size_paragraph=15,
-        type_size_paragraph_mobile=14,
+        type_size_h1="56",
+        type_size_h2="40",
+        type_size_h3="32",
+        type_size_h4="24",
+        type_size_paragraph="15",
+        type_size_paragraph_mobile="14",
         button_primary_font_weight=500,
         # Thin borders + rounded corners (Gisou / Hello Klean)
         general_radius="custom",

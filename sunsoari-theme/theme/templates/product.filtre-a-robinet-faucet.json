@@ -199,52 +199,10 @@
               "disabled": true,
               "static": true,
               "settings": {}
-            },
-            "quantity_breaks": {
-              "type": "_quantity-breaks",
-              "name": "Réduction par quantité",
-              "settings": {
-                "label": "Choisis ton offre :"
-              },
-              "blocks": {
-                "quantity_breaks_item_g4phjF": {
-                  "type": "_quantity-breaks-item",
-                  "settings": {
-                    "discount_type": "none",
-                    "discount_percentage": 0,
-                    "badge_position": "top",
-                    "badge_display": "overlap",
-                    "product_small_title": "filtre",
-                    "product_small_title_plural": "filtres",
-                    "badge_next_to_title": "Filtre seul",
-                    "show_image": false
-                  },
-                  "name": "Filtre seul"
-                },
-                "quantity_breaks_item_rIIhuD": {
-                  "type": "_quantity-breaks-item",
-                  "settings": {
-                    "discount_percentage": 10,
-                    "badge": "6 à 9 mois d'avance",
-                    "badge_position": "top",
-                    "badge_display": "overlap",
-                    "product_small_title": "filtre",
-                    "product_small_title_plural": "filtres",
-                    "badge_next_to_title": "Filtre + Pack 3 sédiments",
-                    "show_image": false
-                  },
-                  "name": "Filtre + Pack 3 sédiments"
-                }
-              },
-              "block_order": [
-                "quantity_breaks_item_g4phjF",
-                "quantity_breaks_item_rIIhuD"
-              ]
             }
           },
           "block_order": [
-            "product_variant_picker_xWC3wF",
-            "quantity_breaks"
+            "product_variant_picker_xWC3wF"
           ]
         },
         "cross_sell_QcpW8C": {

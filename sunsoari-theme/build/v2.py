@@ -150,6 +150,48 @@ def build():
             os.remove(p)
 
 
+NO_QTY_BREAKS = {
+    # combo "filtre + pack 3 sédiments" is not a separate product: no real discount possible
+    "product.filtre-a-robinet-faucet.json",
+    # pack variants (2 / 4 filtres) are already discounted: avoid a double discount
+    "product.filtre-thermal-sans-senteur.json",
+}
+
+
+def drop_quantity_breaks(t):
+    from product_parts import set_quantity_breaks
+    set_quantity_breaks(t["sections"]["main"], None, None)
+
+
+def restore_header():
+    """Header edited by Fanta on 1 Oct (21:39) is the reference; only fix images + 80 € text."""
+    src = os.path.join(os.path.dirname(OUT), "concurrent", "header-group.user-2026-10-01.json")
+    raw = open(src, encoding="utf-8").read()
+    head, h = raw[: raw.index("*/") + 2], json.loads(raw[raw.index("*/") + 2 :])
+    fix = {
+        "coffret-mini-2893257.png": "coffret-mini-9416210.jpg",
+        "260310-SHIFT_Felt_Black_Launch_Cover_Website-03.jpg": "pommeau-de-douche-filtrant-a-vitamine-c-9174486.jpg",
+        "58caeeca-881a-4295-8f44-f33ab4429be8_111e670a-9bc7-427e-a141-70f9d159766f.png": "Copie_de_Copie_de_Hot_Spring_Filter___Shower_Head_03.jpg",
+    }
+
+    def walk_(o):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if isinstance(v, str) and v.startswith("shopify://shop_images/") and v.split("/")[-1] in fix:
+                    o[k] = "shopify://shop_images/" + fix[v.split("/")[-1]]
+                elif isinstance(v, str) and "Livraison offerte dès 100" in v:
+                    o[k] = "<p>Livraison offerte dès 80 € en France métropolitaine</p>"
+                else:
+                    walk_(v)
+        elif isinstance(o, list):
+            for x in o:
+                walk_(x)
+
+    walk_(h)
+    with open(os.path.join(OUT, "sections", "header-group.json"), "w", encoding="utf-8") as f:
+        f.write(head + "\n" + json.dumps(h, ensure_ascii=False, indent=2))
+
+
 def check_images():
     """Clear any image that does not exist in Files or is too small for a large slot."""
     import glob, re
@@ -192,6 +234,12 @@ if __name__ == "__main__":
     build()
     pages.build_v2()
     settings.build()
+    restore_header()
+    for fname in NO_QTY_BREAKS:
+        path = os.path.join(OUT, "templates", fname)
+        t = json.load(open(path, encoding="utf-8"))
+        drop_quantity_breaks(t)
+        save(f"templates/{fname}", t)
     for r in check_images():
         print("image retirée :", *r)
     print("\n".join(sorted(LIVE_NAMES)))

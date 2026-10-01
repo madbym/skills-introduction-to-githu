@@ -99,6 +99,10 @@ def build():
         inputs_border_radius=14,
         container_border_width=1,
         container_borders_thickness=1,
+        # Logo chosen by Fanta on 1 Oct
+        logo="shopify://shop_images/Sunsoari_-_6.png",
+        logo_inverse="shopify://shop_images/Sunsoari_-_6.png",
+        favicon="shopify://shop_images/Sunsoari_-_6.png",
         # Links to the real Sunsoari accounts
         instagram_url="https://www.instagram.com/sunsoari/",
     )

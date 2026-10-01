@@ -200,63 +200,6 @@
               "static": true,
               "settings": {}
             },
-            "quantity_breaks": {
-              "type": "_quantity-breaks",
-              "name": "Réduction par quantité",
-              "settings": {
-                "label": "Choisis ta quantité :"
-              },
-              "blocks": {
-                "quantity_breaks_item_74q69d": {
-                  "type": "_quantity-breaks-item",
-                  "settings": {
-                    "discount_type": "none",
-                    "discount_percentage": 0,
-                    "badge_position": "top",
-                    "badge_display": "overlap",
-                    "product_small_title": "filtre",
-                    "product_small_title_plural": "filtre",
-                    "show_image": false
-                  },
-                  "name": "1 filtre"
-                },
-                "quantity_breaks_item_Tcada4": {
-                  "type": "_quantity-breaks-item",
-                  "settings": {
-                    "quantity": 2,
-                    "discount_percentage": 5,
-                    "badge": "-5 %",
-                    "badge_position": "top",
-                    "badge_display": "overlap",
-                    "product_small_title": "filtre",
-                    "product_small_title_plural": "filtres",
-                    "show_unit_price": true,
-                    "show_image": false
-                  },
-                  "name": "2 filtres"
-                },
-                "quantity_breaks_item_PR0Nfy": {
-                  "type": "_quantity-breaks-item",
-                  "settings": {
-                    "quantity": 4,
-                    "discount_percentage": 10,
-                    "badge": "-10 %",
-                    "badge_position": "top",
-                    "badge_display": "overlap",
-                    "product_small_title": "filtre",
-                    "product_small_title_plural": "filtres",
-                    "show_unit_price": true,
-                    "show_image": false
-                  },
-                  "name": "4 filtres"
-                }
-              },
-              "block_order": [
-                "quantity_breaks_item_74q69d",
-                "quantity_breaks_item_Tcada4",
-                "quantity_breaks_item_PR0Nfy"
-              ]
-            },
             "toggle_cross_sell": {
               "type": "_toggle-cross-sell",
               "name": "t:toggle_cross_sell",
@@ -271,7 +214,6 @@
           },
           "block_order": [
             "product_variant_picker_xWC3wF",
-            "quantity_breaks",
             "toggle_cross_sell"
           ]
         },

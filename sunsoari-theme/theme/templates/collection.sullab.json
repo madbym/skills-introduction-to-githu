@@ -8,7 +8,7 @@
           "name": "t:image_banner",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/filtre-a-robinet-faucet-1360756.jpg",
+            "image": "",
             "source": "uploaded",
             "color_scheme": "scheme-3",
             "banner_height": "very_small",

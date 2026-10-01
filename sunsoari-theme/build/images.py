@@ -4,11 +4,13 @@ Only file names that clearly identify their content (or that are attached to the
 right product) are used, so that no image ends up on the wrong product.
 """
 
+# Hinoki.jpg / Ocean.jpg / Pin.jpg no longer exist in Files: use the HD
+# product photos of each scent (2048 px) instead.
 ONSHA_SCENTS = {
-    "Hinoki": "Hinoki.jpg",
-    "Océan": "Ocean.jpg",
-    "Pin": "Pin.jpg",
-    "Fleur de Prunier": "Onsha_Fleur_de_prunier.png",
+    "Hinoki": "onsha-filtre-thermal-vitamine-5679506.jpg",
+    "Océan": "onsha-filtre-thermal-vitamine-7252132.jpg",
+    "Pin": "onsha-filtre-thermal-vitamine-8292746.jpg",
+    "Fleur de Prunier": "onsha-filtre-vitamine-9910937.jpg",
 }
 ONSHA_FILTER_BY_SCENT = {
     "Hinoki": "onsha-filtre-thermal-vitamine-5679506.jpg",
@@ -130,11 +132,13 @@ SHIFT_POMMEAU_COLORS = {
     "Vert": "SHiFT-pommeau-Green_vintage_1.png",
 }
 SHIFT_COLLECTIONS = {
-    "Fruits Therapy": "shift-6-capsules-aromatherapie-vitamine-c-2851269.png",
-    "Discovery": "shift-6-capsules-aromatherapie-vitamine-c-1086856.jpg",
+    # Fruits Therapy (630 px) and Cherry Blossom (300 px) only exist in low
+    # resolution: left empty rather than blurry.
+    "Fruits Therapy": None,
+    "Discovery": "Shift--_capsule_Discovery_1.jpg",
     "Patchouli & Rose": "shift-6-capsules-aromatherapie-vitamine-c-1755093.png",
-    "Cherry Blossom": "shift-6-capsules-aromatherapie-vitamine-c-3834627.jpg",
-    "Hinoki Spring": "shift-6-capsules-aromatherapie-vitamine-c-4851165.png",
+    "Cherry Blossom": None,
+    "Hinoki Spring": "Shift--_capsule_hinoki_1.png",
 }
 SHIFT_STEPS = {
     "hose_1": "HOSE-STEP_01_IMAGE.jpg",
@@ -164,7 +168,7 @@ LIFESTYLE = {
     "onsha_hot_spring": "Copie_de_Copie_de_Hot_Spring_Filter___Shower_Head_03.jpg",
     "onsha_wide": "IMG_0354.jpg",
     "onsha_kit": "onsha-kit-decouverte-douche-thermale-voyage-2117697.png",
-    "shift_cover": "260310-SHIFT_Felt_Black_Launch_Cover_Website-03.jpg",
+    "shift_cover": "pommeau-de-douche-filtrant-a-vitamine-c-9174486.jpg",
     "shift_product": "241011-SHIFT_Product_Cover-04_2.jpg",
     "shift_detail": "Detail-page_1.webp",
 }

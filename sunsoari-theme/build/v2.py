@@ -63,6 +63,23 @@ BOX = {
 }
 
 
+# HD photo (>= 990 px) for "Comment ça marche": the supplier GIFs are only 450-550 px high.
+STEP_PHOTO = {
+    "product.pack-3-sediments-pure-wat.json": "2SedimentFilter-02.webp",
+    "product.kit-decouverte-home.json": "onsha-set-decouverte-home-2842111.jpg",
+    "product.box-rituel-douche-complet.json": "shift-coffret-douche-aromatherapie-3669659.png",
+    "product.coffret-home.json": "coffret-home-8881318.jpg",
+    "product.coffret-mini.json": "coffret-mini-9416210.jpg",
+    "product.filtre-vitamine.json": "onsha-filtre-thermal-vitamine-7252132.jpg",
+    "product.coque-de-diffusion.json": "Copie_de_Copie_de_Hot_Spring_Filter___Shower_Head_03.jpg",
+    "product.capsule-vitaminee-2.json": "capsule-vitaminee-5066640.jpg",
+    "product.rituel-decouverte.json": "onsha-set-decouverte-nomade-6470897.jpg",
+    "product.pommeau-de-douche-filtran-2.json": "pommeau-de-douche-filtrant-a-vitamine-c-9174486.jpg",
+    "product.douchette-filtrante.json": "onsha-douchette-filtrante-8605939.jpg",
+    "product.pack-6-capsules-vitaminee.json": "7VitaminCapsule-04-2.jpg",
+}
+
+
 def mini_card(handle, title):
     return {
         "type": "product-mini-card",
@@ -122,6 +139,9 @@ def build():
             names = ["Découvrez votre coffret", "Installez votre produit", "Remplacez votre recharge"]
             set_tabs(videos, names[-n:] if name not in BOX else names[:n])
             set_text(find(videos, by_type("text")), "<h2>Les gestes en vidéo</h2>")
+        if fname in STEP_PHOTO and "comment_ca_marche" in t["sections"]:
+            im = find(t["sections"]["comment_ca_marche"], by_type("image"))
+            im["settings"]["image"] = "shopify://shop_images/" + STEP_PHOTO[fname]
         save(f"templates/{fname}", t)
     # keep only the files the products actually use
     for name in set(LIVE_NAMES.values()):
@@ -130,10 +150,48 @@ def build():
             os.remove(p)
 
 
+def check_images():
+    """Clear any image that does not exist in Files or is too small for a large slot."""
+    import glob, re
+    files = json.load(open(os.path.join(os.path.dirname(__file__), "shop_files.json")))
+    report = []
+    for path in glob.glob(os.path.join(OUT, "**", "*.json"), recursive=True):
+        raw = open(path, encoding="utf-8").read()
+        head = raw[: raw.index("*/") + 2] + "\n" if raw.startswith("/*") else ""
+        data = json.loads(raw[len(head):] if head else raw)
+
+        def walk(node):
+            if isinstance(node, dict):
+                for k, v in list(node.items()):
+                    if isinstance(v, str) and v.startswith("shopify://shop_images/"):
+                        name = v.split("/")[-1]
+                        if name.endswith(".svg") or name.startswith("Nouveau_projet"):
+                            continue
+                        size = files.get(name)
+                        if not size:
+                            node[k] = ""
+                            report.append(("absente", name, os.path.basename(path)))
+                        elif k == "image" and node.get("card_height") and min(size[:2]) < 900:
+                            node[k] = ""
+                            report.append(("trop petite", name, os.path.basename(path)))
+                    else:
+                        walk(v)
+            elif isinstance(node, list):
+                for x in node:
+                    walk(x)
+
+        walk(data)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(head + json.dumps(data, ensure_ascii=False, indent=2))
+    return report
+
+
 if __name__ == "__main__":
     import pages, settings
 
     build()
     pages.build_v2()
     settings.build()
+    for r in check_images():
+        print("image retirée :", *r)
     print("\n".join(sorted(LIVE_NAMES)))

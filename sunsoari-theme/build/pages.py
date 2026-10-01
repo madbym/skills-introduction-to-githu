@@ -180,7 +180,9 @@ def collection(banner_image=None, title=None, text=None, extra=None):
     banner_key = "image_banner_eJfHLF"
     banner = s[banner_key]
     b = find(banner, by_type("_image-banner"))
-    if banner_image:
+    if banner_image == "":
+        b["settings"]["image"] = ""  # no HD image available: plain colour banner
+    elif banner_image:
         b["settings"]["image"] = img(banner_image)
     else:
         b["settings"]["image"] = img(LIFESTYLE["onsha_hot_spring"])
@@ -240,11 +242,11 @@ def collections():
                 "Le filtre se change environ tous les 2 à 3 mois, la capsule quand elle est vide. Les recharges SHIFT sont compatibles "
                 "uniquement avec le pommeau SHIFT.",
             ],
-            SHIFT_POMMEAU_COLORS["Blanc"], "Découvrir le coffret complet", "shopify://products/shift-coffret-douche-aromatherapie"))],
+            "pommeau-de-douche-filtrant-a-vitamine-c-1108548.jpg", "Découvrir le coffret complet", "shopify://products/shift-coffret-douche-aromatherapie"))],
     ))
 
     save("templates/collection.sullab.json", collection(
-        PRODUCT["robinet"][0], "Sullab",
+        "", "Sullab",
         "La filtration au robinet du lavabo, sans outil ni plombier.",
         [("histoire_sullab", brand_story(
             "La base de ton rituel visage",
@@ -284,7 +286,7 @@ def header():
     group = find(mega, by_type("_header-megamenu-group"))
     put(group, [
         image_card(PRODUCT["coffret_home"][0], "Rituel Home", "shopify://collections/onsha"),
-        image_card(PRODUCT["coffret_nomade"][0], "Rituel Nomade", "shopify://collections/onsha"),
+        image_card(PRODUCT["coffret_nomade"][1], "Rituel Nomade", "shopify://collections/onsha"),
         image_card(LIFESTYLE["shift_cover"], "SHIFT", "shopify://collections/shift"),
     ])
     save("sections/header-group.json", h)

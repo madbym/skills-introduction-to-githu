@@ -1551,7 +1551,7 @@
                   "name": "t:image",
                   "settings": {
                     "show_on_display": "desktop_and_mobile",
-                    "image": "shopify://shop_images/Hinoki.jpg",
+                    "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-5679506.jpg",
                     "show_placeholder": true,
                     "link": "",
                     "image_ratio": "landscape",
@@ -1569,7 +1569,7 @@
                   "name": "t:image",
                   "settings": {
                     "show_on_display": "desktop_and_mobile",
-                    "image": "shopify://shop_images/Ocean.jpg",
+                    "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-7252132.jpg",
                     "show_placeholder": true,
                     "link": "",
                     "image_ratio": "landscape",
@@ -1587,7 +1587,7 @@
                   "name": "t:image",
                   "settings": {
                     "show_on_display": "desktop_and_mobile",
-                    "image": "shopify://shop_images/Onsha_Fleur_de_prunier.png",
+                    "image": "shopify://shop_images/onsha-filtre-vitamine-9910937.jpg",
                     "show_placeholder": true,
                     "link": "",
                     "image_ratio": "landscape",
@@ -2065,7 +2065,7 @@
               "settings": {
                 "show_on_display": "desktop_and_mobile",
                 "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
-                "image": "shopify://shop_images/260310-SHIFT_Felt_Black_Launch_Cover_Website-03.jpg",
+                "image": "shopify://shop_images/pommeau-de-douche-filtrant-a-vitamine-c-9174486.jpg",
                 "card_height": "medium",
                 "card_height_mobile": "medium",
                 "card_link": "shopify://collections/shift",
@@ -2117,7 +2117,7 @@
               "settings": {
                 "show_on_display": "desktop_and_mobile",
                 "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
-                "image": "shopify://shop_images/filtre-a-robinet-faucet-1360756.jpg",
+                "image": "",
                 "card_height": "medium",
                 "card_height_mobile": "medium",
                 "card_link": "shopify://collections/sullab",

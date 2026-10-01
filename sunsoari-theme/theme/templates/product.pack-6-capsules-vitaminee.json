@@ -660,9 +660,8 @@
                 "image_xICX7U": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-2851269.png"
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
                   }
                 },
                 "text_DfO7ri": {
@@ -696,7 +695,7 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-1086856.jpg"
+                    "image": "shopify://shop_images/Shift--_capsule_Discovery_1.jpg"
                   }
                 },
                 "text_cs6XQi": {
@@ -762,9 +761,8 @@
                 "image_9Fg30G": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 100,
-                    "image_width_mobile": 100,
-                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-3834627.jpg"
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
                   }
                 },
                 "text_E0Sj2N": {
@@ -798,7 +796,7 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-4851165.png"
+                    "image": "shopify://shop_images/Shift--_capsule_hinoki_1.png"
                   }
                 },
                 "text_u04r8x": {
@@ -878,7 +876,7 @@
               "settings": {
                 "image_width_desktop": 80,
                 "image_width_mobile": 80,
-                "image": "shopify://shop_images/CAPSULE-STEP_01_IMAGE.jpg"
+                "image": "shopify://shop_images/7VitaminCapsule-04-2.jpg"
               }
             },
             "group_d7dnGb": {

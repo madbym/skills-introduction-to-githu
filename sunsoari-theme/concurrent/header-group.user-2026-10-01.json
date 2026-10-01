@@ -227,7 +227,7 @@
                       "name": "t:image_card",
                       "settings": {
                         "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
-                        "image": "shopify://shop_images/coffret-mini-9416210.jpg",
+                        "image": "shopify://shop_images/coffret-mini-2893257.png",
                         "card_height": "medium",
                         "card_height_mobile": "medium",
                         "card_link": "shopify://products/coffret-mini",
@@ -254,7 +254,7 @@
                       "name": "t:image_card",
                       "settings": {
                         "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
-                        "image": "shopify://shop_images/pommeau-de-douche-filtrant-a-vitamine-c-9174486.jpg",
+                        "image": "shopify://shop_images/260310-SHIFT_Felt_Black_Launch_Cover_Website-03.jpg",
                         "card_height": "medium",
                         "card_height_mobile": "medium",
                         "card_link": "shopify://collections/shift",
@@ -316,7 +316,7 @@
                   "type": "image-card",
                   "name": "t:image_card",
                   "settings": {
-                    "image": "shopify://shop_images/Copie_de_Copie_de_Hot_Spring_Filter___Shower_Head_03.jpg",
+                    "image": "shopify://shop_images/58caeeca-881a-4295-8f44-f33ab4429be8_111e670a-9bc7-427e-a141-70f9d159766f.png",
                     "card_height": "small",
                     "card_link": "shopify://collections/all",
                     "image_filter_color": "#032B59",

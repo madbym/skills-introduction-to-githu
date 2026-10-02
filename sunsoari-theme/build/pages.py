@@ -67,12 +67,13 @@ def home():
     hero = sec["custom_section_H6XpXt"]
     top, cards, *_ = children(hero)
     tx = find_all(top, by_type("text"))
-    set_text(tx[0], "<h1>Ton rituel beauté commence sous la douche</h1>")
-    set_text(tx[1], "<p>Filtres de douche, recharges et capsules sensorielles venus de Corée, choisis avec exigence. "
-                    "Une douche plus douce, des senteurs qui apaisent : une première étape simple pour prendre soin de toi.</p>")
+    set_text(tx[0], "<h1>Nouveau : le Coffret Douche & Aromathérapie SHIFT</h1>")
+    set_text(tx[1], "<p>Le système SHIFT complet, prêt à installer : pommeau filtrant, flexible 2 m, 3 filtres Pure Water "
+                    "et 6 capsules soin & aromathérapie. L'eau est d'abord filtrée, puis parfumée par la capsule de ton choix. "
+                    "Choisis la couleur de ton pommeau.</p>")
     button(find(top, by_type("button")), "Découvrir nos rituels", "shopify://collections/filtre-de-douche")
     # first screen: product alone, no text on the photo (Drive packshot)
-    set_image(find(top, by_type("image")), "onsha-filtre-thermal-ocean-packshot.jpg")
+    set_image(find(top, by_type("image")), PRODUCT["shift_coffret_aroma"][0])
 
     home_card, nomade_card, marquee_group = children(cards)
     for card, (title, body, badges, image, link) in (
@@ -94,7 +95,7 @@ def home():
         set_text(it, text)
 
     # Hero button leads to the pack builder (Paalm "build your routine")
-    button(find(top, by_type("button")), "Composer mon rituel", "shopify://pages/composez-votre-rituel")
+    button(find(top, by_type("button")), "Découvrir le coffret", "shopify://products/shift-coffret-douche-aromatherapie")
     for card, brand in ((home_card, "Onsha · Home"), (nomade_card, "Onsha · Nomade")):
         bdg = find_all(card, by_type("_badge"))
         if bdg:

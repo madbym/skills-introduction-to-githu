@@ -78,7 +78,7 @@
                   "name": "t:title",
                   "settings": {
                     "show_on_display": "desktop_and_mobile",
-                    "text": "<h1>Ton rituel beauté commence sous la douche</h1>",
+                    "text": "<h1>Nouveau : le Coffret Douche & Aromathérapie SHIFT</h1>",
                     "text_style": "h4",
                     "paragraph_font_size": "normal",
                     "font_weight": 400,
@@ -101,7 +101,7 @@
                   "name": "t:text",
                   "settings": {
                     "show_on_display": "desktop_and_mobile",
-                    "text": "<p>Filtres de douche, recharges et capsules sensorielles venus de Corée, choisis avec exigence. Une douche plus douce, des senteurs qui apaisent : une première étape simple pour prendre soin de toi.</p>",
+                    "text": "<p>Le système SHIFT complet, prêt à installer : pommeau filtrant, flexible 2 m, 3 filtres Pure Water et 6 capsules soin & aromathérapie. L'eau est d'abord filtrée, puis parfumée par la capsule de ton choix. Choisis la couleur de ton pommeau.</p>",
                     "text_style": "paragraph",
                     "paragraph_font_size": "normal",
                     "font_weight": 400,
@@ -124,9 +124,9 @@
                   "name": "Bouton",
                   "settings": {
                     "show_on_display": "desktop_and_mobile",
-                    "link": "shopify://pages/composez-votre-rituel",
+                    "link": "shopify://products/shift-coffret-douche-aromatherapie",
                     "open_in_new_tab": false,
-                    "label": "Composer mon rituel",
+                    "label": "Découvrir le coffret",
                     "button_style": "primary",
                     "button_shape": "default",
                     "icon": "arrow_forward",
@@ -150,7 +150,7 @@
               "name": "t:image",
               "settings": {
                 "show_on_display": "desktop_and_mobile",
-                "image": "shopify://shop_images/onsha-filtre-thermal-ocean-packshot.jpg",
+                "image": "shopify://shop_images/shift-coffret-douche-aromatherapie-3669659.png",
                 "show_placeholder": true,
                 "link": "",
                 "image_ratio": "landscape",

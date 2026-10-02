@@ -37,8 +37,9 @@ PRODUCT = {
         "onsha-douchette-filtrante-5144667.png",
         "onsha-douchette-filtrante-1474368.png",
         "onsha-douchette-filtrante-8605939.jpg",
-        "onsha-douchette-filtrante-5352302.jpg",
-        "onsha-douchette-filtrante-2714649.jpg",
+        # 5352302 / 2714649 removed: infographics with unproven claims (rust, heavy metals)
+        "onsha-douchette-filtrante-5144667.png",
+        "onsha-coque-diffusion-nomade-1.jpg",
     ],
     "sediment_douchette": [
         "onsha-filtre-sediment-recharge-9248658.jpg",

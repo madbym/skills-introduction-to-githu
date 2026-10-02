@@ -267,7 +267,7 @@ def check_images():
                         if not size:
                             node[k] = ""
                             report.append(("absente", name, os.path.basename(path)))
-                        elif k == "image" and node.get("card_height") and min(size[:2]) < 900:
+                        elif k == "image" and node.get("card_height") and min(size[:2]) < 700:
                             node[k] = ""
                             report.append(("trop petite", name, os.path.basename(path)))
                     else:

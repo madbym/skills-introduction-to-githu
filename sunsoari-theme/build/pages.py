@@ -92,54 +92,92 @@ def home():
     ]):
         set_text(it, text)
 
-    # 2 · Nos marques (image cards, Kylie / PERS style)
+    # Hero button leads to the pack builder (Paalm "build your routine")
+    button(find(top, by_type("button")), "Composer mon rituel", "shopify://pages/composez-votre-rituel")
+    for card, brand in ((home_card, "Onsha · Home"), (nomade_card, "Onsha · Nomade")):
+        bdg = find_all(card, by_type("_badge"))
+        if bdg:
+            bdg[0]["settings"]["text"] = brand
+
+    # 2 · Nos marques: one clear role per brand
     brands = copy.deepcopy(sec["custom_section_KAQ8dw"])
-    brands["settings"].update(layout_flex_direction_desktop="column", padding_top=40, padding_bottom=40)
+    brands["settings"].update(layout_flex_direction_desktop="column", padding_top=50, padding_bottom=40)
     title = copy.deepcopy(find(sec["custom_section_qetdex"], by_type("text")))
-    set_text(title, "<h2>Nos marques</h2>")
+    set_text(title, "<h2>Trois marques, trois gestes</h2>")
     grid = copy.deepcopy(children(cards)[0])
     grid["settings"].update(wrap_in_card=False, card_link="", layout_type="grid", layout_grid_columns_desktop=3,
                             layout_grid_columns_mobile=1, padding_horizontal=0, padding_vertical=0,
                             padding_horizontal_mobile=0, padding_vertical_mobile=0, layout_gap_desktop=16)
     put(grid, [
-        image_card(LIFESTYLE["onsha_wide"], "Onsha", "shopify://collections/onsha", "Le rituel thermal coréen · Home & Nomade"),
-        image_card(LIFESTYLE["shift_cover"], "SHIFT", "shopify://collections/shift", "Pommeaux colorés & aromathérapie"),
-        image_card(PRODUCT["robinet"][0], "Sullab", "shopify://collections/sullab", "La filtration au robinet"),
+        image_card(LIFESTYLE["onsha_wide"], "Onsha", "shopify://collections/onsha",
+                   "Filtres de douche thermaux · Home & Nomade"),
+        image_card(LIFESTYLE["shift_cover"], "SHIFT", "shopify://collections/shift",
+                   "Pommeau filtrant & capsules d'aromathérapie"),
+        image_card(PRODUCT["robinet"][0], "Sullab", "shopify://collections/sullab",
+                   "Filtre robinet & soins du visage"),
     ])
     put(brands, [title, grid])
     brands["name"] = "Nos marques"
 
-    # 3 · Best-sellers slider
+    # 3 · Composez ton rituel (Paalm bundle builder teaser)
+    builder = brand_story(
+        "Compose ton rituel",
+        [
+            "Choisis ton système, tes recharges et tes senteurs, puis ajoute tout au panier en une fois.",
+            "Onsha, SHIFT ou Sullab : chaque étape t'indique ce qui est compatible, pour ne pas te tromper de recharge.",
+            "<strong>Livraison offerte dès 80 € d'achat.</strong>",
+        ],
+        "onsha-set-decouverte-home-6780214.jpg", "Composer mon rituel", "shopify://pages/composez-votre-rituel")
+    builder["settings"].update(color_scheme="scheme-2", padding_top=50, padding_bottom=50)
+    builder["name"] = "Compose ton rituel"
+
+    # 4 · Coffrets slider
     best = sec["collection_featured_9fdFHq"]
     best["settings"].update(collection="kit-de-douche", color_scheme="scheme-3")
     set_text(find(best, by_type("text")), "<h2>Les coffrets pour commencer</h2>")
-    button(find(best, by_type("button")), "Voir tous les rituels", "shopify://collections/filtre-de-douche")
+    button(find(best, by_type("button")), "Voir tous les coffrets", "shopify://collections/kit-de-douche")
 
-    # 4 · L'eau, première étape (education, cautious wording)
+    # 5 · One spotlight per brand (Paalm "shop by range")
+    def brand_slider(handle, heading, label):
+        sl = copy.deepcopy(best)
+        sl["settings"].update(collection=handle, color_scheme="")
+        set_text(find(sl, by_type("text")), f"<h2>{heading}</h2>")
+        button(find(sl, by_type("button")), label, f"shopify://collections/{handle}")
+        return sl
+
+    onsha = brand_slider("onsha", "Onsha · le rituel thermal coréen", "Tout l'univers Onsha")
+    shift = brand_slider("shift", "SHIFT · filtrer, puis parfumer", "Tout l'univers SHIFT")
+    sullab = brand_story(
+        "Sullab · le rituel du lavabo",
+        [
+            "Le filtre robinet Sullab se fixe sur la plupart des robinets standard, sans outil ni plombier. "
+            "Il retient une partie des sédiments et impuretés visibles de l'eau que tu utilises pour ton visage et tes mains.",
+            "Sullab, c'est notre univers dédié au lavabo et aux soins du visage.",
+        ],
+        PRODUCT["robinet"][2], "Découvrir Sullab", "shopify://collections/sullab")
+    # text first, image second: alternates with the Sunsoari story below
+    sullab["block_order"].reverse()
+    sullab["name"] = "Sullab"
+
+    # 6 · L'eau, première étape (education, cautious wording)
     edu = sec["custom_section_iHWWPc"]
     left, right = children(edu)
     find(left, by_type("_badge"))["settings"]["text"] = "Le rituel Sunsoari"
     set_text(texts(left)[0], "<h2>Et si ta routine commençait par l'eau ?</h2>")
     points = [g for g in children(left) if g["type"] == "group"]
     for g, (h, p) in zip(points, [
-        ("Un filtre, directement sur ta douche", "Pommeau, douchette ou robinet : les filtres retiennent une partie des sédiments et impuretés de l'eau avant qu'elle n'arrive sur ta peau et tes cheveux."),
-        ("Un moment sensoriel", "Capsules et filtres thermaux diffusent une senteur inspirée des sources thermales coréennes. Tu choisis ton humeur : calme, fraîcheur, énergie ou douceur."),
+        ("Un filtre, directement sur ta douche ou ton robinet", "Pommeau, douchette ou robinet : les filtres retiennent une partie des sédiments et impuretés de l'eau avant qu'elle n'arrive sur ta peau et tes cheveux."),
+        ("Un moment sensoriel", "Capsules et filtres thermaux diffusent une senteur dans l'eau de ta douche. Tu choisis ton humeur : calme, fraîcheur, énergie ou douceur."),
     ]):
         tt = find_all(g, by_type("text"))
         set_text(tt[0], f"<p><strong>{h}</strong></p>")
         set_text(tt[1], f"<p>{p}</p>")
-    button(find(left, by_type("button")), "Comprendre les filtres", "shopify://collections/filtre-de-douche")
+    button(find(left, by_type("button")), "Comprendre les filtres", "shopify://pages/questions-frequentes")
     imgs = find_all(right, by_type("image"))
     for b, name in zip(imgs, [LIFESTYLE["onsha_kit"], ONSHA_SCENTS["Hinoki"], ONSHA_SCENTS["Océan"], ONSHA_SCENTS["Fleur de Prunier"]]):
         set_image(b, name)
 
-    # 5 · Recharges slider (copy of best-sellers)
-    refills = copy.deepcopy(best)
-    refills["settings"].update(collection="recharge-filtre", color_scheme="")
-    set_text(find(refills, by_type("text")), "<h2>Tes recharges, au bon format</h2>")
-    button(find(refills, by_type("button")), "Toutes les recharges", "shopify://collections/recharge-filtre")
-
-    # 6 · Notre histoire
+    # 7 · Notre histoire
     story = sec["custom_section_KAQ8dw"]
     set_image(find(story, by_type("image")), PRODUCT["set_home"][0])
     st = find_all(story, by_type("text"))
@@ -147,19 +185,18 @@ def home():
     set_text(st[1], "<p><strong>Sun</strong> pour la lumière et la chaleur, <strong>So</strong>, « maison » en bambara, "
                     "et <strong>Soari</strong>, le prénom d'un petit garçon. Sūnsoari est née de deux sœurs et d'une histoire de famille, "
                     "de transmission et de joie.</p><p>Nous sélectionnons des rituels de soin inspirés d'Afrique et d'Asie, avec une exigence simple : "
-                    "des produits que nous aimons, qui tiennent leurs promesses et que nous expliquons honnêtement.</p>")
+                    "des produits que nous aimons et que nous expliquons honnêtement.</p>")
     button(find(story, by_type("button")), "Notre univers", "shopify://pages/a-propos")
 
-    # 7 · Newsletter
+    # 8 · Newsletter
     nl = sec["custom_section_qetdex"]
     nt = find_all(nl, by_type("text"))
     set_text(nt[0], "<h2>Rejoins la maison Sūnsoari</h2>")
     set_text(nt[1], "<p>Conseils rituels, nouveautés et coulisses de la marque, sans spam.</p>")
 
-    t["sections"]["nos_marques"] = brands
-    t["sections"]["recharges"] = refills
-    t["order"] = ["custom_section_H6XpXt", "nos_marques", "collection_featured_9fdFHq", "custom_section_iHWWPc",
-                  "recharges", "custom_section_KAQ8dw", "custom_section_qetdex"]
+    sec.update(nos_marques=brands, compose_ton_rituel=builder, onsha=onsha, shift=shift, sullab=sullab)
+    t["order"] = ["custom_section_H6XpXt", "nos_marques", "compose_ton_rituel", "collection_featured_9fdFHq",
+                  "onsha", "shift", "sullab", "custom_section_iHWWPc", "custom_section_KAQ8dw", "custom_section_qetdex"]
     save("templates/index.json", t)
 
 
@@ -341,17 +378,26 @@ def builder_page():
                 "blocks": {
                     "cat_systemes": {"type": "category", "settings": {
                         "label": "1 · Mon système", "collection": "douchette",
-                        "note": "Home : pommeau + coque + filtres. Nomade : douchette + capsules. Les recharges Home et Nomade ne sont pas interchangeables."}},
+                        "note": "Onsha Home : pommeau + filtres thermaux. Onsha Nomade : douchette + capsules. SHIFT : pommeau + filtres Pure Water + capsules. Les recharges ne sont pas interchangeables d'un système à l'autre."}},
                     "cat_recharges": {"type": "category", "settings": {
                         "label": "2 · Mes recharges", "collection": "recharge-filtre",
                         "note": "Choisis les recharges de ton système : filtres thermaux pour Home, capsules pour Nomade, Pure Water et capsules pour SHIFT."}},
                     "cat_capsules": {"type": "category", "settings": {
                         "label": "3 · Mes senteurs", "collection": "capsule-vitamine", "note": ""}},
+                    "cat_sullab": {"type": "category", "settings": {
+                        "label": "4 · Mon lavabo · Sullab", "collection": "sullab",
+                        "note": "Le filtre robinet Sullab, pour l'eau de ton rituel visage."}},
                     "cat_accessoires": {"type": "category", "settings": {
-                        "label": "4 · Mes accessoires", "collection": "accessoires", "note": ""}},
+                        "label": "5 · Mes accessoires", "collection": "accessoires", "note": ""}},
                 },
-                "block_order": ["cat_systemes", "cat_recharges", "cat_capsules", "cat_accessoires"],
-                "settings": {},
+                "block_order": ["cat_systemes", "cat_recharges", "cat_capsules", "cat_sullab", "cat_accessoires"],
+                "settings": {
+                    "eyebrow": "Onsha · SHIFT · Sullab",
+                    "heading": "Compose ton rituel",
+                    "text": "<p>Choisis ton système, tes recharges et tes senteurs : ton rituel se construit à droite, "
+                            "puis s'ajoute au panier en une fois. Livraison offerte dès 80 € d'achat.</p>",
+                    "legal": "Les remises en vigueur s'appliquent automatiquement au paiement.",
+                },
             }
         },
         "order": ["rituel"],

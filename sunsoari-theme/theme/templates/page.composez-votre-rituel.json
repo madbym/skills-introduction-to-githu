@@ -8,7 +8,7 @@
           "settings": {
             "label": "1 · Mon système",
             "collection": "douchette",
-            "note": "Home : pommeau + coque + filtres. Nomade : douchette + capsules. Les recharges Home et Nomade ne sont pas interchangeables."
+            "note": "Onsha Home : pommeau + filtres thermaux. Onsha Nomade : douchette + capsules. SHIFT : pommeau + filtres Pure Water + capsules. Les recharges ne sont pas interchangeables d'un système à l'autre."
           }
         },
         "cat_recharges": {
@@ -27,10 +27,18 @@
             "note": ""
           }
         },
+        "cat_sullab": {
+          "type": "category",
+          "settings": {
+            "label": "4 · Mon lavabo · Sullab",
+            "collection": "sullab",
+            "note": "Le filtre robinet Sullab, pour l'eau de ton rituel visage."
+          }
+        },
         "cat_accessoires": {
           "type": "category",
           "settings": {
-            "label": "4 · Mes accessoires",
+            "label": "5 · Mes accessoires",
             "collection": "accessoires",
             "note": ""
           }
@@ -40,9 +48,15 @@
         "cat_systemes",
         "cat_recharges",
         "cat_capsules",
+        "cat_sullab",
         "cat_accessoires"
       ],
-      "settings": {}
+      "settings": {
+        "eyebrow": "Onsha · SHIFT · Sullab",
+        "heading": "Compose ton rituel",
+        "text": "<p>Choisis ton système, tes recharges et tes senteurs : ton rituel se construit à droite, puis s'ajoute au panier en une fois. Livraison offerte dès 80 € d'achat.</p>",
+        "legal": "Les remises en vigueur s'appliquent automatiquement au paiement."
+      }
     }
   },
   "order": [

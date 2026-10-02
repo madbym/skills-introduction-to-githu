@@ -151,7 +151,8 @@ def build():
 
 
 # On 1 Oct (evening) the products were switched to "ss-*" template names.
-# The same pages are saved under those names too, so both work.
+# The pages are saved under those names only: an unused template is previewed
+# in the editor with a random product, which mixes Onsha and SHIFT content.
 SS_NAMES = {
     "product.ss-onsha-pommeau.json": "product.json",
     "product.ss-onsha-douchette.json": "product.douchette-filtrante.json",
@@ -178,6 +179,8 @@ def copy_ss_names():
     d = os.path.join(OUT, "templates")
     for new, src in SS_NAMES.items():
         shutil.copyfile(os.path.join(d, src), os.path.join(d, new))
+        if src != "product.json":
+            os.remove(os.path.join(d, src))
 
 
 def neutral_default():

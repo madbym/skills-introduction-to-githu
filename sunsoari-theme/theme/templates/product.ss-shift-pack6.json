@@ -1,0 +1,1344 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "group_VW4Hi3": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_justify_desktop": "space-between",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "column-reverse"
+          },
+          "blocks": {
+            "badges_i9hDat": {
+              "type": "badges",
+              "name": "t:badges",
+              "settings": {},
+              "blocks": {
+                "badge_VEGRNK": {
+                  "type": "_badge",
+                  "settings": {
+                    "text": "LES RECHARGES SENSORIELLES",
+                    "badge_style": "secondary"
+                  }
+                }
+              },
+              "block_order": [
+                "badge_VEGRNK"
+              ]
+            }
+          },
+          "block_order": [
+            "badges_i9hDat"
+          ]
+        },
+        "text_zLqMQw": {
+          "type": "text",
+          "name": "Titre",
+          "settings": {
+            "text": "<p>{{ product.title }}</p>",
+            "text_style": "h3"
+          }
+        },
+        "text_yQdqF8": {
+          "type": "text",
+          "name": "Texte",
+          "settings": {
+            "text": "<p>Six capsules de soin et d'aromathérapie SHIFT, chacune une expérience sensorielle à découvrir.</p>",
+            "text_style": "paragraph",
+            "paragraph_font_size": "large"
+          }
+        },
+        "price_yEeMeb": {
+          "type": "product-price",
+          "name": "t:price",
+          "settings": {
+            "product": "{{ closest.product }}",
+            "sales_badge": "percentage",
+            "show_sales_badge_text": true,
+            "text_style": "h6"
+          }
+        },
+        "group_pills": {
+          "type": "group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_wrap_desktop": "wrap",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "row",
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "name": "Points forts",
+          "blocks": {
+            "icon_with_text_yQFXxi": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>6 capsules par boîte</p>",
+                "font_weight": 500
+              }
+            },
+            "icon_with_text_cGi4zN": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Se change en quelques secondes</p>",
+                "font_weight": 500
+              }
+            },
+            "icon_with_text_8vKIww": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>5 collections au choix</p>",
+                "font_weight": 500
+              }
+            }
+          },
+          "block_order": [
+            "icon_with_text_yQFXxi",
+            "icon_with_text_cGi4zN",
+            "icon_with_text_8vKIww"
+          ]
+        },
+        "separator_AKgbEA": {
+          "type": "separator",
+          "name": "t:separator",
+          "settings": {}
+        },
+        "product_form_grYQk6": {
+          "type": "_product-form",
+          "name": "Formulaire de produit",
+          "settings": {},
+          "blocks": {
+            "product_variant_picker_xWC3wF": {
+              "type": "_product-variant-picker",
+              "name": "Sélecteur de variantes",
+              "settings": {
+                "show_selected_value": true
+              },
+              "blocks": {
+                "product-variant-popup": {
+                  "type": "_product-variant-popup",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {
+                    "show_on_option_name": "Taille",
+                    "button_label": "Guide des tailles"
+                  },
+                  "blocks": {
+                    "text_LfyX9A": {
+                      "type": "text",
+                      "name": "Titre",
+                      "settings": {
+                        "text": "<h1>Guide des tailles</h1>",
+                        "text_style": "h3",
+                        "margin_bottom": 10
+                      }
+                    },
+                    "text_99rHbT": {
+                      "type": "text",
+                      "name": "Texte",
+                      "settings": {
+                        "text": "",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_LfyX9A",
+                    "text_99rHbT"
+                  ]
+                }
+              }
+            },
+            "product-add-to-cart-button": {
+              "type": "_product-add-to-cart-button",
+              "static": true,
+              "settings": {
+                "enable_sticky_add_to_cart": true,
+                "show_price": false
+              },
+              "blocks": {
+                "product-quantity-selector": {
+                  "type": "_product-quantity-selector",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {}
+                },
+                "add-to-wishlist-button": {
+                  "type": "_add-to-wishlist-button",
+                  "static": true,
+                  "settings": {}
+                }
+              }
+            },
+            "accelerated-checkout": {
+              "type": "_accelerated-checkout",
+              "disabled": true,
+              "static": true,
+              "settings": {}
+            },
+            "toggle_cross_sell": {
+              "type": "_toggle-cross-sell",
+              "name": "t:toggle_cross_sell",
+              "settings": {
+                "title": "Pas encore de pommeau SHIFT ?",
+                "description": "<p>Pommeau, capsule et filtre pour commencer.</p>",
+                "product_list": [
+                  "pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie"
+                ]
+              }
+            }
+          },
+          "block_order": [
+            "product_variant_picker_xWC3wF",
+            "toggle_cross_sell"
+          ]
+        },
+        "delivery_estimation_A43yiG": {
+          "type": "delivery-estimation",
+          "name": "Estimation de livraison",
+          "settings": {
+            "icon": "bolt",
+            "show_weekday": false,
+            "delivery_estimation_text": "Livraison estimée entre le",
+            "translation_between_dates": "et le",
+            "margin_bottom": 10
+          }
+        },
+        "accordions_KKUaHK": {
+          "type": "accordions",
+          "name": "Accordéons",
+          "settings": {
+            "icon": "add",
+            "accordion_padding": "medium"
+          },
+          "blocks": {
+            "accordion_TWBulZ": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Les collections"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Fruits Therapy :</strong> 2 Petitgrain Tangerine, 2 Mint Apple, 1 Lemon Wave, 1 Ginger Bergamot. Fruité et hespéridé.</p><p><strong>Discovery :</strong> Cedarwood Moss, Frankincense Fig, Carrot Seed Plum, Mandarin Neroli, Petitgrain Tangerine, Geranium Muguet. Six senteurs à découvrir.</p><p><strong>Patchouli & Rose :</strong> 6 capsules. Patchouli, rose de Damas, fond d'ambre doux, cèdre et musc blanc.</p><p><strong>Cherry Blossom :</strong> 6 capsules. Fleur de cerisier, pivoine et muguet, fond de muscs légers et bois blanc.</p><p><strong>Hinoki Spring :</strong> 6 capsules. Cyprès hinoki, épicéa, fond de bois blanc et muscs.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_ESbRRX": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Actifs & INCI"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Chaque capsule associe ses huiles essentielles à une base commune : vitamine C, glycérine, acide hyaluronique.</p><p>La liste complète des ingrédients (INCI) par senteur et les allergènes figurent sur l'emballage. Usage externe, dans le système SHIFT compatible uniquement.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_kzxh9O": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Compatibilité & entretien"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Compatible uniquement avec le Pommeau de Douche Filtrant SHIFT. La capsule ne remplace pas le filtre Pure Water, les deux travaillent ensemble.</p><p>Conçu en Corée pour le rituel SHIFT.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_Xs1JPn": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Livraison & retours"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p><p>Retour possible sous 14 jours, produit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_TWBulZ",
+            "accordion_ESbRRX",
+            "accordion_kzxh9O",
+            "accordion_Xs1JPn"
+          ]
+        },
+        "group_kLziPN": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 10,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 10,
+            "margin_top": 10
+          },
+          "blocks": {
+            "marquee_QE4fL7": {
+              "type": "marquee",
+              "name": "t:marquee",
+              "settings": {
+                "movement_direction": "reverse",
+                "gap": 30,
+                "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
+              },
+              "blocks": {
+                "icon_with_text_OpTL9X": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>SÉLECTION SUNSOARI · PRODUITS CORÉENS CHOISIS AVEC EXIGENCE</p>",
+                    "font_weight": 500
+                  }
+                },
+                "icon_with_text_mxX2tP": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>LIVRAISON SUIVIE · PARTOUT EN FRANCE MÉTROPOLITAINE</p>",
+                    "font_weight": 500
+                  }
+                },
+                "icon_with_text_qk0eMD": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>PAIEMENT SÉCURISÉ · APPLE PAY, PAYPAL, CB</p>",
+                    "font_weight": 500
+                  }
+                }
+              },
+              "block_order": [
+                "icon_with_text_OpTL9X",
+                "icon_with_text_mxX2tP",
+                "icon_with_text_qk0eMD"
+              ]
+            }
+          },
+          "block_order": [
+            "marquee_QE4fL7"
+          ]
+        }
+      },
+      "block_order": [
+        "group_VW4Hi3",
+        "text_zLqMQw",
+        "text_yQdqF8",
+        "price_yEeMeb",
+        "group_pills",
+        "separator_AKgbEA",
+        "product_form_grYQk6",
+        "delivery_estimation_A43yiG",
+        "accordions_KKUaHK",
+        "group_kLziPN"
+      ],
+      "settings": {
+        "color_scheme_product_info": "",
+        "image_position": "row-reverse",
+        "product_info_width": 45,
+        "gap": 100,
+        "padding_top": 30,
+        "padding_bottom": 80,
+        "anchor_id": "buy"
+      }
+    },
+    "videos_pratiques": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Vidéos pratiques",
+      "blocks": {
+        "text_TYpbbh": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Les gestes en vidéo</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "tabs_veHwus": {
+          "type": "tabs",
+          "settings": {
+            "display_type": "tabs",
+            "wrap_content_in_card": true
+          },
+          "name": "Vidéos",
+          "blocks": {
+            "tab_a1lfSp": {
+              "type": "_tab",
+              "settings": {
+                "tab_name": "Remplacez votre recharge"
+              },
+              "name": "Remplacez votre recharge",
+              "blocks": {
+                "video_m5aMIA": {
+                  "type": "video",
+                  "settings": {
+                    "source": "shopify",
+                    "video_autoplay": true,
+                    "enable_video_controls": false,
+                    "aspect_ratio": "9/16",
+                    "alt": "Remplacez votre recharge"
+                  }
+                }
+              },
+              "block_order": [
+                "video_m5aMIA"
+              ]
+            }
+          },
+          "block_order": [
+            "tab_a1lfSp"
+          ]
+        }
+      },
+      "block_order": [
+        "text_TYpbbh",
+        "tabs_veHwus"
+      ]
+    },
+    "ingr_dients_cl_s": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Ingrédients clés",
+      "blocks": {
+        "text_hYGTH3": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Ingrédients clés</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "text_XegQeN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>La liste complète des ingrédients (INCI) figure sur l'emballage.</p>",
+            "text_style": "paragraph"
+          }
+        },
+        "slider_QGoCu2": {
+          "type": "slider",
+          "settings": {
+            "per_page_desktop": 4,
+            "per_page_mobile": "1.8"
+          },
+          "name": "Ingrédients clés",
+          "blocks": {
+            "slide_Xv0TTR": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Vitamine C",
+              "blocks": {
+                "image_d7fqkq": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_iY3Uvv": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Vitamine C</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_JZdWj1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>6000 mg selon le fabricant.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_d7fqkq",
+                "text_iY3Uvv",
+                "text_JZdWj1"
+              ]
+            },
+            "slide_uHUtdX": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Glycérine & acide hyaluronique",
+              "blocks": {
+                "image_otZeZE": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_TCZDY0": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Glycérine & acide hyaluronique</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_KBiam7": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Base hydratante commune aux collections.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_otZeZE",
+                "text_TCZDY0",
+                "text_KBiam7"
+              ]
+            },
+            "slide_Gpjl7O": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Huiles essentielles",
+              "blocks": {
+                "image_pWqGBH": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Tea-tree_lavande.png"
+                  }
+                },
+                "text_UboGsn": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Huiles essentielles</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_5lntQ5": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Selon la collection choisie.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_pWqGBH",
+                "text_UboGsn",
+                "text_5lntQ5"
+              ]
+            }
+          },
+          "block_order": [
+            "slide_Xv0TTR",
+            "slide_uHUtdX",
+            "slide_Gpjl7O"
+          ]
+        }
+      },
+      "block_order": [
+        "text_hYGTH3",
+        "text_XegQeN",
+        "slider_QGoCu2"
+      ]
+    },
+    "notes_olfactives_par_col": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Notes olfactives par collection",
+      "blocks": {
+        "text_DYV31n": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Notes olfactives par collection</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "slider_hu4b5Y": {
+          "type": "slider",
+          "settings": {
+            "per_page_desktop": 4,
+            "per_page_mobile": "1.8"
+          },
+          "name": "Notes olfactives par collection",
+          "blocks": {
+            "slide_KW6p06": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Fruits Therapy",
+              "blocks": {
+                "image_xICX7U": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_DfO7ri": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Fruits Therapy</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_eDRNct": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Petitgrain Tangerine, Mint Apple, Lemon Wave, Ginger & Bergamot : frais et pétillant.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_xICX7U",
+                "text_DfO7ri",
+                "text_eDRNct"
+              ]
+            },
+            "slide_Wj0tqG": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Discovery",
+              "blocks": {
+                "image_vBHfjz": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Shift--_capsule_Discovery_1.jpg"
+                  }
+                },
+                "text_cs6XQi": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Discovery</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_0IM1Ak": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Cedarwood Moss, Frankincense Fig, Carrot Seed Plum, Mandarin Neroli, Petitgrain Tangerine, Geranium Muguet.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_vBHfjz",
+                "text_cs6XQi",
+                "text_0IM1Ak"
+              ]
+            },
+            "slide_ipITvQ": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Patchouli & Rose",
+              "blocks": {
+                "image_Tvxh5p": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-1755093.png"
+                  }
+                },
+                "text_V85U5y": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Patchouli & Rose</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_sWDzTm": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Patchouli, rose de Damas, ambre doux, cèdre, musc blanc.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_Tvxh5p",
+                "text_V85U5y",
+                "text_sWDzTm"
+              ]
+            },
+            "slide_2u4Xi2": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Cherry Blossom",
+              "blocks": {
+                "image_9Fg30G": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_E0Sj2N": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Cherry Blossom</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_vRmQAd": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Fleur de cerisier, pivoine, muguet, muscs légers.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_9Fg30G",
+                "text_E0Sj2N",
+                "text_vRmQAd"
+              ]
+            },
+            "slide_P6dY31": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Hinoki Spring",
+              "blocks": {
+                "image_aYWqMc": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/Shift--_capsule_hinoki_1.png"
+                  }
+                },
+                "text_u04r8x": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Hinoki Spring</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_sh8oa6": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Cyprès hinoki, épicéa, bois blanc, muscs.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_aYWqMc",
+                "text_u04r8x",
+                "text_sh8oa6"
+              ]
+            }
+          },
+          "block_order": [
+            "slide_KW6p06",
+            "slide_Wj0tqG",
+            "slide_ipITvQ",
+            "slide_2u4Xi2",
+            "slide_P6dY31"
+          ]
+        }
+      },
+      "block_order": [
+        "text_DYV31n",
+        "slider_hu4b5Y"
+      ]
+    },
+    "comment_ca_marche": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Comment ça marche",
+      "blocks": {
+        "text_T9nGD7": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Comment ça marche ?</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "group_CZbBiM": {
+          "type": "group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_gap_desktop": 50,
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "blocks": {
+            "image_klb6PJ": {
+              "type": "image",
+              "settings": {
+                "image_width_desktop": 80,
+                "image_width_mobile": 80,
+                "image": "shopify://shop_images/7VitaminCapsule-04-2.jpg"
+              }
+            },
+            "group_d7dnGb": {
+              "type": "group",
+              "settings": {
+                "color_scheme": "",
+                "layout_align_items_desktop": "center",
+                "same_as_desktop": false,
+                "layout_wrap_mobile": "wrap",
+                "use_global_container_padding": false,
+                "padding_horizontal": 0,
+                "padding_vertical": 0,
+                "padding_horizontal_mobile": 0,
+                "padding_vertical_mobile": 0
+              },
+              "blocks": {
+                "timeline_GaQ3jM": {
+                  "type": "timeline",
+                  "settings": {},
+                  "name": "Étapes",
+                  "blocks": {
+                    "timeline_step_s0GYVw": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 1",
+                      "blocks": {
+                        "text_FVdm3D": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 1</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_ytOO45": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Ouvre le compartiment de ton pommeau SHIFT.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_FVdm3D",
+                        "text_ytOO45"
+                      ]
+                    },
+                    "timeline_step_dox48V": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 2",
+                      "blocks": {
+                        "text_1tV3wK": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 2</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_HeECAa": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Retire la capsule vide et transparente.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_1tV3wK",
+                        "text_HeECAa"
+                      ]
+                    },
+                    "timeline_step_7Amutv": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 3",
+                      "blocks": {
+                        "text_xIx79Q": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 3</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_cDLKBb": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Insère la nouvelle capsule : moins de 5 secondes.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_xIx79Q",
+                        "text_cDLKBb"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "timeline_step_s0GYVw",
+                    "timeline_step_dox48V",
+                    "timeline_step_7Amutv"
+                  ]
+                }
+              },
+              "block_order": [
+                "timeline_GaQ3jM"
+              ]
+            }
+          },
+          "block_order": [
+            "image_klb6PJ",
+            "group_d7dnGb"
+          ]
+        }
+      },
+      "block_order": [
+        "text_T9nGD7",
+        "group_CZbBiM"
+      ]
+    },
+    "en_situation": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "En situation (UGC)",
+      "disabled": true,
+      "blocks": {
+        "text_nGODdf": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Dans vos salles de bain</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "stories_kVYpIq": {
+          "type": "stories",
+          "settings": {},
+          "name": "Stories UGC"
+        }
+      },
+      "block_order": [
+        "text_nGODdf",
+        "stories_kVYpIq"
+      ]
+    },
+    "avis": {
+      "type": "reviews",
+      "name": "Avis clients",
+      "disabled": true,
+      "settings": {}
+    },
+    "decouvre_aussi": {
+      "type": "product-recommendations",
+      "blocks": {
+        "title": {
+          "type": "text",
+          "static": true,
+          "settings": {
+            "text": "<p>Découvre aussi</p>",
+            "text_style": "h2",
+            "alignment": "center",
+            "alignment_mobile": "center",
+            "margin_bottom": 40
+          }
+        },
+        "product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+            "layout_gap": 15
+          },
+          "blocks": {
+            "product_card_group_EcgVgX": {
+              "type": "_product-card-group",
+              "name": "t:group",
+              "settings": {
+                "color_scheme": "",
+                "layout_direction_desktop": "column",
+                "layout_gap_desktop": 5,
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "margin_top": 0
+              },
+              "blocks": {
+                "text_cxYhee": {
+                  "type": "text",
+                  "name": "t:text",
+                  "settings": {
+                    "text": "<h2>{{ closest.product.title }}</h2>",
+                    "text_style": "paragraph",
+                    "paragraph_font_size": "large",
+                    "font_weight": 300
+                  }
+                }
+              },
+              "block_order": [
+                "text_cxYhee"
+              ]
+            },
+            "product_card_media_gallery_L3zV7a": {
+              "type": "_product-card-media-gallery",
+              "name": "t:product_card_gallery",
+              "settings": {
+                "media_ratio": "4 / 5"
+              }
+            },
+            "product_card_quick_add_dY48RT": {
+              "type": "_product-card-quick-add",
+              "name": "t:product_card_quick_add",
+              "settings": {}
+            },
+            "product_card_group_LHFtbz": {
+              "type": "_product-card-group",
+              "name": "t:group",
+              "settings": {
+                "color_scheme": "",
+                "layout_direction_desktop": "column",
+                "layout_gap_desktop": 5,
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "margin_top": 0
+              },
+              "blocks": {
+                "product_price_eFDeNW": {
+                  "type": "product-price",
+                  "name": "t:product_price",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "sales_badge": "percentage"
+                  }
+                }
+              },
+              "block_order": [
+                "product_price_eFDeNW"
+              ]
+            }
+          },
+          "block_order": [
+            "product_card_group_EcgVgX",
+            "product_card_media_gallery_L3zV7a",
+            "product_card_quick_add_dY48RT",
+            "product_card_group_LHFtbz"
+          ]
+        }
+      },
+      "name": "t:product_recommendations",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "max_products": 3,
+        "grid_columns": 3,
+        "grid_columns_mobile": "1",
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
+    },
+    "faq": {
+      "type": "custom-section",
+      "blocks": {
+        "group_ampbiX": {
+          "type": "group",
+          "name": "Groupe",
+          "settings": {
+            "color_scheme": ""
+          },
+          "blocks": {
+            "text_ahfQKN": {
+              "type": "text",
+              "name": "Titre",
+              "settings": {
+                "text": "<h3>Questions fréquentes</h3>",
+                "text_style": "h2",
+                "margin_bottom": 10
+              }
+            },
+            "accordions_hpBMaf": {
+              "type": "accordions",
+              "name": "Accordéons",
+              "settings": {
+                "icon": "add",
+                "accordion_padding": "medium"
+              },
+              "blocks": {
+                "accordion_oH0loM": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Combien de temps dure une capsule ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Selon ta fréquence de douche, quelques semaines. Quand la capsule est vide et transparente, remplace-la.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_l53mLU": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Puis-je alterner les collections ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Bien sûr ! Tu peux varier les senteurs selon tes envies et les saisons.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_UhVDTM": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Les senteurs conviennent-elles aux peaux sensibles ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Les capsules contiennent des huiles essentielles et s'utilisent diffusées dans l'eau de la douche. En cas de sensibilité connue aux parfums, consulte la liste INCI avant utilisation.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_Tnr11B": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Avec quel pommeau sont-elles compatibles ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Uniquement avec le Pommeau de Douche Filtrant SHIFT, dont le compartiment est spécifique.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_oH0loM",
+                "accordion_l53mLU",
+                "accordion_UhVDTM",
+                "accordion_Tnr11B"
+              ]
+            }
+          },
+          "block_order": [
+            "text_ahfQKN",
+            "accordions_hpBMaf"
+          ]
+        },
+        "group_NkNJJg": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-2",
+            "width_desktop": 55,
+            "layout_justify_desktop": "center",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "use_global_container_padding": false,
+            "padding_horizontal": 40,
+            "padding_vertical": 50
+          },
+          "blocks": {
+            "icon_MrVn8A": {
+              "type": "icon",
+              "name": "t:icon",
+              "settings": {
+                "icon": "support_agent"
+              }
+            },
+            "text_VLtRib": {
+              "type": "text",
+              "name": "t:title",
+              "settings": {
+                "text": "<h4>Besoin d'aide ?</h4>",
+                "text_style": "h4",
+                "alignment": "center"
+              }
+            },
+            "text_FyFaMj": {
+              "type": "text",
+              "name": "t:text",
+              "settings": {
+                "text": "<p>Écris-nous, on te répond avec plaisir pour choisir le bon système ou la bonne recharge.</p>",
+                "text_style": "paragraph",
+                "alignment": "center",
+                "margin_bottom": 20
+              }
+            },
+            "button_Q3UxFk": {
+              "type": "button",
+              "name": "t:button",
+              "settings": {
+                "link": "shopify://pages/contact",
+                "label": "Nous contacter",
+                "button_shape": "full-width"
+              }
+            }
+          },
+          "block_order": [
+            "icon_MrVn8A",
+            "text_VLtRib",
+            "text_FyFaMj",
+            "button_Q3UxFk"
+          ]
+        }
+      },
+      "block_order": [
+        "group_ampbiX",
+        "group_NkNJJg"
+      ],
+      "name": "t:faq_2",
+      "settings": {
+        "color_scheme_card": "",
+        "layout_flex_direction_desktop": "row",
+        "layout_gap_desktop": 50,
+        "same_as_desktop": false,
+        "layout_flex_direction_mobile": "column-reverse",
+        "layout_gap_mobile": 30,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "videos_pratiques",
+    "ingr_dients_cl_s",
+    "notes_olfactives_par_col",
+    "comment_ca_marche",
+    "en_situation",
+    "avis",
+    "decouvre_aussi",
+    "faq"
+  ]
+}

@@ -1,0 +1,1376 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "group_VW4Hi3": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_justify_desktop": "space-between",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "column-reverse"
+          },
+          "blocks": {
+            "badges_i9hDat": {
+              "type": "badges",
+              "name": "t:badges",
+              "settings": {},
+              "blocks": {
+                "badge_VEGRNK": {
+                  "type": "_badge",
+                  "settings": {
+                    "text": "LE FILTRE THERMAL SANS SENTEUR",
+                    "badge_style": "secondary"
+                  }
+                }
+              },
+              "block_order": [
+                "badge_VEGRNK"
+              ]
+            }
+          },
+          "block_order": [
+            "badges_i9hDat"
+          ]
+        },
+        "text_zLqMQw": {
+          "type": "text",
+          "name": "Titre",
+          "settings": {
+            "text": "<p>{{ product.title }}</p>",
+            "text_style": "h3"
+          }
+        },
+        "text_yQdqF8": {
+          "type": "text",
+          "name": "Texte",
+          "settings": {
+            "text": "<p>La même composition que nos filtres thermaux Home, sans senteur ajoutée : pour un rituel thermal tout en neutralité.</p>",
+            "text_style": "paragraph",
+            "paragraph_font_size": "large"
+          }
+        },
+        "price_yEeMeb": {
+          "type": "product-price",
+          "name": "t:price",
+          "settings": {
+            "product": "{{ closest.product }}",
+            "sales_badge": "percentage",
+            "show_sales_badge_text": true,
+            "text_style": "h6"
+          }
+        },
+        "group_pills": {
+          "type": "group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_wrap_desktop": "wrap",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "row",
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "name": "Points forts",
+          "blocks": {
+            "icon_with_text_iEbrUK": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Eau thermale coréenne concentrée</p>",
+                "font_weight": 500
+              }
+            },
+            "icon_with_text_dxXVTS": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Sans parfum ajouté</p>",
+                "font_weight": 500
+              }
+            },
+            "icon_with_text_OJTFDQ": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>3 à 4 semaines de rituel</p>",
+                "font_weight": 500
+              }
+            }
+          },
+          "block_order": [
+            "icon_with_text_iEbrUK",
+            "icon_with_text_dxXVTS",
+            "icon_with_text_OJTFDQ"
+          ]
+        },
+        "separator_AKgbEA": {
+          "type": "separator",
+          "name": "t:separator",
+          "settings": {}
+        },
+        "product_form_grYQk6": {
+          "type": "_product-form",
+          "name": "Formulaire de produit",
+          "settings": {},
+          "blocks": {
+            "product_variant_picker_xWC3wF": {
+              "type": "_product-variant-picker",
+              "name": "Sélecteur de variantes",
+              "settings": {
+                "show_selected_value": true
+              },
+              "blocks": {
+                "product-variant-popup": {
+                  "type": "_product-variant-popup",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {
+                    "show_on_option_name": "Taille",
+                    "button_label": "Guide des tailles"
+                  },
+                  "blocks": {
+                    "text_LfyX9A": {
+                      "type": "text",
+                      "name": "Titre",
+                      "settings": {
+                        "text": "<h1>Guide des tailles</h1>",
+                        "text_style": "h3",
+                        "margin_bottom": 10
+                      }
+                    },
+                    "text_99rHbT": {
+                      "type": "text",
+                      "name": "Texte",
+                      "settings": {
+                        "text": "",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_LfyX9A",
+                    "text_99rHbT"
+                  ]
+                }
+              }
+            },
+            "product-add-to-cart-button": {
+              "type": "_product-add-to-cart-button",
+              "static": true,
+              "settings": {
+                "enable_sticky_add_to_cart": true,
+                "show_price": false
+              },
+              "blocks": {
+                "product-quantity-selector": {
+                  "type": "_product-quantity-selector",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {}
+                },
+                "add-to-wishlist-button": {
+                  "type": "_add-to-wishlist-button",
+                  "static": true,
+                  "settings": {}
+                }
+              }
+            },
+            "accelerated-checkout": {
+              "type": "_accelerated-checkout",
+              "disabled": true,
+              "static": true,
+              "settings": {}
+            },
+            "toggle_cross_sell": {
+              "type": "_toggle-cross-sell",
+              "name": "t:toggle_cross_sell",
+              "settings": {
+                "title": "Pas encore équipée ?",
+                "description": "<p>Indispensable pour accueillir ton filtre.</p>",
+                "product_list": [
+                  "coque-de-diffusion"
+                ]
+              }
+            }
+          },
+          "block_order": [
+            "product_variant_picker_xWC3wF",
+            "toggle_cross_sell"
+          ]
+        },
+        "delivery_estimation_A43yiG": {
+          "type": "delivery-estimation",
+          "name": "Estimation de livraison",
+          "settings": {
+            "icon": "bolt",
+            "show_weekday": false,
+            "delivery_estimation_text": "Livraison estimée entre le",
+            "translation_between_dates": "et le",
+            "margin_bottom": 10
+          }
+        },
+        "accordions_KKUaHK": {
+          "type": "accordions",
+          "name": "Accordéons",
+          "settings": {
+            "icon": "add",
+            "accordion_padding": "medium"
+          },
+          "blocks": {
+            "accordion_ttUMk9": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Composition & principes actifs"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Eau thermale soufrée :</strong> extraite à 808 m de profondeur dans le granit coréen, lyophilisée et concentrée 4x.</p><p><strong>Actifs de soin :</strong> vitamine C, glycérine, acide hyaluronique, MSM.</p><p><strong>Filtration :</strong> une première couche mécanique retient les sédiments et impuretés de l'eau.</p><p><strong>Sans senteur ajoutée :</strong> seule l'odeur naturelle, légèrement soufrée, de l'eau thermale peut se percevoir.</p><p>La liste INCI complète figure sur l'emballage. Usage externe uniquement. Tenir hors de portée des enfants.</p><p>Conçu en Corée pour le rituel de douche Onsha Home.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_31FMdu": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Durée & entretien"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Durée du filtre :</strong> 3 à 4 semaines selon ta fréquence de douche et la qualité de ton eau.</p><p><strong>Entretien :</strong> rince régulièrement la coque de diffusion, aucun entretien spécial du filtre.</p><p><strong>Quand le changer :</strong> quand le débit baisse ou que la capsule est vide.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_x8KUCE": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Livraison & retours"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p><p>Retour possible sous 14 jours, produit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_ttUMk9",
+            "accordion_31FMdu",
+            "accordion_x8KUCE"
+          ]
+        },
+        "group_kLziPN": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 10,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 10,
+            "margin_top": 10
+          },
+          "blocks": {
+            "marquee_QE4fL7": {
+              "type": "marquee",
+              "name": "t:marquee",
+              "settings": {
+                "movement_direction": "reverse",
+                "gap": 30,
+                "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
+              },
+              "blocks": {
+                "icon_with_text_Rkj9Zh": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>SÉLECTION SUNSOARI · PRODUITS CORÉENS CHOISIS AVEC EXIGENCE</p>",
+                    "font_weight": 500
+                  }
+                },
+                "icon_with_text_x9PkOZ": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>LIVRAISON SUIVIE · PARTOUT EN FRANCE MÉTROPOLITAINE</p>",
+                    "font_weight": 500
+                  }
+                },
+                "icon_with_text_AEyXYC": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>PAIEMENT SÉCURISÉ · APPLE PAY, PAYPAL, CB</p>",
+                    "font_weight": 500
+                  }
+                }
+              },
+              "block_order": [
+                "icon_with_text_Rkj9Zh",
+                "icon_with_text_x9PkOZ",
+                "icon_with_text_AEyXYC"
+              ]
+            }
+          },
+          "block_order": [
+            "marquee_QE4fL7"
+          ]
+        }
+      },
+      "block_order": [
+        "group_VW4Hi3",
+        "text_zLqMQw",
+        "text_yQdqF8",
+        "price_yEeMeb",
+        "group_pills",
+        "separator_AKgbEA",
+        "product_form_grYQk6",
+        "delivery_estimation_A43yiG",
+        "accordions_KKUaHK",
+        "group_kLziPN"
+      ],
+      "settings": {
+        "color_scheme_product_info": "",
+        "image_position": "row-reverse",
+        "product_info_width": 45,
+        "gap": 100,
+        "padding_top": 30,
+        "padding_bottom": 80,
+        "anchor_id": "buy"
+      }
+    },
+    "videos_pratiques": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Vidéos pratiques",
+      "disabled": true,
+      "blocks": {
+        "text_yRyMX5": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>En vidéo</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "tabs_uqrBkL": {
+          "type": "tabs",
+          "settings": {
+            "display_type": "tabs",
+            "wrap_content_in_card": true
+          },
+          "name": "Vidéos",
+          "blocks": {
+            "tab_Ua1jM1": {
+              "type": "_tab",
+              "settings": {
+                "tab_name": "Remplace ta recharge"
+              },
+              "name": "Remplace ta recharge",
+              "blocks": {
+                "video_srdNPT": {
+                  "type": "video",
+                  "settings": {
+                    "source": "shopify",
+                    "video_autoplay": true,
+                    "enable_video_controls": false,
+                    "aspect_ratio": "9/16",
+                    "alt": "Remplace ta recharge"
+                  }
+                }
+              },
+              "block_order": [
+                "video_srdNPT"
+              ]
+            }
+          },
+          "block_order": [
+            "tab_Ua1jM1"
+          ]
+        }
+      },
+      "block_order": [
+        "text_yRyMX5",
+        "tabs_uqrBkL"
+      ]
+    },
+    "ingr_dients_cl_s": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Ingrédients clés",
+      "blocks": {
+        "text_16dqYG": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Ingrédients clés</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "text_gjuWa8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>La liste complète des ingrédients (INCI) figure sur l'emballage.</p>",
+            "text_style": "paragraph"
+          }
+        },
+        "slider_CWPgEu": {
+          "type": "slider",
+          "settings": {
+            "per_page_desktop": 4,
+            "per_page_mobile": "1.8"
+          },
+          "name": "Ingrédients clés",
+          "blocks": {
+            "slide_TDF826": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Eau thermale soufrée",
+              "blocks": {
+                "image_s1jZ43": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_JRX6Fw": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Eau thermale soufrée</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_ymYWU7": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Extraite à 808 m dans le granit coréen, lyophilisée et concentrée 4 fois.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_s1jZ43",
+                "text_JRX6Fw",
+                "text_ymYWU7"
+              ]
+            },
+            "slide_7hT9fq": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Vitamine C",
+              "blocks": {
+                "image_DTn7qL": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_fIZwXe": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Vitamine C</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_41HuEG": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Intégrée à la capsule, dans l'eau de ta douche.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_DTn7qL",
+                "text_fIZwXe",
+                "text_41HuEG"
+              ]
+            },
+            "slide_6QGzlC": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Acide hyaluronique & glycérine",
+              "blocks": {
+                "image_lZSsxK": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_jpc7Fx": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Acide hyaluronique & glycérine</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_fjuMbw": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Des actifs hydratants bien connus en cosmétique.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_lZSsxK",
+                "text_jpc7Fx",
+                "text_fjuMbw"
+              ]
+            },
+            "slide_olc8q8": {
+              "type": "_slide",
+              "settings": {},
+              "name": "MSM",
+              "blocks": {
+                "image_n33KFL": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 35,
+                    "image_width_mobile": 35
+                  }
+                },
+                "text_Bg8CXL": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>MSM</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_cvmlyf": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Présent dans la composition thermale Onsha.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_n33KFL",
+                "text_Bg8CXL",
+                "text_cvmlyf"
+              ]
+            }
+          },
+          "block_order": [
+            "slide_TDF826",
+            "slide_7hT9fq",
+            "slide_6QGzlC",
+            "slide_olc8q8"
+          ]
+        }
+      },
+      "block_order": [
+        "text_16dqYG",
+        "text_gjuWa8",
+        "slider_CWPgEu"
+      ]
+    },
+    "comment_ca_marche": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Comment ça marche",
+      "blocks": {
+        "text_lHXoTl": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Comment ça marche ?</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "group_MUFWrl": {
+          "type": "group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_gap_desktop": 50,
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "blocks": {
+            "image_ZGvGiC": {
+              "type": "image",
+              "settings": {
+                "image_width_desktop": 80,
+                "image_width_mobile": 80,
+                "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-sans-senteur-5334131.png"
+              }
+            },
+            "group_lxBc6A": {
+              "type": "group",
+              "settings": {
+                "color_scheme": "",
+                "layout_align_items_desktop": "center",
+                "same_as_desktop": false,
+                "layout_wrap_mobile": "wrap",
+                "use_global_container_padding": false,
+                "padding_horizontal": 0,
+                "padding_vertical": 0,
+                "padding_horizontal_mobile": 0,
+                "padding_vertical_mobile": 0
+              },
+              "blocks": {
+                "timeline_sA5kd1": {
+                  "type": "timeline",
+                  "settings": {},
+                  "name": "Étapes",
+                  "blocks": {
+                    "timeline_step_vZkqFg": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 1",
+                      "blocks": {
+                        "text_ykCpZj": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 1</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_6mZck7": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Ouvre la coque de diffusion Home.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_ykCpZj",
+                        "text_6mZck7"
+                      ]
+                    },
+                    "timeline_step_GdO5YQ": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 2",
+                      "blocks": {
+                        "text_x4ViXC": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 2</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_bOeCvu": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Retire le filtre usagé et insère le nouveau.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_x4ViXC",
+                        "text_bOeCvu"
+                      ]
+                    },
+                    "timeline_step_hqWmxB": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 3",
+                      "blocks": {
+                        "text_jvoVdl": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 3</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_3jrAAp": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Referme : ton rituel reprend en quelques secondes.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_jvoVdl",
+                        "text_3jrAAp"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "timeline_step_vZkqFg",
+                    "timeline_step_GdO5YQ",
+                    "timeline_step_hqWmxB"
+                  ]
+                }
+              },
+              "block_order": [
+                "timeline_sA5kd1"
+              ]
+            }
+          },
+          "block_order": [
+            "image_ZGvGiC",
+            "group_lxBc6A"
+          ]
+        }
+      },
+      "block_order": [
+        "text_lHXoTl",
+        "group_MUFWrl"
+      ]
+    },
+    "pourquoi": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Pourquoi ce filtre ?",
+      "blocks": {
+        "text_J09bbg": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Pourquoi ce filtre ?</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "group_1MOKDH": {
+          "type": "group",
+          "settings": {
+            "color_scheme": "",
+            "layout_type": "grid",
+            "layout_direction_desktop": "row",
+            "layout_grid_columns_desktop": 4,
+            "layout_gap_desktop": 16,
+            "layout_wrap_desktop": "wrap",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "row",
+            "layout_grid_columns_mobile": 2,
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "blocks": {
+            "group_wH7C9H": {
+              "type": "group",
+              "settings": {
+                "wrap_in_card": true,
+                "color_scheme": "",
+                "show_card_border": true,
+                "same_as_desktop": false,
+                "use_global_container_padding": false,
+                "padding_horizontal": 16,
+                "padding_vertical": 16,
+                "padding_horizontal_mobile": 12,
+                "padding_vertical_mobile": 12
+              },
+              "name": "Même composition",
+              "blocks": {
+                "text_ZmLtma": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Même composition</strong></p><p>Eau thermale concentrée 4x, vitamine C, acide hyaluronique.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_ZmLtma"
+              ]
+            },
+            "group_136uXT": {
+              "type": "group",
+              "settings": {
+                "wrap_in_card": true,
+                "color_scheme": "",
+                "show_card_border": true,
+                "same_as_desktop": false,
+                "use_global_container_padding": false,
+                "padding_horizontal": 16,
+                "padding_vertical": 16,
+                "padding_horizontal_mobile": 12,
+                "padding_vertical_mobile": 12
+              },
+              "name": "Sans parfum ajouté",
+              "blocks": {
+                "text_U6dHZw": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Sans parfum ajouté</strong></p><p>Pour un rituel thermal neutre.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_U6dHZw"
+              ]
+            },
+            "group_s3g9UF": {
+              "type": "group",
+              "settings": {
+                "wrap_in_card": true,
+                "color_scheme": "",
+                "show_card_border": true,
+                "same_as_desktop": false,
+                "use_global_container_padding": false,
+                "padding_horizontal": 16,
+                "padding_vertical": 16,
+                "padding_horizontal_mobile": 12,
+                "padding_vertical_mobile": 12
+              },
+              "name": "Pour alterner",
+              "blocks": {
+                "text_FfaA6W": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Pour alterner</strong></p><p>Entre deux senteurs, selon ton envie.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_FfaA6W"
+              ]
+            },
+            "group_ibp9fo": {
+              "type": "group",
+              "settings": {
+                "wrap_in_card": true,
+                "color_scheme": "",
+                "show_card_border": true,
+                "same_as_desktop": false,
+                "use_global_container_padding": false,
+                "padding_horizontal": 16,
+                "padding_vertical": 16,
+                "padding_horizontal_mobile": 12,
+                "padding_vertical_mobile": 12
+              },
+              "name": "Compatible",
+              "blocks": {
+                "text_lK1xck": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Compatible</strong></p><p>Avec toute coque Onsha Home.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_lK1xck"
+              ]
+            }
+          },
+          "block_order": [
+            "group_wH7C9H",
+            "group_136uXT",
+            "group_s3g9UF",
+            "group_ibp9fo"
+          ]
+        }
+      },
+      "block_order": [
+        "text_J09bbg",
+        "group_1MOKDH"
+      ]
+    },
+    "avant_apres": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Avant / Après",
+      "disabled": true,
+      "blocks": {
+        "text_gTlcrh": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Avant / Après</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "before_after_hhhz4i": {
+          "type": "before-after",
+          "settings": {
+            "image_ratio": "portrait",
+            "label_before": "Avant",
+            "label_after": "Après",
+            "label_badge_style": "primary"
+          }
+        },
+        "text_QKDVzk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Photo réelle, non retouchée.</p>",
+            "text_style": "paragraph",
+            "alignment": "center",
+            "alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "text_gTlcrh",
+        "before_after_hhhz4i",
+        "text_QKDVzk"
+      ]
+    },
+    "en_situation": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "En situation (UGC)",
+      "disabled": true,
+      "blocks": {
+        "text_SAM1MH": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Dans vos salles de bain</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "stories_vzp1vT": {
+          "type": "stories",
+          "settings": {},
+          "name": "Stories UGC"
+        }
+      },
+      "block_order": [
+        "text_SAM1MH",
+        "stories_vzp1vT"
+      ]
+    },
+    "avis": {
+      "type": "reviews",
+      "name": "Avis clients",
+      "disabled": true,
+      "settings": {}
+    },
+    "decouvre_aussi": {
+      "type": "product-recommendations",
+      "blocks": {
+        "title": {
+          "type": "text",
+          "static": true,
+          "settings": {
+            "text": "<p>Découvre aussi</p>",
+            "text_style": "h2",
+            "alignment": "center",
+            "alignment_mobile": "center",
+            "margin_bottom": 40
+          }
+        },
+        "product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+            "layout_gap": 15
+          },
+          "blocks": {
+            "product_card_group_EcgVgX": {
+              "type": "_product-card-group",
+              "name": "t:group",
+              "settings": {
+                "color_scheme": "",
+                "layout_direction_desktop": "column",
+                "layout_gap_desktop": 5,
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "margin_top": 0
+              },
+              "blocks": {
+                "text_cxYhee": {
+                  "type": "text",
+                  "name": "t:text",
+                  "settings": {
+                    "text": "<h2>{{ closest.product.title }}</h2>",
+                    "text_style": "paragraph",
+                    "paragraph_font_size": "large",
+                    "font_weight": 300
+                  }
+                }
+              },
+              "block_order": [
+                "text_cxYhee"
+              ]
+            },
+            "product_card_media_gallery_L3zV7a": {
+              "type": "_product-card-media-gallery",
+              "name": "t:product_card_gallery",
+              "settings": {
+                "media_ratio": "4 / 5"
+              }
+            },
+            "product_card_quick_add_dY48RT": {
+              "type": "_product-card-quick-add",
+              "name": "t:product_card_quick_add",
+              "settings": {}
+            },
+            "product_card_group_LHFtbz": {
+              "type": "_product-card-group",
+              "name": "t:group",
+              "settings": {
+                "color_scheme": "",
+                "layout_direction_desktop": "column",
+                "layout_gap_desktop": 5,
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "margin_top": 0
+              },
+              "blocks": {
+                "product_price_eFDeNW": {
+                  "type": "product-price",
+                  "name": "t:product_price",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "sales_badge": "percentage"
+                  }
+                }
+              },
+              "block_order": [
+                "product_price_eFDeNW"
+              ]
+            }
+          },
+          "block_order": [
+            "product_card_group_EcgVgX",
+            "product_card_media_gallery_L3zV7a",
+            "product_card_quick_add_dY48RT",
+            "product_card_group_LHFtbz"
+          ]
+        }
+      },
+      "name": "t:product_recommendations",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "max_products": 3,
+        "grid_columns": 3,
+        "grid_columns_mobile": "1",
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
+    },
+    "faq": {
+      "type": "custom-section",
+      "blocks": {
+        "group_ampbiX": {
+          "type": "group",
+          "name": "Groupe",
+          "settings": {
+            "color_scheme": ""
+          },
+          "blocks": {
+            "text_ahfQKN": {
+              "type": "text",
+              "name": "Titre",
+              "settings": {
+                "text": "<h3>Questions fréquentes</h3>",
+                "text_style": "h2",
+                "margin_bottom": 10
+              }
+            },
+            "accordions_hpBMaf": {
+              "type": "accordions",
+              "name": "Accordéons",
+              "settings": {
+                "icon": "add",
+                "accordion_padding": "medium"
+              },
+              "blocks": {
+                "accordion_B1KZ6u": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Est-ce la même composition que les autres filtres ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Oui. Même eau thermale, même vitamine C, même acide hyaluronique : la seule différence est l'absence de senteur ajoutée.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_0z2Jdu": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Pourquoi l'eau thermale a-t-elle une odeur naturelle ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>L'eau thermale coréenne est soufrée, elle peut donc avoir une légère odeur de soufre. C'est naturel.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_Hj9R7w": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Puis-je l'alterner avec d'autres senteurs ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Oui ! Un jour Océan, un jour sans senteur : à toi de voir.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_p3BQOa": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Combien de temps dure chaque filtre ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>3 à 4 semaines selon ta fréquence de douche et la qualité de ton eau.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_xgHleu": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Est-il compatible avec ma coque ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Oui, il s'adapte sur toute coque Onsha Home.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_B1KZ6u",
+                "accordion_0z2Jdu",
+                "accordion_Hj9R7w",
+                "accordion_p3BQOa",
+                "accordion_xgHleu"
+              ]
+            }
+          },
+          "block_order": [
+            "text_ahfQKN",
+            "accordions_hpBMaf"
+          ]
+        },
+        "group_NkNJJg": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-2",
+            "width_desktop": 55,
+            "layout_justify_desktop": "center",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "use_global_container_padding": false,
+            "padding_horizontal": 40,
+            "padding_vertical": 50
+          },
+          "blocks": {
+            "icon_MrVn8A": {
+              "type": "icon",
+              "name": "t:icon",
+              "settings": {
+                "icon": "support_agent"
+              }
+            },
+            "text_VLtRib": {
+              "type": "text",
+              "name": "t:title",
+              "settings": {
+                "text": "<h4>Besoin d'aide ?</h4>",
+                "text_style": "h4",
+                "alignment": "center"
+              }
+            },
+            "text_FyFaMj": {
+              "type": "text",
+              "name": "t:text",
+              "settings": {
+                "text": "<p>Écris-nous, on te répond avec plaisir pour choisir le bon système ou la bonne recharge.</p>",
+                "text_style": "paragraph",
+                "alignment": "center",
+                "margin_bottom": 20
+              }
+            },
+            "button_Q3UxFk": {
+              "type": "button",
+              "name": "t:button",
+              "settings": {
+                "link": "shopify://pages/contact",
+                "label": "Nous contacter",
+                "button_shape": "full-width"
+              }
+            }
+          },
+          "block_order": [
+            "icon_MrVn8A",
+            "text_VLtRib",
+            "text_FyFaMj",
+            "button_Q3UxFk"
+          ]
+        }
+      },
+      "block_order": [
+        "group_ampbiX",
+        "group_NkNJJg"
+      ],
+      "name": "t:faq_2",
+      "settings": {
+        "color_scheme_card": "",
+        "layout_flex_direction_desktop": "row",
+        "layout_gap_desktop": 50,
+        "same_as_desktop": false,
+        "layout_flex_direction_mobile": "column-reverse",
+        "layout_gap_mobile": 30,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "videos_pratiques",
+    "ingr_dients_cl_s",
+    "comment_ca_marche",
+    "pourquoi",
+    "avant_apres",
+    "en_situation",
+    "avis",
+    "decouvre_aussi",
+    "faq"
+  ]
+}

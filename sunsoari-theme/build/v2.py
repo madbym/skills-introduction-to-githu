@@ -150,6 +150,57 @@ def build():
             os.remove(p)
 
 
+# On 1 Oct (evening) the products were switched to "ss-*" template names.
+# The same pages are saved under those names too, so both work.
+SS_NAMES = {
+    "product.ss-onsha-pommeau.json": "product.json",
+    "product.ss-onsha-douchette.json": "product.douchette-filtrante.json",
+    "product.ss-onsha-sediment.json": "product.filtre-sediment-recharge.json",
+    "product.ss-onsha-coque.json": "product.coque-de-diffusion.json",
+    "product.ss-onsha-capsule-nomade.json": "product.capsule-vitaminee-2.json",
+    "product.ss-onsha-filtre-home.json": "product.filtre-vitamine.json",
+    "product.ss-onsha-filtre-neutre.json": "product.filtre-thermal-sans-senteur.json",
+    "product.ss-onsha-coffret-nomade.json": "product.coffret-mini.json",
+    "product.ss-onsha-coffret-home.json": "product.coffret-home.json",
+    "product.ss-onsha-set-home.json": "product.kit-decouverte-home.json",
+    "product.ss-onsha-set-nomade.json": "product.rituel-decouverte.json",
+    "product.ss-onsha-housse.json": "product.product.json",
+    "product.ss-sullab-robinet.json": "product.filtre-a-robinet-faucet.json",
+    "product.ss-shift-coffret-soin.json": "product.pommeau-de-douche-filtran-2.json",
+    "product.ss-shift-pack3.json": "product.pack-3-sediments-pure-wat.json",
+    "product.ss-shift-pack6.json": "product.pack-6-capsules-vitaminee.json",
+    "product.ss-shift-coffret-aroma.json": "product.box-rituel-douche-complet.json",
+}
+
+
+def copy_ss_names():
+    import shutil
+    d = os.path.join(OUT, "templates")
+    for new, src in SS_NAMES.items():
+        shutil.copyfile(os.path.join(d, src), os.path.join(d, new))
+
+
+def neutral_default():
+    """product.json = page for any product without its own template (e.g. Starter Home):
+    title, real description, price, buy button, delivery; no product-specific text."""
+    path = os.path.join(OUT, "templates", "product.json")
+    t = json.load(open(path, encoding="utf-8"))
+    main = t["sections"]["main"]
+    drop = {"group_VW4Hi3", "group_pills", "cross_sell_QcpW8C"}
+    main["block_order"] = [k for k in main["block_order"] if k not in drop]
+    for k in drop:
+        main["blocks"].pop(k, None)
+    main["blocks"]["text_yQdqF8"]["settings"]["text"] = "{{ product.description }}"
+    main["blocks"]["text_yQdqF8"]["settings"]["paragraph_font_size"] = "medium"
+    acc = main["blocks"]["accordions_KKUaHK"]
+    acc["block_order"] = [k for k in acc["block_order"] if acc["blocks"][k]["settings"].get("heading") == "Livraison & retours"]
+    acc["blocks"] = {k: acc["blocks"][k] for k in acc["block_order"]}
+    keep = ["main", "decouvre_aussi"]
+    t["sections"] = {k: t["sections"][k] for k in keep}
+    t["order"] = keep
+    save("templates/product.json", t)
+
+
 NO_QTY_BREAKS = {
     # combo "filtre + pack 3 sédiments" is not a separate product: no real discount possible
     "product.filtre-a-robinet-faucet.json",
@@ -240,6 +291,8 @@ if __name__ == "__main__":
         t = json.load(open(path, encoding="utf-8"))
         drop_quantity_breaks(t)
         save(f"templates/{fname}", t)
+    copy_ss_names()
+    neutral_default()
     for r in check_images():
         print("image retirée :", *r)
     print("\n".join(sorted(LIVE_NAMES)))

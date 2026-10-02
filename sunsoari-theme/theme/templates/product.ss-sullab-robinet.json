@@ -1,0 +1,1194 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "group_VW4Hi3": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_justify_desktop": "space-between",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "column-reverse"
+          },
+          "blocks": {
+            "badges_i9hDat": {
+              "type": "badges",
+              "name": "t:badges",
+              "settings": {},
+              "blocks": {
+                "badge_VEGRNK": {
+                  "type": "_badge",
+                  "settings": {
+                    "text": "LA FILTRATION À LA SOURCE",
+                    "badge_style": "secondary"
+                  }
+                }
+              },
+              "block_order": [
+                "badge_VEGRNK"
+              ]
+            }
+          },
+          "block_order": [
+            "badges_i9hDat"
+          ]
+        },
+        "text_zLqMQw": {
+          "type": "text",
+          "name": "Titre",
+          "settings": {
+            "text": "<p>{{ product.title }}</p>",
+            "text_style": "h3"
+          }
+        },
+        "text_yQdqF8": {
+          "type": "text",
+          "name": "Texte",
+          "settings": {
+            "text": "<p>Le filtre qui retient les sédiments et impuretés visibles de l'eau, directement au robinet de ton lavabo. Sans outil, sans plombier.</p>",
+            "text_style": "paragraph",
+            "paragraph_font_size": "large"
+          }
+        },
+        "price_yEeMeb": {
+          "type": "product-price",
+          "name": "t:price",
+          "settings": {
+            "product": "{{ closest.product }}",
+            "sales_badge": "percentage",
+            "show_sales_badge_text": true,
+            "text_style": "h6"
+          }
+        },
+        "group_pills": {
+          "type": "group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_wrap_desktop": "wrap",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_direction_mobile": "row",
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "name": "Points forts",
+          "blocks": {
+            "icon_with_text_APSiAK": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Installation sans outil</p>",
+                "font_weight": 500
+              }
+            },
+            "icon_with_text_UkxkQ8": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Adaptateurs fournis</p>",
+                "font_weight": 500
+              }
+            },
+            "icon_with_text_1Etjqg": {
+              "type": "icon-with-text",
+              "settings": {
+                "layout_gap_desktop": 10,
+                "layout_direction_mobile": "row",
+                "icon": "check",
+                "icon_size": 20,
+                "text": "<p>Recharge facile</p>",
+                "font_weight": 500
+              }
+            }
+          },
+          "block_order": [
+            "icon_with_text_APSiAK",
+            "icon_with_text_UkxkQ8",
+            "icon_with_text_1Etjqg"
+          ]
+        },
+        "separator_AKgbEA": {
+          "type": "separator",
+          "name": "t:separator",
+          "settings": {}
+        },
+        "product_form_grYQk6": {
+          "type": "_product-form",
+          "name": "Formulaire de produit",
+          "settings": {},
+          "blocks": {
+            "product_variant_picker_xWC3wF": {
+              "type": "_product-variant-picker",
+              "name": "Sélecteur de variantes",
+              "settings": {
+                "show_selected_value": true
+              },
+              "blocks": {
+                "product-variant-popup": {
+                  "type": "_product-variant-popup",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {
+                    "show_on_option_name": "Taille",
+                    "button_label": "Guide des tailles"
+                  },
+                  "blocks": {
+                    "text_LfyX9A": {
+                      "type": "text",
+                      "name": "Titre",
+                      "settings": {
+                        "text": "<h1>Guide des tailles</h1>",
+                        "text_style": "h3",
+                        "margin_bottom": 10
+                      }
+                    },
+                    "text_99rHbT": {
+                      "type": "text",
+                      "name": "Texte",
+                      "settings": {
+                        "text": "",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_LfyX9A",
+                    "text_99rHbT"
+                  ]
+                }
+              }
+            },
+            "product-add-to-cart-button": {
+              "type": "_product-add-to-cart-button",
+              "static": true,
+              "settings": {
+                "enable_sticky_add_to_cart": true,
+                "show_price": false
+              },
+              "blocks": {
+                "product-quantity-selector": {
+                  "type": "_product-quantity-selector",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {}
+                },
+                "add-to-wishlist-button": {
+                  "type": "_add-to-wishlist-button",
+                  "static": true,
+                  "settings": {}
+                }
+              }
+            },
+            "accelerated-checkout": {
+              "type": "_accelerated-checkout",
+              "disabled": true,
+              "static": true,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "product_variant_picker_xWC3wF"
+          ]
+        },
+        "cross_sell_QcpW8C": {
+          "type": "cross-sell",
+          "name": "t:cross_sell",
+          "settings": {
+            "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+            "products": [
+              "douchette-filtrante"
+            ],
+            "title": "Étends ta filtration à la douche",
+            "description": "<p>Le même geste, sous la douche.</p>",
+            "image_width": 90,
+            "button_content_type": "icon"
+          }
+        },
+        "delivery_estimation_A43yiG": {
+          "type": "delivery-estimation",
+          "name": "Estimation de livraison",
+          "settings": {
+            "icon": "bolt",
+            "show_weekday": false,
+            "delivery_estimation_text": "Livraison estimée entre le",
+            "translation_between_dates": "et le",
+            "margin_bottom": 10
+          }
+        },
+        "accordions_KKUaHK": {
+          "type": "accordions",
+          "name": "Accordéons",
+          "settings": {
+            "icon": "add",
+            "accordion_padding": "medium"
+          },
+          "blocks": {
+            "accordion_pkKIcG": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Description"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Le Filtre Robinet Lavabo, conçu en Corée, retient en continu les sédiments et impuretés visibles de l'eau de ton lavabo, pour te laver le visage, les mains et les dents avec une eau plus claire.</p><p>Pas de plombier, pas de travaux : il se fixe en quelques secondes sur la majorité des robinets standard, grâce aux adaptateurs fournis. La coque se garde longtemps, seul le sédiment se remplace tous les 2 à 3 mois.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_qx8msz": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Compatibilité"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Compatible avec la majorité des robinets standard. Les adaptateurs fournis s'ajustent à la plupart des diamètres. Installation sans outil.</p><p>Conseil : essaie d'abord le plus petit adaptateur, puis monte en taille si besoin.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_Jni6pU": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Entretien & précautions"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>La coque se garde longtemps, ne la remplace que si elle se détériore. Seul le sédiment se remplace tous les 2 à 3 mois. Nettoyage extérieur doux à l'eau.</p><p>Usage domestique. Ce filtre n'est pas un système de potabilisation : l'eau filtrée est destinée au lavage et au rinçage.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            },
+            "accordion_3IGp4g": {
+              "type": "_accordion",
+              "name": "Accordéon",
+              "settings": {
+                "heading": "Livraison & retours"
+              },
+              "blocks": {
+                "text_acc": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p><p>Retour possible sous 14 jours, produit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "text_acc"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_pkKIcG",
+            "accordion_qx8msz",
+            "accordion_Jni6pU",
+            "accordion_3IGp4g"
+          ]
+        },
+        "group_kLziPN": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 10,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 10,
+            "margin_top": 10
+          },
+          "blocks": {
+            "marquee_QE4fL7": {
+              "type": "marquee",
+              "name": "t:marquee",
+              "settings": {
+                "movement_direction": "reverse",
+                "gap": 30,
+                "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
+              },
+              "blocks": {
+                "icon_with_text_ag8dFY": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>SÉLECTION SUNSOARI · PRODUITS CORÉENS CHOISIS AVEC EXIGENCE</p>",
+                    "font_weight": 500
+                  }
+                },
+                "icon_with_text_YSKnSV": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>LIVRAISON SUIVIE · PARTOUT EN FRANCE MÉTROPOLITAINE</p>",
+                    "font_weight": 500
+                  }
+                },
+                "icon_with_text_ofWkj1": {
+                  "type": "icon-with-text",
+                  "name": "t:icon_with_text",
+                  "settings": {
+                    "layout_gap_desktop": 10,
+                    "layout_direction_mobile": "row",
+                    "icon": "genetics",
+                    "icon_size": 20,
+                    "text": "<p>PAIEMENT SÉCURISÉ · APPLE PAY, PAYPAL, CB</p>",
+                    "font_weight": 500
+                  }
+                }
+              },
+              "block_order": [
+                "icon_with_text_ag8dFY",
+                "icon_with_text_YSKnSV",
+                "icon_with_text_ofWkj1"
+              ]
+            }
+          },
+          "block_order": [
+            "marquee_QE4fL7"
+          ]
+        }
+      },
+      "block_order": [
+        "group_VW4Hi3",
+        "text_zLqMQw",
+        "text_yQdqF8",
+        "price_yEeMeb",
+        "group_pills",
+        "separator_AKgbEA",
+        "product_form_grYQk6",
+        "cross_sell_QcpW8C",
+        "delivery_estimation_A43yiG",
+        "accordions_KKUaHK",
+        "group_kLziPN"
+      ],
+      "settings": {
+        "color_scheme_product_info": "",
+        "image_position": "row-reverse",
+        "product_info_width": 45,
+        "gap": 100,
+        "padding_top": 30,
+        "padding_bottom": 80,
+        "anchor_id": "buy"
+      }
+    },
+    "videos_pratiques": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Vidéos pratiques",
+      "blocks": {
+        "text_fYpjUG": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Les gestes en vidéo</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "tabs_inm7oR": {
+          "type": "tabs",
+          "settings": {
+            "display_type": "tabs",
+            "wrap_content_in_card": true
+          },
+          "name": "Vidéos",
+          "blocks": {
+            "tab_cnNXSl": {
+              "type": "_tab",
+              "settings": {
+                "tab_name": "Installez votre produit"
+              },
+              "name": "Installez votre produit",
+              "blocks": {
+                "video_hsK4hf": {
+                  "type": "video",
+                  "settings": {
+                    "source": "shopify",
+                    "video_autoplay": true,
+                    "enable_video_controls": false,
+                    "aspect_ratio": "9/16",
+                    "alt": "Installez votre produit"
+                  }
+                }
+              },
+              "block_order": [
+                "video_hsK4hf"
+              ]
+            },
+            "tab_DL6lau": {
+              "type": "_tab",
+              "settings": {
+                "tab_name": "Remplacez votre recharge"
+              },
+              "name": "Remplacez votre recharge",
+              "blocks": {
+                "video_XYGT0d": {
+                  "type": "video",
+                  "settings": {
+                    "source": "shopify",
+                    "video_autoplay": true,
+                    "enable_video_controls": false,
+                    "aspect_ratio": "9/16",
+                    "alt": "Remplacez votre recharge"
+                  }
+                }
+              },
+              "block_order": [
+                "video_XYGT0d"
+              ]
+            }
+          },
+          "block_order": [
+            "tab_cnNXSl",
+            "tab_DL6lau"
+          ]
+        }
+      },
+      "block_order": [
+        "text_fYpjUG",
+        "tabs_inm7oR"
+      ]
+    },
+    "la_base_du_rituel_skinca": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "La base du rituel skincare",
+      "blocks": {
+        "text_csvfrl": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>La base du rituel skincare</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "text_ZphnRO": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tout rituel beauté commence par l'eau qui sert à te laver et te rincer. Filtrer l'eau de ton lavabo, c'est prendre soin de cette première étape.</p>",
+            "text_style": "paragraph"
+          }
+        },
+        "slider_rv9jxk": {
+          "type": "slider",
+          "settings": {
+            "per_page_desktop": 4,
+            "per_page_mobile": "1.8"
+          },
+          "name": "La base du rituel skincare",
+          "blocks": {
+            "slide_R1YvQM": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Une eau plus claire",
+              "blocks": {
+                "image_EcFHXv": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/filtre-a-robinet-faucet-4552924.jpg"
+                  }
+                },
+                "text_m3Od2x": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Une eau plus claire</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_LkZ9FR": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Sédiments visibles retenus.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_EcFHXv",
+                "text_m3Od2x",
+                "text_LkZ9FR"
+              ]
+            },
+            "slide_tFMb8h": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Un geste simple",
+              "blocks": {
+                "image_S7t5dV": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/filtre-a-robinet-faucet-9303094.jpg"
+                  }
+                },
+                "text_kBy0OY": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Un geste simple</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_LIP8Oh": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Installé en quelques secondes.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_S7t5dV",
+                "text_kBy0OY",
+                "text_LIP8Oh"
+              ]
+            },
+            "slide_tDjvIn": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Une recharge facile",
+              "blocks": {
+                "image_W12opm": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/filtre-a-robinet-faucet-3469708.jpg"
+                  }
+                },
+                "text_K67R4T": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Une recharge facile</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_ORX8v0": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Un sédiment tous les 2 à 3 mois.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_W12opm",
+                "text_K67R4T",
+                "text_ORX8v0"
+              ]
+            }
+          },
+          "block_order": [
+            "slide_R1YvQM",
+            "slide_tFMb8h",
+            "slide_tDjvIn"
+          ]
+        }
+      },
+      "block_order": [
+        "text_csvfrl",
+        "text_ZphnRO",
+        "slider_rv9jxk"
+      ]
+    },
+    "comment_ca_marche": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "Comment ça marche",
+      "blocks": {
+        "text_yY9Erh": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Comment ça marche ?</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "group_1AOkX5": {
+          "type": "group",
+          "settings": {
+            "color_scheme": "",
+            "layout_direction_desktop": "row",
+            "layout_gap_desktop": 50,
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "layout_wrap_mobile": "wrap",
+            "use_global_container_padding": false,
+            "padding_horizontal": 0,
+            "padding_vertical": 0,
+            "padding_horizontal_mobile": 0,
+            "padding_vertical_mobile": 0
+          },
+          "blocks": {
+            "image_yX9x9S": {
+              "type": "image",
+              "settings": {
+                "image_width_desktop": 80,
+                "image_width_mobile": 80,
+                "image": "shopify://shop_images/filtre-a-robinet-faucet-1719253.jpg"
+              }
+            },
+            "group_mNu7Cz": {
+              "type": "group",
+              "settings": {
+                "color_scheme": "",
+                "layout_align_items_desktop": "center",
+                "same_as_desktop": false,
+                "layout_wrap_mobile": "wrap",
+                "use_global_container_padding": false,
+                "padding_horizontal": 0,
+                "padding_vertical": 0,
+                "padding_horizontal_mobile": 0,
+                "padding_vertical_mobile": 0
+              },
+              "blocks": {
+                "timeline_F0dYIw": {
+                  "type": "timeline",
+                  "settings": {},
+                  "name": "Étapes",
+                  "blocks": {
+                    "timeline_step_Eia875": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 1",
+                      "blocks": {
+                        "text_59ztFu": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 1</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_219kzH": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Choisis</strong> l'adaptateur qui correspond à ton robinet.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_59ztFu",
+                        "text_219kzH"
+                      ]
+                    },
+                    "timeline_step_GczlVL": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 2",
+                      "blocks": {
+                        "text_pDKZQq": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 2</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_3WGQyi": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Visse</strong> la coque du filtre sur le robinet, en quelques secondes, sans outil.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_pDKZQq",
+                        "text_3WGQyi"
+                      ]
+                    },
+                    "timeline_step_XIbAJA": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 3",
+                      "blocks": {
+                        "text_eGNvCr": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 3</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_ORy8HZ": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Insère</strong> le sédiment.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_eGNvCr",
+                        "text_ORy8HZ"
+                      ]
+                    },
+                    "timeline_step_yF9TxS": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 4",
+                      "blocks": {
+                        "text_xSbd41": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 4</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_tWG5jU": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Ouvre l'eau</strong>, c'est prêt !</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_xSbd41",
+                        "text_tWG5jU"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "timeline_step_Eia875",
+                    "timeline_step_GczlVL",
+                    "timeline_step_XIbAJA",
+                    "timeline_step_yF9TxS"
+                  ]
+                },
+                "text_dktVHk": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Le conseil Sunsoari</strong></p><p>Commence avec le plus petit adaptateur, puis passe au suivant si nécessaire. Garde les adaptateurs inutilisés pour un autre robinet. Remplace le sédiment dès que l'eau devient moins claire ou que le débit baisse.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "timeline_F0dYIw",
+                "text_dktVHk"
+              ]
+            }
+          },
+          "block_order": [
+            "image_yX9x9S",
+            "group_mNu7Cz"
+          ]
+        }
+      },
+      "block_order": [
+        "text_yY9Erh",
+        "group_1AOkX5"
+      ]
+    },
+    "en_situation": {
+      "type": "custom-section",
+      "settings": {
+        "color_scheme": "",
+        "color_scheme_card": "",
+        "layout_gap_desktop": 10,
+        "layout_flex_direction_mobile": "row",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "name": "En situation (UGC)",
+      "disabled": true,
+      "blocks": {
+        "text_EQJ2QA": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Dans vos salles de bain</h2>",
+            "text_style": "h3"
+          },
+          "name": "Titre"
+        },
+        "stories_6zHZs2": {
+          "type": "stories",
+          "settings": {},
+          "name": "Stories UGC"
+        }
+      },
+      "block_order": [
+        "text_EQJ2QA",
+        "stories_6zHZs2"
+      ]
+    },
+    "avis": {
+      "type": "reviews",
+      "name": "Avis clients",
+      "disabled": true,
+      "settings": {}
+    },
+    "decouvre_aussi": {
+      "type": "product-recommendations",
+      "blocks": {
+        "title": {
+          "type": "text",
+          "static": true,
+          "settings": {
+            "text": "<p>Découvre aussi</p>",
+            "text_style": "h2",
+            "alignment": "center",
+            "alignment_mobile": "center",
+            "margin_bottom": 40
+          }
+        },
+        "product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+            "layout_gap": 15
+          },
+          "blocks": {
+            "product_card_group_EcgVgX": {
+              "type": "_product-card-group",
+              "name": "t:group",
+              "settings": {
+                "color_scheme": "",
+                "layout_direction_desktop": "column",
+                "layout_gap_desktop": 5,
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "margin_top": 0
+              },
+              "blocks": {
+                "text_cxYhee": {
+                  "type": "text",
+                  "name": "t:text",
+                  "settings": {
+                    "text": "<h2>{{ closest.product.title }}</h2>",
+                    "text_style": "paragraph",
+                    "paragraph_font_size": "large",
+                    "font_weight": 300
+                  }
+                }
+              },
+              "block_order": [
+                "text_cxYhee"
+              ]
+            },
+            "product_card_media_gallery_L3zV7a": {
+              "type": "_product-card-media-gallery",
+              "name": "t:product_card_gallery",
+              "settings": {
+                "media_ratio": "4 / 5"
+              }
+            },
+            "product_card_quick_add_dY48RT": {
+              "type": "_product-card-quick-add",
+              "name": "t:product_card_quick_add",
+              "settings": {}
+            },
+            "product_card_group_LHFtbz": {
+              "type": "_product-card-group",
+              "name": "t:group",
+              "settings": {
+                "color_scheme": "",
+                "layout_direction_desktop": "column",
+                "layout_gap_desktop": 5,
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "margin_top": 0
+              },
+              "blocks": {
+                "product_price_eFDeNW": {
+                  "type": "product-price",
+                  "name": "t:product_price",
+                  "settings": {
+                    "product": "{{ closest.product }}",
+                    "sales_badge": "percentage"
+                  }
+                }
+              },
+              "block_order": [
+                "product_price_eFDeNW"
+              ]
+            }
+          },
+          "block_order": [
+            "product_card_group_EcgVgX",
+            "product_card_media_gallery_L3zV7a",
+            "product_card_quick_add_dY48RT",
+            "product_card_group_LHFtbz"
+          ]
+        }
+      },
+      "name": "t:product_recommendations",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "max_products": 3,
+        "grid_columns": 3,
+        "grid_columns_mobile": "1",
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
+    },
+    "faq": {
+      "type": "custom-section",
+      "blocks": {
+        "group_ampbiX": {
+          "type": "group",
+          "name": "Groupe",
+          "settings": {
+            "color_scheme": ""
+          },
+          "blocks": {
+            "text_ahfQKN": {
+              "type": "text",
+              "name": "Titre",
+              "settings": {
+                "text": "<h3>Questions fréquentes</h3>",
+                "text_style": "h2",
+                "margin_bottom": 10
+              }
+            },
+            "accordions_hpBMaf": {
+              "type": "accordions",
+              "name": "Accordéons",
+              "settings": {
+                "icon": "add",
+                "accordion_padding": "medium"
+              },
+              "blocks": {
+                "accordion_OhqCXa": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Est-ce compatible avec mon robinet ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Il s'adapte à la majorité des robinets standard, grâce aux adaptateurs fournis. Essaie le plus petit d'abord, puis monte en taille si nécessaire.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_cI0SKt": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Combien de temps dure un sédiment ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Environ 2 à 3 mois selon la qualité de l'eau et ton utilisation. Quand l'eau devient moins claire ou que le débit ralentit, remplace-le.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_wM8xqp": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Est-ce un filtre pour l'eau de boisson ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Non. C'est une filtration mécanique des sédiments et impuretés visibles, pour le lavage et le rinçage. Ce n'est ni un dispositif médical ni un système de potabilisation.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                },
+                "accordion_4e4JgW": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Puis-je laisser le filtre en permanence ?"
+                  },
+                  "blocks": {
+                    "text_faq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Oui ! La coque se démonte facilement si tu as besoin d'accéder au robinet.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_faq"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_OhqCXa",
+                "accordion_cI0SKt",
+                "accordion_wM8xqp",
+                "accordion_4e4JgW"
+              ]
+            }
+          },
+          "block_order": [
+            "text_ahfQKN",
+            "accordions_hpBMaf"
+          ]
+        },
+        "group_NkNJJg": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "wrap_in_card": true,
+            "color_scheme": "scheme-2",
+            "width_desktop": 55,
+            "layout_justify_desktop": "center",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "use_global_container_padding": false,
+            "padding_horizontal": 40,
+            "padding_vertical": 50
+          },
+          "blocks": {
+            "icon_MrVn8A": {
+              "type": "icon",
+              "name": "t:icon",
+              "settings": {
+                "icon": "support_agent"
+              }
+            },
+            "text_VLtRib": {
+              "type": "text",
+              "name": "t:title",
+              "settings": {
+                "text": "<h4>Besoin d'aide ?</h4>",
+                "text_style": "h4",
+                "alignment": "center"
+              }
+            },
+            "text_FyFaMj": {
+              "type": "text",
+              "name": "t:text",
+              "settings": {
+                "text": "<p>Écris-nous, on te répond avec plaisir pour choisir le bon système ou la bonne recharge.</p>",
+                "text_style": "paragraph",
+                "alignment": "center",
+                "margin_bottom": 20
+              }
+            },
+            "button_Q3UxFk": {
+              "type": "button",
+              "name": "t:button",
+              "settings": {
+                "link": "shopify://pages/contact",
+                "label": "Nous contacter",
+                "button_shape": "full-width"
+              }
+            }
+          },
+          "block_order": [
+            "icon_MrVn8A",
+            "text_VLtRib",
+            "text_FyFaMj",
+            "button_Q3UxFk"
+          ]
+        }
+      },
+      "block_order": [
+        "group_ampbiX",
+        "group_NkNJJg"
+      ],
+      "name": "t:faq_2",
+      "settings": {
+        "color_scheme_card": "",
+        "layout_flex_direction_desktop": "row",
+        "layout_gap_desktop": 50,
+        "same_as_desktop": false,
+        "layout_flex_direction_mobile": "column-reverse",
+        "layout_gap_mobile": 30,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "videos_pratiques",
+    "la_base_du_rituel_skinca",
+    "comment_ca_marche",
+    "en_situation",
+    "avis",
+    "decouvre_aussi",
+    "faq"
+  ]
+}

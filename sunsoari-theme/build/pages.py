@@ -71,14 +71,15 @@ def home():
     set_text(tx[1], "<p>Filtres de douche, recharges et capsules sensorielles venus de Corée, choisis avec exigence. "
                     "Une douche plus douce, des senteurs qui apaisent : une première étape simple pour prendre soin de toi.</p>")
     button(find(top, by_type("button")), "Découvrir nos rituels", "shopify://collections/filtre-de-douche")
-    set_image(find(top, by_type("image")), LIFESTYLE["onsha_hot_spring"])
+    # first screen: product alone, no text on the photo (Drive packshot)
+    set_image(find(top, by_type("image")), "onsha-filtre-thermal-ocean-packshot.jpg")
 
     home_card, nomade_card, marquee_group = children(cards)
     for card, (title, body, badges, image, link) in (
         (home_card, ("Rituel Home", "Le pommeau filtrant, sa coque de diffusion et les filtres thermaux : le rituel qui reste installé chez toi.",
-                     ["Pommeau + coque + filtres", "3 à 4 semaines par filtre"], PRODUCT["coffret_home"][0], "shopify://products/coffret-home-onsha-sullab-sunsoari")),
+                     ["Pommeau + coque + filtres", "3 à 4 semaines par filtre"], "onsha-filtre-thermal-fleur-de-prunier-packshot.jpg", "shopify://products/coffret-home-onsha-sullab-sunsoari")),
         (nomade_card, ("Rituel Nomade", "La douchette tout-en-un et ses capsules thermales : ton rituel te suit partout, à l'hôtel comme en voyage.",
-                       ["Douchette + capsules", "Format compact"], PRODUCT["coffret_nomade"][0], "shopify://products/coffret-mini")),
+                       ["Douchette + capsules", "Format compact"], PRODUCT["coque_nomade"][0], "shopify://products/coffret-mini")),
     ):
         card["settings"]["card_link"] = link
         ct = find_all(card, by_type("text"))
@@ -109,9 +110,9 @@ def home():
                             layout_grid_columns_mobile=1, padding_horizontal=0, padding_vertical=0,
                             padding_horizontal_mobile=0, padding_vertical_mobile=0, layout_gap_desktop=16)
     put(grid, [
-        image_card(LIFESTYLE["onsha_wide"], "Onsha", "shopify://collections/onsha",
+        image_card(PRODUCT["coque"][0], "Onsha", "shopify://collections/onsha",
                    "Filtres de douche thermaux · Home & Nomade"),
-        image_card(LIFESTYLE["shift_cover"], "SHIFT", "shopify://collections/shift",
+        image_card("SHIFT--_pommeau_blanc_Classic_1.png", "SHIFT", "shopify://collections/shift",
                    "Pommeau filtrant & capsules d'aromathérapie"),
         image_card(PRODUCT["robinet"][0], "Sullab", "shopify://collections/sullab",
                    "Filtre robinet & soins du visage"),
@@ -121,15 +122,15 @@ def home():
 
     # 3 · Composez ton rituel (Paalm bundle builder teaser)
     builder = brand_story(
-        "Compose ton rituel",
+        "Composez votre rituel",
         [
             "Choisis ton système, tes recharges et tes senteurs, puis ajoute tout au panier en une fois.",
             "Onsha, SHIFT ou Sullab : chaque étape t'indique ce qui est compatible, pour ne pas te tromper de recharge.",
             "<strong>Livraison offerte dès 80 € d'achat.</strong>",
         ],
-        "onsha-set-decouverte-home-6780214.jpg", "Composer mon rituel", "shopify://pages/composez-votre-rituel")
+        PRODUCT["coque"][1], "Composer mon rituel", "shopify://pages/composez-votre-rituel")
     builder["settings"].update(color_scheme="scheme-2", padding_top=50, padding_bottom=50)
-    builder["name"] = "Compose ton rituel"
+    builder["name"] = "Composez votre rituel"
 
     # 4 · Coffrets slider
     best = sec["collection_featured_9fdFHq"]
@@ -371,30 +372,28 @@ if __name__ == "__main__":
 # --------------------------------------------------------------------------
 
 def builder_page():
+    """« Composez votre rituel » : every product, à la carte, browsable by brand or need."""
+    cats = [
+        ("cat_tous", "Tous les produits", "bains-douches",
+         "Tous nos produits, à la carte. Les recharges ne sont pas interchangeables d'un système à l'autre : chaque fiche précise sa compatibilité."),
+        ("cat_onsha", "Onsha", "onsha",
+         "Home : pommeau, coque Home et filtres thermaux. Nomade : douchette, coque Nomade et capsules thermales."),
+        ("cat_shift", "SHIFT", "shift", "Pommeau SHIFT, filtres Pure Water et capsules d'aromathérapie."),
+        ("cat_sullab", "Sullab", "sullab", "Le filtre robinet, pour l'eau de ton rituel visage."),
+        ("cat_recharges", "Recharges", "recharge-filtre", "Filtres et recharges de chaque système."),
+        ("cat_accessoires", "Accessoires", "accessoires", ""),
+    ]
     t = {
         "sections": {
             "rituel": {
                 "type": "sunsoari-rituel-builder",
-                "blocks": {
-                    "cat_systemes": {"type": "category", "settings": {
-                        "label": "1 · Mon système", "collection": "douchette",
-                        "note": "Onsha Home : pommeau + filtres thermaux. Onsha Nomade : douchette + capsules. SHIFT : pommeau + filtres Pure Water + capsules. Les recharges ne sont pas interchangeables d'un système à l'autre."}},
-                    "cat_recharges": {"type": "category", "settings": {
-                        "label": "2 · Mes recharges", "collection": "recharge-filtre",
-                        "note": "Choisis les recharges de ton système : filtres thermaux pour Home, capsules pour Nomade, Pure Water et capsules pour SHIFT."}},
-                    "cat_capsules": {"type": "category", "settings": {
-                        "label": "3 · Mes senteurs", "collection": "capsule-vitamine", "note": ""}},
-                    "cat_sullab": {"type": "category", "settings": {
-                        "label": "4 · Mon lavabo · Sullab", "collection": "sullab",
-                        "note": "Le filtre robinet Sullab, pour l'eau de ton rituel visage."}},
-                    "cat_accessoires": {"type": "category", "settings": {
-                        "label": "5 · Mes accessoires", "collection": "accessoires", "note": ""}},
-                },
-                "block_order": ["cat_systemes", "cat_recharges", "cat_capsules", "cat_sullab", "cat_accessoires"],
+                "blocks": {k: {"type": "category", "settings": {"label": label, "collection": col, "note": note}}
+                           for k, label, col, note in cats},
+                "block_order": [c[0] for c in cats],
                 "settings": {
                     "eyebrow": "Onsha · SHIFT · Sullab",
-                    "heading": "Compose ton rituel",
-                    "text": "<p>Choisis ton système, tes recharges et tes senteurs : ton rituel se construit à droite, "
+                    "heading": "Composez votre rituel",
+                    "text": "<p>Choisis tes produits à la carte, comme tu veux : ton rituel se construit à droite, "
                             "puis s'ajoute au panier en une fois. Livraison offerte dès 80 € d'achat.</p>",
                     "legal": "Les remises en vigueur s'appliquent automatiquement au paiement.",
                 },

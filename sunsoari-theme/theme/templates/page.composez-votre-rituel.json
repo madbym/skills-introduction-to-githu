@@ -3,58 +3,67 @@
     "rituel": {
       "type": "sunsoari-rituel-builder",
       "blocks": {
-        "cat_systemes": {
+        "cat_tous": {
           "type": "category",
           "settings": {
-            "label": "1 · Mon système",
-            "collection": "douchette",
-            "note": "Onsha Home : pommeau + filtres thermaux. Onsha Nomade : douchette + capsules. SHIFT : pommeau + filtres Pure Water + capsules. Les recharges ne sont pas interchangeables d'un système à l'autre."
+            "label": "Tous les produits",
+            "collection": "bains-douches",
+            "note": "Tous nos produits, à la carte. Les recharges ne sont pas interchangeables d'un système à l'autre : chaque fiche précise sa compatibilité."
           }
         },
-        "cat_recharges": {
+        "cat_onsha": {
           "type": "category",
           "settings": {
-            "label": "2 · Mes recharges",
-            "collection": "recharge-filtre",
-            "note": "Choisis les recharges de ton système : filtres thermaux pour Home, capsules pour Nomade, Pure Water et capsules pour SHIFT."
+            "label": "Onsha",
+            "collection": "onsha",
+            "note": "Home : pommeau, coque Home et filtres thermaux. Nomade : douchette, coque Nomade et capsules thermales."
           }
         },
-        "cat_capsules": {
+        "cat_shift": {
           "type": "category",
           "settings": {
-            "label": "3 · Mes senteurs",
-            "collection": "capsule-vitamine",
-            "note": ""
+            "label": "SHIFT",
+            "collection": "shift",
+            "note": "Pommeau SHIFT, filtres Pure Water et capsules d'aromathérapie."
           }
         },
         "cat_sullab": {
           "type": "category",
           "settings": {
-            "label": "4 · Mon lavabo · Sullab",
+            "label": "Sullab",
             "collection": "sullab",
-            "note": "Le filtre robinet Sullab, pour l'eau de ton rituel visage."
+            "note": "Le filtre robinet, pour l'eau de ton rituel visage."
+          }
+        },
+        "cat_recharges": {
+          "type": "category",
+          "settings": {
+            "label": "Recharges",
+            "collection": "recharge-filtre",
+            "note": "Filtres et recharges de chaque système."
           }
         },
         "cat_accessoires": {
           "type": "category",
           "settings": {
-            "label": "5 · Mes accessoires",
+            "label": "Accessoires",
             "collection": "accessoires",
             "note": ""
           }
         }
       },
       "block_order": [
-        "cat_systemes",
-        "cat_recharges",
-        "cat_capsules",
+        "cat_tous",
+        "cat_onsha",
+        "cat_shift",
         "cat_sullab",
+        "cat_recharges",
         "cat_accessoires"
       ],
       "settings": {
         "eyebrow": "Onsha · SHIFT · Sullab",
-        "heading": "Compose ton rituel",
-        "text": "<p>Choisis ton système, tes recharges et tes senteurs : ton rituel se construit à droite, puis s'ajoute au panier en une fois. Livraison offerte dès 80 € d'achat.</p>",
+        "heading": "Composez votre rituel",
+        "text": "<p>Choisis tes produits à la carte, comme tu veux : ton rituel se construit à droite, puis s'ajoute au panier en une fois. Livraison offerte dès 80 € d'achat.</p>",
         "legal": "Les remises en vigueur s'appliquent automatiquement au paiement."
       }
     }

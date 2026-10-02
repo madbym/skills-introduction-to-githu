@@ -60,6 +60,7 @@ INTRO = {
     "filtre-thermal-home": "Le cœur de ton rituel Home : un filtre 2-en-1, sédiments et soin, inspiré des sources thermales coréennes.",
     "filtre-thermal-sans-senteur": "La même composition que nos filtres thermaux Home, sans senteur ajoutée : pour un rituel thermal tout en neutralité.",
     "set-decouverte-home": "La coque de diffusion et 4 filtres thermaux, un de chaque senteur : tout pour débuter ton rituel Home.",
+    "coque-diffusion-nomade": "La coque compacte qui accueille tes capsules thermales et se fixe sur ta douchette : la pièce du rituel Nomade.",
     "coque-diffusion-home": "La coque grand format qui accueille tes filtres thermaux et relie ton flexible à ton pommeau : la pièce centrale du rituel Home.",
     "housse-douchette": "La housse en silicone qui protège ta douchette Onsha et en fait un objet à ton image, à personnaliser, à collectionner, à offrir.",
     "filtre-sediment-douchette": "La recharge essentielle de ta douchette Onsha : une filtration mécanique qui retient les sédiments et impuretés visibles de l'eau.",
@@ -391,8 +392,53 @@ def coffret_aromatherapie_shift():
     return t
 
 
+def coque_nomade(home):
+    """Coque de diffusion Nomade (Mini format), split from the Home coque on 2 Oct."""
+    t = clone(home)
+    m = t["sections"]["main"]
+    set_badge(m, "LA PIÈCE DU RITUEL NOMADE")
+    set_highlights(m, ["Format Nomade (Mini)", "Durable", "Installation sans outil"])
+    set_toggle(m, "La capsule qui va dans ta coque", "Senteur au choix, environ 10 à 15 jours de rituel.",
+               ["capsule-vitaminee-shower-filter-sunsoari"])
+    set_cross_sell(m, ["coffret-mini"], "Tu pars de zéro ?", "Douchette, housse, coque nomade et 4 capsules réunies.")
+    set_main_accordions(m, [
+        ("Caractéristiques & matériaux",
+         "<p>Polypropylène (PP) et silicone, sans BPA, selon le fabricant.</p><p>Conçue pour accueillir les capsules thermales "
+         "Onsha format Mini (Nomade) avec leur disque sédiment, et se fixer sur la Douchette Filtrante Onsha.</p>"
+         "<p>Attention : les filtres thermaux format Home ne s'insèrent pas dans cette coque. Usage domestique uniquement. "
+         "Ne pas forcer le vissage.</p>"),
+        SHIPPING,
+    ])
+    tech = S(t, "la_technologie_onsha")
+    set_title(tech, "<h2>La technologie Onsha</h2>")
+    set_intro(tech, "Une pièce compacte, pensée en Corée pour accueillir ta capsule et l'emporter partout.")
+    set_slider(tech, [
+        ("Format compact", "Pensée pour la douchette Nomade.", PRODUCT["coque_nomade"][0]),
+        ("Matériaux durables", "PP et silicone, sans BPA.", PRODUCT["douchette"][1]),
+        ("Format Mini", "Pour les capsules thermales Nomade.", ONSHA_CAPSULE_BY_SCENT["Hinoki"]),
+        ("Le lien du système", "Entre ta douchette et ta capsule.", PRODUCT["set_nomade"][0]),
+    ], PHOTO)
+    set_steps(S(t, "comment_ca_marche"), [
+        "<strong>Ouvre</strong> la coque nomade.",
+        "<strong>Insère</strong> le disque sédiment puis la capsule, dans la senteur de ton choix.",
+        "<strong>Referme</strong> la coque et fixe-la sur ta douchette, sans outil.",
+        "<strong>Ouvre l'eau</strong> : ton rituel commence.",
+    ], ONSHA_HOWTO["capsule"], 80,
+        "Tu pars de zéro ? Le Coffret Douche Thermal Coréen (Nomade) réunit la douchette, la housse, la coque et 4 capsules "
+        "à un prix plus doux que les pièces séparées. Cette coque seule est parfaite si tu as déjà la douchette, ou comme pièce de rechange.")
+    set_faq(S(t, "faq"), [
+        ("Ai-je besoin de cette coque si j'ai le coffret Nomade ?", "Non : le Coffret Nomade et le Set Découverte Nomade incluent déjà la coque. Celle-ci s'adresse à celles qui ont déjà la douchette, ou qui veulent une pièce de rechange."),
+        ("Quelles recharges s'insèrent dans cette coque ?", "Les capsules thermales Onsha format Mini (Nomade), avec leur disque sédiment. Les filtres thermaux Home sont trop grands pour cette coque."),
+        ("Dois-je la remplacer régulièrement ?", "Non, la coque est conçue pour durer. Seules les capsules et leurs disques se remplacent, environ tous les 10 à 15 jours."),
+        ("Est-ce que je peux l'installer moi-même ?", "Oui ! Elle se fixe à la main, en quelques secondes, sans outil ni plombier."),
+        *FAQ_SHIPPING,
+    ])
+    return t
+
+
 def build():
     templates = patch_existing()
+    templates["coque-diffusion-nomade"] = coque_nomade(templates["coque-diffusion-home"])
     templates["douchette-filtrante"] = douchette()
     templates["coffret-home"] = coffret_home()
     templates["coffret-nomade"] = coffret_nomade()

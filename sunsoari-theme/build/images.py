@@ -45,11 +45,13 @@ PRODUCT = {
         "onsha-filtre-sediment-recharge-9193355.jpg",
         "onsha-filtre-sediment-recharge-1810397.jpg",
     ],
+    # Drive packshots (product alone, 1600 px), Home and Nomade split on 2 Oct
     "coque": [
-        "onsha-coque-de-diffusion-4878009.jpg",
-        "onsha-coque-de-diffusion-8410244.jpg",
-        "onsha-coque-de-diffusion-5181082.jpg",
+        "onsha-coque-diffusion-home-1.jpg",
+        "onsha-coque-diffusion-home-2.jpg",
+        "onsha-coque-diffusion-home-3.jpg",
     ],
+    "coque_nomade": ["onsha-coque-diffusion-nomade-1.jpg"],
     "filtre_home": ["onsha-filtre-vitamine-9910937.jpg"],
     "sans_senteur": [
         "onsha-filtre-thermal-vitamine-sans-senteur-3597431.png",

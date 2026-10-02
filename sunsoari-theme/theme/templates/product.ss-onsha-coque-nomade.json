@@ -23,7 +23,7 @@
                 "badge_VEGRNK": {
                   "type": "_badge",
                   "settings": {
-                    "text": "LE FILTRE THERMAL SANS SENTEUR",
+                    "text": "LA PIÈCE DU RITUEL NOMADE",
                     "badge_style": "secondary"
                   }
                 }
@@ -49,7 +49,7 @@
           "type": "text",
           "name": "Texte",
           "settings": {
-            "text": "<p>La même composition que nos filtres thermaux Home, sans senteur ajoutée : pour un rituel thermal tout en neutralité.</p>",
+            "text": "<p>La coque compacte qui accueille tes capsules thermales et se fixe sur ta douchette : la pièce du rituel Nomade.</p>",
             "text_style": "paragraph",
             "paragraph_font_size": "large"
           }
@@ -82,44 +82,44 @@
           },
           "name": "Points forts",
           "blocks": {
-            "icon_with_text_iEbrUK": {
+            "icon_with_text_SqPpfi": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Eau thermale coréenne concentrée</p>",
+                "text": "<p>Format Nomade (Mini)</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_dxXVTS": {
+            "icon_with_text_jsxl9O": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>Sans parfum ajouté</p>",
+                "text": "<p>Durable</p>",
                 "font_weight": 500
               }
             },
-            "icon_with_text_OJTFDQ": {
+            "icon_with_text_gYU1tV": {
               "type": "icon-with-text",
               "settings": {
                 "layout_gap_desktop": 10,
                 "layout_direction_mobile": "row",
                 "icon": "check",
                 "icon_size": 20,
-                "text": "<p>3 à 4 semaines de rituel</p>",
+                "text": "<p>Installation sans outil</p>",
                 "font_weight": 500
               }
             }
           },
           "block_order": [
-            "icon_with_text_iEbrUK",
-            "icon_with_text_dxXVTS",
-            "icon_with_text_OJTFDQ"
+            "icon_with_text_SqPpfi",
+            "icon_with_text_jsxl9O",
+            "icon_with_text_gYU1tV"
           ]
         },
         "separator_AKgbEA": {
@@ -204,10 +204,10 @@
               "type": "_toggle-cross-sell",
               "name": "t:toggle_cross_sell",
               "settings": {
-                "title": "Pas encore équipée ?",
-                "description": "<p>Indispensable pour accueillir ton filtre.</p>",
+                "title": "La capsule qui va dans ta coque",
+                "description": "<p>Senteur au choix, environ 10 à 15 jours de rituel.</p>",
                 "product_list": [
-                  "coque-de-diffusion"
+                  "capsule-vitaminee-shower-filter-sunsoari"
                 ]
               }
             }
@@ -216,6 +216,20 @@
             "product_variant_picker_xWC3wF",
             "toggle_cross_sell"
           ]
+        },
+        "cross_sell_QcpW8C": {
+          "type": "cross-sell",
+          "name": "t:cross_sell",
+          "settings": {
+            "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+            "products": [
+              "coffret-mini"
+            ],
+            "title": "Tu pars de zéro ?",
+            "description": "<p>Douchette, housse, coque nomade et 4 capsules réunies.</p>",
+            "image_width": 90,
+            "button_content_type": "icon"
+          }
         },
         "delivery_estimation_A43yiG": {
           "type": "delivery-estimation",
@@ -236,52 +250,33 @@
             "accordion_padding": "medium"
           },
           "blocks": {
-            "accordion_ttUMk9": {
+            "accordion_oiVgRV": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
-                "heading": "Composition & principes actifs"
+                "heading": "Caractéristiques & matériaux"
               },
               "blocks": {
-                "text_acc": {
+                "text_OhbVrp": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Eau thermale soufrée :</strong> extraite à 808 m de profondeur dans le granit coréen, lyophilisée et concentrée 4x.</p><p><strong>Actifs de soin :</strong> vitamine C, glycérine, acide hyaluronique, MSM.</p><p><strong>Filtration :</strong> une première couche mécanique retient les sédiments et impuretés de l'eau.</p><p><strong>Sans senteur ajoutée :</strong> seule l'odeur naturelle, légèrement soufrée, de l'eau thermale peut se percevoir.</p><p>La liste INCI complète figure sur l'emballage. Usage externe uniquement. Tenir hors de portée des enfants.</p><p>Conçu en Corée pour le rituel de douche Onsha Home.</p>",
+                    "text": "<p>Polypropylène (PP) et silicone, sans BPA, selon le fabricant.</p><p>Conçue pour accueillir les capsules thermales Onsha format Mini (Nomade) avec leur disque sédiment, et se fixer sur la Douchette Filtrante Onsha.</p><p>Attention : les filtres thermaux format Home ne s'insèrent pas dans cette coque. Usage domestique uniquement. Ne pas forcer le vissage.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "text_acc"
+                "text_OhbVrp"
               ]
             },
-            "accordion_31FMdu": {
-              "type": "_accordion",
-              "name": "Accordéon",
-              "settings": {
-                "heading": "Durée & entretien"
-              },
-              "blocks": {
-                "text_acc": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Durée du filtre :</strong> 3 à 4 semaines selon ta fréquence de douche et la qualité de ton eau.</p><p><strong>Entretien :</strong> rince régulièrement la coque de diffusion, aucun entretien spécial du filtre.</p><p><strong>Quand le changer :</strong> quand le débit baisse ou que la capsule est vide.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_acc"
-              ]
-            },
-            "accordion_x8KUCE": {
+            "accordion_bfnoGM": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
                 "heading": "Livraison & retours"
               },
               "blocks": {
-                "text_acc": {
+                "text_5IfLBc": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p><p>Retour possible sous 14 jours, produit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
@@ -290,14 +285,13 @@
                 }
               },
               "block_order": [
-                "text_acc"
+                "text_5IfLBc"
               ]
             }
           },
           "block_order": [
-            "accordion_ttUMk9",
-            "accordion_31FMdu",
-            "accordion_x8KUCE"
+            "accordion_oiVgRV",
+            "accordion_bfnoGM"
           ]
         },
         "group_kLziPN": {
@@ -323,7 +317,7 @@
                 "color_scheme": "scheme-569beabf-ba81-4f8d-8567-f8c2cbc96316"
               },
               "blocks": {
-                "icon_with_text_Rkj9Zh": {
+                "icon_with_text_6x11qp": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -335,7 +329,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_x9PkOZ": {
+                "icon_with_text_dcgKZO": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -347,7 +341,7 @@
                     "font_weight": 500
                   }
                 },
-                "icon_with_text_AEyXYC": {
+                "icon_with_text_60Tz5d": {
                   "type": "icon-with-text",
                   "name": "t:icon_with_text",
                   "settings": {
@@ -361,9 +355,9 @@
                 }
               },
               "block_order": [
-                "icon_with_text_Rkj9Zh",
-                "icon_with_text_x9PkOZ",
-                "icon_with_text_AEyXYC"
+                "icon_with_text_6x11qp",
+                "icon_with_text_dcgKZO",
+                "icon_with_text_60Tz5d"
               ]
             }
           },
@@ -393,6 +387,7 @@
         "group_pills",
         "separator_AKgbEA",
         "product_form_grYQk6",
+        "cross_sell_QcpW8C",
         "delivery_estimation_A43yiG",
         "accordions_KKUaHK",
         "group_kLziPN"
@@ -418,17 +413,16 @@
         "padding_bottom": 60
       },
       "name": "Vidéos pratiques",
-      "disabled": true,
       "blocks": {
-        "text_yRyMX5": {
+        "text_l5Ukys": {
           "type": "text",
           "settings": {
-            "text": "<h2>En vidéo</h2>",
+            "text": "<h2>Les gestes en vidéo</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "tabs_uqrBkL": {
+        "tabs_KmEfIu": {
           "type": "tabs",
           "settings": {
             "display_type": "tabs",
@@ -436,40 +430,63 @@
           },
           "name": "Vidéos",
           "blocks": {
-            "tab_Ua1jM1": {
+            "tab_c1N21Y": {
               "type": "_tab",
               "settings": {
-                "tab_name": "Remplace ta recharge"
+                "tab_name": "Installez votre produit"
               },
-              "name": "Remplace ta recharge",
+              "name": "Installez votre produit",
               "blocks": {
-                "video_srdNPT": {
+                "video_ktMLOf": {
                   "type": "video",
                   "settings": {
                     "source": "shopify",
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Remplace ta recharge"
+                    "alt": "Installez votre produit"
                   }
                 }
               },
               "block_order": [
-                "video_srdNPT"
+                "video_ktMLOf"
+              ]
+            },
+            "tab_dGTA4v": {
+              "type": "_tab",
+              "settings": {
+                "tab_name": "Remplacez votre recharge"
+              },
+              "name": "Remplacez votre recharge",
+              "blocks": {
+                "video_Ozfc2C": {
+                  "type": "video",
+                  "settings": {
+                    "source": "shopify",
+                    "video_autoplay": true,
+                    "enable_video_controls": false,
+                    "aspect_ratio": "9/16",
+                    "alt": "Remplacez votre recharge"
+                  }
+                }
+              },
+              "block_order": [
+                "video_Ozfc2C"
               ]
             }
           },
           "block_order": [
-            "tab_Ua1jM1"
+            "tab_c1N21Y",
+            "tab_dGTA4v"
           ]
         }
       },
       "block_order": [
-        "text_yRyMX5",
-        "tabs_uqrBkL"
+        "text_l5Ukys",
+        "tabs_KmEfIu"
       ]
     },
-    "ingr_dients_cl_s": {
+    "la_technologie_onsha": {
       "type": "custom-section",
       "settings": {
         "color_scheme": "",
@@ -479,176 +496,180 @@
         "padding_top": 60,
         "padding_bottom": 60
       },
-      "name": "Ingrédients clés",
+      "name": "La technologie Onsha",
       "blocks": {
-        "text_16dqYG": {
+        "text_6Rpqwm": {
           "type": "text",
           "settings": {
-            "text": "<h2>Ingrédients clés</h2>",
+            "text": "<h2>La technologie Onsha</h2>",
             "text_style": "h3"
           },
           "name": "Titre"
         },
-        "text_gjuWa8": {
+        "text_hYbFhe": {
           "type": "text",
           "settings": {
-            "text": "<p>La liste complète des ingrédients (INCI) figure sur l'emballage.</p>",
+            "text": "<p>Une pièce compacte, pensée en Corée pour accueillir ta capsule et l'emporter partout.</p>",
             "text_style": "paragraph"
           }
         },
-        "slider_CWPgEu": {
+        "slider_s3RQy1": {
           "type": "slider",
           "settings": {
             "per_page_desktop": 4,
             "per_page_mobile": "1.8"
           },
-          "name": "Ingrédients clés",
+          "name": "La technologie Onsha",
           "blocks": {
-            "slide_TDF826": {
+            "slide_SBvrjn": {
               "type": "_slide",
               "settings": {},
-              "name": "Eau thermale soufrée",
+              "name": "Format compact",
               "blocks": {
-                "image_s1jZ43": {
+                "image_bJmTPS": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/onsha-coque-diffusion-nomade-1.jpg"
                   }
                 },
-                "text_JRX6Fw": {
+                "text_IAoCLr": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Eau thermale soufrée</strong></p>",
+                    "text": "<p><strong>Format compact</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_ymYWU7": {
+                "text_Z3aWZk": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Extraite à 808 m dans le granit coréen, lyophilisée et concentrée 4 fois.</p>",
+                    "text": "<p>Pensée pour la douchette Nomade.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_s1jZ43",
-                "text_JRX6Fw",
-                "text_ymYWU7"
+                "image_bJmTPS",
+                "text_IAoCLr",
+                "text_Z3aWZk"
               ]
             },
-            "slide_7hT9fq": {
+            "slide_7yfJs1": {
               "type": "_slide",
               "settings": {},
-              "name": "Vitamine C",
+              "name": "Matériaux durables",
               "blocks": {
-                "image_DTn7qL": {
+                "image_9Wvgfy": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/onsha-douchette-filtrante-1474368.png"
                   }
                 },
-                "text_fIZwXe": {
+                "text_gw2wMq": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Vitamine C</strong></p>",
+                    "text": "<p><strong>Matériaux durables</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_41HuEG": {
+                "text_ZcUDIh": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Intégrée à la capsule, dans l'eau de ta douche.</p>",
+                    "text": "<p>PP et silicone, sans BPA.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_DTn7qL",
-                "text_fIZwXe",
-                "text_41HuEG"
+                "image_9Wvgfy",
+                "text_gw2wMq",
+                "text_ZcUDIh"
               ]
             },
-            "slide_6QGzlC": {
+            "slide_gyrDO1": {
               "type": "_slide",
               "settings": {},
-              "name": "Acide hyaluronique & glycérine",
+              "name": "Format Mini",
               "blocks": {
-                "image_lZSsxK": {
+                "image_ON43xK": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/onsha-capsule-thermale-vitaminee-5877420.jpg"
                   }
                 },
-                "text_jpc7Fx": {
+                "text_mTecQo": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Acide hyaluronique & glycérine</strong></p>",
+                    "text": "<p><strong>Format Mini</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_fjuMbw": {
+                "text_Xsf2o3": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Des actifs hydratants bien connus en cosmétique.</p>",
+                    "text": "<p>Pour les capsules thermales Nomade.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_lZSsxK",
-                "text_jpc7Fx",
-                "text_fjuMbw"
+                "image_ON43xK",
+                "text_mTecQo",
+                "text_Xsf2o3"
               ]
             },
-            "slide_olc8q8": {
+            "slide_kDyr7O": {
               "type": "_slide",
               "settings": {},
-              "name": "MSM",
+              "name": "Le lien du système",
               "blocks": {
-                "image_n33KFL": {
+                "image_xkxwnQ": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/onsha-set-decouverte-nomade-6470897.jpg"
                   }
                 },
-                "text_Bg8CXL": {
+                "text_rS7RPe": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>MSM</strong></p>",
+                    "text": "<p><strong>Le lien du système</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_cvmlyf": {
+                "text_MOkIUp": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Présent dans la composition thermale Onsha.</p>",
+                    "text": "<p>Entre ta douchette et ta capsule.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_n33KFL",
-                "text_Bg8CXL",
-                "text_cvmlyf"
+                "image_xkxwnQ",
+                "text_rS7RPe",
+                "text_MOkIUp"
               ]
             }
           },
           "block_order": [
-            "slide_TDF826",
-            "slide_7hT9fq",
-            "slide_6QGzlC",
-            "slide_olc8q8"
+            "slide_SBvrjn",
+            "slide_7yfJs1",
+            "slide_gyrDO1",
+            "slide_kDyr7O"
           ]
         }
       },
       "block_order": [
-        "text_16dqYG",
-        "text_gjuWa8",
-        "slider_CWPgEu"
+        "text_6Rpqwm",
+        "text_hYbFhe",
+        "slider_s3RQy1"
       ]
     },
     "comment_ca_marche": {
@@ -663,7 +684,7 @@
       },
       "name": "Comment ça marche",
       "blocks": {
-        "text_lHXoTl": {
+        "text_wXSBU3": {
           "type": "text",
           "settings": {
             "text": "<h2>Comment ça marche ?</h2>",
@@ -671,7 +692,7 @@
           },
           "name": "Titre"
         },
-        "group_MUFWrl": {
+        "group_lr5qIb": {
           "type": "group",
           "settings": {
             "color_scheme": "",
@@ -687,15 +708,15 @@
             "padding_vertical_mobile": 0
           },
           "blocks": {
-            "image_ZGvGiC": {
+            "image_jtUtqU": {
               "type": "image",
               "settings": {
                 "image_width_desktop": 80,
                 "image_width_mobile": 80,
-                "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-sans-senteur-5334131.png"
+                "image": "shopify://shop_images/Copie_de_IMG_2103.gif"
               }
             },
-            "group_lxBc6A": {
+            "group_e6mL7f": {
               "type": "group",
               "settings": {
                 "color_scheme": "",
@@ -709,317 +730,142 @@
                 "padding_vertical_mobile": 0
               },
               "blocks": {
-                "timeline_sA5kd1": {
+                "timeline_x5pZpw": {
                   "type": "timeline",
                   "settings": {},
                   "name": "Étapes",
                   "blocks": {
-                    "timeline_step_vZkqFg": {
+                    "timeline_step_Zuzren": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 1",
                       "blocks": {
-                        "text_ykCpZj": {
+                        "text_SJoRu1": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 1</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_6mZck7": {
+                        "text_XXdo0c": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Ouvre la coque de diffusion Home.</p>",
+                            "text": "<p><strong>Ouvre</strong> la coque nomade.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_ykCpZj",
-                        "text_6mZck7"
+                        "text_SJoRu1",
+                        "text_XXdo0c"
                       ]
                     },
-                    "timeline_step_GdO5YQ": {
+                    "timeline_step_PDjqip": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 2",
                       "blocks": {
-                        "text_x4ViXC": {
+                        "text_68K4Tu": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 2</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_bOeCvu": {
+                        "text_nPFz46": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Retire le filtre usagé et insère le nouveau.</p>",
+                            "text": "<p><strong>Insère</strong> le disque sédiment puis la capsule, dans la senteur de ton choix.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_x4ViXC",
-                        "text_bOeCvu"
+                        "text_68K4Tu",
+                        "text_nPFz46"
                       ]
                     },
-                    "timeline_step_hqWmxB": {
+                    "timeline_step_iGFfWd": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 3",
                       "blocks": {
-                        "text_jvoVdl": {
+                        "text_VJIqVL": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 3</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_3jrAAp": {
+                        "text_B5Lzxo": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Referme : ton rituel reprend en quelques secondes.</p>",
+                            "text": "<p><strong>Referme</strong> la coque et fixe-la sur ta douchette, sans outil.</p>",
                             "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_jvoVdl",
-                        "text_3jrAAp"
+                        "text_VJIqVL",
+                        "text_B5Lzxo"
+                      ]
+                    },
+                    "timeline_step_MDHqJ3": {
+                      "type": "_timeline-step",
+                      "settings": {},
+                      "name": "Étape 4",
+                      "blocks": {
+                        "text_3hjOkY": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Étape 4</strong></p>",
+                            "text_style": "paragraph"
+                          }
+                        },
+                        "text_RBMeyy": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Ouvre l'eau</strong> : ton rituel commence.</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "text_3hjOkY",
+                        "text_RBMeyy"
                       ]
                     }
                   },
                   "block_order": [
-                    "timeline_step_vZkqFg",
-                    "timeline_step_GdO5YQ",
-                    "timeline_step_hqWmxB"
+                    "timeline_step_Zuzren",
+                    "timeline_step_PDjqip",
+                    "timeline_step_iGFfWd",
+                    "timeline_step_MDHqJ3"
                   ]
+                },
+                "text_QDzCzK": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Le conseil Sunsoari</strong></p><p>Tu pars de zéro ? Le Coffret Douche Thermal Coréen (Nomade) réunit la douchette, la housse, la coque et 4 capsules à un prix plus doux que les pièces séparées. Cette coque seule est parfaite si tu as déjà la douchette, ou comme pièce de rechange.</p>",
+                    "text_style": "paragraph"
+                  }
                 }
               },
               "block_order": [
-                "timeline_sA5kd1"
+                "timeline_x5pZpw",
+                "text_QDzCzK"
               ]
             }
           },
           "block_order": [
-            "image_ZGvGiC",
-            "group_lxBc6A"
+            "image_jtUtqU",
+            "group_e6mL7f"
           ]
         }
       },
       "block_order": [
-        "text_lHXoTl",
-        "group_MUFWrl"
-      ]
-    },
-    "pourquoi": {
-      "type": "custom-section",
-      "settings": {
-        "color_scheme": "",
-        "color_scheme_card": "",
-        "layout_gap_desktop": 10,
-        "layout_flex_direction_mobile": "row",
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
-      "name": "Pourquoi ce filtre ?",
-      "blocks": {
-        "text_J09bbg": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Pourquoi ce filtre ?</h2>",
-            "text_style": "h3"
-          },
-          "name": "Titre"
-        },
-        "group_1MOKDH": {
-          "type": "group",
-          "settings": {
-            "color_scheme": "",
-            "layout_type": "grid",
-            "layout_direction_desktop": "row",
-            "layout_grid_columns_desktop": 4,
-            "layout_gap_desktop": 16,
-            "layout_wrap_desktop": "wrap",
-            "layout_align_items_desktop": "center",
-            "same_as_desktop": false,
-            "layout_direction_mobile": "row",
-            "layout_grid_columns_mobile": 2,
-            "layout_wrap_mobile": "wrap",
-            "use_global_container_padding": false,
-            "padding_horizontal": 0,
-            "padding_vertical": 0,
-            "padding_horizontal_mobile": 0,
-            "padding_vertical_mobile": 0
-          },
-          "blocks": {
-            "group_wH7C9H": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Même composition",
-              "blocks": {
-                "text_ZmLtma": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Même composition</strong></p><p>Eau thermale concentrée 4x, vitamine C, acide hyaluronique.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_ZmLtma"
-              ]
-            },
-            "group_136uXT": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Sans parfum ajouté",
-              "blocks": {
-                "text_U6dHZw": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Sans parfum ajouté</strong></p><p>Pour un rituel thermal neutre.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_U6dHZw"
-              ]
-            },
-            "group_s3g9UF": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Pour alterner",
-              "blocks": {
-                "text_FfaA6W": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Pour alterner</strong></p><p>Entre deux senteurs, selon ton envie.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_FfaA6W"
-              ]
-            },
-            "group_ibp9fo": {
-              "type": "group",
-              "settings": {
-                "wrap_in_card": true,
-                "color_scheme": "",
-                "show_card_border": true,
-                "same_as_desktop": false,
-                "use_global_container_padding": false,
-                "padding_horizontal": 16,
-                "padding_vertical": 16,
-                "padding_horizontal_mobile": 12,
-                "padding_vertical_mobile": 12
-              },
-              "name": "Compatible",
-              "blocks": {
-                "text_lK1xck": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Compatible</strong></p><p>Avec toute coque Onsha Home.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "text_lK1xck"
-              ]
-            }
-          },
-          "block_order": [
-            "group_wH7C9H",
-            "group_136uXT",
-            "group_s3g9UF",
-            "group_ibp9fo"
-          ]
-        }
-      },
-      "block_order": [
-        "text_J09bbg",
-        "group_1MOKDH"
-      ]
-    },
-    "avant_apres": {
-      "type": "custom-section",
-      "settings": {
-        "color_scheme": "",
-        "color_scheme_card": "",
-        "layout_gap_desktop": 10,
-        "layout_flex_direction_mobile": "row",
-        "padding_top": 60,
-        "padding_bottom": 60
-      },
-      "name": "Avant / Après",
-      "disabled": true,
-      "blocks": {
-        "text_gTlcrh": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Avant / Après</h2>",
-            "text_style": "h3"
-          },
-          "name": "Titre"
-        },
-        "before_after_hhhz4i": {
-          "type": "before-after",
-          "settings": {
-            "image_ratio": "portrait",
-            "label_before": "Avant",
-            "label_after": "Après",
-            "label_badge_style": "primary"
-          }
-        },
-        "text_QKDVzk": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Photo réelle, non retouchée.</p>",
-            "text_style": "paragraph",
-            "alignment": "center",
-            "alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "text_gTlcrh",
-        "before_after_hhhz4i",
-        "text_QKDVzk"
+        "text_wXSBU3",
+        "group_lr5qIb"
       ]
     },
     "en_situation": {
@@ -1035,7 +881,7 @@
       "name": "En situation (UGC)",
       "disabled": true,
       "blocks": {
-        "text_SAM1MH": {
+        "text_bndzCm": {
           "type": "text",
           "settings": {
             "text": "<h2>Dans vos salles de bain</h2>",
@@ -1043,15 +889,15 @@
           },
           "name": "Titre"
         },
-        "stories_vzp1vT": {
+        "stories_gmpUd9": {
           "type": "stories",
           "settings": {},
           "name": "Stories UGC"
         }
       },
       "block_order": [
-        "text_SAM1MH",
-        "stories_vzp1vT"
+        "text_bndzCm",
+        "stories_gmpUd9"
       ]
     },
     "avis": {
@@ -1193,103 +1039,122 @@
                 "accordion_padding": "medium"
               },
               "blocks": {
-                "accordion_B1KZ6u": {
+                "accordion_4IWrXP": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Est-ce la même composition que les autres filtres ?"
+                    "heading": "Ai-je besoin de cette coque si j'ai le coffret Nomade ?"
                   },
                   "blocks": {
-                    "text_faq": {
+                    "text_8aRUhR": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Oui. Même eau thermale, même vitamine C, même acide hyaluronique : la seule différence est l'absence de senteur ajoutée.</p>",
+                        "text": "<p>Non : le Coffret Nomade et le Set Découverte Nomade incluent déjà la coque. Celle-ci s'adresse à celles qui ont déjà la douchette, ou qui veulent une pièce de rechange.</p>",
                         "text_style": "paragraph"
                       }
                     }
                   },
                   "block_order": [
-                    "text_faq"
+                    "text_8aRUhR"
                   ]
                 },
-                "accordion_0z2Jdu": {
+                "accordion_a9U4Uq": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Pourquoi l'eau thermale a-t-elle une odeur naturelle ?"
+                    "heading": "Quelles recharges s'insèrent dans cette coque ?"
                   },
                   "blocks": {
-                    "text_faq": {
+                    "text_vhsBkD": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>L'eau thermale coréenne est soufrée, elle peut donc avoir une légère odeur de soufre. C'est naturel.</p>",
+                        "text": "<p>Les capsules thermales Onsha format Mini (Nomade), avec leur disque sédiment. Les filtres thermaux Home sont trop grands pour cette coque.</p>",
                         "text_style": "paragraph"
                       }
                     }
                   },
                   "block_order": [
-                    "text_faq"
+                    "text_vhsBkD"
                   ]
                 },
-                "accordion_Hj9R7w": {
+                "accordion_3Ot1OG": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Puis-je l'alterner avec d'autres senteurs ?"
+                    "heading": "Dois-je la remplacer régulièrement ?"
                   },
                   "blocks": {
-                    "text_faq": {
+                    "text_GWlG6g": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Oui ! Un jour Océan, un jour sans senteur : à toi de voir.</p>",
+                        "text": "<p>Non, la coque est conçue pour durer. Seules les capsules et leurs disques se remplacent, environ tous les 10 à 15 jours.</p>",
                         "text_style": "paragraph"
                       }
                     }
                   },
                   "block_order": [
-                    "text_faq"
+                    "text_GWlG6g"
                   ]
                 },
-                "accordion_p3BQOa": {
+                "accordion_I9X7H6": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Combien de temps dure chaque filtre ?"
+                    "heading": "Est-ce que je peux l'installer moi-même ?"
                   },
                   "blocks": {
-                    "text_faq": {
+                    "text_MmjxWk": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>3 à 4 semaines selon ta fréquence de douche et la qualité de ton eau.</p>",
+                        "text": "<p>Oui ! Elle se fixe à la main, en quelques secondes, sans outil ni plombier.</p>",
                         "text_style": "paragraph"
                       }
                     }
                   },
                   "block_order": [
-                    "text_faq"
+                    "text_MmjxWk"
                   ]
                 },
-                "accordion_xgHleu": {
+                "accordion_7x41Zt": {
                   "type": "_accordion",
                   "settings": {
-                    "heading": "Est-il compatible avec ma coque ?"
+                    "heading": "Quels sont les délais de livraison ?"
                   },
                   "blocks": {
-                    "text_faq": {
+                    "text_aMuFbh": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Oui, il s'adapte sur toute coque Onsha Home.</p>",
+                        "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p>",
                         "text_style": "paragraph"
                       }
                     }
                   },
                   "block_order": [
-                    "text_faq"
+                    "text_aMuFbh"
+                  ]
+                },
+                "accordion_ffUF0e": {
+                  "type": "_accordion",
+                  "settings": {
+                    "heading": "Puis-je retourner le produit ?"
+                  },
+                  "blocks": {
+                    "text_pdp4K8": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Oui, sous 14 jours, à condition que le produit soit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
+                        "text_style": "paragraph"
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "text_pdp4K8"
                   ]
                 }
               },
               "block_order": [
-                "accordion_B1KZ6u",
-                "accordion_0z2Jdu",
-                "accordion_Hj9R7w",
-                "accordion_p3BQOa",
-                "accordion_xgHleu"
+                "accordion_4IWrXP",
+                "accordion_a9U4Uq",
+                "accordion_3Ot1OG",
+                "accordion_I9X7H6",
+                "accordion_7x41Zt",
+                "accordion_ffUF0e"
               ]
             }
           },
@@ -1377,10 +1242,8 @@
   "order": [
     "main",
     "videos_pratiques",
-    "ingr_dients_cl_s",
+    "la_technologie_onsha",
     "comment_ca_marche",
-    "pourquoi",
-    "avant_apres",
     "en_situation",
     "avis",
     "decouvre_aussi",

@@ -364,11 +364,24 @@
           "block_order": [
             "marquee_QE4fL7"
           ]
+        },
+        "rating_stars_avis": {
+          "type": "rating-stars",
+          "settings": {
+            "show_on_display": "desktop_and_mobile",
+            "product": "{{ closest.product }}",
+            "hide_rating_when_no_reviews": true,
+            "show_note": true,
+            "show_review_count": true,
+            "margin_top": 0,
+            "margin_bottom": 6
+          }
         }
       },
       "block_order": [
         "group_VW4Hi3",
         "text_zLqMQw",
+        "rating_stars_avis",
         "text_yQdqF8",
         "price_yEeMeb",
         "group_pills",
@@ -518,7 +531,7 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-coque-de-diffusion-4878009.jpg"
+                    "image": "shopify://shop_images/onsha-coque-diffusion-home-1.jpg"
                   }
                 },
                 "text_vMQtKK": {
@@ -552,7 +565,7 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-coque-de-diffusion-8410244.jpg"
+                    "image": "shopify://shop_images/onsha-coque-diffusion-home-2.jpg"
                   }
                 },
                 "text_xHpKCz": {
@@ -586,7 +599,7 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-coque-de-diffusion-5181082.jpg"
+                    "image": "shopify://shop_images/onsha-coque-diffusion-home-3.jpg"
                   }
                 },
                 "text_VG6LKf": {

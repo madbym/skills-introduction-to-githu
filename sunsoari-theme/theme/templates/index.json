@@ -150,7 +150,7 @@
               "name": "t:image",
               "settings": {
                 "show_on_display": "desktop_and_mobile",
-                "image": "shopify://shop_images/Copie_de_Copie_de_Hot_Spring_Filter___Shower_Head_03.jpg",
+                "image": "shopify://shop_images/onsha-filtre-thermal-ocean-packshot.jpg",
                 "show_placeholder": true,
                 "link": "",
                 "image_ratio": "landscape",
@@ -376,7 +376,7 @@
                   "name": "t:image",
                   "settings": {
                     "show_on_display": "desktop_and_mobile",
-                    "image": "shopify://shop_images/coffret-home-4366097.jpg",
+                    "image": "shopify://shop_images/onsha-filtre-thermal-fleur-de-prunier-packshot.jpg",
                     "show_placeholder": true,
                     "link": "shopify://products/produit-2",
                     "image_ratio": "landscape",
@@ -567,7 +567,7 @@
                   "name": "t:image",
                   "settings": {
                     "show_on_display": "desktop_and_mobile",
-                    "image": "shopify://shop_images/coffret-mini-2893257.png",
+                    "image": "shopify://shop_images/onsha-coque-diffusion-nomade-1.jpg",
                     "show_placeholder": true,
                     "link": "shopify://products/produit-1",
                     "image_ratio": "landscape",
@@ -1949,7 +1949,7 @@
     "nos_marques": {
       "type": "custom-section",
       "blocks": {
-        "text_XjY5Ma": {
+        "text_GhwBhs": {
           "type": "text",
           "name": "t:title",
           "settings": {
@@ -1972,7 +1972,7 @@
           },
           "blocks": {}
         },
-        "group_r2jiIq": {
+        "group_RRLFHQ": {
           "type": "group",
           "name": "t:group",
           "settings": {
@@ -2007,13 +2007,13 @@
             "additional_class": ""
           },
           "blocks": {
-            "image_card_YvpiYK": {
+            "image_card_jkWNdR": {
               "type": "image-card",
               "name": "t:image_card",
               "settings": {
                 "show_on_display": "desktop_and_mobile",
                 "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
-                "image": "shopify://shop_images/IMG_0354.jpg",
+                "image": "shopify://shop_images/onsha-coque-diffusion-home-1.jpg",
                 "card_height": "medium",
                 "card_height_mobile": "medium",
                 "card_link": "shopify://collections/onsha",
@@ -2059,13 +2059,13 @@
                 "text_gMxpcc"
               ]
             },
-            "image_card_ne1WJn": {
+            "image_card_frCQBF": {
               "type": "image-card",
               "name": "t:image_card",
               "settings": {
                 "show_on_display": "desktop_and_mobile",
                 "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
-                "image": "shopify://shop_images/pommeau-de-douche-filtrant-a-vitamine-c-9174486.jpg",
+                "image": "shopify://shop_images/SHIFT--_pommeau_blanc_Classic_1.png",
                 "card_height": "medium",
                 "card_height_mobile": "medium",
                 "card_link": "shopify://collections/shift",
@@ -2111,7 +2111,7 @@
                 "text_gMxpcc"
               ]
             },
-            "image_card_Ln03ov": {
+            "image_card_MCArnW": {
               "type": "image-card",
               "name": "t:image_card",
               "settings": {
@@ -2165,15 +2165,15 @@
             }
           },
           "block_order": [
-            "image_card_YvpiYK",
-            "image_card_ne1WJn",
-            "image_card_Ln03ov"
+            "image_card_jkWNdR",
+            "image_card_frCQBF",
+            "image_card_MCArnW"
           ]
         }
       },
       "block_order": [
-        "text_XjY5Ma",
-        "group_r2jiIq"
+        "text_GhwBhs",
+        "group_RRLFHQ"
       ],
       "name": "Nos marques",
       "settings": {
@@ -2212,7 +2212,7 @@
           "name": "t:image",
           "settings": {
             "show_on_display": "desktop_and_mobile",
-            "image": "shopify://shop_images/onsha-set-decouverte-home-6780214.jpg",
+            "image": "shopify://shop_images/onsha-coque-diffusion-home-2.jpg",
             "show_placeholder": true,
             "link": "",
             "image_ratio": "adapt",
@@ -2265,7 +2265,7 @@
               "name": "t:title",
               "settings": {
                 "show_on_display": "desktop_and_mobile",
-                "text": "<h2>Compose ton rituel</h2>",
+                "text": "<h2>Composez votre rituel</h2>",
                 "text_style": "h2",
                 "paragraph_font_size": "normal",
                 "font_weight": 400,
@@ -2337,7 +2337,7 @@
         "image_jDKt6b",
         "group_JFt9YV"
       ],
-      "name": "Compose ton rituel",
+      "name": "Composez votre rituel",
       "settings": {
         "show_on_display": "desktop_and_mobile",
         "color_scheme": "scheme-2",

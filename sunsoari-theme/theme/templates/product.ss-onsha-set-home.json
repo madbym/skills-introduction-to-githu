@@ -371,7 +371,7 @@
             "marquee_QE4fL7"
           ]
         },
-        "this_pack_contains_yDxQ8V": {
+        "this_pack_contains_oZB2JX": {
           "type": "this-pack-contains",
           "name": "Dans votre coffret",
           "settings": {
@@ -381,7 +381,7 @@
             "margin_bottom": 10
           },
           "blocks": {
-            "product_mini_card_ic8ctF": {
+            "product_mini_card_Eo2gw2": {
               "type": "product-mini-card",
               "settings": {
                 "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
@@ -394,7 +394,7 @@
                 "title": "Coque de diffusion ×1"
               }
             },
-            "product_mini_card_hgp4Ii": {
+            "product_mini_card_JxhWrK": {
               "type": "product-mini-card",
               "settings": {
                 "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
@@ -409,18 +409,31 @@
             }
           },
           "block_order": [
-            "product_mini_card_ic8ctF",
-            "product_mini_card_hgp4Ii"
+            "product_mini_card_Eo2gw2",
+            "product_mini_card_JxhWrK"
           ]
+        },
+        "rating_stars_avis": {
+          "type": "rating-stars",
+          "settings": {
+            "show_on_display": "desktop_and_mobile",
+            "product": "{{ closest.product }}",
+            "hide_rating_when_no_reviews": true,
+            "show_note": true,
+            "show_review_count": true,
+            "margin_top": 0,
+            "margin_bottom": 6
+          }
         }
       },
       "block_order": [
         "group_VW4Hi3",
         "text_zLqMQw",
+        "rating_stars_avis",
         "text_yQdqF8",
         "price_yEeMeb",
         "group_pills",
-        "this_pack_contains_yDxQ8V",
+        "this_pack_contains_oZB2JX",
         "separator_AKgbEA",
         "product_form_grYQk6",
         "delivery_estimation_A43yiG",

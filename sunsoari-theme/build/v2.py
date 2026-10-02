@@ -17,6 +17,7 @@ LIVE_NAMES = {
     "product.douchette-filtrante.json": "douchette-filtrante",
     "product.filtre-sediment-recharge.json": "filtre-sediment-douchette",
     "product.coque-de-diffusion.json": "coque-diffusion-home",
+    "product.coque-de-diffusion-nomade.json": "coque-diffusion-nomade",
     "product.capsule-vitaminee-2.json": "capsule-nomade",
     "product.filtre-vitamine.json": "filtre-thermal-home",
     "product.coffret-mini.json": "coffret-nomade",
@@ -41,7 +42,7 @@ BOX = {
     "coffret-nomade": [
         ("douchette-filtrante", "Douchette filtrante ×1"),
         ("product-onsha-coque-douchette-filtrante", "Housse ×1"),
-        ("coque-de-diffusion", "Coque nomade ×1"),
+        ("coque-de-diffusion-nomade", "Coque nomade ×1"),
         ("capsule-vitaminee-shower-filter-sunsoari", "Capsules thermales ×4"),
     ],
     "set-decouverte-home": [
@@ -49,7 +50,7 @@ BOX = {
         ("filtre-vitamine-showerfilter-sunsoari", "Filtres thermaux ×4"),
     ],
     "set-decouverte-nomade": [
-        ("coque-de-diffusion", "Coque nomade ×1"),
+        ("coque-de-diffusion-nomade", "Coque nomade ×1"),
         ("capsule-vitaminee-shower-filter-sunsoari", "Capsules + disques ×4"),
     ],
     "coffret-soin-shift": [
@@ -158,6 +159,7 @@ SS_NAMES = {
     "product.ss-onsha-douchette.json": "product.douchette-filtrante.json",
     "product.ss-onsha-sediment.json": "product.filtre-sediment-recharge.json",
     "product.ss-onsha-coque.json": "product.coque-de-diffusion.json",
+    "product.ss-onsha-coque-nomade.json": "product.coque-de-diffusion-nomade.json",
     "product.ss-onsha-capsule-nomade.json": "product.capsule-vitaminee-2.json",
     "product.ss-onsha-filtre-home.json": "product.filtre-vitamine.json",
     "product.ss-onsha-filtre-neutre.json": "product.filtre-thermal-sans-senteur.json",
@@ -181,6 +183,34 @@ def copy_ss_names():
         shutil.copyfile(os.path.join(d, src), os.path.join(d, new))
         if src != "product.json":
             os.remove(os.path.join(d, src))
+
+
+def add_rating_stars():
+    """Discreet stars under the title, fed by the real Judge.me reviews
+    (product.metafields.reviews.rating). Hidden on products without reviews."""
+    import glob
+    for path in glob.glob(os.path.join(OUT, "templates", "product*.json")):
+        t = json.load(open(path, encoding="utf-8"))
+        main = t["sections"]["main"]
+        if any(b["type"] == "rating-stars" for b in main["blocks"].values()):
+            continue
+        title = next((k for k in main["block_order"] if main["blocks"][k].get("name") == "Titre"), None)
+        if not title:
+            continue
+        main["blocks"]["rating_stars_avis"] = {
+            "type": "rating-stars",
+            "settings": {
+                "show_on_display": "desktop_and_mobile",
+                "product": "{{ closest.product }}",
+                "hide_rating_when_no_reviews": True,
+                "show_note": True,
+                "show_review_count": True,
+                "margin_top": 0,
+                "margin_bottom": 6,
+            },
+        }
+        main["block_order"].insert(main["block_order"].index(title) + 1, "rating_stars_avis")
+        save("templates/" + os.path.basename(path), t)
 
 
 def neutral_default():
@@ -296,6 +326,7 @@ if __name__ == "__main__":
         save(f"templates/{fname}", t)
     copy_ss_names()
     neutral_default()
+    add_rating_stars()
     for r in check_images():
         print("image retirée :", *r)
     print("\n".join(sorted(LIVE_NAMES)))

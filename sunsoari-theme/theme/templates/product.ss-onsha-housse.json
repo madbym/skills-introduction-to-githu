@@ -350,11 +350,24 @@
           "block_order": [
             "marquee_QE4fL7"
           ]
+        },
+        "rating_stars_avis": {
+          "type": "rating-stars",
+          "settings": {
+            "show_on_display": "desktop_and_mobile",
+            "product": "{{ closest.product }}",
+            "hide_rating_when_no_reviews": true,
+            "show_note": true,
+            "show_review_count": true,
+            "margin_top": 0,
+            "margin_bottom": 6
+          }
         }
       },
       "block_order": [
         "group_VW4Hi3",
         "text_zLqMQw",
+        "rating_stars_avis",
         "text_yQdqF8",
         "price_yEeMeb",
         "group_pills",

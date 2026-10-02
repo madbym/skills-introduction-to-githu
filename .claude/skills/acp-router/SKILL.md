@@ -48,6 +48,7 @@ Do not use:
 
 Use these defaults when user names a harness directly:
 
+- "pi" -> `agentId: "pi"`
 - "openclaw" -> `agentId: "openclaw"`
 - "claude" or "claude code" -> `agentId: "claude"`
 - "codex" -> `agentId: "codex"` only for explicit ACP/acpx requests or background ACP runtime spawn

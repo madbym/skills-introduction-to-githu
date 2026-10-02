@@ -203,6 +203,7 @@ ${ACPX_CMD} codex sessions close oc-codex-<conversationId>
 - `kiro`
 - `openclaw`
 - `opencode`
+- `pi`
 - `qwen`
 
 ### Built-in adapter commands in acpx

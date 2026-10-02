@@ -18,6 +18,8 @@ LIVE_NAMES = {
     "product.filtre-sediment-recharge.json": "filtre-sediment-douchette",
     "product.coque-de-diffusion.json": "coque-diffusion-home",
     "product.coque-de-diffusion-nomade.json": "coque-diffusion-nomade",
+    "product.starter-home.json": "starter-home",
+    "product.premier-rituel-home.json": "premier-rituel-home",
     "product.capsule-vitaminee-2.json": "capsule-nomade",
     "product.filtre-vitamine.json": "filtre-thermal-home",
     "product.coffret-mini.json": "coffret-nomade",
@@ -44,6 +46,15 @@ BOX = {
         ("product-onsha-coque-douchette-filtrante", "Housse ×1"),
         ("coque-de-diffusion-nomade", "Coque nomade ×1"),
         ("capsule-vitaminee-shower-filter-sunsoari", "Capsules thermales ×4"),
+    ],
+    "starter-home": [
+        ("pommeau-de-douche-filtrant", "Pommeau filtrant ×1"),
+        ("coque-de-diffusion", "Coque de diffusion Home ×1"),
+        ("filtre-vitamine-showerfilter-sunsoari", "Filtre thermal ×1"),
+    ],
+    "premier-rituel-home": [
+        ("coque-de-diffusion", "Coque de diffusion Home ×1"),
+        ("filtre-vitamine-showerfilter-sunsoari", "Filtre thermal ×1"),
     ],
     "set-decouverte-home": [
         ("coque-de-diffusion", "Coque de diffusion ×1"),
@@ -160,6 +171,8 @@ SS_NAMES = {
     "product.ss-onsha-sediment.json": "product.filtre-sediment-recharge.json",
     "product.ss-onsha-coque.json": "product.coque-de-diffusion.json",
     "product.ss-onsha-coque-nomade.json": "product.coque-de-diffusion-nomade.json",
+    "product.ss-onsha-starter-home.json": "product.starter-home.json",
+    "product.ss-onsha-premier-rituel.json": "product.premier-rituel-home.json",
     "product.ss-onsha-capsule-nomade.json": "product.capsule-vitaminee-2.json",
     "product.ss-onsha-filtre-home.json": "product.filtre-vitamine.json",
     "product.ss-onsha-filtre-neutre.json": "product.filtre-thermal-sans-senteur.json",

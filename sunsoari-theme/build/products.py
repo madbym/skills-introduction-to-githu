@@ -60,6 +60,8 @@ INTRO = {
     "filtre-thermal-home": "Le cœur de ton rituel Home : un filtre 2-en-1, sédiments et soin, inspiré des sources thermales coréennes.",
     "filtre-thermal-sans-senteur": "La même composition que nos filtres thermaux Home, sans senteur ajoutée : pour un rituel thermal tout en neutralité.",
     "set-decouverte-home": "La coque de diffusion et 4 filtres thermaux, un de chaque senteur : tout pour débuter ton rituel Home.",
+    "starter-home": "Le pommeau filtrant, la coque de diffusion Home et un filtre thermal dans la senteur de ton choix : la façon la plus simple de commencer.",
+    "premier-rituel-home": "La coque de diffusion Home et un filtre thermal dans la senteur de ton choix : garde ton pommeau, découvre le rituel.",
     "coque-diffusion-nomade": "La coque compacte qui accueille tes capsules thermales et se fixe sur ta douchette : la pièce du rituel Nomade.",
     "coque-diffusion-home": "La coque grand format qui accueille tes filtres thermaux et relie ton flexible à ton pommeau : la pièce centrale du rituel Home.",
     "housse-douchette": "La housse en silicone qui protège ta douchette Onsha et en fait un objet à ton image, à personnaliser, à collectionner, à offrir.",
@@ -436,8 +438,85 @@ def coque_nomade(home):
     return t
 
 
+SCENT_CHOICE = (
+    "Choisis ta senteur",
+    SCENTS_ACCORDION[1] + "<p><strong>Sans senteur :</strong> le même filtre thermal vitaminé, sans parfum ajouté. "
+    "Idéal si tu préfères éviter les senteurs.</p>",
+)
+COMPOSITION_FILTER = (
+    "<p><strong>Filtre thermal vitaminé (Home) :</strong> eau thermale soufrée lyophilisée concentrée, vitamine C, "
+    "acide hyaluronique, glycérine, senteur au choix ou sans senteur. La liste complète des ingrédients (INCI) figure sur l'emballage.</p>"
+    "<p>Usage externe uniquement. Tenir hors de portée des enfants. En cas de sensibilité connue aux parfums, "
+    "consulte la liste INCI ou choisis la version sans senteur.</p>"
+)
+
+
+def _single_filter_kit(home, badge, highlights, cross, contents, composition, steps, faq, advice):
+    """Starter Home / Premier Rituel: one filter, scent chosen as a variant."""
+    t = clone(home)
+    m = t["sections"]["main"]
+    set_badge(m, badge)
+    set_highlights(m, highlights)
+    set_toggle(m, "Ajoute des filtres de rechange", "Pour continuer ton rituel le mois suivant.",
+               ["filtre-vitamine-showerfilter-sunsoari"])
+    set_cross_sell(m, *cross)
+    set_main_accordions(m, [("Contenu", contents), ("Composition & sécurité", composition), SCENT_CHOICE, SHIPPING])
+    set_title(S(t, "tes_senteurs"), "<h2>Choisis ta senteur</h2>")
+    set_steps(S(t, "comment_ca_marche"), steps, ONSHA_HOWTO["installer_recharge"], 80, advice)
+    set_faq(S(t, "faq"), faq + FAQ_SHIPPING)
+    return t
+
+
+def starter_home(home):
+    return _single_filter_kit(
+        home, "POUR COMMENCER",
+        ["Pommeau + coque + 1 filtre", "5 senteurs au choix", "Installation sans outil"],
+        (["coffret-home-onsha-sullab-sunsoari"], "Le rituel complet", "Pommeau, flexible, coque et 4 filtres réunis."),
+        "<p><strong>1 pommeau de douche filtrant Onsha</strong></p><p><strong>1 coque de diffusion Home</strong>, qui accueille le filtre</p>"
+        "<p><strong>1 filtre thermal vitaminé (Home)</strong>, dans la senteur de ton choix ou sans senteur</p><p>Joint d'étanchéité fourni.</p>",
+        "<p><strong>Pommeau et coque :</strong> polycarbonate (PC), polypropylène (PP), silicone et inox, sans BPA, selon le fabricant.</p>" + COMPOSITION_FILTER,
+        [
+            "<strong>Dévisse</strong> ton pommeau actuel.",
+            "<strong>Fixe</strong> la coque de diffusion sur ton flexible, avec le joint fourni.",
+            "<strong>Insère</strong> le filtre thermal dans la coque.",
+            "<strong>Visse</strong> le pommeau Onsha sur la coque et ouvre l'eau.",
+        ],
+        [
+            ("Quelle différence avec le Coffret Douche Thermal Coréen (Home) ?", "Le Starter Home contient 1 filtre pour découvrir le rituel. Le Coffret ajoute un flexible de 2 m et 4 filtres, soit 3 à 4 mois de rituel."),
+            ("Combien de temps dure le filtre ?", "Environ 3 à 4 semaines selon ta fréquence de douche. Ensuite, il te suffit de remplacer le filtre."),
+            ("Est-ce compatible avec ma douche ?", "Oui, avec les flexibles à raccord standard. L'installation se fait à la main, sans outil. Un joint est fourni."),
+        ],
+        "Tu as déjà ton pommeau et tu veux juste découvrir les senteurs ? Le Premier Rituel (Home) réunit la coque et un filtre, sans pommeau.",
+    )
+
+
+def premier_rituel(home):
+    return _single_filter_kit(
+        home, "PETIT BUDGET, GRAND RITUEL",
+        ["Coque + 1 filtre", "Garde ton pommeau", "5 senteurs au choix"],
+        (["onsha-starter-home"], "Envie du pommeau Onsha ?", "Le Starter Home ajoute le pommeau filtrant au jet fin."),
+        "<p><strong>1 coque de diffusion Home</strong>, qui se visse entre ton flexible et ton pommeau</p>"
+        "<p><strong>1 filtre thermal vitaminé (Home)</strong>, dans la senteur de ton choix ou sans senteur</p><p>Joint d'étanchéité fourni.</p>",
+        "<p><strong>Coque :</strong> polypropylène (PP) et silicone, sans BPA, selon le fabricant.</p>" + COMPOSITION_FILTER,
+        [
+            "<strong>Dévisse</strong> ton pommeau de douche actuel.",
+            "<strong>Fixe</strong> la coque de diffusion sur ton flexible, avec le joint fourni.",
+            "<strong>Insère</strong> le filtre thermal dans la coque.",
+            "<strong>Revisse</strong> ton pommeau sur la coque et ouvre l'eau.",
+        ],
+        [
+            ("Ai-je besoin d'un pommeau Onsha ?", "Non : la coque se visse entre ton flexible et la plupart des pommeaux à raccord standard. Un joint est fourni pour une bonne étanchéité."),
+            ("Combien de temps dure le filtre ?", "Environ 3 à 4 semaines selon ta fréquence de douche. Ensuite, il te suffit de remplacer le filtre."),
+            ("Et si je veux passer au rituel complet ?", "Ta coque reste la même : ajoute simplement le pommeau filtrant Onsha, ou choisis le Starter Home."),
+        ],
+        "C'est la façon la plus douce de découvrir les senteurs Onsha : tu gardes ton pommeau, tu ajoutes le rituel.",
+    )
+
+
 def build():
     templates = patch_existing()
+    templates["starter-home"] = starter_home(templates["set-decouverte-home"])
+    templates["premier-rituel-home"] = premier_rituel(templates["set-decouverte-home"])
     templates["coque-diffusion-nomade"] = coque_nomade(templates["coque-diffusion-home"])
     templates["douchette-filtrante"] = douchette()
     templates["coffret-home"] = coffret_home()

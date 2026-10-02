@@ -254,9 +254,9 @@
               "settings": {
                 "show_on_display": "desktop_and_mobile",
                 "button_style": "secondary",
-                "button_shape": "default",
+                "button_shape": "small",
                 "align_quick_add_together": true,
-                "show_product_media_gallery": false,
+                "show_product_media_gallery": true,
                 "margin_top": 0,
                 "margin_bottom": 0,
                 "additional_class": ""

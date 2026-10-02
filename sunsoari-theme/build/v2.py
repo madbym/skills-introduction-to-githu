@@ -198,6 +198,121 @@ def copy_ss_names():
             os.remove(os.path.join(d, src))
 
 
+def _group(width, columns, blocks, direction="row"):
+    order = []
+    out = {}
+    for i, b in enumerate(blocks):
+        k = f"{b['type'].strip('_').replace('-', '_')}_{i}"
+        out[k] = b
+        order.append(k)
+    return {
+        "type": "_header-megamenu-group",
+        "settings": {
+            "wrap_in_card": False, "color_scheme": "", "show_card_border": False,
+            "layout_type": "grid", "width": width, "layout_direction": direction,
+            "layout_grid_columns": columns, "layout_gap": 16, "layout_wrap": "nowrap",
+            "layout_justify": "flex-start", "layout_align_items": "flex-start",
+            "use_global_container_padding": True, "padding_horizontal": 30, "padding_vertical": 30,
+            "margin_top": 0, "margin_bottom": 0,
+        },
+        "blocks": out,
+        "block_order": order,
+    }
+
+
+def _menu(title, handle):
+    return {"type": "menu", "settings": {
+        "show_on_display": "desktop_and_mobile", "alignment_desktop": "flex-start", "alignment_mobile": "flex-start",
+        "title": f"<h3>{title}</h3>", "title_style": "h6", "menu": handle, "menu_direction": "column",
+        "underline_links": False, "margin_top": 0, "margin_bottom": 0}}
+
+
+def _card(image, title, link, subtitle=""):
+    blocks = {"title": {"type": "text", "settings": {"text": f"<h3>{title}</h3>", "text_style": "h4"}}}
+    order = ["title"]
+    if subtitle:
+        blocks["subtitle"] = {"type": "text", "settings": {"text": f"<p>{subtitle}</p>", "text_style": "paragraph"}}
+        order.append("subtitle")
+    return {"type": "image-card", "settings": {
+        "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e", "image": f"shopify://shop_images/{image}",
+        "card_height": "small", "card_height_mobile": "small", "card_link": link,
+        "image_filter_opacity": 25, "image_filter_color": "#032B59", "layout_justify": "flex-end",
+        "layout_align_items": "flex-start", "padding_horizontal": 20, "padding_vertical": 20},
+        "blocks": blocks, "block_order": order}
+
+
+def mega_menu():
+    """Two mega menus with images: Boutique (by ritual / by need / help + cards) and Nos marques."""
+    path = os.path.join(OUT, "sections", "header-group.json")
+    raw = open(path, encoding="utf-8").read()
+    head, h = raw[: raw.index("*/") + 2], json.loads(raw[raw.index("*/") + 2 :])
+    boutique = {
+        "type": "_header-megamenu",
+        "settings": {"title": "Boutique", "layout_type": "flex", "layout_direction": "row", "layout_gap": 20,
+                     "layout_wrap": "nowrap", "layout_justify": "flex-start", "layout_align_items": "flex-start"},
+        "blocks": {
+            "liens": _group(45, 3, [_menu("Par rituel", "mega-rituels"), _menu("Par besoin", "mega-besoins"),
+                                    _menu("Bien choisir", "mega-guide")]),
+            "cartes": _group(55, 3, [
+                _card("onsha-coque-diffusion-home-1.jpg", "Rituel Home", "shopify://collections/rituel-home", "Pommeau, coque & filtres"),
+                _card("onsha-coque-diffusion-nomade-1.jpg", "Rituel Nomade", "shopify://collections/rituel-nomade", "Douchette & capsules"),
+                _card("onsha-filtre-thermal-fleur-de-prunier-packshot.jpg", "Composez votre rituel", "shopify://pages/composez-votre-rituel", "À la carte"),
+            ]),
+        },
+        "block_order": ["liens", "cartes"],
+    }
+    marques = {
+        "type": "_header-megamenu",
+        "settings": {"title": "Nos marques", "layout_type": "flex", "layout_direction": "row", "layout_gap": 20,
+                     "layout_wrap": "nowrap", "layout_justify": "center", "layout_align_items": "flex-start"},
+        "blocks": {"cartes": _group(100, 3, [
+            _card("onsha-filtre-thermal-ocean-packshot.jpg", "Onsha", "shopify://collections/onsha", "Filtres de douche thermaux"),
+            _card("SHIFT--_pommeau_blanc_Classic_1.png", "SHIFT", "shopify://collections/shift", "Pommeau & aromathérapie"),
+            _card("filtre-a-robinet-faucet-1360756.jpg", "Sullab", "shopify://collections/sullab", "Robinet & soins du visage"),
+        ])},
+        "block_order": ["cartes"],
+    }
+    mm = h["sections"]["header"]["blocks"]["header-advanced-megamenus"]
+    mm["blocks"] = {"megamenu_boutique": boutique, "megamenu_marques": marques}
+    mm["block_order"] = ["megamenu_boutique", "megamenu_marques"]
+    # drawer (mobile) card: verified packshot
+    drawer = h["sections"]["header"]["blocks"]["header-drawer-menu"]["blocks"]["header-drawer-menu-header"]["blocks"]
+    for b in drawer.values():
+        if b["type"] == "image-card":
+            b["settings"]["image"] = "shopify://shop_images/onsha-filtre-thermal-ocean-packshot.jpg"
+            b["settings"]["card_link"] = "shopify://pages/composez-votre-rituel"
+            for t in b.get("blocks", {}).values():
+                if t["type"] == "text":
+                    t["settings"]["text"] = "<h3>Composez votre rituel</h3>"
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(head + "\n" + json.dumps(h, ensure_ascii=False, indent=2))
+
+
+def quick_view():
+    """Quick add opens a real quick view (photos + variants) on every product card."""
+    import glob
+    for path in glob.glob(os.path.join(OUT, "templates", "*.json")):
+        raw = open(path, encoding="utf-8").read()
+        head = raw[: raw.index("*/") + 2] + "\n" if raw.startswith("/*") else ""
+        t = json.loads(raw[len(head):] if head else raw)
+        changed = False
+
+        def walk(n):
+            nonlocal changed
+            for b in n.get("blocks", {}).values():
+                if b["type"] == "_product-card-quick-add":
+                    b["settings"].update(show_product_media_gallery=True, button_style="secondary",
+                                         button_shape="small", align_quick_add_together=True)
+                    changed = True
+                walk(b)
+
+        for sec in t["sections"].values():
+            walk(sec)
+        if changed:
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(head + json.dumps(t, ensure_ascii=False, indent=2))
+
+
 def add_rating_stars():
     """Discreet stars under the title, fed by the real Judge.me reviews
     (product.metafields.reviews.rating). Hidden on products without reviews."""
@@ -340,6 +455,8 @@ if __name__ == "__main__":
     copy_ss_names()
     neutral_default()
     add_rating_stars()
+    mega_menu()
+    quick_view()
     for r in check_images():
         print("image retirée :", *r)
     print("\n".join(sorted(LIVE_NAMES)))

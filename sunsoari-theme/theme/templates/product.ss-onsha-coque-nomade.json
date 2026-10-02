@@ -250,14 +250,14 @@
             "accordion_padding": "medium"
           },
           "blocks": {
-            "accordion_oiVgRV": {
+            "accordion_32JgdP": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
                 "heading": "Caractéristiques & matériaux"
               },
               "blocks": {
-                "text_OhbVrp": {
+                "text_p37eCZ": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Polypropylène (PP) et silicone, sans BPA, selon le fabricant.</p><p>Conçue pour accueillir les capsules thermales Onsha format Mini (Nomade) avec leur disque sédiment, et se fixer sur la Douchette Filtrante Onsha.</p><p>Attention : les filtres thermaux format Home ne s'insèrent pas dans cette coque. Usage domestique uniquement. Ne pas forcer le vissage.</p>",
@@ -266,17 +266,17 @@
                 }
               },
               "block_order": [
-                "text_OhbVrp"
+                "text_p37eCZ"
               ]
             },
-            "accordion_bfnoGM": {
+            "accordion_2pkAFE": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
                 "heading": "Livraison & retours"
               },
               "blocks": {
-                "text_5IfLBc": {
+                "text_I1af7W": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p><p>Retour possible sous 14 jours, produit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
@@ -285,13 +285,13 @@
                 }
               },
               "block_order": [
-                "text_5IfLBc"
+                "text_I1af7W"
               ]
             }
           },
           "block_order": [
-            "accordion_oiVgRV",
-            "accordion_bfnoGM"
+            "accordion_32JgdP",
+            "accordion_2pkAFE"
           ]
         },
         "group_kLziPN": {
@@ -521,12 +521,12 @@
           },
           "name": "La technologie Onsha",
           "blocks": {
-            "slide_SBvrjn": {
+            "slide_UYJQTF": {
               "type": "_slide",
               "settings": {},
               "name": "Format compact",
               "blocks": {
-                "image_bJmTPS": {
+                "image_n3z5dk": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -534,14 +534,14 @@
                     "image": "shopify://shop_images/onsha-coque-diffusion-nomade-1.jpg"
                   }
                 },
-                "text_IAoCLr": {
+                "text_yayq7Y": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Format compact</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_Z3aWZk": {
+                "text_YDsBS9": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Pensée pour la douchette Nomade.</p>",
@@ -550,17 +550,17 @@
                 }
               },
               "block_order": [
-                "image_bJmTPS",
-                "text_IAoCLr",
-                "text_Z3aWZk"
+                "image_n3z5dk",
+                "text_yayq7Y",
+                "text_YDsBS9"
               ]
             },
-            "slide_7yfJs1": {
+            "slide_2Hkd9G": {
               "type": "_slide",
               "settings": {},
               "name": "Matériaux durables",
               "blocks": {
-                "image_9Wvgfy": {
+                "image_jmsn9d": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -568,14 +568,14 @@
                     "image": "shopify://shop_images/onsha-douchette-filtrante-1474368.png"
                   }
                 },
-                "text_gw2wMq": {
+                "text_LVIdVu": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Matériaux durables</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_ZcUDIh": {
+                "text_ddLEG6": {
                   "type": "text",
                   "settings": {
                     "text": "<p>PP et silicone, sans BPA.</p>",
@@ -584,17 +584,17 @@
                 }
               },
               "block_order": [
-                "image_9Wvgfy",
-                "text_gw2wMq",
-                "text_ZcUDIh"
+                "image_jmsn9d",
+                "text_LVIdVu",
+                "text_ddLEG6"
               ]
             },
-            "slide_gyrDO1": {
+            "slide_NfAQLK": {
               "type": "_slide",
               "settings": {},
               "name": "Format Mini",
               "blocks": {
-                "image_ON43xK": {
+                "image_f2leMe": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -602,14 +602,14 @@
                     "image": "shopify://shop_images/onsha-capsule-thermale-vitaminee-5877420.jpg"
                   }
                 },
-                "text_mTecQo": {
+                "text_R3pzh8": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Format Mini</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_Xsf2o3": {
+                "text_4KpLMc": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Pour les capsules thermales Nomade.</p>",
@@ -618,17 +618,17 @@
                 }
               },
               "block_order": [
-                "image_ON43xK",
-                "text_mTecQo",
-                "text_Xsf2o3"
+                "image_f2leMe",
+                "text_R3pzh8",
+                "text_4KpLMc"
               ]
             },
-            "slide_kDyr7O": {
+            "slide_W7eaDN": {
               "type": "_slide",
               "settings": {},
               "name": "Le lien du système",
               "blocks": {
-                "image_xkxwnQ": {
+                "image_Hu7qnQ": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -636,14 +636,14 @@
                     "image": "shopify://shop_images/onsha-set-decouverte-nomade-6470897.jpg"
                   }
                 },
-                "text_rS7RPe": {
+                "text_Tupqzi": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Le lien du système</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_MOkIUp": {
+                "text_QPtDu7": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Entre ta douchette et ta capsule.</p>",
@@ -652,17 +652,17 @@
                 }
               },
               "block_order": [
-                "image_xkxwnQ",
-                "text_rS7RPe",
-                "text_MOkIUp"
+                "image_Hu7qnQ",
+                "text_Tupqzi",
+                "text_QPtDu7"
               ]
             }
           },
           "block_order": [
-            "slide_SBvrjn",
-            "slide_7yfJs1",
-            "slide_gyrDO1",
-            "slide_kDyr7O"
+            "slide_UYJQTF",
+            "slide_2Hkd9G",
+            "slide_NfAQLK",
+            "slide_W7eaDN"
           ]
         }
       },
@@ -735,19 +735,19 @@
                   "settings": {},
                   "name": "Étapes",
                   "blocks": {
-                    "timeline_step_Zuzren": {
+                    "timeline_step_4pxskC": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 1",
                       "blocks": {
-                        "text_SJoRu1": {
+                        "text_KgeInG": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 1</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_XXdo0c": {
+                        "text_qi7w4e": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Ouvre</strong> la coque nomade.</p>",
@@ -756,23 +756,23 @@
                         }
                       },
                       "block_order": [
-                        "text_SJoRu1",
-                        "text_XXdo0c"
+                        "text_KgeInG",
+                        "text_qi7w4e"
                       ]
                     },
-                    "timeline_step_PDjqip": {
+                    "timeline_step_t7Qg84": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 2",
                       "blocks": {
-                        "text_68K4Tu": {
+                        "text_1ITtNZ": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 2</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_nPFz46": {
+                        "text_PHaQ0J": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Insère</strong> le disque sédiment puis la capsule, dans la senteur de ton choix.</p>",
@@ -781,23 +781,23 @@
                         }
                       },
                       "block_order": [
-                        "text_68K4Tu",
-                        "text_nPFz46"
+                        "text_1ITtNZ",
+                        "text_PHaQ0J"
                       ]
                     },
-                    "timeline_step_iGFfWd": {
+                    "timeline_step_TvnRO2": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 3",
                       "blocks": {
-                        "text_VJIqVL": {
+                        "text_iqh4gV": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 3</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_B5Lzxo": {
+                        "text_JjrsMn": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Referme</strong> la coque et fixe-la sur ta douchette, sans outil.</p>",
@@ -806,23 +806,23 @@
                         }
                       },
                       "block_order": [
-                        "text_VJIqVL",
-                        "text_B5Lzxo"
+                        "text_iqh4gV",
+                        "text_JjrsMn"
                       ]
                     },
-                    "timeline_step_MDHqJ3": {
+                    "timeline_step_rcavXi": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 4",
                       "blocks": {
-                        "text_3hjOkY": {
+                        "text_qGFq56": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 4</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_RBMeyy": {
+                        "text_2dfOB1": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Ouvre l'eau</strong> : ton rituel commence.</p>",
@@ -831,16 +831,16 @@
                         }
                       },
                       "block_order": [
-                        "text_3hjOkY",
-                        "text_RBMeyy"
+                        "text_qGFq56",
+                        "text_2dfOB1"
                       ]
                     }
                   },
                   "block_order": [
-                    "timeline_step_Zuzren",
-                    "timeline_step_PDjqip",
-                    "timeline_step_iGFfWd",
-                    "timeline_step_MDHqJ3"
+                    "timeline_step_4pxskC",
+                    "timeline_step_t7Qg84",
+                    "timeline_step_TvnRO2",
+                    "timeline_step_rcavXi"
                   ]
                 },
                 "text_QDzCzK": {
@@ -966,7 +966,12 @@
             "product_card_quick_add_dY48RT": {
               "type": "_product-card-quick-add",
               "name": "t:product_card_quick_add",
-              "settings": {}
+              "settings": {
+                "show_product_media_gallery": true,
+                "button_style": "secondary",
+                "button_shape": "small",
+                "align_quick_add_together": true
+              }
             },
             "product_card_group_LHFtbz": {
               "type": "_product-card-group",
@@ -1039,13 +1044,13 @@
                 "accordion_padding": "medium"
               },
               "blocks": {
-                "accordion_4IWrXP": {
+                "accordion_TBJahe": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Ai-je besoin de cette coque si j'ai le coffret Nomade ?"
                   },
                   "blocks": {
-                    "text_8aRUhR": {
+                    "text_OqkVCJ": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Non : le Coffret Nomade et le Set Découverte Nomade incluent déjà la coque. Celle-ci s'adresse à celles qui ont déjà la douchette, ou qui veulent une pièce de rechange.</p>",
@@ -1054,16 +1059,16 @@
                     }
                   },
                   "block_order": [
-                    "text_8aRUhR"
+                    "text_OqkVCJ"
                   ]
                 },
-                "accordion_a9U4Uq": {
+                "accordion_c1xLJj": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Quelles recharges s'insèrent dans cette coque ?"
                   },
                   "blocks": {
-                    "text_vhsBkD": {
+                    "text_84S5jI": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Les capsules thermales Onsha format Mini (Nomade), avec leur disque sédiment. Les filtres thermaux Home sont trop grands pour cette coque.</p>",
@@ -1072,16 +1077,16 @@
                     }
                   },
                   "block_order": [
-                    "text_vhsBkD"
+                    "text_84S5jI"
                   ]
                 },
-                "accordion_3Ot1OG": {
+                "accordion_7Y3c5w": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Dois-je la remplacer régulièrement ?"
                   },
                   "blocks": {
-                    "text_GWlG6g": {
+                    "text_Bictx5": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Non, la coque est conçue pour durer. Seules les capsules et leurs disques se remplacent, environ tous les 10 à 15 jours.</p>",
@@ -1090,16 +1095,16 @@
                     }
                   },
                   "block_order": [
-                    "text_GWlG6g"
+                    "text_Bictx5"
                   ]
                 },
-                "accordion_I9X7H6": {
+                "accordion_XJ43AN": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Est-ce que je peux l'installer moi-même ?"
                   },
                   "blocks": {
-                    "text_MmjxWk": {
+                    "text_nRpQgw": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Oui ! Elle se fixe à la main, en quelques secondes, sans outil ni plombier.</p>",
@@ -1108,16 +1113,16 @@
                     }
                   },
                   "block_order": [
-                    "text_MmjxWk"
+                    "text_nRpQgw"
                   ]
                 },
-                "accordion_7x41Zt": {
+                "accordion_kZZl4A": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Quels sont les délais de livraison ?"
                   },
                   "blocks": {
-                    "text_aMuFbh": {
+                    "text_Vj77p3": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p>",
@@ -1126,16 +1131,16 @@
                     }
                   },
                   "block_order": [
-                    "text_aMuFbh"
+                    "text_Vj77p3"
                   ]
                 },
-                "accordion_ffUF0e": {
+                "accordion_7AZQ3V": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Puis-je retourner le produit ?"
                   },
                   "blocks": {
-                    "text_pdp4K8": {
+                    "text_blV7vY": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Oui, sous 14 jours, à condition que le produit soit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
@@ -1144,17 +1149,17 @@
                     }
                   },
                   "block_order": [
-                    "text_pdp4K8"
+                    "text_blV7vY"
                   ]
                 }
               },
               "block_order": [
-                "accordion_4IWrXP",
-                "accordion_a9U4Uq",
-                "accordion_3Ot1OG",
-                "accordion_I9X7H6",
-                "accordion_7x41Zt",
-                "accordion_ffUF0e"
+                "accordion_TBJahe",
+                "accordion_c1xLJj",
+                "accordion_7Y3c5w",
+                "accordion_XJ43AN",
+                "accordion_kZZl4A",
+                "accordion_7AZQ3V"
               ]
             }
           },

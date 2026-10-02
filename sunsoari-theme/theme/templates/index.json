@@ -967,9 +967,9 @@
               "settings": {
                 "show_on_display": "desktop_and_mobile",
                 "button_style": "secondary",
-                "button_shape": "default",
+                "button_shape": "small",
                 "align_quick_add_together": true,
-                "show_product_media_gallery": false,
+                "show_product_media_gallery": true,
                 "margin_top": 0,
                 "margin_bottom": 0,
                 "additional_class": ""
@@ -1949,7 +1949,7 @@
     "nos_marques": {
       "type": "custom-section",
       "blocks": {
-        "text_GhwBhs": {
+        "text_0C4w7b": {
           "type": "text",
           "name": "t:title",
           "settings": {
@@ -1972,7 +1972,7 @@
           },
           "blocks": {}
         },
-        "group_RRLFHQ": {
+        "group_AdzGxp": {
           "type": "group",
           "name": "t:group",
           "settings": {
@@ -2007,7 +2007,7 @@
             "additional_class": ""
           },
           "blocks": {
-            "image_card_jkWNdR": {
+            "image_card_H2hsfW": {
               "type": "image-card",
               "name": "t:image_card",
               "settings": {
@@ -2059,7 +2059,7 @@
                 "text_gMxpcc"
               ]
             },
-            "image_card_frCQBF": {
+            "image_card_krC5Gj": {
               "type": "image-card",
               "name": "t:image_card",
               "settings": {
@@ -2111,7 +2111,7 @@
                 "text_gMxpcc"
               ]
             },
-            "image_card_MCArnW": {
+            "image_card_1Bf86o": {
               "type": "image-card",
               "name": "t:image_card",
               "settings": {
@@ -2165,15 +2165,15 @@
             }
           },
           "block_order": [
-            "image_card_jkWNdR",
-            "image_card_frCQBF",
-            "image_card_MCArnW"
+            "image_card_H2hsfW",
+            "image_card_krC5Gj",
+            "image_card_1Bf86o"
           ]
         }
       },
       "block_order": [
-        "text_GhwBhs",
-        "group_RRLFHQ"
+        "text_0C4w7b",
+        "group_AdzGxp"
       ],
       "name": "Nos marques",
       "settings": {
@@ -2571,9 +2571,9 @@
               "settings": {
                 "show_on_display": "desktop_and_mobile",
                 "button_style": "secondary",
-                "button_shape": "default",
+                "button_shape": "small",
                 "align_quick_add_together": true,
-                "show_product_media_gallery": false,
+                "show_product_media_gallery": true,
                 "margin_top": 0,
                 "margin_bottom": 0,
                 "additional_class": ""
@@ -2862,9 +2862,9 @@
               "settings": {
                 "show_on_display": "desktop_and_mobile",
                 "button_style": "secondary",
-                "button_shape": "default",
+                "button_shape": "small",
                 "align_quick_add_together": true,
-                "show_product_media_gallery": false,
+                "show_product_media_gallery": true,
                 "margin_top": 0,
                 "margin_bottom": 0,
                 "additional_class": ""

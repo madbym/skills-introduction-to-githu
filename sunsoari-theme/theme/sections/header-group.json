@@ -89,209 +89,390 @@
           "static": true,
           "settings": {},
           "blocks": {
-            "header_megamenu_ebFAi4": {
+            "megamenu_boutique": {
               "type": "_header-megamenu",
-              "name": "t:megamenu_collection_featured",
               "settings": {
-                "title": "Rituels de douche",
-                "layout_gap": 30
+                "title": "Boutique",
+                "layout_type": "flex",
+                "layout_direction": "row",
+                "layout_gap": 20,
+                "layout_wrap": "nowrap",
+                "layout_justify": "flex-start",
+                "layout_align_items": "flex-start"
               },
               "blocks": {
-                "collection_featured_P6npMc": {
-                  "type": "collection-featured",
-                  "name": "t:collection_featured",
-                  "settings": {
-                    "collection": "kit-de-douche",
-                    "max_products": 3,
-                    "grid_columns": 3,
-                    "grid_columns_mobile": "1",
-                    "slider_items": 3,
-                    "slider_items_mobile": "1"
-                  },
-                  "blocks": {
-                    "product-card": {
-                      "type": "_product-card",
-                      "static": true,
-                      "settings": {
-                        "wrap_in_card": true,
-                        "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
-                        "layout_gap": 15
-                      },
-                      "blocks": {
-                        "product_card_group_aXrw46": {
-                          "type": "_product-card-group",
-                          "name": "t:group",
-                          "settings": {
-                            "color_scheme": "",
-                            "layout_direction_desktop": "column",
-                            "layout_gap_desktop": 5,
-                            "layout_justify_desktop": "center",
-                            "layout_align_items_desktop": "center",
-                            "margin_top": 0
-                          },
-                          "blocks": {
-                            "text_EcHgEB": {
-                              "type": "text",
-                              "name": "t:text",
-                              "settings": {
-                                "text": "<h2>{{ closest.product.title }}</h2>",
-                                "text_style": "paragraph",
-                                "paragraph_font_size": "large",
-                                "alignment": "center",
-                                "alignment_mobile": "center"
-                              }
-                            }
-                          },
-                          "block_order": [
-                            "text_EcHgEB"
-                          ]
-                        },
-                        "product_card_media_gallery_MY84V8": {
-                          "type": "_product-card-media-gallery",
-                          "name": "t:product_card_gallery",
-                          "settings": {
-                            "media_ratio": "4 / 5"
-                          }
-                        },
-                        "product_card_group_rWTKnp": {
-                          "type": "_product-card-group",
-                          "name": "t:group",
-                          "settings": {
-                            "color_scheme": "",
-                            "layout_direction_desktop": "column",
-                            "layout_gap_desktop": 5,
-                            "layout_justify_desktop": "center",
-                            "layout_align_items_desktop": "center",
-                            "margin_top": 0
-                          },
-                          "blocks": {
-                            "product_price_jpmk93": {
-                              "type": "product-price",
-                              "name": "t:product_price",
-                              "settings": {
-                                "product": "{{ closest.product }}"
-                              }
-                            }
-                          },
-                          "block_order": [
-                            "product_price_jpmk93"
-                          ]
-                        }
-                      },
-                      "block_order": [
-                        "product_card_group_aXrw46",
-                        "product_card_media_gallery_MY84V8",
-                        "product_card_group_rWTKnp"
-                      ]
-                    }
-                  }
-                },
-                "header_megamenu_group_UGnQ9h": {
+                "liens": {
                   "type": "_header-megamenu-group",
-                  "name": "t:group",
                   "settings": {
-                    "card_link": "",
+                    "wrap_in_card": false,
                     "color_scheme": "",
-                    "width": 70
+                    "show_card_border": false,
+                    "layout_type": "grid",
+                    "width": 45,
+                    "layout_direction": "row",
+                    "layout_grid_columns": 3,
+                    "layout_gap": 16,
+                    "layout_wrap": "nowrap",
+                    "layout_justify": "flex-start",
+                    "layout_align_items": "flex-start",
+                    "use_global_container_padding": true,
+                    "padding_horizontal": 30,
+                    "padding_vertical": 30,
+                    "margin_top": 0,
+                    "margin_bottom": 0
                   },
                   "blocks": {
-                    "image_card_IAoCLr": {
+                    "menu_0": {
+                      "type": "menu",
+                      "settings": {
+                        "show_on_display": "desktop_and_mobile",
+                        "alignment_desktop": "flex-start",
+                        "alignment_mobile": "flex-start",
+                        "title": "<h3>Par rituel</h3>",
+                        "title_style": "h6",
+                        "menu": "mega-rituels",
+                        "menu_direction": "column",
+                        "underline_links": false,
+                        "margin_top": 0,
+                        "margin_bottom": 0
+                      }
+                    },
+                    "menu_1": {
+                      "type": "menu",
+                      "settings": {
+                        "show_on_display": "desktop_and_mobile",
+                        "alignment_desktop": "flex-start",
+                        "alignment_mobile": "flex-start",
+                        "title": "<h3>Par besoin</h3>",
+                        "title_style": "h6",
+                        "menu": "mega-besoins",
+                        "menu_direction": "column",
+                        "underline_links": false,
+                        "margin_top": 0,
+                        "margin_bottom": 0
+                      }
+                    },
+                    "menu_2": {
+                      "type": "menu",
+                      "settings": {
+                        "show_on_display": "desktop_and_mobile",
+                        "alignment_desktop": "flex-start",
+                        "alignment_mobile": "flex-start",
+                        "title": "<h3>Bien choisir</h3>",
+                        "title_style": "h6",
+                        "menu": "mega-guide",
+                        "menu_direction": "column",
+                        "underline_links": false,
+                        "margin_top": 0,
+                        "margin_bottom": 0
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "menu_0",
+                    "menu_1",
+                    "menu_2"
+                  ]
+                },
+                "cartes": {
+                  "type": "_header-megamenu-group",
+                  "settings": {
+                    "wrap_in_card": false,
+                    "color_scheme": "",
+                    "show_card_border": false,
+                    "layout_type": "grid",
+                    "width": 55,
+                    "layout_direction": "row",
+                    "layout_grid_columns": 3,
+                    "layout_gap": 16,
+                    "layout_wrap": "nowrap",
+                    "layout_justify": "flex-start",
+                    "layout_align_items": "flex-start",
+                    "use_global_container_padding": true,
+                    "padding_horizontal": 30,
+                    "padding_vertical": 30,
+                    "margin_top": 0,
+                    "margin_bottom": 0
+                  },
+                  "blocks": {
+                    "image_card_0": {
                       "type": "image-card",
-                      "name": "t:image_card",
                       "settings": {
                         "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
-                        "image": "shopify://shop_images/coffret-home-4366097.jpg",
-                        "card_height": "medium",
-                        "card_height_mobile": "medium",
-                        "card_link": "shopify://products/coffret-home-onsha-sullab-sunsoari",
-                        "image_filter_opacity": 20,
+                        "image": "shopify://shop_images/onsha-coque-diffusion-home-1.jpg",
+                        "card_height": "small",
+                        "card_height_mobile": "small",
+                        "card_link": "shopify://collections/rituel-home",
+                        "image_filter_opacity": 25,
                         "image_filter_color": "#032B59",
-                        "layout_justify": "flex-end"
+                        "layout_justify": "flex-end",
+                        "layout_align_items": "flex-start",
+                        "padding_horizontal": 20,
+                        "padding_vertical": 20
                       },
                       "blocks": {
-                        "text_gMxpcc": {
+                        "title": {
                           "type": "text",
-                          "name": "t:title",
                           "settings": {
                             "text": "<h3>Rituel Home</h3>",
                             "text_style": "h4"
                           }
+                        },
+                        "subtitle": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Pommeau, coque & filtres</p>",
+                            "text_style": "paragraph"
+                          }
                         }
                       },
                       "block_order": [
-                        "text_gMxpcc"
+                        "title",
+                        "subtitle"
                       ]
                     },
-                    "image_card_Z3aWZk": {
+                    "image_card_1": {
                       "type": "image-card",
-                      "name": "t:image_card",
                       "settings": {
                         "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
-                        "image": "shopify://shop_images/coffret-mini-9416210.jpg",
-                        "card_height": "medium",
-                        "card_height_mobile": "medium",
-                        "card_link": "shopify://products/coffret-mini",
-                        "image_filter_opacity": 20,
+                        "image": "shopify://shop_images/onsha-coque-diffusion-nomade-1.jpg",
+                        "card_height": "small",
+                        "card_height_mobile": "small",
+                        "card_link": "shopify://collections/rituel-nomade",
+                        "image_filter_opacity": 25,
                         "image_filter_color": "#032B59",
-                        "layout_justify": "flex-end"
+                        "layout_justify": "flex-end",
+                        "layout_align_items": "flex-start",
+                        "padding_horizontal": 20,
+                        "padding_vertical": 20
                       },
                       "blocks": {
-                        "text_gMxpcc": {
+                        "title": {
                           "type": "text",
-                          "name": "t:title",
                           "settings": {
                             "text": "<h3>Rituel Nomade</h3>",
                             "text_style": "h4"
                           }
-                        }
-                      },
-                      "block_order": [
-                        "text_gMxpcc"
-                      ]
-                    },
-                    "image_card_SBvrjn": {
-                      "type": "image-card",
-                      "name": "t:image_card",
-                      "settings": {
-                        "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
-                        "image": "shopify://shop_images/pommeau-de-douche-filtrant-a-vitamine-c-9174486.jpg",
-                        "card_height": "medium",
-                        "card_height_mobile": "medium",
-                        "card_link": "shopify://collections/shift",
-                        "image_filter_opacity": 20,
-                        "image_filter_color": "#032B59",
-                        "layout_justify": "flex-end"
-                      },
-                      "blocks": {
-                        "text_gMxpcc": {
+                        },
+                        "subtitle": {
                           "type": "text",
-                          "name": "t:title",
                           "settings": {
-                            "text": "<h3>SHIFT</h3>",
-                            "text_style": "h4"
+                            "text": "<p>Douchette & capsules</p>",
+                            "text_style": "paragraph"
                           }
                         }
                       },
                       "block_order": [
-                        "text_gMxpcc"
+                        "title",
+                        "subtitle"
+                      ]
+                    },
+                    "image_card_2": {
+                      "type": "image-card",
+                      "settings": {
+                        "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+                        "image": "shopify://shop_images/onsha-filtre-thermal-fleur-de-prunier-packshot.jpg",
+                        "card_height": "small",
+                        "card_height_mobile": "small",
+                        "card_link": "shopify://pages/composez-votre-rituel",
+                        "image_filter_opacity": 25,
+                        "image_filter_color": "#032B59",
+                        "layout_justify": "flex-end",
+                        "layout_align_items": "flex-start",
+                        "padding_horizontal": 20,
+                        "padding_vertical": 20
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<h3>Composez votre rituel</h3>",
+                            "text_style": "h4"
+                          }
+                        },
+                        "subtitle": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>À la carte</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "title",
+                        "subtitle"
                       ]
                     }
                   },
                   "block_order": [
-                    "image_card_IAoCLr",
-                    "image_card_Z3aWZk",
-                    "image_card_SBvrjn"
+                    "image_card_0",
+                    "image_card_1",
+                    "image_card_2"
                   ]
                 }
               },
               "block_order": [
-                "collection_featured_P6npMc",
-                "header_megamenu_group_UGnQ9h"
+                "liens",
+                "cartes"
+              ]
+            },
+            "megamenu_marques": {
+              "type": "_header-megamenu",
+              "settings": {
+                "title": "Nos marques",
+                "layout_type": "flex",
+                "layout_direction": "row",
+                "layout_gap": 20,
+                "layout_wrap": "nowrap",
+                "layout_justify": "center",
+                "layout_align_items": "flex-start"
+              },
+              "blocks": {
+                "cartes": {
+                  "type": "_header-megamenu-group",
+                  "settings": {
+                    "wrap_in_card": false,
+                    "color_scheme": "",
+                    "show_card_border": false,
+                    "layout_type": "grid",
+                    "width": 100,
+                    "layout_direction": "row",
+                    "layout_grid_columns": 3,
+                    "layout_gap": 16,
+                    "layout_wrap": "nowrap",
+                    "layout_justify": "flex-start",
+                    "layout_align_items": "flex-start",
+                    "use_global_container_padding": true,
+                    "padding_horizontal": 30,
+                    "padding_vertical": 30,
+                    "margin_top": 0,
+                    "margin_bottom": 0
+                  },
+                  "blocks": {
+                    "image_card_0": {
+                      "type": "image-card",
+                      "settings": {
+                        "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+                        "image": "shopify://shop_images/onsha-filtre-thermal-ocean-packshot.jpg",
+                        "card_height": "small",
+                        "card_height_mobile": "small",
+                        "card_link": "shopify://collections/onsha",
+                        "image_filter_opacity": 25,
+                        "image_filter_color": "#032B59",
+                        "layout_justify": "flex-end",
+                        "layout_align_items": "flex-start",
+                        "padding_horizontal": 20,
+                        "padding_vertical": 20
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<h3>Onsha</h3>",
+                            "text_style": "h4"
+                          }
+                        },
+                        "subtitle": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Filtres de douche thermaux</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "title",
+                        "subtitle"
+                      ]
+                    },
+                    "image_card_1": {
+                      "type": "image-card",
+                      "settings": {
+                        "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+                        "image": "shopify://shop_images/SHIFT--_pommeau_blanc_Classic_1.png",
+                        "card_height": "small",
+                        "card_height_mobile": "small",
+                        "card_link": "shopify://collections/shift",
+                        "image_filter_opacity": 25,
+                        "image_filter_color": "#032B59",
+                        "layout_justify": "flex-end",
+                        "layout_align_items": "flex-start",
+                        "padding_horizontal": 20,
+                        "padding_vertical": 20
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<h3>SHIFT</h3>",
+                            "text_style": "h4"
+                          }
+                        },
+                        "subtitle": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Pommeau & aromathérapie</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "title",
+                        "subtitle"
+                      ]
+                    },
+                    "image_card_2": {
+                      "type": "image-card",
+                      "settings": {
+                        "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
+                        "image": "shopify://shop_images/filtre-a-robinet-faucet-1360756.jpg",
+                        "card_height": "small",
+                        "card_height_mobile": "small",
+                        "card_link": "shopify://collections/sullab",
+                        "image_filter_opacity": 25,
+                        "image_filter_color": "#032B59",
+                        "layout_justify": "flex-end",
+                        "layout_align_items": "flex-start",
+                        "padding_horizontal": 20,
+                        "padding_vertical": 20
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<h3>Sullab</h3>",
+                            "text_style": "h4"
+                          }
+                        },
+                        "subtitle": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Robinet & soins du visage</p>",
+                            "text_style": "paragraph"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "title",
+                        "subtitle"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "image_card_0",
+                    "image_card_1",
+                    "image_card_2"
+                  ]
+                }
+              },
+              "block_order": [
+                "cartes"
               ]
             }
           },
           "block_order": [
-            "header_megamenu_ebFAi4"
+            "megamenu_boutique",
+            "megamenu_marques"
           ]
         },
         "header-notifications": {
@@ -316,9 +497,9 @@
                   "type": "image-card",
                   "name": "t:image_card",
                   "settings": {
-                    "image": "shopify://shop_images/Copie_de_Copie_de_Hot_Spring_Filter___Shower_Head_03.jpg",
+                    "image": "shopify://shop_images/onsha-filtre-thermal-ocean-packshot.jpg",
                     "card_height": "small",
-                    "card_link": "shopify://collections/all",
+                    "card_link": "shopify://pages/composez-votre-rituel",
                     "image_filter_color": "#032B59",
                     "layout_justify": "flex-end"
                   },
@@ -327,7 +508,7 @@
                       "type": "text",
                       "name": "t:title",
                       "settings": {
-                        "text": "<h3>Gamme complète</h3>",
+                        "text": "<h3>Composez votre rituel</h3>",
                         "text_style": "h4"
                       }
                     }

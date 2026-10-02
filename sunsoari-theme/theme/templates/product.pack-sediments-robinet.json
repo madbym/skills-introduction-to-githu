@@ -938,7 +938,12 @@
             "product_card_quick_add_dY48RT": {
               "type": "_product-card-quick-add",
               "name": "t:product_card_quick_add",
-              "settings": {},
+              "settings": {
+                "show_product_media_gallery": true,
+                "button_style": "secondary",
+                "button_shape": "small",
+                "align_quick_add_together": true
+              },
               "blocks": {}
             },
             "product_card_group_LHFtbz": {

@@ -250,14 +250,14 @@
             "accordion_padding": "medium"
           },
           "blocks": {
-            "accordion_E8JkqH": {
+            "accordion_gy3c2E": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
                 "heading": "Caractéristiques & matériaux"
               },
               "blocks": {
-                "text_WIXiiQ": {
+                "text_ZprkYS": {
                   "type": "text",
                   "settings": {
                     "text": "<p>ABS, polycarbonate (PC), polypropylène (PP), inox (SS). Matériaux conformes FDA selon le fabricant. Compatible avec tous les flexibles de douche standard. Bouchon anti-écoulement intégré. À associer aux recharges compatibles Onsha pour prolonger le rituel.</p><p>Usage domestique uniquement. L'eau de la douche n'est pas destinée à la consommation. Ne pas forcer le vissage.</p>",
@@ -266,17 +266,17 @@
                 }
               },
               "block_order": [
-                "text_WIXiiQ"
+                "text_ZprkYS"
               ]
             },
-            "accordion_IWUSmT": {
+            "accordion_t0Y3oo": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
                 "heading": "Livraison & retours"
               },
               "blocks": {
-                "text_3MB9n7": {
+                "text_om06Dw": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p><p>Retour possible sous 14 jours, produit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
@@ -285,13 +285,13 @@
                 }
               },
               "block_order": [
-                "text_3MB9n7"
+                "text_om06Dw"
               ]
             }
           },
           "block_order": [
-            "accordion_E8JkqH",
-            "accordion_IWUSmT"
+            "accordion_gy3c2E",
+            "accordion_t0Y3oo"
           ]
         },
         "group_kLziPN": {
@@ -521,12 +521,12 @@
           },
           "name": "La technologie Onsha",
           "blocks": {
-            "slide_LoaeTO": {
+            "slide_v8bh4q": {
               "type": "_slide",
               "settings": {},
               "name": "Filtre intégré au corps",
               "blocks": {
-                "image_tzQPxC": {
+                "image_bQmzvr": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -534,14 +534,14 @@
                     "image": "shopify://shop_images/onsha-douchette-filtrante-1474368.png"
                   }
                 },
-                "text_5HChpo": {
+                "text_3e9Xrw": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Filtre intégré au corps</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_evbLJo": {
+                "text_PGzR1I": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Le filtre sédiment se loge directement dans la douchette.</p>",
@@ -550,17 +550,17 @@
                 }
               },
               "block_order": [
-                "image_tzQPxC",
-                "text_5HChpo",
-                "text_evbLJo"
+                "image_bQmzvr",
+                "text_3e9Xrw",
+                "text_PGzR1I"
               ]
             },
-            "slide_4KKEpY": {
+            "slide_KmqcTB": {
               "type": "_slide",
               "settings": {},
               "name": "Bouchon anti-écoulement",
               "blocks": {
-                "image_doe5c3": {
+                "image_lL9qcg": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -568,14 +568,14 @@
                     "image": "shopify://shop_images/onsha-douchette-filtrante-8605939.jpg"
                   }
                 },
-                "text_veGprQ": {
+                "text_MBwUYu": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Bouchon anti-écoulement</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_FnIiU7": {
+                "text_BMGhy5": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Coupe l'eau à la douchette pendant que tu te savonnes.</p>",
@@ -584,17 +584,17 @@
                 }
               },
               "block_order": [
-                "image_doe5c3",
-                "text_veGprQ",
-                "text_FnIiU7"
+                "image_lL9qcg",
+                "text_MBwUYu",
+                "text_BMGhy5"
               ]
             },
-            "slide_gdzUvZ": {
+            "slide_vNuQ2h": {
               "type": "_slide",
               "settings": {},
               "name": "Format compact",
               "blocks": {
-                "image_EZAmgg": {
+                "image_aH7ZIR": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -602,14 +602,14 @@
                     "image": "shopify://shop_images/onsha-douchette-filtrante-5144667.png"
                   }
                 },
-                "text_QBwBAD": {
+                "text_U8VVQm": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Format compact</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_3UdRPP": {
+                "text_xBe8Q6": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Léger, il glisse dans une trousse ou une valise.</p>",
@@ -618,17 +618,17 @@
                 }
               },
               "block_order": [
-                "image_EZAmgg",
-                "text_QBwBAD",
-                "text_3UdRPP"
+                "image_aH7ZIR",
+                "text_U8VVQm",
+                "text_xBe8Q6"
               ]
             },
-            "slide_32JgdP": {
+            "slide_RV5lNK": {
               "type": "_slide",
               "settings": {},
               "name": "Compatible rituel Nomade",
               "blocks": {
-                "image_3gpmmI": {
+                "image_U5tGtQ": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -636,14 +636,14 @@
                     "image": "shopify://shop_images/onsha-coque-diffusion-nomade-1.jpg"
                   }
                 },
-                "text_CiBlrD": {
+                "text_AuzSsJ": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Compatible rituel Nomade</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_p37eCZ": {
+                "text_imAQ8y": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Avec la coque nomade et les capsules thermales.</p>",
@@ -652,17 +652,17 @@
                 }
               },
               "block_order": [
-                "image_3gpmmI",
-                "text_CiBlrD",
-                "text_p37eCZ"
+                "image_U5tGtQ",
+                "text_AuzSsJ",
+                "text_imAQ8y"
               ]
             }
           },
           "block_order": [
-            "slide_LoaeTO",
-            "slide_4KKEpY",
-            "slide_gdzUvZ",
-            "slide_32JgdP"
+            "slide_v8bh4q",
+            "slide_KmqcTB",
+            "slide_vNuQ2h",
+            "slide_RV5lNK"
           ]
         }
       },
@@ -735,19 +735,19 @@
                   "settings": {},
                   "name": "Étapes",
                   "blocks": {
-                    "timeline_step_n3z5dk": {
+                    "timeline_step_PuDCCR": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 1",
                       "blocks": {
-                        "text_I1af7W": {
+                        "text_tzJ1at": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 1</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_2pkAFE": {
+                        "text_snBYLM": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Dévisse</strong> ton pommeau ou ta douchette actuelle.</p>",
@@ -756,23 +756,23 @@
                         }
                       },
                       "block_order": [
-                        "text_I1af7W",
-                        "text_2pkAFE"
+                        "text_tzJ1at",
+                        "text_snBYLM"
                       ]
                     },
-                    "timeline_step_UYJQTF": {
+                    "timeline_step_GQONvf": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 2",
                       "blocks": {
-                        "text_yayq7Y": {
+                        "text_nGEY59": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 2</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_YDsBS9": {
+                        "text_YVkQfs": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Visse</strong> la douchette Onsha sur le flexible, à la main, sans forcer, chez toi comme à l'hôtel.</p>",
@@ -781,23 +781,23 @@
                         }
                       },
                       "block_order": [
-                        "text_yayq7Y",
-                        "text_YDsBS9"
+                        "text_nGEY59",
+                        "text_YVkQfs"
                       ]
                     },
-                    "timeline_step_ddLEG6": {
+                    "timeline_step_pEN2Xe": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 3",
                       "blocks": {
-                        "text_jmsn9d": {
+                        "text_08WpRt": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 3</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_LVIdVu": {
+                        "text_oZmjbc": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Insère</strong> le filtre sédiment dans le compartiment dédié.</p>",
@@ -806,23 +806,23 @@
                         }
                       },
                       "block_order": [
-                        "text_jmsn9d",
-                        "text_LVIdVu"
+                        "text_08WpRt",
+                        "text_oZmjbc"
                       ]
                     },
-                    "timeline_step_R3pzh8": {
+                    "timeline_step_jPSa5W": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 4",
                       "blocks": {
-                        "text_2Hkd9G": {
+                        "text_DA4OKm": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 4</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_f2leMe": {
+                        "text_TSyFzp": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Fais couler l'eau</strong> quelques secondes : ton rituel peut commencer, où que tu sois.</p>",
@@ -831,16 +831,16 @@
                         }
                       },
                       "block_order": [
-                        "text_2Hkd9G",
-                        "text_f2leMe"
+                        "text_DA4OKm",
+                        "text_TSyFzp"
                       ]
                     }
                   },
                   "block_order": [
-                    "timeline_step_n3z5dk",
-                    "timeline_step_UYJQTF",
-                    "timeline_step_ddLEG6",
-                    "timeline_step_R3pzh8"
+                    "timeline_step_PuDCCR",
+                    "timeline_step_GQONvf",
+                    "timeline_step_pEN2Xe",
+                    "timeline_step_jPSa5W"
                   ]
                 },
                 "text_lMaXZj": {
@@ -1300,7 +1300,12 @@
             "product_card_quick_add_dY48RT": {
               "type": "_product-card-quick-add",
               "name": "t:product_card_quick_add",
-              "settings": {}
+              "settings": {
+                "show_product_media_gallery": true,
+                "button_style": "secondary",
+                "button_shape": "small",
+                "align_quick_add_together": true
+              }
             },
             "product_card_group_LHFtbz": {
               "type": "_product-card-group",
@@ -1373,13 +1378,13 @@
                 "accordion_padding": "medium"
               },
               "blocks": {
-                "accordion_NfAQLK": {
+                "accordion_olZ9SH": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Quelle différence entre la douchette et le pommeau Onsha ?"
                   },
                   "blocks": {
-                    "text_4KpLMc": {
+                    "text_3X4gXB": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Le pommeau est pensé pour rester installé chez toi, avec la coque de diffusion Home. La douchette est le format tout-en-un : filtre intégré, plus compacte, idéale en déplacement ou pour un rituel plus simple à la maison.</p>",
@@ -1388,16 +1393,16 @@
                     }
                   },
                   "block_order": [
-                    "text_4KpLMc"
+                    "text_3X4gXB"
                   ]
                 },
-                "accordion_Tupqzi": {
+                "accordion_hDiZDQ": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Est-ce que je peux l'installer moi-même ?"
                   },
                   "blocks": {
-                    "text_Hu7qnQ": {
+                    "text_DdJp62": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Oui ! Elle se visse à la main sur tout flexible standard, en quelques secondes, sans outil, chez toi comme à l'hôtel ou en location.</p>",
@@ -1406,16 +1411,16 @@
                     }
                   },
                   "block_order": [
-                    "text_Hu7qnQ"
+                    "text_DdJp62"
                   ]
                 },
-                "accordion_W7eaDN": {
+                "accordion_5CN0U5": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Le filtre est-il inclus dans la boîte ?"
                   },
                   "blocks": {
-                    "text_QPtDu7": {
+                    "text_HJMu8W": {
                       "type": "text",
                       "settings": {
                         "text": "<p>La douchette est livrée prête à l'emploi. Les filtres sédiment de recharge sont disponibles sur Sunsoari.</p>",
@@ -1424,16 +1429,16 @@
                     }
                   },
                   "block_order": [
-                    "text_QPtDu7"
+                    "text_HJMu8W"
                   ]
                 },
-                "accordion_qi7w4e": {
+                "accordion_5kV3EC": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Quand remplacer le filtre sédiment ?"
                   },
                   "blocks": {
-                    "text_KgeInG": {
+                    "text_GB16JC": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Trois signes : le débit diminue, le filtre change de couleur, ou l'eau te semble moins agréable. Il suffit alors d'insérer une recharge, en quelques secondes, sans outil.</p>",
@@ -1442,16 +1447,16 @@
                     }
                   },
                   "block_order": [
-                    "text_KgeInG"
+                    "text_GB16JC"
                   ]
                 },
-                "accordion_1ITtNZ": {
+                "accordion_XXHFOp": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Quels sont les délais de livraison ?"
                   },
                   "blocks": {
-                    "text_4pxskC": {
+                    "text_qWp1Or": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p>",
@@ -1460,16 +1465,16 @@
                     }
                   },
                   "block_order": [
-                    "text_4pxskC"
+                    "text_qWp1Or"
                   ]
                 },
-                "accordion_t7Qg84": {
+                "accordion_rvu5If": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Puis-je retourner le produit ?"
                   },
                   "blocks": {
-                    "text_PHaQ0J": {
+                    "text_rCeTsp": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Oui, sous 14 jours, à condition que le produit soit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
@@ -1478,17 +1483,17 @@
                     }
                   },
                   "block_order": [
-                    "text_PHaQ0J"
+                    "text_rCeTsp"
                   ]
                 }
               },
               "block_order": [
-                "accordion_NfAQLK",
-                "accordion_Tupqzi",
-                "accordion_W7eaDN",
-                "accordion_qi7w4e",
-                "accordion_1ITtNZ",
-                "accordion_t7Qg84"
+                "accordion_olZ9SH",
+                "accordion_hDiZDQ",
+                "accordion_5CN0U5",
+                "accordion_5kV3EC",
+                "accordion_XXHFOp",
+                "accordion_rvu5If"
               ]
             }
           },

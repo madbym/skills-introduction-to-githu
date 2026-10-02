@@ -236,14 +236,14 @@
             "accordion_padding": "medium"
           },
           "blocks": {
-            "accordion_yEa8wt": {
+            "accordion_Ct3LBt": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
                 "heading": "Composition & principes actifs"
               },
               "blocks": {
-                "text_Sb24WK": {
+                "text_oXHyC6": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Douchette filtrante :</strong> ABS, polycarbonate (PC), polypropylène (PP), inox (SS).</p><p><strong>Housse :</strong> silicone souple, sans BPA.</p><p><strong>Capsules thermales :</strong> eau thermale soufrée extraite à 808 m dans le granit coréen, lyophilisée et concentrée 4 fois, vitamine C, acide hyaluronique, glycérine, MSM et senteur inspirée des régions thermales coréennes. Chaque capsule est livrée avec son disque sédiment. La liste complète des ingrédients (INCI) figure sur chaque emballage.</p><p>Usage externe uniquement. Tenir hors de portée des enfants. En cas de sensibilité connue aux parfums, consulte la liste INCI avant utilisation.</p>",
@@ -252,17 +252,17 @@
                 }
               },
               "block_order": [
-                "text_Sb24WK"
+                "text_oXHyC6"
               ]
             },
-            "accordion_AIVVIZ": {
+            "accordion_g8WnOn": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
                 "heading": "Durée & entretien"
               },
               "blocks": {
-                "text_Wy2591": {
+                "text_KNdN9V": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Capsules :</strong> environ 10 à 15 jours chacune selon ta fréquence de douche. Change le disque sédiment en même temps que la capsule.</p><p><strong>Housse :</strong> lavable à l'eau tiède, clips interchangeables.</p><p><strong>Entretien :</strong> rince régulièrement la coque nomade.</p>",
@@ -271,17 +271,17 @@
                 }
               },
               "block_order": [
-                "text_Wy2591"
+                "text_KNdN9V"
               ]
             },
-            "accordion_BFbyvQ": {
+            "accordion_JekaAC": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
                 "heading": "Découvre tes 4 senteurs"
               },
               "blocks": {
-                "text_M5oFor": {
+                "text_qQfkpl": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Hinoki (calme absolu) :</strong> cyprès, bois chaud, musc doux. Idéale le soir.</p><p><strong>Océan (fraîcheur marine) :</strong> embruns marins, sel minéral, végétal aquatique. Parfaite le matin.</p><p><strong>Pin (énergie des forêts) :</strong> pin frais, résine, terre humide. Tonique dès le réveil.</p><p><strong>Fleur de Prunier (douceur florale) :</strong> fleur de prunier, poudré doux, bois blanc. Apaisante et délicate.</p>",
@@ -290,17 +290,17 @@
                 }
               },
               "block_order": [
-                "text_M5oFor"
+                "text_qQfkpl"
               ]
             },
-            "accordion_D6iNIb": {
+            "accordion_sTsS3D": {
               "type": "_accordion",
               "name": "Accordéon",
               "settings": {
                 "heading": "Livraison & retours"
               },
               "blocks": {
-                "text_RZzUk1": {
+                "text_SMEsco": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p><p>Retour possible sous 14 jours, produit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
@@ -309,15 +309,15 @@
                 }
               },
               "block_order": [
-                "text_RZzUk1"
+                "text_SMEsco"
               ]
             }
           },
           "block_order": [
-            "accordion_yEa8wt",
-            "accordion_AIVVIZ",
-            "accordion_BFbyvQ",
-            "accordion_D6iNIb"
+            "accordion_Ct3LBt",
+            "accordion_g8WnOn",
+            "accordion_JekaAC",
+            "accordion_sTsS3D"
           ]
         },
         "group_kLziPN": {
@@ -391,7 +391,7 @@
             "marquee_QE4fL7"
           ]
         },
-        "this_pack_contains_dL9JJv": {
+        "this_pack_contains_xtl8nv": {
           "type": "this-pack-contains",
           "name": "Dans votre coffret",
           "settings": {
@@ -401,7 +401,7 @@
             "margin_bottom": 10
           },
           "blocks": {
-            "product_mini_card_uBuQqx": {
+            "product_mini_card_ftJyPY": {
               "type": "product-mini-card",
               "settings": {
                 "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
@@ -414,7 +414,7 @@
                 "title": "Douchette filtrante ×1"
               }
             },
-            "product_mini_card_9jR7Ee": {
+            "product_mini_card_v0iQS1": {
               "type": "product-mini-card",
               "settings": {
                 "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
@@ -427,7 +427,7 @@
                 "title": "Housse ×1"
               }
             },
-            "product_mini_card_f1ffBg": {
+            "product_mini_card_8VR6Hf": {
               "type": "product-mini-card",
               "settings": {
                 "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
@@ -440,7 +440,7 @@
                 "title": "Coque nomade ×1"
               }
             },
-            "product_mini_card_VVxZiJ": {
+            "product_mini_card_PQBGxb": {
               "type": "product-mini-card",
               "settings": {
                 "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
@@ -455,10 +455,10 @@
             }
           },
           "block_order": [
-            "product_mini_card_uBuQqx",
-            "product_mini_card_9jR7Ee",
-            "product_mini_card_f1ffBg",
-            "product_mini_card_VVxZiJ"
+            "product_mini_card_ftJyPY",
+            "product_mini_card_v0iQS1",
+            "product_mini_card_8VR6Hf",
+            "product_mini_card_PQBGxb"
           ]
         },
         "rating_stars_avis": {
@@ -481,7 +481,7 @@
         "text_yQdqF8",
         "price_yEeMeb",
         "group_pills",
-        "this_pack_contains_dL9JJv",
+        "this_pack_contains_xtl8nv",
         "separator_AKgbEA",
         "product_form_grYQk6",
         "delivery_estimation_A43yiG",
@@ -792,12 +792,12 @@
           },
           "name": "Tes 4 senteurs",
           "blocks": {
-            "slide_IBQxeG": {
+            "slide_uhXz3G": {
               "type": "_slide",
               "settings": {},
               "name": "Hinoki · Calme absolu",
               "blocks": {
-                "image_S1OpgS": {
+                "image_2kvASF": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -805,14 +805,14 @@
                     "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-5679506.jpg"
                   }
                 },
-                "text_Xt2RMZ": {
+                "text_sQ8z0W": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Hinoki · Calme absolu</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_hYKYcw": {
+                "text_JcDfuq": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Cyprès, bois chaud, musc doux. Pour les soirs de détente.</p>",
@@ -821,17 +821,17 @@
                 }
               },
               "block_order": [
-                "image_S1OpgS",
-                "text_Xt2RMZ",
-                "text_hYKYcw"
+                "image_2kvASF",
+                "text_sQ8z0W",
+                "text_JcDfuq"
               ]
             },
-            "slide_lUH9Pr": {
+            "slide_nrJi7s": {
               "type": "_slide",
               "settings": {},
               "name": "Océan · Fraîcheur marine",
               "blocks": {
-                "image_Pva2A0": {
+                "image_0aQ3ID": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -839,14 +839,14 @@
                     "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-7252132.jpg"
                   }
                 },
-                "text_FgB9xO": {
+                "text_AdmHxN": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Océan · Fraîcheur marine</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_51DTjB": {
+                "text_WFOCWd": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Embruns marins, sel minéral, végétal aquatique. Pour les matins.</p>",
@@ -855,17 +855,17 @@
                 }
               },
               "block_order": [
-                "image_Pva2A0",
-                "text_FgB9xO",
-                "text_51DTjB"
+                "image_0aQ3ID",
+                "text_AdmHxN",
+                "text_WFOCWd"
               ]
             },
-            "slide_r4CpWD": {
+            "slide_o16hD8": {
               "type": "_slide",
               "settings": {},
               "name": "Pin · Énergie des forêts",
               "blocks": {
-                "image_NZ6IXE": {
+                "image_C4SFhb": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -873,14 +873,14 @@
                     "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-8292746.jpg"
                   }
                 },
-                "text_DB0ULr": {
+                "text_OMZpTk": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Pin · Énergie des forêts</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_u2p17f": {
+                "text_tJaJAf": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Pin frais, résine, terre humide. Pour bien démarrer la journée.</p>",
@@ -889,17 +889,17 @@
                 }
               },
               "block_order": [
-                "image_NZ6IXE",
-                "text_DB0ULr",
-                "text_u2p17f"
+                "image_C4SFhb",
+                "text_OMZpTk",
+                "text_tJaJAf"
               ]
             },
-            "slide_MS4rJa": {
+            "slide_jym6MG": {
               "type": "_slide",
               "settings": {},
               "name": "Fleur de Prunier · Douceur florale",
               "blocks": {
-                "image_KNQyvb": {
+                "image_hP1jF7": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -907,14 +907,14 @@
                     "image": "shopify://shop_images/onsha-filtre-vitamine-9910937.jpg"
                   }
                 },
-                "text_F2ulFn": {
+                "text_TsGTrA": {
                   "type": "text",
                   "settings": {
                     "text": "<p><strong>Fleur de Prunier · Douceur florale</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_wZqvr4": {
+                "text_1EEpDJ": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Fleur de prunier, poudré doux, bois blanc. Pour un moment tout en douceur.</p>",
@@ -923,17 +923,17 @@
                 }
               },
               "block_order": [
-                "image_KNQyvb",
-                "text_F2ulFn",
-                "text_wZqvr4"
+                "image_hP1jF7",
+                "text_TsGTrA",
+                "text_1EEpDJ"
               ]
             }
           },
           "block_order": [
-            "slide_IBQxeG",
-            "slide_lUH9Pr",
-            "slide_r4CpWD",
-            "slide_MS4rJa"
+            "slide_uhXz3G",
+            "slide_nrJi7s",
+            "slide_o16hD8",
+            "slide_jym6MG"
           ]
         }
       },
@@ -1005,19 +1005,19 @@
                   "settings": {},
                   "name": "Étapes",
                   "blocks": {
-                    "timeline_step_EPTFCY": {
+                    "timeline_step_YGr0as": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 1",
                       "blocks": {
-                        "text_H8mfpU": {
+                        "text_V4i3er": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 1</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_AFJWpS": {
+                        "text_XY2Av7": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Ouvre</strong> la coque nomade et <strong>insère</strong> une capsule avec son disque sédiment.</p>",
@@ -1026,23 +1026,23 @@
                         }
                       },
                       "block_order": [
-                        "text_H8mfpU",
-                        "text_AFJWpS"
+                        "text_V4i3er",
+                        "text_XY2Av7"
                       ]
                     },
-                    "timeline_step_JHwBVJ": {
+                    "timeline_step_wvJWIy": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 2",
                       "blocks": {
-                        "text_bfsozS": {
+                        "text_Ut1LLQ": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 2</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_ptQLxE": {
+                        "text_F3jCIE": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Ferme</strong> la coque et fixe-la sur la douchette.</p>",
@@ -1051,23 +1051,23 @@
                         }
                       },
                       "block_order": [
-                        "text_bfsozS",
-                        "text_ptQLxE"
+                        "text_Ut1LLQ",
+                        "text_F3jCIE"
                       ]
                     },
-                    "timeline_step_hVI8WS": {
+                    "timeline_step_AcuVET": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 3",
                       "blocks": {
-                        "text_vwSDrt": {
+                        "text_D7u3mS": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 3</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_qohUmu": {
+                        "text_pKyo2X": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Visse</strong> le tout sur ton flexible de douche standard, sans outil.</p>",
@@ -1076,23 +1076,23 @@
                         }
                       },
                       "block_order": [
-                        "text_vwSDrt",
-                        "text_qohUmu"
+                        "text_D7u3mS",
+                        "text_pKyo2X"
                       ]
                     },
-                    "timeline_step_g1msox": {
+                    "timeline_step_iG9Lv3": {
                       "type": "_timeline-step",
                       "settings": {},
                       "name": "Étape 4",
                       "blocks": {
-                        "text_lmnVEr": {
+                        "text_6ZyyQY": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Étape 4</strong></p>",
                             "text_style": "paragraph"
                           }
                         },
-                        "text_ULWHMs": {
+                        "text_0PjF9c": {
                           "type": "text",
                           "settings": {
                             "text": "<p><strong>Ouvre l'eau</strong> : ton rituel commence, à la maison comme en voyage.</p>",
@@ -1101,16 +1101,16 @@
                         }
                       },
                       "block_order": [
-                        "text_lmnVEr",
-                        "text_ULWHMs"
+                        "text_6ZyyQY",
+                        "text_0PjF9c"
                       ]
                     }
                   },
                   "block_order": [
-                    "timeline_step_EPTFCY",
-                    "timeline_step_JHwBVJ",
-                    "timeline_step_hVI8WS",
-                    "timeline_step_g1msox"
+                    "timeline_step_YGr0as",
+                    "timeline_step_wvJWIy",
+                    "timeline_step_AcuVET",
+                    "timeline_step_iG9Lv3"
                   ]
                 }
               },
@@ -1228,7 +1228,12 @@
             "product_card_quick_add_dY48RT": {
               "type": "_product-card-quick-add",
               "name": "t:product_card_quick_add",
-              "settings": {}
+              "settings": {
+                "show_product_media_gallery": true,
+                "button_style": "secondary",
+                "button_shape": "small",
+                "align_quick_add_together": true
+              }
             },
             "product_card_group_LHFtbz": {
               "type": "_product-card-group",
@@ -1301,13 +1306,13 @@
                 "accordion_padding": "medium"
               },
               "blocks": {
-                "accordion_rcdJsS": {
+                "accordion_6DaUjA": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Combien de temps dure chaque capsule ?"
                   },
                   "blocks": {
-                    "text_ltaTIi": {
+                    "text_g32CgH": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Environ 10 à 15 jours selon ta fréquence de douche. Quand la capsule est vide et transparente, remplace-la avec son disque sédiment.</p>",
@@ -1316,16 +1321,16 @@
                     }
                   },
                   "block_order": [
-                    "text_ltaTIi"
+                    "text_g32CgH"
                   ]
                 },
-                "accordion_g3aKsE": {
+                "accordion_qvNSzP": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Puis-je commander juste les recharges ensuite ?"
                   },
                   "blocks": {
-                    "text_8iO3WF": {
+                    "text_3PjeEY": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Oui. Les Capsules Thermales Coréennes (Nomade) sont disponibles à l'unité ou en pack, dans chacune des quatre senteurs.</p>",
@@ -1334,16 +1339,16 @@
                     }
                   },
                   "block_order": [
-                    "text_8iO3WF"
+                    "text_3PjeEY"
                   ]
                 },
-                "accordion_q83Eh0": {
+                "accordion_Iy9uOT": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Les 4 senteurs sont-elles incluses ?"
                   },
                   "blocks": {
-                    "text_ECvl9d": {
+                    "text_f2v2R2": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Oui : Hinoki, Océan, Pin et Fleur de Prunier, une de chaque pour explorer.</p>",
@@ -1352,16 +1357,16 @@
                     }
                   },
                   "block_order": [
-                    "text_ECvl9d"
+                    "text_f2v2R2"
                   ]
                 },
-                "accordion_RdjjZK": {
+                "accordion_NepOR6": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Puis-je changer la couleur de ma housse ?"
                   },
                   "blocks": {
-                    "text_ezFeKO": {
+                    "text_4WF3Ic": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Oui : la Housse Personnalisable existe en plusieurs coloris, avec des clips interchangeables.</p>",
@@ -1370,16 +1375,16 @@
                     }
                   },
                   "block_order": [
-                    "text_ezFeKO"
+                    "text_4WF3Ic"
                   ]
                 },
-                "accordion_WAMMYN": {
+                "accordion_WOT3gC": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Peut-on l'utiliser en voyage ou en résidence secondaire ?"
                   },
                   "blocks": {
-                    "text_8tfphJ": {
+                    "text_soVfBg": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Oui, c'est tout l'esprit du Nomade : tu ranges le coffret, tu le sors n'importe où et tu l'installes en quelques secondes.</p>",
@@ -1388,16 +1393,16 @@
                     }
                   },
                   "block_order": [
-                    "text_8tfphJ"
+                    "text_soVfBg"
                   ]
                 },
-                "accordion_Ct3LBt": {
+                "accordion_uYdswx": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Quels sont les délais de livraison ?"
                   },
                   "blocks": {
-                    "text_oXHyC6": {
+                    "text_kSt5bc": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p>",
@@ -1406,16 +1411,16 @@
                     }
                   },
                   "block_order": [
-                    "text_oXHyC6"
+                    "text_kSt5bc"
                   ]
                 },
-                "accordion_g8WnOn": {
+                "accordion_RYlklf": {
                   "type": "_accordion",
                   "settings": {
                     "heading": "Puis-je retourner le produit ?"
                   },
                   "blocks": {
-                    "text_KNdN9V": {
+                    "text_BjpHAK": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Oui, sous 14 jours, à condition que le produit soit non ouvert, non utilisé, complet et dans son emballage d'origine, pour des raisons d'hygiène. Tous les détails sont dans notre politique de retours.</p>",
@@ -1424,18 +1429,18 @@
                     }
                   },
                   "block_order": [
-                    "text_KNdN9V"
+                    "text_BjpHAK"
                   ]
                 }
               },
               "block_order": [
-                "accordion_rcdJsS",
-                "accordion_g3aKsE",
-                "accordion_q83Eh0",
-                "accordion_RdjjZK",
-                "accordion_WAMMYN",
-                "accordion_Ct3LBt",
-                "accordion_g8WnOn"
+                "accordion_6DaUjA",
+                "accordion_qvNSzP",
+                "accordion_Iy9uOT",
+                "accordion_NepOR6",
+                "accordion_WOT3gC",
+                "accordion_uYdswx",
+                "accordion_RYlklf"
               ]
             }
           },

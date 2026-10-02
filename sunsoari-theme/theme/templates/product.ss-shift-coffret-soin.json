@@ -333,7 +333,7 @@
             "marquee_QE4fL7"
           ]
         },
-        "this_pack_contains_jVObfV": {
+        "this_pack_contains_XyGHA9": {
           "type": "this-pack-contains",
           "name": "Dans votre coffret",
           "settings": {
@@ -343,7 +343,7 @@
             "margin_bottom": 10
           },
           "blocks": {
-            "product_mini_card_t6vwal": {
+            "product_mini_card_E51mxR": {
               "type": "product-mini-card",
               "settings": {
                 "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
@@ -356,7 +356,7 @@
                 "title": "Capsule Tea Tree & Lavender ×1"
               }
             },
-            "product_mini_card_3jKQze": {
+            "product_mini_card_8KCDXs": {
               "type": "product-mini-card",
               "settings": {
                 "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
@@ -371,8 +371,8 @@
             }
           },
           "block_order": [
-            "product_mini_card_t6vwal",
-            "product_mini_card_3jKQze"
+            "product_mini_card_E51mxR",
+            "product_mini_card_8KCDXs"
           ]
         },
         "rating_stars_avis": {
@@ -395,7 +395,7 @@
         "text_yQdqF8",
         "price_yEeMeb",
         "group_pills",
-        "this_pack_contains_jVObfV",
+        "this_pack_contains_XyGHA9",
         "separator_AKgbEA",
         "product_form_grYQk6",
         "cross_sell_QcpW8C",
@@ -1138,7 +1138,12 @@
             "product_card_quick_add_dY48RT": {
               "type": "_product-card-quick-add",
               "name": "t:product_card_quick_add",
-              "settings": {}
+              "settings": {
+                "show_product_media_gallery": true,
+                "button_style": "secondary",
+                "button_shape": "small",
+                "align_quick_add_together": true
+              }
             },
             "product_card_group_LHFtbz": {
               "type": "_product-card-group",

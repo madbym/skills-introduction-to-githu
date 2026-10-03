@@ -136,6 +136,31 @@ def add_box(t, items):
         t["order"].remove("dans_ton_coffret")
 
 
+# Brand videos (Shopify Files): square on desktop, vertical on mobile.
+CAPSULE_VIDEO = ("shift-capsule-vitamine-c-carre.mp4", "shift-capsule-vitamine-c-vertical.mp4")
+VIDEOS = {
+    "product.pack-6-capsules-vitaminee.json": {"Remplacez votre recharge": CAPSULE_VIDEO},
+    "product.box-rituel-douche-complet.json": {"Remplacez votre recharge": CAPSULE_VIDEO},
+    "product.pommeau-de-douche-filtran-2.json": {"Remplacez votre recharge": CAPSULE_VIDEO},
+}
+
+
+def add_videos(tabs, videos):
+    for tab in children(tabs):
+        pair = videos.get(tab["settings"].get("tab_name"))
+        if not pair:
+            continue
+        key = next(k for k in tab["block_order"] if tab["blocks"][k]["type"] == "video")
+        base = tab["blocks"][key]
+        for suffix, display, name in (("", "desktop_only", pair[0]), ("_mobile", "mobile_only", pair[1])):
+            b = json.loads(json.dumps(base))
+            b["settings"].update({"source": "uploaded", "video": f"shopify://files/videos/{name}",
+                                  "show_on_display": display, "video_autoplay": True, "video_loop": True})
+            tab["blocks"][key + suffix] = b
+            if suffix:
+                tab["block_order"].insert(tab["block_order"].index(key) + 1, key + suffix)
+
+
 def build():
     products.build()
     for fname, name in LIVE_NAMES.items():
@@ -151,6 +176,7 @@ def build():
             names = ["Découvrez votre coffret", "Installez votre produit", "Remplacez votre recharge"]
             set_tabs(videos, names[-n:] if name not in BOX else names[:n])
             set_text(find(videos, by_type("text")), "<h2>Les gestes en vidéo</h2>")
+            add_videos(tabs, VIDEOS.get(fname, {}))
         if fname in STEP_PHOTO and "comment_ca_marche" in t["sections"]:
             im = find(t["sections"]["comment_ca_marche"], by_type("image"))
             im["settings"]["image"] = "shopify://shop_images/" + STEP_PHOTO[fname]

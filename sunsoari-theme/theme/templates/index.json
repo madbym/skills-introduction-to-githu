@@ -3,172 +3,6 @@
     "custom_section_H6XpXt": {
       "type": "custom-section",
       "blocks": {
-        "group_w7Bm8p": {
-          "type": "group",
-          "name": "t:group",
-          "settings": {
-            "show_on_display": "desktop_and_mobile",
-            "wrap_in_card": true,
-            "card_link": "",
-            "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
-            "show_card_border": false,
-            "layout_type": "flex",
-            "width_desktop": 70,
-            "layout_direction_desktop": "column",
-            "layout_grid_columns_desktop": 3,
-            "layout_gap_desktop": 10,
-            "layout_wrap_desktop": "nowrap",
-            "layout_justify_desktop": "center",
-            "layout_align_items_desktop": "center",
-            "same_as_desktop": false,
-            "width_mobile": 100,
-            "layout_direction_mobile": "column",
-            "layout_grid_columns_mobile": 1,
-            "layout_gap_mobile": 10,
-            "layout_wrap_mobile": "nowrap",
-            "layout_justify_mobile": "flex-start",
-            "layout_align_items_mobile": "flex-start",
-            "use_global_container_padding": true,
-            "padding_horizontal": 30,
-            "padding_vertical": 30,
-            "padding_horizontal_mobile": 30,
-            "padding_vertical_mobile": 30,
-            "margin_top": 0,
-            "margin_bottom": 0,
-            "additional_class": ""
-          },
-          "blocks": {
-            "group_FGrY7m": {
-              "type": "group",
-              "name": "t:group",
-              "settings": {
-                "show_on_display": "desktop_and_mobile",
-                "wrap_in_card": true,
-                "card_link": "",
-                "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
-                "show_card_border": false,
-                "layout_type": "flex",
-                "width_desktop": 100,
-                "layout_direction_desktop": "column",
-                "layout_grid_columns_desktop": 3,
-                "layout_gap_desktop": 10,
-                "layout_wrap_desktop": "nowrap",
-                "layout_justify_desktop": "center",
-                "layout_align_items_desktop": "center",
-                "same_as_desktop": true,
-                "width_mobile": 100,
-                "layout_direction_mobile": "column",
-                "layout_grid_columns_mobile": 1,
-                "layout_gap_mobile": 10,
-                "layout_wrap_mobile": "nowrap",
-                "layout_justify_mobile": "flex-start",
-                "layout_align_items_mobile": "flex-start",
-                "use_global_container_padding": true,
-                "padding_horizontal": 30,
-                "padding_vertical": 30,
-                "padding_horizontal_mobile": 30,
-                "padding_vertical_mobile": 30,
-                "margin_top": 0,
-                "margin_bottom": 0,
-                "additional_class": ""
-              },
-              "blocks": {
-                "text_n9JNiV": {
-                  "type": "text",
-                  "name": "t:title",
-                  "settings": {
-                    "show_on_display": "desktop_and_mobile",
-                    "text": "<h1>Nouveau : le Coffret Douche & Aromathérapie SHIFT</h1>",
-                    "text_style": "h4",
-                    "paragraph_font_size": "normal",
-                    "font_weight": 400,
-                    "alignment": "center",
-                    "alignment_mobile": "center",
-                    "show_read_more": false,
-                    "read_more_length": 50,
-                    "read_more_text": "Voir plus",
-                    "read_less_text": "Voir moins",
-                    "truncate": false,
-                    "truncate_length": 2,
-                    "margin_top": 0,
-                    "margin_bottom": 0,
-                    "additional_class": ""
-                  },
-                  "blocks": {}
-                },
-                "text_MBjKeL": {
-                  "type": "text",
-                  "name": "t:text",
-                  "settings": {
-                    "show_on_display": "desktop_and_mobile",
-                    "text": "<p>Le système SHIFT complet, prêt à installer : pommeau filtrant, flexible 2 m, 3 filtres Pure Water et 6 capsules soin & aromathérapie. L'eau est d'abord filtrée, puis parfumée par la capsule de ton choix. Choisis la couleur de ton pommeau.</p>",
-                    "text_style": "paragraph",
-                    "paragraph_font_size": "normal",
-                    "font_weight": 400,
-                    "alignment": "center",
-                    "alignment_mobile": "center",
-                    "show_read_more": false,
-                    "read_more_length": 50,
-                    "read_more_text": "Voir plus",
-                    "read_less_text": "Voir moins",
-                    "truncate": false,
-                    "truncate_length": 2,
-                    "margin_top": 0,
-                    "margin_bottom": 0,
-                    "additional_class": ""
-                  },
-                  "blocks": {}
-                },
-                "button_qECmrp": {
-                  "type": "button",
-                  "name": "Bouton",
-                  "settings": {
-                    "show_on_display": "desktop_and_mobile",
-                    "link": "shopify://products/shift-coffret-douche-aromatherapie",
-                    "open_in_new_tab": false,
-                    "label": "Découvrir le coffret",
-                    "button_style": "primary",
-                    "button_shape": "default",
-                    "icon": "arrow_forward",
-                    "icon_custom": "",
-                    "icon_position": "end",
-                    "margin_top": 10,
-                    "margin_bottom": 0,
-                    "additional_class": ""
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_n9JNiV",
-                "text_MBjKeL",
-                "button_qECmrp"
-              ]
-            },
-            "image_BLwNEG": {
-              "type": "image",
-              "name": "t:image",
-              "settings": {
-                "show_on_display": "desktop_and_mobile",
-                "image": "shopify://shop_images/shift-pommeau-capsule-aromatherapie-banniere.jpg",
-                "show_placeholder": true,
-                "link": "",
-                "image_ratio": "landscape",
-                "image_width_desktop": 100,
-                "image_width_mobile": 100,
-                "enable_rounded_corners": true,
-                "margin_top": 0,
-                "margin_bottom": 0,
-                "additional_class": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "group_FGrY7m",
-            "image_BLwNEG"
-          ]
-        },
         "group_RUiMzE": {
           "type": "group",
           "name": "t:group",
@@ -378,7 +212,7 @@
                     "show_on_display": "desktop_and_mobile",
                     "image": "shopify://shop_images/onsha-filtre-thermal-fleur-de-prunier-packshot.jpg",
                     "show_placeholder": true,
-                    "link": "shopify://products/produit-2",
+                    "link": "shopify://products/coffret-home-onsha-sullab-sunsoari",
                     "image_ratio": "landscape",
                     "image_width_desktop": 80,
                     "image_width_mobile": 100,
@@ -569,7 +403,7 @@
                     "show_on_display": "desktop_and_mobile",
                     "image": "shopify://shop_images/onsha-coque-diffusion-nomade-1.jpg",
                     "show_placeholder": true,
-                    "link": "shopify://products/produit-1",
+                    "link": "shopify://products/coffret-mini",
                     "image_ratio": "landscape",
                     "image_width_desktop": 80,
                     "image_width_mobile": 100,
@@ -730,7 +564,6 @@
         }
       },
       "block_order": [
-        "group_w7Bm8p",
         "group_RUiMzE"
       ],
       "name": "t:section_cards_1",
@@ -3109,14 +2942,402 @@
         "anchor_id": "",
         "additional_class": ""
       }
+    },
+    "hero_shift": {
+      "type": "image-banner",
+      "blocks": {
+        "image_banner_pw4YAH": {
+          "type": "_image-banner",
+          "name": "t:image_banner",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shift-banniere-coloris-hd.png",
+            "source": "uploaded",
+            "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+            "banner_height": "medium",
+            "layout_justify": "center",
+            "layout_align_items": "flex-start",
+            "same_as_desktop": false,
+            "banner_height_mobile": "large",
+            "layout_justify_mobile": "flex-start",
+            "layout_align_items_mobile": "flex-start",
+            "image_filter_opacity": 0,
+            "image_filter_color": "#1c3a13",
+            "padding_horizontal": 60,
+            "padding_vertical": 40,
+            "image_mobile": "shopify://shop_images/shift-banniere-coloris-mobile.jpg",
+            "padding_horizontal_mobile": 20,
+            "padding_vertical_mobile": 36
+          },
+          "blocks": {
+            "group_NrfYaA": {
+              "type": "group",
+              "name": "t:group",
+              "settings": {
+                "show_on_display": "desktop_and_mobile",
+                "wrap_in_card": false,
+                "card_link": "",
+                "color_scheme": "",
+                "show_card_border": false,
+                "layout_type": "flex",
+                "width_desktop": 40,
+                "layout_direction_desktop": "column",
+                "layout_grid_columns_desktop": 3,
+                "layout_gap_desktop": 10,
+                "layout_wrap_desktop": "nowrap",
+                "layout_justify_desktop": "flex-start",
+                "layout_align_items_desktop": "flex-start",
+                "same_as_desktop": false,
+                "width_mobile": 100,
+                "layout_direction_mobile": "column",
+                "layout_grid_columns_mobile": 1,
+                "layout_gap_mobile": 10,
+                "layout_wrap_mobile": "nowrap",
+                "layout_justify_mobile": "flex-start",
+                "layout_align_items_mobile": "flex-start",
+                "use_global_container_padding": true,
+                "padding_horizontal": 30,
+                "padding_vertical": 30,
+                "margin_top": 10,
+                "margin_bottom": 10,
+                "additional_class": ""
+              },
+              "blocks": {
+                "text_yfxobu": {
+                  "type": "text",
+                  "name": "t:text",
+                  "settings": {
+                    "show_on_display": "desktop_and_mobile",
+                    "text": "<p>NOUVEAU · SHIFT</p>",
+                    "text_style": "paragraph",
+                    "paragraph_font_size": "normal",
+                    "font_weight": 400,
+                    "alignment": "center",
+                    "alignment_mobile": "center",
+                    "show_read_more": false,
+                    "read_more_length": 50,
+                    "read_more_text": "Voir plus",
+                    "read_less_text": "Voir moins",
+                    "truncate": false,
+                    "truncate_length": 2,
+                    "margin_top": 0,
+                    "margin_bottom": 0,
+                    "additional_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_7g1TPv": {
+                  "type": "text",
+                  "name": "t:title",
+                  "settings": {
+                    "show_on_display": "desktop_and_mobile",
+                    "text": "<h1>Le pommeau à capsule aromatique</h1>",
+                    "text_style": "h4",
+                    "paragraph_font_size": "normal",
+                    "font_weight": 400,
+                    "alignment": "center",
+                    "alignment_mobile": "center",
+                    "show_read_more": false,
+                    "read_more_length": 50,
+                    "read_more_text": "Voir plus",
+                    "read_less_text": "Voir moins",
+                    "truncate": false,
+                    "truncate_length": 2,
+                    "margin_top": 0,
+                    "margin_bottom": 0,
+                    "additional_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_Yjics6": {
+                  "type": "text",
+                  "name": "t:text",
+                  "settings": {
+                    "show_on_display": "desktop_and_mobile",
+                    "text": "<p>Filtration, aromathérapie et soin : l'eau est d'abord filtrée, puis parfumée par la capsule de ton choix. Choisis ta couleur.</p>",
+                    "text_style": "paragraph",
+                    "paragraph_font_size": "normal",
+                    "font_weight": 400,
+                    "alignment": "center",
+                    "alignment_mobile": "center",
+                    "show_read_more": false,
+                    "read_more_length": 50,
+                    "read_more_text": "Voir plus",
+                    "read_less_text": "Voir moins",
+                    "truncate": false,
+                    "truncate_length": 2,
+                    "margin_top": 0,
+                    "margin_bottom": 0,
+                    "additional_class": ""
+                  },
+                  "blocks": {}
+                },
+                "button_1ES1iW": {
+                  "type": "button",
+                  "name": "Bouton",
+                  "settings": {
+                    "show_on_display": "desktop_and_mobile",
+                    "link": "shopify://products/shift-coffret-douche-aromatherapie",
+                    "open_in_new_tab": false,
+                    "label": "Découvrir le coffret",
+                    "button_style": "primary",
+                    "button_shape": "default",
+                    "icon": "arrow_forward",
+                    "icon_custom": "",
+                    "icon_position": "end",
+                    "margin_top": 10,
+                    "margin_bottom": 0,
+                    "additional_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_yfxobu",
+                "text_7g1TPv",
+                "text_Yjics6",
+                "button_1ES1iW"
+              ]
+            }
+          },
+          "block_order": [
+            "group_NrfYaA"
+          ]
+        }
+      },
+      "block_order": [
+        "image_banner_pw4YAH"
+      ],
+      "name": "Bannière SHIFT",
+      "settings": {
+        "show_on_display": "desktop_and_mobile",
+        "full_width": true,
+        "color_scheme": "",
+        "show_arrows": false,
+        "arrows_button_style": "secondary",
+        "show_pagination": true,
+        "autoplay": false,
+        "rewind": false,
+        "autoplay_speed": 4,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "anchor_id": "",
+        "additional_class": ""
+      }
+    },
+    "shift_coffret": {
+      "type": "custom-section",
+      "blocks": {
+        "group_w7Bm8p": {
+          "type": "group",
+          "name": "t:group",
+          "settings": {
+            "show_on_display": "desktop_and_mobile",
+            "wrap_in_card": true,
+            "card_link": "",
+            "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+            "show_card_border": false,
+            "layout_type": "flex",
+            "width_desktop": 70,
+            "layout_direction_desktop": "column",
+            "layout_grid_columns_desktop": 3,
+            "layout_gap_desktop": 10,
+            "layout_wrap_desktop": "nowrap",
+            "layout_justify_desktop": "center",
+            "layout_align_items_desktop": "center",
+            "same_as_desktop": false,
+            "width_mobile": 100,
+            "layout_direction_mobile": "column",
+            "layout_grid_columns_mobile": 1,
+            "layout_gap_mobile": 10,
+            "layout_wrap_mobile": "nowrap",
+            "layout_justify_mobile": "flex-start",
+            "layout_align_items_mobile": "flex-start",
+            "use_global_container_padding": true,
+            "padding_horizontal": 30,
+            "padding_vertical": 30,
+            "padding_horizontal_mobile": 30,
+            "padding_vertical_mobile": 30,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "additional_class": ""
+          },
+          "blocks": {
+            "group_FGrY7m": {
+              "type": "group",
+              "name": "t:group",
+              "settings": {
+                "show_on_display": "desktop_and_mobile",
+                "wrap_in_card": true,
+                "card_link": "",
+                "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
+                "show_card_border": false,
+                "layout_type": "flex",
+                "width_desktop": 100,
+                "layout_direction_desktop": "column",
+                "layout_grid_columns_desktop": 3,
+                "layout_gap_desktop": 10,
+                "layout_wrap_desktop": "nowrap",
+                "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center",
+                "same_as_desktop": true,
+                "width_mobile": 100,
+                "layout_direction_mobile": "column",
+                "layout_grid_columns_mobile": 1,
+                "layout_gap_mobile": 10,
+                "layout_wrap_mobile": "nowrap",
+                "layout_justify_mobile": "flex-start",
+                "layout_align_items_mobile": "flex-start",
+                "use_global_container_padding": true,
+                "padding_horizontal": 30,
+                "padding_vertical": 30,
+                "padding_horizontal_mobile": 30,
+                "padding_vertical_mobile": 30,
+                "margin_top": 0,
+                "margin_bottom": 0,
+                "additional_class": ""
+              },
+              "blocks": {
+                "text_n9JNiV": {
+                  "type": "text",
+                  "name": "t:title",
+                  "settings": {
+                    "show_on_display": "desktop_and_mobile",
+                    "text": "<h2>Le Coffret Douche & Aromathérapie SHIFT</h2>",
+                    "text_style": "h4",
+                    "paragraph_font_size": "normal",
+                    "font_weight": 400,
+                    "alignment": "center",
+                    "alignment_mobile": "center",
+                    "show_read_more": false,
+                    "read_more_length": 50,
+                    "read_more_text": "Voir plus",
+                    "read_less_text": "Voir moins",
+                    "truncate": false,
+                    "truncate_length": 2,
+                    "margin_top": 0,
+                    "margin_bottom": 0,
+                    "additional_class": ""
+                  },
+                  "blocks": {}
+                },
+                "text_MBjKeL": {
+                  "type": "text",
+                  "name": "t:text",
+                  "settings": {
+                    "show_on_display": "desktop_and_mobile",
+                    "text": "<p>Le système SHIFT complet, prêt à installer : pommeau filtrant, flexible 2 m, 3 filtres Pure Water et 6 capsules soin & aromathérapie. L'eau est d'abord filtrée, puis parfumée par la capsule de ton choix. Choisis la couleur de ton pommeau.</p>",
+                    "text_style": "paragraph",
+                    "paragraph_font_size": "normal",
+                    "font_weight": 400,
+                    "alignment": "center",
+                    "alignment_mobile": "center",
+                    "show_read_more": false,
+                    "read_more_length": 50,
+                    "read_more_text": "Voir plus",
+                    "read_less_text": "Voir moins",
+                    "truncate": false,
+                    "truncate_length": 2,
+                    "margin_top": 0,
+                    "margin_bottom": 0,
+                    "additional_class": ""
+                  },
+                  "blocks": {}
+                },
+                "button_qECmrp": {
+                  "type": "button",
+                  "name": "Bouton",
+                  "settings": {
+                    "show_on_display": "desktop_and_mobile",
+                    "link": "shopify://products/shift-coffret-douche-aromatherapie",
+                    "open_in_new_tab": false,
+                    "label": "Découvrir le coffret",
+                    "button_style": "primary",
+                    "button_shape": "default",
+                    "icon": "arrow_forward",
+                    "icon_custom": "",
+                    "icon_position": "end",
+                    "margin_top": 10,
+                    "margin_bottom": 0,
+                    "additional_class": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_n9JNiV",
+                "text_MBjKeL",
+                "button_qECmrp"
+              ]
+            },
+            "image_BLwNEG": {
+              "type": "image",
+              "name": "t:image",
+              "settings": {
+                "show_on_display": "desktop_and_mobile",
+                "image": "shopify://shop_images/shift-pommeau-capsule-aromatherapie-banniere.jpg",
+                "show_placeholder": true,
+                "link": "",
+                "image_ratio": "landscape",
+                "image_width_desktop": 100,
+                "image_width_mobile": 100,
+                "enable_rounded_corners": true,
+                "margin_top": 0,
+                "margin_bottom": 0,
+                "additional_class": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "group_FGrY7m",
+            "image_BLwNEG"
+          ]
+        }
+      },
+      "block_order": [
+        "group_w7Bm8p"
+      ],
+      "name": "SHIFT · le coffret",
+      "settings": {
+        "show_on_display": "desktop_and_mobile",
+        "color_scheme": "",
+        "wrap_in_card": false,
+        "color_scheme_card": "",
+        "section_width": "normal",
+        "layout_type": "flex",
+        "layout_flex_direction_desktop": "row",
+        "layout_grid_columns_desktop": 3,
+        "layout_gap_desktop": 20,
+        "layout_wrap_desktop": "nowrap",
+        "layout_flex_justify_desktop": "flex-start",
+        "layout_flex_align_items_desktop": "flex-start",
+        "same_as_desktop": false,
+        "layout_flex_direction_mobile": "column",
+        "layout_gap_mobile": 20,
+        "layout_wrap_mobile": "nowrap",
+        "layout_flex_justify_mobile": "flex-start",
+        "layout_flex_align_items_mobile": "flex-start",
+        "layout_grid_columns_mobile": 1,
+        "padding_top": 30,
+        "padding_bottom": 60,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "anchor_id": "",
+        "additional_class": ""
+      }
     }
   },
   "order": [
+    "hero_shift",
     "custom_section_H6XpXt",
     "nos_marques",
     "compose_ton_rituel",
     "collection_featured_9fdFHq",
     "onsha",
+    "shift_coffret",
     "shift",
     "sullab",
     "custom_section_iHWWPc",

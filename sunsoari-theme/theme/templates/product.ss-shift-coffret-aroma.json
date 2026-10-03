@@ -555,16 +555,33 @@
                 "video_1WWWur": {
                   "type": "video",
                   "settings": {
-                    "source": "shopify",
+                    "source": "uploaded",
                     "video_autoplay": true,
                     "enable_video_controls": false,
                     "aspect_ratio": "9/16",
-                    "alt": "Remplacez votre recharge"
+                    "alt": "Remplacez votre recharge",
+                    "video": "shopify://files/videos/shift-capsule-vitamine-c-carre.mp4",
+                    "show_on_display": "desktop_only",
+                    "video_loop": true
+                  }
+                },
+                "video_1WWWur_mobile": {
+                  "type": "video",
+                  "settings": {
+                    "source": "uploaded",
+                    "video_autoplay": true,
+                    "enable_video_controls": false,
+                    "aspect_ratio": "9/16",
+                    "alt": "Remplacez votre recharge",
+                    "video": "shopify://files/videos/shift-capsule-vitamine-c-vertical.mp4",
+                    "show_on_display": "mobile_only",
+                    "video_loop": true
                   }
                 }
               },
               "block_order": [
-                "video_1WWWur"
+                "video_1WWWur",
+                "video_1WWWur_mobile"
               ]
             }
           },

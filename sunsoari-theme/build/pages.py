@@ -199,51 +199,12 @@ def home():
 
     sec.update(nos_marques=brands, compose_ton_rituel=builder, onsha=onsha, shift=shift, sullab=sullab)
 
-    # Hero = Fanta's SHIFT colours banner (text drawn by the theme, readable on phones).
-    # The coffret photo (hand + capsule) moves down, just before the SHIFT products.
-    shift_coffret = copy.deepcopy(hero)
-    shift_coffret["block_order"] = shift_coffret["block_order"][:1]
-    shift_coffret["blocks"] = {k: shift_coffret["blocks"][k] for k in shift_coffret["block_order"]}
-    shift_coffret["name"] = "SHIFT · le coffret"
-    set_text(find_all(shift_coffret, by_type("text"))[0], "<h2>Le Coffret Douche & Aromathérapie SHIFT</h2>")
-    hero["block_order"] = hero["block_order"][1:]
-    hero["blocks"] = {k: hero["blocks"][k] for k in hero["block_order"]}
-    sec.update(hero_shift=hero_banner(top), shift_coffret=shift_coffret)
-
-    t["order"] = ["hero_shift", "custom_section_H6XpXt", "nos_marques", "compose_ton_rituel",
-                  "collection_featured_9fdFHq", "onsha", "shift_coffret", "shift", "sullab",
+    # Hero = coffret photo (hand + capsule). The colours banner was tried on
+    # 3 Oct and dropped: not sharp enough at full width.
+    t["order"] = ["custom_section_H6XpXt", "nos_marques", "compose_ton_rituel",
+                  "collection_featured_9fdFHq", "onsha", "shift", "sullab",
                   "custom_section_iHWWPc", "custom_section_KAQ8dw", "custom_section_qetdex"]
     save("templates/index.json", t)
-
-
-def hero_banner(top):
-    """Full-width SHIFT banner: one picture for desktop, one composed for phones."""
-    sec = copy.deepcopy(load("templates/collection.json")["sections"]["image_banner_eJfHLF"])
-    sec["name"] = "Bannière SHIFT"
-    sec["settings"].update(full_width=True, margin_top=0, padding_top=0, padding_bottom=0)
-    b = find(sec, by_type("_image-banner"))
-    b["settings"].update(
-        image=img("shift-banniere-coloris-hd.png"),
-        image_mobile=img("shift-banniere-coloris-mobile-v2.jpg"),
-        color_scheme="scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
-        banner_height="medium", banner_height_mobile="large", same_as_desktop=False,
-        layout_justify="center", layout_align_items="flex-start",
-        layout_justify_mobile="flex-start", layout_align_items_mobile="flex-start",
-        image_filter_opacity=0, padding_horizontal=60, padding_vertical=40,
-        padding_horizontal_mobile=20, padding_vertical_mobile=36,
-    )
-    group = find(b, by_type("group"))
-    group["settings"].update(width_desktop=40, width_mobile=100)
-    tx = find_all(top, by_type("text"))
-    eyebrow, title, body = (copy.deepcopy(tx[1]), copy.deepcopy(tx[0]), copy.deepcopy(tx[1]))
-    set_text(eyebrow, "<p>NOUVEAU · SHIFT</p>")
-    set_text(title, "<h1>Le pommeau à capsule aromatique</h1>")
-    set_text(body, "<p>Filtration, aromathérapie et soin : l'eau est d'abord filtrée, puis parfumée par la capsule "
-                   "de ton choix. Choisis ta couleur.</p>")
-    cta = copy.deepcopy(find(top, by_type("button")))
-    button(cta, "Découvrir le coffret", "shopify://products/shift-coffret-douche-aromatherapie")
-    put(group, [eyebrow, title, body, cta])
-    return sec
 
 
 # --------------------------------------------------------------------------

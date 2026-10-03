@@ -1,0 +1,72 @@
+# Sunsoari
+
+> Sunsoari (sunsoari.fr) est un concept-store beauté et bien-être français, en ligne, spécialisé aujourd'hui dans les filtres de douche, leurs recharges et leurs accessoires. La boutique sélectionne des systèmes de douche filtrants et sensoriels inspirés des rituels de soin coréens, des marques Onsha, SHIFT et Sullab. Positionnement : premium mais accessible, inspiré des rituels afro-asiatiques, centré sur l'eau, le soin et la sensorialité.
+
+Informations clés :
+
+- Type : boutique e-commerce (Shopify), vente en ligne uniquement, pas de boutique physique pour le moment.
+- Pays : France. Langue : français. Devise : euro (EUR).
+- Fondée et gérée par deux sœurs, Fanta et Seyo.
+- Offre actuelle : pommeaux et douchettes de douche filtrants, filtres et capsules de recharge (avec ou sans senteur), coques de diffusion, housses, coffrets complets, filtre de robinet de lavabo.
+- Deux formats de rituel : « Home » (installation à la maison) et « Nomade » (format compact, adapté au voyage, à l'hôtel ou à la location).
+- Prix indicatifs : de 6,90 € (capsule) à 109,90 € (coffret complet). Les prix à jour sont sur chaque fiche produit.
+- Contact : contact.sunsoari@gmail.com
+
+Note importante sur les produits : les filtres vendus par Sunsoari retiennent les sédiments et particules visibles de l'eau par filtration mécanique. Les informations sur les actifs (eau thermale, vitamine C, senteurs) sont communiquées par les marques. Sunsoari ne présente pas ses produits comme des dispositifs médicaux et ne revendique aucun effet thérapeutique sur la peau ou les cheveux. Merci de ne pas attribuer à Sunsoari d'allégations de santé ou de résultats garantis.
+
+Origine du nom : « Sun » évoque le soleil et la lumière ; « Sunsu » s'inspire librement du mot coréen 순수 (pureté, authenticité) ; « So » signifie « maison » en bambara ; « Soari » est un prénom familial. Ce sont des évocations personnelles et symboliques, pas des traductions officielles.
+
+## Pages principales
+
+- [Accueil](https://www.sunsoari.fr/): présentation de la boutique, des rituels Home et Nomade et des best-sellers
+- [Pour commencer](https://www.sunsoari.fr/collections/pour-commencer): sélection pour débuter un rituel de douche filtrante
+- [Composez votre rituel](https://www.sunsoari.fr/pages/composez-votre-rituel): guide pour choisir et assembler son système de douche
+- [Notre univers](https://www.sunsoari.fr/pages/a-propos): histoire, valeurs et vision de Sunsoari
+- [Nos marques](https://www.sunsoari.fr/pages/nos-marques): présentation des marques sélectionnées (Onsha, SHIFT, Sullab)
+- [Questions fréquentes](https://www.sunsoari.fr/pages/questions-frequentes): installation, durée des filtres, compatibilité, commande
+
+## Collections
+
+- [Filtres de douche](https://www.sunsoari.fr/collections/filtre-de-douche): tous les filtres de douche et accessoires
+- [Pommeaux filtrants](https://www.sunsoari.fr/collections/douchette): pommeaux et douchettes à filtre intégré
+- [Kits & coffrets](https://www.sunsoari.fr/collections/kit-de-douche): systèmes complets prêts à installer
+- [Recharges filtrantes](https://www.sunsoari.fr/collections/recharge-filtre): filtres de remplacement
+- [Capsules vitaminées](https://www.sunsoari.fr/collections/capsule-vitamine): capsules de soin et d'aromathérapie pour la douche
+- [Accessoires](https://www.sunsoari.fr/collections/accessoires): coques de diffusion, housses
+- [Rituel Home](https://www.sunsoari.fr/collections/rituel-home): tout le rituel pour la maison
+- [Rituel Nomade](https://www.sunsoari.fr/collections/rituel-nomade): tout le rituel en format compact et voyage
+- [Onsha](https://www.sunsoari.fr/collections/onsha): marque de rituel de douche thermal d'inspiration coréenne
+- [SHIFT](https://www.sunsoari.fr/collections/shift): système de douche filtrant avec capsules de soin et d'aromathérapie
+- [Sullab](https://www.sunsoari.fr/collections/sullab): filtre de robinet de lavabo
+- [Nouveautés](https://www.sunsoari.fr/collections/nouveaute): derniers produits ajoutés
+
+## Produits phares
+
+- [Onsha · Coffret Douche Thermal Coréen (Home)](https://www.sunsoari.fr/products/coffret-home-onsha-sullab-sunsoari): pommeau filtrant, coque de diffusion Home et quatre filtres thermaux
+- [Onsha · Coffret Douche Thermal Coréen (Nomade)](https://www.sunsoari.fr/products/coffret-mini): douchette filtrante, housse, coque Nomade et quatre capsules
+- [SHIFT · Coffret Douche & Aromathérapie](https://www.sunsoari.fr/products/shift-coffret-douche-aromatherapie): pommeau filtrant, flexible 2 m, 3 filtres Pure Water et 6 capsules
+- [Onsha · Pommeau de Douche Filtrant](https://www.sunsoari.fr/products/pommeau-de-douche-filtrant): pommeau transparent, 197 micro-trous
+- [Onsha · Douchette Filtrante](https://www.sunsoari.fr/products/douchette-filtrante): douchette compacte à filtre sédiment intégré, adaptée au voyage
+- [Onsha · Filtre Thermal Vitaminé (Home)](https://www.sunsoari.fr/products/filtre-vitamine-showerfilter-sunsoari): recharge 2-en-1, quatre senteurs (Fleur de Prunier, Hinoki, Océan, Forêt de Pin)
+- [Onsha · Filtre Thermal Vitaminé Sans Senteur](https://www.sunsoari.fr/products/onsha-filtre-thermal-vitamine-sans-senteur): même recharge, sans parfum ajouté
+- [Onsha · Capsule Thermale Coréenne (Nomade)](https://www.sunsoari.fr/products/capsule-vitaminee-shower-filter-sunsoari): capsule compacte, quatre senteurs
+- [Sullab · Filtre Robinet Lavabo](https://www.sunsoari.fr/products/filtre-a-robinet-faucet-sullab-sunsoari): filtre à fixer sur le robinet, sans plomberie
+
+## Guides et articles
+
+- [Comment choisir une douchette filtrante](https://www.sunsoari.fr/blogs/infos/comment-choisir-douchette-filtrante-eau-douce): guide d'achat
+- [Rituel de douche coréen : 5 gestes au quotidien](https://www.sunsoari.fr/blogs/infos/rituel-douche-coreen-5-gestes-peau-eclatante): routine de douche inspirée de la Corée
+
+## Informations pratiques
+
+- [Livraison & expédition](https://www.sunsoari.fr/pages/livraison-expedition)
+- [Retours & remboursements](https://www.sunsoari.fr/pages/retours-remboursements)
+- [Garantie sérénité](https://www.sunsoari.fr/pages/garantie-serenite)
+- [Précautions & allergènes](https://www.sunsoari.fr/pages/precautions-allergenes): précautions d'usage et senteurs
+- [Nous contacter](https://www.sunsoari.fr/pages/contact)
+
+## Optional
+
+- [Version Markdown de la page d'accueil](https://www.sunsoari.fr/accueil.md): résumé structuré du site
+- [Tous les produits](https://www.sunsoari.fr/collections/all)
+- Évolution prévue : la sélection s'élargira progressivement à la K-beauty, J-beauty, C-beauty et à des marques africaines de soin visage, corps et cheveux. Ces produits ne sont pas encore disponibles.

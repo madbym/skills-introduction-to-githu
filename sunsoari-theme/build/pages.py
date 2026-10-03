@@ -224,7 +224,7 @@ def hero_banner(top):
     b = find(sec, by_type("_image-banner"))
     b["settings"].update(
         image=img("shift-banniere-coloris-hd.png"),
-        image_mobile=img("shift-banniere-coloris-mobile.jpg"),
+        image_mobile=img("shift-banniere-coloris-mobile-v2.jpg"),
         color_scheme="scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
         banner_height="medium", banner_height_mobile="large", same_as_desktop=False,
         layout_justify="center", layout_align_items="flex-start",

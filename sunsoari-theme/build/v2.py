@@ -136,8 +136,16 @@ def add_box(t, items):
         t["order"].remove("dans_ton_coffret")
 
 
-# Brand videos (Shopify Files): square on desktop, vertical on mobile.
-CAPSULE_VIDEO = ("shift-capsule-vitamine-c-carre.mp4", "shift-capsule-vitamine-c-vertical.mp4")
+# Brand videos (Shopify Files), shown like a story / UGC clip: a narrow vertical
+# video next to the written steps on desktop, stacked on phones.
+CAPSULE_STEPS = (
+    "<h3>Changer la capsule en quelques secondes</h3>"
+    "<p>1. Ouvre le compartiment du pommeau SHIFT.</p>"
+    "<p>2. Insère la capsule, capuchon blanc vers le haut.</p>"
+    "<p>3. Referme, puis allume la douche.</p>"
+    "<p>Une capsule dure environ 7 à 15 jours selon l'usage (indication du fabricant).</p>"
+)
+CAPSULE_VIDEO = ("shift-capsule-vitamine-c-vertical.mp4", CAPSULE_STEPS)
 VIDEOS = {
     "product.pack-6-capsules-vitaminee.json": {"Remplacez votre recharge": CAPSULE_VIDEO},
     "product.box-rituel-douche-complet.json": {"Remplacez votre recharge": CAPSULE_VIDEO},
@@ -145,20 +153,69 @@ VIDEOS = {
 }
 
 
-def add_videos(tabs, videos):
+def add_videos(section, videos):
+    tabs = find(section, by_type("tabs"))
+    text_model = find(section, by_type("text"))
     for tab in children(tabs):
-        pair = videos.get(tab["settings"].get("tab_name"))
-        if not pair:
+        entry = videos.get(tab["settings"].get("tab_name"))
+        if not entry:
             continue
+        name, steps = entry
         key = next(k for k in tab["block_order"] if tab["blocks"][k]["type"] == "video")
-        base = tab["blocks"][key]
-        for suffix, display, name in (("", "desktop_only", pair[0]), ("_mobile", "mobile_only", pair[1])):
-            b = json.loads(json.dumps(base))
-            b["settings"].update({"source": "uploaded", "video": f"shopify://files/videos/{name}",
-                                  "show_on_display": display, "video_autoplay": True, "video_loop": True})
-            tab["blocks"][key + suffix] = b
-            if suffix:
-                tab["block_order"].insert(tab["block_order"].index(key) + 1, key + suffix)
+        video = json.loads(json.dumps(tab["blocks"][key]))
+        video["settings"].update({"source": "uploaded", "video": f"shopify://files/videos/{name}",
+                                  "show_on_display": "desktop_and_mobile", "video_autoplay": True,
+                                  "video_loop": True, "custom_width": 32, "custom_width_mobile": 80})
+        text = json.loads(json.dumps(text_model))
+        text["settings"].update({"text": steps, "text_style": "paragraph", "alignment": "left",
+                                 "alignment_mobile": "left"})
+        group = {
+            "type": "group",
+            "settings": {
+                "show_on_display": "desktop_and_mobile", "wrap_in_card": False, "layout_type": "flex",
+                "width_desktop": 100, "layout_direction_desktop": "row", "layout_gap_desktop": 48,
+                "layout_wrap_desktop": "nowrap", "layout_justify_desktop": "center",
+                "layout_align_items_desktop": "center", "same_as_desktop": False, "width_mobile": 100,
+                "layout_direction_mobile": "column", "layout_gap_mobile": 20, "layout_wrap_mobile": "nowrap",
+                "layout_justify_mobile": "flex-start", "layout_align_items_mobile": "center",
+                "margin_top": 0, "margin_bottom": 0,
+            },
+            "blocks": {key: video, key + "_etapes": text},
+            "block_order": [key, key + "_etapes"],
+        }
+        tab["blocks"] = {key + "_groupe": group}
+        tab["block_order"] = [key + "_groupe"]
+
+
+BRAND_COLLECTION = {"shift": ("shift", "SHIFT"), "onsha": ("onsha", "Onsha"), "sullab": ("sullab", "Sullab")}
+
+
+def brand_recommendations():
+    """"Découvre aussi" shows the product's own brand (refills are not
+    interchangeable), instead of Shopify's automatic mix of brands."""
+    d = os.path.join(OUT, "templates")
+    with open(os.path.join(d, "index.json"), encoding="utf-8") as f:
+        model = json.load(f)["sections"]["collection_featured_9fdFHq"]
+    for fname in sorted(os.listdir(d)):
+        brand = next((b for b in BRAND_COLLECTION if f"-{b}-" in fname), None)
+        if fname == "product.pack-sediments-robinet.json":
+            brand = "sullab"
+        if not brand:
+            continue
+        path = os.path.join(d, fname)
+        with open(path, encoding="utf-8") as f:
+            t = json.load(f)
+        if "decouvre_aussi" not in t["sections"]:
+            continue
+        handle, label = BRAND_COLLECTION[brand]
+        sec = json.loads(json.dumps(model))
+        sec["settings"].update(collection=handle, max_products=8)
+        set_text(find(sec, by_type("text")), "<h2>Découvre aussi</h2>")
+        btn = find(sec, by_type("button"))
+        btn["settings"].update(label=f"Toute la gamme {label}", link=f"shopify://collections/{handle}")
+        t["sections"]["decouvre_aussi"] = sec
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(t, f, ensure_ascii=False, indent=2)
 
 
 def build():
@@ -176,7 +233,7 @@ def build():
             names = ["Découvrez votre coffret", "Installez votre produit", "Remplacez votre recharge"]
             set_tabs(videos, names[-n:] if name not in BOX else names[:n])
             set_text(find(videos, by_type("text")), "<h2>Les gestes en vidéo</h2>")
-            add_videos(tabs, VIDEOS.get(fname, {}))
+            add_videos(videos, VIDEOS.get(fname, {}))
         if fname in STEP_PHOTO and "comment_ca_marche" in t["sections"]:
             im = find(t["sections"]["comment_ca_marche"], by_type("image"))
             im["settings"]["image"] = "shopify://shop_images/" + STEP_PHOTO[fname]
@@ -280,8 +337,8 @@ def mega_menu():
             "liens": _group(45, 3, [_menu("Par rituel", "mega-rituels"), _menu("Par besoin", "mega-besoins"),
                                     _menu("Bien choisir", "mega-guide")]),
             "cartes": _group(55, 3, [
-                _card("onsha-coque-diffusion-home-1.jpg", "Rituel Home", "shopify://collections/rituel-home", "Pommeau, coque & filtres"),
-                _card("onsha-coque-diffusion-nomade-1.jpg", "Rituel Nomade", "shopify://collections/rituel-nomade", "Douchette & capsules"),
+                _card("onsha-coque-de-diffusion-home-2564064.jpg", "Rituel Home", "shopify://collections/rituel-home", "Pommeau, coque & filtres"),
+                _card("onsha-coque-de-diffusion-nomade-5948203.jpg", "Rituel Nomade", "shopify://collections/rituel-nomade", "Douchette & capsules"),
                 _card("onsha-filtre-thermal-fleur-de-prunier-packshot.jpg", "Composez votre rituel", "shopify://pages/composez-votre-rituel", "À la carte"),
             ]),
         },
@@ -479,6 +536,7 @@ if __name__ == "__main__":
         drop_quantity_breaks(t)
         save(f"templates/{fname}", t)
     copy_ss_names()
+    brand_recommendations()
     neutral_default()
     add_rating_stars()
     mega_menu()

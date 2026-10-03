@@ -401,7 +401,7 @@
                   "name": "t:image",
                   "settings": {
                     "show_on_display": "desktop_and_mobile",
-                    "image": "shopify://shop_images/onsha-coque-diffusion-nomade-1.jpg",
+                    "image": "shopify://shop_images/onsha-coque-de-diffusion-nomade-5948203.jpg",
                     "show_placeholder": true,
                     "link": "shopify://products/coffret-mini",
                     "image_ratio": "landscape",
@@ -1846,7 +1846,7 @@
               "settings": {
                 "show_on_display": "desktop_and_mobile",
                 "color_scheme": "scheme-83622e65-c031-4b6f-b557-1bf8a292650e",
-                "image": "shopify://shop_images/onsha-coque-diffusion-home-1.jpg",
+                "image": "shopify://shop_images/onsha-coque-de-diffusion-home-2564064.jpg",
                 "card_height": "medium",
                 "card_height_mobile": "medium",
                 "card_link": "shopify://collections/onsha",
@@ -2045,7 +2045,7 @@
           "name": "t:image",
           "settings": {
             "show_on_display": "desktop_and_mobile",
-            "image": "shopify://shop_images/onsha-coque-diffusion-home-2.jpg",
+            "image": "shopify://shop_images/onsha-coque-de-diffusion-home-4482372.jpg",
             "show_placeholder": true,
             "link": "",
             "image_ratio": "adapt",

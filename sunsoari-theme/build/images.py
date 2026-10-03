@@ -39,7 +39,7 @@ PRODUCT = {
         "onsha-douchette-filtrante-8605939.jpg",
         # 5352302 / 2714649 removed: infographics with unproven claims (rust, heavy metals)
         "onsha-douchette-filtrante-5144667.png",
-        "onsha-coque-diffusion-nomade-1.jpg",
+        "onsha-coque-de-diffusion-nomade-5948203.jpg",
     ],
     "sediment_douchette": [
         "onsha-filtre-sediment-recharge-9248658.jpg",
@@ -48,11 +48,12 @@ PRODUCT = {
     ],
     # Drive packshots (product alone, 1600 px), Home and Nomade split on 2 Oct
     "coque": [
-        "onsha-coque-diffusion-home-1.jpg",
-        "onsha-coque-diffusion-home-2.jpg",
-        "onsha-coque-diffusion-home-3.jpg",
+        # names as stored in Shopify > Fichiers (Shopify renamed the uploads)
+        "onsha-coque-de-diffusion-home-2564064.jpg",
+        "onsha-coque-de-diffusion-home-4482372.jpg",
+        "onsha-coque-de-diffusion-home-3258240.jpg",
     ],
-    "coque_nomade": ["onsha-coque-diffusion-nomade-1.jpg"],
+    "coque_nomade": ["onsha-coque-de-diffusion-nomade-5948203.jpg"],
     "filtre_home": ["onsha-filtre-vitamine-9910937.jpg"],
     "sans_senteur": [
         "onsha-filtre-thermal-vitamine-sans-senteur-3597431.png",

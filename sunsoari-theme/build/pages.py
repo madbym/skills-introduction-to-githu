@@ -72,8 +72,8 @@ def home():
                     "et 6 capsules soin & aromathérapie. L'eau est d'abord filtrée, puis parfumée par la capsule de ton choix. "
                     "Choisis la couleur de ton pommeau.</p>")
     button(find(top, by_type("button")), "Découvrir nos rituels", "shopify://collections/filtre-de-douche")
-    # first screen: product alone, no text on the photo (Drive packshot)
-    set_image(find(top, by_type("image")), PRODUCT["shift_coffret_aroma"][0])
+    # first screen: SHIFT pommeau + aromatherapy capsule, no text on the photo
+    set_image(find(top, by_type("image")), "shift-pommeau-capsule-aromatherapie-banniere.jpg")
 
     home_card, nomade_card, marquee_group = children(cards)
     for card, (title, body, badges, image, link) in (

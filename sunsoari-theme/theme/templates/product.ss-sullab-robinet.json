@@ -457,62 +457,15 @@
             "wrap_content_in_card": true
           },
           "name": "Vidéos",
-          "blocks": {
-            "tab_cnNXSl": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Installez votre produit"
-              },
-              "name": "Installez votre produit",
-              "blocks": {
-                "video_hsK4hf": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Installez votre produit"
-                  }
-                }
-              },
-              "block_order": [
-                "video_hsK4hf"
-              ]
-            },
-            "tab_DL6lau": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Remplacez votre recharge"
-              },
-              "name": "Remplacez votre recharge",
-              "blocks": {
-                "video_XYGT0d": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Remplacez votre recharge"
-                  }
-                }
-              },
-              "block_order": [
-                "video_XYGT0d"
-              ]
-            }
-          },
-          "block_order": [
-            "tab_cnNXSl",
-            "tab_DL6lau"
-          ]
+          "blocks": {},
+          "block_order": []
         }
       },
       "block_order": [
         "text_fYpjUG",
         "tabs_inm7oR"
-      ]
+      ],
+      "disabled": true
     },
     "la_base_du_rituel_skinca": {
       "type": "custom-section",

@@ -218,6 +218,42 @@ def brand_recommendations():
             json.dump(t, f, ensure_ascii=False, indent=2)
 
 
+def polish():
+    """Last pass on every template: no grey placeholder for a missing photo, and no
+    empty video tab (a tab is kept only once a real video has been added)."""
+    d = os.path.join(OUT, "templates")
+    for fname in sorted(os.listdir(d)):
+        path = os.path.join(d, fname)
+        raw = open(path, encoding="utf-8").read()
+        if raw.startswith("/*"):
+            continue
+        t = json.loads(raw)
+
+        def walk(node):
+            for b in node.get("blocks", {}).values():
+                if b.get("type") == "image" and not b.get("settings", {}).get("image"):
+                    b.setdefault("settings", {})["show_placeholder"] = False
+                walk(b)
+
+        def has_video(node):
+            return any((b.get("type") == "video" and (b.get("settings", {}).get("video")
+                        or b.get("settings", {}).get("video_url"))) or has_video(b)
+                       for b in node.get("blocks", {}).values())
+
+        for sec in t["sections"].values():
+            walk(sec)
+        videos = t["sections"].get("videos_pratiques")
+        if videos:
+            tabs = find(videos, by_type("tabs"))
+            keep = [k for k in tabs["block_order"] if has_video(tabs["blocks"][k])]
+            tabs["block_order"] = keep
+            tabs["blocks"] = {k: tabs["blocks"][k] for k in keep}
+            if not keep:
+                videos["disabled"] = True
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(t, f, ensure_ascii=False, indent=2)
+
+
 def build():
     products.build()
     for fname, name in LIVE_NAMES.items():
@@ -543,4 +579,5 @@ if __name__ == "__main__":
     quick_view()
     for r in check_images():
         print("image retirée :", *r)
+    polish()
     print("\n".join(sorted(LIVE_NAMES)))

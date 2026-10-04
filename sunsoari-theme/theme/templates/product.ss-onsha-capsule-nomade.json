@@ -511,39 +511,15 @@
             "wrap_content_in_card": true
           },
           "name": "Vidéos",
-          "blocks": {
-            "tab_B4geqN": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Remplacez votre recharge"
-              },
-              "name": "Remplacez votre recharge",
-              "blocks": {
-                "video_WkpAeP": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Remplacez votre recharge"
-                  }
-                }
-              },
-              "block_order": [
-                "video_WkpAeP"
-              ]
-            }
-          },
-          "block_order": [
-            "tab_B4geqN"
-          ]
+          "blocks": {},
+          "block_order": []
         }
       },
       "block_order": [
         "text_CloiAD",
         "tabs_2XQWhX"
-      ]
+      ],
+      "disabled": true
     },
     "ingr_dients_cl_s": {
       "type": "custom-section",
@@ -589,7 +565,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_46Lmue": {
@@ -622,7 +599,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_0Lm7ex": {
@@ -655,7 +633,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_n0a0uA": {
@@ -688,7 +667,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_QtA9dt": {

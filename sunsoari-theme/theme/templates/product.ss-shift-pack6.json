@@ -576,7 +576,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_iY3Uvv": {
@@ -609,7 +610,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_TCZDY0": {
@@ -718,7 +720,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_DfO7ri": {
@@ -819,7 +822,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_E0Sj2N": {

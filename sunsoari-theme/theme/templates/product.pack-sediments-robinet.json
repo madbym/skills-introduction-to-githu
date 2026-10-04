@@ -535,34 +535,8 @@
             "display_type": "tabs",
             "wrap_content_in_card": true
           },
-          "blocks": {
-            "tab_0GrMn5": {
-              "type": "_tab",
-              "name": "Remplace ta recharge",
-              "settings": {
-                "tab_name": "Remplace ta recharge"
-              },
-              "blocks": {
-                "video_T4TyN5": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "alt": "Remplace ta recharge",
-                    "aspect_ratio": "9/16"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "video_T4TyN5"
-              ]
-            }
-          },
-          "block_order": [
-            "tab_0GrMn5"
-          ]
+          "blocks": {},
+          "block_order": []
         }
       },
       "block_order": [

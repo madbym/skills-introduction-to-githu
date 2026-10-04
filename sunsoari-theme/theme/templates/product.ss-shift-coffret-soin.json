@@ -441,50 +441,6 @@
           },
           "name": "Vidéos",
           "blocks": {
-            "tab_voI4w6": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Découvrez votre coffret"
-              },
-              "name": "Découvrez votre coffret",
-              "blocks": {
-                "video_sCqTiq": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Découvrez votre coffret"
-                  }
-                }
-              },
-              "block_order": [
-                "video_sCqTiq"
-              ]
-            },
-            "tab_p4vYfI": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Installez votre produit"
-              },
-              "name": "Installez votre produit",
-              "blocks": {
-                "video_ygkCk8": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Installez votre produit"
-                  }
-                }
-              },
-              "block_order": [
-                "video_ygkCk8"
-              ]
-            },
             "tab_BOvxeI": {
               "type": "_tab",
               "settings": {
@@ -553,8 +509,6 @@
             }
           },
           "block_order": [
-            "tab_voI4w6",
-            "tab_p4vYfI",
             "tab_BOvxeI"
           ]
         }
@@ -642,7 +596,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_aexejJ": {
@@ -675,7 +630,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_1nby1Y": {

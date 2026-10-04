@@ -497,62 +497,15 @@
             "wrap_content_in_card": true
           },
           "name": "Vidéos",
-          "blocks": {
-            "tab_aYV2Fy": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Découvrez votre coffret"
-              },
-              "name": "Découvrez votre coffret",
-              "blocks": {
-                "video_2Yr3NM": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Découvrez votre coffret"
-                  }
-                }
-              },
-              "block_order": [
-                "video_2Yr3NM"
-              ]
-            },
-            "tab_jBKyLo": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Installez votre produit"
-              },
-              "name": "Installez votre produit",
-              "blocks": {
-                "video_sUwswz": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Installez votre produit"
-                  }
-                }
-              },
-              "block_order": [
-                "video_sUwswz"
-              ]
-            }
-          },
-          "block_order": [
-            "tab_aYV2Fy",
-            "tab_jBKyLo"
-          ]
+          "blocks": {},
+          "block_order": []
         }
       },
       "block_order": [
         "text_M1p9un",
         "tabs_dqK5Ft"
-      ]
+      ],
+      "disabled": true
     },
     "ingr_dients_cl_s": {
       "type": "custom-section",
@@ -598,7 +551,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_RwC8aR": {
@@ -631,7 +585,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_kxuxe0": {
@@ -664,7 +619,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_gwKOOU": {
@@ -697,7 +653,8 @@
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 35,
-                    "image_width_mobile": 35
+                    "image_width_mobile": 35,
+                    "show_placeholder": false
                   }
                 },
                 "text_IGjKmA": {

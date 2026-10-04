@@ -78,9 +78,9 @@ def home():
     home_card, nomade_card, marquee_group = children(cards)
     for card, (title, body, badges, image, link) in (
         (home_card, ("Rituel Home", "Le pommeau filtrant, sa coque de diffusion et les filtres thermaux : le rituel qui reste installé chez toi.",
-                     ["Pommeau + coque + filtres", "3 à 4 semaines par filtre"], "onsha-filtre-thermal-fleur-de-prunier-packshot.jpg", "shopify://products/coffret-home-onsha-sullab-sunsoari")),
+                     ["Pommeau + coque + filtres", "3 à 4 semaines par filtre"], "onsha-filtre-thermal-fleur-de-prunier-packshot.jpg", "shopify://collections/rituel-home")),
         (nomade_card, ("Rituel Nomade", "La douchette tout-en-un et ses capsules thermales : ton rituel te suit partout, à l'hôtel comme en voyage.",
-                       ["Douchette + capsules", "Format compact"], PRODUCT["coque_nomade"][0], "shopify://products/coffret-mini")),
+                       ["Douchette + capsules", "Format compact"], PRODUCT["coque_nomade"][0], "shopify://collections/rituel-nomade")),
     ):
         card["settings"]["card_link"] = link
         ct = find_all(card, by_type("text"))

@@ -414,39 +414,15 @@
             "wrap_content_in_card": true
           },
           "name": "Vidéos",
-          "blocks": {
-            "tab_TDJrxH": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Remplacez votre recharge"
-              },
-              "name": "Remplacez votre recharge",
-              "blocks": {
-                "video_q0TEWc": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Remplacez votre recharge"
-                  }
-                }
-              },
-              "block_order": [
-                "video_q0TEWc"
-              ]
-            }
-          },
-          "block_order": [
-            "tab_TDJrxH"
-          ]
+          "blocks": {},
+          "block_order": []
         }
       },
       "block_order": [
         "text_JEgPZX",
         "tabs_f7bNih"
-      ]
+      ],
+      "disabled": true
     },
     "le_style_onsha": {
       "type": "custom-section",

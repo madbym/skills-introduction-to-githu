@@ -429,62 +429,15 @@
             "wrap_content_in_card": true
           },
           "name": "Vidéos",
-          "blocks": {
-            "tab_CsMehG": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Installez votre produit"
-              },
-              "name": "Installez votre produit",
-              "blocks": {
-                "video_IBXuDL": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Installez votre produit"
-                  }
-                }
-              },
-              "block_order": [
-                "video_IBXuDL"
-              ]
-            },
-            "tab_FAc9Qe": {
-              "type": "_tab",
-              "settings": {
-                "tab_name": "Remplacez votre recharge"
-              },
-              "name": "Remplacez votre recharge",
-              "blocks": {
-                "video_lSXpfK": {
-                  "type": "video",
-                  "settings": {
-                    "source": "shopify",
-                    "video_autoplay": true,
-                    "enable_video_controls": false,
-                    "aspect_ratio": "9/16",
-                    "alt": "Remplacez votre recharge"
-                  }
-                }
-              },
-              "block_order": [
-                "video_lSXpfK"
-              ]
-            }
-          },
-          "block_order": [
-            "tab_CsMehG",
-            "tab_FAc9Qe"
-          ]
+          "blocks": {},
+          "block_order": []
         }
       },
       "block_order": [
         "text_uvSwMF",
         "tabs_8rESQe"
-      ]
+      ],
+      "disabled": true
     },
     "la_technologie_onsha": {
       "type": "custom-section",

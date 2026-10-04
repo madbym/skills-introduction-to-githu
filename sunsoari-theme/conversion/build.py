@@ -37,7 +37,7 @@ SCENT_CAPSULE = {  # capsules thermales Nomade
 SHIFT_COLLECTIONS = {  # d'après les flèches de Fanta sur la capture
     "Fruité": "shift-6-capsules-aromatherapie-vitamine-c-2851269.png",
     "Découverte": "shift-6-capsules-aromatherapie-vitamine-c-1086856.jpg",
-    "Patchouli & Rose": "shift-6-capsules-aromatherapie-vitamine-c-1755093.png",
+    "Patchouli & Rose": "shift-capsule-patchouli-rose-ambiance.png",  # photo fournie par Fanta
     "Cherry Blossom": "shift-6-capsules-aromatherapie-vitamine-c-3834627.jpg",
     "Hinoki Spring": "shift-6-capsules-aromatherapie-vitamine-c-4851165.png",
 }

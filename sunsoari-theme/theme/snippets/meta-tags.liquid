@@ -1,0 +1,138 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+{%- liquid
+  assign og_title = page_title | default: shop.name
+  assign og_url = canonical_url | default: request.origin
+  assign og_type = 'website'
+  assign og_description = page_description | default: shop.description | default: shop.name
+
+  if request.page_type == 'product'
+    assign og_type = 'product'
+  elsif request.page_type == 'article'
+    assign og_type = 'article'
+  elsif request.page_type == 'password'
+    assign og_url = request.origin
+  endif
+%}
+
+<meta property="og:site_name" content="{{ shop.name }}">
+<meta property="og:url" content="{{ og_url }}">
+<meta property="og:title" content="{{ og_title | escape }}">
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:description" content="{{ og_description | escape }}">
+
+{%- if page_image %}
+  <meta property="og:image" content="http:{{ page_image | image_url }}">
+  <meta property="og:image:secure_url" content="https:{{ page_image | image_url }}">
+  <meta property="og:image:width" content="{{ page_image.width }}">
+  <meta property="og:image:height" content="{{ page_image.height }}">
+{% endif %}
+
+{% if request.page_type == 'index' %}
+  {% render 'organization-schema' %}
+{% endif %}
+
+{%- if request.page_type == 'product' -%}
+  {%- comment -%}
+    Sunsoari: product data for Google (merchant listings), with a description,
+    the return policy (14 days, France, by mail, return costs paid by the customer,
+    see /policies/refund-policy) and the cheapest French delivery (Mondial Relay
+    from 4,90 EUR, 1-2 days of preparation, 2-5 days of transit).
+  {%- endcomment -%}
+  {%- liquid
+    assign ld_description = product.description | strip_html | strip_newlines | strip
+    if ld_description == blank
+      assign ld_description = product.title
+    endif
+    assign ld_currency = cart.currency.iso_code | default: 'EUR'
+  -%}
+  {%- capture ld_shipping -%}
+    {"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":4.90,"currency":"EUR"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":"FR"},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":2,"unitCode":"DAY"},"transitTime":{"@type":"QuantitativeValue","minValue":2,"maxValue":5,"unitCode":"DAY"}}}
+  {%- endcapture -%}
+  {%- capture ld_returns -%}
+    {"@type":"MerchantReturnPolicy","applicableCountry":"FR","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":14,"returnMethod":"https://schema.org/ReturnByMail","returnFees":"https://schema.org/ReturnFeesCustomerResponsibility"}
+  {%- endcapture -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": {{ product.title | json }},
+      "description": {{ ld_description | truncate: 4900 | json }},
+      "url": {{ request.origin | append: product.url | json }},
+      "brand": {"@type": "Brand", "name": {{ product.vendor | json }}},
+      {%- if product.selected_or_first_available_variant.sku != blank %}
+      "sku": {{ product.selected_or_first_available_variant.sku | json }},
+      {%- endif %}
+      "image": [
+        {%- for image in product.images limit: 10 -%}
+          {{ image | image_url: width: 1200 | prepend: 'https:' | json }}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      "offers": [
+        {%- for variant in product.variants -%}
+          {
+            "@type": "Offer",
+            "name": {{ variant.title | json }},
+            {%- if variant.sku != blank %}
+            "sku": {{ variant.sku | json }},
+            {%- endif %}
+            "url": {{ request.origin | append: variant.url | json }},
+            "price": {{ variant.price | divided_by: 100.0 | json }},
+            "priceCurrency": {{ ld_currency | json }},
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+            "shippingDetails": {{ ld_shipping }},
+            "hasMerchantReturnPolicy": {{ ld_returns }}
+          }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+
+  <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
+  <meta property="og:price:currency" content="{{ cart.currency.iso_code }}">
+{%- endif -%}
+
+{%- if request.page_type == 'article' -%}
+  <script type="application/ld+json">
+    {{ article | structured_data }}
+  </script>
+{%- endif -%}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ og_title | escape }}">
+<meta name="twitter:description" content="{{ og_description | escape }}">
+
+<title>
+  {{ page_title }}
+  {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+  {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+  {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+</title>
+
+{%- assign has_custom_canonical = false -%}
+
+{% for canonical in shop.metafields.seo.canonicals.value %}
+  {%- if request.path == canonical.url -%}
+    {%- assign has_custom_canonical = true -%}
+    {% comment %} theme-check-disable RemoteAsset {% endcomment %}
+    <link rel="canonical" href="{{ canonical.origin_url }}">
+    {% comment %} theme-check-enable RemoteAsset {% endcomment %}
+  {%- endif -%}
+{% endfor %}
+
+{%- unless has_custom_canonical -%}
+  <link rel="canonical" href="{{ canonical_url }}">
+{%- endunless -%}
+
+{%- for noindex in shop.metafields.seo.no_indexes.value -%}
+  {%- if request.path == noindex.url -%}
+    <meta name="robots" content="noindex,nofollow">
+  {%- endif -%}
+{%- endfor -%}
+
+{% if page_description %}
+  <meta name="description" content="{{ page_description | escape }}">
+{% endif %}

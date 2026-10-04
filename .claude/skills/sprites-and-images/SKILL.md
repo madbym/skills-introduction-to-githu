@@ -7,7 +7,7 @@ description: "Use this skill when creating Sprites or Images in Phaser 4. Covers
 > Creating and manipulating Sprite and Image game objects in Phaser 4 -- factory methods, texture/frame selection, the component mixin system, and common visual operations (position, scale, rotation, tint, flip, alpha, origin, depth).
 
 **Key source paths:** `src/gameobjects/sprite/`, `src/gameobjects/image/`, `src/gameobjects/GameObject.js`, `src/gameobjects/components/`
-**Related skills (not included):** loading-assets, animations, physics-arcade, game-object-components
+**Related skills:** ../loading-assets/SKILL.md, ../animations/SKILL.md, ../physics-arcade/SKILL.md, ../game-object-components/SKILL.md
 
 ## Quick Start
 
@@ -413,3 +413,5 @@ this.load.video('intro', 'intro.mp4');
 const video = this.add.video(400, 300, 'intro');
 video.play();
 ```
+
+For detailed configuration options, API reference tables, and source file maps, see [the reference guide](references/REFERENCE.md).

@@ -1,0 +1,68 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<section class="ss-hero ss-hero--{{ s.style }}" id="ss-{{ section.id }}">
+  <div class="ss-hero__inner">
+    <div class="ss-hero__media">
+      {%- if s.image != blank -%}
+        {{ s.image | image_url: width: 2000 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '(min-width: 750px) 60vw, 100vw', alt: s.heading, class: 'ss-hero__img' }}
+      {%- endif -%}
+      {%- if s.image_mobile != blank -%}
+        {{ s.image_mobile | image_url: width: 1000 | image_tag: loading: 'eager', sizes: '100vw', alt: s.heading, class: 'ss-hero__img ss-hero__img--m' }}
+      {%- endif -%}
+    </div>
+    <div class="ss-hero__content">
+      {%- if s.eyebrow != blank -%}<span class="ss-eyebrow">{{ s.eyebrow }}</span>{%- endif -%}
+      {%- if s.heading != blank -%}<h1 class="ss-hero__title">{{ s.heading }}</h1>{%- endif -%}
+      {%- if s.text != blank -%}<div class="ss-lead">{{ s.text }}</div>{%- endif -%}
+      <div class="ss-hero__btns">
+        {%- if s.button_label != blank -%}<a class="btn btn--primary" href="{{ s.button_link }}">{{ s.button_label }}</a>{%- endif -%}
+        {%- if s.button2_label != blank -%}<a class="btn btn--secondary" href="{{ s.button2_link }}">{{ s.button2_label }}</a>{%- endif -%}
+      </div>
+      {%- if section.blocks.size > 0 -%}
+        <ul class="ss-hero__chips">
+          {%- for block in section.blocks -%}<li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>{%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+<style>
+#ss-{{ section.id }}{padding:{{ s.pad_top }}px 16px {{ s.pad_bottom }}px;}
+#ss-{{ section.id }} .ss-hero__inner{max-width:1400px;margin:0 auto;display:grid;border-radius:24px;overflow:hidden;background:var(--ss-cream);border:1px solid var(--ss-line);}
+@media(min-width:750px){#ss-{{ section.id }} .ss-hero__inner{grid-template-columns:1.25fr 1fr;min-height:560px;}}
+#ss-{{ section.id }}.ss-hero--right .ss-hero__media{order:2;}
+#ss-{{ section.id }} .ss-hero__media{position:relative;min-height:360px;background:var(--ss-sand);}
+#ss-{{ section.id }} .ss-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+#ss-{{ section.id }} .ss-hero__img--m{display:none;}
+@media(max-width:749px){#ss-{{ section.id }} .ss-hero__media:has(.ss-hero__img--m) .ss-hero__img:not(.ss-hero__img--m){display:none;}#ss-{{ section.id }} .ss-hero__img--m{display:block;}}
+#ss-{{ section.id }} .ss-hero__content{padding:30px 22px 34px;display:flex;flex-direction:column;justify-content:center;gap:4px;}
+@media(min-width:750px){#ss-{{ section.id }} .ss-hero__content{padding:56px 52px;}}
+#ss-{{ section.id }} .ss-hero__title{font-size:clamp(28px,4vw,48px);line-height:1.08;color:var(--ss-indigo);font-weight:500;margin:0;}
+#ss-{{ section.id }} .ss-hero__btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+#ss-{{ section.id }} .ss-hero__chips{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px;}
+#ss-{{ section.id }} .ss-hero__chips li{background:var(--ss-white);border:1px solid var(--ss-line);border-radius:999px;padding:6px 12px;font-size:12.5px;color:var(--ss-ink);}
+</style>
+
+{% schema %}
+{
+  "name": "Sunsoari · Bannière",
+  "tag": "div",
+  "settings": [
+    { "type": "select", "id": "style", "label": "Image", "default": "left", "options": [{ "value": "left", "label": "À gauche" }, { "value": "right", "label": "À droite" }] },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Image mobile (optionnel)" },
+    { "type": "text", "id": "eyebrow", "label": "Sur-titre" },
+    { "type": "text", "id": "heading", "label": "Titre" },
+    { "type": "richtext", "id": "text", "label": "Texte" },
+    { "type": "text", "id": "button_label", "label": "Bouton 1" },
+    { "type": "url", "id": "button_link", "label": "Lien 1" },
+    { "type": "text", "id": "button2_label", "label": "Bouton 2" },
+    { "type": "url", "id": "button2_link", "label": "Lien 2" },
+    { "type": "range", "id": "pad_top", "label": "Marge haute", "min": 0, "max": 80, "step": 4, "default": 16 },
+    { "type": "range", "id": "pad_bottom", "label": "Marge basse", "min": 0, "max": 80, "step": 4, "default": 16 }
+  ],
+  "blocks": [{ "type": "chip", "name": "Pastille", "settings": [{ "type": "text", "id": "text", "label": "Texte" }] }],
+  "presets": [{ "name": "Sunsoari · Bannière" }]
+}
+{% endschema %}

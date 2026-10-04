@@ -27,7 +27,7 @@
         "ss_pills": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Pommeau + flexible 2 m</span><span>3 filtres + 6 capsules</span><span>Prêt à installer</span></div>"
+            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Pomme de douche + flexible 2 m</span><span>3 filtres + 6 capsules</span><span>Prêt à installer</span></div>"
           }
         },
         "price": {
@@ -41,7 +41,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau, flexible silicone 2 m, 3 filtres Pure Water, 6 capsules soin</div><div><b>Autonomie</b>Environ 3 mois de capsules, 6 à 9 mois de filtres</div><div><b>Couleur</b>Choisis la couleur de ton pommeau</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pomme de douche, flexible silicone 2 m, 3 filtres Pure Water, 6 capsules soin</div><div><b>Autonomie</b>Environ 3 mois de capsules, 6 à 9 mois de filtres</div><div><b>Couleur</b>Choisis la couleur de ta pomme de douche</div></div>"
           }
         },
         "variant_picker": {
@@ -90,7 +90,7 @@
             "heading": "Installation",
             "heading_size": "h4",
             "icon": "none",
-            "content": "<p>1. Raccorde le flexible sur ton robinet. 2. Visse le pommeau à l'autre bout. 3. Insère un filtre Pure Water. 4. Glisse une capsule dans le second compartiment. 5. Ouvre l'eau. Environ 2 minutes, sans outil.</p>",
+            "content": "<p>1. Raccorde le flexible sur ton robinet. 2. Visse la pomme de douche à l'autre bout. 3. Insère un filtre Pure Water. 4. Glisse une capsule dans le second compartiment. 5. Ouvre l'eau. Environ 2 minutes, sans outil.</p>",
             "page": "",
             "default_open": false,
             "show_below_product_media": false
@@ -178,7 +178,7 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Pommeau de douche filtrant",
+            "title": "Pomme de douche filtrante",
             "text": "<p>La base réutilisable, 4 coloris</p>",
             "tag": "x1",
             "link_label": "",
@@ -302,7 +302,7 @@
           "type": "item",
           "settings": {
             "title": "Le coffret contient-il tout pour commencer ?",
-            "text": "<p>Oui : flexible, pommeau, filtres et capsules. Tu raccordes et c'est prêt.</p>",
+            "text": "<p>Oui : flexible, pomme de douche, filtres et capsules. Tu raccordes et c'est prêt.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true

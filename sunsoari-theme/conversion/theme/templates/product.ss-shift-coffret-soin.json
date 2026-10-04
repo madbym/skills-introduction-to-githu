@@ -27,7 +27,7 @@
         "ss_pills": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Pommeau + capsule + filtre</span><span>Soin et filtration combinés</span><span>Prêt à utiliser</span></div>"
+            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Pomme de douche + capsule + filtre</span><span>Soin et filtration combinés</span><span>Prêt à utiliser</span></div>"
           }
         },
         "price": {
@@ -41,7 +41,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau filtrant, capsule Tea Tree &amp; Lavender, filtre Pure Water</div><div><b>Installation</b>2 minutes, sans outil, sur tout flexible standard</div><div><b>Recharges</b>Capsules et filtres Pure Water disponibles séparément</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pomme de douche filtrante, capsule Tea Tree &amp; Lavender, filtre Pure Water</div><div><b>Installation</b>2 minutes, sans outil, sur tout flexible standard</div><div><b>Recharges</b>Capsules et filtres Pure Water disponibles séparément</div></div>"
           }
         },
         "variant_picker": {
@@ -128,7 +128,7 @@
         "ss_addon_2": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-addon', addon: all_products['pack-3-sediments-pure-water'], variant_title: \"\", kind: 'complement', title: \"\", note: \"3 filtres Pure Water pour ton pommeau SHIFT.\", section_id: section.id %}"
+            "custom_liquid": "{% render 'ss-addon', addon: all_products['pack-3-sediments-pure-water'], variant_title: \"\", kind: 'complement', title: \"\", note: \"3 filtres Pure Water pour ta pomme de douche SHIFT.\", section_id: section.id %}"
           }
         }
       },
@@ -172,7 +172,7 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Pommeau de douche filtrant",
+            "title": "Pomme de douche filtrante",
             "text": "<p>Jet fin et régulier, la base réutilisable</p>",
             "tag": "x1",
             "link_label": "",
@@ -234,13 +234,13 @@
         "b2": {
           "type": "step",
           "settings": {
-            "text": "<strong>Insère</strong> le filtre Pure Water et la capsule dans le pommeau."
+            "text": "<strong>Insère</strong> le filtre Pure Water et la capsule dans la pomme de douche."
           }
         },
         "b3": {
           "type": "step",
           "settings": {
-            "text": "<strong>Visse</strong> le pommeau SHIFT sur ton flexible."
+            "text": "<strong>Visse</strong> la pomme de douche SHIFT sur ton flexible."
           }
         },
         "b4": {
@@ -312,7 +312,7 @@
           "type": "item",
           "settings": {
             "title": "Système réutilisable",
-            "text": "<p>Le pommeau reste, seules les recharges se changent.</p>",
+            "text": "<p>La pomme de douche reste, seules les recharges se changent.</p>",
             "tag": "Durable",
             "link_label": "",
             "show_price": true,
@@ -346,7 +346,7 @@
           "type": "item",
           "settings": {
             "title": "Le coffret contient-il tout pour commencer ?",
-            "text": "<p>Oui : pommeau, capsule et filtre. Tu installes et ton rituel commence dès la première douche.</p>",
+            "text": "<p>Oui : pomme de douche, capsule et filtre. Tu installes et ton rituel commence dès la première douche.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true

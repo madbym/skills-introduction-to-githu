@@ -340,6 +340,14 @@ if __name__ == "__main__":
 # Onsha : le « pommeau filtrant » s'appelle désormais « pomme de douche » (féminin)
 # --------------------------------------------------------------------------
 POMME = [
+    ("Exclusivement avec le pommeau filtrant SHIFT, inclus dans les coffrets SHIFT.", "Exclusivement avec la pomme de douche filtrante SHIFT, incluse dans les coffrets SHIFT."),
+    ("Avec quel pommeau sont-elles compatibles", "Avec quelle pomme de douche sont-elles compatibles"),
+    ("Pommeau de douche filtrant", "Pomme de douche filtrante"),
+    ("Pommeau, flexible", "Pomme de douche, flexible"),
+    ("flexible, pommeau, filtres", "flexible, pomme de douche, filtres"),
+    ("Oui : pommeau, capsule et filtre", "Oui : pomme de douche, capsule et filtre"),
+    ("du pommeau SHIFT", "de la pomme de douche SHIFT"),
+    ("Dans le pommeau SHIFT", "Dans la pomme de douche SHIFT"),
     ("Un pommeau pensé comme la base du rituel", "Une pomme de douche pensée comme la base du rituel"),
     ("Le pommeau ne se remplace pas : installé une fois, il est là", "La pomme de douche ne se remplace pas : installée une fois, elle est là"),
     ("Le pommeau filtre-t-il l'eau tout seul ?", "La pomme de douche filtre-t-elle l'eau toute seule ?"),
@@ -386,7 +394,7 @@ def rename_pomme(t):
 def finish():
     import re
     for f in sorted(os.listdir(OUT)):
-        if not f.startswith("product.ss-onsha-"):
+        if not (f.startswith("product.ss-onsha-") or f.startswith("product.ss-shift-")):
             continue
         p = os.path.join(OUT, f)
         t = rename_pomme(json.load(open(p, encoding="utf-8")))

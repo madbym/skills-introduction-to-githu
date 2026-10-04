@@ -41,7 +41,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Rôle</b>Filtration mécanique multi-couches des sédiments et particules visibles</div><div><b>Compatibilité</b>Pommeau filtrant SHIFT uniquement</div><div><b>Durée</b>2 à 3 mois par filtre selon ton eau</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Rôle</b>Filtration mécanique multi-couches des sédiments et particules visibles</div><div><b>Compatibilité</b>Pomme de douche filtrante SHIFT uniquement</div><div><b>Durée</b>2 à 3 mois par filtre selon ton eau</div></div>"
           }
         },
         "variant_picker": {
@@ -163,7 +163,7 @@
         "b2": {
           "type": "item",
           "settings": {
-            "title": "Dans le pommeau SHIFT",
+            "title": "Dans la pomme de douche SHIFT",
             "text": "",
             "tag": "",
             "link_label": "",
@@ -195,7 +195,7 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Ouvre</strong> le compartiment du pommeau SHIFT."
+            "text": "<strong>Ouvre</strong> le compartiment de la pomme de douche SHIFT."
           }
         },
         "b2": {

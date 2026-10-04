@@ -41,7 +41,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Compatibilité</b>Pommeau filtrant SHIFT uniquement</div><div><b>Composition générale</b>Actifs hydratants (glycérine, acide hyaluronique), vitamine C, huiles essentielles, extraits botaniques</div><div><b>Durée</b>Quelques semaines par capsule, selon ta fréquence de douche</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Compatibilité</b>Pomme de douche filtrante SHIFT uniquement</div><div><b>Composition générale</b>Actifs hydratants (glycérine, acide hyaluronique), vitamine C, huiles essentielles, extraits botaniques</div><div><b>Durée</b>Quelques semaines par capsule, selon ta fréquence de douche</div></div>"
           }
         },
         "variant_picker": {
@@ -84,7 +84,7 @@
             "heading": "Conseils d'utilisation",
             "heading_size": "h4",
             "icon": "none",
-            "content": "<p>Ouvre le compartiment de ton pommeau SHIFT, retire la capsule vide et transparente, insère la nouvelle. Moins de 5 secondes. La capsule ne remplace pas le filtre Pure Water : les deux travaillent ensemble.</p>",
+            "content": "<p>Ouvre le compartiment de ta pomme de douche SHIFT, retire la capsule vide et transparente, insère la nouvelle. Moins de 5 secondes. La capsule ne remplace pas le filtre Pure Water : les deux travaillent ensemble.</p>",
             "page": "",
             "default_open": false,
             "show_below_product_media": false
@@ -158,7 +158,7 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Ouvre</strong> le compartiment de ton pommeau SHIFT."
+            "text": "<strong>Ouvre</strong> le compartiment de ta pomme de douche SHIFT."
           }
         },
         "b2": {
@@ -297,8 +297,8 @@
         "b2": {
           "type": "item",
           "settings": {
-            "title": "Avec quel pommeau sont-elles compatibles ?",
-            "text": "<p>Exclusivement avec le pommeau filtrant SHIFT, inclus dans les coffrets SHIFT.</p>",
+            "title": "Avec quelle pomme de douche sont-elles compatibles ?",
+            "text": "<p>Exclusivement avec la pomme de douche filtrante SHIFT, incluse dans les coffrets SHIFT.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true

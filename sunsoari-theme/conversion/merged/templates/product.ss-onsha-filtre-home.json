@@ -200,7 +200,7 @@
             "tag": "Calme absolu",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/hinoki_1.jpg"
+            "image": "shopify://shop_images/onsha-filtre-thermal-hinoki-boite.png"
           }
         },
         "b2": {
@@ -211,7 +211,7 @@
             "tag": "Fraîcheur marine",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/onsha-filtre-thermal-ocean-packshot.jpg"
+            "image": "shopify://shop_images/onsha-filtre-thermal-ocean-boite.png"
           }
         },
         "b3": {
@@ -233,7 +233,7 @@
             "tag": "Douceur florale",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/onsha-filtre-thermal-fleur-de-prunier-packshot.jpg"
+            "image": "shopify://shop_images/onsha-filtre-thermal-fleur-de-prunier-boite.png"
           }
         }
       },
@@ -300,7 +300,7 @@
             "tag": "Filtration",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/IMG_5162.gif"
+            "image": "shopify://shop_images/onsha-filtre-thermal-sediments-soin.png"
           }
         }
       },

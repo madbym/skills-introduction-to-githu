@@ -16,6 +16,12 @@ THEME = os.path.join(HERE, "theme")
 OUT = os.path.join(HERE, "merged")
 IMG = "shopify://shop_images/"
 
+FILTRE_BOITE = {
+    "Hinoki": "onsha-filtre-thermal-hinoki-boite.png",
+    "Océan": "onsha-filtre-thermal-ocean-boite.png",
+    "Fleur de Prunier": "onsha-filtre-thermal-fleur-de-prunier-boite.png",
+}
+
 SHIFT_SCENTS = {
     "Tea Tree & Lavender": "shift-capsule-tea-tree-lavender.png",
     "Basil & Grass": "shift-capsule-basil-grass.png",
@@ -78,6 +84,14 @@ def product(name):
             for key, file in SHIFT_SCENTS.items():
                 if key in title:
                     b["settings"]["image"] = IMG + file
+    if name == "ss-onsha-filtre-home":  # photos fournies par Fanta (filtre + boîte)
+        for b in t["sections"]["ss_scents"]["blocks"].values():
+            f = FILTRE_BOITE.get(b["settings"].get("title"))
+            if f:
+                b["settings"]["image"] = IMG + f
+        for b in t["sections"]["ss_cards"]["blocks"].values():
+            if b["settings"].get("title", "").startswith("Double filtration"):
+                b["settings"]["image"] = IMG + "onsha-filtre-thermal-sediments-soin.png"
     sc = t["sections"].get("ss_scents")
     if sc and name == "ss-onsha-capsule-nomade":
         for b in sc["blocks"].values():

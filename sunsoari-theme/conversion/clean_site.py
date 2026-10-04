@@ -28,6 +28,8 @@ TEXT = [
     ("pommeaux filtrants", "Pommes de douche"),
     ("Recharge filtrantes", "Recharges filtrantes"),
     ("Kit & coffrets", "Kits & coffrets"),
+    ("À  propos de Shift", "À propos de SHIFT"),
+    ('"title": "Shift"', '"title": "SHIFT"'),
     ("le pommeau retient les sédiments", "la pomme de douche retient les sédiments"),
     ("dans un pommeau au jet fin", "dans une pomme de douche au jet fin"),
     ("Les pommeaux et douchettes se vissent", "Les pommes de douche et douchettes se vissent"),

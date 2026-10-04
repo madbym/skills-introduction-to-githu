@@ -16,6 +16,12 @@ THEME = os.path.join(HERE, "theme")
 OUT = os.path.join(HERE, "merged")
 IMG = "shopify://shop_images/"
 
+SHIFT_SCENTS = {
+    "Tea Tree & Lavender": "shift-capsule-tea-tree-lavender.png",
+    "Basil & Grass": "shift-capsule-basil-grass.png",
+    "Ginger & Bergamote": "shift-capsule-ginger-bergamote.png",
+}
+
 POMME_MAIN = [  # tournures propres au thème en ligne
     ("Le pommeau est vendu seul", "La pomme de douche est vendue seule"),
     ("Le pommeau est vendu séparément", "La pomme de douche est vendue séparément"),
@@ -66,6 +72,12 @@ def product(name):
     if name == "ss-shift-pack6":
         for b in t["sections"]["ss_cards"]["blocks"].values():
             b["settings"]["image"] = IMG + SHIFT_COLLECTIONS[b["settings"]["title"]]
+    if name in ("ss-shift-coffret-aroma", "ss-shift-coffret-soin"):  # visuels des senteurs fournis par Fanta
+        for b in t["sections"]["ss_cards"]["blocks"].values():
+            title = b["settings"].get("title", "")
+            for key, file in SHIFT_SCENTS.items():
+                if key in title:
+                    b["settings"]["image"] = IMG + file
     sc = t["sections"].get("ss_scents")
     if sc and name == "ss-onsha-capsule-nomade":
         for b in sc["blocks"].values():

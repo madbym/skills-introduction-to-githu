@@ -317,6 +317,10 @@ def build():
             faq["b2"]["settings"]["text"] = "<p>Cette coque Home (Grand format) accueille les filtres thermaux vitaminés Home. Si tu utilises les capsules thermales et la douchette, choisis la coque de diffusion Nomade.</p>"
             rel = t["sections"]["ss_related"]["blocks"]
             rel["b2"]["settings"].update(product=NEUTRE, text="<p>Le même soin, sans senteur.</p>")
+        if name == "ss-onsha-filtre-neutre":  # une seule variante « 1 filtre » : la remise se fait au panier
+            m = t["sections"]["main"]
+            m["blocks"]["ss_offers"] = copy.deepcopy(load("ss-onsha-filtre-home")["sections"]["main"]["blocks"]["ss_offers"])
+            m["block_order"].insert(m["block_order"].index("variant_picker") + 1, "ss_offers")
         set_addons(t["sections"]["main"], name)
         reorder(t["sections"]["main"])
 

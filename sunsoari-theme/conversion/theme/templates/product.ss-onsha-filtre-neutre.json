@@ -119,6 +119,12 @@
             "show_quantity": true
           }
         },
+        "ss_offers": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-offers', product: product, section_id: section.id, tiers: '1:0,2:5,4:10', singular: \"filtre\", plural: \"filtres\", title: \"Choisis ta quantité\" %}"
+          }
+        },
         "ss_addon_1": {
           "type": "custom_liquid",
           "settings": {
@@ -139,6 +145,7 @@
         "price",
         "description",
         "variant_picker",
+        "ss_offers",
         "ss_addon_1",
         "ss_addon_2",
         "buy_buttons",

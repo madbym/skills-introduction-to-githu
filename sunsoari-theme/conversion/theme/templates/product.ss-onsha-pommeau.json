@@ -110,7 +110,7 @@
         "ss_addon_1": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-addon', addon: all_products['coque-de-diffusion'], variant_title: \"Grand format\", kind: 'indispensable', title: \"Pour le rituel thermal, ajoute :\", note: \"La coque Home se visse entre ton flexible et le pommeau, et maintient le filtre.\", section_id: section.id %}"
+            "custom_liquid": "{% render 'ss-addon', addon: all_products['coque-de-diffusion'], variant_title: \"Grand format\", kind: 'indispensable', title: \"Pour le rituel thermal, ajoute :\", note: \"La coque Home se visse entre ton flexible et la pomme de douche, et maintient le filtre.\", section_id: section.id %}"
           }
         },
         "ss_addon_2": {
@@ -215,7 +215,7 @@
         "b2": {
           "type": "step",
           "settings": {
-            "text": "<strong>Visse</strong> le pommeau Onsha sur ton flexible, à la main, sans forcer."
+            "text": "<strong>Visse</strong> la pomme de douche Onsha sur ton flexible, à la main, sans forcer."
           }
         },
         "b3": {
@@ -242,7 +242,7 @@
         "ratio": "1/1",
         "open_first": false,
         "tip_title": "Les conseils de l'équipe",
-        "tip_text": "<p>Pour le rituel thermal complet, fixe d'abord la coque de diffusion sur ton flexible, insère un filtre thermal vitaminé (Hinoki, Océan, Forêt de Pin ou Fleur de Prunier), puis visse le pommeau sur la coque. Deux minutes, pas plus.</p>",
+        "tip_text": "<p>Pour le rituel thermal complet, fixe d'abord la coque de diffusion sur ton flexible, insère un filtre thermal vitaminé (Hinoki, Océan, Forêt de Pin ou Fleur de Prunier), puis visse la pomme de douche sur la coque. Deux minutes, pas plus.</p>",
         "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-7837412.png"
       }
     },
@@ -305,8 +305,8 @@
         "background": "white",
         "align": "center",
         "eyebrow": "La technologie Onsha",
-        "heading": "Un pommeau pensé comme la base du rituel",
-        "text": "<p>Conçu en Corée pour un jet précis et un système qui évolue avec toi.</p>",
+        "heading": "Une pomme de douche pensée comme la base du rituel",
+        "text": "<p>Conçue en Corée pour un jet précis et un système qui évolue avec toi.</p>",
         "columns": 4,
         "columns_mobile": "1",
         "ratio": "1/1",
@@ -320,7 +320,7 @@
           "type": "item",
           "settings": {
             "title": "Est-ce que je peux l'installer moi-même ?",
-            "text": "<p>Oui. Il se visse à la main sur un flexible standard, en quelques secondes, sans outil ni plombier. Vérifie simplement l'étanchéité à la première utilisation.</p>",
+            "text": "<p>Oui. Elle se visse à la main sur un flexible standard, en quelques secondes, sans outil ni plombier. Vérifie simplement l'étanchéité à la première utilisation.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true
@@ -329,8 +329,8 @@
         "b2": {
           "type": "item",
           "settings": {
-            "title": "Le pommeau filtre-t-il l'eau tout seul ?",
-            "text": "<p>Oui, sa filtration intégrée retient les sédiments et particules visibles. Pour l'expérience thermale (eau enrichie et senteurs coréennes), associe-le à la coque de diffusion et à un filtre thermal vitaminé Onsha.</p>",
+            "title": "La pomme de douche filtre-t-elle l'eau toute seule ?",
+            "text": "<p>Oui, sa filtration intégrée retient les sédiments et particules visibles. Pour l'expérience thermale (eau enrichie et senteurs coréennes), associe-la à la coque de diffusion et à un filtre thermal vitaminé Onsha.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true
@@ -350,7 +350,7 @@
           "type": "item",
           "settings": {
             "title": "À quelle fréquence remplacer les recharges ?",
-            "text": "<p>Le pommeau ne se remplace pas : installé une fois, il est là pour durer. Le filtre thermal vitaminé se change environ toutes les 3 à 4 semaines, selon ta fréquence de douche.</p>",
+            "text": "<p>La pomme de douche ne se remplace pas : installée une fois, elle est là pour durer. Le filtre thermal vitaminé se change environ toutes les 3 à 4 semaines, selon ta fréquence de douche.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true

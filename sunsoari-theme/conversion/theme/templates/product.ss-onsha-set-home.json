@@ -41,7 +41,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>1 coque de diffusion Home + 4 filtres thermaux vitaminés (1 par senteur)</div><div><b>À associer</b>Au pommeau filtrant Onsha pour le système complet</div><div><b>Durée</b>3 à 4 mois de rituel avec les 4 filtres</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>1 coque de diffusion Home + 4 filtres thermaux vitaminés (1 par senteur)</div><div><b>À associer</b>À la pomme de douche filtrante Onsha pour le système complet</div><div><b>Durée</b>3 à 4 mois de rituel avec les 4 filtres</div></div>"
           }
         },
         "variant_picker": {
@@ -104,7 +104,7 @@
         "ss_addon_1": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-addon', addon: all_products['pommeau-de-douche-filtrant'], variant_title: \"\", kind: 'indispensable', title: \"Ton set a besoin d'un pommeau :\", note: \"La pomme de douche filtrante qui se visse sur la coque. À ajouter si tu ne l'as pas encore.\", section_id: section.id %}"
+            "custom_liquid": "{% render 'ss-addon', addon: all_products['pommeau-de-douche-filtrant'], variant_title: \"\", kind: 'indispensable', title: \"Ton set a besoin d'une pomme de douche :\", note: \"La pomme de douche filtrante qui se visse sur la coque. À ajouter si tu ne l'as pas encore.\", section_id: section.id %}"
           }
         }
       },
@@ -216,7 +216,7 @@
         "columns_mobile": "1",
         "ratio": "1/1",
         "open_first": false,
-        "note": "Pommeau vendu séparément."
+        "note": "Pomme de douche vendue séparément."
       }
     },
     "ss_scents": {
@@ -302,8 +302,8 @@
         "b2": {
           "type": "item",
           "settings": {
-            "title": "Avec quel pommeau l'associer ?",
-            "text": "<p>Avec le pommeau filtrant Onsha. Tu peux aussi choisir le coffret Home, qui réunit déjà tout.</p>",
+            "title": "Avec quelle pomme de douche l'associer ?",
+            "text": "<p>Avec la pomme de douche filtrante Onsha. Tu peux aussi choisir le coffret Home, qui réunit déjà tout.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true

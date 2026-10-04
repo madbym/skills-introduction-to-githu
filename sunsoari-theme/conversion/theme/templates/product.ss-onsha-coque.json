@@ -41,7 +41,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Rôle</b>Accueille ton filtre thermal et relie ton flexible à ton pommeau</div><div><b>Compatibilité</b>Filtres thermaux vitaminés Home (avec ou sans senteur) et pommeau filtrant Onsha</div><div><b>Format Nomade</b>Pour les capsules et la douchette, choisis la coque de diffusion Nomade</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Rôle</b>Accueille ton filtre thermal et relie ton flexible à ta pomme de douche</div><div><b>Compatibilité</b>Filtres thermaux vitaminés Home (avec ou sans senteur) et pomme de douche filtrante Onsha</div><div><b>Format Nomade</b>Pour les capsules et la douchette, choisis la coque de diffusion Nomade</div></div>"
           }
         },
         "variant_picker": {
@@ -209,7 +209,7 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Dévisse</strong> ton pommeau de douche actuel."
+            "text": "<strong>Dévisse</strong> ta pomme de douche actuelle."
           }
         },
         "b2": {
@@ -227,7 +227,7 @@
         "b4": {
           "type": "step",
           "settings": {
-            "text": "<strong>Visse</strong> ton pommeau ou ta douchette Onsha sur la coque."
+            "text": "<strong>Visse</strong> ta pomme de douche ou ta douchette Onsha sur la coque."
           }
         }
       },
@@ -249,7 +249,7 @@
         "ratio": "1/1",
         "open_first": false,
         "tip_title": "Les conseils de l'équipe",
-        "tip_text": "<p>Tu pars de zéro ? Les coffrets Home et Nomade réunissent la coque, le pommeau ou la douchette et 4 recharges, pour moins cher que les pièces séparées.</p>",
+        "tip_text": "<p>Tu pars de zéro ? Les coffrets Home et Nomade réunissent la coque, la pomme de douche ou la douchette et 4 recharges, pour moins cher que les pièces séparées.</p>",
         "image": "shopify://shop_images/Copie_de_IMG_2101.gif"
       }
     },
@@ -260,7 +260,7 @@
           "type": "item",
           "settings": {
             "title": "Ai-je besoin de cette coque si j'ai un coffret ?",
-            "text": "<p>Non, les coffrets Home et Nomade incluent déjà la coque. Celle-ci s'adresse à celles qui ont déjà le pommeau ou la douchette, ou qui veulent une pièce de rechange.</p>",
+            "text": "<p>Non, les coffrets Home et Nomade incluent déjà la coque. Celle-ci s'adresse à celles qui ont déjà la pomme de douche ou la douchette, ou qui veulent une pièce de rechange.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true

@@ -27,7 +27,7 @@
         "ss_pills": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Pommeau + coque + 1 filtre</span><span>Senteur au choix</span><span>Installation sans outil</span></div>"
+            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Pomme de douche + coque + 1 filtre</span><span>Senteur au choix</span><span>Installation sans outil</span></div>"
           }
         },
         "price": {
@@ -41,7 +41,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau filtrant Onsha, coque de diffusion Home (Grand format) et 1 filtre thermal vitaminé</div><div><b>Senteur</b>Hinoki, Océan, Forêt de Pin, Fleur de Prunier ou sans senteur</div><div><b>Durée du filtre</b>3 à 4 semaines selon ta fréquence de douche</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pomme de douche filtrante Onsha, coque de diffusion Home (Grand format) et 1 filtre thermal vitaminé</div><div><b>Senteur</b>Hinoki, Océan, Forêt de Pin, Fleur de Prunier ou sans senteur</div><div><b>Durée du filtre</b>3 à 4 semaines selon ta fréquence de douche</div></div>"
           }
         },
         "variant_picker": {
@@ -102,7 +102,7 @@
             "heading": "Durée et entretien",
             "heading_size": "h4",
             "icon": "none",
-            "content": "<p>Le filtre dure environ 3 à 4 semaines selon ta fréquence de douche. Rince régulièrement la coque de diffusion. Le pommeau et la coque se gardent : seuls les filtres se remplacent.</p>",
+            "content": "<p>Le filtre dure environ 3 à 4 semaines selon ta fréquence de douche. Rince régulièrement la coque de diffusion. La pomme de douche et la coque se gardent : seuls les filtres se remplacent.</p>",
             "page": "",
             "default_open": false,
             "show_below_product_media": false
@@ -172,7 +172,7 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Pommeau filtrant Onsha",
+            "title": "Pomme de douche filtrante Onsha",
             "text": "",
             "tag": "×1",
             "link_label": "",
@@ -246,7 +246,7 @@
         "b4": {
           "type": "step",
           "settings": {
-            "text": "<strong>Visse</strong> le pommeau sur la coque et ouvre l'eau."
+            "text": "<strong>Visse</strong> la pomme de douche sur la coque et ouvre l'eau."
           }
         }
       },

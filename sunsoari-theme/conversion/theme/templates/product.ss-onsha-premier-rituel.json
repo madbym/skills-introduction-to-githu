@@ -27,7 +27,7 @@
         "ss_pills": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Coque + 1 filtre</span><span>Senteur au choix</span><span>Pour ton pommeau Onsha</span></div>"
+            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Coque + 1 filtre</span><span>Senteur au choix</span><span>Pour ta pomme de douche Onsha</span></div>"
           }
         },
         "price": {
@@ -41,7 +41,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Coque de diffusion Home (Grand format) et 1 filtre thermal vitaminé</div><div><b>À savoir</b>Le pommeau filtrant Onsha n&#x27;est pas inclus : ajoute-le si tu ne l&#x27;as pas encore</div><div><b>Durée du filtre</b>3 à 4 semaines selon ta fréquence de douche</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Coque de diffusion Home (Grand format) et 1 filtre thermal vitaminé</div><div><b>À savoir</b>La pomme de douche filtrante Onsha n&#x27;est pas incluse : ajoute-la si tu ne l&#x27;as pas encore</div><div><b>Durée du filtre</b>3 à 4 semaines selon ta fréquence de douche</div></div>"
           }
         },
         "variant_picker": {
@@ -102,7 +102,7 @@
             "heading": "Durée et entretien",
             "heading_size": "h4",
             "icon": "none",
-            "content": "<p>Le filtre dure environ 3 à 4 semaines selon ta fréquence de douche. Rince régulièrement la coque de diffusion. Le pommeau et la coque se gardent : seuls les filtres se remplacent.</p>",
+            "content": "<p>Le filtre dure environ 3 à 4 semaines selon ta fréquence de douche. Rince régulièrement la coque de diffusion. La pomme de douche et la coque se gardent : seuls les filtres se remplacent.</p>",
             "page": "",
             "default_open": false,
             "show_below_product_media": false
@@ -227,7 +227,7 @@
         "b4": {
           "type": "step",
           "settings": {
-            "text": "<strong>Visse</strong> le pommeau sur la coque et ouvre l'eau."
+            "text": "<strong>Visse</strong> la pomme de douche sur la coque et ouvre l'eau."
           }
         }
       },

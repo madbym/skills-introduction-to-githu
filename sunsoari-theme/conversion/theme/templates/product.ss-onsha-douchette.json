@@ -202,7 +202,7 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Dévisse</strong> ton pommeau ou ta douchette actuelle."
+            "text": "<strong>Dévisse</strong> ta pomme de douche ou ta douchette actuelle."
           }
         },
         "b2": {
@@ -319,8 +319,8 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Quelle différence avec le pommeau Onsha ?",
-            "text": "<p>Le pommeau reste installé chez toi, avec la coque de diffusion Home. La douchette est le format tout-en-un : filtre intégré, plus compacte, idéale en déplacement ou pour un rituel plus simple à la maison.</p>",
+            "title": "Quelle différence avec la pomme de douche Onsha ?",
+            "text": "<p>La pomme de douche reste installée chez toi, avec la coque de diffusion Home. La douchette est le format tout-en-un : filtre intégré, plus compacte, idéale en déplacement ou pour un rituel plus simple à la maison.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true

@@ -334,3 +334,68 @@ def build():
 
 if __name__ == "__main__":
     build()
+
+
+# --------------------------------------------------------------------------
+# Onsha : le « pommeau filtrant » s'appelle désormais « pomme de douche » (féminin)
+# --------------------------------------------------------------------------
+POMME = [
+    ("Un pommeau pensé comme la base du rituel", "Une pomme de douche pensée comme la base du rituel"),
+    ("Le pommeau ne se remplace pas : installé une fois, il est là", "La pomme de douche ne se remplace pas : installée une fois, elle est là"),
+    ("Le pommeau filtre-t-il l'eau tout seul ?", "La pomme de douche filtre-t-elle l'eau toute seule ?"),
+    ("Le pommeau filtrant Onsha n&#x27;est pas inclus : ajoute-le", "La pomme de douche filtrante Onsha n&#x27;est pas incluse : ajoute-la"),
+    ("Le pommeau reste installé chez toi", "La pomme de douche reste installée chez toi"),
+    ("Le pommeau est pensé pour rester installé", "La pomme de douche est pensée pour rester installée"),
+    ("Le pommeau et la coque se gardent", "La pomme de douche et la coque se gardent"),
+    ("Pommeau vendu séparément", "Pomme de douche vendue séparément"),
+    ("Avec quel pommeau l'associer", "Avec quelle pomme de douche l'associer"),
+    ("Au pommeau filtrant Onsha", "À la pomme de douche filtrante Onsha"),
+    ("Avec le pommeau filtrant Onsha", "Avec la pomme de douche filtrante Onsha"),
+    ("associée au pommeau filtrant Onsha", "associée à la pomme de douche filtrante Onsha"),
+    ("associé au pommeau filtrant Onsha", "associé à la pomme de douche filtrante Onsha"),
+    ("Pour ton pommeau Onsha", "Pour ta pomme de douche Onsha"),
+    ("ton pommeau de douche actuel", "ta pomme de douche actuelle"),
+    ("ta pomme de douche actuelle", "ta pomme de douche actuelle"),
+    ("d'un pommeau", "d'une pomme de douche"),
+    ("Pommeau filtrant Onsha", "Pomme de douche filtrante Onsha"),
+    ("pommeau filtrant Onsha", "pomme de douche filtrante Onsha"),
+    ("Pommeau filtrant", "Pomme de douche filtrante"),
+    ("pommeau filtrant", "pomme de douche filtrante"),
+    ("Pommeau +", "Pomme de douche +"),
+    ("le pommeau Onsha", "la pomme de douche Onsha"),
+    ("au pommeau", "à la pomme de douche"),
+    ("le pommeau", "la pomme de douche"),
+    ("Le pommeau", "La pomme de douche"),
+    ("ton pommeau", "ta pomme de douche"),
+    ("à ton pommeau", "à ta pomme de douche"),
+    ("<p>Oui. Il se visse à la main", "<p>Oui. Elle se visse à la main"),
+    ("associe-le à la coque de diffusion", "associe-la à la coque de diffusion"),
+    ("<p>Conçu en Corée pour un jet précis", "<p>Conçue en Corée pour un jet précis"),
+]
+
+
+def rename_pomme(t):
+    s = json.dumps(t, ensure_ascii=False)
+    for old, new in POMME:
+        s = s.replace(old, new)
+    return json.loads(s)
+
+
+def finish():
+    import re
+    for f in sorted(os.listdir(OUT)):
+        if not f.startswith("product.ss-onsha-"):
+            continue
+        p = os.path.join(OUT, f)
+        t = rename_pomme(json.load(open(p, encoding="utf-8")))
+        with open(p, "w", encoding="utf-8") as fh:
+            json.dump(t, fh, ensure_ascii=False, indent=2)
+            fh.write("\n")
+        left = [m for m in re.findall(r"[^\"<>]{0,40}[Pp]ommeau[^\"<>]{0,30}", json.dumps(t, ensure_ascii=False))
+                if "pommeau-de-douche-filtrant" not in m]
+        for m in left:
+            print("reste :", f, m)
+
+
+if __name__ == "__main__":
+    finish()

@@ -27,7 +27,7 @@
         "ss_pills": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Pommeau + coque + 4 filtres</span><span>3 à 4 mois de soin</span><span>Installation sans outil</span></div>"
+            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Pomme de douche + coque + 4 filtres</span><span>3 à 4 mois de soin</span><span>Installation sans outil</span></div>"
           }
         },
         "price": {
@@ -41,7 +41,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau filtrant, coque de diffusion Home, 4 filtres thermaux vitaminés</div><div><b>Autonomie</b>3 à 4 mois avec les 4 filtres</div><div><b>Senteurs</b>Hinoki, Océan, Forêt de Pin, Fleur de Prunier</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pomme de douche filtrante, coque de diffusion Home, 4 filtres thermaux vitaminés</div><div><b>Autonomie</b>3 à 4 mois avec les 4 filtres</div><div><b>Senteurs</b>Hinoki, Océan, Forêt de Pin, Fleur de Prunier</div></div>"
           }
         },
         "variant_picker": {
@@ -172,7 +172,7 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Pommeau filtrant Onsha",
+            "title": "Pomme de douche filtrante Onsha",
             "text": "<p>Jet fin, 197 micro-trous</p>",
             "tag": "x1",
             "link_label": "",
@@ -246,7 +246,7 @@
         "b4": {
           "type": "step",
           "settings": {
-            "text": "<strong>Visse</strong> le pommeau sur la coque et ouvre l'eau."
+            "text": "<strong>Visse</strong> la pomme de douche sur la coque et ouvre l'eau."
           }
         }
       },

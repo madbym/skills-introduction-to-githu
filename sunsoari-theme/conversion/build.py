@@ -39,7 +39,7 @@ SHIFT_COLLECTIONS = {  # d'après les flèches de Fanta sur la capture
     "Découverte": "shift-6-capsules-aromatherapie-vitamine-c-1086856.jpg",
     "Patchouli & Rose": "shift-capsule-patchouli-rose-ambiance.png",  # photo fournie par Fanta
     "Cherry Blossom": "shift-6-capsules-aromatherapie-vitamine-c-3834627.jpg",
-    "Hinoki Spring": "shift-6-capsules-aromatherapie-vitamine-c-4851165.png",
+    "Hinoki Spring": "shift-capsules-hinoki-spring-foret.jpg",  # photo fournie par Fanta
 }
 
 FILTRE = "filtre-vitamine-showerfilter-sunsoari"

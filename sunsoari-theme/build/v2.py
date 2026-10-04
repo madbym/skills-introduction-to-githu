@@ -218,6 +218,29 @@ def brand_recommendations():
             json.dump(t, f, ensure_ascii=False, indent=2)
 
 
+# Ingredient photos made by Fanta (Drive > Ingrédients Claude), matched on the slide title.
+INGREDIENT_PHOTOS = {
+    "MSM": "ingredient-msm.jpg",
+    "Tea Tree": "ingredient-arbre-a-the.jpg",
+    "Tea tree": "ingredient-arbre-a-the.jpg",
+}
+
+
+def ingredient_photos(sec):
+    import re
+    for slide in sec.get("blocks", {}).values():
+        if slide.get("type") == "_slide":
+            title = next((re.sub("<[^>]+>", "", b["settings"].get("text", ""))
+                          for b in slide.get("blocks", {}).values() if b.get("type") == "text"), "")
+            name = next((v for k, v in INGREDIENT_PHOTOS.items() if title.strip().startswith(k)), None)
+            if name:
+                for b in slide["blocks"].values():
+                    if b.get("type") == "image":
+                        b["settings"]["image"] = f"shopify://shop_images/{name}"
+                        b["settings"]["show_placeholder"] = True
+        ingredient_photos(slide)
+
+
 def polish():
     """Last pass on every template: no grey placeholder for a missing photo, and no
     empty video tab (a tab is kept only once a real video has been added)."""
@@ -240,6 +263,8 @@ def polish():
                         or b.get("settings", {}).get("video_url"))) or has_video(b)
                        for b in node.get("blocks", {}).values())
 
+        if "ingr_dients_cl_s" in t["sections"]:
+            ingredient_photos(t["sections"]["ingr_dients_cl_s"])
         for sec in t["sections"].values():
             walk(sec)
         videos = t["sections"].get("videos_pratiques")

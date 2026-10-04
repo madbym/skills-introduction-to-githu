@@ -623,7 +623,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Tea-tree_lavande.png"
+                    "image": "shopify://shop_images/ingredient-arbre-a-the.jpg",
+                    "show_placeholder": true
                   }
                 },
                 "text_jVObfV": {

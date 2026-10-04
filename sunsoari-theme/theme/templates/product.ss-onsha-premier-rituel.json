@@ -669,7 +669,8 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
-                    "show_placeholder": false
+                    "image": "shopify://shop_images/ingredient-msm.jpg",
+                    "show_placeholder": true
                   }
                 },
                 "text_IGjKmA": {

@@ -221,6 +221,7 @@ def brand_recommendations():
 # Ingredient photos made by Fanta (Drive > Ingrédients Claude), matched on the slide title.
 INGREDIENT_PHOTOS = {
     "MSM": "ingredient-msm.jpg",
+    "Poudre de lait": "ingredient-poudre-de-lait.jpg",
     "Tea Tree": "ingredient-arbre-a-the.jpg",
     "Tea tree": "ingredient-arbre-a-the.jpg",
 }
@@ -239,6 +240,54 @@ def ingredient_photos(sec):
                         b["settings"]["image"] = f"shopify://shop_images/{name}"
                         b["settings"]["show_placeholder"] = True
         ingredient_photos(slide)
+
+
+# Key ingredients given by Fanta (4 Oct): SHIFT capsules, and milk powder for Onsha.
+# Descriptive wording only, no effect promised.
+SHIFT_INGREDIENTS = [
+    ("Vitamine C", "L'actif phare des capsules SHIFT, 6000 mg selon le fabricant.", None),
+    ("Huile de coco", "Une huile végétale emblématique des rituels de soin.", "ingredient-huile-de-coco.jpg"),
+    ("Beurre de karité", "Un beurre végétal issu des noix de karité, utilisé depuis des générations dans les rituels de soin africains.", "ingredient-beurre-de-karite.jpg"),
+    ("Huile d'onagre", "Une huile végétale extraite des graines d'onagre.", "ingredient-huile-d-onagre.jpg"),
+    ("Huile essentielle d'arbre à thé", "Son parfum frais et boisé accompagne le rituel. En cas de sensibilité aux huiles essentielles, consulte la liste INCI.", "ingredient-arbre-a-the.jpg"),
+    ("Aloe vera", "Le gel de la feuille d'aloe vera, apprécié pour sa fraîcheur.", "ingredient-aloe-vera.jpg"),
+    ("Tréhalose", "Un sucre d'origine naturelle utilisé en cosmétique.", None),
+]
+ONSHA_EXTRA = [("Poudre de lait", "Un ingrédient inspiré des bains de lait traditionnels, présent dans la formule selon la marque.", "ingredient-poudre-de-lait.jpg")]
+SHIFT_INGREDIENT_FILES = ("product.ss-shift-pack6.json", "product.ss-shift-coffret-soin.json")
+
+
+def _slider(sec):
+    return next(b for b in sec["blocks"].values() if b.get("type") == "slider")
+
+
+def _slide(model, key, title, body, image):
+    s = json.loads(json.dumps(model))
+    s["name"] = title
+    img, head, text = s["block_order"]
+    s["blocks"][head]["settings"]["text"] = f"<p><strong>{title}</strong></p>"
+    s["blocks"][text]["settings"]["text"] = f"<p>{body}</p>"
+    st = s["blocks"][img]["settings"]
+    st.pop("image", None)
+    if image:
+        st.update(image=f"shopify://shop_images/{image}", image_width_desktop=100, image_width_mobile=100,
+                  show_placeholder=True)
+    else:
+        st.update(show_placeholder=False)
+    s["blocks"] = {f"{k}_{key}": v for k, v in s["blocks"].items()}
+    s["block_order"] = [f"{k}_{key}" for k in s["block_order"]]
+    return s
+
+
+def set_ingredients(sec, items, append=False):
+    slider = _slider(sec)
+    model = slider["blocks"][slider["block_order"][0]]
+    if not append:
+        slider["blocks"], slider["block_order"] = {}, []
+    for i, (title, body, image) in enumerate(items):
+        key = f"ing{i}{'x' if append else ''}"
+        slider["blocks"][key] = _slide(model, key, title, body, image)
+        slider["block_order"].append(key)
 
 
 def polish():
@@ -263,8 +312,13 @@ def polish():
                         or b.get("settings", {}).get("video_url"))) or has_video(b)
                        for b in node.get("blocks", {}).values())
 
-        if "ingr_dients_cl_s" in t["sections"]:
-            ingredient_photos(t["sections"]["ingr_dients_cl_s"])
+        ing = t["sections"].get("ingr_dients_cl_s")
+        if ing:
+            if fname in SHIFT_INGREDIENT_FILES:
+                set_ingredients(ing, SHIFT_INGREDIENTS)
+            elif "MSM" in json.dumps(ing, ensure_ascii=False):
+                set_ingredients(ing, ONSHA_EXTRA, append=True)
+            ingredient_photos(ing)
         for sec in t["sections"].values():
             walk(sec)
         videos = t["sections"].get("videos_pratiques")

@@ -706,13 +706,49 @@
                 "text_IGjKmA",
                 "text_Ggbgek"
               ]
+            },
+            "ing0x": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Poudre de lait",
+              "blocks": {
+                "image_BH0HUR_ing0x": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/ingredient-poudre-de-lait.jpg",
+                    "show_placeholder": true
+                  }
+                },
+                "text_RwC8aR_ing0x": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Poudre de lait</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_GzPJ7K_ing0x": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Un ingrédient inspiré des bains de lait traditionnels, présent dans la formule selon la marque.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_BH0HUR_ing0x",
+                "text_RwC8aR_ing0x",
+                "text_GzPJ7K_ing0x"
+              ]
             }
           },
           "block_order": [
             "slide_BZZdPa",
             "slide_pwrkcr",
             "slide_ewmCNy",
-            "slide_W9cCdN"
+            "slide_W9cCdN",
+            "ing0x"
           ]
         }
       },

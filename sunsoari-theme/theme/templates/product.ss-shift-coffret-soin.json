@@ -553,12 +553,151 @@
           },
           "name": "Ingrédients clés",
           "blocks": {
-            "slide_QQLtQq": {
+            "ing0": {
               "type": "_slide",
               "settings": {},
-              "name": "Tea tree & lavande",
+              "name": "Vitamine C",
               "blocks": {
-                "image_TqBTh8": {
+                "image_TqBTh8_ing0": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "show_placeholder": false
+                  }
+                },
+                "text_S8VsWz_ing0": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Vitamine C</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_S3nPqN_ing0": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>L'actif phare des capsules SHIFT, 6000 mg selon le fabricant.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_TqBTh8_ing0",
+                "text_S8VsWz_ing0",
+                "text_S3nPqN_ing0"
+              ]
+            },
+            "ing1": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Huile de coco",
+              "blocks": {
+                "image_TqBTh8_ing1": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/ingredient-huile-de-coco.jpg",
+                    "show_placeholder": true
+                  }
+                },
+                "text_S8VsWz_ing1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Huile de coco</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_S3nPqN_ing1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Une huile végétale emblématique des rituels de soin.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_TqBTh8_ing1",
+                "text_S8VsWz_ing1",
+                "text_S3nPqN_ing1"
+              ]
+            },
+            "ing2": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Beurre de karité",
+              "blocks": {
+                "image_TqBTh8_ing2": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/ingredient-beurre-de-karite.jpg",
+                    "show_placeholder": true
+                  }
+                },
+                "text_S8VsWz_ing2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Beurre de karité</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_S3nPqN_ing2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Un beurre végétal issu des noix de karité, utilisé depuis des générations dans les rituels de soin africains.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_TqBTh8_ing2",
+                "text_S8VsWz_ing2",
+                "text_S3nPqN_ing2"
+              ]
+            },
+            "ing3": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Huile d'onagre",
+              "blocks": {
+                "image_TqBTh8_ing3": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/ingredient-huile-d-onagre.jpg",
+                    "show_placeholder": true
+                  }
+                },
+                "text_S8VsWz_ing3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Huile d'onagre</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_S3nPqN_ing3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Une huile végétale extraite des graines d'onagre.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_TqBTh8_ing3",
+                "text_S8VsWz_ing3",
+                "text_S3nPqN_ing3"
+              ]
+            },
+            "ing4": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Huile essentielle d'arbre à thé",
+              "blocks": {
+                "image_TqBTh8_ing4": {
                   "type": "image",
                   "settings": {
                     "image_width_desktop": 100,
@@ -567,100 +706,105 @@
                     "show_placeholder": true
                   }
                 },
-                "text_S8VsWz": {
+                "text_S8VsWz_ing4": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Tea tree & lavande</strong></p>",
+                    "text": "<p><strong>Huile essentielle d'arbre à thé</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_S3nPqN": {
+                "text_S3nPqN_ing4": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Huiles essentielles de la capsule, pour la senteur.</p>",
+                    "text": "<p>Son parfum frais et boisé accompagne le rituel. En cas de sensibilité aux huiles essentielles, consulte la liste INCI.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_TqBTh8",
-                "text_S8VsWz",
-                "text_S3nPqN"
+                "image_TqBTh8_ing4",
+                "text_S8VsWz_ing4",
+                "text_S3nPqN_ing4"
               ]
             },
-            "slide_dyqPfK": {
+            "ing5": {
               "type": "_slide",
               "settings": {},
-              "name": "Glycérine",
+              "name": "Aloe vera",
               "blocks": {
-                "image_PeMeSz": {
+                "image_TqBTh8_ing5": {
                   "type": "image",
                   "settings": {
-                    "image_width_desktop": 35,
-                    "image_width_mobile": 35,
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
+                    "image": "shopify://shop_images/ingredient-aloe-vera.jpg",
+                    "show_placeholder": true
+                  }
+                },
+                "text_S8VsWz_ing5": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Aloe vera</strong></p>",
+                    "text_style": "paragraph"
+                  }
+                },
+                "text_S3nPqN_ing5": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Le gel de la feuille d'aloe vera, apprécié pour sa fraîcheur.</p>",
+                    "text_style": "paragraph"
+                  }
+                }
+              },
+              "block_order": [
+                "image_TqBTh8_ing5",
+                "text_S8VsWz_ing5",
+                "text_S3nPqN_ing5"
+              ]
+            },
+            "ing6": {
+              "type": "_slide",
+              "settings": {},
+              "name": "Tréhalose",
+              "blocks": {
+                "image_TqBTh8_ing6": {
+                  "type": "image",
+                  "settings": {
+                    "image_width_desktop": 100,
+                    "image_width_mobile": 100,
                     "show_placeholder": false
                   }
                 },
-                "text_aexejJ": {
+                "text_S8VsWz_ing6": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Glycérine</strong></p>",
+                    "text": "<p><strong>Tréhalose</strong></p>",
                     "text_style": "paragraph"
                   }
                 },
-                "text_4r6XCl": {
+                "text_S3nPqN_ing6": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Actif hydratant bien connu en cosmétique.</p>",
+                    "text": "<p>Un sucre d'origine naturelle utilisé en cosmétique.</p>",
                     "text_style": "paragraph"
                   }
                 }
               },
               "block_order": [
-                "image_PeMeSz",
-                "text_aexejJ",
-                "text_4r6XCl"
-              ]
-            },
-            "slide_r27i79": {
-              "type": "_slide",
-              "settings": {},
-              "name": "Acide hyaluronique",
-              "blocks": {
-                "image_SSlCU4": {
-                  "type": "image",
-                  "settings": {
-                    "image_width_desktop": 35,
-                    "image_width_mobile": 35,
-                    "show_placeholder": false
-                  }
-                },
-                "text_1nby1Y": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p><strong>Acide hyaluronique</strong></p>",
-                    "text_style": "paragraph"
-                  }
-                },
-                "text_QvrNa2": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Actif hydratant de la capsule.</p>",
-                    "text_style": "paragraph"
-                  }
-                }
-              },
-              "block_order": [
-                "image_SSlCU4",
-                "text_1nby1Y",
-                "text_QvrNa2"
+                "image_TqBTh8_ing6",
+                "text_S8VsWz_ing6",
+                "text_S3nPqN_ing6"
               ]
             }
           },
           "block_order": [
-            "slide_QQLtQq",
-            "slide_dyqPfK",
-            "slide_r27i79"
+            "ing0",
+            "ing1",
+            "ing2",
+            "ing3",
+            "ing4",
+            "ing5",
+            "ing6"
           ]
         }
       },

@@ -1,0 +1,267 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ss_intro": {
+      "type": "ss-story",
+      "settings": {
+        "layout": "cards",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "La sélection Sunsoari",
+        "heading": "Nos marques",
+        "text": "<p>Chaque marque présente sur Sunsoari a été testée, comparée et choisie pour son sérieux, la qualité de ses produits et la clarté de ses informations. Nous commençons par l'eau, avec trois marques coréennes spécialistes de la douche et du lavabo.</p>",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "pad_bottom": 8
+      }
+    },
+    "ss_onsha": {
+      "type": "ss-image-text",
+      "blocks": {
+        "b1": {
+          "type": "point",
+          "settings": {
+            "text": "Deux formats : <strong>Home</strong> pour la maison, <strong>Nomade</strong> pour voyager"
+          }
+        },
+        "b2": {
+          "type": "point",
+          "settings": {
+            "text": "Recharges aux <strong>4 senteurs</strong> et une version sans senteur"
+          }
+        },
+        "b3": {
+          "type": "point",
+          "settings": {
+            "text": "Installation <strong>sans outil</strong>"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "background": "white",
+        "image_position": "left",
+        "ratio": "4/5",
+        "image": "shopify://shop_images/onsha-rituel-de-douche-thermal-coreen-filtrant-aromatique-kit-decouverte-2195631.jpg",
+        "eyebrow": "Corée du Sud · Douche thermale",
+        "heading": "Onsha",
+        "text": "<p>Onsha s'inspire de la tradition coréenne des sources thermales. Son système associe un pommeau ou une douchette filtrante, une coque de diffusion et des recharges vitaminées aux senteurs des régions thermales coréennes.</p>",
+        "button_label": "Découvrir Onsha",
+        "button_link": "shopify://collections/onsha"
+      }
+    },
+    "ss_shift": {
+      "type": "ss-image-text",
+      "blocks": {
+        "b1": {
+          "type": "point",
+          "settings": {
+            "text": "Un pommeau disponible en <strong>plusieurs coloris</strong>"
+          }
+        },
+        "b2": {
+          "type": "point",
+          "settings": {
+            "text": "Capsules en <strong>collections de senteurs</strong>"
+          }
+        },
+        "b3": {
+          "type": "point",
+          "settings": {
+            "text": "Filtres Pure Water en <strong>pack de 3</strong>"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "background": "sand",
+        "image_position": "right",
+        "ratio": "16/10",
+        "image": "shopify://shop_images/shift-pommeau-capsule-aromatherapie-banniere.jpg",
+        "eyebrow": "Corée du Sud · Aromathérapie",
+        "heading": "SHIFT",
+        "text": "<p>SHIFT réunit filtration et aromathérapie dans un pommeau au jet fin. L'eau traverse d'abord un filtre Pure Water, puis une capsule de soin qui diffuse ses actifs hydratants et sa senteur.</p>",
+        "button_label": "Découvrir SHIFT",
+        "button_link": "shopify://collections/shift"
+      }
+    },
+    "ss_sullab": {
+      "type": "ss-image-text",
+      "blocks": {
+        "b1": {
+          "type": "point",
+          "settings": {
+            "text": "<strong>Sans plombier</strong> ni travaux"
+          }
+        },
+        "b2": {
+          "type": "point",
+          "settings": {
+            "text": "Coque réutilisable, <strong>recharges en lot de 3</strong>"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2"
+      ],
+      "settings": {
+        "background": "white",
+        "image_position": "left",
+        "ratio": "4/5",
+        "image": "shopify://shop_images/filtre-a-robinet-faucet-9912364.jpg",
+        "eyebrow": "Corée du Sud · Lavabo",
+        "heading": "Sullab",
+        "text": "<p>Sullab propose une filtration simple pour le robinet du lavabo. Le filtre se fixe à la main grâce aux adaptateurs fournis et retient les sédiments et particules visibles de l'eau.</p>",
+        "button_label": "Découvrir Sullab",
+        "button_link": "shopify://collections/sullab"
+      }
+    },
+    "ss_next": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "show_price": true,
+            "tag": "À venir",
+            "title": "K-beauty, J-beauty, C-beauty",
+            "text": "<p>Des soins visage, corps et cheveux choisis pour leur sérieux et leur sensorialité.</p>",
+            "link_label": ""
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "show_price": true,
+            "tag": "À venir",
+            "title": "Marques africaines",
+            "text": "<p>Des savoir-faire, des plantes et des ingrédients valorisés sans clichés.</p>",
+            "link_label": ""
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "show_price": true,
+            "tag": "À venir",
+            "title": "Rituels sensoriels",
+            "text": "<p>Des produits cohérents avec l'univers de l'eau, de la peau et des cheveux.</p>",
+            "link_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "cards",
+        "background": "powder",
+        "align": "center",
+        "eyebrow": "Et ensuite ?",
+        "heading": "La sélection va grandir, pas à pas",
+        "text": "<p>Après l'eau, nous souhaitons ouvrir Sunsoari à de nouvelles marques de soin d'Asie et d'Afrique, sélectionnées avec la même exigence. Nous préférons prendre le temps de bien choisir plutôt que d'aller vite.</p>",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "button_label": "Suivre les nouveautés",
+        "button_link": "shopify://pages/contact"
+      }
+    },
+    "ss_shift_banner": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/shift-banniere-coloris-hd.png",
+            "image_mobile": "shopify://shop_images/shift-banniere-coloris-mobile-v2.jpg",
+            "show_price": false,
+            "tag": "",
+            "title": "SHIFT, en plusieurs coloris",
+            "text": "",
+            "link_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "b1"
+      ],
+      "settings": {
+        "layout": "visuals",
+        "background": "sand",
+        "align": "center",
+        "eyebrow": "",
+        "heading": "",
+        "text": "",
+        "columns": 1,
+        "columns_mobile": "1",
+        "ratio": "16/9",
+        "open_first": false,
+        "pad_top": 0
+      }
+    },
+    "ss_shift_video": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/shift-pommeau-capsule-aromatherapie-banniere.jpg",
+            "video": "shopify://files/videos/shift-capsule-vitamine-c-carre.mp4",
+            "show_price": false,
+            "tag": "",
+            "title": "",
+            "text": "",
+            "link_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "b1"
+      ],
+      "settings": {
+        "layout": "visuals",
+        "background": "sand",
+        "align": "center",
+        "eyebrow": "SHIFT en action",
+        "heading": "La capsule se glisse dans le pommeau",
+        "text": "<p>Un geste simple, en quelques secondes, sans outil.</p>",
+        "columns": 1,
+        "columns_mobile": "1",
+        "ratio": "16/9",
+        "open_first": false
+      }
+    }
+  },
+  "order": [
+    "ss_intro",
+    "ss_onsha",
+    "ss_shift",
+    "ss_shift_banner",
+    "ss_shift_video",
+    "ss_sullab",
+    "ss_next"
+  ]
+}

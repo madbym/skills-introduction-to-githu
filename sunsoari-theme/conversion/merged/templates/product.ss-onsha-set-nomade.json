@@ -1,0 +1,261 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">Débute ton rituel Nomade</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>1 coque de diffusion Nomade, 4 capsules thermales et leurs 4 disques sédiment</div><div><b>À associer</b>À la douchette filtrante Onsha pour le système complet</div><div><b>Durée</b>40 à 60 jours de rituel</div></div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Composition et sécurité",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p><strong>Coque Nomade :</strong> polypropylène (PP) et silicone, sans BPA selon le fabricant.</p><p><strong>Capsules :</strong> eau thermale soufrée lyophilisée concentrée 4 fois (donnée de la marque), vitamine C, acide hyaluronique, glycérine et senteur. Listes INCI complètes sur chaque emballage.</p><p>Usage externe uniquement. Tenir hors de portée des enfants.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        },
+        "ss_complements": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-complements', items: \"douchette-filtrante||La base du rituel Nomade;product-onsha-coque-douchette-filtrante||Pour l'habiller, 6 coloris\", title: \"La douchette est vendue séparément\", note: \"Ton set contient la coque Nomade et 4 capsules. Pour l'utiliser, il te faut aussi la douchette filtrante Onsha.\" %}"
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "price",
+        "description",
+        "variant_picker",
+        "buy_buttons",
+        "ss_complements",
+        "ss_facts",
+        "reassurance",
+        "acc_1",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_box": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Coque de diffusion Nomade",
+            "text": "<p>Accueille tes capsules</p>",
+            "tag": "x1",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-coque-de-diffusion-nomade-5948203.jpg"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Capsules thermales",
+            "text": "<p>Hinoki, Océan, Forêt de Pin, Fleur de Prunier</p>",
+            "tag": "x4",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/capsule-vitaminee-1173264.jpg"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Disques sédiment",
+            "text": "<p>Un par capsule, à changer ensemble</p>",
+            "tag": "x4",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-rituel-mini-decouverte-6852514.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "boxes",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Dans ton set",
+        "heading": "Tout ce que tu reçois",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "note": "Chaque capsule est livrée avec son disque sédiment dans le même sachet."
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Pourquoi ce set plutôt que les pièces séparées ?",
+            "text": "<p>Il réunit la coque et 4 capsules pour moins cher que l'achat à l'unité.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Les disques sédiment se vendent-ils séparément ?",
+            "text": "<p>Chaque capsule thermale Nomade est livrée avec son disque. Quand tu recommandes des capsules, les disques sont inclus.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "La senteur convient-elle aux peaux sensibles ?",
+            "text": "<p>Le produit s'utilise diffusé dans l'eau de la douche, en usage externe. Si tu as une sensibilité connue aux parfums ou aux huiles essentielles, consulte la liste INCI sur l'emballage avant utilisation et demande conseil à un professionnel de santé en cas de doute.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b6": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je retourner le produit ?",
+            "text": "<p>Oui, tu disposes de 14 jours pour changer d'avis. Pour des raisons d'hygiène, le produit doit nous revenir non ouvert, non utilisé, complet et dans son emballage d'origine. Tous les détails sont dans notre politique de retours.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b3",
+        "b4",
+        "b6"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_box",
+    "ss_faq"
+  ]
+}

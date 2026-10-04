@@ -1,8 +1,10 @@
 """Extract Shopify theme file bodies from Claude session transcripts (JSONL)."""
 import json, os, sys, glob
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "original")
+OUT = os.environ.get("OUT_DIR") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "original")
+THEME_FILTER = os.environ.get("THEME_ID")
 def scan(obj, found):
     if isinstance(obj, dict):
+        if THEME_FILTER and obj.get("id") and obj["id"] != THEME_FILTER: return
         if "filename" in obj and isinstance(obj.get("body"), dict) and "content" in obj["body"]:
             found[obj["filename"]] = obj["body"]["content"]
         for v in obj.values(): scan(v, found)

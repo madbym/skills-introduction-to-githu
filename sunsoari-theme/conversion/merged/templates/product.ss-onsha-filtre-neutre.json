@@ -1,0 +1,343 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">Le filtre thermal sans senteur</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Pour qui</b>Celles et ceux qui préfèrent une douche sans note olfactive</div><div><b>Compatibilité</b>Coque de diffusion Onsha Home (Grand format)</div><div><b>Durée d&#x27;utilisation</b>3 à 4 semaines par filtre</div></div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Composition",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Eau thermale soufrée lyophilisée concentrée 4 fois (donnée de la marque), glycérine, acide hyaluronique, vitamine C, MSM. Sans parfum ni agent aromatique ajouté. L'eau thermale soufrée peut garder une odeur naturelle très légère. La liste INCI complète figure sur l'emballage.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "acc_2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Durée et entretien",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>3 à 4 semaines selon ta fréquence de douche et ton eau. Rince régulièrement la coque de diffusion. Quand le débit baisse ou que la capsule est vide, c'est le moment de changer.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        },
+        "ss_complements": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-complements', items: \"coque-de-diffusion|Grand format|Accueille ton filtre, à acheter une seule fois;pommeau-de-douche-filtrant||La base du rituel Home\", title: \"Le filtre est vendu seul\", note: \"Il s'insère dans la coque de diffusion Home, vissée à la pomme de douche filtrante. Pas encore équipée ?\" %}"
+          }
+        },
+        "ss_offers": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-offers', product: product, section_id: section.id, tiers: '1:0,2:5,4:10', singular: \"filtre\", plural: \"filtres\", title: \"Choisis ta quantité\" %}"
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "price",
+        "description",
+        "variant_picker",
+        "ss_offers",
+        "buy_buttons",
+        "ss_complements",
+        "ss_facts",
+        "reassurance",
+        "acc_1",
+        "acc_2",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Ouvre</strong> ta coque de diffusion Home."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Insère</strong> le filtre dans la coque."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Referme</strong> et revisse sur ta pomme de douche."
+          }
+        },
+        "b4": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Fais couler l'eau</strong> quelques secondes."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Remplace ton filtre en quelques secondes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": "",
+        "image": "shopify://shop_images/Retirer_la_recharge.gif"
+      }
+    },
+    "ss_cards": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Même base de soin",
+            "text": "<p>Les actifs des versions parfumées.</p>",
+            "tag": "01",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-sans-senteur-5334131.png"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Sans parfum ajouté",
+            "text": "<p>Pour une douche sans note olfactive.</p>",
+            "tag": "02",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-sans-senteur-8123119.png"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Pour alterner",
+            "text": "<p>Un jour Océan, un jour neutre.</p>",
+            "tag": "03",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-sans-senteur-2904259.png"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Recharges plus douces",
+            "text": "<p>-5 % dès 2 filtres, -10 % dès 4.</p>",
+            "tag": "04",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-sans-senteur-3597431.png"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Pourquoi ce filtre",
+        "heading": "Le soin thermal, sans senteur",
+        "text": "",
+        "columns": 4,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce vraiment la même composition que les autres filtres ?",
+            "text": "<p>Oui, mêmes actifs de soin. La seule différence est l'absence de senteur ajoutée.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Pourquoi une odeur légère ?",
+            "text": "<p>L'eau thermale soufrée peut avoir une odeur naturelle très légère. C'est normal.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Je suis allergique aux parfums, est-ce adapté ?",
+            "text": "<p>Ce filtre ne contient pas de parfum ajouté. En cas d'allergie connue, vérifie la liste INCI sur l'emballage et demande conseil à un professionnel de santé si tu as un doute.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b6": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je retourner le produit ?",
+            "text": "<p>Oui, tu disposes de 14 jours pour changer d'avis. Pour des raisons d'hygiène, le produit doit nous revenir non ouvert, non utilisé, complet et dans son emballage d'origine. Tous les détails sont dans notre politique de retours.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b6"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_steps",
+    "ss_cards",
+    "ss_faq"
+  ]
+}

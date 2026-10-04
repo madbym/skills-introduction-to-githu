@@ -27,7 +27,7 @@
         "ss_pills": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Coque + 1 filtre</span><span>Senteur au choix</span><span>Pour ta pomme de douche Onsha</span></div>"
+            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Coque + 1 filtre</span><span>Senteur au choix</span><span>Garde ta pomme de douche</span></div>"
           }
         },
         "price": {
@@ -41,7 +41,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Coque de diffusion Home (Grand format) et 1 filtre thermal vitaminé</div><div><b>À savoir</b>La pomme de douche filtrante Onsha n&#x27;est pas incluse : ajoute-la si tu ne l&#x27;as pas encore</div><div><b>Durée du filtre</b>3 à 4 semaines selon ta fréquence de douche</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Coque de diffusion Home (Grand format) et 1 filtre thermal vitaminé</div><div><b>Installation</b>La coque se visse à la main entre ton flexible et ta pomme de douche actuelle (raccord standard), joint fourni</div><div><b>Durée du filtre</b>3 à 4 semaines selon ta fréquence de douche</div></div>"
           }
         },
         "variant_picker": {
@@ -122,7 +122,7 @@
         "ss_addon_1": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-addon', addon: all_products['pommeau-de-douche-filtrant'], variant_title: \"\", kind: 'indispensable', title: \"Pour utiliser ton rituel, il te faut aussi :\", note: \"La pomme de douche filtrante qui se visse sur la coque. À ajouter si tu ne l'as pas encore.\", section_id: section.id %}"
+            "custom_liquid": "{% render 'ss-addon', addon: all_products['pommeau-de-douche-filtrant'], variant_title: \"\", kind: 'complement', title: \"Envie du jet fin Onsha ?\", note: \"La pomme de douche filtrante Onsha, en option : la coque se visse aussi sur ta pomme de douche actuelle (raccord standard).\", section_id: section.id %}"
           }
         }
       },

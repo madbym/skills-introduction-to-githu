@@ -110,8 +110,8 @@ ADDONS = {
     "ss-onsha-housse": ("", [
         (DOUCHETTE, "indispensable", "Pas encore la douchette sur laquelle s'adapte ta housse ?", ""),
     ]),
-    "ss-onsha-set-home": ("Ton set a besoin d'un pommeau :", [
-        (POMMEAU, "indispensable", "La pomme de douche filtrante qui se visse sur la coque. À ajouter si tu ne l'as pas encore.", ""),
+    "ss-onsha-set-home": ("Envie du jet fin Onsha ?", [
+        (POMMEAU, "complement", "La pomme de douche filtrante Onsha. Sinon, la coque se visse aussi sur ta pomme de douche actuelle (raccord standard).", ""),
     ]),
     "ss-onsha-set-nomade": ("Ton set a besoin d'une douchette :", [
         (DOUCHETTE, "indispensable", "La douchette filtrante sur laquelle se fixe la coque. À ajouter si tu ne l'as pas encore.", ""),
@@ -127,8 +127,8 @@ ADDONS = {
         (FILTRE, "complement", "Un filtre thermal en plus, senteur au choix.", ""),
         (NEUTRE, "choix", "Ou la version sans senteur.", "1 filtre"),
     ]),
-    "ss-onsha-premier-rituel": ("Pour utiliser ton rituel, il te faut aussi :", [
-        (POMMEAU, "indispensable", "La pomme de douche filtrante qui se visse sur la coque. À ajouter si tu ne l'as pas encore.", ""),
+    "ss-onsha-premier-rituel": ("Envie du jet fin Onsha ?", [
+        (POMMEAU, "complement", "La pomme de douche filtrante Onsha, en option : la coque se visse aussi sur ta pomme de douche actuelle (raccord standard).", ""),
     ]),
     "ss-shift-coffret-soin": ("Prends de l'avance sur tes recharges :", [
         (PACK6, "complement", "6 capsules soin et aromathérapie, collection au choix.", ""),
@@ -258,8 +258,8 @@ def build_bundle(name):
         ]
     else:
         custom(m, "ss_badge", '<span class="ss-pdp-badge">Ton premier rituel thermal</span>')
-        custom(m, "ss_pills", '<div class="ss-pdp-pills"><span>Coque + 1 filtre</span><span>Senteur au choix</span><span>Pour ton pommeau Onsha</span></div>')
-        custom(m, "ss_facts", '<div class="ss-pdp-facts"><div><b>Contenu</b>Coque de diffusion Home (Grand format) et 1 filtre thermal vitaminé</div><div><b>À savoir</b>Le pommeau filtrant Onsha n&#x27;est pas inclus : ajoute-le si tu ne l&#x27;as pas encore</div><div><b>Durée du filtre</b>3 à 4 semaines selon ta fréquence de douche</div></div>')
+        custom(m, "ss_pills", '<div class="ss-pdp-pills"><span>Coque + 1 filtre</span><span>Senteur au choix</span><span>Garde ta pomme de douche</span></div>')
+        custom(m, "ss_facts", '<div class="ss-pdp-facts"><div><b>Contenu</b>Coque de diffusion Home (Grand format) et 1 filtre thermal vitaminé</div><div><b>Installation</b>La coque se visse à la main entre ton flexible et ta pomme de douche actuelle (raccord standard), joint fourni</div><div><b>Durée du filtre</b>3 à 4 semaines selon ta fréquence de douche</div></div>')
         items = [
             ("Coque de diffusion Home", "×1", "onsha-coque-de-diffusion-4878009.jpg"),
             ("Filtre thermal vitaminé", "×1, senteur au choix", "onsha-filtre-vitamine-9910937.jpg"),
@@ -369,6 +369,8 @@ POMME = [
     ("ton pommeau", "ta pomme de douche"),
     ("à ton pommeau", "à ta pomme de douche"),
     ("<p>Oui. Il se visse à la main", "<p>Oui. Elle se visse à la main"),
+    ("<p>Avec la pomme de douche filtrante Onsha. Tu peux aussi choisir le coffret Home, qui réunit déjà tout.</p>",
+     "<p>Avec la pomme de douche filtrante Onsha pour le jet fin du système complet. La coque se visse aussi sur la plupart des pommes de douche à raccord standard. Le coffret Home, lui, réunit déjà tout.</p>"),
     ("associe-le à la coque de diffusion", "associe-la à la coque de diffusion"),
     ("<p>Conçu en Corée pour un jet précis", "<p>Conçue en Corée pour un jet précis"),
 ]

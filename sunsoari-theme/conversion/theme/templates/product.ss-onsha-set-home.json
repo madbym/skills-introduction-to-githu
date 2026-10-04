@@ -104,7 +104,7 @@
         "ss_addon_1": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-addon', addon: all_products['pommeau-de-douche-filtrant'], variant_title: \"\", kind: 'indispensable', title: \"Ton set a besoin d'une pomme de douche :\", note: \"La pomme de douche filtrante qui se visse sur la coque. À ajouter si tu ne l'as pas encore.\", section_id: section.id %}"
+            "custom_liquid": "{% render 'ss-addon', addon: all_products['pommeau-de-douche-filtrant'], variant_title: \"\", kind: 'complement', title: \"Envie du jet fin Onsha ?\", note: \"La pomme de douche filtrante Onsha. Sinon, la coque se visse aussi sur ta pomme de douche actuelle (raccord standard).\", section_id: section.id %}"
           }
         }
       },
@@ -303,7 +303,7 @@
           "type": "item",
           "settings": {
             "title": "Avec quelle pomme de douche l'associer ?",
-            "text": "<p>Avec la pomme de douche filtrante Onsha. Tu peux aussi choisir le coffret Home, qui réunit déjà tout.</p>",
+            "text": "<p>Avec la pomme de douche filtrante Onsha pour le jet fin du système complet. La coque se visse aussi sur la plupart des pommes de douche à raccord standard. Le coffret Home, lui, réunit déjà tout.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true

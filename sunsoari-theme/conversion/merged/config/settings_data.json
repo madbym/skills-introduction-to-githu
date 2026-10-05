@@ -60,7 +60,7 @@
     "cart_type": "drawer",
     "cart_icon": "shopping-bag",
     "cart_style": "bordered",
-    "free_shipping_minimum_amount": "80",
+    "free_shipping_minimum_amount": "70",
     "cart_empty_message": "<p>Vous hésitez ? Laissez-vous guider par nos collections :</p>",
     "collection_card_color_scheme": "scheme-10",
     "collection_image_ratio": "adapt",

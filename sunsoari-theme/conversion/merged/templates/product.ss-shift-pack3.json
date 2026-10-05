@@ -1,3 +1,4 @@
+
 {
   "sections": {
     "breadcrumbs": {
@@ -145,12 +146,12 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Filtre neuf et filtre usagé",
+            "title": "Se glisse dans le manche",
             "text": "",
             "tag": "",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/pack-3-sediments-pure-water-7882992.png"
+            "image": "shopify://shop_images/shift-filtre-pure-water-insertion-pomme-de-douche.jpg"
           }
         },
         "b2": {
@@ -161,7 +162,7 @@
             "tag": "",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/pack-3-sediments-pure-water-2075759.png"
+            "image": "shopify://shop_images/shift-pomme-de-douche-filtrante-packshot.jpg"
           }
         }
       },

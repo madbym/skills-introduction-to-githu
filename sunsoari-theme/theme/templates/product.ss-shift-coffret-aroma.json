@@ -663,8 +663,9 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
-                    "image_ratio": "square",
-                    "show_placeholder": false
+                    "image": "shopify://shop_images/shift-senteur-basil-grass.jpg",
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_jkWNdR": {
@@ -700,8 +701,9 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
-                    "image_ratio": "square",
-                    "show_placeholder": false
+                    "image": "shopify://shop_images/shift-senteur-ginger-bergamote.jpg",
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_RRLFHQ": {

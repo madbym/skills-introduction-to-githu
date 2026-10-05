@@ -226,6 +226,12 @@ INGREDIENT_PHOTOS = {
     "Poudre de lait": "ingredient-poudre-de-lait.jpg",
     "Tea Tree": "ingredient-arbre-a-the.jpg",
     "Tea tree": "ingredient-arbre-a-the.jpg",
+    "Eau thermale": "ingredient-eau-thermale.jpg",
+    "Vitamine C": "ingredient-vitamine-c.jpg",
+    "Acide hyaluronique": "ingredient-acide-hyaluronique.jpg",
+    "Tréhalose": "ingredient-trehalose.jpg",
+    "Basil & Grass": "shift-senteur-basil-grass.jpg",
+    "Ginger & Bergamote": "shift-senteur-ginger-bergamote.jpg",
 }
 
 
@@ -247,13 +253,13 @@ def ingredient_photos(sec):
 # Key ingredients given by Fanta (4 Oct): SHIFT capsules, and milk powder for Onsha.
 # Descriptive wording only, no effect promised.
 SHIFT_INGREDIENTS = [
-    ("Vitamine C", "L'actif phare des capsules SHIFT, 6000 mg selon le fabricant.", None),
+    ("Vitamine C", "L'actif phare des capsules SHIFT, 6000 mg selon le fabricant.", "ingredient-vitamine-c.jpg"),
     ("Huile de coco", "Une huile végétale emblématique des rituels de soin.", "ingredient-huile-de-coco.jpg"),
     ("Beurre de karité", "Un beurre végétal issu des noix de karité, utilisé depuis des générations dans les rituels de soin africains.", "ingredient-beurre-de-karite.jpg"),
     ("Huile d'onagre", "Une huile végétale extraite des graines d'onagre.", "ingredient-huile-d-onagre.jpg"),
     ("Huile essentielle d'arbre à thé", "Son parfum frais et boisé accompagne le rituel. En cas de sensibilité aux huiles essentielles, consulte la liste INCI.", "ingredient-arbre-a-the.jpg"),
     ("Aloe vera", "Le gel de la feuille d'aloe vera, apprécié pour sa fraîcheur.", "ingredient-aloe-vera.jpg"),
-    ("Tréhalose", "Un sucre d'origine naturelle utilisé en cosmétique.", None),
+    ("Tréhalose", "Un sucre d'origine naturelle utilisé en cosmétique.", "ingredient-trehalose.jpg"),
 ]
 ONSHA_EXTRA = [("Poudre de lait", "Un ingrédient inspiré des bains de lait traditionnels, présent dans la formule selon la marque.", "ingredient-poudre-de-lait.jpg")]
 SHIFT_INGREDIENT_FILES = ("product.ss-shift-pack6.json", "product.ss-shift-coffret-soin.json")

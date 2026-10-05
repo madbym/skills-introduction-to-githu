@@ -565,7 +565,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "show_placeholder": false,
+                    "image": "shopify://shop_images/ingredient-vitamine-c.jpg",
+                    "show_placeholder": true,
                     "image_ratio": "square"
                   }
                 },
@@ -792,7 +793,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "show_placeholder": false,
+                    "image": "shopify://shop_images/ingredient-trehalose.jpg",
+                    "show_placeholder": true,
                     "image_ratio": "square"
                   }
                 },

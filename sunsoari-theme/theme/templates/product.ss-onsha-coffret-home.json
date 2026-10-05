@@ -568,8 +568,9 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
-                    "image_ratio": "square",
-                    "show_placeholder": false
+                    "image": "shopify://shop_images/ingredient-eau-thermale.jpg",
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_RwC8aR": {
@@ -605,8 +606,9 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
-                    "image_ratio": "square",
-                    "show_placeholder": false
+                    "image": "shopify://shop_images/ingredient-vitamine-c.jpg",
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_kxuxe0": {
@@ -642,8 +644,9 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
-                    "image_ratio": "square",
-                    "show_placeholder": false
+                    "image": "shopify://shop_images/ingredient-acide-hyaluronique.jpg",
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_gwKOOU": {

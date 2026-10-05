@@ -281,7 +281,7 @@
         "header_layout": "logo-center",
         "menu_trigger": "hover",
         "sticky_header": "always",
-        "enable_collapse_on_scroll": true,
+        "enable_collapse_on_scroll": false,
         "show_sperator_line": false,
         "customer_account_style": "icon-only",
         "show_social_media_icons": true,

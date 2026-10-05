@@ -95,7 +95,7 @@
           "type": "item",
           "settings": {
             "title": "Comment fonctionne la remise ?",
-            "text": "<p>-5 % dès 3 produits, -10 % dès 5 produits, -15 % dès 7 produits, sur les produits à l'unité choisis sur cette page. La remise s'applique automatiquement au panier quand tu valides ton rituel. Les coffrets et sets sont déjà proposés à prix réduit et ne comptent pas dans les paliers. Elle ne se cumule ni avec les autres remises (dont le code de bienvenue), ni avec la livraison offerte dès 70 € (elle reste offerte en France dès 100 € d’achat) : la plus avantageuse pour toi s’applique.</p>"
+            "text": "<p>-5 % dès 3 produits, -10 % dès 5 produits, -15 % dès 7 produits, sur les produits à l'unité choisis sur cette page. La remise s'applique automatiquement au panier quand tu valides ton rituel. Les coffrets et sets sont déjà proposés à prix réduit et ne comptent pas dans les paliers. Elle ne se cumule ni avec les autres remises (dont le code de bienvenue), ni avec la livraison offerte dès 70 € (en France, elle reste offerte dès 120 € d’achat avec ta remise rituel) : la plus avantageuse pour toi s’applique.</p>"
           }
         }
       },

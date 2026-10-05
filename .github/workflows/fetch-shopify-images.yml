@@ -1,0 +1,17 @@
+name: fetch-shopify-images
+on:
+  push:
+    branches: [claude/fetch-shopify-images]
+    paths: [fetch/urls.txt]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p fetch/out
+          while read -r u; do [ -n "$u" ] && curl -sSfL "$u?width=600" -o "fetch/out/$(basename "$u")" || echo "fail $u"; done < fetch/urls.txt
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add fetch/out && git commit -m "Images Shopify téléchargées" && git push

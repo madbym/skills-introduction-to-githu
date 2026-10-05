@@ -20,6 +20,7 @@ FILTRE_BOITE = {
     "Hinoki": "onsha-filtre-thermal-hinoki-boite.png",
     "Océan": "onsha-filtre-thermal-ocean-boite.png",
     "Fleur de Prunier": "onsha-filtre-thermal-fleur-de-prunier-boite.png",
+    "Forêt de Pin": "onsha-filtre-thermal-foret-de-pin-boite.png",
 }
 
 SHIFT_SCENTS = {

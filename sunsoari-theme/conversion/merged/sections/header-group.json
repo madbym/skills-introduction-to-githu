@@ -51,22 +51,38 @@
         "announcement_bar_9WjngM": {
           "type": "announcement_bar",
           "settings": {
-            "text": "Livraison suivie en France · Paiement en 4× avec Klarna · Filtres & recharges toujours disponibles",
+            "text": "Livraison suivie en France",
+            "link": ""
+          }
+        },
+        "ss_annonce_klarna": {
+          "type": "announcement_bar",
+          "settings": {
+            "text": "Paiement en 4× avec Klarna",
+            "link": ""
+          }
+        },
+        "ss_annonce_recharges": {
+          "type": "announcement_bar",
+          "settings": {
+            "text": "Filtres & recharges toujours disponibles",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement_bar_9WjngM"
+        "announcement_bar_9WjngM",
+        "ss_annonce_klarna",
+        "ss_annonce_recharges"
       ],
       "name": "t:sections.announcement-bar.name",
       "settings": {
         "color_scheme": "scheme-info",
-        "content_width": 30,
+        "content_width": 40,
         "autoplay": true,
-        "autoplay_speed": 5,
-        "padding_top": 12,
-        "padding_bottom": 12
+        "autoplay_speed": 4,
+        "padding_top": 5,
+        "padding_bottom": 5
       }
     },
     "ss_header_7_k6pwpk": {

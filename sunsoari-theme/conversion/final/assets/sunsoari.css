@@ -172,3 +172,7 @@
 .ss-trust:has(> :nth-child(4)){grid-template-columns:repeat(2,1fr);}
 @media(min-width:990px){.ss-trust,.ss-trust:has(> :nth-child(4)){grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:1fr;}}
 .ss-trust div{min-width:0;}
+/* Sunsoari : barre d'annonce plus fine */
+.announcement-bar .announcement-bar__text,.announcement-bar .announcement-bar__content{font-size:12px;line-height:1.35;letter-spacing:.02em;margin:0;}
+.announcement-bar .slider-controls{min-height:0;}
+.announcement-bar .swiper-button{width:24px;height:24px;}

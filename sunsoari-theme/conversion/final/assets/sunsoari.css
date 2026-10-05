@@ -153,3 +153,6 @@
 /* Cartes : image plein cadre, sans bandes (Safari iOS) */
 .ss-card__media{position:relative;}
 .ss-card__media img,.ss-card__media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+/* Visuels : image plein cadre, sans bande beige (Safari iOS) */
+.ss-visual{position:relative;}
+.ss-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}

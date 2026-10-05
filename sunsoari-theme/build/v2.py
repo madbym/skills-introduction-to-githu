@@ -172,8 +172,10 @@ CAPSULE_VIDEO = ("shift-changer-capsule.mp4", CAPSULE_STEPS) + SQUARE
 SHIFT_INSTALL = ("shift-installer-pommeau-etapes.mp4", SHIFT_INSTALL_STEPS) + WIDE
 SEDIMENT_VIDEO = ("shift-remplacer-filtre-sediment.mp4", SEDIMENT_STEPS) + WIDE
 ONSHA_INSTALL = ("b687687fb41c419e981d8e477d201a41.mov", ONSHA_INSTALL_STEPS) + TALL
-# French only: text on screen in French, or no text at all (clips play muted).
-SHIFT_BOX = {"Installez votre produit": SHIFT_INSTALL,
+# French only: text on screen in French, or no text at all.
+DISCOVER_SHIFT = "<h3>L'univers SHIFT</h3><p>Le pommeau, ses capsules parfumées et le filtre sédiment, en images.</p>"
+SHIFT_DISCOVER = ("v24044gl0000d7mhqg7og65lq73dilq0.mp4", DISCOVER_SHIFT) + WIDE
+SHIFT_BOX = {"Découvrez votre coffret": SHIFT_DISCOVER, "Installez votre produit": SHIFT_INSTALL,
              "Remplacez votre recharge": CAPSULE_VIDEO}
 ONSHA_HOME = {"Installez votre produit": ONSHA_INSTALL}
 VIDEOS = {

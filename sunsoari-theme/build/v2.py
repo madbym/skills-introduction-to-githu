@@ -321,6 +321,11 @@ def polish():
             ingredient_photos(ing)
         for sec in t["sections"].values():
             walk(sec)
+            if sec.get("type") == "comparison-table" and "title" not in sec.get("blocks", {}):
+                # static title block left unset shows the theme default « Texte »
+                sec["blocks"]["title"] = {"type": "text", "static": True, "settings": {
+                    "text": "<h2>Home ou Nomade : lequel choisir ?</h2>", "text_style": "h2", "font_weight": 400,
+                    "alignment": "center", "alignment_mobile": "center", "margin_bottom": 40}}
         videos = t["sections"].get("videos_pratiques")
         if videos:
             tabs = find(videos, by_type("tabs"))

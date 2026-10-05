@@ -1138,6 +1138,18 @@
             "comparison_table_data_yvHNsG",
             "comparison_table_data_9eh6Yo"
           ]
+        },
+        "title": {
+          "type": "text",
+          "static": true,
+          "settings": {
+            "text": "<h2>Home ou Nomade : lequel choisir ?</h2>",
+            "text_style": "h2",
+            "font_weight": 400,
+            "alignment": "center",
+            "alignment_mobile": "center",
+            "margin_bottom": 40
+          }
         }
       },
       "block_order": [

@@ -1,4 +1,3 @@
-
 {
   "sections": {
     "breadcrumbs": {
@@ -223,7 +222,8 @@
         "open_first": false,
         "tip_title": "Les conseils de l'équipe",
         "tip_text": "<p>Tu pars de zéro ? Les coffrets Home et Nomade réunissent la coque, la pomme de douche ou la douchette et 4 recharges, pour moins cher que les pièces séparées.</p>",
-        "image": "shopify://shop_images/Comment_installer_la_recharge.gif"
+        "image": "shopify://shop_images/Comment_installer_la_recharge.gif",
+        "video": "shopify://files/videos/CopiedeShowerHosevideo_01.mp4"
       }
     },
     "ss_faq": {

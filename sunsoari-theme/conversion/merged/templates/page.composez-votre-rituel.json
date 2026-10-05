@@ -10,7 +10,7 @@
             "show_price": true,
             "tag": "Pour commencer",
             "title": "Starter Home",
-            "text": "<p>Pomme de douche, coque Home et un filtre thermal.</p>",
+            "text": "<p>Pommeau de douche, coque Home et un filtre thermal.</p>",
             "link_label": "Voir le produit"
           }
         },
@@ -21,7 +21,7 @@
             "show_price": true,
             "tag": "Le plus complet",
             "title": "Coffret Home",
-            "text": "<p>Pomme de douche, coque Home et 4 filtres thermaux.</p>",
+            "text": "<p>Pommeau de douche, coque Home et 4 filtres thermaux.</p>",
             "link_label": "Voir le produit"
           }
         },

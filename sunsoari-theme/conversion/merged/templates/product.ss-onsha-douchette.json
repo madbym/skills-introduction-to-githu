@@ -181,7 +181,7 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Dévisse</strong> ta pomme de douche ou ta douchette actuelle du flexible."
+            "text": "<strong>Dévisse</strong> ton pommeau de douche ou ta douchette actuels du flexible."
           }
         },
         "b2": {
@@ -298,8 +298,8 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Quelle différence avec la pomme de douche Onsha ?",
-            "text": "<p>Ce sont deux formats différents, avec deux modes de filtration. La douchette intègre directement un filtre à sédiments dans son corps : un seul objet, compact, idéal en déplacement ou pour un rituel simple à la maison. La pomme de douche reste installée chez toi, avec la coque de diffusion Home, et utilise un autre mode de filtration à base de billes de céramique, selon la marque. Les deux se complètent selon ton usage.</p>",
+            "title": "Quelle différence avec le pommeau de douche Onsha ?",
+            "text": "<p>Ce sont deux formats différents, avec deux modes de filtration. La douchette intègre directement un filtre à sédiments dans son corps : un seul objet, compact, idéal en déplacement ou pour un rituel simple à la maison. Le pommeau de douche reste installé chez toi, avec la coque de diffusion Home, et utilise un autre mode de filtration à base de billes de céramique, selon la marque. Les deux se complètent selon ton usage.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true

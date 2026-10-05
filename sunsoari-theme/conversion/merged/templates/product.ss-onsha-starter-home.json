@@ -35,7 +35,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pomme de douche filtrante Onsha, coque de diffusion Home (Grand format) et 1 filtre thermal vitaminé</div><div><b>Senteur</b>Hinoki, Océan, Forêt de Pin, Fleur de Prunier ou sans senteur</div><div><b>Durée du filtre</b>3 à 4 semaines selon ta fréquence de douche</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau de douche filtrant Onsha, coque de diffusion Home (Grand format) et 1 filtre thermal vitaminé</div><div><b>Senteur</b>Hinoki, Océan, Forêt de Pin, Fleur de Prunier ou sans senteur</div><div><b>Durée du filtre</b>3 à 4 semaines selon ta fréquence de douche</div></div>"
           }
         },
         "variant_picker": {
@@ -90,7 +90,7 @@
             "heading": "Durée et entretien",
             "heading_size": "h4",
             "icon": "none",
-            "content": "<p>Le filtre dure environ 3 à 4 semaines selon ta fréquence de douche. Rince régulièrement la coque de diffusion. La pomme de douche et la coque se gardent : seuls les filtres se remplacent.</p>",
+            "content": "<p>Le filtre dure environ 3 à 4 semaines selon ta fréquence de douche. Rince régulièrement la coque de diffusion. Le pommeau de douche et la coque se gardent : seuls les filtres se remplacent.</p>",
             "page": "",
             "default_open": false,
             "show_below_product_media": false
@@ -151,7 +151,7 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Pomme de douche filtrante Onsha",
+            "title": "Pommeau de douche filtrant Onsha",
             "text": "",
             "tag": "×1",
             "link_label": "",
@@ -207,7 +207,7 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Dévisse</strong> ta pomme de douche actuelle."
+            "text": "<strong>Dévisse</strong> ton pommeau de douche actuel."
           }
         },
         "b2": {
@@ -225,7 +225,7 @@
         "b4": {
           "type": "step",
           "settings": {
-            "text": "<strong>Visse</strong> la pomme de douche sur la coque et ouvre l'eau."
+            "text": "<strong>Visse</strong> le pommeau de douche sur la coque et ouvre l'eau."
           }
         }
       },

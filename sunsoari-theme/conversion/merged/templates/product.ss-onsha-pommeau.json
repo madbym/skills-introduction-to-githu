@@ -99,7 +99,7 @@
         "ss_complements": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-complements', items: \"coque-de-diffusion|Grand format|Indispensable : elle accueille le filtre;filtre-vitamine-showerfilter-sunsoari||4 senteurs thermales au choix;onsha-filtre-thermal-vitamine-sans-senteur|1 filtre|La même base de soin, sans parfum ajouté\", title: \"La pomme de douche est vendue seule\", note: \"Pour profiter du rituel thermal, ajoute la coque de diffusion Home et un filtre vitaminé, avec ou sans senteur. Chaque pièce est vendue séparément.\" %}"
+            "custom_liquid": "{% render 'ss-complements', items: \"coque-de-diffusion|Grand format|Indispensable : elle accueille le filtre;filtre-vitamine-showerfilter-sunsoari||4 senteurs thermales au choix;onsha-filtre-thermal-vitamine-sans-senteur|1 filtre|La même base de soin, sans parfum ajouté\", title: \"Le pommeau de douche est vendu seul\", note: \"Pour profiter du rituel thermal, ajoute la coque de diffusion Home et un filtre vitaminé, avec ou sans senteur. Chaque pièce est vendue séparément.\" %}"
           }
         }
       },
@@ -139,13 +139,13 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Dévisse</strong> ta pomme de douche actuelle."
+            "text": "<strong>Dévisse</strong> ton pommeau de douche actuel."
           }
         },
         "b2": {
           "type": "step",
           "settings": {
-            "text": "<strong>Visse</strong> la pomme de douche Onsha sur ton flexible, à la main, sans forcer."
+            "text": "<strong>Visse</strong> le pommeau de douche Onsha sur ton flexible, à la main, sans forcer."
           }
         },
         "b3": {
@@ -172,7 +172,7 @@
         "ratio": "1/1",
         "open_first": false,
         "tip_title": "Les conseils de l'équipe",
-        "tip_text": "<p>Pour le rituel thermal complet, fixe d'abord la coque de diffusion sur ton flexible, insère un filtre thermal vitaminé (Hinoki, Océan, Forêt de Pin ou Fleur de Prunier), puis visse la pomme de douche sur la coque. Deux minutes, pas plus.</p>",
+        "tip_text": "<p>Pour le rituel thermal complet, fixe d'abord la coque de diffusion sur ton flexible, insère un filtre thermal vitaminé (Hinoki, Océan, Forêt de Pin ou Fleur de Prunier), puis visse le pommeau de douche sur la coque. Deux minutes, pas plus.</p>",
         "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-9469805.jpg"
       }
     },
@@ -235,7 +235,7 @@
         "background": "white",
         "align": "center",
         "eyebrow": "La technologie Onsha",
-        "heading": "Une pomme de douche pensée comme la base du rituel",
+        "heading": "Un pommeau de douche pensé comme la base du rituel",
         "text": "<p>Conçue en Corée pour un jet précis et un système qui évolue avec toi.</p>",
         "columns": 4,
         "columns_mobile": "1",
@@ -259,7 +259,7 @@
         "b2": {
           "type": "item",
           "settings": {
-            "title": "La pomme de douche filtre-t-elle l'eau toute seule ?",
+            "title": "Le pommeau de douche filtre-t-il l'eau tout seul ?",
             "text": "<p>Oui, sa filtration intégrée retient les sédiments et particules visibles. Pour l'expérience thermale (eau enrichie et senteurs coréennes), associe-la à la coque de diffusion et à un filtre thermal vitaminé Onsha.</p>",
             "tag": "",
             "link_label": "",
@@ -280,7 +280,7 @@
           "type": "item",
           "settings": {
             "title": "À quelle fréquence remplacer les recharges ?",
-            "text": "<p>La pomme de douche ne se remplace pas : installée une fois, elle est là pour durer. Le filtre thermal vitaminé se change environ toutes les 3 à 4 semaines, selon ta fréquence de douche.</p>",
+            "text": "<p>Le pommeau de douche ne se remplace pas : installé une fois, il est là pour durer. Le filtre thermal vitaminé se change environ toutes les 3 à 4 semaines, selon ta fréquence de douche.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true

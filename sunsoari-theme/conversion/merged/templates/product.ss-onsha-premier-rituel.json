@@ -35,7 +35,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Coque de diffusion Home (Grand format) et 1 filtre thermal vitaminé</div><div><b>Installation</b>La coque se visse à la main entre ton flexible et ta pomme de douche actuelle (raccord standard), joint fourni</div><div><b>Durée du filtre</b>3 à 4 semaines selon ta fréquence de douche</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Coque de diffusion Home (Grand format) et 1 filtre thermal vitaminé</div><div><b>Installation</b>La coque se visse à la main entre ton flexible et ton pommeau de douche actuel (raccord standard), joint fourni</div><div><b>Durée du filtre</b>3 à 4 semaines selon ta fréquence de douche</div></div>"
           }
         },
         "variant_picker": {
@@ -90,7 +90,7 @@
             "heading": "Durée et entretien",
             "heading_size": "h4",
             "icon": "none",
-            "content": "<p>Le filtre dure environ 3 à 4 semaines selon ta fréquence de douche. Rince régulièrement la coque de diffusion. La pomme de douche et la coque se gardent : seuls les filtres se remplacent.</p>",
+            "content": "<p>Le filtre dure environ 3 à 4 semaines selon ta fréquence de douche. Rince régulièrement la coque de diffusion. Le pommeau de douche et la coque se gardent : seuls les filtres se remplacent.</p>",
             "page": "",
             "default_open": false,
             "show_below_product_media": false
@@ -110,7 +110,7 @@
         "ss_complements": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant||Le jet fin du rituel Home;filtre-vitamine-showerfilter-sunsoari||Un filtre d'avance, 4 senteurs au choix\", title: \"Envie du jet fin Onsha ?\", note: \"La coque se visse sur ta pomme de douche actuelle (raccord standard). Tu peux aussi l'associer à la pomme de douche filtrante Onsha :\" %}"
+            "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant||Le jet fin du rituel Home;filtre-vitamine-showerfilter-sunsoari||Un filtre d'avance, 4 senteurs au choix\", title: \"Envie du jet fin Onsha ?\", note: \"La coque se visse sur ton pommeau de douche actuel (raccord standard). Tu peux aussi l'associer au pommeau de douche filtrant Onsha :\" %}"
           }
         }
       },
@@ -195,7 +195,7 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Dévisse</strong> ta pomme de douche actuelle."
+            "text": "<strong>Dévisse</strong> ton pommeau de douche actuel."
           }
         },
         "b2": {
@@ -213,7 +213,7 @@
         "b4": {
           "type": "step",
           "settings": {
-            "text": "<strong>Visse</strong> la pomme de douche sur la coque et ouvre l'eau."
+            "text": "<strong>Visse</strong> le pommeau de douche sur la coque et ouvre l'eau."
           }
         }
       },

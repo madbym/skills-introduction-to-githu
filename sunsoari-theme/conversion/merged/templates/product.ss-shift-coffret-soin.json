@@ -36,7 +36,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pomme de douche filtrante, capsule Tea Tree &amp; Lavender, filtre Pure Water</div><div><b>Installation</b>2 minutes, sans outil, sur tout flexible standard</div><div><b>Recharges</b>Capsules et filtres Pure Water disponibles séparément</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau de douche filtrant, capsule Tea Tree &amp; Lavender, filtre Pure Water</div><div><b>Installation</b>2 minutes, sans outil, sur tout flexible standard</div><div><b>Recharges</b>Capsules et filtres Pure Water disponibles séparément</div></div>"
           }
         },
         "variant_picker": {
@@ -152,7 +152,7 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Pomme de douche filtrante",
+            "title": "Pommeau de douche filtrant",
             "text": "<p>Jet fin et régulier, la base réutilisable</p>",
             "tag": "x1",
             "link_label": "",
@@ -242,7 +242,7 @@
           "type": "item",
           "settings": {
             "title": "Système réutilisable",
-            "text": "<p>La pomme de douche reste : il ne te reste plus qu'à insérer les recharges, capsule ou filtre Pure Water.</p>",
+            "text": "<p>Le pommeau de douche reste : il ne te reste plus qu'à insérer les recharges, capsule ou filtre Pure Water.</p>",
             "tag": "Durable",
             "link_label": "",
             "show_price": true,
@@ -376,7 +376,7 @@
         "align": "center",
         "eyebrow": "Mode d'emploi",
         "heading": "Comment l'installer",
-        "text": "<p>Visse la pomme de douche SHIFT sur ton flexible, puis mets en place la capsule et le filtre.</p>",
+        "text": "<p>Visse le pommeau de douche SHIFT sur ton flexible, puis mets en place la capsule et le filtre.</p>",
         "columns": 4,
         "columns_mobile": "2",
         "ratio": "1/1",

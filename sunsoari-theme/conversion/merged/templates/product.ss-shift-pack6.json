@@ -35,7 +35,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Compatibilité</b>Pomme de douche filtrante SHIFT uniquement</div><div><b>Composition générale</b>Actifs hydratants (glycérine, acide hyaluronique), vitamine C, huiles essentielles, extraits botaniques</div><div><b>Durée</b>Quelques semaines par capsule, selon ta fréquence de douche</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Compatibilité</b>Pommeau de douche filtrant SHIFT uniquement</div><div><b>Composition générale</b>Actifs hydratants (glycérine, acide hyaluronique), vitamine C, huiles essentielles, extraits botaniques</div><div><b>Durée</b>Quelques semaines par capsule, selon ta fréquence de douche</div></div>"
           }
         },
         "variant_picker": {
@@ -98,7 +98,7 @@
         "ss_complements": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie||Pomme de douche, capsule et filtre pour commencer;pack-3-sediments-pure-water||Les filtres Pure Water\", title: \"Les capsules sont vendues seules\", note: \"Elles s'utilisent uniquement dans la pomme de douche filtrante SHIFT. Pas encore équipée ?\" %}"
+            "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie||Pommeau de douche, capsule et filtre pour commencer;pack-3-sediments-pure-water||Les filtres Pure Water\", title: \"Les capsules sont vendues seules\", note: \"Elles s'utilisent uniquement dans le pommeau de douche filtrant SHIFT. Pas encore équipée ?\" %}"
           }
         }
       },
@@ -138,7 +138,7 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Ouvre</strong> le compartiment de ta pomme de douche SHIFT."
+            "text": "<strong>Ouvre</strong> le compartiment de ton pommeau de douche SHIFT."
           }
         },
         "b2": {

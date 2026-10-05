@@ -35,7 +35,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Rôle</b>Relie ton flexible au pomme de douche filtrante et accueille le filtre thermal vitaminé</div><div><b>Format</b>Home (Grand format), pour les filtres thermaux vitaminés Home</div><div><b>Matière</b>Polypropylène (PP) et silicone, sans BPA selon le fabricant</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Rôle</b>Relie ton flexible au pommeau de douche filtrant et accueille le filtre thermal vitaminé</div><div><b>Format</b>Home (Grand format), pour les filtres thermaux vitaminés Home</div><div><b>Matière</b>Polypropylène (PP) et silicone, sans BPA selon le fabricant</div></div>"
           }
         },
         "variant_picker": {
@@ -98,7 +98,7 @@
         "ss_complements": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant||La base du rituel Home;filtre-vitamine-showerfilter-sunsoari||Le filtre thermal, 4 senteurs au choix;onsha-filtre-thermal-vitamine-sans-senteur|1 filtre|Ou la version sans parfum ajouté\", title: \"La coque est vendue seule\", note: \"Elle relie ton flexible à la pomme de douche et accueille le filtre. Pour l'utiliser, il te faut aussi :\" %}"
+            "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant||La base du rituel Home;filtre-vitamine-showerfilter-sunsoari||Le filtre thermal, 4 senteurs au choix;onsha-filtre-thermal-vitamine-sans-senteur|1 filtre|Ou la version sans parfum ajouté\", title: \"La coque est vendue seule\", note: \"Elle relie ton flexible au pommeau de douche et accueille le filtre. Pour l'utiliser, il te faut aussi :\" %}"
           }
         }
       },
@@ -181,7 +181,7 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Dévisse</strong> ta pomme de douche actuelle."
+            "text": "<strong>Dévisse</strong> ton pommeau de douche actuel."
           }
         },
         "b2": {
@@ -199,7 +199,7 @@
         "b4": {
           "type": "step",
           "settings": {
-            "text": "<strong>Visse</strong> ta pomme de douche Onsha sur la coque."
+            "text": "<strong>Visse</strong> ton pommeau de douche Onsha sur la coque."
           }
         }
       },
@@ -221,7 +221,7 @@
         "ratio": "1/1",
         "open_first": false,
         "tip_title": "Les conseils de l'équipe",
-        "tip_text": "<p>Tu pars de zéro ? Les coffrets Home et Nomade réunissent la coque, la pomme de douche ou la douchette et 4 recharges, pour moins cher que les pièces séparées.</p>",
+        "tip_text": "<p>Tu pars de zéro ? Les coffrets Home et Nomade réunissent la coque, le pommeau de douche ou la douchette et 4 recharges, pour moins cher que les pièces séparées.</p>",
         "image": "shopify://shop_images/Comment_installer_la_recharge.gif",
         "video": "shopify://files/videos/CopiedeShowerHosevideo_01.mp4"
       }
@@ -233,7 +233,7 @@
           "type": "item",
           "settings": {
             "title": "Ai-je besoin de cette coque si j'ai un coffret ?",
-            "text": "<p>Non, le coffret Home et le set découverte Home incluent déjà la coque. Celle-ci s'adresse à celles qui ont déjà la pomme de douche, ou qui veulent une pièce de rechange.</p>",
+            "text": "<p>Non, le coffret Home et le set découverte Home incluent déjà la coque. Celle-ci s'adresse à celles qui ont déjà le pommeau de douche, ou qui veulent une pièce de rechange.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true

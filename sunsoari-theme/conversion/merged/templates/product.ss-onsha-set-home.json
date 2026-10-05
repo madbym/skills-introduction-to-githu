@@ -35,7 +35,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>1 coque de diffusion Home + 4 filtres thermaux vitaminés (1 par senteur)</div><div><b>À associer</b>À la pomme de douche filtrante Onsha pour le système complet</div><div><b>Durée</b>3 à 4 mois de rituel avec les 4 filtres</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>1 coque de diffusion Home + 4 filtres thermaux vitaminés (1 par senteur)</div><div><b>À associer</b>Au pommeau de douche filtrant Onsha pour le système complet</div><div><b>Durée</b>3 à 4 mois de rituel avec les 4 filtres</div></div>"
           }
         },
         "variant_picker": {
@@ -98,7 +98,7 @@
         "ss_complements": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant||Le jet fin du rituel Home\", title: \"Envie du jet fin Onsha ?\", note: \"Ton set contient la coque et 4 filtres. La coque se visse sur la plupart des pommes de douche à raccord standard, ou sur la pomme de douche filtrante Onsha :\" %}"
+            "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant||Le jet fin du rituel Home\", title: \"Envie du jet fin Onsha ?\", note: \"Ton set contient la coque et 4 filtres. La coque se visse sur la plupart des pommeaux de douche à raccord standard, ou sur le pommeau de douche filtrant Onsha :\" %}"
           }
         }
       },

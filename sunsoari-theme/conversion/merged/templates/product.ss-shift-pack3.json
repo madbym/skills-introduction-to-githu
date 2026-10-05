@@ -36,7 +36,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Rôle</b>Filtration mécanique multi-couches des sédiments et particules visibles</div><div><b>Compatibilité</b>Pomme de douche filtrante SHIFT uniquement</div><div><b>Durée</b>2 à 3 mois par filtre selon ton eau</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Rôle</b>Filtration mécanique multi-couches des sédiments et particules visibles</div><div><b>Compatibilité</b>Pommeau de douche filtrant SHIFT uniquement</div><div><b>Durée</b>2 à 3 mois par filtre selon ton eau</div></div>"
           }
         },
         "variant_picker": {
@@ -105,7 +105,7 @@
         "ss_complements": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie||Pomme de douche, capsule et filtre pour commencer;pack-6-capsules-vitaminees-shift-sunsoari||Les capsules soin et aromathérapie\", title: \"Les filtres sont vendus seuls\", note: \"Ils s'utilisent uniquement dans la pomme de douche filtrante SHIFT. Pas encore équipée ?\" %}"
+            "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie||Pommeau de douche, capsule et filtre pour commencer;pack-6-capsules-vitaminees-shift-sunsoari||Les capsules soin et aromathérapie\", title: \"Les filtres sont vendus seuls\", note: \"Ils s'utilisent uniquement dans le pommeau de douche filtrant SHIFT. Pas encore équipée ?\" %}"
           }
         }
       },
@@ -189,7 +189,7 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Ouvre</strong> le compartiment de la pomme de douche SHIFT."
+            "text": "<strong>Ouvre</strong> le compartiment du pommeau de douche SHIFT."
           }
         },
         "b2": {

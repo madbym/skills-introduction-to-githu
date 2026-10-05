@@ -110,7 +110,7 @@
         "ss_complements": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-complements', items: \"coque-de-diffusion|Grand format|Accueille ton filtre, à acheter une seule fois;pommeau-de-douche-filtrant||La base du rituel Home\", title: \"Le filtre est vendu seul\", note: \"Il s'insère dans la coque de diffusion Home, vissée à la pomme de douche filtrante. Pas encore équipée ?\" %}"
+            "custom_liquid": "{% render 'ss-complements', items: \"coque-de-diffusion|Grand format|Accueille ton filtre, à acheter une seule fois;pommeau-de-douche-filtrant||La base du rituel Home\", title: \"Le filtre est vendu seul\", note: \"Il s'insère dans la coque de diffusion Home, vissée au pommeau de douche filtrant. Pas encore équipée ?\" %}"
           }
         },
         "ss_offers": {
@@ -170,7 +170,7 @@
         "b3": {
           "type": "step",
           "settings": {
-            "text": "<strong>Referme</strong> et revisse sur ta pomme de douche."
+            "text": "<strong>Referme</strong> et revisse sur ton pommeau de douche."
           }
         },
         "b4": {

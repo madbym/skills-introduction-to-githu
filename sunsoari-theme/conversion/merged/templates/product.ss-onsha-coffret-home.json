@@ -36,7 +36,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pomme de douche filtrante, coque de diffusion Home, 4 filtres thermaux vitaminés</div><div><b>Autonomie</b>3 à 4 mois avec les 4 filtres</div><div><b>Senteurs</b>Hinoki, Océan, Forêt de Pin, Fleur de Prunier</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau de douche filtrant, coque de diffusion Home, 4 filtres thermaux vitaminés</div><div><b>Autonomie</b>3 à 4 mois avec les 4 filtres</div><div><b>Senteurs</b>Hinoki, Océan, Forêt de Pin, Fleur de Prunier</div></div>"
           }
         },
         "variant_picker": {
@@ -152,7 +152,7 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Pomme de douche filtrante Onsha",
+            "title": "Pommeau de douche filtrant Onsha",
             "text": "<p>Jet fin, 197 micro-trous</p>",
             "tag": "x1",
             "link_label": "",
@@ -208,7 +208,7 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Dévisse</strong> ta pomme de douche actuelle."
+            "text": "<strong>Dévisse</strong> ton pommeau de douche actuel."
           }
         },
         "b2": {
@@ -226,7 +226,7 @@
         "b4": {
           "type": "step",
           "settings": {
-            "text": "<strong>Visse</strong> la pomme de douche sur la coque et ouvre l'eau."
+            "text": "<strong>Visse</strong> le pommeau de douche sur la coque et ouvre l'eau."
           }
         }
       },

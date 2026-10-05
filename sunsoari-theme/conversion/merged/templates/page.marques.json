@@ -50,7 +50,7 @@
         "image": "shopify://shop_images/onsha-rituel-de-douche-thermal-coreen-filtrant-aromatique-kit-decouverte-2195631.jpg",
         "eyebrow": "Corée du Sud · Douche thermale",
         "heading": "Onsha",
-        "text": "<p>Onsha s'inspire de la tradition coréenne des sources thermales. Son système associe une pomme de douche ou une douchette filtrante, une coque de diffusion et des recharges vitaminées aux senteurs des régions thermales coréennes.</p>",
+        "text": "<p>Onsha s'inspire de la tradition coréenne des sources thermales. Son système associe un pommeau de douche ou une douchette filtrante, une coque de diffusion et des recharges vitaminées aux senteurs des régions thermales coréennes.</p>",
         "button_label": "Découvrir Onsha",
         "button_link": "shopify://collections/onsha"
       }
@@ -61,7 +61,7 @@
         "b1": {
           "type": "point",
           "settings": {
-            "text": "Une pomme de douche disponible en <strong>plusieurs coloris</strong>"
+            "text": "Un pommeau de douche disponible en <strong>plusieurs coloris</strong>"
           }
         },
         "b2": {
@@ -89,7 +89,7 @@
         "image": "shopify://shop_images/shift-pommeau-capsule-aromatherapie-banniere.jpg",
         "eyebrow": "Corée du Sud · Aromathérapie",
         "heading": "SHIFT",
-        "text": "<p>SHIFT réunit filtration et aromathérapie dans une pomme de douche au jet fin. L'eau traverse d'abord un filtre Pure Water, puis une capsule de soin qui diffuse ses actifs hydratants et sa senteur.</p>",
+        "text": "<p>SHIFT réunit filtration et aromathérapie dans un pommeau de douche au jet fin. L'eau traverse d'abord un filtre Pure Water, puis une capsule de soin qui diffuse ses actifs hydratants et sa senteur.</p>",
         "button_label": "Découvrir SHIFT",
         "button_link": "shopify://collections/shift"
       }
@@ -237,7 +237,7 @@
         "background": "sand",
         "align": "center",
         "eyebrow": "SHIFT en action",
-        "heading": "La capsule se glisse dans la pomme de douche",
+        "heading": "La capsule se glisse dans le pommeau de douche",
         "text": "<p>Un geste simple, en quelques secondes, sans outil.</p>",
         "columns": 1,
         "columns_mobile": "1",

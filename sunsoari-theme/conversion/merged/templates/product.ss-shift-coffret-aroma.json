@@ -35,7 +35,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pomme de douche, flexible silicone 2 m, 3 filtres Pure Water, 6 capsules soin</div><div><b>Autonomie</b>Environ 3 mois de capsules, 6 à 9 mois de filtres</div><div><b>Couleur</b>Choisis la couleur de ta pomme de douche</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau de douche, flexible silicone 2 m, 3 filtres Pure Water, 6 capsules soin</div><div><b>Autonomie</b>Environ 3 mois de capsules, 6 à 9 mois de filtres</div><div><b>Couleur</b>Choisis la couleur de ton pommeau de douche</div></div>"
           }
         },
         "variant_picker": {
@@ -78,7 +78,7 @@
             "heading": "Installation",
             "heading_size": "h4",
             "icon": "none",
-            "content": "<p>1. Raccorde le flexible sur ton robinet. 2. Visse la pomme de douche à l'autre bout. 3. Insère un filtre Pure Water. 4. Glisse une capsule dans le second compartiment. 5. Ouvre l'eau. Environ 2 minutes, sans outil.</p>",
+            "content": "<p>1. Raccorde le flexible sur ton robinet. 2. Visse le pommeau de douche à l'autre bout. 3. Insère un filtre Pure Water. 4. Glisse une capsule dans le second compartiment. 5. Ouvre l'eau. Environ 2 minutes, sans outil.</p>",
             "page": "",
             "default_open": false,
             "show_below_product_media": false
@@ -164,7 +164,7 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Pomme de douche filtrante",
+            "title": "Pommeau de douche filtrant",
             "text": "<p>La base réutilisable, 4 coloris</p>",
             "tag": "x1",
             "link_label": "",

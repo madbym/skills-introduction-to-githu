@@ -149,3 +149,7 @@
 .ss-checks li{display:flex;gap:8px;font-size:13px;color:var(--ss-muted);line-height:1.45;}
 .ss-checks li:before{content:"";flex:none;width:16px;height:16px;margin-top:1px;border-radius:50%;background:var(--ss-powder) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.2l2.4 2.3L12 5' fill='none' stroke='%23042850' stroke-width='1.6'/%3E%3C/svg%3E") center/12px no-repeat;}
 .ss-checks strong{color:var(--ss-indigo);}
+
+/* Cartes : image plein cadre, sans bandes (Safari iOS) */
+.ss-card__media{position:relative;}
+.ss-card__media img,.ss-card__media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}

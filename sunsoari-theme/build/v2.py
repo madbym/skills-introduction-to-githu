@@ -146,21 +146,48 @@ CAPSULE_STEPS = (
     "<p>3. Referme, puis allume la douche.</p>"
     "<p>Une capsule dure environ 7 à 15 jours selon l'usage (indication du fabricant).</p>"
 )
-INSTALL_STEPS = (
-    "<h3>Installer le pommeau en quelques gestes</h3>"
-    "<p>1. Dévisse ton ancien pommeau du flexible.</p>"
-    "<p>2. Visse le pommeau SHIFT à la main, sans outil.</p>"
+# Fanta's own demo clips. The former brand clip is no longer used: it showed
+# claims we don't make ("élimine le chlore", vitamin C percentage).
+# Each entry: (Shopify file name, steps shown next to it, width % desktop, width % mobile).
+SQUARE, WIDE, TALL = (40, 90), (60, 100), (28, 70)
+SHIFT_INSTALL_STEPS = (
+    "<h3>Installer le pommeau SHIFT</h3>"
+    "<p>1. Insère la capsule, capuchon blanc vers le haut.</p>"
+    "<p>2. Dévisse le bouchon inférieur, place le filtre sédiment (joint vers le haut), puis revisse.</p>"
+    "<p>3. Dévisse ton ancien pommeau et visse le pommeau SHIFT sur le flexible, à la main.</p>"
+)
+SEDIMENT_STEPS = (
+    "<h3>Remplacer le filtre sédiment</h3>"
+    "<p>1. Dévisse le bouchon inférieur du pommeau.</p>"
+    "<p>2. Retire le filtre usagé et insère le neuf, joint vers le haut.</p>"
+    "<p>3. Revisse le bouchon pour bien fermer.</p>"
+)
+ONSHA_INSTALL_STEPS = (
+    "<h3>Installer ton rituel Onsha</h3>"
+    "<p>1. Place le filtre thermal dans la coque de diffusion Home.</p>"
+    "<p>2. Assemble la coque sous le pommeau, puis visse l'ensemble sur ton flexible, à la main.</p>"
     "<p>3. Ouvre l'eau quelques secondes avant ta première douche.</p>"
 )
-# Fanta's own demo clips (square). The former brand clip is no longer used: it
-# showed claims we don't make ("élimine le chlore", vitamin C percentage).
-CAPSULE_VIDEO = ("shift-changer-capsule.mp4", CAPSULE_STEPS)
-INSTALL_VIDEO = ("shift-installer-pommeau.mp4", INSTALL_STEPS)
-SHIFT_VIDEOS = {"Remplacez votre recharge": CAPSULE_VIDEO, "Installez votre produit": INSTALL_VIDEO}
+DISCOVER_SHIFT = "<h3>L'univers SHIFT</h3><p>Le pommeau, ses capsules parfumées et le filtre sédiment, en images.</p>"
+CAPSULE_VIDEO = ("shift-changer-capsule.mp4", CAPSULE_STEPS) + SQUARE
+SHIFT_INSTALL = ("shift-installer-pommeau-etapes.mp4", SHIFT_INSTALL_STEPS) + WIDE
+SEDIMENT_VIDEO = ("shift-remplacer-filtre-sediment.mp4", SEDIMENT_STEPS) + WIDE
+SHIFT_DISCOVER = ("v24044gl0000d7mhqg7og65lq73dilq0.mp4", DISCOVER_SHIFT) + WIDE
+ONSHA_INSTALL = ("b687687fb41c419e981d8e477d201a41.mov", ONSHA_INSTALL_STEPS) + TALL
+SHIFT_BOX = {"Découvrez votre coffret": SHIFT_DISCOVER, "Installez votre produit": SHIFT_INSTALL,
+             "Remplacez votre recharge": CAPSULE_VIDEO}
+ONSHA_HOME = {"Installez votre produit": ONSHA_INSTALL}
 VIDEOS = {
-    "product.pack-6-capsules-vitaminee.json": SHIFT_VIDEOS,
-    "product.box-rituel-douche-complet.json": SHIFT_VIDEOS,
-    "product.pommeau-de-douche-filtran-2.json": SHIFT_VIDEOS,
+    "product.pack-6-capsules-vitaminee.json": {"Remplacez votre recharge": CAPSULE_VIDEO},
+    "product.pack-3-sediments-pure-wat.json": {"Remplacez votre recharge": SEDIMENT_VIDEO},
+    "product.box-rituel-douche-complet.json": SHIFT_BOX,
+    "product.pommeau-de-douche-filtran-2.json": SHIFT_BOX,
+    "product.json": ONSHA_HOME,
+    "product.coque-de-diffusion.json": ONSHA_HOME,
+    "product.starter-home.json": ONSHA_HOME,
+    "product.premier-rituel-home.json": ONSHA_HOME,
+    "product.coffret-home.json": ONSHA_HOME,
+    "product.kit-decouverte-home.json": ONSHA_HOME,
 }
 
 
@@ -171,12 +198,12 @@ def add_videos(section, videos):
         entry = videos.get(tab["settings"].get("tab_name"))
         if not entry:
             continue
-        name, steps = entry
+        name, steps, width, width_mobile = entry
         key = next(k for k in tab["block_order"] if tab["blocks"][k]["type"] == "video")
         video = json.loads(json.dumps(tab["blocks"][key]))
         video["settings"].update({"source": "uploaded", "video": f"shopify://files/videos/{name}",
                                   "show_on_display": "desktop_and_mobile", "video_autoplay": True,
-                                  "video_loop": True, "custom_width": 40, "custom_width_mobile": 90})
+                                  "video_loop": True, "custom_width": width, "custom_width_mobile": width_mobile})
         text = json.loads(json.dumps(text_model))
         text["settings"].update({"text": steps, "text_style": "paragraph", "alignment": "left",
                                  "alignment_mobile": "left"})

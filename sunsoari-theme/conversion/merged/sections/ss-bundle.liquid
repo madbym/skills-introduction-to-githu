@@ -1,6 +1,6 @@
 {%- comment -%}
-  Sunsoari · Compose ton rituel (inspiration « Compose ton bundle »)
-  - Une ligne par variante (senteur, couleur…), regroupées par onglets (blocs « Catégorie »).
+  Sunsoari · Compose ton rituel
+  - Cartes produits (grande photo + pastilles de senteur / couleur), regroupées par onglets (blocs « Catégorie »).
   - Paliers « quantité:remise:CODE » : au clic sur le bouton, les produits sont ajoutés au panier
     puis le code caché du palier atteint est appliqué via /discount/CODE.
   - Les codes doivent exister dans Shopify (Remises) avec le même minimum de produits.
@@ -15,164 +15,202 @@
 -%}
 <section class="ssb" id="{{ uid }}" data-tiers="{{ section.settings.tiers | escape }}">
   <div class="ssb__hero">
-    {%- if section.settings.eyebrow != blank -%}<span class="ss-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
-    <h2 class="ssb__h">{{ section.settings.heading }}</h2>
-    {%- if section.settings.text != blank -%}<div class="ssb__intro">{{ section.settings.text }}</div>{%- endif -%}
+    {%- if section.settings.image != blank -%}
+      <div class="ssb__hero-media">{{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'eager', sizes: '(min-width: 990px) 50vw, 100vw', alt: section.settings.heading }}</div>
+    {%- endif -%}
+    <div class="ssb__hero-txt">
+      {%- if section.settings.eyebrow != blank -%}<span class="ssb__eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      <h1 class="ssb__h">{{ section.settings.heading }}</h1>
+      {%- if section.settings.text != blank -%}<div class="ssb__intro">{{ section.settings.text }}</div>{%- endif -%}
+      <ol class="ssb__steps">
+        {%- for t in tiers -%}
+          {%- assign p = t | split: ':' -%}
+          <li><strong>-{{ p[1] | strip }} %</strong><span>dès {{ p[0] | strip }} produits</span></li>
+        {%- endfor -%}
+      </ol>
+    </div>
   </div>
 
-  <div class="ssb__meter" data-meter>
-    <div class="ssb__meter-top">
-      <p class="ssb__pct"><strong data-pct>0 %</strong> <span data-pct-label>de remise pour l'instant</span></p>
-      <p class="ssb__nexttier" data-nexttier></p>
+  <div class="ssb__bar" data-meter>
+    <div class="ssb__bar-in">
+      <p class="ssb__msg" data-msg>Ajoute {{ min_qty }} produits pour débloquer ta première remise</p>
+      <div class="ssb__track" aria-hidden="true">
+        <span class="ssb__fill" data-fill></span>
+        {%- for t in tiers -%}
+          {%- assign p = t | split: ':' -%}
+          {%- assign q = p[0] | strip | plus: 0 -%}
+          <span class="ssb__dot" style="left:{{ q | times: 100.0 | divided_by: max_qty }}%" data-tick="{{ q }}"><i>-{{ p[1] | strip }} %</i></span>
+        {%- endfor -%}
+      </div>
     </div>
-    <div class="ssb__gauge"><span class="ssb__fill" data-fill></span></div>
-    <div class="ssb__ticks">
-      {%- for t in tiers -%}
-        {%- assign p = t | split: ':' -%}
-        {%- assign q = p[0] | strip | plus: 0 -%}
-        <span style="left:{{ q | times: 100.0 | divided_by: max_qty }}%" data-tick="{{ q }}">-{{ p[1] | strip }} %</span>
+  </div>
+
+  <div class="ssb__wrap">
+    <div class="ssb__tabs" role="tablist" aria-label="Catégories">
+      <button type="button" class="is-on" data-tab="all" role="tab" aria-selected="true">Tout</button>
+      {%- for block in section.blocks -%}
+        <button type="button" data-tab="{{ block.id }}" role="tab" aria-selected="false" {{ block.shopify_attributes }}>{{ block.settings.title }}</button>
       {%- endfor -%}
     </div>
-  </div>
 
-  <div class="ssb__tabs" role="tablist" aria-label="Catégories">
-    <button type="button" class="is-on" data-tab="all" role="tab" aria-selected="true">Tout</button>
     {%- for block in section.blocks -%}
-      <button type="button" data-tab="{{ block.id }}" role="tab" aria-selected="false" {{ block.shopify_attributes }}>{{ block.settings.title }}</button>
-    {%- endfor -%}
-  </div>
-
-  <div class="ssb__list">
-    {%- for block in section.blocks -%}
-      {%- assign n_rows = 0 -%}
-      {%- for p in block.settings.products -%}{%- for v in p.variants -%}{%- if v.available -%}{%- assign n_rows = n_rows | plus: 1 -%}{%- endif -%}{%- endfor -%}{%- endfor -%}
       <div class="ssb__group" data-group="{{ block.id }}">
-        <div class="ssb__group-head"><h3>{{ block.settings.title }}</h3><span>{{ n_rows }} produit{% if n_rows > 1 %}s{% endif %}</span></div>
-        {%- for p in block.settings.products -%}
-          {%- assign short = p.title | remove: 'Onsha · ' | remove: 'SHIFT · ' | remove: 'Sullab · ' -%}
-          {%- for v in p.variants -%}
-            {%- unless v.available -%}{%- continue -%}{%- endunless -%}
-            {%- liquid
-              assign key = v.title | downcase
-              assign tone = '#C4D3E4'
-              case key
-                when 'hinoki', 'hinoki spring'
-                  assign tone = '#D8BC94'
-                when 'océan', 'ocean', 'aqua blue'
-                  assign tone = '#8DB8DE'
-                when 'forêt de pin', 'menthe'
-                  assign tone = '#9CC7A4'
-                when 'fleur de prunier', 'rose', 'cherry blossom', 'patchouli & rose'
-                  assign tone = '#EBB3BF'
-                when 'lavande'
-                  assign tone = '#C2B3DE'
-                when 'noir'
-                  assign tone = '#9AA3AD'
-                when 'bleu ciel'
-                  assign tone = '#B5D6EE'
-                when 'fruité'
-                  assign tone = '#F2C48D'
-                when 'découverte'
-                  assign tone = '#D9CDEB'
-              endcase
-              if p.variants.size > 1
-                assign line1 = v.title
-                assign line2 = short
-              else
-                assign line1 = short
-                assign line2 = p.vendor
-              endif
-              assign img = v.featured_image | default: p.featured_image
-            -%}
-            <div class="ssb__row" data-row data-id="{{ v.id }}" data-price="{{ v.price }}" data-max="{% if v.inventory_management == 'shopify' and v.inventory_policy == 'deny' %}{{ v.inventory_quantity }}{% else %}99{% endif %}" style="--tone:{{ tone }}">
-              <div class="ssb__thumb">{%- if img -%}{{ img | image_url: width: 200 | image_tag: loading: 'lazy', alt: line1 }}{%- endif -%}</div>
-              <div class="ssb__txt">
-                <a class="ssb__name" href="{{ v.url }}">{{ line1 }}</a>
-                <span class="ssb__sub">{{ line2 }}</span>
+        <h2 class="ssb__group-h">{{ block.settings.title }}</h2>
+        <div class="ssb__grid">
+          {%- for p in block.settings.products -%}
+            {%- unless p.available -%}{%- continue -%}{%- endunless -%}
+            {%- assign v0 = p.selected_or_first_available_variant -%}
+            {%- assign short = p.title | remove: 'Onsha · ' | remove: 'SHIFT · ' | remove: 'Sullab · ' -%}
+            <article class="ssb__card" data-card>
+              <div class="ssb__media">
+                {%- assign img0 = v0.featured_image | default: p.featured_image -%}
+                {%- if img0 -%}{{ img0 | image_url: width: 700 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 25vw, 50vw', alt: short }}{%- endif -%}
+                <span class="ssb__count" data-count hidden></span>
               </div>
-              <span class="ssb__price">{{ v.price | money }}</span>
-              <div class="ssb__ctl">
-                <button type="button" class="ssb__minus" data-minus aria-label="Retirer {{ line1 | escape }}">−</button>
-                <span class="ssb__q" data-q aria-live="polite">0</span>
-                <button type="button" class="ssb__plus" data-plus aria-label="Ajouter {{ line1 | escape }}">+</button>
+              <div class="ssb__body">
+                <span class="ssb__brand">{{ p.vendor }}</span>
+                <a class="ssb__name" href="{{ p.url }}">{{ short }}</a>
+                {%- if p.variants.size > 1 -%}
+                  <div class="ssb__chips" role="radiogroup" aria-label="Choix pour {{ short | escape }}">
+                    {%- for v in p.variants -%}
+                      {%- liquid
+                        assign key = v.title | downcase
+                        assign tone = ''
+                        case key
+                          when 'hinoki', 'hinoki spring'
+                            assign tone = '#C8A57A'
+                          when 'océan', 'ocean', 'aqua blue'
+                            assign tone = '#5E97C9'
+                          when 'forêt de pin'
+                            assign tone = '#6E9E78'
+                          when 'menthe'
+                            assign tone = '#8FCBB0'
+                          when 'fleur de prunier', 'rose', 'cherry blossom', 'patchouli & rose'
+                            assign tone = '#E3A0AE'
+                          when 'lavande'
+                            assign tone = '#B6A6D9'
+                          when 'noir'
+                            assign tone = '#2B3640'
+                          when 'bleu ciel'
+                            assign tone = '#A9CDEB'
+                          when 'fruité'
+                            assign tone = '#EDB46E'
+                          when 'découverte'
+                            assign tone = '#C9BCE3'
+                          when 'sans senteur'
+                            assign tone = '#E6E2DC'
+                        endcase
+                        assign vimg = v.featured_image | default: p.featured_image
+                      -%}
+                      <button type="button" class="ssb__chip{% if v.id == v0.id %} is-on{% endif %}" role="radio" aria-checked="{% if v.id == v0.id %}true{% else %}false{% endif %}" {% unless v.available %}disabled{% endunless %}
+                        data-variant="{{ v.id }}" data-price="{{ v.price }}" data-label="{{ v.title | escape }}" data-max="{% if v.inventory_management == 'shopify' and v.inventory_policy == 'deny' %}{{ v.inventory_quantity }}{% else %}99{% endif %}"
+                        data-src="{% if vimg %}{{ vimg | image_url: width: 700 }}{% endif %}">
+                        {%- if tone != '' -%}<i style="background:{{ tone }}"></i>{%- endif -%}{{ v.title }}
+                      </button>
+                    {%- endfor -%}
+                  </div>
+                {%- else -%}
+                  <div class="ssb__chips" hidden>
+                    <button type="button" class="ssb__chip is-on" data-variant="{{ v0.id }}" data-price="{{ v0.price }}" data-label="{{ short | escape }}" data-max="{% if v0.inventory_management == 'shopify' and v0.inventory_policy == 'deny' %}{{ v0.inventory_quantity }}{% else %}99{% endif %}" data-src="{% if img0 %}{{ img0 | image_url: width: 700 }}{% endif %}">{{ short }}</button>
+                  </div>
+                {%- endif -%}
+                <div class="ssb__foot">
+                  <span class="ssb__price" data-price-label>{{ v0.price | money }}</span>
+                  <div class="ssb__ctl">
+                    <button type="button" class="ssb__add" data-plus>Ajouter</button>
+                    <div class="ssb__step" data-step hidden>
+                      <button type="button" data-minus aria-label="Retirer">−</button>
+                      <span data-q aria-live="polite">0</span>
+                      <button type="button" data-plus aria-label="Ajouter encore">+</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            </article>
           {%- endfor -%}
-        {%- endfor -%}
+        </div>
       </div>
     {%- endfor -%}
     {%- if section.settings.note != blank -%}<p class="ssb__note">{{ section.settings.note }}</p>{%- endif -%}
   </div>
 
   <div class="ssb__tray" data-tray>
-    <div class="ssb__tray-top">
-      <div class="ssb__slots" data-slots>
-        {%- for i in (1..max_qty) -%}<span class="ssb__slot"></span>{%- endfor -%}
-      </div>
+    <div class="ssb__tray-in">
+      <div class="ssb__slots" data-slots>{%- for i in (1..max_qty) -%}<span class="ssb__slot"></span>{%- endfor -%}</div>
       <div class="ssb__sum"><span class="ssb__was" data-was></span><strong data-now>0,00 €</strong></div>
+      <button type="button" class="ssb__cta" data-add disabled>Ajoute {{ min_qty }} produits pour commencer</button>
     </div>
-    <button type="button" class="ssb__cta" data-add disabled>Ajoute {{ min_qty }} produits pour commencer</button>
-    <p class="ssb__legal">Remise appliquée automatiquement au panier depuis cette page. Non cumulable avec les autres remises.</p>
   </div>
 </section>
 
 <style>
-#{{ uid }}{--ink:#042850;--mist:#7591AA;--powder:#C4D3E4;--cream:#EEEBE7;--line:#DDD8D0;--white:#FBFAF8;background:var(--cream);padding:28px 0 0;color:#2B3640;}
-#{{ uid }} .ssb__hero{text-align:center;padding:0 16px 18px;max-width:640px;margin:0 auto;}
-#{{ uid }} .ssb__h{font-size:clamp(28px,6vw,44px);line-height:1.05;color:var(--ink);margin:6px 0 8px;font-weight:600;letter-spacing:-.01em;}
-#{{ uid }} .ssb__intro{color:#5A6671;font-size:15px;}
+#{{ uid }} [hidden]{display:none!important;}
+#{{ uid }}{--ink:#042850;--mist:#7591AA;--powder:#C4D3E4;--cream:#EEEBE7;--sand:#E6DED1;--line:#E4DED6;--white:#FBFAF8;--muted:#5A6671;background:var(--white);color:#2B3640;}
+#{{ uid }} .ssb__hero{display:grid;gap:18px;max-width:1240px;margin:0 auto;padding:16px 16px 8px;align-items:center;}
+@media(min-width:990px){#{{ uid }} .ssb__hero{grid-template-columns:1.1fr 1fr;gap:48px;padding:32px 16px 16px;}}
+#{{ uid }} .ssb__hero-media{border-radius:22px;overflow:hidden;aspect-ratio:16/10;background:var(--cream);}
+#{{ uid }} .ssb__hero-media img{width:100%;height:100%;object-fit:cover;display:block;}
+#{{ uid }} .ssb__eyebrow{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);font-weight:700;margin-bottom:8px;}
+#{{ uid }} .ssb__h{font-size:clamp(30px,5vw,46px);line-height:1.05;margin:0 0 10px;color:var(--ink);font-weight:500;}
+#{{ uid }} .ssb__intro{color:var(--muted);font-size:15px;line-height:1.55;}
 #{{ uid }} .ssb__intro p{margin:0;}
-#{{ uid }} .ssb__meter{position:sticky;top:var(--header-height,0px);z-index:6;background:var(--ink);color:#fff;border-radius:22px;margin:0 16px;padding:18px 20px 14px;max-width:1100px;box-sizing:border-box;}
-@media(min-width:1132px){#{{ uid }} .ssb__meter{margin:0 auto;}}
-#{{ uid }} .ssb__meter-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;}
-#{{ uid }} .ssb__pct{margin:0;font-size:14px;opacity:.95;}
-#{{ uid }} .ssb__pct strong{font-size:34px;line-height:1;margin-right:6px;}
-#{{ uid }} .ssb__nexttier{margin:0;font-size:13px;opacity:.9;}
-#{{ uid }} .ssb__gauge{height:10px;border-radius:99px;background:rgba(255,255,255,.18);margin:14px 0 6px;overflow:hidden;}
-#{{ uid }} .ssb__fill{display:block;height:100%;width:0;background:var(--powder);border-radius:99px;transition:width .3s;}
-#{{ uid }} .ssb__ticks{position:relative;height:18px;font-size:12px;}
-#{{ uid }} .ssb__ticks span{position:absolute;transform:translateX(-100%);opacity:.6;white-space:nowrap;transition:opacity .2s;}
-#{{ uid }} .ssb__ticks span.is-on{opacity:1;font-weight:700;}
-#{{ uid }} .ssb__tabs{display:flex;gap:8px;overflow-x:auto;padding:16px;max-width:1100px;margin:0 auto;scrollbar-width:none;box-sizing:border-box;}
+#{{ uid }} .ssb__steps{list-style:none;display:flex;gap:8px;padding:0;margin:16px 0 0;flex-wrap:wrap;}
+#{{ uid }} .ssb__steps li{flex:1 1 90px;background:var(--cream);border-radius:16px;padding:12px 14px;display:flex;flex-direction:column;gap:2px;}
+#{{ uid }} .ssb__steps strong{font-size:20px;color:var(--ink);}
+#{{ uid }} .ssb__steps span{font-size:12.5px;color:var(--muted);}
+#{{ uid }} .ssb__bar{position:sticky;top:var(--header-height,0px);z-index:6;background:rgba(251,250,248,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 16px 10px;}
+#{{ uid }} .ssb__bar-in{max-width:1240px;margin:0 auto;}
+#{{ uid }} .ssb__msg{margin:0 0 10px;font-size:14px;color:var(--ink);text-align:center;}
+#{{ uid }} .ssb__msg b{font-weight:700;}
+#{{ uid }} .ssb__track{position:relative;height:6px;background:var(--cream);border-radius:99px;margin:0 14px 22px;}
+#{{ uid }} .ssb__fill{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--mist);border-radius:99px;transition:width .3s;}
+#{{ uid }} .ssb__dot{position:absolute;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;border:2px solid var(--powder);transition:all .2s;}
+#{{ uid }} .ssb__dot i{position:absolute;top:16px;left:50%;transform:translateX(-50%);font-style:normal;font-size:11px;color:var(--muted);white-space:nowrap;}
+#{{ uid }} .ssb__dot.is-on{background:var(--ink);border-color:var(--ink);}
+#{{ uid }} .ssb__dot.is-on i{color:var(--ink);font-weight:700;}
+#{{ uid }} .ssb__wrap{max-width:1240px;margin:0 auto;padding:6px 16px 32px;}
+#{{ uid }} .ssb__tabs{display:flex;gap:8px;overflow-x:auto;padding:10px 0 4px;scrollbar-width:none;}
 #{{ uid }} .ssb__tabs::-webkit-scrollbar{display:none;}
-#{{ uid }} .ssb__tabs button{flex:0 0 auto;border:0;border-radius:99px;padding:11px 18px;font:inherit;font-size:14px;background:var(--white);color:var(--ink);cursor:pointer;}
-#{{ uid }} .ssb__tabs button.is-on{background:var(--ink);color:#fff;font-weight:600;}
-#{{ uid }} .ssb__list{max-width:1100px;margin:0 auto;padding:0 16px 24px;box-sizing:border-box;}
-#{{ uid }} .ssb__group{margin-bottom:18px;}
+#{{ uid }} .ssb__tabs button{flex:0 0 auto;border:1px solid var(--line);border-radius:99px;padding:9px 16px;font:inherit;font-size:14px;background:#fff;color:var(--ink);cursor:pointer;}
+#{{ uid }} .ssb__tabs button.is-on{background:var(--ink);border-color:var(--ink);color:#fff;}
 #{{ uid }} .ssb__group[hidden]{display:none;}
-#{{ uid }} .ssb__group-head{display:flex;justify-content:space-between;align-items:baseline;margin:10px 4px 10px;}
-#{{ uid }} .ssb__group-head h3{margin:0;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);}
-#{{ uid }} .ssb__group-head span{font-size:13px;color:#5A6671;}
-#{{ uid }} .ssb__row{display:grid;grid-template-columns:64px 1fr auto auto;align-items:center;gap:12px;padding:10px 10px 10px 10px;margin-bottom:10px;border-radius:20px;background:linear-gradient(90deg,var(--tone) 0%,color-mix(in srgb,var(--tone) 35%,#fff) 45%,var(--white) 80%);box-shadow:0 1px 0 rgba(4,40,80,.04);transition:box-shadow .15s;}
-#{{ uid }} .ssb__row.is-picked{box-shadow:0 0 0 2px var(--ink) inset;}
-#{{ uid }} .ssb__thumb{width:64px;height:64px;border-radius:14px;overflow:hidden;background:#fff;}
-#{{ uid }} .ssb__thumb img{width:100%;height:100%;object-fit:cover;display:block;}
-#{{ uid }} .ssb__txt{min-width:0;display:flex;flex-direction:column;}
-#{{ uid }} .ssb__name{font-weight:700;color:var(--ink);text-decoration:none;font-size:16px;line-height:1.2;}
-#{{ uid }} .ssb__sub{font-size:13px;color:#4E6275;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#{{ uid }} .ssb__group-h{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);margin:22px 0 12px;font-weight:700;}
+#{{ uid }} .ssb__grid{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));}
+@media(min-width:750px){#{{ uid }} .ssb__grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}}
+@media(min-width:1100px){#{{ uid }} .ssb__grid{grid-template-columns:repeat(4,minmax(0,1fr));}}
+#{{ uid }} .ssb__card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s;min-width:0;}
+#{{ uid }} .ssb__card.is-picked{border-color:var(--ink);box-shadow:0 6px 18px rgba(4,40,80,.08);}
+#{{ uid }} .ssb__media{position:relative;aspect-ratio:1/1;background:var(--cream);}
+#{{ uid }} .ssb__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+#{{ uid }} .ssb__count{position:absolute;top:10px;right:10px;background:var(--ink);color:#fff;border-radius:99px;font-size:12px;font-weight:700;padding:4px 9px;}
+#{{ uid }} .ssb__body{padding:12px 12px 14px;display:flex;flex-direction:column;gap:6px;flex:1;}
+#{{ uid }} .ssb__brand{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);font-weight:700;}
+#{{ uid }} .ssb__name{color:var(--ink);font-weight:600;font-size:15px;line-height:1.25;text-decoration:none;}
+#{{ uid }} .ssb__chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px;}
+#{{ uid }} .ssb__chip{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);background:#fff;border-radius:99px;padding:4px 9px 4px 6px;font:inherit;font-size:11.5px;color:#2B3640;cursor:pointer;line-height:1.2;}
+#{{ uid }} .ssb__chip i{width:11px;height:11px;border-radius:50%;flex:0 0 auto;box-shadow:0 0 0 1px rgba(0,0,0,.06) inset;}
+#{{ uid }} .ssb__chip.is-on{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink) inset;font-weight:600;}
+#{{ uid }} .ssb__chip:disabled{opacity:.4;text-decoration:line-through;cursor:not-allowed;}
+#{{ uid }} .ssb__foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto;padding-top:8px;}
 #{{ uid }} .ssb__price{font-weight:700;color:var(--ink);font-size:15px;white-space:nowrap;}
-#{{ uid }} .ssb__ctl{display:flex;align-items:center;gap:6px;}
-#{{ uid }} .ssb__ctl button{width:44px;height:44px;border-radius:50%;border:0;background:var(--ink);color:#fff;font-size:22px;line-height:1;cursor:pointer;}
-#{{ uid }} .ssb__minus,#{{ uid }} .ssb__q{display:none;}
-#{{ uid }} .ssb__row.is-picked .ssb__minus{display:block;background:#fff;color:var(--ink);box-shadow:0 0 0 1px var(--line) inset;width:34px;height:34px;font-size:18px;}
-#{{ uid }} .ssb__row.is-picked .ssb__q{display:block;min-width:16px;text-align:center;font-weight:700;color:var(--ink);}
-#{{ uid }} .ssb__ctl button:disabled{opacity:.35;cursor:not-allowed;}
-#{{ uid }} .ssb__note{font-size:13px;color:#5A6671;text-align:center;margin:8px 0 0;}
-#{{ uid }} .ssb__tray{position:sticky;bottom:0;z-index:7;background:#fff;border-radius:24px 24px 0 0;box-shadow:0 -8px 24px rgba(4,40,80,.08);padding:14px 16px 12px;}
-#{{ uid }} .ssb__tray>*{max-width:1100px;margin-left:auto;margin-right:auto;}
-#{{ uid }} .ssb__tray-top{display:flex;align-items:center;justify-content:space-between;gap:10px;}
-#{{ uid }} .ssb__slots{display:flex;gap:5px;flex-wrap:nowrap;overflow:hidden;}
-#{{ uid }} .ssb__slot{width:30px;height:30px;border-radius:50%;border:2px dashed #CFC8BE;background:var(--cream);flex:0 0 auto;overflow:hidden;}
-#{{ uid }} .ssb__slot.is-full{border:2px solid var(--powder);background:#fff;}
+#{{ uid }} .ssb__add{border:0;border-radius:99px;background:var(--ink);color:#fff;font:inherit;font-size:13px;font-weight:600;padding:9px 14px;cursor:pointer;}
+#{{ uid }} .ssb__step{display:flex;align-items:center;border:1px solid var(--line);border-radius:99px;background:#fff;}
+#{{ uid }} .ssb__step button{width:32px;height:32px;border:0;background:none;font-size:18px;color:var(--ink);cursor:pointer;line-height:1;}
+#{{ uid }} .ssb__step button:disabled{opacity:.3;cursor:not-allowed;}
+#{{ uid }} .ssb__step span{min-width:16px;text-align:center;font-weight:700;font-size:14px;color:var(--ink);}
+#{{ uid }} .ssb__note{font-size:13px;color:var(--muted);text-align:center;margin:22px auto 0;max-width:620px;}
+#{{ uid }} .ssb__tray{position:sticky;bottom:0;z-index:7;background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(4,40,80,.06);padding:12px 16px calc(12px + env(safe-area-inset-bottom));}
+#{{ uid }} .ssb__tray-in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:10px 14px;align-items:center;}
+#{{ uid }} .ssb__slots{display:flex;gap:5px;min-width:0;overflow:hidden;}
+#{{ uid }} .ssb__slot{width:30px;height:30px;border-radius:50%;background:var(--cream);border:1.5px dashed #CFC8BE;flex:0 0 auto;overflow:hidden;}
+#{{ uid }} .ssb__slot.is-full{border:1.5px solid var(--powder);background:#fff;}
 #{{ uid }} .ssb__slot img{width:100%;height:100%;object-fit:cover;display:block;}
-@media(min-width:750px){#{{ uid }} .ssb__slot{width:44px;height:44px;}}
 #{{ uid }} .ssb__sum{text-align:right;white-space:nowrap;}
-#{{ uid }} .ssb__was{display:block;font-size:12px;color:#5A6671;text-decoration:line-through;min-height:14px;}
-#{{ uid }} .ssb__sum strong{font-size:22px;color:var(--ink);}
-#{{ uid }} .ssb__cta{display:block;width:100%;margin-top:12px;border:0;border-radius:99px;padding:16px;font:inherit;font-size:16px;font-weight:700;background:var(--ink);color:#fff;cursor:pointer;}
+#{{ uid }} .ssb__was{display:block;font-size:12px;color:var(--muted);text-decoration:line-through;min-height:14px;}
+#{{ uid }} .ssb__sum strong{font-size:20px;color:var(--ink);}
+#{{ uid }} .ssb__cta{grid-column:1/-1;border:0;border-radius:99px;padding:15px;font:inherit;font-size:15px;font-weight:700;background:var(--ink);color:#fff;cursor:pointer;}
 #{{ uid }} .ssb__cta:disabled{background:var(--cream);color:#7B8590;cursor:not-allowed;}
-#{{ uid }} .ssb__legal{font-size:11px;color:#5A6671;text-align:center;margin:8px auto 0;}
-@media(max-width:420px){#{{ uid }} .ssb__row{grid-template-columns:56px 1fr auto;}#{{ uid }} .ssb__thumb{width:56px;height:56px;}#{{ uid }} .ssb__price{grid-column:2;grid-row:2;margin-top:-6px;font-size:14px;}#{{ uid }} .ssb__ctl{grid-column:3;grid-row:1/3;}}
+@media(min-width:750px){#{{ uid }} .ssb__tray-in{grid-template-columns:auto 1fr auto;}#{{ uid }} .ssb__cta{grid-column:auto;min-width:300px;}#{{ uid }} .ssb__sum{order:2;}#{{ uid }} .ssb__slot{width:40px;height:40px;}}
 </style>
 
 <script>
@@ -181,48 +219,64 @@
   var tiers=(root.dataset.tiers||'').split(',').map(function(t){var p=t.split(':');return {q:+p[0],d:+p[1],code:(p[2]||'').trim()};}).filter(function(t){return t.q>0;}).sort(function(a,b){return a.q-b.q;});
   var maxQ=tiers.length?tiers[tiers.length-1].q:1, minQ=tiers.length?tiers[0].q:1;
   var fmt=new Intl.NumberFormat('fr-FR',{style:'currency',currency:'{{ cart.currency.iso_code | default: "EUR" }}'});
-  var rows=[].slice.call(root.querySelectorAll('[data-row]'));
-  var picks=[]; // ordre d'ajout, pour remplir les ronds
-  function q(r){return +r.querySelector('[data-q]').textContent;}
-  function setQ(r,v){r.querySelector('[data-q]').textContent=v;r.classList.toggle('is-picked',v>0);r.querySelector('[data-plus]').disabled=v>=+r.dataset.max;}
+  var qty={}, picks=[], price={};
+  root.querySelectorAll('[data-variant]').forEach(function(c){price[c.dataset.variant]=+c.dataset.price;}); // qty par variante ; picks = ordre d'ajout (chips) pour les ronds
+  function chipOf(card){return card.querySelector('.ssb__chip.is-on');}
+  function cardTotal(card){var n=0;card.querySelectorAll('[data-variant]').forEach(function(c){n+=qty[c.dataset.variant]||0;});return n;}
+  function paintCard(card){
+    var c=chipOf(card),v=c.dataset.variant,k=qty[v]||0,tot=cardTotal(card);
+    card.querySelector('[data-price-label]').textContent=fmt.format(+c.dataset.price/100);
+    card.querySelector('[data-q]').textContent=k;
+    card.querySelector('.ssb__add').hidden=k>0; card.querySelector('[data-step]').hidden=k===0;
+    card.querySelectorAll('[data-plus]').forEach(function(b){b.disabled=k>=+c.dataset.max;});
+    var badge=card.querySelector('[data-count]'); badge.hidden=tot===0; badge.textContent=tot+' dans ton rituel';
+    card.classList.toggle('is-picked',tot>0);
+  }
   function refresh(){
-    var n=0,sub=0;rows.forEach(function(r){var k=q(r);n+=k;sub+=k*(+r.dataset.price);});
+    var n=0,sub=0;
+    Object.keys(qty).forEach(function(v){var k=qty[v];if(k>0){n+=k;sub+=k*price[v];}});
     var cur=null,next=null;tiers.forEach(function(t){if(n>=t.q)cur=t;else if(!next)next=t;});
     var d=cur?cur.d:0,now=Math.round(sub*(100-d)/100);
-    root.querySelector('[data-pct]').textContent=d+' %';
-    root.querySelector('[data-pct-label]').textContent=d?'de remise sur ton rituel':"de remise pour l'instant";
-    root.querySelector('[data-nexttier]').textContent=next?('Dès '+next.q+' produits : -'+next.d+' %'+(n?' · encore '+(next.q-n):'')):'Remise maximale atteinte';
+    var msg=root.querySelector('[data-msg]');
+    if(!n) msg.innerHTML='Ajoute <b>'+minQ+' produits</b> pour débloquer ta première remise';
+    else if(next) msg.innerHTML=(d?'<b>-'+d+' %</b> sur ton rituel · ':'')+'Encore <b>'+(next.q-n)+' produit'+(next.q-n>1?'s':'')+'</b> pour <b>-'+next.d+' %</b>';
+    else msg.innerHTML='Bravo, tu profites de <b>-'+d+' %</b> sur tout ton rituel';
     root.querySelector('[data-fill]').style.width=Math.min(100,n/maxQ*100)+'%';
-    root.querySelectorAll('[data-tick]').forEach(function(s){s.classList.toggle('is-on',cur&&+s.dataset.tick===cur.q);});
+    root.querySelectorAll('[data-tick]').forEach(function(s){s.classList.toggle('is-on',n>=+s.dataset.tick);});
     var slots=root.querySelectorAll('.ssb__slot');
-    slots.forEach(function(s,i){var r=picks[i];s.classList.toggle('is-full',!!r);var img=r&&r.querySelector('.ssb__thumb img');s.innerHTML=img?'<img src="'+img.currentSrc.replace(/width=\d+/,'width=100')+'" alt="">':'';});
+    slots.forEach(function(s,i){var c=picks[i];s.classList.toggle('is-full',!!c);s.innerHTML=c&&c.dataset.src?'<img src="'+c.dataset.src.replace(/width=\d+/,'width=120')+'" alt="">':'';});
     root.querySelector('[data-was]').textContent=d?fmt.format(sub/100):'';
     root.querySelector('[data-now]').textContent=fmt.format(now/100);
     var btn=root.querySelector('[data-add]');
     if(n<minQ){btn.disabled=true;btn.textContent='Ajoute '+(minQ-n)+' produit'+(minQ-n>1?'s':'')+(n?' de plus':' pour commencer');}
-    else{btn.disabled=false;btn.textContent='Ajouter mon rituel · '+fmt.format(now/100);}
+    else{btn.disabled=false;btn.textContent='Ajouter mon rituel au panier';}
   }
   root.addEventListener('click',function(e){
     var tab=e.target.closest('[data-tab]');
     if(tab){root.querySelectorAll('[data-tab]').forEach(function(b){var on=b===tab;b.classList.toggle('is-on',on);b.setAttribute('aria-selected',on);});
       root.querySelectorAll('[data-group]').forEach(function(g){g.hidden=!(tab.dataset.tab==='all'||g.dataset.group===tab.dataset.tab);});return;}
-    var b=e.target.closest('[data-plus],[data-minus]');if(!b)return;
-    var r=b.closest('[data-row]'),v=q(r);
-    if(b.hasAttribute('data-plus')){if(v>=+r.dataset.max)return;setQ(r,v+1);picks.push(r);}
-    else if(v>0){setQ(r,v-1);var i=picks.lastIndexOf(r);if(i>-1)picks.splice(i,1);}
-    refresh();
+    var card=e.target.closest('[data-card]'); if(!card) return;
+    var chip=e.target.closest('.ssb__chip');
+    if(chip&&!chip.disabled){card.querySelectorAll('.ssb__chip').forEach(function(c){var on=c===chip;c.classList.toggle('is-on',on);c.setAttribute('aria-checked',on);});
+      var img=card.querySelector('.ssb__media img');if(img&&chip.dataset.src){img.removeAttribute('srcset');img.src=chip.dataset.src;}
+      paintCard(card);return;}
+    var b=e.target.closest('[data-plus],[data-minus]'); if(!b||b.disabled) return;
+    var c=chipOf(card),v=c.dataset.variant,k=qty[v]||0;
+    if(b.hasAttribute('data-plus')){if(k>=+c.dataset.max)return;qty[v]=k+1;picks.push(c);}
+    else if(k>0){qty[v]=k-1;var i=picks.lastIndexOf(c);if(i>-1)picks.splice(i,1);}
+    paintCard(card);refresh();
   });
   root.querySelector('[data-add]').addEventListener('click',function(){
-    var btn=this,list=[],n=0;rows.forEach(function(r){var k=q(r);if(k>0){list.push({id:+r.dataset.id,quantity:k});n+=k;}});
+    var btn=this,list=[],n=0;Object.keys(qty).forEach(function(v){if(qty[v]>0){list.push({id:+v,quantity:qty[v]});n+=qty[v];}});
     if(n<minQ)return;var cur=null;tiers.forEach(function(t){if(n>=t.q)cur=t;});
     btn.disabled=true;btn.textContent='Ajout en cours…';
     var base=(window.Shopify&&Shopify.routes&&Shopify.routes.root)||'/';
     fetch(base+'cart/add.js',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({items:list})})
       .then(function(r){if(!r.ok)throw r;return r.json();})
       .then(function(){window.location.href=cur&&cur.code?base+'discount/'+encodeURIComponent(cur.code)+'?redirect='+encodeURIComponent(base+'cart'):base+'cart';})
-      .catch(function(){btn.disabled=false;refresh();alert("Un produit n'a pas pu être ajouté (stock insuffisant ?). Ajuste les quantités et réessaie.");});
+      .catch(function(){refresh();alert("Un produit n'a pas pu être ajouté (stock insuffisant ?). Ajuste les quantités et réessaie.");});
   });
-  rows.forEach(function(r){setQ(r,0);});
+  root.querySelectorAll('[data-card]').forEach(paintCard);
   refresh();
 })();
 </script>
@@ -232,6 +286,7 @@
   "name": "Compose ton rituel",
   "tag": "div",
   "settings": [
+    { "type": "image_picker", "id": "image", "label": "Photo d'ambiance" },
     { "type": "text", "id": "eyebrow", "label": "Surtitre" },
     { "type": "text", "id": "heading", "label": "Titre", "default": "Compose ton rituel" },
     { "type": "richtext", "id": "text", "label": "Texte" },

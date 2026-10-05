@@ -138,23 +138,23 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Housse installée",
+            "title": "Six coloris à associer",
             "text": "",
             "tag": "",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/Travel-Head_Cover_07.jpg"
+            "image": "shopify://shop_images/onsha-housse-douchette-collection-coloris.jpg"
           }
         },
         "b2": {
           "type": "item",
           "settings": {
-            "title": "Les coloris",
+            "title": "Housse installée sur la douchette",
             "text": "",
             "tag": "",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/onsha-coque-pour-douchette-filtrante-4470942.jpg"
+            "image": "shopify://shop_images/onsha-housse-douchette-alignement-coloris.jpg"
           }
         }
       },
@@ -171,7 +171,7 @@
         "text": "",
         "columns": 2,
         "columns_mobile": "1",
-        "ratio": "4/5",
+        "ratio": "1/1",
         "open_first": false
       }
     },
@@ -215,7 +215,7 @@
         "open_first": false,
         "tip_title": "Les conseils de l'équipe",
         "tip_text": "<p>Tu cherches une petite attention à offrir avec un coffret Onsha ? La housse est le complément parfait : utile, jolie et à petit prix.</p>",
-        "image": "shopify://shop_images/onsha-coque-pour-douchette-filtrante-6585675.jpg"
+        "image": "shopify://shop_images/onsha-housse-douchette-menthe.jpg"
       }
     },
     "ss_faq": {

@@ -156,3 +156,5 @@
 /* Visuels : image plein cadre, sans bande beige (Safari iOS) */
 .ss-visual{position:relative;}
 .ss-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+/* Visuels : pas de cadre visible autour des images */
+.ss-visual{background:transparent;border:0;box-shadow:none;}

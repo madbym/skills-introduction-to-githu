@@ -168,3 +168,7 @@
 .ss-offer__price{grid-area:price;justify-self:end;font-size:15px;font-weight:700;color:var(--ss-indigo);margin:0;white-space:nowrap;}
 .ss-offer__was{grid-area:was;justify-self:end;min-height:0;white-space:nowrap;}
 .ss-offer:not(:has(.ss-offer__save)){grid-template-areas:"dot qty price" "dot qty was";}
+/* Sunsoari : bandeau de réassurance sur une seule ligne (ordinateur), 2×2 sur mobile */
+.ss-trust:has(> :nth-child(4)){grid-template-columns:repeat(2,1fr);}
+@media(min-width:990px){.ss-trust,.ss-trust:has(> :nth-child(4)){grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:1fr;}}
+.ss-trust div{min-width:0;}

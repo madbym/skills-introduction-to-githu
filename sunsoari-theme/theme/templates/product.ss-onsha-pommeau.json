@@ -476,7 +476,9 @@
           "blocks": {
             "slide_VvVqE1": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "197 micro-trous de précision",
               "blocks": {
                 "image_R0CsTy": {
@@ -484,7 +486,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-8777658.png"
+                    "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-8777658.png",
+                    "image_ratio": "square"
                   }
                 },
                 "text_wkNhFd": {
@@ -510,7 +513,9 @@
             },
             "slide_8HxjSI": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Billes filtrantes intégrées",
               "blocks": {
                 "image_i0B3Jr": {
@@ -518,7 +523,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-7897741.png"
+                    "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-7897741.png",
+                    "image_ratio": "square"
                   }
                 },
                 "text_9ojflj": {
@@ -544,7 +550,9 @@
             },
             "slide_3fS2qH": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Design transparent",
               "blocks": {
                 "image_8iS2G8": {
@@ -552,7 +560,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-7837412.png"
+                    "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-7837412.png",
+                    "image_ratio": "square"
                   }
                 },
                 "text_53X83R": {
@@ -578,7 +587,9 @@
             },
             "slide_IIXGvO": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Compatible recharges thermales",
               "blocks": {
                 "image_MdgaKj": {
@@ -586,7 +597,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-8724387.jpg"
+                    "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-8724387.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_e3nNyj": {

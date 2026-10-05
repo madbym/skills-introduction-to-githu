@@ -461,7 +461,9 @@
           "blocks": {
             "slide_wgWkDR": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Silicone protecteur",
               "blocks": {
                 "image_lq8MxV": {
@@ -469,7 +471,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Travel-Head_Cover_01.jpg"
+                    "image": "shopify://shop_images/Travel-Head_Cover_01.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_6XkHbw": {
@@ -495,7 +498,9 @@
             },
             "slide_QTz4v5": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "6 coloris",
               "blocks": {
                 "image_bgQUae": {
@@ -503,7 +508,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Travel-Head_Cover_03.jpg"
+                    "image": "shopify://shop_images/Travel-Head_Cover_03.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_wdoKyA": {
@@ -529,7 +535,9 @@
             },
             "slide_SaciGM": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Clips interchangeables",
               "blocks": {
                 "image_uWBPrt": {
@@ -537,7 +545,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Travel-Head_Cover_05.jpg"
+                    "image": "shopify://shop_images/Travel-Head_Cover_05.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_E373Xr": {
@@ -563,7 +572,9 @@
             },
             "slide_bd5ue4": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "L'idée cadeau",
               "blocks": {
                 "image_9CnLd4": {
@@ -571,7 +582,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Travel-Head_Cover_07.jpg"
+                    "image": "shopify://shop_images/Travel-Head_Cover_07.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_cXX3Cl": {

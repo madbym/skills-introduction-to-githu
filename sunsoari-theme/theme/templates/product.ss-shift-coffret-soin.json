@@ -555,7 +555,9 @@
           "blocks": {
             "ing0": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Vitamine C",
               "blocks": {
                 "image_TqBTh8_ing0": {
@@ -563,7 +565,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "show_placeholder": false
+                    "show_placeholder": false,
+                    "image_ratio": "square"
                   }
                 },
                 "text_S8VsWz_ing0": {
@@ -589,7 +592,9 @@
             },
             "ing1": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Huile de coco",
               "blocks": {
                 "image_TqBTh8_ing1": {
@@ -598,7 +603,8 @@
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
                     "image": "shopify://shop_images/ingredient-huile-de-coco.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_S8VsWz_ing1": {
@@ -624,7 +630,9 @@
             },
             "ing2": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Beurre de karité",
               "blocks": {
                 "image_TqBTh8_ing2": {
@@ -633,7 +641,8 @@
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
                     "image": "shopify://shop_images/ingredient-beurre-de-karite.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_S8VsWz_ing2": {
@@ -659,7 +668,9 @@
             },
             "ing3": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Huile d'onagre",
               "blocks": {
                 "image_TqBTh8_ing3": {
@@ -668,7 +679,8 @@
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
                     "image": "shopify://shop_images/ingredient-huile-d-onagre.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_S8VsWz_ing3": {
@@ -694,7 +706,9 @@
             },
             "ing4": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Huile essentielle d'arbre à thé",
               "blocks": {
                 "image_TqBTh8_ing4": {
@@ -703,7 +717,8 @@
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
                     "image": "shopify://shop_images/ingredient-arbre-a-the.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_S8VsWz_ing4": {
@@ -729,7 +744,9 @@
             },
             "ing5": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Aloe vera",
               "blocks": {
                 "image_TqBTh8_ing5": {
@@ -738,7 +755,8 @@
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
                     "image": "shopify://shop_images/ingredient-aloe-vera.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_S8VsWz_ing5": {
@@ -764,7 +782,9 @@
             },
             "ing6": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Tréhalose",
               "blocks": {
                 "image_TqBTh8_ing6": {
@@ -772,7 +792,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "show_placeholder": false
+                    "show_placeholder": false,
+                    "image_ratio": "square"
                   }
                 },
                 "text_S8VsWz_ing6": {

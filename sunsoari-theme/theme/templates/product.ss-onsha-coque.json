@@ -476,7 +476,9 @@
           "blocks": {
             "slide_B64fN3": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Circulation pensée",
               "blocks": {
                 "image_3jz9MN": {
@@ -484,7 +486,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-coque-de-diffusion-home-2564064.jpg"
+                    "image": "shopify://shop_images/onsha-coque-de-diffusion-home-2564064.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_vMQtKK": {
@@ -510,7 +513,9 @@
             },
             "slide_wkxV1v": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Matériaux durables",
               "blocks": {
                 "image_VCSfjQ": {
@@ -518,7 +523,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-coque-de-diffusion-home-4482372.jpg"
+                    "image": "shopify://shop_images/onsha-coque-de-diffusion-home-4482372.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_xHpKCz": {
@@ -544,7 +550,9 @@
             },
             "slide_qhpxGV": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Grand format Home",
               "blocks": {
                 "image_QqTFoJ": {
@@ -552,7 +560,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-coque-de-diffusion-home-3258240.jpg"
+                    "image": "shopify://shop_images/onsha-coque-de-diffusion-home-3258240.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_VG6LKf": {
@@ -578,7 +587,9 @@
             },
             "slide_0MwgwJ": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Le lien du système",
               "blocks": {
                 "image_UGgD1R": {
@@ -586,7 +597,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-5679506.jpg"
+                    "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-5679506.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_KEXfix": {

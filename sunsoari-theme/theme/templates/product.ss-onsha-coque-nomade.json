@@ -476,7 +476,9 @@
           "blocks": {
             "slide_UYJQTF": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Format compact",
               "blocks": {
                 "image_n3z5dk": {
@@ -484,7 +486,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-coque-de-diffusion-nomade-5948203.jpg"
+                    "image": "shopify://shop_images/onsha-coque-de-diffusion-nomade-5948203.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_yayq7Y": {
@@ -510,7 +513,9 @@
             },
             "slide_2Hkd9G": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Matériaux durables",
               "blocks": {
                 "image_jmsn9d": {
@@ -518,7 +523,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-douchette-filtrante-1474368.png"
+                    "image": "shopify://shop_images/onsha-douchette-filtrante-1474368.png",
+                    "image_ratio": "square"
                   }
                 },
                 "text_LVIdVu": {
@@ -544,7 +550,9 @@
             },
             "slide_NfAQLK": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Format Mini",
               "blocks": {
                 "image_f2leMe": {
@@ -552,7 +560,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-capsule-thermale-vitaminee-5877420.jpg"
+                    "image": "shopify://shop_images/onsha-capsule-thermale-vitaminee-5877420.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_R3pzh8": {
@@ -578,7 +587,9 @@
             },
             "slide_W7eaDN": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Le lien du système",
               "blocks": {
                 "image_Hu7qnQ": {
@@ -586,7 +597,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-set-decouverte-nomade-6470897.jpg"
+                    "image": "shopify://shop_images/onsha-set-decouverte-nomade-6470897.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_Tupqzi": {

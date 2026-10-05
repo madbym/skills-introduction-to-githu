@@ -305,6 +305,13 @@ def polish():
             for b in node.get("blocks", {}).values():
                 if b.get("type") == "image" and not b.get("settings", {}).get("image"):
                     b.setdefault("settings", {})["show_placeholder"] = False
+                kids = [c.get("type") for c in b.get("blocks", {}).values()]
+                if b.get("type") == "_slide" and "image" in kids and "text" in kids:
+                    # same-size cards: square photo on top, text underneath
+                    b.setdefault("settings", {}).setdefault("layout_direction", "column")
+                    for c in b["blocks"].values():
+                        if c.get("type") == "image":
+                            c["settings"].setdefault("image_ratio", "square")
                 walk(b)
 
         def has_video(node):

@@ -615,7 +615,9 @@
           "blocks": {
             "slide_kxtUuX": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Tea Tree & Lavender",
               "blocks": {
                 "image_3jKQze": {
@@ -624,7 +626,8 @@
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
                     "image": "shopify://shop_images/ingredient-arbre-a-the.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_jVObfV": {
@@ -650,7 +653,9 @@
             },
             "slide_MCArnW": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Basil & Grass",
               "blocks": {
                 "image_8KMf4d": {
@@ -658,6 +663,7 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
+                    "image_ratio": "square",
                     "show_placeholder": false
                   }
                 },
@@ -684,7 +690,9 @@
             },
             "slide_ant8nX": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Ginger & Bergamote",
               "blocks": {
                 "image_GhwBhs": {
@@ -692,6 +700,7 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
+                    "image_ratio": "square",
                     "show_placeholder": false
                   }
                 },

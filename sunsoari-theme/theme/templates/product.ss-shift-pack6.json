@@ -569,7 +569,9 @@
           "blocks": {
             "ing0": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Vitamine C",
               "blocks": {
                 "image_d7fqkq_ing0": {
@@ -577,7 +579,8 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
-                    "show_placeholder": false
+                    "show_placeholder": false,
+                    "image_ratio": "square"
                   }
                 },
                 "text_iY3Uvv_ing0": {
@@ -603,7 +606,9 @@
             },
             "ing1": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Huile de coco",
               "blocks": {
                 "image_d7fqkq_ing1": {
@@ -612,7 +617,8 @@
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
                     "image": "shopify://shop_images/ingredient-huile-de-coco.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_iY3Uvv_ing1": {
@@ -638,7 +644,9 @@
             },
             "ing2": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Beurre de karité",
               "blocks": {
                 "image_d7fqkq_ing2": {
@@ -647,7 +655,8 @@
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
                     "image": "shopify://shop_images/ingredient-beurre-de-karite.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_iY3Uvv_ing2": {
@@ -673,7 +682,9 @@
             },
             "ing3": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Huile d'onagre",
               "blocks": {
                 "image_d7fqkq_ing3": {
@@ -682,7 +693,8 @@
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
                     "image": "shopify://shop_images/ingredient-huile-d-onagre.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_iY3Uvv_ing3": {
@@ -708,7 +720,9 @@
             },
             "ing4": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Huile essentielle d'arbre à thé",
               "blocks": {
                 "image_d7fqkq_ing4": {
@@ -717,7 +731,8 @@
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
                     "image": "shopify://shop_images/ingredient-arbre-a-the.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_iY3Uvv_ing4": {
@@ -743,7 +758,9 @@
             },
             "ing5": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Aloe vera",
               "blocks": {
                 "image_d7fqkq_ing5": {
@@ -752,7 +769,8 @@
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
                     "image": "shopify://shop_images/ingredient-aloe-vera.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_iY3Uvv_ing5": {
@@ -778,7 +796,9 @@
             },
             "ing6": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Tréhalose",
               "blocks": {
                 "image_d7fqkq_ing6": {
@@ -786,7 +806,8 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
-                    "show_placeholder": false
+                    "show_placeholder": false,
+                    "image_ratio": "square"
                   }
                 },
                 "text_iY3Uvv_ing6": {
@@ -858,7 +879,9 @@
           "blocks": {
             "slide_KW6p06": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Fruits Therapy",
               "blocks": {
                 "image_xICX7U": {
@@ -866,6 +889,7 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
+                    "image_ratio": "square",
                     "show_placeholder": false
                   }
                 },
@@ -892,7 +916,9 @@
             },
             "slide_Wj0tqG": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Discovery",
               "blocks": {
                 "image_vBHfjz": {
@@ -900,7 +926,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Shift--_capsule_Discovery_1.jpg"
+                    "image": "shopify://shop_images/Shift--_capsule_Discovery_1.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_cs6XQi": {
@@ -926,7 +953,9 @@
             },
             "slide_ipITvQ": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Patchouli & Rose",
               "blocks": {
                 "image_Tvxh5p": {
@@ -934,7 +963,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-1755093.png"
+                    "image": "shopify://shop_images/shift-6-capsules-aromatherapie-vitamine-c-1755093.png",
+                    "image_ratio": "square"
                   }
                 },
                 "text_V85U5y": {
@@ -960,7 +990,9 @@
             },
             "slide_2u4Xi2": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Cherry Blossom",
               "blocks": {
                 "image_9Fg30G": {
@@ -968,6 +1000,7 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
+                    "image_ratio": "square",
                     "show_placeholder": false
                   }
                 },
@@ -994,7 +1027,9 @@
             },
             "slide_P6dY31": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Hinoki Spring",
               "blocks": {
                 "image_aYWqMc": {
@@ -1002,7 +1037,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/Shift--_capsule_hinoki_1.png"
+                    "image": "shopify://shop_images/Shift--_capsule_hinoki_1.png",
+                    "image_ratio": "square"
                   }
                 },
                 "text_u04r8x": {

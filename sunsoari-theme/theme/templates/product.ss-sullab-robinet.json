@@ -504,7 +504,9 @@
           "blocks": {
             "slide_R1YvQM": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Une eau plus claire",
               "blocks": {
                 "image_EcFHXv": {
@@ -512,7 +514,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/filtre-a-robinet-faucet-4552924.jpg"
+                    "image": "shopify://shop_images/filtre-a-robinet-faucet-4552924.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_m3Od2x": {
@@ -538,7 +541,9 @@
             },
             "slide_tFMb8h": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Un geste simple",
               "blocks": {
                 "image_S7t5dV": {
@@ -546,7 +551,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/filtre-a-robinet-faucet-9303094.jpg"
+                    "image": "shopify://shop_images/filtre-a-robinet-faucet-9303094.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_kBy0OY": {
@@ -572,7 +578,9 @@
             },
             "slide_tDjvIn": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Une recharge facile",
               "blocks": {
                 "image_W12opm": {
@@ -580,7 +588,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/filtre-a-robinet-faucet-3469708.jpg"
+                    "image": "shopify://shop_images/filtre-a-robinet-faucet-3469708.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_K67R4T": {

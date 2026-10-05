@@ -524,7 +524,9 @@
           "blocks": {
             "slide_BZZdPa": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Eau thermale soufrée",
               "blocks": {
                 "image_BH0HUR": {
@@ -532,6 +534,7 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
+                    "image_ratio": "square",
                     "show_placeholder": false
                   }
                 },
@@ -558,7 +561,9 @@
             },
             "slide_pwrkcr": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Vitamine C",
               "blocks": {
                 "image_zCXN5L": {
@@ -566,6 +571,7 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
+                    "image_ratio": "square",
                     "show_placeholder": false
                   }
                 },
@@ -592,7 +598,9 @@
             },
             "slide_ewmCNy": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Acide hyaluronique & glycérine",
               "blocks": {
                 "image_0GnG5m": {
@@ -600,6 +608,7 @@
                   "settings": {
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
+                    "image_ratio": "square",
                     "show_placeholder": false
                   }
                 },
@@ -626,7 +635,9 @@
             },
             "slide_W9cCdN": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "MSM",
               "blocks": {
                 "image_QbmlFX": {
@@ -635,7 +646,8 @@
                     "image_width_desktop": 35,
                     "image_width_mobile": 35,
                     "image": "shopify://shop_images/ingredient-msm.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_IGjKmA": {
@@ -661,7 +673,9 @@
             },
             "ing0x": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Poudre de lait",
               "blocks": {
                 "image_BH0HUR_ing0x": {
@@ -670,7 +684,8 @@
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
                     "image": "shopify://shop_images/ingredient-poudre-de-lait.jpg",
-                    "show_placeholder": true
+                    "show_placeholder": true,
+                    "image_ratio": "square"
                   }
                 },
                 "text_RwC8aR_ing0x": {
@@ -740,7 +755,9 @@
           "blocks": {
             "slide_0Tzswz": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Hinoki · Calme absolu",
               "blocks": {
                 "image_lkwyla": {
@@ -748,7 +765,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-5679506.jpg"
+                    "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-5679506.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_vI3yvz": {
@@ -774,7 +792,9 @@
             },
             "slide_O33i7r": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Océan · Fraîcheur marine",
               "blocks": {
                 "image_rQbvZj": {
@@ -782,7 +802,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-7252132.jpg"
+                    "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-7252132.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_I1YiJC": {
@@ -808,7 +829,9 @@
             },
             "slide_Sw5AbQ": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Pin · Énergie des forêts",
               "blocks": {
                 "image_EGno2C": {
@@ -816,7 +839,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-8292746.jpg"
+                    "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-8292746.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_5CLxIp": {
@@ -842,7 +866,9 @@
             },
             "slide_w5Ogls": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Fleur de Prunier · Douceur florale",
               "blocks": {
                 "image_bQTKjt": {
@@ -850,7 +876,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-filtre-vitamine-9910937.jpg"
+                    "image": "shopify://shop_images/onsha-filtre-vitamine-9910937.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_X2oumQ": {

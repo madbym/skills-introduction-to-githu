@@ -476,7 +476,9 @@
           "blocks": {
             "slide_v8bh4q": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Filtre intégré au corps",
               "blocks": {
                 "image_bQmzvr": {
@@ -484,7 +486,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-douchette-filtrante-1474368.png"
+                    "image": "shopify://shop_images/onsha-douchette-filtrante-1474368.png",
+                    "image_ratio": "square"
                   }
                 },
                 "text_3e9Xrw": {
@@ -510,7 +513,9 @@
             },
             "slide_KmqcTB": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Bouchon anti-écoulement",
               "blocks": {
                 "image_lL9qcg": {
@@ -518,7 +523,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-douchette-filtrante-8605939.jpg"
+                    "image": "shopify://shop_images/onsha-douchette-filtrante-8605939.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_MBwUYu": {
@@ -544,7 +550,9 @@
             },
             "slide_vNuQ2h": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Format compact",
               "blocks": {
                 "image_aH7ZIR": {
@@ -552,7 +560,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-douchette-filtrante-5144667.png"
+                    "image": "shopify://shop_images/onsha-douchette-filtrante-5144667.png",
+                    "image_ratio": "square"
                   }
                 },
                 "text_U8VVQm": {
@@ -578,7 +587,9 @@
             },
             "slide_RV5lNK": {
               "type": "_slide",
-              "settings": {},
+              "settings": {
+                "layout_direction": "column"
+              },
               "name": "Compatible rituel Nomade",
               "blocks": {
                 "image_U5tGtQ": {
@@ -586,7 +597,8 @@
                   "settings": {
                     "image_width_desktop": 100,
                     "image_width_mobile": 100,
-                    "image": "shopify://shop_images/onsha-coque-de-diffusion-nomade-5948203.jpg"
+                    "image": "shopify://shop_images/onsha-coque-de-diffusion-nomade-5948203.jpg",
+                    "image_ratio": "square"
                   }
                 },
                 "text_AuzSsJ": {

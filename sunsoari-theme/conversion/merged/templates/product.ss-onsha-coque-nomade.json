@@ -1,3 +1,4 @@
+
 {
   "sections": {
     "breadcrumbs": {
@@ -149,12 +150,12 @@
         "b2": {
           "type": "item",
           "settings": {
-            "title": "La capsule se glisse dans la coque",
+            "title": "La coque se visse sous la douchette",
             "text": "",
             "tag": "",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/Copie_de_IMG_2101_b6862d08-d5fa-47fe-8c93-3e9bedd96621.gif"
+            "image": "shopify://shop_images/onsha-nomade-installation-coque-sur-douchette.gif"
           }
         }
       },

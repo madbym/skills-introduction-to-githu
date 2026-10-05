@@ -1,0 +1,277 @@
+{
+  "sections": {
+    "etape1": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "product": "onsha-premier-rituel-home",
+            "show_price": true,
+            "tag": "Sans changer ta pomme",
+            "title": "Garder ma pomme de douche",
+            "text": "<p>La coque de diffusion Home se visse entre ton flexible et ta pomme actuelle, avec un premier filtre thermal.</p>",
+            "link_label": "Voir le produit"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "product": "pommeau-de-douche-filtrant",
+            "show_price": true,
+            "tag": "Rituel Home",
+            "title": "Pomme de douche Onsha",
+            "text": "<p>Jet fin et filtre à sédiments intégré, pour la maison.</p>",
+            "link_label": "Voir le produit"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "product": "douchette-filtrante",
+            "show_price": true,
+            "tag": "Rituel Nomade",
+            "title": "Douchette Onsha",
+            "text": "<p>Compacte, avec son filtre à sédiments intégré : chez toi comme en voyage.</p>",
+            "link_label": "Voir le produit"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "product": "pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie",
+            "show_price": true,
+            "tag": "Aromathérapie",
+            "title": "Pomme de douche SHIFT",
+            "text": "<p>Filtre Pure Water et capsule de soin, prête en 2 minutes.</p>",
+            "link_label": "Voir le produit"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Étape 1",
+        "heading": "Choisis ta base",
+        "text": "<p>Garde ta pomme de douche, ou choisis celle qui te ressemble. Tout se visse à la main sur un flexible standard.</p>",
+        "columns": 4,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "etape2": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "product": "coque-de-diffusion",
+            "show_price": true,
+            "tag": "Pour la pomme Onsha ou ta pomme actuelle",
+            "title": "Coque de diffusion Home",
+            "text": "<p>Elle accueille les filtres thermaux Home.</p>",
+            "link_label": "Voir le produit"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "product": "filtre-vitamine-showerfilter-sunsoari",
+            "show_price": true,
+            "tag": "Recharge Home",
+            "title": "Filtre thermal Home",
+            "text": "<p>Quatre senteurs coréennes, ou la version sans senteur.</p>",
+            "link_label": "Choisir ma senteur"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "product": "coque-de-diffusion-nomade",
+            "show_price": true,
+            "tag": "Pour la douchette",
+            "title": "Coque de diffusion Nomade",
+            "text": "<p>Elle se visse sous la douchette et accueille les capsules.</p>",
+            "link_label": "Voir le produit"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "product": "capsule-vitaminee-shower-filter-sunsoari",
+            "show_price": true,
+            "tag": "Recharge Nomade",
+            "title": "Capsule thermale Nomade",
+            "text": "<p>Quatre senteurs, avec un disque sédiment dans chaque sachet.</p>",
+            "link_label": "Choisir ma senteur"
+          }
+        },
+        "b5": {
+          "type": "item",
+          "settings": {
+            "product": "pack-6-capsules-vitaminees-shift-sunsoari",
+            "show_price": true,
+            "tag": "Recharge SHIFT",
+            "title": "Capsules SHIFT",
+            "text": "<p>Six capsules de soin et d'aromathérapie, en plusieurs collections.</p>",
+            "link_label": "Voir le produit"
+          }
+        },
+        "b6": {
+          "type": "item",
+          "settings": {
+            "product": "filtre-sediment-recharge",
+            "show_price": true,
+            "tag": "Recharge douchette",
+            "title": "Filtre sédiment",
+            "text": "<p>Le filtre de rechange de la douchette Onsha.</p>",
+            "link_label": "Voir le produit"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Étape 2",
+        "heading": "Ajoute ta diffusion et tes recharges",
+        "text": "<p>Chaque système a ses propres recharges : les formats Home et Nomade ne sont pas interchangeables.</p>",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "coffrets": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "product": "onsha-starter-home",
+            "show_price": true,
+            "tag": "Pour commencer",
+            "title": "Starter Home",
+            "text": "<p>Pomme de douche, coque Home et un filtre thermal.</p>",
+            "link_label": "Voir le produit"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "product": "coffret-home-onsha-sullab-sunsoari",
+            "show_price": true,
+            "tag": "Le plus complet",
+            "title": "Coffret Home",
+            "text": "<p>Pomme de douche, coque Home et 4 filtres thermaux.</p>",
+            "link_label": "Voir le produit"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "product": "coffret-mini",
+            "show_price": true,
+            "tag": "Compact",
+            "title": "Coffret Nomade",
+            "text": "<p>Douchette, 3 filtres sédiments, coque Nomade et 4 capsules.</p>",
+            "link_label": "Voir le produit"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "product": "onsha-mini-decouverte-sullab-sunsoari",
+            "show_price": true,
+            "tag": "Déjà équipée ?",
+            "title": "Set Découverte Nomade",
+            "text": "<p>La coque Nomade et les 4 capsules thermales.</p>",
+            "link_label": "Voir le produit"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "cards",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Envie de simplicité ?",
+        "heading": "Ou choisis un rituel déjà composé",
+        "text": "<p>Tout est réuni dans une seule boîte, plus avantageux que les pièces séparées.</p>",
+        "columns": 4,
+        "columns_mobile": "2",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "faq": {
+      "type": "ss-story",
+      "blocks": {
+        "q1": {
+          "type": "item",
+          "settings": {
+            "title": "Comment savoir si c'est compatible avec ma douche ?",
+            "text": "<p>Nos systèmes se vissent à la main sur les flexibles de douche standard, sans outil ni plombier.</p>"
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "title": "Home ou Nomade, quelle différence ?",
+            "text": "<p>Home reste installé chez toi, avec des filtres thermaux qui durent 3 à 4 semaines. Nomade, c'est la douchette et ses capsules de 10 à 15 jours, faciles à emporter. Les recharges ne sont pas interchangeables.</p>"
+          }
+        },
+        "q3": {
+          "type": "item",
+          "settings": {
+            "title": "J'ai besoin d'aide pour choisir",
+            "text": "<p>Écris-nous depuis la page <a href=\"/pages/contact\">Contact</a> : on te conseille avec plaisir.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Une question ?",
+        "heading": "Bien choisir",
+        "columns": 1,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    }
+  },
+  "order": [
+    "etape1",
+    "etape2",
+    "coffrets",
+    "faq"
+  ]
+}

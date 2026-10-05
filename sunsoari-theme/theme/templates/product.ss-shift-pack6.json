@@ -493,11 +493,11 @@
                         "enable_video_controls": false,
                         "aspect_ratio": "9/16",
                         "alt": "Remplacez votre recharge",
-                        "video": "shopify://files/videos/shift-capsule-vitamine-c-vertical.mp4",
+                        "video": "shopify://files/videos/shift-changer-capsule.mp4",
                         "show_on_display": "desktop_and_mobile",
                         "video_loop": true,
-                        "custom_width": 32,
-                        "custom_width_mobile": 80
+                        "custom_width": 40,
+                        "custom_width_mobile": 90
                       }
                     },
                     "video_m5aMIA_etapes": {

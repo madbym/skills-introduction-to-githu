@@ -279,7 +279,7 @@
         "menu": "menu-principal-v2",
         "menu_mobile": "",
         "header_layout": "logo-center",
-        "menu_trigger": "hover",
+        "menu_trigger": "click",
         "sticky_header": "always",
         "enable_collapse_on_scroll": false,
         "show_sperator_line": false,

@@ -1,3 +1,4 @@
+
 {
   "sections": {
     "breadcrumbs": {
@@ -35,7 +36,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Douchette filtrante, housse personnalisable, coque Nomade, 4 capsules thermales</div><div><b>Autonomie</b>40 à 60 jours avec les 4 capsules</div><div><b>Senteurs</b>Hinoki, Océan, Forêt de Pin, Fleur de Prunier</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Douchette filtrante, lot de 3 filtres sédiments, set découverte Nomade (1 coque de diffusion + 4 capsules thermales)</div><div><b>Senteurs</b>Hinoki, Océan, Forêt de Pin, Fleur de Prunier</div><div><b>Format</b>Compact, à emporter en voyage</div></div>"
           }
         },
         "variant_picker": {
@@ -110,7 +111,7 @@
         "ss_complements": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-complements', items: \"capsule-vitaminee-shower-filter-sunsoari||4 senteurs thermales au choix;product-onsha-coque-douchette-filtrante||Une autre couleur de housse\", title: \"Pour la suite de ton rituel\", note: \"Ton coffret contient tout pour commencer. Les capsules sont vendues séparément, quand les tiennes sont terminées.\" %}"
+            "custom_liquid": "{% render 'ss-complements', items: \"capsule-vitaminee-shower-filter-sunsoari||4 senteurs thermales au choix;product-onsha-coque-douchette-filtrante||En option : protège et personnalise ta douchette\", title: \"Pour la suite de ton rituel\", note: \"Ton coffret contient tout pour commencer. Les capsules et la housse sont vendues séparément.\" %}"
           }
         }
       },
@@ -162,19 +163,19 @@
         "b2": {
           "type": "item",
           "settings": {
-            "title": "Housse personnalisable",
-            "text": "<p>Protège ta douchette</p>",
-            "tag": "x1",
+            "title": "Lot de 3 filtres sédiments",
+            "text": "<p>Les recharges de ta douchette</p>",
+            "tag": "x3",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/onsha-coque-pour-douchette-filtrante-3718234.jpg"
+            "image": "shopify://shop_images/onsha-filtre-sediment-recharge-douchette-5702371.jpg"
           }
         },
         "b3": {
           "type": "item",
           "settings": {
             "title": "Coque de diffusion Nomade",
-            "text": "<p>Accueille tes capsules</p>",
+            "text": "<p>Incluse dans le set découverte Nomade</p>",
             "tag": "x1",
             "link_label": "",
             "show_price": true,
@@ -185,11 +186,11 @@
           "type": "item",
           "settings": {
             "title": "Capsules thermales Nomade",
-            "text": "<p>Avec leur disque sédiment</p>",
+            "text": "<p>Une de chaque senteur, dans le set découverte</p>",
             "tag": "x4",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/HotspringFilterMiniset_02.jpg"
+            "image": "shopify://shop_images/onsha-capsules-nomade-quatre-senteurs.jpg"
           }
         }
       },
@@ -269,8 +270,8 @@
         "b3": {
           "type": "item",
           "settings": {
-            "title": "La housse protège-t-elle la douchette ?",
-            "text": "<p>Oui, en silicone souple, elle la protège des chocs et des rayures.</p>",
+            "title": "Que contient exactement le coffret ?",
+            "text": "<p>La douchette filtrante Onsha, un lot de 3 filtres sédiments (les recharges de la douchette) et le set découverte Nomade : une coque de diffusion et 4 capsules thermales vitaminées, une de chaque senteur. La housse personnalisable est vendue séparément.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true

@@ -1,3 +1,4 @@
+
 {
   "sections": {
     "ss_hero": {
@@ -445,7 +446,7 @@
         "b1": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/onsha-rituel-de-douche-thermal-coreen-filtrant-aromatique-kit-decouverte-7562522.jpg",
+            "image": "shopify://shop_images/onsha-coffret-nomade-ambiance-pierre.jpg",
             "product": "coffret-home-onsha-sullab-sunsoari",
             "show_price": false,
             "tag": "",
@@ -462,7 +463,7 @@
             "product": "pommeau-de-douche-filtrant",
             "show_price": false,
             "tag": "",
-            "title": "Pommes de douche",
+            "title": "Pommeaux de douche",
             "text": "<p>La base de ton rituel, sans outil.</p>",
             "link": "shopify://collections/douchette",
             "link_label": "Voir"
@@ -471,7 +472,7 @@
         "b3": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/onsha-filtre-vitamine-3469539.jpg",
+            "image": "shopify://shop_images/onsha-capsules-nomade-quatre-senteurs.jpg",
             "product": "filtre-vitamine-showerfilter-sunsoari",
             "show_price": false,
             "tag": "",

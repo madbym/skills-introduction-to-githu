@@ -1,3 +1,4 @@
+
 {
   "sections": {
     "breadcrumbs": {
@@ -167,7 +168,7 @@
             "tag": "x1",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/pommeau-de-douche-filtrant-a-vitamine-c-1108548.jpg"
+            "image": "shopify://shop_images/shift-capsule-tea-tree-lavender.png"
           }
         },
         "b3": {
@@ -178,7 +179,7 @@
             "tag": "x1",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/pommeau-de-douche-filtrant-a-vitamine-c-9174486.jpg"
+            "image": "shopify://shop_images/shift-filtre-pure-water.jpg"
           }
         }
       },
@@ -201,56 +202,6 @@
         "note": ""
       }
     },
-    "ss_steps": {
-      "type": "ss-story",
-      "blocks": {
-        "b1": {
-          "type": "step",
-          "settings": {
-            "text": "<strong>Dévisse</strong> ta pomme de douche actuelle."
-          }
-        },
-        "b2": {
-          "type": "step",
-          "settings": {
-            "text": "<strong>Insère</strong> le filtre Pure Water et la capsule dans la pomme de douche."
-          }
-        },
-        "b3": {
-          "type": "step",
-          "settings": {
-            "text": "<strong>Visse</strong> la pomme de douche SHIFT sur ton flexible."
-          }
-        },
-        "b4": {
-          "type": "step",
-          "settings": {
-            "text": "<strong>Ouvre l'eau</strong> : c'est prêt."
-          }
-        }
-      },
-      "block_order": [
-        "b1",
-        "b2",
-        "b3",
-        "b4"
-      ],
-      "settings": {
-        "layout": "steps",
-        "background": "cream",
-        "align": "center",
-        "eyebrow": "Mode d'emploi",
-        "heading": "Comment l'installer",
-        "text": "",
-        "columns": 3,
-        "columns_mobile": "1",
-        "ratio": "1/1",
-        "open_first": false,
-        "tip_title": "Les conseils de l'équipe",
-        "tip_text": "",
-        "image": "shopify://shop_images/Video_2.gif"
-      }
-    },
     "ss_cards": {
       "type": "ss-story",
       "blocks": {
@@ -269,11 +220,11 @@
           "type": "item",
           "settings": {
             "title": "Filtre Pure Water",
-            "text": "<p>Filtration mécanique multi-couches des sédiments.</p>",
+            "text": "<p>Filtration mécanique multicouche : le filtre se teinte à mesure qu'il retient les sédiments.</p>",
             "tag": "Filtration",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/FILTER-STEP_02_IMAGE.jpg"
+            "image": "shopify://shop_images/shift-filtre-pure-water-avant-apres.gif"
           }
         },
         "b3": {
@@ -291,11 +242,11 @@
           "type": "item",
           "settings": {
             "title": "Système réutilisable",
-            "text": "<p>La pomme de douche reste, seules les recharges se changent.</p>",
+            "text": "<p>La pomme de douche reste : il ne te reste plus qu'à insérer les recharges, capsule ou filtre Pure Water.</p>",
             "tag": "Durable",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/SHiFT-pommeau-Green_vintage_1.png"
+            "image": "shopify://shop_images/shift-pomme-de-douche-filtrante-packshot.jpg"
           }
         }
       },
@@ -380,13 +331,64 @@
         "ratio": "1/1",
         "open_first": true
       }
+    },
+    "ss_install": {
+      "type": "ss-story",
+      "blocks": {
+        "v1": {
+          "type": "item",
+          "settings": {
+            "title": "1. Ouvre le compartiment de la capsule",
+            "image": "shopify://shop_images/shift-installation-ouvrir-compartiment-capsule.jpg"
+          }
+        },
+        "v2": {
+          "type": "item",
+          "settings": {
+            "title": "2. Glisse la capsule, capuchon blanc vers le haut",
+            "image": "shopify://shop_images/shift-installation-inserer-capsule.jpg"
+          }
+        },
+        "v3": {
+          "type": "item",
+          "settings": {
+            "title": "3. Ouvre le manche",
+            "image": "shopify://shop_images/shift-filtre-pure-water-retrait-pomme-de-douche.jpg"
+          }
+        },
+        "v4": {
+          "type": "item",
+          "settings": {
+            "title": "4. Insère le filtre Pure Water et referme",
+            "image": "shopify://shop_images/shift-filtre-pure-water-insertion-pomme-de-douche.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4"
+      ],
+      "settings": {
+        "layout": "visuals",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Comment l'installer",
+        "text": "<p>Visse la pomme de douche SHIFT sur ton flexible, puis mets en place la capsule et le filtre.</p>",
+        "columns": 4,
+        "columns_mobile": "2",
+        "ratio": "1/1",
+        "open_first": false
+      }
     }
   },
   "order": [
     "breadcrumbs",
     "main",
     "ss_box",
-    "ss_steps",
+    "ss_install",
     "ss_cards",
     "ss_faq"
   ]

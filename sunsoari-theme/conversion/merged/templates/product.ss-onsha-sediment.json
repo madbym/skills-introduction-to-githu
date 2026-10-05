@@ -1,3 +1,4 @@
+
 {
   "sections": {
     "breadcrumbs": {
@@ -145,23 +146,23 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Filtre neuf et filtre usagé",
+            "title": "Le filtre se glisse dans le manche",
             "text": "",
             "tag": "",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/onsha-filtre-sediment-recharge-9193355.jpg"
+            "image": "shopify://shop_images/onsha-douchette-filtrante-vue-eclatee-filtre.jpg"
           }
         },
         "b2": {
           "type": "item",
           "settings": {
-            "title": "La douchette en action",
+            "title": "Un filtre au cœur de la douchette",
             "text": "",
             "tag": "",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/onsha-filtre-sediment-recharge-1810397.jpg"
+            "image": "shopify://shop_images/onsha-douchette-filtrante-filtre-interne.jpg"
           }
         }
       },
@@ -174,11 +175,11 @@
         "background": "white",
         "align": "center",
         "eyebrow": "",
-        "heading": "Ce que le filtre capture",
+        "heading": "Où se place le filtre",
         "text": "",
         "columns": 2,
         "columns_mobile": "1",
-        "ratio": "4/5",
+        "ratio": "1/1",
         "open_first": false
       }
     },

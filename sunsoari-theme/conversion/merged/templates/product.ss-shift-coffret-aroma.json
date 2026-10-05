@@ -35,7 +35,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau de douche, flexible silicone 2 m, 3 filtres Pure Water, 6 capsules soin</div><div><b>Autonomie</b>Environ 3 mois de capsules, 6 à 9 mois de filtres</div><div><b>Couleur</b>Choisis la couleur de ton pommeau de douche</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau de douche, flexible silicone 2 m, 3 filtres à sédiments Pure Water, 6 capsules soin</div><div><b>Autonomie</b>Environ 3 mois de capsules, 6 à 9 mois de filtres</div><div><b>Couleur</b>Choisis la couleur de ton pommeau de douche</div></div>"
           }
         },
         "variant_picker": {
@@ -78,7 +78,7 @@
             "heading": "Installation",
             "heading_size": "h4",
             "icon": "none",
-            "content": "<p>1. Raccorde le flexible sur ton robinet. 2. Visse le pommeau de douche à l'autre bout. 3. Insère un filtre Pure Water. 4. Glisse une capsule dans le second compartiment. 5. Ouvre l'eau. Environ 2 minutes, sans outil.</p>",
+            "content": "<p>1. Raccorde le flexible sur ton robinet. 2. Visse le pommeau de douche à l'autre bout. 3. Insère un filtre à sédiments Pure Water. 4. Glisse une capsule dans le second compartiment. 5. Ouvre l'eau. Environ 2 minutes, sans outil.</p>",
             "page": "",
             "default_open": false,
             "show_below_product_media": false
@@ -122,7 +122,7 @@
         "ss_complements": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-complements', items: \"pack-6-capsules-vitaminees-shift-sunsoari||6 capsules soin et aromathérapie;pack-3-sediments-pure-water||3 filtres Pure Water\", title: \"Pour la suite de ton rituel\", note: \"Les recharges SHIFT sont vendues séparément.\" %}"
+            "custom_liquid": "{% render 'ss-complements', items: \"pack-6-capsules-vitaminees-shift-sunsoari||6 capsules soin et aromathérapie;pack-3-sediments-pure-water||3 filtres à sédiments Pure Water\", title: \"Pour la suite de ton rituel\", note: \"Les recharges SHIFT sont vendues séparément.\" %}"
           }
         }
       },
@@ -186,7 +186,7 @@
         "b3": {
           "type": "item",
           "settings": {
-            "title": "Filtres Pure Water",
+            "title": "Filtres à sédiments Pure Water",
             "text": "<p>6 à 9 mois de filtration</p>",
             "tag": "x3",
             "link_label": "",

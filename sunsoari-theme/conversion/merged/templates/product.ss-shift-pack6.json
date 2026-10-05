@@ -98,7 +98,7 @@
         "ss_complements": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie||Pommeau de douche, capsule et filtre pour commencer;pack-3-sediments-pure-water||Les filtres Pure Water\", title: \"Les capsules sont vendues seules\", note: \"Elles s'utilisent uniquement dans le pommeau de douche filtrant SHIFT. Pas encore équipée ?\" %}"
+            "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie||Pommeau de douche, capsule et filtre pour commencer;pack-3-sediments-pure-water||Les filtres à sédiments Pure Water\", title: \"Les capsules sont vendues seules\", note: \"Elles s'utilisent uniquement dans le pommeau de douche filtrant SHIFT. Pas encore équipée ?\" %}"
           }
         }
       },

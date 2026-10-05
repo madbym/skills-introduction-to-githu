@@ -35,7 +35,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau de douche filtrant, capsule Tea Tree &amp; Lavender, filtre Pure Water</div><div><b>Installation</b>2 minutes, sans outil, sur tout flexible standard</div><div><b>Recharges</b>Capsules et filtres Pure Water disponibles séparément</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau de douche filtrant, capsule Tea Tree &amp; Lavender, filtre à sédiments Pure Water</div><div><b>Installation</b>2 minutes, sans outil, sur tout flexible standard</div><div><b>Recharges</b>Capsules et filtres à sédiments Pure Water disponibles séparément</div></div>"
           }
         },
         "variant_picker": {
@@ -110,7 +110,7 @@
         "ss_complements": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-complements', items: \"pack-6-capsules-vitaminees-shift-sunsoari||6 capsules soin et aromathérapie;pack-3-sediments-pure-water||3 filtres Pure Water\", title: \"Pour la suite de ton rituel\", note: \"Les recharges SHIFT sont vendues séparément.\" %}"
+            "custom_liquid": "{% render 'ss-complements', items: \"pack-6-capsules-vitaminees-shift-sunsoari||6 capsules soin et aromathérapie;pack-3-sediments-pure-water||3 filtres à sédiments Pure Water\", title: \"Pour la suite de ton rituel\", note: \"Les recharges SHIFT sont vendues séparément.\" %}"
           }
         }
       },
@@ -173,7 +173,7 @@
         "b3": {
           "type": "item",
           "settings": {
-            "title": "Filtre Pure Water",
+            "title": "Filtre à sédiments Pure Water",
             "text": "<p>Retient les sédiments avant l&#x27;étape de soin</p>",
             "tag": "x1",
             "link_label": "",
@@ -218,7 +218,7 @@
         "b2": {
           "type": "item",
           "settings": {
-            "title": "Filtre Pure Water",
+            "title": "Filtre à sédiments Pure Water",
             "text": "<p>Filtration mécanique multicouche : le filtre se teinte à mesure qu'il retient les sédiments.</p>",
             "tag": "Filtration",
             "link_label": "",
@@ -241,7 +241,7 @@
           "type": "item",
           "settings": {
             "title": "Système réutilisable",
-            "text": "<p>Le pommeau de douche reste : il ne te reste plus qu'à insérer les recharges, capsule ou filtre Pure Water.</p>",
+            "text": "<p>Le pommeau de douche reste : il ne te reste plus qu'à insérer les recharges, capsule ou filtre à sédiments Pure Water.</p>",
             "tag": "Durable",
             "link_label": "",
             "show_price": true,
@@ -275,7 +275,7 @@
           "type": "item",
           "settings": {
             "title": "Combien de temps durent la capsule et le filtre ?",
-            "text": "<p>La capsule dure selon ta fréquence de douche, tu vois son niveau baisser. Le filtre Pure Water se change environ tous les 2 à 3 mois.</p>",
+            "text": "<p>La capsule dure selon ta fréquence de douche, tu vois son niveau baisser. Le filtre à sédiments Pure Water se change environ tous les 2 à 3 mois.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true
@@ -347,7 +347,7 @@
         "v4": {
           "type": "item",
           "settings": {
-            "title": "4. Insère le filtre Pure Water et referme",
+            "title": "4. Insère le filtre à sédiments Pure Water et referme",
             "image": "shopify://shop_images/shift-filtre-pure-water-insertion-pomme-de-douche.jpg"
           }
         }

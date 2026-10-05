@@ -84,7 +84,7 @@
             "heading": "Composition",
             "heading_size": "h4",
             "icon": "none",
-            "content": "<p>Filtration mécanique multi-couches. Usage externe uniquement. Le filtre Pure Water est distinct de la capsule de soin : les deux travaillent ensemble.</p>",
+            "content": "<p>Filtration mécanique multi-couches. Usage externe uniquement. Le filtre à sédiments Pure Water est distinct de la capsule de soin : les deux travaillent ensemble.</p>",
             "page": "",
             "default_open": false,
             "show_below_product_media": false
@@ -200,7 +200,7 @@
         "b3": {
           "type": "step",
           "settings": {
-            "text": "<strong>Insère</strong> un nouveau filtre Pure Water."
+            "text": "<strong>Insère</strong> un nouveau filtre à sédiments Pure Water."
           }
         },
         "b4": {

@@ -82,7 +82,6 @@ STEP_PHOTO = {
     "product.box-rituel-douche-complet.json": "shift-coffret-douche-aromatherapie-3669659.png",
     "product.coffret-home.json": "coffret-home-8881318.jpg",
     "product.coffret-mini.json": "coffret-mini-9416210.jpg",
-    "product.filtre-vitamine.json": "onsha-filtre-thermal-vitamine-7252132.jpg",
     "product.coque-de-diffusion.json": "Copie_de_Copie_de_Hot_Spring_Filter___Shower_Head_03.jpg",
     "product.capsule-vitaminee-2.json": "capsule-vitaminee-5066640.jpg",
     "product.rituel-decouverte.json": "onsha-set-decouverte-nomade-6470897.jpg",

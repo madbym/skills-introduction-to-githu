@@ -129,7 +129,7 @@ def patch_existing():
     out["filtre-thermal-home"] = t
 
     t = load("templates/product.filtre-thermal-sans-senteur.json")
-    set_images_in_order(S(t, "comment_ca_marche"), [PRODUCT["sans_senteur"][1]], 80)
+    set_images_in_order(S(t, "comment_ca_marche"), [ONSHA_HOWTO["installer_recharge"]], 80)
     out["filtre-thermal-sans-senteur"] = t
 
     t = load("templates/product.housse-douchette.json")

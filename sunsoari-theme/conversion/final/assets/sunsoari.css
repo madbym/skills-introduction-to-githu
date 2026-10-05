@@ -158,3 +158,13 @@
 .ss-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 /* Visuels : pas de cadre visible autour des images */
 .ss-visual{background:transparent;border:0;box-shadow:none;}
+/* Sunsoari : offres par quantité en liste verticale, lisible sur mobile et ordinateur */
+.ss-offers__list{display:flex;flex-direction:column;gap:8px;padding-top:4px;grid-template-columns:none;}
+.ss-offer{display:grid;grid-template-columns:20px 1fr auto;grid-template-areas:"dot qty price" "dot save was";align-items:center;column-gap:12px;row-gap:2px;text-align:left;padding:12px 16px;border-radius:var(--ss-radius-sm);width:100%;box-sizing:border-box;}
+.ss-offer::before{content:"";grid-area:dot;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--ss-mist);box-sizing:border-box;background:var(--ss-white);}
+.ss-offer[aria-pressed="true"]::before{border:5px solid var(--ss-indigo);}
+.ss-offer__qty{grid-area:qty;font-size:15px;}
+.ss-offer__save{grid-area:save;position:static;transform:none;justify-self:start;background:var(--ss-powder);color:var(--ss-indigo);padding:2px 10px;font-size:11.5px;}
+.ss-offer__price{grid-area:price;justify-self:end;font-size:15px;font-weight:700;color:var(--ss-indigo);margin:0;white-space:nowrap;}
+.ss-offer__was{grid-area:was;justify-self:end;min-height:0;white-space:nowrap;}
+.ss-offer:not(:has(.ss-offer__save)){grid-template-areas:"dot qty price" "dot qty was";}

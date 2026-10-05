@@ -1,3 +1,4 @@
+
 {
   "sections": {
     "breadcrumbs": {
@@ -267,7 +268,7 @@
             "tag": "Minéral",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/onsha-capsule-thermale-vitaminee-5877420.jpg"
+            "image": "shopify://shop_images/ingredient-eau-thermale-texture-minerale.jpg"
           }
         },
         "b2": {
@@ -278,7 +279,7 @@
             "tag": "Vitaminé",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/onsha-capsule-thermale-vitaminee-2207031.jpg"
+            "image": "shopify://shop_images/ingredient-vitamine-c-citron-bulles-eau.jpg"
           }
         },
         "b3": {
@@ -289,7 +290,7 @@
             "tag": "Hydratant",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/onsha-capsule-thermale-vitaminee-4674867.jpg"
+            "image": "shopify://shop_images/ingredient-acide-hyaluronique-gel-bulles.jpg"
           }
         },
         "b4": {

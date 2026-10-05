@@ -336,7 +336,7 @@
             "image": "shopify://shop_images/filtre-a-robinet-faucet-9303094.jpg",
             "show_placeholder": true,
             "link": "",
-            "image_ratio": "adapt",
+            "image_ratio": "square",
             "image_width_desktop": 100,
             "image_width_mobile": 100,
             "enable_rounded_corners": true,

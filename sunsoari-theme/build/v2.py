@@ -307,6 +307,18 @@ def set_ingredients(sec, items, append=False):
         slider["block_order"].append(key)
 
 
+# Fanta prefers 1:1 photos everywhere, except the wide home hero and the how-to
+# diagrams / animations (a square crop would cut their text).
+KEEP_RATIO = {"custom_section_H6XpXt", "comment_ca_marche"}
+
+
+def square_images(node):
+    for b in node.get("blocks", {}).values():
+        if b.get("type") == "image" and b.get("settings", {}).get("image"):
+            b["settings"]["image_ratio"] = "square"
+        square_images(b)
+
+
 def polish():
     """Last pass on every template: no grey placeholder for a missing photo, and no
     empty video tab (a tab is kept only once a real video has been added)."""
@@ -343,8 +355,10 @@ def polish():
             elif "MSM" in json.dumps(ing, ensure_ascii=False):
                 set_ingredients(ing, ONSHA_EXTRA, append=True)
             ingredient_photos(ing)
-        for sec in t["sections"].values():
+        for key, sec in t["sections"].items():
             walk(sec)
+            if key not in KEEP_RATIO:
+                square_images(sec)
             if sec.get("type") == "comparison-table" and "title" not in sec.get("blocks", {}):
                 # static title block left unset shows the theme default « Texte »
                 sec["blocks"]["title"] = {"type": "text", "static": True, "settings": {

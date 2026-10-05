@@ -1,4 +1,3 @@
-
 {
   "sections": {
     "breadcrumbs": {
@@ -259,7 +258,7 @@
           "type": "item",
           "settings": {
             "title": "Puis-je garder mon flexible actuel ?",
-            "text": "<p>Oui, le système se fixe sur ton flexible standard.</p>",
+            "text": "<p>Oui, le système se visse sur un flexible standard, sans outil. Si ton flexible est ancien ou difficile à nettoyer, on te conseille d'en profiter pour le changer : ta douche n'en sera que plus agréable.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true
@@ -268,8 +267,8 @@
         "b3": {
           "type": "item",
           "settings": {
-            "title": "Peut-on l'utiliser en location ?",
-            "text": "<p>Oui, il se monte et se démonte en quelques secondes. En partant, tu emportes ton rituel.</p>",
+            "title": "Est-il facile à installer et à retirer ?",
+            "text": "<p>Oui, il se monte et se démonte à la main en quelques secondes, sans outil ni trace. Pratique si tu déménages ou si tu es en location : tu le retires et tu emportes ton rituel avec toi.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true
@@ -284,23 +283,12 @@
             "link_label": "",
             "show_price": true
           }
-        },
-        "b6": {
-          "type": "item",
-          "settings": {
-            "title": "Puis-je retourner le produit ?",
-            "text": "<p>Oui, tu disposes de 14 jours pour changer d'avis. Pour des raisons d'hygiène, le produit doit nous revenir non ouvert, non utilisé, complet et dans son emballage d'origine. Tous les détails sont dans notre politique de retours.</p>",
-            "tag": "",
-            "link_label": "",
-            "show_price": true
-          }
         }
       },
       "block_order": [
         "b1",
         "b3",
-        "b4",
-        "b6"
+        "b4"
       ],
       "settings": {
         "layout": "faq",

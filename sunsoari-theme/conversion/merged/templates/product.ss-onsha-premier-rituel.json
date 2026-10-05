@@ -256,7 +256,7 @@
           "type": "item",
           "settings": {
             "title": "Puis-je garder mon flexible actuel ?",
-            "text": "<p>Oui, le système se visse sur un flexible de douche standard, à la main, sans outil.</p>",
+            "text": "<p>Oui, le système se visse sur un flexible standard, sans outil. Si ton flexible est ancien ou difficile à nettoyer, on te conseille d'en profiter pour le changer : ta douche n'en sera que plus agréable.</p>",
             "tag": "",
             "link_label": "",
             "show_price": true
@@ -281,24 +281,13 @@
             "link_label": "",
             "show_price": true
           }
-        },
-        "b6": {
-          "type": "item",
-          "settings": {
-            "title": "Puis-je retourner le produit ?",
-            "text": "<p>Oui, tu disposes de 14 jours pour changer d'avis. Pour des raisons d'hygiène, le produit doit nous revenir non ouvert, non utilisé, complet et dans son emballage d'origine. Tous les détails sont dans notre politique de retours.</p>",
-            "tag": "",
-            "link_label": "",
-            "show_price": true
-          }
         }
       },
       "block_order": [
         "q1",
         "q2",
         "q3",
-        "b5",
-        "b6"
+        "b5"
       ],
       "settings": {
         "layout": "faq",

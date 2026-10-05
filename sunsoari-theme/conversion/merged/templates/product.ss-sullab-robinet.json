@@ -315,22 +315,11 @@
             "link_label": "",
             "show_price": true
           }
-        },
-        "b5": {
-          "type": "item",
-          "settings": {
-            "title": "Puis-je retourner le produit ?",
-            "text": "<p>Oui, tu disposes de 14 jours pour changer d'avis. Pour des raisons d'hygiène, le produit doit nous revenir non ouvert, non utilisé, complet et dans son emballage d'origine. Tous les détails sont dans notre politique de retours.</p>",
-            "tag": "",
-            "link_label": "",
-            "show_price": true
-          }
         }
       },
       "block_order": [
         "b1",
-        "b3",
-        "b5"
+        "b3"
       ],
       "settings": {
         "layout": "faq",

@@ -146,23 +146,23 @@
         "b1": {
           "type": "item",
           "settings": {
-            "title": "Se glisse dans le manche",
+            "title": "1. Ouvre le manche et retire le filtre usagé",
             "text": "",
             "tag": "",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/shift-filtre-pure-water-insertion-pomme-de-douche.jpg"
+            "image": "shopify://shop_images/shift-filtre-pure-water-retrait-pomme-de-douche.jpg"
           }
         },
         "b2": {
           "type": "item",
           "settings": {
-            "title": "Dans la pomme de douche SHIFT",
+            "title": "2. Glisse le nouveau filtre et referme",
             "text": "",
             "tag": "",
             "link_label": "",
             "show_price": true,
-            "image": "shopify://shop_images/shift-pomme-de-douche-filtrante-packshot.jpg"
+            "image": "shopify://shop_images/shift-filtre-pure-water-insertion-pomme-de-douche.jpg"
           }
         }
       },
@@ -174,12 +174,12 @@
         "layout": "visuals",
         "background": "white",
         "align": "center",
-        "eyebrow": "",
-        "heading": "Le filtre, dans ta pomme de douche SHIFT",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Remplace ton filtre en 2 gestes",
         "text": "",
         "columns": 2,
         "columns_mobile": "1",
-        "ratio": "4/5",
+        "ratio": "1/1",
         "open_first": false
       }
     },
@@ -222,7 +222,7 @@
         "background": "cream",
         "align": "center",
         "eyebrow": "Mode d'emploi",
-        "heading": "Remplace ton filtre",
+        "heading": "Le détail, étape par étape",
         "text": "",
         "columns": 3,
         "columns_mobile": "1",

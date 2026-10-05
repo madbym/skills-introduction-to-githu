@@ -95,7 +95,7 @@
           "type": "item",
           "settings": {
             "title": "Comment fonctionne la remise ?",
-            "text": "<p>-5 % dès 2 produits, -10 % dès 3 produits, -15 % dès 4 produits, appliqués automatiquement au panier. Les coffrets et sets sont déjà proposés à prix réduit et ne comptent pas dans les paliers. La remise ne se cumule pas avec les autres remises par quantité : la plus avantageuse pour toi s'applique.</p>"
+            "text": "<p>-5 % dès 3 produits, -10 % dès 5 produits, -15 % dès 7 produits, sur les produits à l'unité choisis sur cette page. La remise s'applique automatiquement au panier quand tu valides ton rituel. Les coffrets et sets sont déjà proposés à prix réduit et ne comptent pas dans les paliers. Elle ne se cumule pas avec les autres remises : la plus avantageuse pour toi s'applique.</p>"
           }
         }
       },
@@ -119,27 +119,63 @@
     },
     "bundle": {
       "type": "ss-bundle",
+      "blocks": {
+        "home": {
+          "type": "category",
+          "settings": {
+            "title": "Rituel Home",
+            "products": [
+              "pommeau-de-douche-filtrant",
+              "coque-de-diffusion",
+              "filtre-vitamine-showerfilter-sunsoari",
+              "onsha-filtre-thermal-vitamine-sans-senteur"
+            ]
+          }
+        },
+        "nomade": {
+          "type": "category",
+          "settings": {
+            "title": "Rituel Nomade",
+            "products": [
+              "douchette-filtrante",
+              "coque-de-diffusion-nomade",
+              "capsule-vitaminee-shower-filter-sunsoari",
+              "filtre-sediment-recharge"
+            ]
+          }
+        },
+        "shift": {
+          "type": "category",
+          "settings": {
+            "title": "SHIFT",
+            "products": [
+              "pack-6-capsules-vitaminees-shift-sunsoari",
+              "pack-3-sediments-pure-water"
+            ]
+          }
+        },
+        "acc": {
+          "type": "category",
+          "settings": {
+            "title": "Accessoires & lavabo",
+            "products": [
+              "product-onsha-coque-douchette-filtrante",
+              "filtre-a-robinet-faucet-sullab-sunsoari"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "home",
+        "nomade",
+        "shift",
+        "acc"
+      ],
       "settings": {
-        "background": "white",
         "eyebrow": "Plus tu composes, moins tu paies",
         "heading": "Compose ton rituel",
-        "text": "<p>Choisis ta base, ta diffusion et tes recharges. Ta remise grandit à chaque produit ajouté, et s'applique automatiquement au panier.</p>",
-        "products": [
-          "pommeau-de-douche-filtrant",
-          "douchette-filtrante",
-          "coque-de-diffusion",
-          "coque-de-diffusion-nomade",
-          "filtre-vitamine-showerfilter-sunsoari",
-          "onsha-filtre-thermal-vitamine-sans-senteur",
-          "capsule-vitaminee-shower-filter-sunsoari",
-          "filtre-sediment-recharge",
-          "product-onsha-coque-douchette-filtrante",
-          "pack-3-sediments-pure-water",
-          "pack-6-capsules-vitaminees-shift-sunsoari",
-          "filtre-a-robinet-faucet-sullab-sunsoari"
-        ],
-        "tiers": "2:5,3:10,4:15",
-        "button_label": "Ajouter mon rituel au panier",
+        "text": "<p>Choisis ta senteur, ta diffusion et tes recharges : dès 3 produits, toute ta sélection baisse.</p>",
+        "tiers": "3:5:RITUEL5-SNS,5:10:RITUEL10-SNS,7:15:RITUEL15-SNS",
         "note": "Les formats Home et Nomade ne sont pas interchangeables : la coque Home accueille les filtres thermaux Home, la coque Nomade accueille les capsules."
       }
     }

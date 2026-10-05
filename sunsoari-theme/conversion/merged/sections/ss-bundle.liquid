@@ -1,0 +1,178 @@
+{%- comment -%}
+  Sunsoari · Compose ton rituel (façon « Build your bundle »)
+  La cliente choisit plusieurs produits ; la remise par palier est appliquée au panier
+  par des réductions automatiques Shopify. Les paliers affichés ici (setting « tiers »)
+  doivent correspondre exactement à ces réductions.
+{%- endcomment -%}
+{%- assign uid = 'ssb-' | append: section.id -%}
+<section class="ss-sec ss-sec--{{ section.settings.background }} ss-bundle" id="{{ uid }}" data-tiers="{{ section.settings.tiers | escape }}">
+  <div class="ss-wrap">
+    <div class="ss-head" style="text-align:center">
+      {%- if section.settings.eyebrow != blank -%}<span class="ss-eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      {%- if section.settings.heading != blank -%}<h2 class="ss-h2">{{ section.settings.heading }}</h2>{%- endif -%}
+      {%- if section.settings.text != blank -%}<div class="ss-bundle__intro">{{ section.settings.text }}</div>{%- endif -%}
+    </div>
+
+    {%- assign ss_tiers = section.settings.tiers | split: ',' -%}
+    {%- if ss_tiers.size > 0 -%}
+      <ol class="ss-bundle__tiers" aria-label="Paliers de remise">
+        {%- for t in ss_tiers -%}
+          {%- assign parts = t | split: ':' -%}
+          <li data-tier-qty="{{ parts[0] | strip }}"><strong>-{{ parts[1] | strip }} %</strong><span>dès {{ parts[0] | strip }} produits</span></li>
+        {%- endfor -%}
+      </ol>
+    {%- endif -%}
+
+    <div class="ss-bundle__grid">
+      {%- for p in section.settings.products -%}
+        {%- assign v0 = p.selected_or_first_available_variant -%}
+        <div class="ss-bundle__item" data-item>
+          <a class="ss-bundle__media" href="{{ p.url }}" tabindex="-1" aria-hidden="true">
+            {%- if p.featured_image -%}{{ p.featured_image | image_url: width: 600 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 25vw, 50vw', alt: p.title }}{%- endif -%}
+          </a>
+          <div class="ss-bundle__body">
+            <a class="ss-bundle__title" href="{{ p.url }}">{{ p.title | remove: 'Onsha · ' | remove: 'SHIFT · ' | remove: 'Sullab · ' }}</a>
+            <span class="ss-bundle__vendor">{{ p.vendor }}</span>
+            {%- if p.variants.size > 1 -%}
+              <label class="visually-hidden" for="{{ uid }}-v-{{ p.id }}">Choix pour {{ p.title | escape }}</label>
+              <select class="ss-bundle__select" id="{{ uid }}-v-{{ p.id }}" data-variant>
+                {%- for v in p.variants -%}
+                  <option value="{{ v.id }}" data-price="{{ v.price }}" {% unless v.available %}disabled{% endunless %} {% if v.id == v0.id %}selected{% endif %}>{{ v.title }}{% unless v.available %} (épuisé){% endunless %}</option>
+                {%- endfor -%}
+              </select>
+            {%- else -%}
+              <input type="hidden" data-variant value="{{ v0.id }}" data-price="{{ v0.price }}">
+            {%- endif -%}
+            <div class="ss-bundle__row">
+              <span class="ss-bundle__price" data-price-label>{{ v0.price | money }}</span>
+              {%- if p.available -%}
+                <div class="ss-bundle__qty" role="group" aria-label="Quantité pour {{ p.title | escape }}">
+                  <button type="button" data-minus aria-label="Retirer">−</button>
+                  <span data-qty aria-live="polite">0</span>
+                  <button type="button" data-plus aria-label="Ajouter">+</button>
+                </div>
+              {%- else -%}
+                <span class="ss-bundle__soldout">Épuisé</span>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.note != blank -%}<p class="ss-note">{{ section.settings.note }}</p>{%- endif -%}
+  </div>
+
+  <div class="ss-bundle__bar" data-bar>
+    <div class="ss-bundle__bar-inner">
+      <div class="ss-bundle__status">
+        <p class="ss-bundle__count" data-count>Choisis tes produits</p>
+        <div class="ss-bundle__progress" aria-hidden="true"><span data-progress></span></div>
+        <p class="ss-bundle__next" data-next></p>
+      </div>
+      <div class="ss-bundle__total">
+        <span class="ss-bundle__was" data-was></span>
+        <span class="ss-bundle__now" data-now>0,00 €</span>
+      </div>
+      <button type="button" class="btn btn--primary ss-bundle__cta" data-add disabled>{{ section.settings.button_label | default: 'Ajouter mon rituel au panier' }}</button>
+    </div>
+    <p class="ss-bundle__legal">Remise appliquée automatiquement au panier. Non cumulable avec les autres remises par quantité : la plus avantageuse s'applique.</p>
+  </div>
+</section>
+
+<style>
+.ss-bundle{padding-bottom:140px;}
+.ss-bundle__intro{max-width:620px;margin:10px auto 0;color:var(--ss-muted);}
+.ss-bundle__tiers{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;list-style:none;padding:0;margin:20px 0 24px;}
+.ss-bundle__tiers li{border:1px solid var(--ss-line);background:var(--ss-white);border-radius:var(--ss-pill);padding:6px 14px;font-size:13px;color:var(--ss-muted);display:flex;gap:6px;align-items:baseline;transition:background .2s,border-color .2s;}
+.ss-bundle__tiers li strong{color:var(--ss-indigo);}
+.ss-bundle__tiers li.is-on{background:var(--ss-powder);border-color:var(--ss-mist);}
+.ss-bundle__grid{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));}
+@media(min-width:750px){.ss-bundle__grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}}
+@media(min-width:1100px){.ss-bundle__grid{grid-template-columns:repeat(4,minmax(0,1fr));}}
+.ss-bundle__item{display:flex;flex-direction:column;border:1px solid var(--ss-line);background:var(--ss-white);border-radius:var(--ss-radius);overflow:hidden;transition:border-color .15s,box-shadow .15s;min-width:0;}
+.ss-bundle__item.is-picked{border-color:var(--ss-indigo);box-shadow:0 0 0 1px var(--ss-indigo) inset;}
+.ss-bundle__media{display:block;aspect-ratio:1/1;position:relative;background:var(--ss-cream);}
+.ss-bundle__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.ss-bundle__body{display:flex;flex-direction:column;gap:6px;padding:12px;flex:1;}
+.ss-bundle__title{font-weight:600;color:var(--ss-indigo);font-size:14px;line-height:1.3;text-decoration:none;}
+.ss-bundle__vendor{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ss-mist);}
+.ss-bundle__select{width:100%;border:1px solid var(--ss-line);border-radius:var(--ss-radius-sm);padding:8px 10px;font:inherit;font-size:13px;background:#fff;color:var(--ss-ink);}
+.ss-bundle__row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto;padding-top:4px;}
+.ss-bundle__price{font-weight:700;color:var(--ss-indigo);font-size:14px;white-space:nowrap;}
+.ss-bundle__qty{display:flex;align-items:center;border:1px solid var(--ss-line);border-radius:var(--ss-pill);}
+.ss-bundle__qty button{width:32px;height:32px;border:0;background:none;font-size:18px;color:var(--ss-indigo);cursor:pointer;line-height:1;}
+.ss-bundle__qty span{min-width:18px;text-align:center;font-weight:700;font-size:14px;}
+.ss-bundle__soldout{font-size:12px;color:var(--ss-muted);}
+.ss-bundle__bar{position:sticky;bottom:0;z-index:5;background:var(--ss-white);border-top:1px solid var(--ss-line);box-shadow:0 -6px 20px rgba(4,40,80,.06);margin-top:24px;padding:12px 16px 10px;}
+.ss-bundle__bar-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:8px 16px;align-items:center;}
+.ss-bundle__count{margin:0;font-weight:700;color:var(--ss-indigo);font-size:14px;}
+.ss-bundle__progress{height:6px;background:var(--ss-cream);border-radius:99px;overflow:hidden;margin:6px 0;}
+.ss-bundle__progress span{display:block;height:100%;width:0;background:var(--ss-mist);border-radius:99px;transition:width .25s;}
+.ss-bundle__next{margin:0;font-size:12px;color:var(--ss-muted);}
+.ss-bundle__total{text-align:right;white-space:nowrap;}
+.ss-bundle__was{display:block;font-size:12px;color:var(--ss-muted);text-decoration:line-through;min-height:14px;}
+.ss-bundle__now{font-weight:700;font-size:18px;color:var(--ss-indigo);}
+.ss-bundle__cta{grid-column:1/-1;width:100%;}
+.ss-bundle__cta[disabled]{opacity:.45;cursor:not-allowed;}
+.ss-bundle__legal{max-width:1240px;margin:6px auto 0;font-size:11px;color:var(--ss-muted);text-align:center;}
+@media(min-width:750px){.ss-bundle__bar-inner{grid-template-columns:1fr auto auto;}.ss-bundle__cta{grid-column:auto;width:auto;min-width:280px;}}
+</style>
+
+<script>
+(function(){
+  var root=document.getElementById('{{ uid }}'); if(!root||root.dataset.ready) return; root.dataset.ready='1';
+  var tiers=(root.dataset.tiers||'').split(',').map(function(t){var p=t.split(':');return {q:+p[0],d:+p[1]};}).filter(function(t){return t.q>0;}).sort(function(a,b){return a.q-b.q;});
+  var fmt=new Intl.NumberFormat('fr-FR',{style:'currency',currency:'{{ cart.currency.iso_code | default: "EUR" }}'});
+  var items=[].slice.call(root.querySelectorAll('[data-item]'));
+  function vInfo(it){var s=it.querySelector('[data-variant]');if(s.tagName==='SELECT'){var o=s.options[s.selectedIndex];return {id:o.value,price:+o.dataset.price};}return {id:s.value,price:+s.dataset.price};}
+  function qty(it){var q=it.querySelector('[data-qty]');return q?+q.textContent:0;}
+  function refresh(){
+    var n=0,sub=0;
+    items.forEach(function(it){var q=qty(it),v=vInfo(it);n+=q;sub+=q*v.price;it.classList.toggle('is-picked',q>0);it.querySelector('[data-price-label]').textContent=fmt.format(v.price/100);});
+    var cur=null,next=null;tiers.forEach(function(t){if(n>=t.q)cur=t;else if(!next)next=t;});
+    var d=cur?cur.d:0,now=Math.round(sub*(100-d)/100);
+    root.querySelectorAll('[data-tier-qty]').forEach(function(li){li.classList.toggle('is-on',cur&&+li.dataset.tierQty===cur.q);});
+    root.querySelector('[data-count]').textContent=n===0?'Choisis tes produits':(n+(n>1?' produits':' produit')+(d?' · -'+d+' %':''));
+    var max=tiers.length?tiers[tiers.length-1].q:1;
+    root.querySelector('[data-progress]').style.width=Math.min(100,n/max*100)+'%';
+    root.querySelector('[data-next]').textContent=next?('Encore '+(next.q-n)+(next.q-n>1?' produits':' produit')+' pour -'+next.d+' %'):(n?'Remise maximale atteinte':'');
+    root.querySelector('[data-was]').textContent=d?fmt.format(sub/100):'';
+    root.querySelector('[data-now]').textContent=fmt.format(now/100);
+    root.querySelector('[data-add]').disabled=n===0;
+  }
+  root.addEventListener('click',function(e){
+    var b=e.target.closest('[data-plus],[data-minus]');if(!b)return;
+    var q=b.parentNode.querySelector('[data-qty]');var v=+q.textContent+(b.hasAttribute('data-plus')?1:-1);
+    q.textContent=Math.max(0,Math.min(20,v));refresh();
+  });
+  root.addEventListener('change',function(e){if(e.target.matches('select[data-variant]'))refresh();});
+  root.querySelector('[data-add]').addEventListener('click',function(){
+    var btn=this,list=[];items.forEach(function(it){var q=qty(it);if(q>0)list.push({id:+vInfo(it).id,quantity:q});});
+    if(!list.length)return;btn.disabled=true;var label=btn.textContent;btn.textContent='Ajout en cours…';
+    fetch((window.Shopify&&Shopify.routes?Shopify.routes.root:'/')+'cart/add.js',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({items:list})})
+      .then(function(r){if(!r.ok)throw r;return r.json();})
+      .then(function(){window.location.href=(window.Shopify&&Shopify.routes?Shopify.routes.root:'/')+'cart';})
+      .catch(function(){btn.disabled=false;btn.textContent=label;alert("Un produit n'a pas pu être ajouté (stock insuffisant ?). Réessaie ou ajuste les quantités.");});
+  });
+  refresh();
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Sunsoari · Compose ton rituel",
+  "tag": "div",
+  "settings": [
+    { "type": "select", "id": "background", "label": "Fond", "default": "white", "options": [
+      { "value": "white", "label": "Blanc" }, { "value": "cream", "label": "Crème" }, { "value": "sand", "label": "Sable" }, { "value": "powder", "label": "Bleu poudre" } ] },
+    { "type": "text", "id": "eyebrow", "label": "Surtitre" },
+    { "type": "text", "id": "heading", "label": "Titre", "default": "Compose ton rituel" },
+    { "type": "richtext", "id": "text", "label": "Texte" },
+    { "type": "product_list", "id": "products", "label": "Produits proposés", "limit": 24 },
+    { "type": "text", "id": "tiers", "label": "Paliers (quantité:remise %)", "default": "2:5,3:10,4:15", "info": "Doivent correspondre exactement aux réductions automatiques Shopify." },
+    { "type": "text", "id": "button_label", "label": "Texte du bouton", "default": "Ajouter mon rituel au panier" },
+    { "type": "text", "id": "note", "label": "Note sous la grille" }
+  ],
+  "presets": [{ "name": "Sunsoari · Compose ton rituel" }]
+}
+{% endschema %}

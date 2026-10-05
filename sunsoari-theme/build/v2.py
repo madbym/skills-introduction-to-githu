@@ -89,6 +89,8 @@ STEP_PHOTO = {
     "product.pommeau-de-douche-filtran-2.json": "pommeau-de-douche-filtrant-a-vitamine-c-9174486.jpg",
     "product.douchette-filtrante.json": "onsha-douchette-filtrante-8605939.jpg",
     "product.pack-6-capsules-vitaminee.json": "7VitaminCapsule-04-2.jpg",
+    # step-by-step diagram, moved out of the product gallery
+    "product.filtre-sediment-recharge.json": "onsha-filtre-sediment-recharge-douchette-2530591.jpg",
 }
 
 

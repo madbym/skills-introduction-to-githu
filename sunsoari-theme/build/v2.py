@@ -77,7 +77,6 @@ BOX = {
 
 # HD photo (>= 990 px) for "Comment ça marche": the supplier GIFs are only 450-550 px high.
 STEP_PHOTO = {
-    "product.pack-3-sediments-pure-wat.json": "2SedimentFilter-02.webp",
     "product.kit-decouverte-home.json": "onsha-set-decouverte-home-2842111.jpg",
     "product.box-rituel-douche-complet.json": "shift-coffret-douche-aromatherapie-3669659.png",
     "product.coffret-home.json": "coffret-home-8881318.jpg",
@@ -87,7 +86,8 @@ STEP_PHOTO = {
     "product.rituel-decouverte.json": "onsha-set-decouverte-nomade-6470897.jpg",
     "product.pommeau-de-douche-filtran-2.json": "pommeau-de-douche-filtrant-a-vitamine-c-9174486.jpg",
     "product.douchette-filtrante.json": "onsha-douchette-filtrante-8605939.jpg",
-    "product.pack-6-capsules-vitaminee.json": "7VitaminCapsule-04-2.jpg",
+    "product.pack-6-capsules-vitaminee.json": "shift-insertion-capsule.gif",
+    "product.pack-3-sediments-pure-wat.json": "shift-surveille-ton-filtre.gif",
     # step-by-step diagram, moved out of the product gallery
     "product.filtre-sediment-recharge.json": "onsha-filtre-sediment-recharge-douchette-2530591.jpg",
 }

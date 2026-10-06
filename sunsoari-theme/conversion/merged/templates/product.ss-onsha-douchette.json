@@ -98,7 +98,7 @@
         "ss_complements": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-complements', items: \"coque-de-diffusion-nomade||Accueille la capsule thermale;capsule-vitaminee-shower-filter-sunsoari||4 senteurs thermales au choix;product-onsha-coque-douchette-filtrante||Housse en silicone, 6 coloris;filtre-sediment-recharge||La recharge à changer toutes les 4 à 6 semaines\", title: \"La douchette est vendue seule\", note: \"Elle s'utilise telle quelle, filtre sédiment inclus. Pour le rituel thermal Nomade, ajoute :\" %}"
+            "custom_liquid": "{% render 'ss-complements', items: \"coque-de-diffusion-nomade||Accueille la capsule thermale;capsule-vitaminee-shower-filter-sunsoari||4 senteurs thermales au choix;product-onsha-coque-douchette-filtrante||Housse en silicone, 6 coloris;filtre-sediment-recharge||Boîte de 3 recharges, une toutes les 4 à 6 semaines\", title: \"La douchette est vendue seule\", note: \"Elle s'utilise telle quelle, filtre sédiment inclus. Pour le rituel thermal Nomade, ajoute :\" %}"
           }
         }
       },

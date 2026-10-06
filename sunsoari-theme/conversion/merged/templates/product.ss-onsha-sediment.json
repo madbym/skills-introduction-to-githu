@@ -35,7 +35,7 @@
         "ss_facts": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Rôle</b>Filtration mécanique qui retient les sédiments et particules visibles</div><div><b>Compatibilité</b>Douchette filtrante Onsha uniquement</div><div><b>Durée d&#x27;utilisation</b>4 à 6 semaines selon ton eau et ta fréquence de douche</div></div>"
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Boîte de 3 filtres sédiment</div><div><b>Rôle</b>Filtration mécanique qui retient les sédiments et particules visibles</div><div><b>Compatibilité</b>Douchette filtrante Onsha uniquement</div><div><b>Durée d&#x27;utilisation</b>4 à 6 semaines par filtre selon ton eau et ta fréquence de douche, soit environ 3 à 4 mois avec la boîte</div></div>"
           }
         },
         "variant_picker": {
@@ -53,7 +53,7 @@
         "ss_offers": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'ss-offers', product: product, section_id: section.id, tiers: '1:0,2:5,4:10', singular: \"filtre\", plural: \"filtres\", title: \"Choisis ta quantité\" %}"
+            "custom_liquid": "{% render 'ss-offers', product: product, section_id: section.id, tiers: '1:0,2:5,4:10', singular: \"boîte\", plural: \"boîtes\", title: \"Choisis ta quantité\" %}"
           }
         },
         "buy_buttons": {

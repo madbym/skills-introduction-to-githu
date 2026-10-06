@@ -1,4 +1,3 @@
-
 {
   "sections": {
     "ss_hero": {
@@ -179,7 +178,7 @@
       "settings": {
         "container": "fixed",
         "color_scheme": "",
-        "collection": "onsha",
+        "collection": "les-essentiels",
         "section_header_alignment": "left",
         "section_header_alignment_mobile": "inherit",
         "subheading": "",
@@ -198,7 +197,7 @@
         "max_height": 0,
         "pcard_button_type": "icon",
         "pcard_title_line_limit": "1-line",
-        "limit": 9,
+        "limit": 6,
         "columns": 3,
         "column_gap": "2xs",
         "row_gap": "inherit",
@@ -215,19 +214,19 @@
         "b1": {
           "type": "step",
           "settings": {
-            "text": "<strong>Filtrer</strong> : le pommeau de douche retient les sédiments et particules visibles de l'eau."
+            "text": "<strong>Filtrer</strong> : le filtre à sédiments Pure Water, logé dans le manche, retient les sédiments et particules visibles de l'eau."
           }
         },
         "b2": {
           "type": "step",
           "settings": {
-            "text": "<strong>Infuser</strong> : la recharge diffuse ses actifs (vitamine C, acide hyaluronique selon les marques) et sa senteur."
+            "text": "<strong>Infuser</strong> : la capsule de soin diffuse les actifs annoncés par la marque (vitamine C, actifs hydratants) et sa senteur."
           }
         },
         "b3": {
           "type": "step",
           "settings": {
-            "text": "<strong>Renouveler</strong> : tu changes simplement la recharge quand elle est épuisée, sans outil."
+            "text": "<strong>Renouveler</strong> : tu changes la capsule ou le filtre en quelques secondes, sans outil."
           }
         }
       },
@@ -243,9 +242,9 @@
         "eyebrow": "Comment ça marche",
         "heading": "Un rituel en 3 gestes",
         "text": "",
-        "image": "shopify://shop_images/CopiedeTravelShowerHead_04.jpg",
+        "image": "shopify://shop_images/shift-pommeaux-etageres-coloris.jpg",
         "tip_title": "Le conseil de la Maison",
-        "tip_text": "<p>Commence par une senteur douce comme Fleur de Prunier ou la version sans senteur, puis explore les autres.</p>",
+        "tip_text": "<p>Choisis d'abord la couleur de ton pommeau, puis laisse-toi guider par les senteurs : Tea Tree &amp; Lavender pour commencer en douceur, Hinoki Spring pour une note boisée.</p>",
         "columns": 3,
         "columns_mobile": "1",
         "ratio": "1/1",

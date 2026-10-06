@@ -229,7 +229,8 @@
         "open_first": false,
         "tip_title": "Les conseils de l'équipe",
         "tip_text": "<p>Garde toujours une recharge d'avance dans ta trousse. Si tu vois le filtre changer de couleur, c'est le signal qu'il a bien travaillé.</p>",
-        "image": "shopify://shop_images/onsha-filtre-sediment-recharge-9248658.jpg"
+        "image": "shopify://shop_images/onsha-filtre-sediment-recharge-9248658.jpg",
+        "video": "shopify://files/videos/onsha-douchette-changer-filtre-sediment.mp4"
       }
     },
     "ss_faq": {

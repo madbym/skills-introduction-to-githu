@@ -203,6 +203,23 @@ VIDEOS = {
     "product.filtre-sediment-recharge.json": {"Remplacez votre recharge": DOUCHETTE_SEDIMENT},
     "product.product.json": {"Installez votre housse": HOUSSE_VIDEO},
 }
+NOMADE_CAPSULE_STEPS = (
+    "<h3>Placer la capsule dans la coque Nomade</h3>"
+    "<p>1. Ouvre le sachet de la capsule thermale.</p>"
+    "<p>2. Ouvre la coque de diffusion Nomade et place la capsule à l'intérieur.</p>"
+    "<p>3. Referme la coque : elle est prête à se visser sur ta douchette.</p>"
+)
+SET_NOMADE_TEXT = ("<h3>Ouvre ton set découverte</h3>"
+                   "<p>La coque de diffusion Nomade et les capsules thermales, prêtes pour ton rituel.</p>")
+NOMADE_CAPSULE = ("onsha-nomade-capsule-dans-coque.mp4", NOMADE_CAPSULE_STEPS) + TALL
+SET_NOMADE = ("onsha-set-decouverte-nomade-deballage.mp4", SET_NOMADE_TEXT) + TALL
+VIDEOS.update({
+    "product.capsule-vitaminee-2.json": {"Remplacez votre recharge": NOMADE_CAPSULE},
+    "product.coque-de-diffusion-nomade.json": {"Remplacez votre recharge": NOMADE_CAPSULE},
+    "product.coffret-mini.json": {"Installez votre produit": NOMADE_CAPSULE},
+    "product.rituel-decouverte.json": {"Découvrez votre coffret": SET_NOMADE,
+                                       "Installez votre produit": NOMADE_CAPSULE},
+})
 # Tab names that differ from the default ones.
 TAB_NAMES = {"product.product.json": ["Installez votre housse"]}
 

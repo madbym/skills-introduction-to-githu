@@ -100,11 +100,18 @@
           "settings": {
             "custom_liquid": "{% render 'ss-complements', items: \"douchette-filtrante||Filtre sédiment inclus\", title: \"La housse est vendue seule\", note: \"Elle s'adapte uniquement à la douchette filtrante Onsha.\" %}"
           }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
         }
       },
       "block_order": [
         "ss_badge",
         "title",
+        "ss_rating",
         "price",
         "description",
         "variant_picker",
@@ -269,6 +276,13 @@
         "ratio": "1/1",
         "open_first": true
       }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
     }
   },
   "order": [
@@ -276,6 +290,7 @@
     "main",
     "ss_visuals",
     "ss_steps",
+    "ss_reviews",
     "ss_faq"
   ]
 }

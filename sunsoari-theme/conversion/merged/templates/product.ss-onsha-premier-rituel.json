@@ -112,11 +112,18 @@
           "settings": {
             "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant||Le jet fin du rituel Home;filtre-vitamine-showerfilter-sunsoari||Un filtre d'avance, 4 senteurs au choix\", title: \"Envie du jet fin Onsha ?\", note: \"La coque se visse sur ton pommeau de douche actuel (raccord standard). Tu peux aussi l'associer au pommeau de douche filtrant Onsha :\" %}"
           }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
         }
       },
       "block_order": [
         "ss_badge",
         "title",
+        "ss_rating",
         "price",
         "description",
         "variant_picker",
@@ -301,6 +308,13 @@
         "ratio": "1/1",
         "open_first": true
       }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
     }
   },
   "order": [
@@ -308,6 +322,7 @@
     "main",
     "ss_box",
     "ss_steps",
+    "ss_reviews",
     "ss_faq"
   ]
 }

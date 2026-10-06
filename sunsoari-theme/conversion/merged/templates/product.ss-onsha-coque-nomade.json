@@ -100,11 +100,18 @@
           "settings": {
             "custom_liquid": "{% render 'ss-complements', items: \"douchette-filtrante||La douchette sur laquelle elle se visse;capsule-vitaminee-shower-filter-sunsoari||La capsule thermale, 4 senteurs au choix\", title: \"La coque Nomade est vendue seule\", note: \"Elle se fixe entre ton flexible et la douchette, et accueille la capsule thermale. Pour l'utiliser, il te faut aussi :\" %}"
           }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
         }
       },
       "block_order": [
         "ss_badge",
         "title",
+        "ss_rating",
         "price",
         "description",
         "variant_picker",
@@ -276,6 +283,13 @@
         "ratio": "1/1",
         "open_first": true
       }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
     }
   },
   "order": [
@@ -283,6 +297,7 @@
     "main",
     "ss_visuals",
     "ss_steps",
+    "ss_reviews",
     "ss_faq"
   ]
 }

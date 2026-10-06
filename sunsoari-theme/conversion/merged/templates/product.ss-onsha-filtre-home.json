@@ -106,11 +106,18 @@
           "settings": {
             "custom_liquid": "{% render 'ss-complements', items: \"coque-de-diffusion|Grand format|Accueille ton filtre, à acheter une seule fois;pommeau-de-douche-filtrant||La base du rituel Home\", title: \"Le filtre est vendu seul\", note: \"Il s'insère dans la coque de diffusion Home, vissée au pommeau de douche filtrant. Pas encore équipée ?\" %}"
           }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
         }
       },
       "block_order": [
         "ss_badge",
         "title",
+        "ss_rating",
         "price",
         "description",
         "variant_picker",
@@ -374,6 +381,13 @@
         "ratio": "1/1",
         "open_first": true
       }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
     }
   },
   "order": [
@@ -382,6 +396,7 @@
     "ss_steps",
     "ss_scents",
     "ss_cards",
+    "ss_reviews",
     "ss_faq"
   ]
 }

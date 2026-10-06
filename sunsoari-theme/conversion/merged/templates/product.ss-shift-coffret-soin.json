@@ -112,11 +112,18 @@
           "settings": {
             "custom_liquid": "{% render 'ss-complements', items: \"pack-6-capsules-vitaminees-shift-sunsoari||6 capsules soin et aromathérapie;pack-3-sediments-pure-water||3 filtres à sédiments Pure Water\", title: \"Pour la suite de ton rituel\", note: \"Les recharges SHIFT sont vendues séparément.\" %}"
           }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
         }
       },
       "block_order": [
         "ss_badge",
         "title",
+        "ss_rating",
         "price",
         "description",
         "variant_picker",
@@ -370,6 +377,13 @@
         "ratio": "1/1",
         "open_first": false
       }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
     }
   },
   "order": [
@@ -378,6 +392,7 @@
     "ss_box",
     "ss_install",
     "ss_cards",
+    "ss_reviews",
     "ss_faq"
   ]
 }

@@ -100,11 +100,18 @@
           "settings": {
             "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant||La base du rituel Home;filtre-vitamine-showerfilter-sunsoari||Le filtre thermal, 4 senteurs au choix;onsha-filtre-thermal-vitamine-sans-senteur|1 filtre|Ou la version sans parfum ajouté\", title: \"La coque est vendue seule\", note: \"Elle relie ton flexible au pommeau de douche et accueille le filtre. Pour l'utiliser, il te faut aussi :\" %}"
           }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
         }
       },
       "block_order": [
         "ss_badge",
         "title",
+        "ss_rating",
         "price",
         "description",
         "variant_picker",
@@ -277,6 +284,13 @@
         "ratio": "1/1",
         "open_first": true
       }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
     }
   },
   "order": [
@@ -284,6 +298,7 @@
     "main",
     "ss_visuals",
     "ss_steps",
+    "ss_reviews",
     "ss_faq"
   ]
 }

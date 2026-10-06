@@ -100,11 +100,18 @@
           "settings": {
             "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant||Le jet fin du rituel Home\", title: \"Envie du jet fin Onsha ?\", note: \"Ton set contient la coque et 4 filtres. La coque se visse sur la plupart des pommeaux de douche à raccord standard, ou sur le pommeau de douche filtrant Onsha :\" %}"
           }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
         }
       },
       "block_order": [
         "ss_badge",
         "title",
+        "ss_rating",
         "price",
         "description",
         "variant_picker",
@@ -216,12 +223,20 @@
         "ratio": "1/1",
         "open_first": true
       }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
     }
   },
   "order": [
     "breadcrumbs",
     "main",
     "ss_box",
+    "ss_reviews",
     "ss_faq"
   ]
 }

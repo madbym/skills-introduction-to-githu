@@ -112,11 +112,18 @@
           "settings": {
             "custom_liquid": "{% render 'ss-complements', items: \"filtre-a-robinet-faucet-sullab-sunsoari|Lot 3 Sédiments|3 sédiments, 6 à 9 mois de filtration\", title: \"Pour plus tard\", note: \"Le sédiment se change tous les 2 à 3 mois. Prends de l'avance sur tes recharges :\" %}"
           }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
         }
       },
       "block_order": [
         "ss_badge",
         "title",
+        "ss_rating",
         "price",
         "description",
         "variant_picker",
@@ -333,6 +340,13 @@
         "ratio": "1/1",
         "open_first": true
       }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
     }
   },
   "order": [
@@ -341,6 +355,7 @@
     "ss_visuals",
     "ss_steps",
     "ss_cards",
+    "ss_reviews",
     "ss_faq"
   ]
 }

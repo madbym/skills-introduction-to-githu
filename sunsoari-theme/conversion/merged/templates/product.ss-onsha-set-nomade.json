@@ -100,11 +100,18 @@
           "settings": {
             "custom_liquid": "{% render 'ss-complements', items: \"douchette-filtrante||La base du rituel Nomade;product-onsha-coque-douchette-filtrante||Pour l'habiller, 6 coloris\", title: \"La douchette est vendue séparément\", note: \"Ton set contient la coque Nomade et 4 capsules. Pour l'utiliser, il te faut aussi la douchette filtrante Onsha.\" %}"
           }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
         }
       },
       "block_order": [
         "ss_badge",
         "title",
+        "ss_rating",
         "price",
         "description",
         "variant_picker",
@@ -239,12 +246,20 @@
         "ratio": "1/1",
         "open_first": true
       }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
     }
   },
   "order": [
     "breadcrumbs",
     "main",
     "ss_box",
+    "ss_reviews",
     "ss_faq"
   ]
 }

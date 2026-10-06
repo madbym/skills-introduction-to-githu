@@ -100,11 +100,18 @@
           "settings": {
             "custom_liquid": "{% render 'ss-complements', items: \"pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie||Pommeau de douche, capsule et filtre pour commencer;pack-3-sediments-pure-water||Les filtres à sédiments Pure Water\", title: \"Les capsules sont vendues seules\", note: \"Elles s'utilisent uniquement dans le pommeau de douche filtrant SHIFT. Pas encore équipée ?\" %}"
           }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
         }
       },
       "block_order": [
         "ss_badge",
         "title",
+        "ss_rating",
         "price",
         "description",
         "variant_picker",
@@ -290,6 +297,13 @@
         "ratio": "1/1",
         "open_first": true
       }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
     }
   },
   "order": [
@@ -297,6 +311,7 @@
     "main",
     "ss_steps",
     "ss_cards",
+    "ss_reviews",
     "ss_faq"
   ]
 }

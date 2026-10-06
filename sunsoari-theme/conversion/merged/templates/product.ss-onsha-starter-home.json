@@ -112,11 +112,18 @@
           "settings": {
             "custom_liquid": "{% render 'ss-complements', items: \"filtre-vitamine-showerfilter-sunsoari||4 senteurs thermales au choix;onsha-filtre-thermal-vitamine-sans-senteur|1 filtre|La version sans parfum ajouté\", title: \"Pour la suite de ton rituel\", note: \"Ton Starter contient 1 filtre. Les recharges sont vendues séparément, quand ton filtre est terminé.\" %}"
           }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
         }
       },
       "block_order": [
         "ss_badge",
         "title",
+        "ss_rating",
         "price",
         "description",
         "variant_picker",
@@ -313,6 +320,13 @@
         "ratio": "1/1",
         "open_first": true
       }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
     }
   },
   "order": [
@@ -320,6 +334,7 @@
     "main",
     "ss_box",
     "ss_steps",
+    "ss_reviews",
     "ss_faq"
   ]
 }

@@ -1621,7 +1621,7 @@
       "name": "t:image_with_text_with_icons",
       "settings": {
         "show_on_display": "desktop_and_mobile",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
         "wrap_in_card": false,
         "color_scheme_card": "",
         "section_width": "normal",
@@ -1920,7 +1920,7 @@
       "name": "Inscription newsletter",
       "settings": {
         "show_on_display": "desktop_and_mobile",
-        "color_scheme": "",
+        "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
         "wrap_in_card": true,
         "color_scheme_card": "scheme-2",
         "section_width": "normal",
@@ -2637,7 +2637,7 @@
       "name": "Collection en vedette",
       "settings": {
         "show_on_display": "desktop_and_mobile",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "collection": "onsha",
         "max_products": 8,
         "layout_type": "slider",
@@ -2928,7 +2928,7 @@
       "name": "Collection en vedette",
       "settings": {
         "show_on_display": "desktop_and_mobile",
-        "color_scheme": "",
+        "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
         "collection": "shift",
         "max_products": 8,
         "layout_type": "slider",
@@ -3113,13 +3113,13 @@
   },
   "order": [
     "custom_section_H6XpXt",
+    "custom_section_iHWWPc",
     "nos_marques",
-    "compose_ton_rituel",
     "collection_featured_9fdFHq",
     "onsha",
     "shift",
     "sullab",
-    "custom_section_iHWWPc",
+    "compose_ton_rituel",
     "custom_section_KAQ8dw",
     "custom_section_qetdex"
   ]

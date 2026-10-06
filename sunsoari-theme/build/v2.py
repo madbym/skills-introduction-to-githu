@@ -379,6 +379,41 @@ def square_images(node):
         square_images(b)
 
 
+# Page structure: a product page tells why, what's inside, how it works, then shows
+# the gestures, helps to choose, answers questions and only then suggests more.
+PRODUCT_ORDER = [
+    "main", "pourquoi", "la_technologie_onsha", "le_style_onsha", "la_base_du_rituel_skinca",
+    "ingr_dients_cl_s", "nos_diff_rentes_senteurs", "tes_senteurs", "notes_olfactives_par_col",
+    "comment_ca_marche", "videos_pratiques", "home_ou_nomade", "avant_apres", "en_situation",
+    "avis", "faq", "decouvre_aussi",
+]
+# Home: what's new, the idea (water first), the brands, where to start, then the story.
+HOME_ORDER = [
+    "custom_section_H6XpXt", "custom_section_iHWWPc", "nos_marques", "collection_featured_9fdFHq",
+    "onsha", "shift", "sullab", "compose_ton_rituel", "custom_section_KAQ8dw", "custom_section_qetdex",
+]
+
+
+IVORY, SAND = "scheme-1", "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7"
+HOME_SCHEMES = {
+    "custom_section_iHWWPc": SAND, "nos_marques": IVORY, "onsha": IVORY, "shift": SAND,
+    "sullab": IVORY, "custom_section_KAQ8dw": IVORY, "custom_section_qetdex": SAND,
+}
+
+
+def alternate_backgrounds(t, fname):
+    """Neighbouring sections never share a background, so each part reads on its own."""
+    if fname == "index.json":
+        for key, scheme in HOME_SCHEMES.items():
+            if key in t["sections"]:
+                t["sections"][key].setdefault("settings", {})["color_scheme"] = scheme
+        return
+    shown = [k for k in t["order"] if not t["sections"][k].get("disabled")
+             and k not in ("main", "decouvre_aussi")]
+    for i, key in enumerate(shown):
+        t["sections"][key].setdefault("settings", {})["color_scheme"] = SAND if i % 2 == 0 else IVORY
+
+
 def polish():
     """Last pass on every template: no grey placeholder for a missing photo, and no
     empty video tab (a tab is kept only once a real video has been added)."""
@@ -432,6 +467,12 @@ def polish():
             tabs["blocks"] = {k: tabs["blocks"][k] for k in keep}
             if not keep:
                 videos["disabled"] = True
+        order = PRODUCT_ORDER if fname.startswith("product.") else HOME_ORDER if fname == "index.json" else None
+        if order:
+            rank = {k: i for i, k in enumerate(order)}
+            # sections not listed keep their place just before the FAQ
+            t["order"] = sorted(t["order"], key=lambda k: rank.get(k, rank["faq"] - 0.5 if "faq" in rank else len(rank)))
+            alternate_backgrounds(t, fname)
         with open(path, "w", encoding="utf-8") as f:
             json.dump(t, f, ensure_ascii=False, indent=2)
 

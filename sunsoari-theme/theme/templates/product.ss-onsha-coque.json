@@ -405,7 +405,7 @@
     "videos_pratiques": {
       "type": "custom-section",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
         "color_scheme_card": "",
         "layout_gap_desktop": 10,
         "layout_flex_direction_mobile": "row",
@@ -510,7 +510,7 @@
     "la_technologie_onsha": {
       "type": "custom-section",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-8c66df20-7d2d-48fc-9064-92a4351ecaa7",
         "color_scheme_card": "",
         "layout_gap_desktop": 10,
         "layout_flex_direction_mobile": "row",
@@ -708,7 +708,7 @@
     "comment_ca_marche": {
       "type": "custom-section",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "color_scheme_card": "",
         "layout_gap_desktop": 10,
         "layout_flex_direction_mobile": "row",
@@ -1415,18 +1415,19 @@
         "layout_flex_direction_mobile": "column-reverse",
         "layout_gap_mobile": 30,
         "padding_top": 80,
-        "padding_bottom": 80
+        "padding_bottom": 80,
+        "color_scheme": "scheme-1"
       }
     }
   },
   "order": [
     "main",
-    "videos_pratiques",
     "la_technologie_onsha",
     "comment_ca_marche",
+    "videos_pratiques",
     "en_situation",
     "avis",
-    "decouvre_aussi",
-    "faq"
+    "faq",
+    "decouvre_aussi"
   ]
 }

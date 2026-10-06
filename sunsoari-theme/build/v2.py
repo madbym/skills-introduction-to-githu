@@ -178,6 +178,16 @@ SHIFT_DISCOVER = ("v24044gl0000d7mhqg7og65lq73dilq0.mp4", DISCOVER_SHIFT) + WIDE
 SHIFT_BOX = {"Découvrez votre coffret": SHIFT_DISCOVER, "Installez votre produit": SHIFT_INSTALL,
              "Remplacez votre recharge": CAPSULE_VIDEO}
 ONSHA_HOME = {"Installez votre produit": ONSHA_INSTALL}
+DOUCHETTE_SEDIMENT_STEPS = (
+    "<h3>Changer le filtre sédiment de ta douchette</h3>"
+    "<p>1. Dévisse la tête de la douchette.</p>"
+    "<p>2. Retire l'ancien filtre et insère le nouveau.</p>"
+    "<p>3. Revisse la tête, à la main.</p>"
+)
+HOUSSE_STEPS = "<h3>Habiller ta douchette</h3><p>La housse se glisse sur ta douchette Onsha en quelques secondes.</p>"
+# Clips Fanta added from the theme editor (Shopify Files).
+DOUCHETTE_SEDIMENT = ("onsha-douchette-changer-filtre-sediment.mp4", DOUCHETTE_SEDIMENT_STEPS, 32, 80)
+HOUSSE_VIDEO = ("IMG-7520.MOV", HOUSSE_STEPS) + TALL
 VIDEOS = {
     "product.pack-6-capsules-vitaminee.json": {"Remplacez votre recharge": CAPSULE_VIDEO},
     "product.pack-3-sediments-pure-wat.json": {"Remplacez votre recharge": SEDIMENT_VIDEO},
@@ -189,7 +199,12 @@ VIDEOS = {
     "product.premier-rituel-home.json": ONSHA_HOME,
     "product.coffret-home.json": ONSHA_HOME,
     "product.kit-decouverte-home.json": ONSHA_HOME,
+    "product.douchette-filtrante.json": {"Remplacez votre recharge": DOUCHETTE_SEDIMENT},
+    "product.filtre-sediment-recharge.json": {"Remplacez votre recharge": DOUCHETTE_SEDIMENT},
+    "product.product.json": {"Installez votre housse": HOUSSE_VIDEO},
 }
+# Tab names that differ from the default ones.
+TAB_NAMES = {"product.product.json": ["Installez votre housse"]}
 
 
 def add_videos(section, videos):
@@ -417,7 +432,7 @@ def build():
             tabs = find(videos, by_type("tabs"))
             n = len(children(tabs))
             names = ["Découvrez votre coffret", "Installez votre produit", "Remplacez votre recharge"]
-            set_tabs(videos, names[-n:] if name not in BOX else names[:n])
+            set_tabs(videos, TAB_NAMES.get(fname) or (names[-n:] if name not in BOX else names[:n]))
             set_text(find(videos, by_type("text")), "<h2>Les gestes en vidéo</h2>")
             add_videos(videos, VIDEOS.get(fname, {}))
         if fname in STEP_PHOTO and "comment_ca_marche" in t["sections"]:

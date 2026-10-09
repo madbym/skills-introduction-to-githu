@@ -10,7 +10,7 @@ Prix d achat volontairement exclus de ce fichier (PDF original dans pilotage/, n
 | Coffret Soin Douche Coréenne (SHIFT-COFFRET-SOIN) = Capsule Shower Trial Kit Pure White | HSSHI260101 / TS00-0234 | non fourni | 8421.21 | 517 g | 19,4 × 25,75 × 7,8 cm | 8 / carton 54×34×29 (5,1 kg) | 3 ans |
 | Coffret Douche & Aromathérapie (SHIFT-COFFRET-AROMA-*) = Aroma Therapy Shower Kit | HSSHI200101-106 / TS00-0225 à 0230 | Blanc : 8809532133253 (autres coloris non fournis) | vide sur la fiche (8421.21 retenu, à confirmer) | 1 413 g | 25,7 × 26,2 × 13,4 cm | 4 / carton 54×34×29 (6,7 kg) | 3 ans |
 | Pack 3 Filtres à sédiments (SHIFT-PUREWATER-X3) | TS00-0221 (?) | 8809532132515 | 8421.99 | 78 g | 21,3 × 14,4 × 7,9 cm (incohérent avec le colisage) | 120 / carton 54×34×29 (10,4 kg) | N/A |
-| Pack 6 capsules (SHIFT-CAPS6-*) | HSSHI2104xx / TS00-02xx | voir ci-dessous | 3307.30 | 1 005 g selon fiche (à peser) | 32,5 × 26,5 × 9 cm (incohérent avec le colisage) | 20 / carton 43×31×35 (21,1 kg) | 3 ans |
+| Pack 6 capsules (SHIFT-CAPS6-*) | HSSHI2104xx / TS00-02xx | voir ci-dessous | 3307.30 | 125 g (pesé ; la fiche fournisseur indique 1 005 g, erroné) | 32,5 × 26,5 × 9 cm (incohérent avec le colisage) | 20 / carton 43×31×35 (21,1 kg) | 3 ans |
 
 *Selon la fiche fournisseur. Certaines dimensions ne sont pas cohérentes avec le volume des cartons : peser et mesurer un exemplaire réel.
 

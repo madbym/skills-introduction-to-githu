@@ -1,0 +1,389 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">La recharge essentielle</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "ss_pills": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Se change toutes les 4 à 6 semaines</span><span>Installation en quelques secondes</span><span>Pour la douchette Onsha</span></div>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Rôle</b>Filtration mécanique qui retient les sédiments et particules visibles</div><div><b>Compatibilité</b>Douchette filtrante Onsha uniquement</div><div><b>Durée d&#x27;utilisation</b>4 à 6 semaines selon ton eau et ta fréquence de douche</div></div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "ss_offers": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-offers', product: product, section_id: section.id, tiers: '1:0,2:5,4:10', singular: \"filtre\", plural: \"filtres\", title: \"Choisis ta quantité\" %}"
+          }
+        },
+        "ss_addon_1": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-addon', addon: all_products['douchette-filtrante'], variant_title: \"\", title: \"Pas encore la douchette ?\", note: \"Filtre inclus, installation sans outil\", section_id: section.id %}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Composition",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Filtration mécanique multi-couches. Usage externe uniquement, dans la douchette Onsha. L'eau filtrée n'est pas destinée à la consommation. Conçu en Corée.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "ss_pills",
+        "price",
+        "description",
+        "ss_facts",
+        "variant_picker",
+        "ss_offers",
+        "ss_addon_1",
+        "buy_buttons",
+        "reassurance",
+        "acc_1",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_visuals": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Filtre neuf et filtre usagé",
+            "text": "",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-filtre-sediment-recharge-9193355.jpg"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "La douchette en action",
+            "text": "",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-filtre-sediment-recharge-1810397.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2"
+      ],
+      "settings": {
+        "layout": "visuals",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "",
+        "heading": "Ce que le filtre capture",
+        "text": "",
+        "columns": 2,
+        "columns_mobile": "1",
+        "ratio": "4/5",
+        "open_first": false
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Ouvre</strong> le compartiment de ta douchette Onsha."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Retire</strong> le filtre usagé."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Insère</strong> le nouveau filtre."
+          }
+        },
+        "b4": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Referme</strong> : ton rituel reprend immédiatement."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Remplace ton filtre",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": "<p>Garde toujours une recharge d'avance dans ta trousse. Si tu vois le filtre changer de couleur, c'est le signal qu'il a bien travaillé.</p>",
+        "image": "shopify://shop_images/onsha-filtre-sediment-recharge-9248658.jpg"
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Avec quel système est-il compatible ?",
+            "text": "<p>Avec la douchette filtrante Onsha. Ce n'est pas le filtre thermal vitaminé du système Home : vérifie bien ton produit avant de commander.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Pourquoi le filtre change-t-il de couleur ?",
+            "text": "<p>Parce qu'il retient les sédiments et particules de l'eau. C'est le signe que la filtration fonctionne.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Combien de temps dure un filtre ?",
+            "text": "<p>Environ 4 à 6 semaines selon ton eau et ta fréquence de douche.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Quels sont les délais de livraison ?",
+            "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b5": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je retourner le produit ?",
+            "text": "<p>Oui, tu disposes de 14 jours pour changer d'avis. Pour des raisons d'hygiène, le produit doit nous revenir non ouvert, non utilisé, complet et dans son emballage d'origine. Tous les détails sont dans notre politique de retours.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    },
+    "ss_related": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>La douchette qui accueille ta recharge.</p>",
+            "tag": "",
+            "link_label": "Découvrir",
+            "show_price": true,
+            "product": "douchette-filtrante"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>La senteur du rituel Nomade.</p>",
+            "tag": "",
+            "link_label": "Découvrir",
+            "show_price": true,
+            "product": "capsule-vitaminee-shower-filter-sunsoari"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>Protège et personnalise ta douchette.</p>",
+            "tag": "",
+            "link_label": "Découvrir",
+            "show_price": true,
+            "product": "product-onsha-coque-douchette-filtrante"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Complète ton rituel",
+        "heading": "Découvre aussi",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_visuals",
+    "ss_steps",
+    "ss_faq",
+    "ss_related"
+  ]
+}

@@ -1,0 +1,333 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "1782305679987ce8e1": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_a82807b_Tna8Qa": {
+          "type": "ai_gen_block_a82807b",
+          "disabled": true,
+          "settings": {
+            "badge_1_text": "Livraison suivie en France",
+            "badge_2_text": "Paiement en 4× avec Klarna",
+            "badge_3_text": "Filtres & recharges toujours disponibles",
+            "desktop_width_percent": 100,
+            "background_color": "#f7f7f5",
+            "text_color": "#072835",
+            "icon_color": "#7591aa",
+            "font_size": 14,
+            "font_weight": "500",
+            "icon_size": 20,
+            "icon_text_gap": 8,
+            "gap": 25,
+            "padding_vertical": 15,
+            "padding_horizontal": 20,
+            "border_radius": 8,
+            "show_separator": true,
+            "separator_color": "#e6e9eb",
+            "separator_height": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_a82807b_Tna8Qa"
+      ],
+      "settings": {}
+    },
+    "announcement_bar_NzUJBk": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_bar_9WjngM": {
+          "type": "announcement_bar",
+          "settings": {
+            "text": "Livraison suivie en France",
+            "link": ""
+          }
+        },
+        "ss_annonce_klarna": {
+          "type": "announcement_bar",
+          "settings": {
+            "text": "Paiement en 4× avec Klarna",
+            "link": ""
+          }
+        },
+        "ss_annonce_recharges": {
+          "type": "announcement_bar",
+          "settings": {
+            "text": "Filtres & recharges toujours disponibles",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_bar_9WjngM",
+        "ss_annonce_klarna",
+        "ss_annonce_recharges"
+      ],
+      "name": "t:sections.announcement-bar.name",
+      "settings": {
+        "color_scheme": "scheme-info",
+        "content_width": 40,
+        "autoplay": true,
+        "autoplay_speed": 4,
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "ss_header_7_k6pwpk": {
+      "type": "ss-header-7",
+      "blocks": {
+        "menu_item_dnNVyn": {
+          "type": "menu_item",
+          "settings": {
+            "text": "Boutique",
+            "url": "",
+            "submenu": "",
+            "collections": [],
+            "collection_title": true,
+            "title": "Box rituel douche complet",
+            "first_url": "shopify://products/box-rituel-douche-complet",
+            "second_title": "Coffret home",
+            "second_url": "shopify://products/coffret-home-onsha-sullab-sunsoari",
+            "third_title": "Pommeau de douche filtrant",
+            "third_url": "shopify://products/pommeau-de-douche-filtrant"
+          }
+        },
+        "menu_item_p6Y8pX": {
+          "type": "menu_item",
+          "settings": {
+            "text": "Notre univers",
+            "url": "shopify://pages/a-propos",
+            "submenu": "",
+            "collections": [],
+            "collection_title": true,
+            "title": "",
+            "first_url": "",
+            "second_title": "",
+            "second_url": "",
+            "third_title": "",
+            "third_url": ""
+          }
+        },
+        "menu_item_KnnWDx": {
+          "type": "menu_item",
+          "settings": {
+            "text": "Contact",
+            "url": "shopify://pages/contact",
+            "submenu": "",
+            "collections": [],
+            "collection_title": true,
+            "title": "",
+            "first_url": "",
+            "second_title": "",
+            "second_url": "",
+            "third_title": "",
+            "third_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "menu_item_dnNVyn",
+        "menu_item_p6Y8pX",
+        "menu_item_KnnWDx"
+      ],
+      "disabled": true,
+      "name": "SS - Header #7",
+      "settings": {
+        "show_type": "always",
+        "transparent_bg": "none",
+        "body_gap": 32,
+        "body_gap_mobile": 20,
+        "logo": "shopify://shop_images/Sunsoari_-_7.png",
+        "logo_width": 120,
+        "logo_width_mobile": 100,
+        "name_custom": false,
+        "name_font": "inter_n3",
+        "name_size": 24,
+        "name_size_mobile": 20,
+        "name_height": 100,
+        "menu": "main-menu",
+        "list_gap": 32,
+        "list_gap_mobile": 0,
+        "link_custom": false,
+        "link_font": "inter_n3",
+        "link_size": 14,
+        "link_size_mobile": 18,
+        "link_height": 130,
+        "submenu_padding_bottom": 18,
+        "submenu_gap": 8,
+        "menu_icon_size_mobile": 20,
+        "mobile_menu_text": "<p>Tell your story</p>",
+        "mobile_menu_text_custom": false,
+        "mobile_menu_text_font": "inter_n3",
+        "mobile_menu_text_size": 16,
+        "mobile_menu_text_height": 150,
+        "mobile_menu_text_align": "center",
+        "mobile_menu_button": "",
+        "mobile_menu_button_url": "",
+        "mobile_menu_button_custom": false,
+        "mobile_menu_button_font": "inter_n3",
+        "mobile_menu_button_size": 14,
+        "mobile_menu_button_height": 100,
+        "mobile_menu_button_padding_vertical": 14,
+        "mobile_menu_button_padding_horizontal": 36,
+        "mobile_menu_button_radius": 100,
+        "mobile_menu_button_border_thickness": 1,
+        "mobile_menu_button_style": "outline",
+        "collection_gap": 8,
+        "collection_image_radius": 0,
+        "collection_image_border_thickness": 0,
+        "collection_image_ratio": "square",
+        "collection_image_hover": true,
+        "collection_title_custom": false,
+        "collection_title_font": "josefin_sans_n4",
+        "collection_title_size": 14,
+        "collection_title_height": 130,
+        "collection_title_mt": 10,
+        "collection_title_align": "left",
+        "right_gap": 26,
+        "right_gap_mobile": 16,
+        "button": "",
+        "button_url": "",
+        "button_custom": false,
+        "button_font": "inter_n3",
+        "button_size": 14,
+        "button_height": 100,
+        "button_padding_vertical": 10,
+        "button_padding_horizontal": 22,
+        "button_radius": 100,
+        "button_border_thickness": 1,
+        "button_style": "outline",
+        "right_link_custom": false,
+        "right_link_font": "inter_n3",
+        "right_link_size": 14,
+        "right_link_height": 130,
+        "icon_size": 20,
+        "icon_size_mobile": 20,
+        "use_search": true,
+        "search_text": "Rechercher",
+        "search_icon_desktop": false,
+        "search_menu_mobile": true,
+        "use_account": true,
+        "account_text": "Compte",
+        "account_icon_desktop": false,
+        "account_menu_mobile": true,
+        "cart_text": "Panier",
+        "cart_icon_desktop": true,
+        "link_color": "#ffffff",
+        "link_hover_color": "#ffffff",
+        "link_hero_color": "#ffffff",
+        "submenu_link_color": "#ffffff",
+        "submenu_link_hover_color": "#ffffff",
+        "mobile_menu_text_color": "#ffffff",
+        "mobile_menu_divider_color": "#ffffff",
+        "collection_title_color": "#ffffff",
+        "collection_image_border_color": "#ffffff",
+        "name_color": "#ffffff",
+        "name_hover_color": "#ffffff",
+        "name_hero_color": "#ffffff",
+        "right_link_color": "#ffffff",
+        "right_link_hover_color": "#ffffff",
+        "right_link_hero_color": "rgba(0,0,0,0)",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_over_hero_color": "#7591aa",
+        "button_bg_color": "#ffffff",
+        "button_bg_hover_color": "#ffffff",
+        "button_bg_over_hero_color": "#ffffff",
+        "button_border_color": "#ffffff",
+        "button_border_hover_color": "#000000",
+        "button_border_over_hero_color": "#ffffff",
+        "mobile_menu_button_color": "#ffffff",
+        "mobile_menu_button_bg_color": "#7591aa",
+        "mobile_menu_button_border_color": "#ffffff",
+        "background_color": "#7591aa",
+        "background_gradient": "",
+        "border_color": "#ffffff",
+        "border_color_mobile": "#ffffff",
+        "margin_top": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1400,
+        "border_thickness": 1,
+        "border_bottom": true,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "menu": "menu-principal-v2",
+        "menu_mobile": "",
+        "header_layout": "logo-center",
+        "menu_trigger": "click",
+        "sticky_header": "always",
+        "enable_collapse_on_scroll": false,
+        "show_sperator_line": false,
+        "customer_account_style": "icon-only",
+        "show_social_media_icons": true,
+        "enable_language_selector": false,
+        "enable_country_selector": true,
+        "header_top_padding_top": 20,
+        "header_top_padding_bottom": 20,
+        "navigation_color_scheme": "scheme-4",
+        "navigation_content_alignment": "center",
+        "navigation_padding_top": 12,
+        "navigation_padding_bottom": 12
+      },
+      "blocks": {
+        "ss_mega_boutique": {
+          "type": "promotion_banner",
+          "settings": {
+            "menu_title": "Boutique",
+            "menu_columns": 3,
+            "enable_hl_link": false,
+            "promotions_width": 30,
+            "promotion_columns": 1,
+            "promotion_position": "right",
+            "color_scheme_1": "scheme-1",
+            "promo_image_1": "shopify://shop_images/onsha-coffret-nomade-ambiance-pierre.jpg",
+            "content_position_1": "bottom-left",
+            "content_alignment_1": "left",
+            "content_gap_1": "fitted",
+            "image_overlay_opacity_1": 0,
+            "promotion_link_1": "shopify://collections/kit-de-douche",
+            "heading_1": "Coffrets & kits",
+            "heading_size_1": "h5",
+            "button_label_1": "Découvrir",
+            "button_style_1": "btn--underline",
+            "button_icon_1": "none"
+          }
+        }
+      },
+      "block_order": [
+        "ss_mega_boutique"
+      ]
+    }
+  },
+  "order": [
+    "1782305679987ce8e1",
+    "announcement_bar_NzUJBk",
+    "ss_header_7_k6pwpk",
+    "header"
+  ]
+}

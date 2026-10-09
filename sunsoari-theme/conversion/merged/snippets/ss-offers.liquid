@@ -1,0 +1,64 @@
+{%- comment -%}
+  Sunsoari · Offres par quantité (pilules façon Gisou / Paalm)
+  Params :
+    product      : produit courant
+    section_id   : id de la section main-product
+    tiers        : "1:0,2:5,4:10"  (quantité:remise %)
+    singular     : "filtre"
+    plural       : "filtres"
+    title        : titre au-dessus des pilules
+  La remise réelle est appliquée au panier par une réduction automatique Shopify.
+{%- endcomment -%}
+{%- assign ss_uid = 'ssoff-' | append: section_id -%}
+{%- assign ss_variant = product.selected_or_first_available_variant -%}
+<div class="ss-offers" id="{{ ss_uid }}" data-section="{{ section_id }}">
+  {%- if title != blank -%}<p class="ss-offers__title">{{ title }}</p>{%- endif -%}
+  <div class="ss-offers__list" role="group" aria-label="{{ title | default: 'Quantité' | escape }}">
+    {%- assign ss_tiers = tiers | split: ',' -%}
+    {%- for t in ss_tiers -%}
+      {%- assign parts = t | split: ':' -%}
+      {%- assign q = parts[0] | plus: 0 -%}
+      {%- assign d = parts[1] | plus: 0 -%}
+      {%- assign full = ss_variant.price | times: q -%}
+      {%- assign pct = 100 | minus: d -%}
+      {%- assign disc = full | times: pct | divided_by: 100 -%}
+      <button type="button" class="ss-offer" data-qty="{{ q }}" data-discount="{{ d }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
+        {%- if d > 0 -%}<span class="ss-offer__save">-{{ d }} %</span>{%- endif -%}
+        <span class="ss-offer__qty">{{ q }} {% if q > 1 %}{{ plural }}{% else %}{{ singular }}{% endif %}</span>
+        <span class="ss-offer__price" data-price>{{ disc | money }}</span>
+        <span class="ss-offer__was" data-was>{%- if d > 0 -%}{{ full | money }}{%- endif -%}</span>
+      </button>
+    {%- endfor -%}
+  </div>
+  <p class="ss-offers__legal">Remise appliquée automatiquement au panier. Tu peux mixer les variantes.</p>
+</div>
+<script>
+(function(){
+  var root=document.getElementById('{{ ss_uid }}'); if(!root||root.dataset.ready) return; root.dataset.ready='1';
+  var prices={ {%- for v in product.variants -%}"{{ v.id }}":{{ v.price }}{% unless forloop.last %},{% endunless %}{%- endfor -%} };
+  var fmt=new Intl.NumberFormat('fr-FR',{style:'currency',currency:'{{ cart.currency.iso_code | default: "EUR" }}'});
+  var sid=root.dataset.section;
+  function form(){return document.getElementById('product-form-'+sid);}
+  function qtyInput(){return document.getElementById('Quantity-'+sid);}
+  function vid(){var f=form();var i=f&&f.querySelector('[name=id]');return i?i.value:null;}
+  function refresh(){
+    var p=prices[vid()]; if(p==null) return;
+    root.querySelectorAll('.ss-offer').forEach(function(b){
+      var q=+b.dataset.qty,d=+b.dataset.discount,full=p*q,disc=Math.round(full*(100-d)/100);
+      b.querySelector('[data-price]').textContent=fmt.format(disc/100);
+      b.querySelector('[data-was]').textContent=d>0?fmt.format(full/100):'';
+    });
+  }
+  function syncPills(){var qi=qtyInput();if(!qi)return;root.querySelectorAll('.ss-offer').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.qty===String(qi.value)?'true':'false');});}
+  function select(btn){
+    var qi=qtyInput(); if(!qi) return;
+    var q=+btn.dataset.qty, mx=qi.max?+qi.max:Infinity; q=Math.min(q,mx);
+    if(String(qi.value)!==String(q)){qi.value=q;qi.dispatchEvent(new Event('change',{bubbles:true}));}
+    syncPills();
+  }
+  root.addEventListener('click',function(e){var b=e.target.closest('.ss-offer');if(b)select(b);});
+  document.addEventListener('variant:changed',function(){setTimeout(function(){refresh();syncPills();},120);});
+  var f=form(); if(f) f.addEventListener('change',function(e){if(e.target.name==='id')setTimeout(refresh,80);});
+  var qi=qtyInput(); if(qi) qi.addEventListener('change',syncPills);
+})();
+</script>

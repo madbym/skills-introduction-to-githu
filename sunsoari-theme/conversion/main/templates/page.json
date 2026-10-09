@@ -1,0 +1,230 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_Dteidb": {
+      "type": "image-with-text",
+      "blocks": {
+        "badge_tPeUXn": {
+          "type": "badge",
+          "settings": {
+            "color_scheme": "",
+            "text": "maison de pureté- sunsoari-",
+            "position_mobile": "right"
+          }
+        },
+        "heading_nDXecY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sunsoari",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "text_UKfBAR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sūnsoari est né d’une envie simple : redonner au bien-être sa vraie place.<br/> Un espace apaisé, sincère, où l’on choisit moins mais mieux.<br/> Une boutique pensée pour accompagner les gestes du quotidien avec douceur, intention et authenticité.</p><p>Nous imaginons une expérience apaisante, fluide et lisible.<br/> Un univers éditorial, mais jamais inaccessible.<br/> Un ton doux, des mots simples, une volonté constante : vous aider à trouver le produit juste, sans confusion ni superflu.</p><p>Sunsoari, c’est l’envie de créer un espace où l’on se sent bien.<br/> Où l’on repart peut-être avec un produit, mais toujours avec un sentiment de calme.</p>",
+            "subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "badge_tPeUXn",
+        "heading_nDXecY",
+        "text_UKfBAR"
+      ],
+      "custom_css": [
+        ".rte {text-align: justify;}"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/Copie_de_5.jpg",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "rich_text_aND9re": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fXFTBp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Qui nous sommes",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "text_YRMUaT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sūnsoari est une boutique, mais aussi une ligne éditoriale.<br/> Notre rôle : sélectionner avec attention, tester, comprendre, ressentir.<br/> Chaque référence est choisie parce qu’elle répond à une intention claire :<br/> proposer un bien-être accessible, sensoriel et honnête.</p><p>Nous ne cherchons pas à multiplier les choix, mais à vous guider vers ceux qui comptent.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fXFTBp",
+        "text_YRMUaT"
+      ],
+      "custom_css": [
+        ".rte {text-align: justify;}"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 16,
+        "padding_bottom": 18,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_En7ULW": {
+      "type": "image-with-text",
+      "blocks": {
+        "badge_iXGnfi": {
+          "type": "badge",
+          "settings": {
+            "color_scheme": "",
+            "text": "Maison du pureté - Sunsoari -",
+            "position_mobile": "right"
+          }
+        },
+        "heading_zzB4re": {
+          "type": "heading",
+          "settings": {
+            "heading": "Notre histoire",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "text_PAYJTc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Née du désir de créer un espace où le bien-être se découvre et se ressent pleinement.<br/> Cette plateforme rassemble des marques et des créations qui partagent nos valeurs : authenticité, qualité et intention.</p><p>Sūnsoari n’est pas seulement une boutique : c’est un lieu où chaque produit raconte une histoire, où chaque sélection a du sens, et où l’on prend le temps de découvrir, ressentir et choisir.<br/> Une passerelle entre cultures, traditions et innovations, pensée pour accompagner votre quotidien avec élégance et simplicité.</p>",
+            "subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "badge_iXGnfi",
+        "heading_zzB4re",
+        "text_PAYJTc"
+      ],
+      "custom_css": [
+        ".rte {text-align: justify;}"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/Diverse_Beauties_130.png",
+        "image_position": "right",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "rich_text_7PTi9E": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JY8bhp": {
+          "type": "heading",
+          "settings": {
+            "heading": " Notre approche du bien-être",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "text_NQGrQQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Revenir à l’essentiel, sans renoncer à l’efficacité.</p><p>Nous croyons en une vision du bien-être :</p><p>-simple mais exigeante,<br/>-sensorielle mais ancrée,<br/>-accessible mais qualitative,<br/>-douce mais efficace.<br/></p><p>Pour nous, prendre soin de soi n’est pas un luxe : c’est une manière de vivre, un espace que l’on s’accorde chaque jour.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JY8bhp",
+        "text_NQGrQQ"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "left",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "177505721279192e2b": {
+      "type": "_blocks",
+      "custom_css": [],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_Dteidb",
+    "rich_text_aND9re",
+    "image_with_text_En7ULW",
+    "rich_text_7PTi9E",
+    "177505721279192e2b"
+  ]
+}

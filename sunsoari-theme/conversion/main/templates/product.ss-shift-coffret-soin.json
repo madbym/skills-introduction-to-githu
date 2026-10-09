@@ -1,0 +1,402 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">Le rituel complet SHIFT</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau filtrant, capsule Tea Tree &amp; Lavender, filtre Pure Water</div><div><b>Installation</b>2 minutes, sans outil, sur tout flexible standard</div><div><b>Recharges</b>Capsules et filtres Pure Water disponibles séparément</div></div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingrédients de la capsule",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Huile essentielle de tea tree et de lavande, associées à des actifs hydratants (glycérine, acide hyaluronique). La liste INCI complète et les allergènes figurent sur l'emballage.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "acc_2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Précautions",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Usage externe et domestique uniquement. En cas de sensibilité connue aux parfums ou aux huiles essentielles, consulte la liste INCI avant utilisation. Ne force pas le vissage.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        },
+        "ss_complements": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-complements', items: \"pack-6-capsules-vitaminees-shift-sunsoari||6 capsules soin et aromathérapie;pack-3-sediments-pure-water||3 filtres Pure Water\", title: \"Pour la suite de ton rituel\", note: \"Les recharges SHIFT sont vendues séparément.\" %}"
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "price",
+        "description",
+        "variant_picker",
+        "buy_buttons",
+        "ss_complements",
+        "ss_facts",
+        "reassurance",
+        "acc_1",
+        "acc_2",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_box": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Pommeau de douche filtrant",
+            "text": "<p>Jet fin et régulier, la base réutilisable</p>",
+            "tag": "x1",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/pommeau-de-douche-filtrant-a-vitamine-c-8567410.png"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Capsule soin Tea Tree & Lavender",
+            "text": "<p>Actifs hydratants et senteur apaisante</p>",
+            "tag": "x1",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/pommeau-de-douche-filtrant-a-vitamine-c-1108548.jpg"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Filtre Pure Water",
+            "text": "<p>Retient les sédiments avant l&#x27;étape de soin</p>",
+            "tag": "x1",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/pommeau-de-douche-filtrant-a-vitamine-c-9174486.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "boxes",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Dans ton coffret",
+        "heading": "Les 3 éléments de ton coffret",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "note": ""
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Dévisse</strong> ta pomme de douche actuelle."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Insère</strong> le filtre Pure Water et la capsule dans le pommeau."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Visse</strong> le pommeau SHIFT sur ton flexible."
+          }
+        },
+        "b4": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Ouvre l'eau</strong> : c'est prêt."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Comment l'installer",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": "",
+        "image": "shopify://shop_images/Video_2.gif"
+      }
+    },
+    "ss_cards": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Capsule Tea Tree & Lavender",
+            "text": "<p>Glycérine et acide hyaluronique, senteur apaisante.</p>",
+            "tag": "Soin",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/CAPSULE-STEP_02_IMAGE.jpg"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Filtre Pure Water",
+            "text": "<p>Filtration mécanique multi-couches des sédiments.</p>",
+            "tag": "Filtration",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/FILTER-STEP_02_IMAGE.jpg"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Jet fin et régulier",
+            "text": "<p>Une sensation délicate à chaque douche.</p>",
+            "tag": "Confort",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/SHIFT--_pommeau_blanc_Classic_1.png"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Système réutilisable",
+            "text": "<p>Le pommeau reste, seules les recharges se changent.</p>",
+            "tag": "Durable",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/SHiFT-pommeau-Green_vintage_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Ingrédients et technologie",
+        "heading": "Filtrer, puis prendre soin",
+        "text": "",
+        "columns": 4,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Combien de temps durent la capsule et le filtre ?",
+            "text": "<p>La capsule dure selon ta fréquence de douche, tu vois son niveau baisser. Le filtre Pure Water se change environ tous les 2 à 3 mois.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Pourquoi le coffret est-il plus avantageux ?",
+            "text": "<p>Il réunit les trois éléments à un prix plus doux que l'achat séparé.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "La senteur convient-elle aux peaux sensibles ?",
+            "text": "<p>Le produit s'utilise diffusé dans l'eau de la douche, en usage externe. Si tu as une sensibilité connue aux parfums ou aux huiles essentielles, consulte la liste INCI sur l'emballage avant utilisation et demande conseil à un professionnel de santé en cas de doute.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b6": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je retourner le produit ?",
+            "text": "<p>Oui, tu disposes de 14 jours pour changer d'avis. Pour des raisons d'hygiène, le produit doit nous revenir non ouvert, non utilisé, complet et dans son emballage d'origine. Tous les détails sont dans notre politique de retours.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b2",
+        "b3",
+        "b4",
+        "b6"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_box",
+    "ss_steps",
+    "ss_cards",
+    "ss_faq"
+  ]
+}

@@ -1,0 +1,36 @@
+{%- comment -%} Avis clientes Judge.me, repliés par défaut. Rien ne s'affiche tant que le produit n'a pas d'avis. {%- endcomment -%}
+{%- assign ss_count = product.metafields.reviews.rating_count.value | default: 0 -%}
+{%- if product and ss_count > 0 -%}
+  {%- assign ss_rating = product.metafields.reviews.rating.value.rating | default: 0 -%}
+  <div id="ss-avis" class="ss-avis page-width">
+    <details class="ss-avis__box"{% if section.settings.open %} open{% endif %}>
+      <summary class="ss-avis__summary">
+        <span>{{ section.settings.heading }}</span>
+        <span class="ss-avis__meta"><span class="ss-avis__stars" aria-hidden="true">★</span> {{ ss_rating | round: 1 | replace: '.', ',' }} · {{ ss_count }} avis</span>
+      </summary>
+      <div class="ss-avis__body">
+        <div id="judgeme_product_reviews" class="jdgm-widget jdgm-review-widget jdgm-outside-widget" data-id="{{ product.id }}">{{ product.metafields.judgeme.widget }}</div>
+      </div>
+    </details>
+  </div>
+  <style>
+    .ss-avis{max-width:1200px;margin:0 auto;padding:8px 16px 24px;}
+    .ss-avis__box{border:1px solid #e6e9eb;border-radius:16px;background:#fff;}
+    .ss-avis__summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;font-size:15px;font-weight:600;color:#042850;}
+    .ss-avis__summary::-webkit-details-marker{display:none;}
+    .ss-avis__summary:after{content:"+";font-weight:400;font-size:20px;color:#7591aa;}
+    .ss-avis__box[open] .ss-avis__summary:after{content:"–";}
+    .ss-avis__meta{margin-left:auto;font-size:13px;font-weight:500;color:#5b6b7a;}
+    .ss-avis__stars{color:#c9a96e;}
+    .ss-avis__body{padding:0 20px 20px;}
+  </style>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Avis clientes",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Titre", "default": "Avis clientes" },
+    { "type": "checkbox", "id": "open", "label": "Ouvert par défaut", "default": false }
+  ]
+}
+{% endschema %}

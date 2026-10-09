@@ -1,0 +1,402 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">Le cœur du rituel Home</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Compatibilité</b>Coque de diffusion Home (Grand format)</div><div><b>Fonctionnement</b>Une couche retient les sédiments, puis la capsule thermale enrichit l&#x27;eau</div><div><b>Durée d&#x27;utilisation</b>3 à 4 semaines selon ta fréquence de douche</div></div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "ss_offers": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-offers', product: product, section_id: section.id, tiers: '1:0,2:5,4:10', singular: \"filtre\", plural: \"filtres\", title: \"Choisis ta quantité\" %}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "acc_3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Composition",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Filtration mécanique des sédiments et capsule thermale : eau thermale soufrée lyophilisée concentrée 4 fois (donnée de la marque), vitamine C, acide hyaluronique, glycérine, MSM et senteur. La liste INCI complète de chaque senteur figure sur l'emballage.</p><p>Usage externe uniquement, dans le système Onsha Home compatible. Tenir hors de portée des enfants. Conçu en Corée.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        },
+        "ss_complements": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-complements', items: \"coque-de-diffusion|Grand format|Accueille ton filtre, à acheter une seule fois;pommeau-de-douche-filtrant||La base du rituel Home\", title: \"Le filtre est vendu seul\", note: \"Il s'insère dans la coque de diffusion Home, vissée au pommeau de douche filtrant. Pas encore équipée ?\" %}"
+          }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "ss_rating",
+        "price",
+        "description",
+        "variant_picker",
+        "ss_offers",
+        "buy_buttons",
+        "ss_complements",
+        "ss_facts",
+        "reassurance",
+        "acc_3",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Ouvre</strong> la coque de diffusion Home."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Retire</strong> le filtre usagé."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Insère</strong> le nouveau filtre."
+          }
+        },
+        "b4": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Referme</strong> et fais couler l'eau."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Remplace ton filtre en quelques secondes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": "<p>Garde un filtre d'avance : 3 à 4 semaines passent vite. Le pack de 4 te permet d'explorer les quatre senteurs.</p>",
+        "image": "shopify://shop_images/Comment_installer_la_recharge.gif"
+      }
+    },
+    "ss_scents": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Hinoki",
+            "text": "<p>Cyprès, bois chaud, musc doux. Idéale le soir, pour ralentir.</p>",
+            "tag": "Calme absolu",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-home-6907673.png"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Océan",
+            "text": "<p>Embruns marins, sel minéral, végétal aquatique. Parfaite le matin.</p>",
+            "tag": "Fraîcheur marine",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-home-7537266.png"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Forêt de Pin",
+            "text": "<p>Pin frais, résine, terre humide. Tonique dès le réveil.</p>",
+            "tag": "Énergie des forêts",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-home-3992705.png"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Fleur de Prunier",
+            "text": "<p>Fleur de prunier, poudré doux, bois blanc. Apaisante et délicate.</p>",
+            "tag": "Douceur florale",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-home-1177748.png"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Choisis ton ambiance",
+        "heading": "Nos quatre senteurs",
+        "text": "",
+        "columns": 4,
+        "columns_mobile": "1",
+        "ratio": "4/5",
+        "open_first": false
+      }
+    },
+    "ss_cards": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Eau thermale soufrée",
+            "text": "<p>Selon la marque, puisée à 808 m dans le granit coréen, lyophilisée puis concentrée 4 fois.</p>",
+            "tag": "Minéral",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/ambiance-eau-thermale-bain-carre.jpg"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Vitamine C",
+            "text": "<p>Ingrédient phare des filtres de douche coréens.</p>",
+            "tag": "Vitaminé",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/ingredient-vitamine-c-orange-bulles-eau.jpg"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Acide hyaluronique et glycérine",
+            "text": "<p>Deux actifs classiques des soins hydratants.</p>",
+            "tag": "Hydratant",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/ingredient-acide-hyaluronique-gel.jpg"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Double filtration des sédiments",
+            "text": "<p>Une première couche retient les particules visibles.</p>",
+            "tag": "Filtration",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-filtre-thermal-sediments-soin.png"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Principes actifs",
+        "heading": "Ce que contient ton filtre",
+        "text": "<p>La liste INCI complète figure sur l'emballage.</p>",
+        "columns": 4,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Quelle différence entre le filtre Home et la capsule Nomade ?",
+            "text": "<p>Le filtre Home est le format maison : plus grand, 2-en-1, il dure 3 à 4 semaines et s'insère dans la coque Home. La capsule est le format compact du système Nomade. Les deux formats ne sont pas interchangeables.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je mixer les senteurs ?",
+            "text": "<p>Oui, la remise par quantité s'applique même si tu choisis des senteurs différentes.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b5": {
+          "type": "item",
+          "settings": {
+            "title": "La senteur convient-elle aux peaux sensibles ?",
+            "text": "<p>Le produit s'utilise diffusé dans l'eau de la douche, en usage externe. Si tu as une sensibilité connue aux parfums ou aux huiles essentielles, consulte la liste INCI sur l'emballage avant utilisation et demande conseil à un professionnel de santé en cas de doute.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_steps",
+    "ss_scents",
+    "ss_cards",
+    "ss_reviews",
+    "ss_faq"
+  ]
+}

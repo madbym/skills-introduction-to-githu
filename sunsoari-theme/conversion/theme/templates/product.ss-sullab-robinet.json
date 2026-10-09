@@ -1,0 +1,442 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">La filtration à la source</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "ss_pills": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Installation sans outil</span><span>Adaptateurs fournis</span><span>Sédiment remplaçable</span></div>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Préoccupations</b>Particules visibles au robinet, qualité de l&#x27;eau du lavabo</div><div><b>Technologie</b>Filtration mécanique multi-couches des sédiments</div><div><b>Durée d&#x27;un sédiment</b>2 à 3 mois selon ton eau</div></div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "ss_addon_1": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-addon', addon: all_products['filtre-a-robinet-faucet-sullab-sunsoari'], variant_title: \"Lot 3 Sédiments\", title: \"Prends de l'avance sur tes recharges :\", note: \"3 sédiments, 6 à 9 mois de filtration\", section_id: section.id %}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Compatibilité",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Compatible avec la plupart des robinets standards grâce aux adaptateurs fournis. Conseil : essaie d'abord le plus petit adaptateur, puis monte en taille si nécessaire.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "acc_2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Entretien et précautions",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>La coque est réutilisable longtemps. Seul le sédiment se remplace tous les 2 à 3 mois selon ton eau. Nettoyage extérieur doux à l'eau.</p><p>Filtration mécanique : ce n'est pas un dispositif de traitement de l'eau potable. L'eau filtrée est destinée au lavage des mains, du visage et au rinçage. Usage domestique uniquement.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "ss_pills",
+        "price",
+        "description",
+        "variant_picker",
+        "ss_addon_1",
+        "buy_buttons",
+        "ss_facts",
+        "reassurance",
+        "acc_1",
+        "acc_2",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_visuals": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Robinet équipé du filtre",
+            "text": "",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/filtre-a-robinet-faucet-4552924.jpg"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Sédiment neuf et sédiment usagé",
+            "text": "",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/filtre-a-robinet-faucet-9303094.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2"
+      ],
+      "settings": {
+        "layout": "visuals",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "",
+        "heading": "La filtration en image",
+        "text": "",
+        "columns": 2,
+        "columns_mobile": "1",
+        "ratio": "4/5",
+        "open_first": false
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Choisis</strong> l'adaptateur adapté à ton robinet."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Visse</strong> la coque sur le robinet, sans outil."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Insère</strong> le sédiment filtrant."
+          }
+        },
+        "b4": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Ouvre l'eau</strong> : c'est prêt."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Comment l'installer",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": "<p>Garde les adaptateurs inutilisés : ils serviront pour un autre robinet. Remplace le sédiment dès que le débit baisse.</p>",
+        "image": "shopify://shop_images/filtre-a-robinet-faucet-3469708.jpg"
+      }
+    },
+    "ss_cards": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Nettoyage du visage",
+            "text": "<p>Une eau débarrassée des particules visibles.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/filtre-a-robinet-faucet-1719253.jpg"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Rinçage des masques",
+            "text": "<p>Un geste plus agréable au quotidien.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/filtre-a-robinet-faucet-9065055.jpg"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Brossage des dents",
+            "text": "<p>Pour le rinçage de tous les jours.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/filtre-a-robinet-faucet-9912364.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "La base du rituel skincare",
+        "heading": "Ton rituel commence au lavabo",
+        "text": "<p>Démaquillage, nettoyage, rinçage des masques : l'eau du lavabo accompagne chaque geste de ta routine.</p>",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce compatible avec mon robinet ?",
+            "text": "<p>Le filtre s'adapte à la majorité des robinets standards grâce aux adaptateurs fournis. En cas de doute, envoie-nous une photo de ton robinet avant de commander.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Combien de temps dure un sédiment ?",
+            "text": "<p>Environ 2 à 3 mois selon ton eau et ton utilisation.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce un filtre pour boire l'eau ?",
+            "text": "<p>Non, c'est une filtration mécanique des sédiments et particules visibles. Elle est pensée pour le lavage et le rinçage, pas pour traiter l'eau de boisson.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Quels sont les délais de livraison ?",
+            "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b5": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je retourner le produit ?",
+            "text": "<p>Oui, tu disposes de 14 jours pour changer d'avis. Pour des raisons d'hygiène, le produit doit nous revenir non ouvert, non utilisé, complet et dans son emballage d'origine. Tous les détails sont dans notre politique de retours.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    },
+    "ss_related": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>Étends ta filtration à la douche.</p>",
+            "tag": "",
+            "link_label": "Découvrir",
+            "show_price": true,
+            "product": "douchette-filtrante"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>Le rituel thermal Onsha.</p>",
+            "tag": "",
+            "link_label": "Découvrir",
+            "show_price": true,
+            "product": "pommeau-de-douche-filtrant"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>Le coffret Home complet.</p>",
+            "tag": "",
+            "link_label": "Découvrir",
+            "show_price": true,
+            "product": "coffret-home-onsha-sullab-sunsoari"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Complète ton rituel",
+        "heading": "Découvre aussi",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_visuals",
+    "ss_steps",
+    "ss_cards",
+    "ss_faq",
+    "ss_related"
+  ]
+}

@@ -1,0 +1,575 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ss_hero": {
+      "type": "ss-hero",
+      "blocks": {
+        "b1": {
+          "type": "chip",
+          "settings": {
+            "text": "Installation sans outil"
+          }
+        },
+        "b2": {
+          "type": "chip",
+          "settings": {
+            "text": "Recharges dès 6,90 €"
+          }
+        },
+        "b3": {
+          "type": "chip",
+          "settings": {
+            "text": "Livraison suivie en France"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "style": "left",
+        "image": "shopify://shop_images/Copie_de_Hot_Spring_Filter___Shower_Head.jpg",
+        "eyebrow": "La Maison de la Pureté",
+        "heading": "Ta douche devient un rituel",
+        "text": "<p>Pommeaux filtrants, recharges thermales vitaminées et senteurs inspirées de la Corée : une sélection pensée pour prendre soin de toi dès l'eau de la douche.</p>",
+        "button_label": "Choisir mon rituel",
+        "button_link": "shopify://collections/kit-de-douche",
+        "button2_label": "Voir les recharges",
+        "button2_link": "shopify://collections/recharge-filtre",
+        "pad_top": 16,
+        "pad_bottom": 8
+      }
+    },
+    "ss_trust": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "show_price": true,
+            "tag": "",
+            "title": "Sélection exigeante",
+            "text": "<p>Des marques choisies une à une</p>",
+            "link_label": ""
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "show_price": true,
+            "tag": "",
+            "title": "Sans outil",
+            "text": "<p>Tout se visse à la main en 2 minutes</p>",
+            "link_label": ""
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "show_price": true,
+            "tag": "",
+            "title": "Livraison suivie",
+            "text": "<p>Partout en France métropolitaine</p>",
+            "link_label": ""
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "show_price": true,
+            "tag": "",
+            "title": "Paiement sécurisé",
+            "text": "<p>CB, Apple Pay, PayPal</p>",
+            "link_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "trust",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "",
+        "heading": "",
+        "text": "",
+        "columns": 4,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "pad_top": 8,
+        "pad_bottom": 8
+      }
+    },
+    "ss_rituals": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "product": "coffret-home-onsha-sullab-sunsoari",
+            "show_price": true,
+            "tag": "Le plus complet",
+            "title": "Rituel Home",
+            "text": "<p>Pommeau filtrant, coque et 4 filtres thermaux : le système complet pour la maison.</p>",
+            "link_label": "Découvrir"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "product": "coffret-mini",
+            "show_price": true,
+            "tag": "Compact",
+            "title": "Rituel Nomade",
+            "text": "<p>Douchette, housse, coque et 4 capsules : le rituel qui te suit en voyage.</p>",
+            "link_label": "Découvrir"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "product": "pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie",
+            "show_price": true,
+            "tag": "Aromathérapie",
+            "title": "Rituel SHIFT",
+            "text": "<p>Pommeau filtrant et capsules de soin aromathérapie, prêt en 2 minutes.</p>",
+            "link_label": "Découvrir"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "product": "onsha-mini-decouverte-sullab-sunsoari",
+            "show_price": true,
+            "tag": "Pour tester",
+            "title": "Set Découverte",
+            "text": "<p>Déjà équipée ? Teste les 4 senteurs thermales avec la coque Nomade.</p>",
+            "link_label": "Découvrir"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Par où commencer ?",
+        "heading": "Choisis ton rituel",
+        "text": "<p>Quatre façons d'entrer dans l'univers Sunsoari, selon ta salle de bain et ton rythme de vie.</p>",
+        "columns": 4,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "best": {
+      "type": "horizontal-products-list",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "collection": "onsha",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Les essentiels Sunsoari",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "Voir toute la boutique",
+        "button_link": "shopify://collections/all",
+        "button_style": "btn--plain",
+        "button_icon": "caret-right",
+        "max_height": 0,
+        "pcard_button_type": "icon",
+        "pcard_title_line_limit": "1-line",
+        "limit": 9,
+        "columns": 3,
+        "column_gap": "2xs",
+        "row_gap": "inherit",
+        "max_height_mobile": 500,
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Filtrer</strong> : le pommeau retient les sédiments et particules visibles de l'eau."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Infuser</strong> : la recharge diffuse ses actifs (vitamine C, acide hyaluronique selon les marques) et sa senteur."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Renouveler</strong> : tu changes simplement la recharge quand elle est épuisée, sans outil."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Comment ça marche",
+        "heading": "Un rituel en 3 gestes",
+        "text": "",
+        "image": "shopify://shop_images/CopiedeTravelShowerHead_04.jpg",
+        "tip_title": "Le conseil de la Maison",
+        "tip_text": "<p>Commence par une senteur douce comme Fleur de Prunier ou la version sans senteur, puis explore les autres.</p>",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_water": {
+      "type": "ss-image-text",
+      "blocks": {
+        "b1": {
+          "type": "point",
+          "settings": {
+            "text": "Des filtres qui retiennent les <strong>sédiments et particules visibles</strong>"
+          }
+        },
+        "b2": {
+          "type": "point",
+          "settings": {
+            "text": "Des recharges de soin aux <strong>actifs annoncés par chaque marque</strong>"
+          }
+        },
+        "b3": {
+          "type": "point",
+          "settings": {
+            "text": "Des informations <strong>claires et vérifiables</strong> sur chaque fiche"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "background": "powder",
+        "image_position": "right",
+        "ratio": "4/5",
+        "image": "shopify://shop_images/Copie_de_IMG_0315.jpg",
+        "eyebrow": "Pourquoi l'eau compte",
+        "heading": "Le soin commence avant tes produits",
+        "text": "<p>Ta routine skincare et haircare se joue aussi sous la douche. Nous sélectionnons des systèmes simples qui rendent ce moment plus doux et plus sensoriel, sans promesses miracles.</p>",
+        "button_label": "Découvrir les filtres",
+        "button_link": "shopify://collections/filtre-de-douche"
+      }
+    },
+    "ss_brands": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Hot-Spring_Filter_Large_Set.jpg",
+            "show_price": true,
+            "tag": "Corée du Sud",
+            "title": "Onsha",
+            "text": "<p>Le rituel des sources thermales coréennes, en version Home ou Nomade.</p>",
+            "link": "shopify://collections/onsha",
+            "link_label": "Voir Onsha"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/shift-pommeaux-six-coloris.jpg",
+            "product": "shift-coffret-douche-aromatherapie",
+            "show_price": false,
+            "tag": "Corée du Sud",
+            "title": "SHIFT",
+            "text": "<p>Filtration et aromathérapie réunies dans un pommeau au jet fin.</p>",
+            "link": "shopify://collections/shift",
+            "link_label": "Voir SHIFT"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "product": "filtre-a-robinet-faucet-sullab-sunsoari",
+            "show_price": false,
+            "tag": "Corée du Sud",
+            "title": "Sullab",
+            "text": "<p>La filtration au robinet du lavabo, sans outil ni plombier.</p>",
+            "link": "shopify://collections/sullab",
+            "link_label": "Voir Sullab"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "cards",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Nos marques",
+        "heading": "Sélectionnées avec exigence",
+        "text": "<p>Des marques coréennes que nous avons testées, comparées et choisies pour leur sérieux.</p>",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "button_label": "Toutes nos marques",
+        "button_link": "shopify://pages/nos-marques"
+      }
+    },
+    "ss_story": {
+      "type": "ss-image-text",
+      "settings": {
+        "background": "sand",
+        "image_position": "left",
+        "ratio": "4/5",
+        "image": "shopify://shop_images/beautiful-lady-having-milk-bath-thinking-empty-room.jpg",
+        "eyebrow": "Notre histoire",
+        "heading": "Une maison solaire, née de deux sœurs",
+        "text": "<p>Sun pour la lumière. Sunsu, évocation du mot coréen pour la pureté. So, qui signifie « maison » en bambara. Et Soari, un prénom qui nous est cher.</p><p>Sunsoari est une maison de beauté multiculturelle, inspirée des rituels d'Afrique et d'Asie, pensée pour la douceur, la transmission et la joie.</p>",
+        "button_label": "Lire notre histoire",
+        "button_link": "shopify://pages/a-propos"
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "show_price": true,
+            "tag": "",
+            "title": "Est-ce compatible avec ma douche ?",
+            "text": "<p>Les pommeaux et douchettes se vissent sur un flexible standard (filetage 1/2 pouce, le plus courant en France). En cas de doute, écris-nous avec une photo de ta douche.</p>",
+            "link_label": ""
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "show_price": true,
+            "tag": "",
+            "title": "Que filtrent exactement ces produits ?",
+            "text": "<p>Ils retiennent principalement les sédiments et particules visibles. Nous ne présentons pas ces produits comme des traitements de l'eau ni comme des solutions médicales.</p>",
+            "link_label": ""
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "show_price": true,
+            "tag": "",
+            "title": "À quelle fréquence changer les recharges ?",
+            "text": "<p>Cela dépend du produit : 10 à 15 jours pour une capsule Nomade, 3 à 4 semaines pour un filtre thermal Home, 4 à 6 semaines pour un filtre sédiment. Les durées sont indiquées sur chaque fiche.</p>",
+            "link_label": ""
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "show_price": true,
+            "tag": "",
+            "title": "Les senteurs conviennent-elles aux peaux sensibles ?",
+            "text": "<p>Les compositions complètes sont sur les emballages. En cas de sensibilité connue aux parfums, choisis la version sans senteur et demande conseil à un professionnel de santé en cas de doute.</p>",
+            "link_label": ""
+          }
+        },
+        "b5": {
+          "type": "item",
+          "settings": {
+            "show_price": true,
+            "tag": "",
+            "title": "Puis-je retourner un produit ?",
+            "text": "<p>Oui, tu disposes de 14 jours. Pour des raisons d'hygiène, le produit doit être non ouvert, non utilisé et complet. Tous les détails sont dans notre politique de retours.</p>",
+            "link_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    },
+    "ss_cols": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/onsha-rituel-de-douche-thermal-coreen-filtrant-aromatique-kit-decouverte-7562522.jpg",
+            "product": "coffret-home-onsha-sullab-sunsoari",
+            "show_price": false,
+            "tag": "",
+            "title": "Coffrets & kits",
+            "text": "<p>Tout pour commencer, ou pour offrir.</p>",
+            "link": "shopify://collections/kit-de-douche",
+            "link_label": "Voir"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/HotSpringFilter1.jpg",
+            "product": "pommeau-de-douche-filtrant",
+            "show_price": false,
+            "tag": "",
+            "title": "Pommeaux filtrants",
+            "text": "<p>La base de ton rituel, sans outil.</p>",
+            "link": "shopify://collections/douchette",
+            "link_label": "Voir"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/onsha-filtre-vitamine-3469539.jpg",
+            "product": "filtre-vitamine-showerfilter-sunsoari",
+            "show_price": false,
+            "tag": "",
+            "title": "Recharges",
+            "text": "<p>Filtres et capsules pour continuer ton rituel.</p>",
+            "link": "shopify://collections/recharge-filtre",
+            "link_label": "Voir"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Travel-Head_Cover_01.jpg",
+            "product": "product-onsha-coque-douchette-filtrante",
+            "show_price": false,
+            "tag": "",
+            "title": "Accessoires",
+            "text": "<p>Coques et housses pour personnaliser.</p>",
+            "link": "shopify://collections/accessoires",
+            "link_label": "Voir"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "cards",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Nos collections",
+        "heading": "Trouve ce qu'il te faut",
+        "text": "",
+        "columns": 4,
+        "columns_mobile": "2",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "news": {
+      "type": "horizontal-products-list",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "collection": "nouveaute",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Nouveautés",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "Voir les nouveautés",
+        "button_link": "shopify://collections/nouveaute",
+        "button_style": "btn--plain",
+        "button_icon": "caret-right",
+        "max_height": 0,
+        "pcard_button_type": "icon",
+        "pcard_title_line_limit": "1-line",
+        "limit": 9,
+        "columns": 3,
+        "column_gap": "2xs",
+        "row_gap": "inherit",
+        "max_height_mobile": 500,
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "ss_hero",
+    "ss_trust",
+    "ss_rituals",
+    "ss_cols",
+    "best",
+    "ss_steps",
+    "ss_water",
+    "ss_brands",
+    "news",
+    "ss_story",
+    "ss_faq"
+  ]
+}

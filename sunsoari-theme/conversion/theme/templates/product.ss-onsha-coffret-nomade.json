@@ -1,0 +1,497 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">Le rituel thermal portable</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "ss_pills": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Douchette + housse + coque + 4 capsules</span><span>10 à 15 jours par capsule</span><span>Installation sans outil</span></div>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Douchette filtrante, housse personnalisable, coque Nomade, 4 capsules thermales</div><div><b>Autonomie</b>40 à 60 jours avec les 4 capsules</div><div><b>Senteurs</b>Hinoki, Océan, Forêt de Pin, Fleur de Prunier</div></div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "ss_checks": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<ul class=\"ss-checks\"><li><span>Système complet et portable : <strong>ta salle de bain te suit partout</strong></span></li><li><span><strong>4 senteurs thermales coréennes</strong> incluses</span></li><li><span>S'installe <strong>en deux minutes</strong>, sans outil</span></li></ul>"
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Composition et principes actifs",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Eau thermale soufrée lyophilisée concentrée 4 fois (donnée de la marque), vitamine C, acide hyaluronique, glycérine. Listes INCI complètes sur chaque emballage.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "acc_2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Durée et entretien",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Chaque capsule dure 10 à 15 jours. La housse se lave à l'eau tiède. Rince régulièrement la coque Nomade.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        },
+        "ss_addon_1": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-addon', addon: all_products['capsule-vitaminee-shower-filter-sunsoari'], variant_title: \"\", kind: 'complement', title: \"Prends de l'avance sur tes recharges :\", note: \"Une capsule thermale en plus, senteur au choix.\", section_id: section.id %}"
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "ss_pills",
+        "price",
+        "description",
+        "variant_picker",
+        "ss_addon_1",
+        "buy_buttons",
+        "ss_checks",
+        "ss_facts",
+        "reassurance",
+        "acc_1",
+        "acc_2",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_box": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Douchette filtrante Onsha",
+            "text": "<p>Filtre sédiment intégré</p>",
+            "tag": "x1",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-douchette-filtrante-5144667.png"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Housse personnalisable",
+            "text": "<p>Protège ta douchette</p>",
+            "tag": "x1",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-coque-pour-douchette-filtrante-4176027.jpg"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Coque de diffusion Nomade",
+            "text": "<p>Accueille tes capsules</p>",
+            "tag": "x1",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-coque-de-diffusion-8410244.jpg"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Capsules thermales Nomade",
+            "text": "<p>Avec leur disque sédiment</p>",
+            "tag": "x4",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/capsule-vitaminee-3625758.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "boxes",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Dans ton coffret",
+        "heading": "Ce que tu reçois",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "note": ""
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Ouvre</strong> la coque de diffusion Nomade."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Insère</strong> une capsule avec son disque sédiment."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Referme</strong> et fixe la coque sur ton flexible."
+          }
+        },
+        "b4": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Visse</strong> la douchette : le rituel commence."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Installe ton rituel",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": "<p>Range le coffret entier dans ta valise : il s'installe en 30 secondes à l'arrivée.</p>",
+        "image": "shopify://shop_images/Copie_de_IMG_2100.gif"
+      }
+    },
+    "ss_scents": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Hinoki",
+            "text": "<p>Cyprès, bois chaud, musc doux. Idéale le soir, pour ralentir.</p>",
+            "tag": "Calme absolu",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-capsule-thermale-vitaminee-5877420.jpg"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Océan",
+            "text": "<p>Embruns marins, sel minéral, végétal aquatique. Parfaite le matin.</p>",
+            "tag": "Fraîcheur marine",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-capsule-thermale-vitaminee-2207031.jpg"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Forêt de Pin",
+            "text": "<p>Pin frais, résine, terre humide. Tonique dès le réveil.</p>",
+            "tag": "Énergie des forêts",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-capsule-thermale-vitaminee-4674867.jpg"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Fleur de Prunier",
+            "text": "<p>Fleur de prunier, poudré doux, bois blanc. Apaisante et délicate.</p>",
+            "tag": "Douceur florale",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/capsule-vitaminee-3625758.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Les 4 senteurs thermales",
+        "heading": "Une senteur par envie",
+        "text": "",
+        "columns": 4,
+        "columns_mobile": "1",
+        "ratio": "4/5",
+        "open_first": false
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Combien de temps dure chaque capsule ?",
+            "text": "<p>10 à 15 jours selon ta fréquence de douche.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je commander juste les recharges ensuite ?",
+            "text": "<p>Oui, les capsules thermales Nomade sont vendues à l'unité ou par 2, 4 et 6 avec remise.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "La housse protège-t-elle la douchette ?",
+            "text": "<p>Oui, en silicone souple, elle la protège des chocs et des rayures.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "La senteur convient-elle aux peaux sensibles ?",
+            "text": "<p>Le produit s'utilise diffusé dans l'eau de la douche, en usage externe. Si tu as une sensibilité connue aux parfums ou aux huiles essentielles, consulte la liste INCI sur l'emballage avant utilisation et demande conseil à un professionnel de santé en cas de doute.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b5": {
+          "type": "item",
+          "settings": {
+            "title": "Quels sont les délais de livraison ?",
+            "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b6": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je retourner le produit ?",
+            "text": "<p>Oui, tu disposes de 14 jours pour changer d'avis. Pour des raisons d'hygiène, le produit doit nous revenir non ouvert, non utilisé, complet et dans son emballage d'origine. Tous les détails sont dans notre politique de retours.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    },
+    "ss_related": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>Renouvelle ton rituel Nomade.</p>",
+            "tag": "",
+            "link_label": "Découvrir",
+            "show_price": true,
+            "product": "capsule-vitaminee-shower-filter-sunsoari"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>Une autre couleur de housse.</p>",
+            "tag": "",
+            "link_label": "Découvrir",
+            "show_price": true,
+            "product": "product-onsha-coque-douchette-filtrante"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>Le rituel thermal à la maison.</p>",
+            "tag": "",
+            "link_label": "Découvrir",
+            "show_price": true,
+            "product": "coffret-home-onsha-sullab-sunsoari"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Complète ton rituel",
+        "heading": "Découvre aussi",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_box",
+    "ss_steps",
+    "ss_scents",
+    "ss_faq",
+    "ss_related"
+  ]
+}

@@ -1,0 +1,15 @@
+{%- comment -%} Note discrète sous le titre, affichée seulement si le produit a des avis (Judge.me). {%- endcomment -%}
+{%- assign ss_count = product.metafields.reviews.rating_count.value | default: 0 -%}
+{%- if ss_count > 0 -%}
+  {%- assign ss_rating = product.metafields.reviews.rating.value.rating | default: 0 -%}
+  {%- assign ss_full = ss_rating | round -%}
+  <a href="#ss-avis" class="ss-rating" aria-label="Note moyenne {{ ss_rating | round: 1 }} sur 5, {{ ss_count }} avis">
+    <span class="ss-rating__stars" aria-hidden="true">{%- for i in (1..5) -%}{%- if i <= ss_full -%}★{%- else -%}☆{%- endif -%}{%- endfor -%}</span>
+    <span class="ss-rating__text">{{ ss_rating | round: 1 | replace: '.', ',' }} · {{ ss_count }} avis</span>
+  </a>
+  <style>
+    .ss-rating{display:inline-flex;align-items:center;gap:6px;margin:2px 0 4px;font-size:12.5px;line-height:1;color:#5b6b7a;text-decoration:none;}
+    .ss-rating__stars{color:#c9a96e;letter-spacing:1px;font-size:13px;}
+    .ss-rating:hover .ss-rating__text{text-decoration:underline;text-underline-offset:3px;}
+  </style>
+{%- endif -%}

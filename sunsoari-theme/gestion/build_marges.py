@@ -63,7 +63,7 @@ lines = [
     ("", BLACK),
     ("DANS QUEL ORDRE REMPLIR", BOLD),
     ("1. Paramètres : ton statut TVA, le taux du dollar, tes frais Shopify, ta livraison, ton emballage, tes cotisations.", BLACK),
-    ("2. Import : les vrais frais de ta dernière commande fournisseur (fret, transitaire, banque). Ça calcule ton « coefficient d'approche » = combien te coûte vraiment 1 € de marchandise une fois arrivée chez toi.", BLACK),
+    ("2. Import : les vrais (ajoute « UE » en origine pour un fournisseur européen)  frais de ta dernière commande fournisseur (fret, transitaire, banque). Ça calcule ton « coefficient d'approche » = combien te coûte vraiment 1 € de marchandise une fois arrivée chez toi.", BLACK),
     ("3. Tarifs Shift : à compléter avec ta fiche Shift (cases jaunes).", BLACK),
     ("4. Marges produits : prix de vente, coût de revient, marge par produit et marge si la cliente n'achète que ce produit.", BLACK),
     ("5. Simulateur commande : compose un panier et vois ce qu'il te reste vraiment.", BLACK),
@@ -72,7 +72,7 @@ lines = [
     ("À SAVOIR", BOLD),
     ("• FOB = le prix du fournisseur s'arrête au port coréen. Le transport international, l'assurance, le dédouanement, les droits et la TVA à l'import sont à ta charge : c'est pour ça que le coût réel est plus élevé que le prix de la fiche.", BLACK),
     ("• Droits de douane : l'accord de libre-échange UE-Corée permet 0 % de droits si le fournisseur fournit une déclaration d'origine sur la facture. Sans elle, compte en général entre 1,7 % et 6,5 % selon le code douanier. À faire confirmer par ton transitaire ou ton transporteur.", BLACK),
-    ("• TVA : si tu es en franchise de TVA (micro-entreprise sous le seuil), tu ne factures pas de TVA mais tu ne récupères pas non plus la TVA payée à l'import : elle devient un coût. Si tu factures la TVA, tu la récupères, mais ton chiffre d'affaires réel est le prix TTC divisé par 1,2.", BLACK),
+    ("• TVA : Sunsoari est une SAS assujettie à la TVA. Tu récupères la TVA de tes achats (marchandise, TVA à l'import, emballages, abonnements) et ton vrai chiffre d'affaires est le prix TTC divisé par 1,2. Pour info, en franchise de TVA (micro-entreprise sous le seuil), tu ne factures pas de TVA mais tu ne récupères pas non plus la TVA payée à l'import : elle devient un coût. Si tu factures la TVA, tu la récupères, mais ton chiffre d'affaires réel est le prix TTC divisé par 1,2.", BLACK),
     ("• La correspondance entre produits Shopify et références fournisseur est marquée « à confirmer » quand je l'ai déduite des photos ou des descriptions. Vérifie-la une fois avec tes factures.", BLACK),
     ("• Les taux (frais Shopify, cotisations URSSAF, taux de change) changent : vérifie-les dans ton admin Shopify et sur autoentrepreneur.urssaf.fr. Ce tableau ne remplace pas l'avis de ton expert-comptable.", BLACK),
 ]
@@ -92,18 +92,25 @@ for i, lab in enumerate(["", "Paramètre", "Valeur", "Explication / source"], 1)
         c.font, c.fill, c.border = HDR, HDR_FILL, BOX
 params = [
     # key, label, value, fmt, note, yellow
-    ("statut", "Statut TVA", "Franchise", None, "« Franchise » si tu ne factures pas la TVA (micro-entreprise sous le seuil), « Assujettie » si tu factures la TVA. À confirmer avec ta situation réelle.", True),
+    ("statut", "Statut TVA", "Assujettie", None, "SAS assujettie à la TVA (ce que tu m'as indiqué) : tu factures la TVA et tu récupères celle de tes achats. « Franchise » seulement si tu n'es pas assujettie.", False),
     ("tva", "Taux de TVA", 0.20, PCT, "Taux normal en France.", False),
     ("usd", "Taux de change : 1 USD = … €", 0.86, '0.0000 €', "Indicatif. Mets le taux réellement appliqué par ta banque le jour du paiement (relevé bancaire).", True),
-    ("krw", "Taux de change : 1 KRW = … €", 0.00063, '0.000000 €', "Indicatif, utile si Shift facture en wons. À mettre à jour.", False),
+    ("krw", "Taux de change : 1 KRW = … €", 0.00063, '0.000000 €', "Indicatif, utile si un fournisseur facture en wons. À mettre à jour.", False),
     ("palier", "Palier de prix Onsha/Sullab utilisé", "Carton", None, "« Carton » = prix au carton (petites quantités). « MOQ » = prix à partir d'environ 1 000 pièces par référence.", False),
-    ("douane", "Droits de douane par défaut", 0.0, PCT, "0 % avec l'accord UE-Corée si une déclaration d'origine figure sur la facture. Sinon souvent entre 1,7 % et 6,5 % selon le code douanier (à confirmer par ton transitaire).", True),
+    ("douane", "Droits de douane par défaut (achats hors UE)", 0.0, PCT, "0 % avec l'accord UE-Corée si une déclaration d'origine figure sur la facture. Sinon souvent entre 1,7 % et 6,5 % selon le code douanier (à confirmer par ton transitaire). Pas de droits de douane pour un fournisseur situé dans l'UE.", True),
     ("paypct", "Frais de paiement Shopify (%)", 0.015, PCT, "Exemple : Shopify Payments, forfait Basic, carte européenne. Vérifie dans Shopify > Paramètres > Paiements (PayPal, Klarna et cartes hors UE coûtent plus cher).", True),
     ("payfix", "Frais de paiement Shopify (fixe par commande)", 0.25, EUR, "Même source que ci-dessus.", True),
-    ("cot", "Cotisations sociales (% du CA encaissé)", 0.123, PCT, "Micro-entreprise, vente de marchandises : taux indicatif à vérifier sur autoentrepreneur.urssaf.fr (+1 % si versement libératoire de l'impôt). Mets 0 % si tu es en société.", True),
-    ("livr", "Coût moyen d'expédition d'un colis", 5.50, EUR, "Ce que TU paies au transporteur (Colissimo, Mondial Relay…). Exemple à remplacer par ton tarif réel.", True),
-    ("livrfact", "Livraison payée par la cliente (moyenne TTC)", 0.0, EUR, "0 si livraison offerte. Sinon le montant moyen facturé.", False),
-    ("emb", "Emballage par colis", 1.00, EUR, "Carton, papier de soie, carte, scotch, étiquette. Exemple à remplacer.", True),
+    ("cot", "Charges proportionnelles au CA", 0.0, PCT, "0 % pour une SAS : pas de cotisations calculées sur le chiffre d'affaires (contrairement à la micro-entreprise). L'impôt sur les sociétés se calcule sur le bénéfice annuel, voir ton expert-comptable.", False),
+    ("livr", "Ce que TU paies au transporteur par colis (TTC)", 5.50, EUR, "Coût moyen réel d'une étiquette Mondial Relay / Colissimo pour un colis de moins de 1 kg. Exemple : remplace-le par le montant de tes factures transporteur.", True),
+    ("livrfact", "Livraison payée par la cliente (TTC)", 4.90, EUR, "Repris de tes tarifs Shopify : Mondial Relay 4,90 € (< 500 g) ou 5,90 € (500 g à 1 kg), Colissimo 7,90 € ou 9,90 €. 4,90 € = le cas le plus courant.", False),
+    ("seuil", "Livraison offerte à partir de (TTC)", 100.0, EUR, "Repris de tes tarifs Shopify (livraison gratuite dès 100 € d'achat).", False),
+    ("cartonlot", "Emballage : prix d'un lot de cartons (TTC)", 55.0, EUR, "D'après toi : environ 50 à 60 € le lot.", False),
+    ("cartonqte", "Emballage : nombre de cartons dans le lot", 40, NUM, "D'après toi : une quarantaine.", False),
+    ("soieprix", "Papier de soie : prix d'un paquet (TTC)", 15.0, EUR, "D'après toi.", False),
+    ("soieqte", "Papier de soie : nombre de colis faits avec un paquet", 50, NUM, "Estimation à ajuster : combien de colis tu emballes avec un paquet.", True),
+    ("divers", "Emballage : scotch, étiquette, carte (par colis, TTC)", 0.20, EUR, "Estimation.", True),
+    ("emb", "→ Emballage par colis (TTC)", "=cartonlot/cartonqte+soieprix/soieqte+divers", EUR, "Calcul automatique.", False),
+    ("cadeau", "Petit cadeau / échantillon par colis (TTC)", 3.0, EUR, "D'après toi : entre 1 et 5 €. 3 € = moyenne. Mets 0 si tu arrêtes, ou réserve-le aux commandes au-dessus d'un certain montant.", True),
     ("pub", "Coût publicitaire moyen par commande", 0.0, EUR, "0 tant que tu ne fais pas de pub. Ensuite : budget pub du mois ÷ nombre de commandes du mois.", False),
     ("cible", "Coefficient multiplicateur visé", 3.0, COEF, "Prix de vente TTC ÷ coût de revient. Repère courant en beauté : entre 2,5 et 3,5. Sert à calculer un prix plancher.", False),
     ("margemin", "Marge minimum acceptable (% du CA)", 0.40, PCT, "En dessous, le produit est signalé « marge faible ».", False),
@@ -112,7 +119,12 @@ PR = {}
 r = 5
 for key, lab, val, fmt, note, yellow in params:
     put(P, f"B{r}", lab)
-    put(P, f"C{r}", val, BLUE, fmt, YEL if yellow else None)
+    if isinstance(val, str) and val.startswith("="):
+        import re
+        val = "=" + re.sub(r"[a-z]+", lambda m: PR[m.group(0)].split("!")[1], val[1:])
+        put(P, f"C{r}", val, BOLD, fmt)
+    else:
+        put(P, f"C{r}", val, BLUE, fmt, YEL if yellow else None)
     c = put(P, f"D{r}", note); c.alignment = WRAP
     PR[key] = f"Paramètres!$C${r}"
     P.row_dimensions[r].height = 32
@@ -120,6 +132,8 @@ for key, lab, val, fmt, note, yellow in params:
 dv = DataValidation(type="list", formula1='"Franchise,Assujettie"', allow_blank=False); P.add_data_validation(dv); dv.add(PR["statut"].split("!")[1].replace("$", ""))
 dv2 = DataValidation(type="list", formula1='"Carton,MOQ"', allow_blank=False); P.add_data_validation(dv2); dv2.add(PR["palier"].split("!")[1].replace("$", ""))
 TVA_RECUP = f'({PR["statut"]}="Assujettie")'
+HT = f"IF({TVA_RECUP},1/(1+{PR['tva']}),1)"  # retire la TVA des frais payés TTC si elle est récupérable
+P.cell(row=r + 1, column=2, value="Les frais sont saisis TTC (ce que tu paies). Comme tu récupères la TVA, le tableau les compte automatiquement hors TVA.").font = Font(name=F, italic=True)
 
 # ------------------------------------------------------------------ Import
 I = sheet("Import")
@@ -132,11 +146,12 @@ for i, lab in enumerate(["Ligne", "Onsha / Sullab", "Shift", "Explication"], 2):
 rows = [
     ("Valeur de la marchandise (devise du fournisseur)", 2000, 1000, NUM, True, "Total de la facture fournisseur (pro forma). Exemple."),
     ("Devise de la facture", "USD", "USD", None, True, "USD, EUR ou KRW."),
+    ("Origine du fournisseur", "Hors UE", "Hors UE", None, True, "« Hors UE » (Corée…) ou « UE ». Un fournisseur de l'UE : pas de droits de douane ni de TVA à l'import (TVA autoliquidée)."),
     ("Taux de change appliqué", "rate", "rate", '0.000000', False, "Repris des Paramètres."),
     ("Valeur de la marchandise en €", "val", "val", EUR, False, ""),
     ("Fret international (€)", 400, 250, EUR, True, "Transport Corée → France (avion ou mer). Exemple à remplacer par le vrai devis."),
     ("Assurance transport (€)", 0, 0, EUR, False, "Souvent incluse ou optionnelle."),
-    ("Frais de dédouanement / transitaire (€)", 90, 60, EUR, True, "Frais de dossier du transporteur ou du transitaire. Exemple."),
+    ("Frais de dédouanement / transitaire (€)", 90, 60, EUR, True, "Frais de dossier du transporteur ou du transitaire. Exemple. Montants hors TVA (la TVA sur ces frais est récupérable)."),
     ("Frais bancaires du virement international (€)", 30, 30, EUR, True, "Paiement T/T en 2 fois chez Sullab (50 % avant, 50 % après expédition) : compte 2 virements."),
     ("Taux de droits de douane", "duty", "duty", PCT, False, "Repris des Paramètres (modifiable ici si un fournisseur a un taux différent)."),
     ("Droits de douane (€)", "dutyeur", "dutyeur", EUR, False, "Calculés sur marchandise + fret + assurance."),
@@ -153,14 +168,14 @@ for i, (lab, a, b, fmt, yellow, note) in enumerate(rows):
         ref = f"{col}{rr}"
         formulas = {
             "rate": f'=IF({col}7="USD",{PR["usd"]},IF({col}7="KRW",{PR["krw"]},1))',
-            "val": f"={col}6*{col}8",
-            "duty": f"={PR['douane']}",
-            "dutyeur": f"=({col}9+{col}10+{col}11)*{col}14",
-            "tvaimp": f"=({col}9+{col}10+{col}11+{col}15)*{PR['tva']}",
-            "total": f"=SUM({col}9:{col}13)+{col}15+{col}16",
-            "cht": f"=IF({col}9=0,1,({col}17-{col}16)/{col}9)",
-            "cttc": f"=IF({col}9=0,1,{col}17/{col}9)",
-            "cret": f"=IF({TVA_RECUP},{col}18,{col}19)",
+            "val": f"={col}6*{col}9",
+            "duty": f'=IF({col}8="UE",0,{PR["douane"]})',
+            "dutyeur": f"=({col}10+{col}11+{col}12)*{col}15",
+            "tvaimp": f'=IF({col}8="UE",0,({col}10+{col}11+{col}12+{col}16)*{PR["tva"]})',
+            "total": f"=SUM({col}10:{col}14)+{col}16+{col}17",
+            "cht": f"=IF({col}10=0,1,({col}18-{col}17)/{col}10)",
+            "cttc": f"=IF({col}10=0,1,{col}18/{col}10)",
+            "cret": f"=IF({TVA_RECUP},{col}19,{col}20)",
         }
         if v in formulas:
             put(I, ref, formulas[v], GREEN if v in ("rate", "duty") else (BOLD if v == "cret" else BLACK), fmt)
@@ -168,7 +183,8 @@ for i, (lab, a, b, fmt, yellow, note) in enumerate(rows):
             put(I, ref, v, BLUE, fmt, YEL if yellow else None)
     c = put(I, f"E{rr}", note); c.alignment = WRAP
 dv3 = DataValidation(type="list", formula1='"USD,EUR,KRW"'); I.add_data_validation(dv3); dv3.add("C7:D7")
-COEF_ON, COEF_SH = "Import!$C$20", "Import!$D$20"
+COEF_ON, COEF_SH = "Import!$C$21", "Import!$D$21"
+dv6 = DataValidation(type="list", formula1='"Hors UE,UE"'); I.add_data_validation(dv6); dv6.add("C8:D8")
 
 # ------------------------------------------------------------------ Tarifs Onsha-Sullab
 T = sheet("Tarifs Onsha-Sullab")
@@ -260,7 +276,7 @@ M["A2"] = "Prix de vente repris de Shopify le 11/10/2026 (modifiables en bleu). 
 M["A2"].font = BLACK
 mcols = ["Marque", "Produit Shopify", "SKU", "Composition (réf. fournisseur)", "Prix de vente TTC (€)", "Coût d'achat fournisseur (€)",
          "Coût de revient rendu (€)", "CA encaissé (€)", "Frais de paiement % (€)", "Cotisations (€)", "Marge produit (€)",
-         "Taux de marge (% du CA)", "Coefficient (prix TTC ÷ coût)", "Marge si commande de cet article seul (€)", "Prix plancher au coefficient visé (€)", "Alerte"]
+         "Taux de marge (% du CA)", "Coefficient (prix TTC ÷ coût)", "Marge si commande de cet article seul, après colis, emballage, cadeau et livraison facturée (€)", "Prix plancher au coefficient visé (€)", "Alerte"]
 header(M, 4, mcols, [10, 40, 22, 44, 12, 13, 13, 12, 12, 12, 12, 12, 13, 15, 14, 26])
 ONS = "'Tarifs Onsha-Sullab'"
 SHS = "'Tarifs Shift'"
@@ -311,7 +327,7 @@ for i, (brand, name, sku, price, comp, (fn, gn)) in enumerate(products):
     put(M, f"K{r}", f"=IF(G{r}=0,0,H{r}-G{r}-I{r}-J{r})", BOLD, EUR)
     put(M, f"L{r}", f"=IF(H{r}=0,0,K{r}/H{r})", BLACK, PCT)
     put(M, f"M{r}", f"=IF(G{r}=0,0,E{r}/G{r})", BLACK, COEF)
-    put(M, f"N{r}", f"=IF(G{r}=0,0,K{r}-{PR['payfix']}-{PR['livr']}-{PR['emb']}-{PR['pub']}+IF({TVA_RECUP},{PR['livrfact']}/(1+{PR['tva']}),{PR['livrfact']})*(1-{PR['cot']}))", BOLD, EUR)
+    put(M, f"N{r}", f"=IF(G{r}=0,0,K{r}-{PR['payfix']}-({PR['livr']}+{PR['emb']}+{PR['cadeau']})*{HT}-{PR['pub']}+IF(E{r}>={PR['seuil']},0,{PR['livrfact']}*{HT}*(1-{PR['cot']})-{PR['livrfact']}*{PR['paypct']}))", BOLD, EUR)
     put(M, f"O{r}", f"=G{r}*{PR['cible']}", BLACK, EUR)
     put(M, f"P{r}", f'=IF(G{r}=0,"Prix fournisseur manquant",IF(N{r}<0,"Perte si vendu seul",IF(L{r}<{PR["margemin"]},"Marge faible","OK")))', BLACK)
     M.row_dimensions[r].height = 30
@@ -342,13 +358,13 @@ for i in range(6):
     put(C, f"E{r}", f"=IF(B{r}=\"\",0,C{r}*INDEX('Marges produits'!$G${first}:$G${last},MATCH(B{r},{rng},0)))", GREEN, EUR)
 summary = [
     ("Total payé par la cliente, produits (TTC)", "=SUM(D6:D11)"),
-    ("Livraison payée par la cliente (TTC)", f"=IF(D13=0,0,{PR['livrfact']})"),
+    ("Livraison payée par la cliente (TTC)", f"=IF(OR(D13=0,D13>={PR['seuil']}),0,{PR['livrfact']})"),
     ("Chiffre d'affaires encaissé (hors TVA si assujettie)", f"=IF({TVA_RECUP},(D13+D14)/(1+{PR['tva']}),D13+D14)"),
     ("− Coût de revient des produits", "=-SUM(E6:E11)"),
     ("− Frais de paiement", f"=IF(D13=0,0,-((D13+D14)*{PR['paypct']}+{PR['payfix']}))"),
-    ("− Cotisations sociales", f"=-D15*{PR['cot']}"),
-    ("− Expédition", f"=IF(D13=0,0,-{PR['livr']})"),
-    ("− Emballage", f"=IF(D13=0,0,-{PR['emb']})"),
+    ("− Charges proportionnelles au CA", f"=-D15*{PR['cot']}"),
+    ("− Expédition", f"=IF(D13=0,0,-{PR['livr']}*{HT})"),
+    ("− Emballage et cadeau", f"=IF(D13=0,0,-({PR['emb']}+{PR['cadeau']})*{HT})"),
     ("− Publicité", f"=IF(D13=0,0,-{PR['pub']})"),
     ("CE QU'IL TE RESTE SUR CETTE COMMANDE", "=SUM(D15:D21)"),
     ("Soit en % du chiffre d'affaires", "=IF(D15=0,0,D22/D15)"),
@@ -366,12 +382,12 @@ R = sheet("Seuil de rentabilité")
 for col, w in zip("ABCD", [3, 46, 16, 60]):
     R.column_dimensions[col].width = w
 put(R, "B2", "Frais fixes du mois et seuil de rentabilité", TITLE).border = Border()
-R["B3"] = "Mets tes vrais abonnements (exemples en jaune). Mets 0 pour ce que tu n'as pas."
+R["B3"] = "Mets tes vrais abonnements, TTC (exemples en jaune). Mets 0 pour ce que tu n'as pas. La TVA est retirée automatiquement."
 R["B3"].font = BLACK
 for i, lab in enumerate(["Frais fixe mensuel", "Montant (€)", "Remarque"], 2):
     c = R.cell(row=5, column=i, value=lab); c.font, c.fill, c.border = HDR, HDR_FILL, BOX
 fixed = [
-    ("Abonnement Shopify", 36, "Forfait Basic au mois, exemple : vérifie ta facture Shopify."),
+    ("Abonnement Shopify (annuel ÷ 12)", 25, "D'après toi : environ 300 € payés à l'année."),
     ("Applications Shopify", 0, "Avis, bundles, traduction…"),
     ("Nom de domaine (coût annuel ÷ 12)", 1.5, "Exemple."),
     ("Klaviyo / emailing", 0, "Gratuit jusqu'à un certain nombre de contacts."),
@@ -387,8 +403,8 @@ for i, (lab, v, note) in enumerate(fixed):
     put(R, f"C{r}", v, BLUE, EUR, YEL if v else None)
     put(R, f"D{r}", note)
 tot = 6 + len(fixed)
-put(R, f"B{tot}", "Total des frais fixes par mois", BOLD)
-put(R, f"C{tot}", f"=SUM(C6:C{tot-1})", BOLD, EUR)
+put(R, f"B{tot}", "Total des frais fixes par mois (hors TVA si récupérable)", BOLD)
+put(R, f"C{tot}", f"=SUM(C6:C{tot-1})*{HT}", BOLD, EUR)
 put(R, f"B{tot+2}", "Ce qu'il te reste en moyenne par commande (€)", BOLD)
 put(R, f"C{tot+2}", "='Simulateur commande'!D22", GREEN, EUR)
 put(R, f"D{tot+2}", "Repris du simulateur. Tu peux remplacer par ta vraie moyenne une fois que tu as des ventes.")

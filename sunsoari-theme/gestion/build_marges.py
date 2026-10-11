@@ -448,6 +448,56 @@ put(R, f"C{tot+3}", f'=IF(C{tot+2}<=0,"Marge négative",ROUNDUP(C{tot}/C{tot+2},
 put(R, f"B{tot+4}", "Soit environ par semaine", BLACK)
 put(R, f"C{tot+4}", f'=IF(ISNUMBER(C{tot+3}),ROUNDUP(C{tot+3}/4.33,0),"-")', BLACK, NUM)
 
+# ------------------------------------------------------------------ Coffrets Onsha proposés
+K = sheet("Coffrets Onsha")
+put(K, "A1", "Coffrets Onsha proposés · pour vendre les recharges par lot plutôt qu'à l'unité", TITLE).border = Border()
+K["A2"] = "Propositions à tester, pas encore créées sur Shopify. Le prix proposé (bleu) est modifiable : tout se recalcule. Coûts et prix unitaires repris de l'onglet Marges produits."
+K["A2"].font = BLACK
+header(K, 4, ["Coffret", "Objectif", "Composition", "Valeur si acheté à l'unité (€)", "Prix proposé TTC (€)", "Économie cliente", "Coût de revient (€)",
+              "CA hors TVA (€)", "Marge produit (€)", "Taux de marge", "Il te reste si commandé seul (€)", "Comparaison : il te reste avec 1 seule unité (€)", "Livraison offerte ?"],
+       [30, 34, 40, 13, 12, 10, 12, 12, 12, 10, 14, 15, 11])
+MP = "'Marges produits'"
+row = {name: first + i for i, (_, name, *_r) in enumerate(products)}
+FH, CAP, SED, HOU, DOU, SETH, SETN = (row["Filtre Thermal Vitaminé (Home)"], row["Capsule Thermale Coréenne (Nomade)"], row["Filtres Sédiment x3 (recharges douchette)"],
+    row["Housse Personnalisable pour Douchette"], row["Douchette Filtrante"], row["Set Découverte Home"], row["Set Découverte Nomade"])
+bundles = [
+    ("Duo Filtres Home", "Faire racheter 2 filtres au lieu d'1", "2 filtres thermaux Home au choix", [(2, FH)], 23.90, FH),
+    ("Rituel Saison Home", "Recharge pour plusieurs mois, panier plus élevé", "4 filtres thermaux Home (au choix ou 1 de chaque senteur)", [(4, FH)], 44.90, FH),
+    ("Trio Capsules Nomade", "Remplacer l'achat d'une capsule seule (en perte)", "3 capsules thermales Nomade au choix", [(3, CAP)], 17.90, CAP),
+    ("Rituel Saison Nomade", "Recharge pour plusieurs mois", "6 capsules thermales Nomade au choix", [(6, CAP)], 34.90, CAP),
+    ("Douchette Habillée", "Vendre la housse avec la douchette (housse seule en perte)", "1 douchette filtrante + 1 housse au choix", [(1, DOU), (1, HOU)], 29.90, HOU),
+    ("Duo Recharges Douchette", "Fidéliser les clientes de la douchette", "2 boîtes de 3 filtres sédiment (6 filtres)", [(2, SED)], 24.90, SED),
+    ("Set Découverte Home + 2 filtres", "Faire monter le panier dès le premier achat", "Set Découverte Home (coque + 4 filtres) + 2 filtres au choix", [(1, SETH), (2, FH)], 74.90, SETH),
+    ("Set Découverte Nomade + 3 capsules", "Faire monter le panier dès le premier achat", "Set Découverte Nomade (coque + 4 capsules) + 3 capsules au choix", [(1, SETN), (3, CAP)], 44.90, SETN),
+]
+for i, (nm, goal, comp, parts, price, ref1) in enumerate(bundles):
+    r = 5 + i
+    val = "+".join(f"{q}*{MP}!$E${x}" for q, x in parts)
+    cost = "+".join(f"{q}*{MP}!$G${x}" for q, x in parts)
+    put(K, f"A{r}", nm, BOLD); c = put(K, f"B{r}", goal); c.alignment = WRAP; c = put(K, f"C{r}", comp); c.alignment = WRAP
+    put(K, f"D{r}", "=" + val, GREEN, EUR)
+    put(K, f"E{r}", price, BLUE, EUR, YEL)
+    put(K, f"F{r}", f"=IF(D{r}=0,0,1-E{r}/D{r})", BLACK, PCT)
+    put(K, f"G{r}", "=" + cost, GREEN, EUR)
+    put(K, f"H{r}", f"=IF({TVA_RECUP},E{r}/(1+{PR['tva']}),E{r})", BLACK, EUR)
+    put(K, f"I{r}", f"=H{r}-G{r}-E{r}*{PR['paypct']}-H{r}*{PR['cot']}", BOLD, EUR)
+    put(K, f"J{r}", f"=IF(H{r}=0,0,I{r}/H{r})", BLACK, PCT)
+    put(K, f"K{r}", f"=I{r}-{PR['payfix']}-({PR['livr']}+{PR['emb']}+{PR['cadeau']})*{HT}-{PR['pub']}+IF(E{r}>={PR['seuil']},0,{PR['livrfact']}*{HT}*(1-{PR['cot']})-{PR['livrfact']}*{PR['paypct']})", BOLD, EUR)
+    put(K, f"L{r}", f"={MP}!$N${ref1}", GREEN, EUR)
+    put(K, f"M{r}", f'=IF(E{r}>={PR["seuil"]},"Oui","Non")', BLACK)
+    K.row_dimensions[r].height = 32
+lastb = 4 + len(bundles)
+K.conditional_formatting.add(f"K5:K{lastb}", FormulaRule(formula=["K5<0"], fill=PatternFill("solid", fgColor="F8D7D2")))
+n = lastb + 2
+for line in [
+    "Comment lire : la colonne « Il te reste si commandé seul » compte le colis, l'emballage, le cadeau et la livraison payée par la cliente. Compare-la à la dernière colonne : c'est ce que tu gagnes en plus en vendant le lot plutôt qu'une seule unité.",
+    "Règle de prix utilisée : environ 7 à 16 % d'économie par rapport à l'unité. Assez pour donner envie, sans casser ta marge.",
+    "Le cadeau à 3 € pèse beaucoup sur les petits paniers : mets 0 dans Paramètres pour voir l'effet, ou réserve-le aux commandes à partir de 40 €.",
+]:
+    c = K.cell(row=n, column=1, value=line); c.font = BLACK; c.alignment = WRAP
+    K.merge_cells(start_row=n, start_column=1, end_row=n, end_column=13); K.row_dimensions[n].height = 30; n += 1
+K.freeze_panes = "B5"
+
 for wsx in wb.worksheets:
     for row in wsx.iter_rows():
         for c in row:

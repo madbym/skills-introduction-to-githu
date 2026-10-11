@@ -57,6 +57,7 @@ ws.column_dimensions["B"].width = 110
 lines = [
     ("Sunsoari · Tableau de marges et de gestion", TITLE),
     ("Version du 11/10/2026 · prix de vente repris de Shopify le 11/10/2026 · tarifs Onsha/Sullab : fiche FOB USD Sullab Co., Ltd.", BLACK),
+    ("Documents utilisés : grille FOB Sullab/Onsha, pro forma Sullab du 08/05/2026, packing list SUL-0123, grille et commande SHIFT (260528), facture CNR Cosmetics C-2026-0915 et reçu de paiement 0019. Non utilisés : le reçu Sendwave (virement personnel, sans lien avec un achat de stock) et le dépôt INPI (310 €, dépense ponctuelle à passer en charges, pas dans le coût des produits).", BLACK),
     ("", BLACK),
     ("CODE COULEUR", BOLD),
     ("Texte bleu = chiffre que tu peux modifier.  Fond jaune = à remplir ou à vérifier en priorité.  Texte noir = calcul automatique (ne pas toucher).  Texte vert = repris d'un autre onglet.", BLACK),
@@ -73,6 +74,7 @@ lines = [
     ("• FOB = le prix du fournisseur s'arrête au port coréen. Le transport international, l'assurance, le dédouanement, les droits et la TVA à l'import sont à ta charge : c'est pour ça que le coût réel est plus élevé que le prix de la fiche.", BLACK),
     ("• Droits de douane : l'accord de libre-échange UE-Corée permet 0 % de droits si le fournisseur fournit une déclaration d'origine sur la facture. Sans elle, compte en général entre 1,7 % et 6,5 % selon le code douanier. À faire confirmer par ton transitaire ou ton transporteur.", BLACK),
     ("• TVA : Sunsoari est une SAS assujettie à la TVA. Tu récupères la TVA de tes achats (marchandise, TVA à l'import, emballages, abonnements) et ton vrai chiffre d'affaires est le prix TTC divisé par 1,2. Pour info, en franchise de TVA (micro-entreprise sous le seuil), tu ne factures pas de TVA mais tu ne récupères pas non plus la TVA payée à l'import : elle devient un coût. Si tu factures la TVA, tu la récupères, mais ton chiffre d'affaires réel est le prix TTC divisé par 1,2.", BLACK),
+    ("• IMPORTANT pour récupérer la TVA à l'import : la marchandise doit être dédouanée au nom de la SAS Sunsoari (avec son numéro EORI), pas à ton nom personnel. Sur la pro forma Sullab du 08/05/2026, la case « Bien personnel » semble aussi cochée et la destinataire est une personne : demande que seule la case « Achat neuf » soit cochée et que la destinataire soit Sunsoari SAS. Sinon, la TVA payée à l'import ne sera peut-être pas récupérable, et le tableau doit alors utiliser le coefficient « TVA import comprise ».", BLACK),
     ("• La correspondance entre produits Shopify et références fournisseur est marquée « à confirmer » quand je l'ai déduite des photos ou des descriptions. Vérifie-la une fois avec tes factures.", BLACK),
     ("• Les taux (frais Shopify, cotisations URSSAF, taux de change) changent : vérifie-les dans ton admin Shopify et sur autoentrepreneur.urssaf.fr. Ce tableau ne remplace pas l'avis de ton expert-comptable.", BLACK),
 ]
@@ -137,34 +139,34 @@ P.cell(row=r + 1, column=2, value="Les frais sont saisis TTC (ce que tu paies). 
 
 # ------------------------------------------------------------------ Import
 I = sheet("Import")
-for col, w in zip("ABCDE", [3, 46, 18, 18, 70]):
+for col, w in zip("ABCDEF", [3, 46, 18, 18, 18, 70]):
     I.column_dimensions[col].width = w
 put(I, "B2", "Coût réel d'une commande fournisseur (coefficient d'approche)", TITLE).border = Border()
 c = I["B3"]; c.value = "Remplace les valeurs d'exemple (jaunes) par celles de ta dernière facture fournisseur et de ta facture transporteur/transitaire."; c.font = BLACK
-for i, lab in enumerate(["Ligne", "Onsha / Sullab", "Shift", "Explication"], 2):
+for i, lab in enumerate(["Ligne", "Onsha / Sullab", "Shift", "CNR Cosmetics", "Explication"], 2):
     c = I.cell(row=5, column=i, value=lab); c.font, c.fill, c.border = HDR, HDR_FILL, BOX
 rows = [
-    ("Valeur de la marchandise (devise du fournisseur)", 2000, 1000, NUM, True, "Total de la facture fournisseur (pro forma). Exemple."),
-    ("Devise de la facture", "USD", "USD", None, True, "USD, EUR ou KRW."),
-    ("Origine du fournisseur", "Hors UE", "Hors UE", None, True, "« Hors UE » (Corée…) ou « UE ». Un fournisseur de l'UE : pas de droits de douane ni de TVA à l'import (TVA autoliquidée)."),
-    ("Taux de change appliqué", "rate", "rate", '0.000000', False, "Repris des Paramètres."),
-    ("Valeur de la marchandise en €", "val", "val", EUR, False, ""),
-    ("Fret international (€)", 400, 250, EUR, True, "Transport Corée → France (avion ou mer). Exemple à remplacer par le vrai devis."),
-    ("Assurance transport (€)", 0, 0, EUR, False, "Souvent incluse ou optionnelle."),
-    ("Frais de dédouanement / transitaire (€)", 90, 60, EUR, True, "Frais de dossier du transporteur ou du transitaire. Exemple. Montants hors TVA (la TVA sur ces frais est récupérable)."),
-    ("Frais bancaires du virement international (€)", 30, 30, EUR, True, "Paiement T/T en 2 fois chez Sullab (50 % avant, 50 % après expédition) : compte 2 virements."),
-    ("Taux de droits de douane", "duty", "duty", PCT, False, "Repris des Paramètres (modifiable ici si un fournisseur a un taux différent)."),
-    ("Droits de douane (€)", "dutyeur", "dutyeur", EUR, False, "Calculés sur marchandise + fret + assurance."),
-    ("TVA à l'import (€)", "tvaimp", "tvaimp", EUR, False, "20 % sur (marchandise + fret + assurance + droits). Récupérable seulement si tu es assujettie."),
-    ("Total payé pour cette commande (€)", "total", "total", EUR, False, ""),
-    ("Coefficient d'approche hors TVA", "cht", "cht", '0.000', False, "Coût arrivé ÷ valeur de la marchandise, sans la TVA import."),
-    ("Coefficient d'approche TVA import comprise", "cttc", "cttc", '0.000', False, "Idem en comptant la TVA import comme un coût."),
-    ("COEFFICIENT RETENU", "cret", "cret", '0.000', False, "Selon ton statut TVA. Il est appliqué à tous les prix de cet onglet fournisseur."),
+    ("Valeur de la marchandise (devise du fournisseur)", 564, 2285, 435, NUM, False, "Sullab : pro forma du 08/05/2026 (564 $). Shift : bon de commande (2 285 $). CNR : facture C-2026-0915 (435 €)."),
+    ("Devise de la facture", "USD", "USD", "EUR", None, False, "USD, EUR ou KRW."),
+    ("Origine du fournisseur", "Hors UE", "Hors UE", "Hors UE", None, False, "« Hors UE » (Corée…) ou « UE ». Un fournisseur de l'UE : pas de droits de douane ni de TVA à l'import (TVA autoliquidée)."),
+    ("Taux de change appliqué", "rate", "rate", "rate", '0.000000', False, "Repris des Paramètres."),
+    ("Valeur de la marchandise en €", "val", "val", "val", EUR, False, ""),
+    ("Fret international (€)", 120, 250, 20.5, EUR, True, "Sullab et Shift : AUCUNE facture de transport reçue, ce sont des estimations à remplacer (facture EMS, DHL, FedEx ou du transitaire). CNR : 150 € facturés − 129,5 € pris en charge = 20,5 € (réel)."),
+    ("Assurance transport (€)", 0, 0, 0, EUR, False, "Souvent incluse ou optionnelle."),
+    ("Frais de dédouanement / transitaire (€)", 25, 40, 25, EUR, True, "Frais de dossier facturés par La Poste, DHL ou le transitaire à la livraison. Estimations à remplacer. Montants hors TVA."),
+    ("Frais bancaires du virement international (€)", 30, 15, 15, EUR, True, "Sullab : paiement en 2 fois (50/50), donc 2 virements. Shift et CNR : 1 virement (100 % avant expédition). Estimations : regarde tes relevés bancaires."),
+    ("Taux de droits de douane", "duty", "duty", "duty", PCT, False, "Repris des Paramètres. Sullab déclare une origine préférentielle Corée sur sa packing list, donc 0 % avec l'accord UE-Corée. Pour CNR et Shift, demande la même mention sur la facture."),
+    ("Droits de douane (€)", "dutyeur", "dutyeur", "dutyeur", EUR, False, "Calculés sur marchandise + fret + assurance."),
+    ("TVA à l'import (€)", "tvaimp", "tvaimp", "tvaimp", EUR, False, "20 % sur (marchandise + fret + assurance + droits). Récupérable si l'import est fait au nom de la SAS (voir Mode d'emploi)."),
+    ("Total payé pour cette commande (€)", "total", "total", "total", EUR, False, ""),
+    ("Coefficient d'approche hors TVA", "cht", "cht", "cht", '0.000', False, "Coût arrivé ÷ valeur de la marchandise, sans la TVA import."),
+    ("Coefficient d'approche TVA import comprise", "cttc", "cttc", "cttc", '0.000', False, "Idem en comptant la TVA import comme un coût."),
+    ("COEFFICIENT RETENU", "cret", "cret", "cret", '0.000', False, "Selon ton statut TVA. Il est appliqué à tous les prix de l'onglet de ce fournisseur."),
 ]
-for i, (lab, a, b, fmt, yellow, note) in enumerate(rows):
+for i, (lab, a, b, e, fmt, yellow, note) in enumerate(rows):
     rr = 6 + i
     put(I, f"B{rr}", lab, BOLD if lab.startswith("COEFF") else BLACK)
-    for col, v in (("C", a), ("D", b)):
+    for col, v in (("C", a), ("D", b), ("E", e)):
         ref = f"{col}{rr}"
         formulas = {
             "rate": f'=IF({col}7="USD",{PR["usd"]},IF({col}7="KRW",{PR["krw"]},1))',
@@ -181,22 +183,23 @@ for i, (lab, a, b, fmt, yellow, note) in enumerate(rows):
             put(I, ref, formulas[v], GREEN if v in ("rate", "duty") else (BOLD if v == "cret" else BLACK), fmt)
         else:
             put(I, ref, v, BLUE, fmt, YEL if yellow else None)
-    c = put(I, f"E{rr}", note); c.alignment = WRAP
-dv3 = DataValidation(type="list", formula1='"USD,EUR,KRW"'); I.add_data_validation(dv3); dv3.add("C7:D7")
+    c = put(I, f"F{rr}", note); c.alignment = WRAP
+    I.row_dimensions[rr].height = 30 if len(note) < 120 else 55
+dv3 = DataValidation(type="list", formula1='"USD,EUR,KRW"'); I.add_data_validation(dv3); dv3.add("C7:E7")
 COEF_ON, COEF_SH = "Import!$C$21", "Import!$D$21"
-dv6 = DataValidation(type="list", formula1='"Hors UE,UE"'); I.add_data_validation(dv6); dv6.add("C8:D8")
+dv6 = DataValidation(type="list", formula1='"Hors UE,UE"'); I.add_data_validation(dv6); dv6.add("C8:E8")
 
 # ------------------------------------------------------------------ Tarifs Onsha-Sullab
 T = sheet("Tarifs Onsha-Sullab")
 put(T, "A1", "Tarifs Sullab Co., Ltd. (Onsha / Sullab) · FOB Corée, en USD", TITLE).border = Border()
-T["A2"] = "Source : fiche « Onsha FOB Price USD » (Sullab Co., Ltd.). Paiement 50 % T/T à la commande, solde après expédition. Carton 55 × 34 × 19 cm, 60 cartons max par palette."
+T["A2"] = "Sources : fiche « Onsha FOB Price USD » (Sullab Co., Ltd.), pro forma du 08/05/2026 (564 $), packing list SUL-0123 du 23/01/2026 (5 cartons, 33,5 kg, envoi par avion, origine préférentielle Corée). Paiement 50 % T/T à la commande, solde après expédition. Carton 55 × 34 × 19 cm, 60 cartons max par palette."
 T["A2"].font = BLACK
 cols = ["Réf.", "Produit (fiche fournisseur)", "Correspondance Sunsoari", "Prix unitaire au carton (USD)", "Prix d'un carton (USD)", "Pièces par carton",
         "Prix unitaire MOQ (USD)", "Quantité MOQ (pcs)", "Total MOQ (USD)", "Prix public Corée (USD)", "Poids carton (kg)", "Remarques",
         "Prix retenu (USD)", "Coût d'achat (€)", "Coût de revient rendu (€)"]
 header(T, 4, cols, [6, 26, 34, 13, 12, 10, 13, 11, 13, 12, 10, 30, 12, 12, 14])
 sullab = [
-    (1, "Shower Head", "Douchette filtrante Onsha (à confirmer)", 6.50, 40, 5.50, 1000, 15.50, 7.5, ""),
+    (1, "Shower Head", "Douchette filtrante Onsha (« Shower Head (Travel) » sur la pro forma du 08/05/2026)", 6.50, 40, 5.50, 1000, 15.50, 7.5, ""),
     (2, "Shower Head Cover", "Housse personnalisable pour douchette", 3.70, 50, 3.20, 1000, 6.54, 5.5, ""),
     (3, "Shower Head Filter", "Filtres sédiment x3 (recharges douchette)", 4.20, 54, 3.80, 1026, 9.50, 6.5, "1 paquet = 3 filtres"),
     (4, "PVC Shower Tube 1.5 M", "Non vendu actuellement (flexible 1,5 m)", 6.00, 24, 5.00, 1008, 15.00, 8.0, "Blanc, noir, gris, bleu, violet, rose"),
@@ -207,15 +210,15 @@ sullab = [
     (9, "Hot-Spring Refill Filter: Pine Tree", "Capsule thermale Nomade · Forêt de Pin", 2.30, 200, 1.80, 1000, 6.54, 5.5, ""),
     (10, "Hot-Spring Refill Filter: Flower", "Capsule thermale Nomade · Fleur de Prunier", 2.30, 200, 1.80, 1000, 6.54, 5.5, ""),
     (11, "Hot-Spring Filter case (Mini)", "Coque de diffusion Nomade", 2.30, 200, 1.80, 1000, 6.15, 10.5, ""),
-    (12, "Compact Shower Head", "Pommeau de douche filtrant Onsha (à confirmer)", 6.20, 42, 5.20, 1008, 12.50, 8.5, ""),
+    (12, "Compact Shower Head", "Pommeau de douche filtrant Onsha (pro forma du 08/05/2026 : 70 pcs à 6,20 $)", 6.20, 42, 5.20, 1008, 12.50, 8.5, ""),
     (13, "Hot-Spring Filter Set (Home)", "Set Découverte Home (coque + 4 filtres)", 20.00, 12, 18.50, 1008, 45.00, 6.5, ""),
     (14, "Hot-Spring Refill Filter: Wood (Home)", "Filtre thermal Home · Hinoki", 4.70, 72, 4.20, 1008, 11.00, 6.5, ""),
     (15, "Hot-Spring Refill Filter: Ocean (Home)", "Filtre thermal Home · Océan", 4.70, 72, 4.20, 1008, 11.00, 6.5, ""),
     (16, "Hot-Spring Refill Filter: Pine Tree (Home)", "Filtre thermal Home · Forêt de Pin", 4.70, 72, 4.20, 1008, 11.00, 6.5, ""),
     (17, "Hot-Spring Refill Filter: Flower (Home)", "Filtre thermal Home · Fleur de Prunier", 4.70, 72, 4.20, 1008, 11.00, 6.5, ""),
-    (18, "Hot-Spring Filter case (HOME)", "Coque de diffusion Home (à confirmer)", 2.30, 72, 1.80, 1008, 9.00, 8.5, ""),
+    (18, "Hot-Spring Filter case (HOME)", "Coque de diffusion Home (« Filter Case (Home) » sur la packing list)", 2.30, 72, 1.80, 1008, 9.00, 8.5, ""),
     (19, "Faucet Filter with case (HOME)", "Sullab · Filtre robinet lavabo", 5.40, 72, 4.60, 1008, 15.00, 9.0, "6 adaptateurs et outil inclus"),
-    (20, "Hot-Spring Filter case (HOME) · paquet de 3", "Sullab · Lot 3 sédiments robinet (à confirmer)", 2.30, 212, 1.90, 1060, 9.00, 8.5, "1 paquet = 3 filtres"),
+    (20, "Hot-Spring Filter case (HOME) · paquet de 3", "Sullab · Lot 3 sédiments robinet (« Faucet Filter Refill (Home) » sur la packing list)", 2.30, 212, 1.90, 1060, 9.00, 8.5, "1 paquet = 3 filtres"),
 ]
 ON = {}
 for i, (ref, name, corr, pu, qty, pmoq, qmoq, retail, kg, rem) in enumerate(sullab):
@@ -240,34 +243,66 @@ T.freeze_panes = "D5"
 
 # ------------------------------------------------------------------ Tarifs Shift
 S = sheet("Tarifs Shift")
-put(S, "A1", "Tarifs SHIFT · à compléter avec ta fiche fournisseur", TITLE).border = Border()
-S["A2"] = "Remplis les cases jaunes (prix unitaire et devise). Ajoute des lignes si ta fiche contient d'autres références : copie une ligne existante pour garder les formules."
+put(S, "A1", "Tarifs SHIFT (Heraldsilver Inc.) · FOB Corée (Incheon), en USD", TITLE).border = Border()
+S["A2"] = "Source : « SHIFT wholesale price Order Sheet 260528 ». Paiement 100 % avant expédition. Ta commande sur cette fiche : 230 pièces pour 2 285 $."
 S["A2"].font = BLACK
-header(S, 4, ["Réf.", "Composant", "Utilisé dans", "Prix unitaire fournisseur", "Devise", "Quantité minimum", "Remarques", "Taux de change", "Coût d'achat (€)", "Coût de revient rendu (€)"],
-       [6, 34, 40, 14, 9, 11, 30, 12, 13, 14])
+header(S, 4, ["Réf.", "Produit (fiche fournisseur)", "Utilisé dans (Sunsoari)", "Prix fournisseur", "Devise", "Pièces par carton", "Prix public Corée (KRW)", "Code douanier", "Ta commande (pcs)", "Taux de change", "Coût d'achat (€)", "Coût de revient rendu (€)"],
+       [6, 46, 40, 11, 8, 10, 13, 16, 11, 11, 12, 14])
 shift = [
-    ("S1", "Pommeau de douche filtrant SHIFT", "Coffret Soin, Coffret Aromathérapie"),
-    ("S2", "Flexible silicone 2 m", "Coffret Aromathérapie"),
-    ("S3", "Filtre à sédiments Pure Water (1 pièce)", "Pack 3 filtres, coffrets"),
-    ("S4", "Capsule soin & aromathérapie (1 pièce)", "Pack 6 capsules, coffrets"),
-    ("S5", "Autre référence (à renommer)", ""),
-    ("S6", "Autre référence (à renommer)", ""),
+    ("S1", "Capsule Shower Head (+ 1 filtre sédiment)", "Coffret Soin (avec 1 capsule)", 14.5, 26, 51000, "8421.21 / 3924.90", 0),
+    ("S2", "Capsule Shower Trial Kit (pommeau + 1 filtre + 3 capsules)", "Non relié pour l'instant (voir remarque)", 18.5, 8, 59600, "8421.21", 70),
+    ("S3", "Aroma Therapy Shower Kit (pommeau + 3 filtres + flexible 2 m + 6 capsules)", "Coffret Douche & Aromathérapie", 35.0, 4, 122000, "non indiqué", 0),
+    ("S4", "Aroma Capsule, boîte de 6", "Pack 6 capsules, coffrets", 6.5, 20, 23400, "3307.30", 130),
+    ("S5", "Vitamin Capsule Shower filter (sédiment), boîte de 3", "Pack 3 filtres", 5.5, 120, 17700, "8421.99", 50),
+    ("S6", "Silicone Self-draining shower hose 1,5 m ou 2 m", "Non vendu seul pour l'instant", 13.0, 14, 33000, "8421.21", 0),
 ]
 SH = {}
-for i, (ref, name, used) in enumerate(shift):
+for i, (ref, name, used, price, carton, rsp, hs, qty) in enumerate(shift):
     r = 5 + i
     SH[ref] = r
     put(S, f"A{r}", ref)
-    put(S, f"B{r}", name, BLUE)
-    put(S, f"C{r}", used)
-    put(S, f"D{r}", None, BLUE, '#,##0.00', YEL)
-    put(S, f"E{r}", "USD", BLUE, fill=YEL)
-    put(S, f"F{r}", None, BLUE, NUM)
-    put(S, f"G{r}", "")
-    put(S, f"H{r}", f'=IF(E{r}="USD",{PR["usd"]},IF(E{r}="KRW",{PR["krw"]},1))', GREEN, '0.000000')
-    put(S, f"I{r}", f"=D{r}*H{r}", BLACK, EUR)
-    put(S, f"J{r}", f"=I{r}*{COEF_SH}", BOLD, EUR)
+    put(S, f"B{r}", name)
+    put(S, f"C{r}", used, BLUE)
+    put(S, f"D{r}", price, BLUE, '#,##0.00')
+    put(S, f"E{r}", "USD", BLUE)
+    put(S, f"F{r}", carton, BLUE, NUM)
+    put(S, f"G{r}", rsp, BLUE, NUM)
+    put(S, f"H{r}", hs)
+    put(S, f"I{r}", qty, BLUE, NUM)
+    put(S, f"J{r}", f'=IF(E{r}="USD",{PR["usd"]},IF(E{r}="KRW",{PR["krw"]},1))', GREEN, '0.000000')
+    put(S, f"K{r}", f"=D{r}*J{r}", BLACK, EUR)
+    put(S, f"L{r}", f"=K{r}*{COEF_SH}", BOLD, EUR)
 dv4 = DataValidation(type="list", formula1='"USD,EUR,KRW"'); S.add_data_validation(dv4); dv4.add("E5:E10")
+n = 5 + len(shift) + 1
+for line in [
+    "Remarque : sur ta commande, tu as pris 70 Trial Kits (blanc 30, noir 20, rose 10, vert 10) et aucun Aroma Kit complet. Si ton « Coffret Douche & Aromathérapie » est composé à partir des Trial Kits, dis-le-moi et je change la composition.",
+    "Une note de 11,44 apparaît à côté des flexibles sur la fiche : s'il s'agit d'un prix négocié, remplace 13 par 11,44.",
+    "Capsules (code 3307.30) : ce sont des préparations pour le bain, donc des produits cosmétiques. La colonne CPNP de la fiche est vide pour elles : demande à SHIFT le numéro de notification CPNP et qui est la personne responsable dans l'UE.",
+]:
+    c = S.cell(row=n, column=1, value=line); c.font = BLACK; S.merge_cells(start_row=n, start_column=1, end_row=n, end_column=12); c.alignment = WRAP; S.row_dimensions[n].height = 30; n += 1
+
+# ------------------------------------------------------------------ Autres fournisseurs (CNR)
+A = sheet("Autres fournisseurs")
+put(A, "A1", "CNR Cosmetics Co., Ltd. · facture C-2026-0915 du 15/09/2026 · prix en EUR, DAP", TITLE).border = Border()
+A["A2"] = "DAP = livraison payée jusque chez toi par le fournisseur, mais droits et TVA à l'import restent à ta charge. Payé 500 $ (facture n° 0019 du 16/09/2026). Produits pas encore sur Shopify."
+A["A2"].font = BLACK
+header(A, 4, ["Produit", "Quantité", "Prix unitaire (€)", "Montant (€)", "Coût de revient rendu unitaire (€)", "Prix de vente TTC prévu (€)", "Coefficient", "Remarque"], [40, 10, 13, 12, 15, 15, 11, 50])
+cnr = [("104 Multi Boosting Serum", 7, 15), ("104 Multi Boosting Serum Refill", 10, 10), ("Nonstick Sunstick", 5, 10), ("MOJU Sensitive C Cleanser", 5, 10),
+       ("MOJU Mask Pack", 10, 5), ("104 One Cream Travel Size", 10, 4), ("104 Multi Boosting Serum Travel Size", 10, 4)]
+for i, (nm, q, pu) in enumerate(cnr):
+    r = 5 + i
+    put(A, f"A{r}", nm); put(A, f"B{r}", q, BLUE, NUM); put(A, f"C{r}", pu, BLUE, EUR)
+    put(A, f"D{r}", f"=B{r}*C{r}", BLACK, EUR)
+    put(A, f"E{r}", f"=C{r}*Import!$E$21", BOLD, EUR)
+    put(A, f"F{r}", None, BLUE, EUR, YEL)
+    put(A, f"G{r}", f"=IF(OR(E{r}=0,F{r}=\"\"),0,F{r}/E{r})", BLACK, COEF)
+    put(A, f"H{r}", "Mini format : idéal en cadeau ou échantillon." if "Travel" in nm or "Mask" in nm else "")
+r = 5 + len(cnr)
+put(A, f"A{r}", "Total marchandise", BOLD); put(A, f"D{r}", f"=SUM(D5:D{r-1})", BOLD, EUR)
+put(A, f"A{r+1}", "Transport facturé 150 € − prise en charge THE C 129,5 €"); put(A, f"D{r+1}", 20.5, BLUE, EUR)
+put(A, f"A{r+2}", "Total facture", BOLD); put(A, f"D{r+2}", f"=D{r}+D{r+1}", BOLD, EUR)
+c = A.cell(row=r+4, column=1, value="⚠ Cosmétiques : avant de les vendre, il faut une personne responsable établie dans l'UE, une notification CPNP, un étiquetage en français et un dossier information produit (DIP). Si personne d'autre ne l'assure, c'est Sunsoari, en tant qu'importateur, qui en a la charge. Vérifie ce point avec CNR avant la mise en vente.")
+c.font = Font(name=F, bold=True, color="C00000"); c.alignment = WRAP; A.merge_cells(start_row=r+4, start_column=1, end_row=r+4, end_column=8); A.row_dimensions[r+4].height = 45
 
 # ------------------------------------------------------------------ Marges produits
 M = sheet("Marges produits")
@@ -285,15 +320,15 @@ def on(parts):  # parts: list of (qty, ref)
     g = "+".join(f"{q}*{ONS}!$O${ON[r]}" if q != 1 else f"{ONS}!$O${ON[r]}" for q, r in parts)
     return "=" + n, "=" + g
 def sh(parts):
-    n = "+".join(f"{q}*{SHS}!$I${SH[r]}" if q != 1 else f"{SHS}!$I${SH[r]}" for q, r in parts)
-    g = "+".join(f"{q}*{SHS}!$J${SH[r]}" if q != 1 else f"{SHS}!$J${SH[r]}" for q, r in parts)
+    n = "+".join(f"{q}*{SHS}!$K${SH[r]}" if q != 1 else f"{SHS}!$K${SH[r]}" for q, r in parts)
+    g = "+".join(f"{q}*{SHS}!$L${SH[r]}" if q != 1 else f"{SHS}!$L${SH[r]}" for q, r in parts)
     return "=" + n, "=" + g
 products = [
-    ("Onsha", "Pommeau de Douche Filtrant", "ONSHA-POMMEAU", 23.90, "Réf. 12 (à confirmer)", on([(1, 12)])),
-    ("Onsha", "Douchette Filtrante", "ONSHA-DOUCHETTE", 23.90, "Réf. 1 (à confirmer)", on([(1, 1)])),
+    ("Onsha", "Pommeau de Douche Filtrant", "ONSHA-POMMEAU", 23.90, "Réf. 12", on([(1, 12)])),
+    ("Onsha", "Douchette Filtrante", "ONSHA-DOUCHETTE", 23.90, "Réf. 1", on([(1, 1)])),
     ("Onsha", "Filtres Sédiment x3 (recharges douchette)", "ONSHA-SEDIMENT", 13.90, "Réf. 3 (paquet de 3)", on([(1, 3)])),
     ("Onsha", "Housse Personnalisable pour Douchette", "ONSHA-HOUSSE-*", 9.90, "Réf. 2", on([(1, 2)])),
-    ("Onsha", "Coque de Diffusion Home", "ONSHA-COQUE-HOME", 19.90, "Réf. 18 (à confirmer)", on([(1, 18)])),
+    ("Onsha", "Coque de Diffusion Home", "ONSHA-COQUE-HOME", 19.90, "Réf. 18", on([(1, 18)])),
     ("Onsha", "Coque de Diffusion Nomade", "ONSHA-COQUE-NOMADE", 9.90, "Réf. 11", on([(1, 11)])),
     ("Onsha", "Filtre Thermal Vitaminé (Home)", "ONSHA-FILTRE-*", 12.90, "Réf. 14 à 17", on([(1, 14)])),
     ("Onsha", "Filtre Thermal Vitaminé (Home) Sans Senteur", "ONSHA-FILTRE-SANS-X1", 12.90, "Absent de la fiche : même prix que réf. 14 supposé", on([(1, 14)])),
@@ -305,11 +340,11 @@ products = [
     ("Onsha", "Coffret Douche Thermale Coréen (Home)", "ONSHA-COFFRET-HOME", 79.90, "Pommeau (12) + set Home (13)", on([(1, 12), (1, 13)])),
     ("Onsha", "Coffret Douche Thermale Coréen (Nomade)", "ONSHA-COFFRET-NOMADE", 59.90, "Douchette (1) + sédiments x3 (3) + set Nomade (6)", on([(1, 1), (1, 3), (1, 6)])),
     ("Sullab", "Filtre Robinet Lavabo", "SULLAB-ROBINET", 25.90, "Réf. 19", on([(1, 19)])),
-    ("Sullab", "Lot 3 Sédiments (robinet)", "SULLAB-SEDIMENT-X3", 11.90, "Réf. 20 (à confirmer)", on([(1, 20)])),
-    ("SHIFT", "Coffret Soin Douche Coréenne", "SHIFT-COFFRET-SOIN", 59.90, "Pommeau (S1) + 1 filtre (S3) + 1 capsule (S4)", sh([(1, "S1"), (1, "S3"), (1, "S4")])),
-    ("SHIFT", "Coffret Douche & Aromathérapie", "SHIFT-COFFRET-AROMA-*", 109.90, "Pommeau (S1) + flexible (S2) + 3 filtres (S3) + 6 capsules (S4)", sh([(1, "S1"), (1, "S2"), (3, "S3"), (6, "S4")])),
-    ("SHIFT", "Pack 3 Filtres à Sédiments (Pure Water)", "SHIFT-PUREWATER-X3", 25.90, "3 filtres (S3)", sh([(3, "S3")])),
-    ("SHIFT", "Pack 6 Capsules Soin & Aromathérapie", "SHIFT-CAPS6-*", 32.90, "6 capsules (S4)", sh([(6, "S4")])),
+    ("Sullab", "Lot 3 Sédiments (robinet)", "SULLAB-SEDIMENT-X3", 11.90, "Réf. 20", on([(1, 20)])),
+    ("SHIFT", "Coffret Soin Douche Coréenne", "SHIFT-COFFRET-SOIN", 59.90, "Pommeau avec 1 filtre (S1) + 1 capsule (1/6 de S4) (à confirmer)", sh([(1, "S1"), ("1/6", "S4")])),
+    ("SHIFT", "Coffret Douche & Aromathérapie", "SHIFT-COFFRET-AROMA-*", 109.90, "Aroma Therapy Shower Kit (S3) (à confirmer : tu as commandé des Trial Kits)", sh([(1, "S3")])),
+    ("SHIFT", "Pack 3 Filtres à Sédiments (Pure Water)", "SHIFT-PUREWATER-X3", 25.90, "Boîte de 3 filtres (S5)", sh([(1, "S5")])),
+    ("SHIFT", "Pack 6 Capsules Soin & Aromathérapie", "SHIFT-CAPS6-*", 32.90, "Boîte de 6 capsules (S4)", sh([(1, "S4")])),
 ]
 first = 5
 for i, (brand, name, sku, price, comp, (fn, gn)) in enumerate(products):

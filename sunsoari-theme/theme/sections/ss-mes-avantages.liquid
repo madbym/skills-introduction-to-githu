@@ -1,7 +1,7 @@
 {%- comment -%}
   Sunsoari · Mes avantages
   Espace fidélité : codes promo de la cliente (statut automatique : disponible, expire bientôt,
-  déjà utilisé, expiré), avantages, palier de fidélité et rappel de recharge.
+  déjà utilisé, expiré), avantages, missions, palier de fidélité et rappel de recharge.
 {%- endcomment -%}
 
 {%- liquid
@@ -520,7 +520,7 @@
     },
     {
       "type": "mission",
-      "name": "Mission (avis, post, parrainage)",
+      "name": "Mission bonus",
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Image" },
         { "type": "text", "id": "title", "label": "Titre", "default": "Donne ton avis" },

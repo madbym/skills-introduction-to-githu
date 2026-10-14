@@ -105,7 +105,7 @@ params = [
     ("cot", "Charges proportionnelles au CA", 0.0, PCT, "0 % pour une SAS : pas de cotisations calculées sur le chiffre d'affaires (contrairement à la micro-entreprise). L'impôt sur les sociétés se calcule sur le bénéfice annuel, voir ton expert-comptable.", False),
     ("livr", "Ce que TU paies au transporteur par colis (TTC)", 4.00, EUR, "Coût moyen réel d'une étiquette Mondial Relay / Colissimo pour un colis de moins de 1 kg. Exemple : remplace-le par le montant de tes factures transporteur.", True),
     ("livrfact", "Livraison payée par la cliente (TTC)", 5.90, EUR, "Repris de tes tarifs Shopify : Mondial Relay 5,90 € (< 1 kg, depuis le 14/10/2026), Colissimo 7,90 € ou 9,90 €. 5,90 € = le cas le plus courant.", False),
-    ("seuil", "Livraison offerte à partir de (TTC)", 100.0, EUR, "Repris de tes tarifs Shopify (livraison gratuite dès 100 € d'achat).", False),
+    ("seuil", "Livraison offerte à partir de (TTC)", 80.0, EUR, "France : livraison offerte dès 80 €, non cumulable avec les remises (sauf code exceptionnel). Dès 100 € après remise dans tous les cas.", False),
     ("cartonlot", "Emballage : prix d'un lot de cartons (TTC)", 55.0, EUR, "D'après toi : environ 50 à 60 € le lot.", False),
     ("cartonqte", "Emballage : nombre de cartons dans le lot", 40, NUM, "D'après toi : une quarantaine.", False),
     ("soieprix", "Papier de soie : prix d'un paquet (TTC)", 15.0, EUR, "D'après toi.", False),

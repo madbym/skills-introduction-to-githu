@@ -1,0 +1,252 @@
+<title>Marges Sunsoari</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+/* Layout : bandeau d'en-tête → réglages en curseurs → onglets marques → lignes produit avec barre "où va ton argent" → panier. */
+:root{
+  --bg:#FAF8F5; --surface:#FFFFFF; --sand:#E6DED1; --sand-2:#EEEBE7;
+  --ink:#032B59; --ink-soft:#4A6584; --water:#C4D3E4; --slate:#7591AA;
+  --sun:#F2B544; --sun-soft:#FCEBC4;
+  --tva:#B9C7D8; --cost:#7591AA; --fees:#D8B98E; --logi:#E8A87C;
+  --good:#2E8B6E; --good-bg:#DCF1E8; --warn:#B7791F; --warn-bg:#FBEBC9; --bad:#C2474B; --bad-bg:#F8DEDD;
+  --line:#E3DBCF; --shadow:0 1px 2px rgba(3,43,89,.06),0 6px 24px rgba(3,43,89,.06);
+  --f:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0B1A2E; --surface:#12253D; --sand:#1C3150; --sand-2:#18304C;
+  --ink:#F3EEE6; --ink-soft:#A9BCD2; --water:#2A4A70; --slate:#8FA9C2;
+  --sun:#F2B544; --sun-soft:#3A3220;
+  --tva:#3B5677; --cost:#7F9DBB; --fees:#B99A6E; --logi:#D6936A;
+  --good:#5CC9A3; --good-bg:#16372F; --warn:#E5B35A; --warn-bg:#3A2F17; --bad:#F08A8D; --bad-bg:#3F1F24;
+  --line:#22395A; --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1A2E; --surface:#12253D; --sand:#1C3150; --sand-2:#18304C;
+  --ink:#F3EEE6; --ink-soft:#A9BCD2; --water:#2A4A70; --slate:#8FA9C2;
+  --sun:#F2B544; --sun-soft:#3A3220;
+  --tva:#3B5677; --cost:#7F9DBB; --fees:#B99A6E; --logi:#D6936A;
+  --good:#5CC9A3; --good-bg:#16372F; --warn:#E5B35A; --warn-bg:#3A2F17; --bad:#F08A8D; --bad-bg:#3F1F24;
+  --line:#22395A; --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 24px rgba(0,0,0,.25); color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.5}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:20px 60px;display:grid;gap:22px}
+h1,h2,h3{margin:0;font-weight:600;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(28px,5vw,44px)}
+h2{font-size:22px}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:600;color:var(--slate)}
+.num{font-variant-numeric:tabular-nums}
+.muted{color:var(--ink-soft)}
+/* hero */
+.hero{background:linear-gradient(135deg,var(--water),var(--sand) 70%,var(--sun-soft));border-radius:22px;padding:26px 22px;display:grid;gap:16px;position:relative;overflow:hidden}
+.hero p{margin:0;max-width:62ch}
+.sun{position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,var(--sun) 0 38%,transparent 39%),repeating-conic-gradient(var(--sun) 0 6deg,transparent 6deg 18deg);opacity:.35;animation:spin 60s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.sun{animation:none}.bar span{transition:none}}
+.score{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:flex;align-items:center;gap:10px;background:var(--surface);border-radius:14px;padding:10px 14px;box-shadow:var(--shadow)}
+.chip b{font-size:26px;line-height:1}
+.dot{width:12px;height:12px;border-radius:50%}
+/* settings */
+.panel{background:var(--surface);border-radius:18px;padding:18px;box-shadow:var(--shadow);display:grid;gap:14px}
+.sliders{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px 22px}
+.sl{display:grid;gap:4px}
+.sl label{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:500}
+.sl output{font-weight:700;color:var(--ink)}
+.sl small{font-size:12px;color:var(--ink-soft)}
+input[type=range]{width:100%;accent-color:var(--ink);height:22px}
+.reset{justify-self:start;font:inherit;font-size:13px;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tab{font:inherit;font-weight:600;font-size:14px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:8px 16px;cursor:pointer}
+.tab[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.tab:focus-visible,.reset:focus-visible,.row summary:focus-visible,.add:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--ink-soft)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+/* rows */
+.list{display:grid;gap:10px}
+.row{background:var(--surface);border-radius:16px;box-shadow:var(--shadow);border-left:6px solid var(--line)}
+.row.good{border-left-color:var(--good)} .row.warn{border-left-color:var(--warn)} .row.bad{border-left-color:var(--bad)}
+.row summary{list-style:none;cursor:pointer;padding:14px 16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;align-items:center}
+.row summary::-webkit-details-marker{display:none}
+.title{display:grid;gap:2px;min-width:0}
+.title strong{font-size:15px;font-weight:600}
+.brand{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--slate)}
+.keep{text-align:right}
+.keep b{font-size:22px;display:block;line-height:1.1}
+.keep span{font-size:12px;color:var(--ink-soft)}
+.pill{display:inline-block;font-size:12px;font-weight:600;border-radius:999px;padding:3px 10px;margin-top:4px}
+.good .pill{background:var(--good-bg);color:var(--good)} .warn .pill{background:var(--warn-bg);color:var(--warn)} .bad .pill{background:var(--bad-bg);color:var(--bad)}
+.good .keep b{color:var(--good)} .warn .keep b{color:var(--warn)} .bad .keep b{color:var(--bad)}
+.bar{grid-column:1/-1;display:flex;height:14px;border-radius:999px;overflow:hidden;background:var(--sand-2)}
+.bar span{display:block;height:100%;transition:width .45s ease}
+.detail{padding:0 16px 16px;display:grid;gap:14px}
+.break{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.break div{background:var(--sand-2);border-radius:10px;padding:8px 10px;font-size:13px}
+.break div b{display:block;font-size:16px}
+.tryprice{display:grid;gap:4px;max-width:420px}
+.add{font:inherit;font-size:13px;font-weight:600;border:none;background:var(--sun);color:#032B59;border-radius:999px;padding:8px 14px;cursor:pointer;justify-self:start}
+.note{font-size:12px;color:var(--ink-soft)}
+.save{font-size:12px;font-weight:600;color:var(--good)}
+/* basket */
+.basket{position:sticky;bottom:calc(10px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);border-radius:18px;padding:14px 18px;display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;box-shadow:0 10px 30px rgba(3,43,89,.3)}
+.basket .big{font-size:22px;font-weight:700}
+.basket button{font:inherit;font-size:13px;background:transparent;color:var(--bg);border:1px solid currentColor;border-radius:999px;padding:5px 12px;cursor:pointer}
+.basket .items{font-size:13px;opacity:.85;flex:1 1 220px;min-width:0}
+.foot{font-size:12px;color:var(--ink-soft);max-width:75ch}
+@media (max-width:520px){.row summary{grid-template-columns:1fr}.keep{text-align:left}}
+</style>
+<div class="wrap">
+  <header class="hero">
+    <div class="sun" aria-hidden="true"></div>
+    <span class="eyebrow">Sunsoari · tableau de bord des marges</span>
+    <h1>Ce qu'il te reste vraiment</h1>
+    <p>Pour chaque produit, la barre montre où partent les euros payés par ta cliente : TVA, achat du produit, frais Shopify, colis, emballage et cadeau. Le chiffre à droite, c'est ce qui reste à Sunsoari pour une commande de cet article seul. Bouge les curseurs pour tester tes idées.</p>
+    <div class="score" id="score"></div>
+  </header>
+
+  <section class="panel" aria-labelledby="rg">
+    <h2 id="rg">Tes réglages</h2>
+    <div class="sliders">
+      <div class="sl"><label for="s-cadeau">Petit cadeau par colis <output id="o-cadeau"></output></label><input type="range" id="s-cadeau" min="0" max="5" step="0.5"><small>Masque, échantillon… Mets 0 pour voir l'effet.</small></div>
+      <div class="sl"><label for="s-seuil">Livraison offerte dès <output id="o-seuil"></output></label><input type="range" id="s-seuil" min="29" max="120" step="1"><small>Aujourd'hui sur ton site : 100 €.</small></div>
+      <div class="sl"><label for="s-fact">Livraison payée par la cliente <output id="o-fact"></output></label><input type="range" id="s-fact" min="0" max="9.9" step="0.1"><small>Mondial Relay 4,90 € (Shopify).</small></div>
+      <div class="sl"><label for="s-livr">Ce que tu paies au transporteur <output id="o-livr"></output></label><input type="range" id="s-livr" min="3" max="10" step="0.1"><small>Estimation : mets ton vrai tarif.</small></div>
+      <div class="sl"><label for="s-emb">Emballage par colis <output id="o-emb"></output></label><input type="range" id="s-emb" min="0" max="4" step="0.05"><small>Carton + papier de soie + scotch.</small></div>
+    </div>
+    <button class="reset" id="reset" type="button">Revenir aux réglages actuels</button>
+  </section>
+
+  <section style="display:grid;gap:12px" aria-labelledby="pr">
+    <h2 id="pr">Tes produits</h2>
+    <div class="tabs" role="group" aria-label="Filtrer par marque" id="tabs"></div>
+    <div class="legend">
+      <span><i style="background:var(--tva)"></i>TVA (reversée à l'État)</span>
+      <span><i style="background:var(--cost)"></i>Achat du produit, transport et douane compris</span>
+      <span><i style="background:var(--fees)"></i>Frais de paiement</span>
+      <span><i style="background:var(--logi)"></i>Colis, emballage et cadeau (moins la livraison payée)</span>
+      <span><i style="background:var(--good)"></i>Ce qu'il te reste</span>
+    </div>
+    <div class="list" id="list"></div>
+  </section>
+
+  <p class="foot">Chiffres HT pour la société (SAS assujettie à la TVA). Coûts d'achat Sullab/Onsha calculés avec ta commande d'avril (SUL-0413, transport EMS réel de 773,61 $). Shift et CNR : transport estimé. Dollar à 0,86 €. Les coffrets « proposés » ne sont pas encore en vente. Ce tableau aide à décider ; ton expert-comptable reste la référence pour la TVA et les impôts.</p>
+
+  <div class="basket" id="basket" hidden>
+    <div><div style="font-size:12px;opacity:.8">Ton panier test</div><div class="big num" id="b-keep"></div></div>
+    <div class="items" id="b-items"></div>
+    <button type="button" id="b-clear">Vider</button>
+  </div>
+</div>
+<script>
+const DATA = {"products": [{"b": "Onsha", "n": "Pommeau de Douche Filtrant", "p": 23.9, "c": 6.67, "comp": "Réf. 12"}, {"b": "Onsha", "n": "Douchette Filtrante", "p": 23.9, "c": 7.0, "comp": "Réf. 1"}, {"b": "Onsha", "n": "Filtres Sédiment x3 (recharges douchette)", "p": 13.9, "c": 4.52, "comp": "Réf. 3 (paquet de 3)"}, {"b": "Onsha", "n": "Housse Personnalisable pour Douchette", "p": 9.9, "c": 3.98, "comp": "Réf. 2"}, {"b": "Onsha", "n": "Coque de Diffusion Home", "p": 19.9, "c": 2.48, "comp": "Réf. 18"}, {"b": "Onsha", "n": "Coque de Diffusion Nomade", "p": 9.9, "c": 2.48, "comp": "Réf. 11"}, {"b": "Onsha", "n": "Filtre Thermal Vitaminé (Home)", "p": 12.9, "c": 5.06, "comp": "Réf. 14 à 17"}, {"b": "Onsha", "n": "Filtre Thermal Vitaminé (Home) Sans Senteur", "p": 12.9, "c": 5.06, "comp": "Absent de la fiche : même prix que réf. 14 supposé"}, {"b": "Onsha", "n": "Capsule Thermale Coréenne (Nomade)", "p": 6.9, "c": 2.48, "comp": "Réf. 7 à 10"}, {"b": "Onsha", "n": "Premier Rituel (Home)", "p": 29.9, "c": 7.53, "comp": "Coque Home (18) + 1 filtre Home (14)"}, {"b": "Onsha", "n": "Starter Home", "p": 49.9, "c": 14.21, "comp": "Pommeau (12) + coque Home (18) + 1 filtre Home (14)"}, {"b": "Onsha", "n": "Set Découverte Home", "p": 59.9, "c": 21.53, "comp": "Réf. 13 (set coque + 4 filtres)"}, {"b": "Onsha", "n": "Set Découverte Nomade", "p": 29.9, "c": 10.98, "comp": "Réf. 6 (set coque + 4 capsules)"}, {"b": "Onsha", "n": "Coffret Douche Thermale Coréen (Home)", "p": 79.9, "c": 28.2, "comp": "Pommeau (12) + set Home (13)"}, {"b": "Onsha", "n": "Coffret Douche Thermale Coréen (Nomade)", "p": 59.9, "c": 22.5, "comp": "Douchette (1) + sédiments x3 (3) + set Nomade (6)"}, {"b": "Sullab", "n": "Filtre Robinet Lavabo", "p": 25.9, "c": 5.81, "comp": "Réf. 19"}, {"b": "Sullab", "n": "Lot 3 Sédiments (robinet)", "p": 11.9, "c": 2.48, "comp": "Réf. 20"}, {"b": "SHIFT", "n": "Coffret Soin Douche Coréenne", "p": 59.9, "c": 15.48, "comp": "Pommeau avec 1 filtre (S1) + 1 capsule (1/6 de S4) (à confirmer)"}, {"b": "SHIFT", "n": "Coffret Douche & Aromathérapie", "p": 109.9, "c": 34.77, "comp": "Aroma Therapy Shower Kit (S3) (à confirmer : tu as commandé des Trial Kits)"}, {"b": "SHIFT", "n": "Pack 3 Filtres à Sédiments (Pure Water)", "p": 25.9, "c": 5.46, "comp": "Boîte de 3 filtres (S5)"}, {"b": "SHIFT", "n": "Pack 6 Capsules Soin & Aromathérapie", "p": 32.9, "c": 6.46, "comp": "Boîte de 6 capsules (S4)"}], "bundles": [{"n": "Duo Filtres Home", "goal": "Faire racheter 2 filtres au lieu d'1", "comp": "2 filtres thermaux Home au choix", "v": 25.8, "p": 23.9, "c": 10.12, "ref": 0.61}, {"n": "Rituel Saison Home", "goal": "Recharge pour plusieurs mois, panier plus élevé", "comp": "4 filtres thermaux Home (au choix ou 1 de chaque senteur)", "v": 51.6, "p": 44.9, "c": 20.24, "ref": 0.61}, {"n": "Trio Capsules Nomade", "goal": "Remplacer l'achat d'une capsule seule (en perte)", "comp": "3 capsules thermales Nomade au choix", "v": 20.7, "p": 17.9, "c": 7.43, "ref": -1.72}, {"n": "Rituel Saison Nomade", "goal": "Recharge pour plusieurs mois", "comp": "6 capsules thermales Nomade au choix", "v": 41.4, "p": 34.9, "c": 14.85, "ref": -1.72}, {"n": "Douchette Habillée", "goal": "Vendre la housse avec la douchette (housse seule en perte)", "comp": "1 douchette filtrante + 1 housse au choix", "v": 33.8, "p": 29.9, "c": 10.98, "ref": -0.77}, {"n": "Duo Recharges Douchette", "goal": "Fidéliser les clientes de la douchette", "comp": "2 boîtes de 3 filtres sédiment (6 filtres)", "v": 27.8, "p": 24.9, "c": 9.04, "ref": 1.97}, {"n": "Set Découverte Home + 2 filtres", "goal": "Faire monter le panier dès le premier achat", "comp": "Set Découverte Home (coque + 4 filtres) + 2 filtres au choix", "v": 85.7, "p": 74.9, "c": 31.65, "ref": 22.6}, {"n": "Set Découverte Nomade + 3 capsules", "goal": "Faire monter le panier dès le premier achat", "comp": "Set Découverte Nomade (coque + 4 capsules) + 3 capsules au choix", "v": 50.6, "p": 44.9, "c": 18.41, "ref": 8.6}]};
+const DEF = {cadeau:3, seuil:100, fact:4.9, livr:5.5, emb:1.875};
+const TVA=0.2, PAYP=0.015, PAYF=0.25;
+let S = {...DEF};
+try{ const s=JSON.parse(localStorage.getItem("sunsoari-reglages")||"null"); if(s) S={...DEF,...s}; }catch(e){}
+let tab = "Tout", basket = [], tryPrice = {};
+const eur = v => (v<0?"−":"")+Math.abs(v).toFixed(2).replace(".",",")+" €";
+const items = [
+  ...DATA.products.map(p=>({...p, kind:"vente"})),
+  ...DATA.bundles.map(b=>({b:"Coffrets proposés", n:b.n, p:b.p, c:b.c, comp:b.comp, goal:b.goal, v:b.v, kind:"coffret"}))
+];
+items.forEach((it,i)=>it.id=i);
+
+function calc(price, cost){
+  const ht = price/(1+TVA), tva = price-ht;
+  const fees = price*PAYP + PAYF;
+  const shipIn = price>=S.seuil ? 0 : S.fact;
+  const logi = (S.livr+S.emb+S.cadeau)/(1+TVA) - shipIn/(1+TVA) + shipIn*PAYP;
+  const keep = ht - cost - fees - logi;
+  return {ht,tva,fees,logi,keep,cost,price,pct: keep/ht, coef: price/cost};
+}
+function status(r){ return r.keep<0 ? ["bad","En perte"] : (r.keep<3 || r.pct<0.15) ? ["warn","À surveiller"] : ["good", r.pct>=0.35 ? "Très rentable" : "Rentable"]; }
+
+function bar(r){
+  const parts=[["--tva",r.tva],["--cost",r.cost],["--fees",r.fees],["--logi",Math.max(0,r.logi)],["--good",Math.max(0,r.keep)]];
+  const total = parts.reduce((a,[,v])=>a+v,0);
+  return parts.map(([c,v])=>`<span style="width:${(v/total*100).toFixed(2)}%;background:var(${c})" title="${eur(v)}"></span>`).join("");
+}
+
+function renderTabs(){
+  const brands=["Tout","Onsha","Sullab","SHIFT","Coffrets proposés"];
+  document.getElementById("tabs").innerHTML = brands.map(b=>`<button class="tab" type="button" aria-pressed="${b===tab}" data-t="${b}">${b}</button>`).join("");
+}
+
+function render(){
+  for(const k in DEF){ document.getElementById("s-"+k).value=S[k]; document.getElementById("o-"+k).textContent = k==="seuil"? S[k]+" €" : eur(S[k]); }
+  try{ localStorage.setItem("sunsoari-reglages", JSON.stringify(S)); }catch(e){}
+  const open = new Set([...document.querySelectorAll("details[open]")].map(d=>d.dataset.id));
+  let cnt={good:0,warn:0,bad:0};
+  items.filter(it=>it.kind==="vente").forEach(it=>cnt[status(calc(it.p,it.c))[0]]++);
+  document.getElementById("score").innerHTML =
+    `<div class="chip"><span class="dot" style="background:var(--good)"></span><div><b class="num">${cnt.good}</b><div class="muted" style="font-size:12px">produits rentables</div></div></div>
+     <div class="chip"><span class="dot" style="background:var(--warn)"></span><div><b class="num">${cnt.warn}</b><div class="muted" style="font-size:12px">à surveiller</div></div></div>
+     <div class="chip"><span class="dot" style="background:var(--bad)"></span><div><b class="num">${cnt.bad}</b><div class="muted" style="font-size:12px">en perte s'ils sont achetés seuls</div></div></div>`;
+  const list = items.filter(it=> tab==="Tout" ? it.kind==="vente" : it.b===tab)
+    .map(it=>({it, r:calc(tryPrice[it.id]??it.p, it.c)}))
+    .sort((a,b)=>b.r.keep-a.r.keep);
+  document.getElementById("list").innerHTML = list.map(({it,r})=>{
+    const [cls,lab]=status(r); const price=tryPrice[it.id]??it.p;
+    const free = price>=S.seuil;
+    return `<details class="row ${cls}" data-id="${it.id}" ${open.has(String(it.id))?"open":""}>
+      <summary>
+        <div class="title"><span class="brand">${it.b}</span><strong>${it.n}</strong><span class="muted num" style="font-size:13px">Vendu ${eur(price)} TTC${it.v?` · au lieu de ${eur(it.v)} à l'unité`:""}${free?" · livraison offerte":""}</span></div>
+        <div class="keep"><b class="num">${eur(r.keep)}</b><span>il te reste par commande</span><br><span class="pill">${lab}</span></div>
+        <div class="bar" role="img" aria-label="Répartition du prix : TVA ${eur(r.tva)}, produit ${eur(r.cost)}, frais ${eur(r.fees)}, logistique ${eur(r.logi)}, reste ${eur(r.keep)}">${bar(r)}</div>
+      </summary>
+      <div class="detail">
+        ${it.goal?`<div class="note"><b>Objectif :</b> ${it.goal}</div>`:""}
+        <div class="note"><b>Contenu :</b> ${it.comp}</div>
+        <div class="break num">
+          <div>TVA<b>${eur(r.tva)}</b></div>
+          <div>Achat produit<b>${eur(r.cost)}</b></div>
+          <div>Frais de paiement<b>${eur(r.fees)}</b></div>
+          <div>Colis, emballage, cadeau<b>${eur(r.logi)}</b></div>
+          <div>Marge sur le produit<b>${eur(r.ht-r.cost-price*PAYP)}</b></div>
+          <div>Coefficient<b>${r.coef.toFixed(2).replace(".",",")}</b></div>
+        </div>
+        <div class="tryprice">
+          <label for="tp-${it.id}" style="font-size:13px;font-weight:600">Et si je le vendais <output class="num">${eur(price)}</output> ?</label>
+          <input type="range" id="tp-${it.id}" data-tp="${it.id}" min="${Math.max(1,Math.floor(it.p*0.6))}" max="${Math.ceil(it.p*1.5)}" step="0.1" value="${price}">
+          ${tryPrice[it.id]!==undefined?`<button class="reset" type="button" data-rp="${it.id}">Remettre le prix actuel (${eur(it.p)})</button>`:""}
+        </div>
+        <button class="add" type="button" data-add="${it.id}">Ajouter au panier test</button>
+      </div>
+    </details>`;
+  }).join("");
+  renderBasket();
+}
+
+function renderBasket(){
+  const el=document.getElementById("basket");
+  if(!basket.length){ el.hidden=true; return; }
+  el.hidden=false;
+  let ttc=0, keep=0;
+  basket.forEach(id=>{ const it=items[id]; const p=tryPrice[id]??it.p; ttc+=p; keep += p/(1+TVA) - it.c - p*PAYP; });
+  const shipIn = ttc>=S.seuil?0:S.fact;
+  keep += -PAYF - (S.livr+S.emb+S.cadeau)/(1+TVA) + shipIn/(1+TVA) - shipIn*PAYP;
+  document.getElementById("b-keep").textContent = eur(keep)+" restent";
+  const names = basket.map(id=>items[id].n);
+  document.getElementById("b-items").textContent = `${names.length} article${names.length>1?"s":""} · ${eur(ttc)} TTC${shipIn?"":" · livraison offerte"} · ${names.join(", ")}`;
+}
+
+document.addEventListener("input", e=>{
+  const t=e.target;
+  if(t.id && t.id.startsWith("s-")){ S[t.id.slice(2)] = parseFloat(t.value); render(); }
+  if(t.dataset.tp){ t.parentElement.querySelector("output").textContent = eur(parseFloat(t.value)); }
+});
+document.addEventListener("change", e=>{
+  const t=e.target;
+  if(t.dataset.tp){ tryPrice[t.dataset.tp]=parseFloat(t.value); render(); document.getElementById(t.id)?.focus(); }
+});
+document.addEventListener("click", e=>{
+  const t=e.target.closest("button"); if(!t) return;
+  if(t.dataset.t){ tab=t.dataset.t; renderTabs(); render(); }
+  if(t.dataset.add){ basket.push(+t.dataset.add); renderBasket(); }
+  if(t.dataset.rp){ delete tryPrice[t.dataset.rp]; render(); }
+  if(t.id==="b-clear"){ basket=[]; renderBasket(); }
+  if(t.id==="reset"){ S={...DEF}; render(); }
+});
+renderTabs(); render();
+</script>

@@ -146,12 +146,12 @@ c = I["B3"]; c.value = "Remplace les valeurs d'exemple (jaunes) par celles de ta
 for i, lab in enumerate(["Ligne", "Onsha / Sullab", "Shift", "CNR Cosmetics", "Explication"], 2):
     c = I.cell(row=5, column=i, value=lab); c.font, c.fill, c.border = HDR, HDR_FILL, BOX
 rows = [
-    ("Valeur de la marchandise (devise du fournisseur)", 564, 2285, 435, NUM, False, "Sullab : pro forma du 08/05/2026 (564 $). Shift : bon de commande (2 285 $). CNR : facture C-2026-0915 (435 €)."),
+    ("Valeur de la marchandise (devise du fournisseur)", 3329, 2285, 435, NUM, False, "Sullab : facture commerciale SUL-0413 du 13/04/2026 (3 329 $, 492 pièces, 7 cartons, 85 kg). Shift : bon de commande (2 285 $). CNR : facture C-2026-0915 (435 €)."),
     ("Devise de la facture", "USD", "USD", "EUR", None, False, "USD, EUR ou KRW."),
     ("Origine du fournisseur", "Hors UE", "Hors UE", "Hors UE", None, False, "« Hors UE » (Corée…) ou « UE ». Un fournisseur de l'UE : pas de droits de douane ni de TVA à l'import (TVA autoliquidée)."),
     ("Taux de change appliqué", "rate", "rate", "rate", '0.000000', False, "Repris des Paramètres."),
     ("Valeur de la marchandise en €", "val", "val", "val", EUR, False, ""),
-    ("Fret international (€)", 120, 250, 20.5, EUR, True, "Sullab et Shift : AUCUNE facture de transport reçue, ce sont des estimations à remplacer (facture EMS, DHL, FedEx ou du transitaire). CNR : 150 € facturés − 129,5 € pris en charge = 20,5 € (réel)."),
+    ("Fret international (€)", "=773.61*PUSD", 250, 20.5, EUR, True, "Sullab : RÉEL, 773,61 $ facturés sur SUL-0413 (reçu EMS de La Poste coréenne : 1 149 350 KRW pour 7 colis), soit 23 % de la marchandise. Shift : estimation à remplacer. CNR : 150 € facturés − 129,5 € pris en charge = 20,5 € (réel)."),
     ("Assurance transport (€)", 0, 0, 0, EUR, False, "Souvent incluse ou optionnelle."),
     ("Frais de dédouanement / transitaire (€)", 25, 40, 25, EUR, True, "Frais de dossier facturés par La Poste, DHL ou le transitaire à la livraison. Estimations à remplacer. Montants hors TVA."),
     ("Frais bancaires du virement international (€)", 30, 15, 15, EUR, True, "Sullab : paiement en 2 fois (50/50), donc 2 virements. Shift et CNR : 1 virement (100 % avant expédition). Estimations : regarde tes relevés bancaires."),
@@ -181,6 +181,8 @@ for i, (lab, a, b, e, fmt, yellow, note) in enumerate(rows):
         }
         if v in formulas:
             put(I, ref, formulas[v], GREEN if v in ("rate", "duty") else (BOLD if v == "cret" else BLACK), fmt)
+        elif isinstance(v, str) and v.startswith("="):
+            put(I, ref, v.replace("PUSD", PR["usd"]), BLACK, fmt)
         else:
             put(I, ref, v, BLUE, fmt, YEL if yellow else None)
     c = put(I, f"F{rr}", note); c.alignment = WRAP

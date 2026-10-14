@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "coffrets": {
@@ -48,12 +57,7 @@
           }
         }
       },
-      "block_order": [
-        "b1",
-        "b2",
-        "b3",
-        "b4"
-      ],
+      "block_order": ["b1", "b2", "b3", "b4"],
       "settings": {
         "layout": "cards",
         "background": "white",
@@ -95,16 +99,11 @@
           "type": "item",
           "settings": {
             "title": "Comment fonctionne la remise ?",
-            "text": "<p>-5 % dès 3 produits, -10 % dès 5 produits, -15 % dès 7 produits, sur les produits à l'unité choisis sur cette page. La remise s'applique automatiquement au panier quand tu valides ton rituel. Les coffrets et sets sont déjà proposés à prix réduit et ne comptent pas dans les paliers. Elle ne se cumule ni avec les autres remises (dont le code de bienvenue), ni avec la livraison offerte dès 70 € (en France, elle reste offerte dès 100 € d’achat avec ta remise rituel) : la plus avantageuse pour toi s’applique.</p>"
+            "text": "<p>-5 % dès 3 produits, -10 % dès 5 produits, -15 % dès 7 produits, sur les produits à l'unité choisis sur cette page. La remise s'applique automatiquement au panier quand tu valides ton rituel. Les coffrets et sets sont déjà proposés à prix réduit et ne comptent pas dans les paliers. Elle ne se cumule ni avec les autres remises (dont le code de bienvenue), ni avec la livraison offerte dès 80 € (en France, elle reste offerte dès 100 € d’achat avec ta remise rituel) : la plus avantageuse pour toi s’applique.</p>"
           }
         }
       },
-      "block_order": [
-        "q4",
-        "q1",
-        "q2",
-        "q3"
-      ],
+      "block_order": ["q4", "q1", "q2", "q3"],
       "settings": {
         "layout": "faq",
         "background": "cream",
@@ -124,53 +123,32 @@
           "type": "category",
           "settings": {
             "title": "Rituel Home",
-            "products": [
-              "pommeau-de-douche-filtrant",
-              "coque-de-diffusion",
-              "filtre-vitamine-showerfilter-sunsoari",
-              "onsha-filtre-thermal-vitamine-sans-senteur"
-            ]
+            "products": ["pommeau-de-douche-filtrant", "coque-de-diffusion", "filtre-vitamine-showerfilter-sunsoari", "onsha-filtre-thermal-vitamine-sans-senteur"]
           }
         },
         "nomade": {
           "type": "category",
           "settings": {
             "title": "Rituel Nomade",
-            "products": [
-              "douchette-filtrante",
-              "coque-de-diffusion-nomade",
-              "capsule-vitaminee-shower-filter-sunsoari",
-              "filtre-sediment-recharge"
-            ]
+            "products": ["douchette-filtrante", "coque-de-diffusion-nomade", "capsule-vitaminee-shower-filter-sunsoari", "filtre-sediment-recharge"]
           }
         },
         "shift": {
           "type": "category",
           "settings": {
             "title": "SHIFT",
-            "products": [
-              "pack-6-capsules-vitaminees-shift-sunsoari",
-              "pack-3-sediments-pure-water"
-            ]
+            "products": ["pack-6-capsules-vitaminees-shift-sunsoari", "pack-3-sediments-pure-water"]
           }
         },
         "acc": {
           "type": "category",
           "settings": {
             "title": "Accessoires & lavabo",
-            "products": [
-              "product-onsha-coque-douchette-filtrante",
-              "filtre-a-robinet-faucet-sullab-sunsoari"
-            ]
+            "products": ["product-onsha-coque-douchette-filtrante", "filtre-a-robinet-faucet-sullab-sunsoari"]
           }
         }
       },
-      "block_order": [
-        "home",
-        "nomade",
-        "shift",
-        "acc"
-      ],
+      "block_order": ["home", "nomade", "shift", "acc"],
       "settings": {
         "eyebrow": "Plus tu composes, moins tu paies",
         "heading": "Compose ton rituel",
@@ -181,9 +159,5 @@
       }
     }
   },
-  "order": [
-    "bundle",
-    "coffrets",
-    "faq"
-  ]
+  "order": ["bundle", "coffrets", "faq"]
 }

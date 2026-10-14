@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "avantages": {
@@ -112,7 +103,7 @@
           "settings": {
             "image": "shopify://shop_images/shift-coffret-soin-douche-coreenne-5893737.jpg",
             "title": "Donne-nous ton avis",
-            "text": "<ol><li>Attends d'avoir reçu ta commande et testé tes produits quelques jours.</li><li>Envoie-nous ton avis depuis la page Contact, avec ton numéro de commande. Une photo est la bienvenue, mais pas obligatoire.</li></ol>",
+            "text": "<ol><li>Attends d'avoir reçu ta commande et testé tes produits quelques jours.</li><li>Va sur la page Contact, choisis l'objet <strong>« Mission avis »</strong>, indique ton numéro de commande et écris ton avis. Une photo est la bienvenue par email, mais pas obligatoire.</li></ol>",
             "reward": "-5 % sur ta prochaine commande",
             "link": "/pages/contact",
             "link_label": "Envoyer mon avis",
@@ -125,10 +116,10 @@
           "settings": {
             "image": "shopify://shop_images/shift-pommeaux-etageres-coloris.jpg",
             "title": "Partage ton rituel en post ou en story",
-            "text": "<ol><li>Publie un post ou une story avec ton produit Sunsoari et ton avis en quelques mots, depuis un compte public.</li><li>Identifie <strong>@sunsoari</strong> et ajoute la mention <strong>« Publicité »</strong> ou <strong>« Collaboration commerciale »</strong>.</li><li>Envoie-nous la capture en message privé sur Instagram.</li></ol>",
+            "text": "<ol><li>Publie un post ou une story avec ton produit Sunsoari et ton avis en quelques mots, depuis un compte public.</li><li>Identifie <strong>@sunsoari</strong> et ajoute la mention <strong>« Publicité »</strong> ou <strong>« Collaboration commerciale »</strong>.</li><li>Envoie la capture d'écran par email à <a href=\"mailto:contact.sunsoari@gmail.com?subject=Mission%20post\">contact.sunsoari@gmail.com</a> avec l'objet <strong>« Mission post »</strong>, depuis l'adresse email de ton compte client.</li></ol>",
             "reward": "-5 % sur ta prochaine commande",
             "link": "https://www.instagram.com/sunsoari",
-            "link_label": "Aller sur @sunsoari",
+            "link_label": "Suivre @sunsoari",
             "fine": "Pas besoin de montrer ton visage : tes mains ou ton produit suffisent. La mention « Publicité » est obligatoire car tu reçois une réduction en échange (loi française sur l'influence). 1 publication récompensée par commande.",
             "when": "Ton code t'est envoyé par email sous 7 jours après réception de ta capture."
           }
@@ -138,7 +129,7 @@
           "settings": {
             "image": "shopify://shop_images/ingredient-vitamine-c-orange-bulles-eau.jpg",
             "title": "Parraine une amie",
-            "text": "<ol><li>Envoie-nous, depuis la page Contact, le prénom et l'email de la personne que tu parraines.</li><li>Elle passe sa première commande chez Sunsoari (elle peut utiliser le code de bienvenue BIENVENUE10).</li></ol>",
+            "text": "<ol><li>Va sur la page Contact, choisis l'objet <strong>« Mission parrainage »</strong> et indique le prénom et l'email de la personne que tu parraines.</li><li>Elle passe sa première commande chez Sunsoari (elle peut utiliser le code de bienvenue BIENVENUE10).</li></ol>",
             "reward": "5 € de réduction sur ta prochaine commande",
             "link": "/pages/contact",
             "link_label": "Parrainer une amie",

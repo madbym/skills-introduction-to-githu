@@ -115,6 +115,20 @@
   #ssa-{{ section.id }} .ssa-drop span { display: block; height: 100%; background: linear-gradient(90deg, var(--ssa-water), var(--ssa-slate)); }
   #ssa-{{ section.id }} details.ssa-past summary { cursor: pointer; font-weight: 600; }
 
+
+  /* Missions */
+  #ssa-{{ section.id }} .ssa-missions { display: grid; gap: 22px; }
+  #ssa-{{ section.id }} .ssa-mgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; counter-reset: m; }
+  #ssa-{{ section.id }} .ssa-mission { counter-increment: m; background: var(--ssa-white); border-radius: 22px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; border: 1.5px solid var(--ssa-sand); }
+  #ssa-{{ section.id }} .ssa-mission__img { aspect-ratio: 4 / 3; position: relative; background: linear-gradient(135deg, var(--ssa-water), var(--ssa-sand)); }
+  #ssa-{{ section.id }} .ssa-mission__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  #ssa-{{ section.id }} .ssa-mission__img::after { content: counter(m); position: absolute; left: 14px; bottom: -20px; width: 42px; height: 42px; border-radius: 50%; background: var(--ssa-sun); color: var(--ssa-navy); font-weight: 700; font-size: 18px; display: grid; place-items: center; box-shadow: 0 0 0 4px var(--ssa-white); }
+  #ssa-{{ section.id }} .ssa-mission__body { padding: 30px 20px 20px; display: grid; gap: 10px; align-content: start; }
+  #ssa-{{ section.id }} .ssa-mission__body p { margin: 0; }
+  #ssa-{{ section.id }} .ssa-reward { display: flex; gap: 10px; align-items: center; background: var(--ssa-sun-soft); border-radius: 14px; padding: 10px 12px; font-weight: 600; }
+  #ssa-{{ section.id }} .ssa-reward::before { content: ""; flex: none; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle, var(--ssa-sun) 0 45%, transparent 47%), repeating-conic-gradient(var(--ssa-sun) 0 10deg, transparent 10deg 30deg); }
+  #ssa-{{ section.id }} .ssa-fine { font-size: 12px; color: var(--ssa-slate); }
+
   @media (max-width: 760px) {
     #ssa-{{ section.id }} .ssa-hero, #ssa-{{ section.id }} .ssa-split { grid-template-columns: 1fr; }
     #ssa-{{ section.id }} .ssa-hero__img { min-height: 220px; }
@@ -282,6 +296,39 @@
       {%- endif -%}
     </div>
 
+    {%- comment -%} ---------- Missions : avis, réseaux, parrainage ---------- {%- endcomment -%}
+    {%- assign missions = section.blocks | where: 'type', 'mission' -%}
+    {%- if missions.size > 0 -%}
+      <div class="ssa-missions">
+        <div class="ssa-head">
+          <p class="ssa-eyebrow">{{ section.settings.missions_eyebrow }}</p>
+          <h2>{{ section.settings.missions_heading }}</h2>
+          <div>{{ section.settings.missions_text }}</div>
+        </div>
+        <div class="ssa-mgrid">
+          {%- for m in missions -%}
+            <article class="ssa-mission" {{ m.shopify_attributes }}>
+              <div class="ssa-mission__img">
+                {%- if m.settings.image != blank -%}
+                  {{ m.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', sizes: '(max-width: 760px) 100vw, 33vw', alt: m.settings.image.alt }}
+                {%- endif -%}
+              </div>
+              <div class="ssa-mission__body">
+                <h3>{{ m.settings.title }}</h3>
+                <div>{{ m.settings.text }}</div>
+                {%- if m.settings.reward != blank -%}<p class="ssa-reward">{{ m.settings.reward }}</p>{%- endif -%}
+                {%- if m.settings.link != blank -%}
+                  <div class="ssa-actions"><a class="ssa-btn ssa-btn--ghost" href="{{ m.settings.link }}"{% if m.settings.link contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ m.settings.link_label | default: "C'est parti" }}</a></div>
+                {%- endif -%}
+                {%- if m.settings.fine != blank -%}<p class="ssa-fine">{{ m.settings.fine }}</p>{%- endif -%}
+              </div>
+            </article>
+          {%- endfor -%}
+        </div>
+        {%- if section.settings.missions_note != blank -%}<div class="ssa-fine">{{ section.settings.missions_note }}</div>{%- endif -%}
+      </div>
+    {%- endif -%}
+
     {%- comment -%} ---------- Paliers ---------- {%- endcomment -%}
     {%- assign levels = section.blocks | where: 'type', 'level' -%}
     {%- if levels.size > 0 -%}
@@ -408,6 +455,11 @@
     { "type": "text", "id": "codes_heading", "label": "Titre", "default": "Ce qui t'attend en ce moment" },
     { "type": "richtext", "id": "codes_text", "label": "Texte", "default": "<p>Les codes déjà utilisés ou expirés sont rangés plus bas. Le statut se met à jour tout seul.</p>" },
     { "type": "range", "id": "soon_days", "label": "Prévenir « expire bientôt » (jours avant)", "min": 1, "max": 30, "step": 1, "default": 7 },
+    { "type": "header", "content": "Missions (avis, réseaux, parrainage)" },
+    { "type": "text", "id": "missions_eyebrow", "label": "Surtitre", "default": "Petits gestes, petites attentions" },
+    { "type": "text", "id": "missions_heading", "label": "Titre", "default": "Partage ton rituel, on te remercie" },
+    { "type": "richtext", "id": "missions_text", "label": "Texte", "default": "<p>Ton avis, ta story ou ta recommandation aident d'autres personnes à découvrir Sunsoari. Pour te dire merci, chaque geste est récompensé.</p>" },
+    { "type": "richtext", "id": "missions_note", "label": "Mention en bas" },
     { "type": "header", "content": "Paliers" },
     { "type": "text", "id": "levels_eyebrow", "label": "Surtitre", "default": "Ton chemin Sunsoari" },
     { "type": "text", "id": "levels_heading", "label": "Titre", "default": "Tes paliers de rituel" },
@@ -464,6 +516,19 @@
         { "type": "text", "id": "name", "label": "Nom", "default": "Rosée" },
         { "type": "number", "id": "min_spent", "label": "À partir de (€ dépensés au total)", "default": 0 },
         { "type": "richtext", "id": "text", "label": "Description" }
+      ]
+    },
+    {
+      "type": "mission",
+      "name": "Mission (avis, post, parrainage)",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Titre", "default": "Donne ton avis" },
+        { "type": "richtext", "id": "text", "label": "Comment faire" },
+        { "type": "text", "id": "reward", "label": "Récompense", "default": "-5 % sur ta prochaine commande" },
+        { "type": "url", "id": "link", "label": "Lien du bouton" },
+        { "type": "text", "id": "link_label", "label": "Texte du bouton" },
+        { "type": "text", "id": "fine", "label": "Conditions (petit texte)" }
       ]
     }
   ],

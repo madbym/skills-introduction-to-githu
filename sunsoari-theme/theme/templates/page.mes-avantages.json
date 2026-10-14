@@ -103,23 +103,25 @@
           "settings": {
             "image": "shopify://shop_images/shift-coffret-soin-douche-coreenne-5893737.jpg",
             "title": "Donne-nous ton avis",
-            "text": "<p>Après quelques douches, raconte-nous ton ressenti : ce que tu aimes, ce qu'on peut améliorer. Une photo de ton installation est la bienvenue.</p>",
-            "reward": "-5 % sur ta prochaine commande",
+            "text": "<ol><li>Attends d'avoir reçu ta commande et testé tes produits quelques jours.</li><li>Envoie-nous ton avis depuis la page Contact, avec ton numéro de commande. Une photo est la bienvenue, mais pas obligatoire.</li></ol>",
+            "reward": "Un code de -5 % pour ta prochaine commande",
             "link": "/pages/contact",
             "link_label": "Envoyer mon avis",
-            "fine": "Récompense offerte pour tout avis sincère, positif ou non. Un avis par commande."
+            "fine": "Ton avis peut être positif ou négatif : tu reçois ton code dans tous les cas, tant qu'il est sincère et concerne un produit acheté chez nous. 1 avis récompensé par commande.",
+            "when": "Par email, sous 7 jours après réception de ton avis."
           }
         },
         "m2": {
           "type": "mission",
           "settings": {
             "image": "shopify://shop_images/shift-pommeaux-etageres-coloris.jpg",
-            "title": "Partage ton rituel en story ou en post",
-            "text": "<p>Montre ta salle de bain, ta routine ou ton unboxing sur Instagram ou TikTok en mentionnant <strong>@sunsoari</strong>. Pas besoin de montrer ton visage : tes mains ou ton produit suffisent.</p>",
-            "reward": "Une capsule ou un filtre offert dans ta prochaine commande",
+            "title": "Partage ton rituel sur les réseaux",
+            "text": "<ol><li>Publie une story, un post ou une vidéo avec ton produit Sunsoari, depuis un compte public.</li><li>Identifie <strong>@sunsoari</strong> et ajoute la mention <strong>« Publicité »</strong> ou <strong>« Collaboration commerciale »</strong>.</li><li>Envoie-nous la capture en message privé sur Instagram.</li></ol>",
+            "reward": "1 capsule Nomade ou 1 filtre thermal Home offert, au choix",
             "link": "https://www.instagram.com/sunsoari",
-            "link_label": "Suivre @sunsoari",
-            "fine": "Comme tu reçois un petit cadeau en échange, ajoute la mention « Publicité » ou « Collaboration commerciale » sur ta publication (c'est la loi). Envoie-nous ensuite la capture en message privé."
+            "link_label": "Aller sur @sunsoari",
+            "fine": "Pas besoin de montrer ton visage : tes mains ou ton produit suffisent. La mention « Publicité » est obligatoire car tu reçois un cadeau en échange (loi française sur l'influence). 1 récompense par mois maximum.",
+            "when": "Ajouté gratuitement à ta prochaine commande, dans les 3 mois."
           }
         },
         "m3": {
@@ -127,11 +129,12 @@
           "settings": {
             "image": "shopify://shop_images/ingredient-vitamine-c-orange-bulles-eau.jpg",
             "title": "Parraine une amie",
-            "text": "<p>Fais découvrir Sunsoari à une personne de ton entourage. Dès sa première commande, vous êtes remerciées toutes les deux.</p>",
-            "reward": "5 € pour elle, 5 € pour toi",
+            "text": "<ol><li>Envoie-nous, depuis la page Contact, le prénom et l'email de la personne que tu parraines.</li><li>On lui envoie son code de bienvenue par email.</li><li>Elle passe sa première commande avec ce code.</li></ol>",
+            "reward": "5 € pour elle sur sa 1re commande, et 5 € pour toi",
             "link": "/pages/contact",
             "link_label": "Parrainer une amie",
-            "fine": "Envoie-nous le prénom et l'email de ton amie. Ton code 5 € t'est envoyé après sa première commande expédiée."
+            "fine": "La personne parrainée ne doit jamais avoir commandé chez Sunsoari et doit être différente de toi (autre nom, autre email). Son code de 5 € est valable dès 30 € d'achat. 5 parrainages récompensés par an maximum.",
+            "when": "Ton code de 5 € t'est envoyé 14 jours après la livraison de sa commande (fin du délai de rétractation)."
           }
         }
       },
@@ -153,7 +156,9 @@
         "shop_link": "/pages/composez-votre-rituel",
         "refill_link": "/pages/composez-votre-rituel",
         "refill_label": "Recommander mes recharges",
-        "missions_note": "<p>Les récompenses sont envoyées par email sous forme de code personnel, valable 3 mois, non cumulable avec un autre code. Tu les retrouves ensuite ici, dans « Mes codes ».</p>"
+        "missions_note": "<p><strong>En résumé :</strong> chaque récompense est un code personnel, envoyé par email, valable <strong>3 mois</strong>, utilisable <strong>une seule fois</strong> et <strong>non cumulable</strong> avec un autre code. Une fois reçu, ton code apparaît aussi ici, dans « Mes codes ».</p>",
+        "missions_rules_title": "Lire les règles complètes des missions",
+        "missions_rules": "<p><strong>1. Qui peut participer ?</strong> Toute personne majeure ayant un compte client Sunsoari et au moins une commande livrée (sauf pour être parrainée).</p><p><strong>2. Les récompenses</strong> sont des codes personnels : ils ne peuvent être ni échangés, ni revendus, ni transformés en argent. Un seul code par commande. Ils ne se cumulent pas avec un autre code ni avec la livraison offerte, sauf mention contraire.</p><p><strong>3. Durée de validité :</strong> 3 mois à partir de l'envoi du code. Un code expiré n'est pas renouvelé.</p><p><strong>4. Produit offert (mission réseaux) :</strong> il est ajouté à ta commande suivante et n'est pas envoyé seul. Selon le stock, on peut te proposer un produit équivalent.</p><p><strong>5. Retours et remboursements :</strong> si la commande concernée est retournée ou remboursée, la récompense liée n'est pas attribuée, ou est annulée si elle n'a pas encore été utilisée.</p><p><strong>6. Abus :</strong> faux avis, comptes multiples, auto-parrainage ou publication supprimée juste après l'envoi de la capture : dans ces cas, Sunsoari peut refuser ou annuler la récompense.</p><p><strong>7. Évolution :</strong> ces missions peuvent changer ou s'arrêter. Les récompenses déjà gagnées restent valables jusqu'à leur date de fin.</p><p>Une question ? Écris-nous depuis la page <a href=\"/pages/contact\">Contact</a>.</p>"
       }
     }
   },

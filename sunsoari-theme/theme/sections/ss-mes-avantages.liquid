@@ -128,6 +128,14 @@
   #ssa-{{ section.id }} .ssa-reward { display: flex; gap: 10px; align-items: center; background: var(--ssa-sun-soft); border-radius: 14px; padding: 10px 12px; font-weight: 600; }
   #ssa-{{ section.id }} .ssa-reward::before { content: ""; flex: none; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle, var(--ssa-sun) 0 45%, transparent 47%), repeating-conic-gradient(var(--ssa-sun) 0 10deg, transparent 10deg 30deg); }
   #ssa-{{ section.id }} .ssa-fine { font-size: 12px; color: var(--ssa-slate); }
+  #ssa-{{ section.id }} .ssa-label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--ssa-slate); margin: 4px 0 -4px; }
+  #ssa-{{ section.id }} .ssa-how ol, #ssa-{{ section.id }} .ssa-how ul, #ssa-{{ section.id }} .ssa-rules__body ul, #ssa-{{ section.id }} .ssa-rules__body ol { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+  #ssa-{{ section.id }} .ssa-note { background: var(--ssa-white); border-left: 4px solid var(--ssa-sun); border-radius: 12px; padding: 14px 16px; font-size: 14px; }
+  #ssa-{{ section.id }} .ssa-note p { margin: 0; }
+  #ssa-{{ section.id }} .ssa-rules { background: var(--ssa-white); border-radius: 16px; padding: 14px 18px; }
+  #ssa-{{ section.id }} .ssa-rules summary { cursor: pointer; font-weight: 600; }
+  #ssa-{{ section.id }} .ssa-rules__body { margin-top: 12px; font-size: 14px; display: grid; gap: 10px; }
+  #ssa-{{ section.id }} .ssa-rules__body p, #ssa-{{ section.id }} .ssa-rules__body h4 { margin: 0; }
 
   @media (max-width: 760px) {
     #ssa-{{ section.id }} .ssa-hero, #ssa-{{ section.id }} .ssa-split { grid-template-columns: 1fr; }
@@ -315,17 +323,24 @@
               </div>
               <div class="ssa-mission__body">
                 <h3>{{ m.settings.title }}</h3>
-                <div>{{ m.settings.text }}</div>
-                {%- if m.settings.reward != blank -%}<p class="ssa-reward">{{ m.settings.reward }}</p>{%- endif -%}
+                {%- if m.settings.text != blank -%}<p class="ssa-label">Comment faire</p><div class="ssa-how">{{ m.settings.text }}</div>{%- endif -%}
+                {%- if m.settings.reward != blank -%}<p class="ssa-label">Tu reçois</p><p class="ssa-reward">{{ m.settings.reward }}</p>{%- endif -%}
+                {%- if m.settings.when != blank -%}<p class="ssa-label">Quand</p><p>{{ m.settings.when }}</p>{%- endif -%}
                 {%- if m.settings.link != blank -%}
                   <div class="ssa-actions"><a class="ssa-btn ssa-btn--ghost" href="{{ m.settings.link }}"{% if m.settings.link contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ m.settings.link_label | default: "C'est parti" }}</a></div>
                 {%- endif -%}
-                {%- if m.settings.fine != blank -%}<p class="ssa-fine">{{ m.settings.fine }}</p>{%- endif -%}
+                {%- if m.settings.fine != blank -%}<div class="ssa-fine"><strong>Bon à savoir :</strong> {{ m.settings.fine }}</div>{%- endif -%}
               </div>
             </article>
           {%- endfor -%}
         </div>
-        {%- if section.settings.missions_note != blank -%}<div class="ssa-fine">{{ section.settings.missions_note }}</div>{%- endif -%}
+        {%- if section.settings.missions_note != blank -%}<div class="ssa-note">{{ section.settings.missions_note }}</div>{%- endif -%}
+        {%- if section.settings.missions_rules != blank -%}
+          <details class="ssa-rules">
+            <summary>{{ section.settings.missions_rules_title }}</summary>
+            <div class="ssa-rules__body">{{ section.settings.missions_rules }}</div>
+          </details>
+        {%- endif -%}
       </div>
     {%- endif -%}
 
@@ -459,7 +474,9 @@
     { "type": "text", "id": "missions_eyebrow", "label": "Surtitre", "default": "Petits gestes, petites attentions" },
     { "type": "text", "id": "missions_heading", "label": "Titre", "default": "Partage ton rituel, on te remercie" },
     { "type": "richtext", "id": "missions_text", "label": "Texte", "default": "<p>Ton avis, ta story ou ta recommandation aident d'autres personnes à découvrir Sunsoari. Pour te dire merci, chaque geste est récompensé.</p>" },
-    { "type": "richtext", "id": "missions_note", "label": "Mention en bas" },
+    { "type": "richtext", "id": "missions_note", "label": "Encadré récapitulatif" },
+    { "type": "text", "id": "missions_rules_title", "label": "Titre des règles complètes", "default": "Lire les règles complètes des missions" },
+    { "type": "richtext", "id": "missions_rules", "label": "Règles complètes" },
     { "type": "header", "content": "Paliers" },
     { "type": "text", "id": "levels_eyebrow", "label": "Surtitre", "default": "Ton chemin Sunsoari" },
     { "type": "text", "id": "levels_heading", "label": "Titre", "default": "Tes paliers de rituel" },
@@ -524,11 +541,12 @@
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Image" },
         { "type": "text", "id": "title", "label": "Titre", "default": "Donne ton avis" },
-        { "type": "richtext", "id": "text", "label": "Comment faire" },
-        { "type": "text", "id": "reward", "label": "Récompense", "default": "-5 % sur ta prochaine commande" },
+        { "type": "richtext", "id": "text", "label": "Comment faire (étapes)" },
+        { "type": "text", "id": "reward", "label": "Tu reçois", "default": "-5 % sur ta prochaine commande" },
+        { "type": "text", "id": "when", "label": "Quand" },
         { "type": "url", "id": "link", "label": "Lien du bouton" },
         { "type": "text", "id": "link_label", "label": "Texte du bouton" },
-        { "type": "text", "id": "fine", "label": "Conditions (petit texte)" }
+        { "type": "textarea", "id": "fine", "label": "Bon à savoir (conditions)" }
       ]
     }
   ],

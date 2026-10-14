@@ -1,0 +1,123 @@
+{
+  "sections": {
+    "avantages": {
+      "type": "ss-mes-avantages",
+      "blocks": {
+        "c1": {
+          "type": "code",
+          "settings": {
+            "code": "BIENVENUE10",
+            "title": "-10 % sur ta première commande",
+            "text": "<p>Pour découvrir le rituel Sunsoari en douceur.</p>",
+            "conditions": "Dès 15 € d'achat, pour une première commande.",
+            "end_date": "",
+            "once": true,
+            "first_order": true,
+            "customers": "",
+            "members_only": false,
+            "link": "/pages/composez-votre-rituel",
+            "image": "shopify://shop_images/onsha-capsules-nomade-quatre-senteurs.jpg"
+          }
+        },
+        "c2": {
+          "type": "code",
+          "settings": {
+            "code": "ALEXANDRA5",
+            "title": "5 € offerts, rien que pour toi",
+            "text": "<p>Un petit geste de notre part, avec toute notre gratitude.</p>",
+            "conditions": "Sur toute ta commande.",
+            "end_date": "2027-01-13",
+            "once": true,
+            "first_order": false,
+            "customers": "alexandra.tranvanloc@gmail.com, libilulle@yahoo.fr",
+            "members_only": true,
+            "link": "",
+            "image": "shopify://shop_images/onsha-housse-personnalisable-pour-douchette-2337251.jpg"
+          }
+        },
+        "p1": {
+          "type": "perk",
+          "settings": {
+            "badge": "Automatique",
+            "title": "Livraison offerte dès 80 €",
+            "text": "<p>En point relais Mondial Relay, Chronopost ou à domicile, en France métropolitaine.</p>",
+            "conditions": "Hors remises et codes promo. Dès 100 € après remise dans tous les cas.",
+            "members_only": false,
+            "link": "/pages/livraison-expedition",
+            "link_label": "Voir les tarifs de livraison",
+            "image": "shopify://shop_images/onsha-coffret-nomade-ambiance-pierre.jpg"
+          }
+        },
+        "p2": {
+          "type": "perk",
+          "settings": {
+            "badge": "Jusqu'à -15 %",
+            "title": "Compose ton rituel",
+            "text": "<p>-5 % dès 3 produits, -10 % dès 5, -15 % dès 7. La remise s'applique toute seule au panier.</p>",
+            "conditions": "Sur les produits à l'unité de la page Compose ton rituel.",
+            "members_only": false,
+            "link": "/pages/composez-votre-rituel",
+            "link_label": "Composer mon rituel",
+            "image": "shopify://shop_images/ingredient-eau-thermale.jpg"
+          }
+        },
+        "p3": {
+          "type": "perk",
+          "settings": {
+            "badge": "Automatique",
+            "title": "Plus de recharges, plus doux",
+            "text": "<p>Filtres thermaux : -5 % dès 2, -10 % dès 4. Capsules : -5 % dès 2, -10 % dès 4, -15 % dès 6.</p>",
+            "conditions": "Remise appliquée automatiquement au panier.",
+            "members_only": false,
+            "link": "/products/filtre-vitamine-showerfilter-sunsoari",
+            "link_label": "Voir les filtres",
+            "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-home-3992705.png"
+          }
+        },
+        "l1": {
+          "type": "level",
+          "settings": {
+            "name": "Rosée",
+            "min_spent": 0,
+            "text": "<p>Tu découvres le rituel Sunsoari. Bienvenue dans la maison.</p>"
+          }
+        },
+        "l2": {
+          "type": "level",
+          "settings": {
+            "name": "Source",
+            "min_spent": 100,
+            "text": "<p>Ton rituel devient une habitude douce, douche après douche.</p>"
+          }
+        },
+        "l3": {
+          "type": "level",
+          "settings": {
+            "name": "Soleil",
+            "min_spent": 250,
+            "text": "<p>Tu fais partie des fidèles de la maison Sunsoari. Merci de briller avec nous.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c2",
+        "c1",
+        "p1",
+        "p2",
+        "p3",
+        "l1",
+        "l2",
+        "l3"
+      ],
+      "settings": {
+        "hero_image": "shopify://shop_images/ambiance-eau-thermale-bain.jpg",
+        "shop_link": "/pages/composez-votre-rituel",
+        "refill_link": "/pages/composez-votre-rituel",
+        "refill_label": "Recommander mes recharges"
+      }
+    }
+  },
+  "order": [
+    "avantages"
+  ]
+}

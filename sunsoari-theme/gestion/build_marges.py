@@ -103,7 +103,7 @@ params = [
     ("paypct", "Frais de paiement Shopify (%)", 0.015, PCT, "Exemple : Shopify Payments, forfait Basic, carte européenne. Vérifie dans Shopify > Paramètres > Paiements (PayPal, Klarna et cartes hors UE coûtent plus cher).", True),
     ("payfix", "Frais de paiement Shopify (fixe par commande)", 0.25, EUR, "Même source que ci-dessus.", True),
     ("cot", "Charges proportionnelles au CA", 0.0, PCT, "0 % pour une SAS : pas de cotisations calculées sur le chiffre d'affaires (contrairement à la micro-entreprise). L'impôt sur les sociétés se calcule sur le bénéfice annuel, voir ton expert-comptable.", False),
-    ("livr", "Ce que TU paies au transporteur par colis (TTC)", 4.00, EUR, "Coût moyen réel d'une étiquette Mondial Relay / Colissimo pour un colis de moins de 1 kg. Exemple : remplace-le par le montant de tes factures transporteur.", True),
+    ("livr", "Ce que TU paies au transporteur par colis (TTC)", 3.70, EUR, "Boxtal, octobre 2026 : Mondial Relay 3,07 € HT (500 g, sans assurance), Chrono 2Shop Direct 3,10 € HT, soit environ 3,70 € TTC.", False),
     ("livrfact", "Livraison payée par la cliente (TTC)", 5.90, EUR, "Repris de tes tarifs Shopify : Mondial Relay 5,90 € (< 1 kg, depuis le 14/10/2026), Colissimo 7,90 € ou 9,90 €. 5,90 € = le cas le plus courant.", False),
     ("seuil", "Livraison offerte à partir de (TTC)", 80.0, EUR, "France : livraison offerte dès 80 €, non cumulable avec les remises (sauf code exceptionnel). Dès 100 € après remise dans tous les cas.", False),
     ("cartonlot", "Emballage : prix d'un lot de cartons (TTC)", 55.0, EUR, "D'après toi : environ 50 à 60 € le lot.", False),

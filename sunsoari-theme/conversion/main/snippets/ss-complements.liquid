@@ -1,0 +1,99 @@
+{%- comment -%}
+  Sunsoari · Produits complémentaires, affichés juste sous "Ajouter au panier"
+  Params :
+    items : liste "handle|Variante imposée|Pourquoi" séparée par ";" (variante facultative)
+    title : titre court (ex. "Le pommeau est vendu seul")
+    note  : phrase d'explication
+  Chaque ligne a son propre bouton "Ajouter" (fonctionne aussi sans JavaScript).
+{%- endcomment -%}
+{%- assign ss_items = items | split: ';' -%}
+<div class="ss-comp">
+  <div class="ss-comp__head">
+    <span class="ss-comp__icon" aria-hidden="true">+</span>
+    <div>
+      {%- if title != blank -%}<p class="ss-comp__title">{{ title }}</p>{%- endif -%}
+      {%- if note != blank -%}<p class="ss-comp__note">{{ note }}</p>{%- endif -%}
+    </div>
+  </div>
+  <div class="ss-comp__list">
+    {%- for raw in ss_items -%}
+      {%- assign parts = raw | split: '|' -%}
+      {%- assign h = parts[0] | strip -%}
+      {%- assign p = all_products[h] -%}
+      {%- if p == blank -%}{%- continue -%}{%- endif -%}
+      {%- assign vt = parts[1] | strip -%}
+      {%- assign why = parts[2] | strip -%}
+      {%- assign v = p.selected_or_first_available_variant -%}
+      {%- if vt != blank -%}{%- for x in p.variants -%}{%- if x.title == vt -%}{%- assign v = x -%}{%- endif -%}{%- endfor -%}{%- endif -%}
+      {%- assign img = v.featured_image | default: p.featured_image -%}
+      <form class="ss-comp__item" action="{{ routes.cart_add_url }}" method="post" data-ss-comp>
+        <a class="ss-comp__img" href="{{ p.url }}">{%- if img -%}{{ img | image_url: width: 180 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}</a>
+        <div class="ss-comp__txt">
+          <a class="ss-comp__name" href="{{ p.url }}">{{ p.title | remove: 'Onsha · ' | remove: 'Onsha - ' | remove: 'Onsha – ' | remove: 'SHIFT · ' | remove: 'SHIFT – ' | remove: 'Sullab · ' }}</a>
+          {%- if why != blank -%}<small>{{ why }}</small>{%- endif -%}
+          {%- if vt == blank and p.has_only_default_variant == false -%}
+            <select name="id" aria-label="Choisir une option pour {{ p.title | escape }}">
+              {%- for x in p.variants -%}<option value="{{ x.id }}"{% if x.id == v.id %} selected{% endif %}{% unless x.available %} disabled{% endunless %}>{{ x.title }} · {{ x.price | money }}</option>{%- endfor -%}
+            </select>
+          {%- else -%}
+            <input type="hidden" name="id" value="{{ v.id }}">
+          {%- endif -%}
+        </div>
+        <div class="ss-comp__buy">
+          <span class="ss-comp__price">{{ v.price | money }}</span>
+          <input type="hidden" name="quantity" value="1">
+          {%- if v.available -%}
+            <button type="submit" class="ss-comp__btn">Ajouter</button>
+          {%- else -%}
+            <span class="ss-comp__soon">Bientôt de retour</span>
+          {%- endif -%}
+        </div>
+      </form>
+    {%- endfor -%}
+  </div>
+</div>
+<style>
+.ss-comp{margin:14px 0 6px;border:1.5px solid var(--ss-mist,#7591AA);background:var(--ss-cream,#EEEBE7);border-radius:var(--ss-radius,18px);padding:14px;}
+.ss-comp__head{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;}
+.ss-comp__icon{flex:none;width:26px;height:26px;border-radius:50%;background:var(--ss-indigo,#042850);color:#fff;display:grid;place-items:center;font-weight:700;line-height:1;}
+.ss-comp__title{margin:0;font-size:15px;font-weight:700;color:var(--ss-indigo,#042850);}
+.ss-comp__note{margin:2px 0 0;font-size:13px;line-height:1.45;color:var(--ss-ink,#2B3640);}
+.ss-comp__list{display:grid;gap:8px;}
+.ss-comp__item{display:flex;gap:10px;align-items:center;background:var(--ss-white,#FBFAF8);border:1px solid var(--ss-line,#DDD8D0);border-radius:14px;padding:8px 10px;margin:0;}
+.ss-comp__img{width:58px;height:58px;flex:none;border-radius:10px;overflow:hidden;background:#fff;display:block;}
+.ss-comp__img img{width:100%;height:100%;object-fit:contain;}
+.ss-comp__txt{flex:1;min-width:0;}
+.ss-comp__name{display:block;font-size:13.5px;font-weight:600;color:var(--ss-indigo,#042850);text-decoration:none;line-height:1.3;}
+.ss-comp__txt small{display:block;font-size:12px;color:var(--ss-muted,#5A6671);line-height:1.35;margin-top:2px;}
+.ss-comp__txt select{margin-top:6px;max-width:100%;border:1px solid var(--ss-line,#DDD8D0);border-radius:10px;padding:5px 8px;font:inherit;font-size:12px;background:#fff;}
+.ss-comp__buy{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex:none;}
+.ss-comp__price{font-weight:700;font-size:13.5px;color:var(--ss-indigo,#042850);white-space:nowrap;}
+.ss-comp__btn{border:0;border-radius:999px;background:var(--ss-indigo,#042850);color:#fff;font:inherit;font-size:12.5px;font-weight:600;padding:8px 14px;cursor:pointer;min-height:36px;white-space:nowrap;}
+.ss-comp__btn[disabled]{opacity:.7;cursor:default;}
+.ss-comp__soon{font-size:11.5px;color:var(--ss-muted,#5A6671);}
+</style>
+<script>
+(function(){
+  if(window.__ssComp) return; window.__ssComp=1;
+  document.addEventListener('submit',function(e){
+    var f=e.target; if(!f||!f.matches||!f.matches('form[data-ss-comp]')) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    var b=f.querySelector('.ss-comp__btn'); if(!b) return;
+    var id=+(f.querySelector('[name=id]').value), label=b.textContent;
+    b.disabled=true; b.textContent='Ajout…';
+    var root=(window.Shopify&&Shopify.routes&&Shopify.routes.root)||'/';
+    fetch(root+'cart/add.js',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({items:[{id:id,quantity:1}]})})
+      .then(function(r){if(!r.ok) throw r; return r.json();})
+      .then(function(){
+        b.textContent='Ajouté ✓';
+        document.dispatchEvent(new CustomEvent('cart:refresh',{bubbles:true}));
+        document.dispatchEvent(new CustomEvent('product-ajax:added',{bubbles:true}));
+        fetch(root+'cart.js').then(function(r){return r.json();}).then(function(c){
+          document.querySelectorAll('[data-cart-count],.cart-count,.cart-count-bubble span,#CartCount').forEach(function(n){n.textContent=c.item_count;});
+        }).catch(function(){});
+        setTimeout(function(){b.disabled=false;b.textContent=label;},2500);
+      })
+      .catch(function(){ f.removeAttribute('data-ss-comp'); f.submit(); });
+  },true);
+})();
+</script>

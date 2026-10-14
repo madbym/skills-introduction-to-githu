@@ -1,0 +1,303 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">La pièce centrale du rituel Nomade</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Rôle</b>Se fixe entre ton flexible et la douchette filtrante, et accueille la capsule thermale</div><div><b>Compatibilité</b>Douchette filtrante Onsha et capsules thermales Nomade</div><div><b>Matière</b>Polypropylène (PP) et silicone, sans BPA selon le fabricant</div></div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Caractéristiques et matériaux",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Polypropylène (PP) et silicone, sans BPA selon le fabricant. Compatible avec les flexibles de douche standard.</p><p>Cette coque accueille les capsules thermales Nomade. Pour le pommeau de douche et les filtres Home, choisis la coque de diffusion Home.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        },
+        "ss_complements": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-complements', items: \"douchette-filtrante||La douchette sur laquelle elle se visse;capsule-vitaminee-shower-filter-sunsoari||La capsule thermale, 4 senteurs au choix\", title: \"La coque Nomade est vendue seule\", note: \"Elle se fixe entre ton flexible et la douchette, et accueille la capsule thermale. Pour l'utiliser, il te faut aussi :\" %}"
+          }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "ss_rating",
+        "price",
+        "description",
+        "variant_picker",
+        "buy_buttons",
+        "ss_complements",
+        "ss_facts",
+        "reassurance",
+        "acc_1",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_visuals": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "La coque Nomade",
+            "text": "",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-coque-de-diffusion-nomade-5948203.jpg"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "La coque se visse sous la douchette",
+            "text": "",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-nomade-installation-coque-sur-douchette.gif"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2"
+      ],
+      "settings": {
+        "layout": "visuals",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "",
+        "heading": "Le rituel Nomade en images",
+        "text": "",
+        "columns": 2,
+        "columns_mobile": "1",
+        "ratio": "4/5",
+        "open_first": false
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Ouvre</strong> la coque de diffusion Nomade."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Insère</strong> une capsule avec son disque sédiment."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Referme</strong> et fixe la coque sur ton flexible."
+          }
+        },
+        "b4": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Visse</strong> la douchette : ton rituel commence."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Comment l'installer",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": "<p>Tu pars de zéro ? Les coffrets Home et Nomade réunissent la coque, le pommeau de douche ou la douchette et 4 recharges, pour moins cher que les pièces séparées.</p>",
+        "image": "shopify://shop_images/Copie_de_IMG_0393_0973b1d6-fde0-42eb-8872-df9cd6b17595.gif"
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "q0": {
+          "type": "item",
+          "settings": {
+            "title": "Ai-je besoin de cette coque si j'ai un coffret ?",
+            "text": "<p>Non, le coffret Nomade et le set découverte Nomade incluent déjà la coque. Celle-ci s'adresse à celles qui ont déjà la douchette, ou qui veulent une pièce de rechange.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "q1": {
+          "type": "item",
+          "settings": {
+            "title": "Est-elle compatible avec les filtres Home ?",
+            "text": "<p>Non. Les filtres thermaux vitaminés Home s'utilisent avec la coque de diffusion Home et le pommeau de douche filtrant. La coque Nomade accueille uniquement les capsules thermales Nomade.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "q2": {
+          "type": "item",
+          "settings": {
+            "title": "Dois-je la remplacer régulièrement ?",
+            "text": "<p>Non, elle est conçue pour durer. Seules les capsules se changent.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "q0",
+        "q1",
+        "q2"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_visuals",
+    "ss_steps",
+    "ss_reviews",
+    "ss_faq"
+  ]
+}

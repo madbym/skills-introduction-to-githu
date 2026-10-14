@@ -1,0 +1,139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "newsletter_3qCrWc": {
+          "type": "newsletter",
+          "settings": {
+            "block_width": 55,
+            "heading": "Rejoignez notre communauté !",
+            "heading_size": "h3",
+            "newsletter_description": "<p> Sūnsoari est une boutique, mais aussi une communauté curieuse, exigeante, profondément humaine.<br/> Recevez nos lancements, nos éditos bien-être et nos sélections confidentielles.</p>",
+            "newsletter_term": "<p>En vous abonnant, vous acceptez nos  <a href=\"/policies/terms-of-sale\" title=\"Terms of Sale\">CGV </a>et nos <a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">Politiques de confidentialité</a></p>",
+            "newsletter_text_alignment": "left",
+            "form_width": 465,
+            "button_style": "btn--secondary",
+            "button_icon": "none",
+            "order_first": true
+          }
+        },
+        "menu_DEKGYP": {
+          "type": "menu",
+          "settings": {
+            "block_width": 15,
+            "heading": "Navigation",
+            "heading_size": "h4",
+            "menu": "main-menu",
+            "open_default": false,
+            "show_divider": false
+          }
+        },
+        "menu_4eCrBB": {
+          "type": "menu",
+          "settings": {
+            "block_width": 15,
+            "heading": "Informations",
+            "heading_size": "h4",
+            "menu": "footer",
+            "open_default": false,
+            "show_divider": false
+          }
+        },
+        "menu_6cjHfA": {
+          "type": "menu",
+          "settings": {
+            "block_width": 15,
+            "heading": "Suivez-nous",
+            "heading_size": "h4",
+            "menu": "r-seaux-sociaux",
+            "open_default": false,
+            "show_divider": false
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_3qCrWc",
+        "menu_DEKGYP",
+        "menu_4eCrBB",
+        "menu_6cjHfA"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-4",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "social_button_style": "btn--icon",
+        "enable_country_selector": true,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "footer_layout": "standard",
+        "footer_bottom_menu": "",
+        "show_sperator_line": false,
+        "show_section_divider": true,
+        "divider_width": "fixed",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "mobile_sticky_bar_aYhgJK": {
+      "type": "mobile-sticky-bar",
+      "blocks": {
+        "home_AP8mmy": {
+          "type": "home",
+          "settings": {
+            "text": "Home"
+          }
+        },
+        "cart_gnnwxQ": {
+          "type": "cart",
+          "settings": {
+            "text": "Cart"
+          }
+        },
+        "products_eYYkE8": {
+          "type": "products",
+          "settings": {
+            "text": "Products",
+            "collection": ""
+          }
+        },
+        "link_mJ6QMc": {
+          "type": "link",
+          "settings": {
+            "text": "About",
+            "url": "",
+            "icon": "map-pin"
+          }
+        }
+      },
+      "block_order": [
+        "home_AP8mmy",
+        "cart_gnnwxQ",
+        "products_eYYkE8",
+        "link_mJ6QMc"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_sticky_bar": true,
+        "show_text": true
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "mobile_sticky_bar_aYhgJK"
+  ]
+}

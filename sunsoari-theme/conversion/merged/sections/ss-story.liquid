@@ -1,0 +1,199 @@
+{%- comment -%}
+  Sunsoari · Section éditoriale polyvalente
+  Mises en page : cartes, carrousel mobile, contenu de coffret, visuels, étapes, FAQ, produits, réassurance
+{%- endcomment -%}
+{%- liquid
+  assign s = section.settings
+  assign cols = s.columns | default: 3
+  assign cols_m = s.columns_mobile | default: 1
+  assign bg = s.background
+-%}
+<section class="ss-sec ss-sec--{{ bg }} ss-story ss-story--{{ s.layout }}" id="ss-{{ section.id }}" style="--ss-cols:{{ cols }};--ss-cols-m:{{ cols_m }};--ss-ratio:{{ s.ratio }};{% if s.pad_top != blank %}padding-top:{{ s.pad_top }}px;{% endif %}{% if s.pad_bottom != blank %}padding-bottom:{{ s.pad_bottom }}px;{% endif %}">
+  <div class="ss-wrap">
+    {%- if s.layout == 'steps' -%}
+      <div class="ss-steps">
+        <div class="ss-steps__media">
+          {%- if s.video != blank -%}
+            {{ s.video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, controls: false, image_size: '1200x', class: 'ss-steps__video' }}
+          {%- elsif s.image != blank -%}{{ s.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 50vw, 100vw', alt: s.heading }}{%- endif -%}
+        </div>
+        <div>
+          {%- if s.eyebrow != blank -%}<span class="ss-eyebrow">{{ s.eyebrow }}</span>{%- endif -%}
+          {%- if s.heading != blank -%}<h2 class="ss-h2">{{ s.heading }}</h2>{%- endif -%}
+          {%- if s.text != blank -%}<div class="ss-lead">{{ s.text }}</div>{%- endif -%}
+          <ol>
+            {%- for block in section.blocks -%}<li {{ block.shopify_attributes }}><span>{{ block.settings.text }}</span></li>{%- endfor -%}
+          </ol>
+          {%- if s.tip_text != blank -%}<div class="ss-tip"><b>{{ s.tip_title | default: "Les conseils de l'équipe" }}</b>{{ s.tip_text }}</div>{%- endif -%}
+        </div>
+      </div>
+    {%- else -%}
+      {%- if s.eyebrow != blank or s.heading != blank or s.text != blank -%}
+        <div class="ss-head{% if s.align == 'left' %} ss-head--left{% endif %}">
+          {%- if s.eyebrow != blank -%}<span class="ss-eyebrow">{{ s.eyebrow }}</span>{%- endif -%}
+          {%- if s.heading != blank -%}<h2 class="ss-h2">{{ s.heading }}</h2>{%- endif -%}
+          {%- if s.text != blank -%}<div class="ss-lead">{{ s.text }}</div>{%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- case s.layout -%}
+        {%- when 'faq' -%}
+          <div class="ss-faq">
+            {%- for block in section.blocks -%}
+              <details {{ block.shopify_attributes }}{% if forloop.first and s.open_first %} open{% endif %}>
+                <summary>{{ block.settings.title }}</summary>
+                <div class="ss-faq__a">{{ block.settings.text }}</div>
+              </details>
+            {%- endfor -%}
+          </div>
+        {%- when 'boxes' -%}
+          <div class="ss-grid">
+            {%- for block in section.blocks -%}
+              <div class="ss-box" {{ block.shopify_attributes }}>
+                <div class="ss-box__img">{%- if block.settings.image != blank -%}{{ block.settings.image | image_url: width: 240 | image_tag: loading: 'lazy', alt: block.settings.title }}{%- endif -%}</div>
+                <div>
+                  {%- if block.settings.tag != blank -%}<span class="ss-box__qty">{{ block.settings.tag }}</span>{%- endif -%}
+                  <strong>{{ block.settings.title }}</strong>
+                  {%- if block.settings.text != blank -%}<span class="ss-box__note">{{ block.settings.text | strip_html }}</span>{%- endif -%}
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- when 'visuals' -%}
+          <div class="ss-grid">
+            {%- for block in section.blocks -%}
+              <figure class="ss-visual" {{ block.shopify_attributes }} style="margin:0">
+                {%- if block.settings.video != blank -%}
+                  {{ block.settings.video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, controls: false, image_size: '1200x', class: 'ss-visual__video' }}
+                {%- elsif block.settings.image != blank -%}
+                  <picture>
+                    {%- if block.settings.image_mobile != blank -%}<source media="(max-width: 749px)" srcset="{{ block.settings.image_mobile | image_url: width: 900 }}">{%- endif -%}
+                    {{ block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 50vw, 100vw', alt: block.settings.title }}
+                  </picture>
+                {%- endif -%}
+                {%- if block.settings.title != blank -%}<figcaption>{{ block.settings.title }}</figcaption>{%- endif -%}
+              </figure>
+            {%- endfor -%}
+          </div>
+        {%- when 'trust' -%}
+          <div class="ss-trust">
+            {%- for block in section.blocks -%}<div {{ block.shopify_attributes }}><strong>{{ block.settings.title }}</strong>{{ block.settings.text | strip_html }}</div>{%- endfor -%}
+          </div>
+        {%- else -%}
+          <div class="{% if s.layout == 'scroll' %}ss-scroll{% else %}ss-grid{% endif %}">
+            {%- for block in section.blocks -%}
+              {%- liquid
+                assign b = block.settings
+                assign p = b.product
+                assign img = b.image
+                if img == blank and p != blank
+                  assign img = p.featured_image
+                endif
+                assign link = b.link
+                if link == blank and p != blank
+                  assign link = p.url
+                endif
+                assign title = b.title
+                if title == blank and p != blank
+                  assign title = p.title
+                endif
+              -%}
+              {%- if link != blank -%}<a class="ss-card" href="{{ link }}" {{ block.shopify_attributes }}>{%- else -%}<div class="ss-card" {{ block.shopify_attributes }}>{%- endif -%}
+                {%- if img != blank -%}<div class="ss-card__media">{{ img | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 33vw, 80vw', alt: title }}</div>{%- endif -%}
+                <div class="ss-card__body">
+                  {%- if b.tag != blank -%}<span class="ss-card__tag">{{ b.tag }}</span>{%- endif -%}
+                  {%- if title != blank -%}<h3 class="ss-card__title">{{ title }}</h3>{%- endif -%}
+                  {%- if b.text != blank -%}<div class="ss-card__text">{{ b.text }}</div>{%- endif -%}
+                  {%- if p != blank and b.show_price -%}<span class="ss-card__price">{% if p.price_varies %}Dès {% endif %}{{ p.price_min | money }}</span>{%- endif -%}
+                  {%- if b.link_label != blank -%}<span class="ss-card__link">{{ b.link_label }}</span>{%- endif -%}
+                </div>
+              {%- if link != blank -%}</a>{%- else -%}</div>{%- endif -%}
+            {%- endfor -%}
+          </div>
+      {%- endcase -%}
+      {%- if s.note != blank -%}<p class="ss-note">{{ s.note }}</p>{%- endif -%}
+      {%- if s.button_label != blank -%}<p style="text-align:center;margin:22px 0 0"><a class="btn btn--primary" href="{{ s.button_link }}">{{ s.button_label }}</a></p>{%- endif -%}
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+/* Sunsoari : images plein cadre, sans bande vide */
+.ss-card__media{position:relative;}
+.ss-card__media img,.ss-card__media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.ss-box__img img{object-fit:cover;}
+.ss-visual{position:relative;}
+.ss-visual picture{display:block;position:absolute;inset:0;}
+.ss-visual img,.ss-visual video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none;max-height:none;border-radius:inherit;}
+.ss-steps__media video{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit;}
+/* Contenu du coffret : grille equilibree, derniere ligne centree */
+.ss-story--boxes .ss-grid{display:flex;flex-wrap:wrap;justify-content:center;}
+.ss-story--boxes .ss-grid>.ss-box{flex:0 1 calc((100% - (var(--ss-cols-m,1) - 1) * 12px) / var(--ss-cols-m,1));}
+@media(min-width:750px){.ss-story--boxes .ss-grid>.ss-box{flex-basis:calc((100% - (var(--ss-cols,3) - 1) * 16px) / var(--ss-cols,3));}
+.ss-story--boxes .ss-grid:has(>.ss-box:nth-child(4):last-child){--ss-cols:2;}}
+</style>
+
+{% schema %}
+{
+  "name": "Sunsoari · Bloc éditorial",
+  "tag": "div",
+  "class": "section-ss-story",
+  "settings": [
+    { "type": "select", "id": "layout", "label": "Mise en page", "default": "cards", "options": [
+      { "value": "cards", "label": "Cartes (grille)" },
+      { "value": "scroll", "label": "Cartes (carrousel mobile)" },
+      { "value": "boxes", "label": "Contenu du coffret" },
+      { "value": "visuals", "label": "Grands visuels" },
+      { "value": "steps", "label": "Étapes d'utilisation" },
+      { "value": "faq", "label": "Questions fréquentes" },
+      { "value": "trust", "label": "Réassurance" }
+    ]},
+    { "type": "select", "id": "background", "label": "Fond", "default": "white", "options": [
+      { "value": "white", "label": "Blanc" },
+      { "value": "cream", "label": "Crème" },
+      { "value": "sand", "label": "Sable" },
+      { "value": "powder", "label": "Bleu brume" },
+      { "value": "indigo", "label": "Indigo" }
+    ]},
+    { "type": "select", "id": "align", "label": "Alignement du titre", "default": "center", "options": [
+      { "value": "center", "label": "Centré" }, { "value": "left", "label": "Gauche" }
+    ]},
+    { "type": "text", "id": "eyebrow", "label": "Sur-titre" },
+    { "type": "text", "id": "heading", "label": "Titre" },
+    { "type": "richtext", "id": "text", "label": "Texte" },
+    { "type": "image_picker", "id": "image", "label": "Image (mise en page Étapes)" },
+    { "type": "video", "id": "video", "label": "Vidéo (mise en page Étapes, remplace l'image)" },
+    { "type": "text", "id": "tip_title", "label": "Titre du conseil", "default": "Les conseils de l'équipe" },
+    { "type": "richtext", "id": "tip_text", "label": "Conseil" },
+    { "type": "range", "id": "columns", "label": "Colonnes (ordinateur)", "min": 1, "max": 5, "step": 1, "default": 3 },
+    { "type": "select", "id": "columns_mobile", "label": "Colonnes (mobile)", "default": "1", "options": [{ "value": "1", "label": "1" }, { "value": "2", "label": "2" }] },
+    { "type": "select", "id": "ratio", "label": "Format des images", "default": "1/1", "options": [
+      { "value": "1/1", "label": "Carré" }, { "value": "4/5", "label": "Portrait" }, { "value": "3/4", "label": "Portrait haut" }, { "value": "16/9", "label": "Paysage" }
+    ]},
+    { "type": "checkbox", "id": "open_first", "label": "FAQ : ouvrir la première question", "default": false },
+    { "type": "text", "id": "note", "label": "Note sous le bloc" },
+    { "type": "text", "id": "button_label", "label": "Bouton : texte" },
+    { "type": "url", "id": "button_link", "label": "Bouton : lien" },
+    { "type": "number", "id": "pad_top", "label": "Marge haute (px)" },
+    { "type": "number", "id": "pad_bottom", "label": "Marge basse (px)" }
+  ],
+  "blocks": [
+    { "type": "item", "name": "Élément", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Image" },
+      { "type": "image_picker", "id": "image_mobile", "label": "Image mobile (Grands visuels, optionnel)" },
+      { "type": "video", "id": "video", "label": "Vidéo (Grands visuels, remplace l'image)" },
+      { "type": "product", "id": "product", "label": "Produit (optionnel)" },
+      { "type": "checkbox", "id": "show_price", "label": "Afficher le prix du produit", "default": true },
+      { "type": "text", "id": "tag", "label": "Étiquette / quantité" },
+      { "type": "text", "id": "title", "label": "Titre" },
+      { "type": "richtext", "id": "text", "label": "Texte" },
+      { "type": "url", "id": "link", "label": "Lien" },
+      { "type": "text", "id": "link_label", "label": "Texte du lien" }
+    ]},
+    { "type": "step", "name": "Étape", "settings": [
+      { "type": "inline_richtext", "id": "text", "label": "Étape" }
+    ]}
+  ],
+  "presets": [{ "name": "Sunsoari · Bloc éditorial" }]
+}
+{% endschema %}

@@ -1,0 +1,569 @@
+{%- comment -%}
+  Sunsoari · Mes avantages
+  Espace fidélité : codes promo de la cliente (statut automatique : disponible, expire bientôt,
+  déjà utilisé, expiré), avantages, missions, palier de fidélité et rappel de recharge.
+{%- endcomment -%}
+
+{%- liquid
+  assign now_s = 'now' | date: '%s' | plus: 0
+  assign today = 'now' | date: '%Y-%m-%d'
+  assign soon_s = section.settings.soon_days | times: 86400
+
+  assign used_codes = ''
+  assign last_refill_s = 0
+  assign refill_prefixes = section.settings.refill_skus | upcase | split: ','
+  if customer
+    for order in customer.orders limit: 50
+      for app in order.discount_applications
+        if app.type == 'discount_code'
+          assign used_codes = used_codes | append: '|' | append: app.title | upcase | append: '|'
+        endif
+      endfor
+      for item in order.line_items
+        assign sku = item.sku | upcase
+        for p in refill_prefixes
+          assign p2 = p | strip
+          if p2 != blank and sku contains p2
+            assign o_s = order.created_at | date: '%s' | plus: 0
+            if o_s > last_refill_s
+              assign last_refill_s = o_s
+            endif
+          endif
+        endfor
+      endfor
+    endfor
+    assign spent = customer.total_spent | divided_by: 100
+    assign email = customer.email | downcase
+  endif
+-%}
+
+<style>
+  #ssa-{{ section.id }} {
+    --ssa-navy: #032B59; --ssa-cream: #FAF8F5; --ssa-sand: #E6DED1; --ssa-water: #C4D3E4;
+    --ssa-slate: #7591AA; --ssa-sun: #F2B544; --ssa-sun-soft: #FCEBC4; --ssa-white: #FFFFFF;
+    color: var(--ssa-navy); background: var(--ssa-cream);
+    padding-block: {{ section.settings.padding_top }}px {{ section.settings.padding_bottom }}px;
+  }
+  #ssa-{{ section.id }} .ssa-wrap { max-width: 1120px; margin: 0 auto; padding-inline: 16px; display: grid; gap: 56px; }
+  #ssa-{{ section.id }} .ssa-eyebrow { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; color: var(--ssa-slate); margin: 0; }
+  #ssa-{{ section.id }} h1, #ssa-{{ section.id }} h2, #ssa-{{ section.id }} h3 { color: var(--ssa-navy); margin: 0; text-wrap: balance; }
+  #ssa-{{ section.id }} .ssa-head { display: grid; gap: 10px; max-width: 640px; }
+  #ssa-{{ section.id }} .ssa-head p { margin: 0; }
+
+  /* Hero */
+  #ssa-{{ section.id }} .ssa-hero { display: grid; grid-template-columns: 1.1fr 1fr; border-radius: 28px; overflow: hidden; background: linear-gradient(135deg, var(--ssa-water), var(--ssa-sand) 75%); }
+  #ssa-{{ section.id }} .ssa-hero__text { padding: clamp(28px, 5vw, 56px); display: grid; align-content: center; gap: 16px; position: relative; }
+  #ssa-{{ section.id }} .ssa-hero__text p { margin: 0; max-width: 46ch; }
+  #ssa-{{ section.id }} .ssa-hero__img { min-height: 320px; position: relative; }
+  #ssa-{{ section.id }} .ssa-hero__img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  #ssa-{{ section.id }} .ssa-sun { position: absolute; top: -50px; right: -50px; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(circle, var(--ssa-sun) 0 36%, transparent 37%), repeating-conic-gradient(var(--ssa-sun) 0 6deg, transparent 6deg 18deg); opacity: .35; animation: ssa-spin 60s linear infinite; pointer-events: none; }
+  @keyframes ssa-spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { #ssa-{{ section.id }} .ssa-sun { animation: none; } }
+  #ssa-{{ section.id }} .ssa-stats { display: flex; flex-wrap: wrap; gap: 10px; }
+  #ssa-{{ section.id }} .ssa-stat { background: var(--ssa-white); border-radius: 14px; padding: 10px 14px; display: grid; gap: 2px; min-width: 120px; }
+  #ssa-{{ section.id }} .ssa-stat b { font-size: 22px; line-height: 1.1; }
+  #ssa-{{ section.id }} .ssa-stat span { font-size: 12px; color: var(--ssa-slate); }
+
+  /* Buttons */
+  #ssa-{{ section.id }} .ssa-btn { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 11px 20px; font-weight: 600; font-size: 14px; text-decoration: none; border: 1.5px solid var(--ssa-navy); background: var(--ssa-navy); color: var(--ssa-white); cursor: pointer; font-family: inherit; }
+  #ssa-{{ section.id }} .ssa-btn--ghost { background: transparent; color: var(--ssa-navy); }
+  #ssa-{{ section.id }} .ssa-btn--sun { background: var(--ssa-sun); border-color: var(--ssa-sun); color: var(--ssa-navy); }
+  #ssa-{{ section.id }} .ssa-btn:focus-visible { outline: 3px solid var(--ssa-sun); outline-offset: 2px; }
+  #ssa-{{ section.id }} .ssa-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+  /* Codes */
+  #ssa-{{ section.id }} .ssa-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  #ssa-{{ section.id }} .ssa-card { background: var(--ssa-white); border-radius: 22px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; box-shadow: 0 1px 2px rgba(3,43,89,.06), 0 8px 28px rgba(3,43,89,.07); }
+  #ssa-{{ section.id }} .ssa-card__img { aspect-ratio: 16 / 9; position: relative; background: var(--ssa-sand); }
+  #ssa-{{ section.id }} .ssa-card__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  #ssa-{{ section.id }} .ssa-card__body { padding: 20px; display: grid; gap: 12px; align-content: start; }
+  #ssa-{{ section.id }} .ssa-card__body p { margin: 0; }
+  #ssa-{{ section.id }} .ssa-card--used, #ssa-{{ section.id }} .ssa-card--expired { opacity: .62; }
+  #ssa-{{ section.id }} .ssa-card--used .ssa-card__img img, #ssa-{{ section.id }} .ssa-card--expired .ssa-card__img img { filter: grayscale(.8); }
+  #ssa-{{ section.id }} .ssa-pill { position: absolute; top: 12px; left: 12px; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 5px 12px; background: var(--ssa-white); color: var(--ssa-navy); }
+  #ssa-{{ section.id }} .ssa-pill--ok { background: var(--ssa-navy); color: var(--ssa-white); }
+  #ssa-{{ section.id }} .ssa-pill--soon { background: var(--ssa-sun); color: var(--ssa-navy); }
+  #ssa-{{ section.id }} .ssa-pill--used { background: var(--ssa-water); color: var(--ssa-navy); }
+  #ssa-{{ section.id }} .ssa-pill--expired { background: var(--ssa-sand); color: var(--ssa-slate); }
+  #ssa-{{ section.id }} .ssa-pill--mine { left: auto; right: 12px; background: var(--ssa-sun-soft); }
+  #ssa-{{ section.id }} .ssa-code { display: flex; align-items: center; justify-content: space-between; gap: 10px; border: 2px dashed var(--ssa-water); border-radius: 14px; padding: 10px 12px; background: var(--ssa-cream); }
+  #ssa-{{ section.id }} .ssa-code strong { font-size: 18px; letter-spacing: .08em; word-break: break-all; }
+  #ssa-{{ section.id }} .ssa-copy { font: inherit; font-size: 13px; font-weight: 600; border: none; background: var(--ssa-navy); color: var(--ssa-white); border-radius: 999px; padding: 7px 14px; cursor: pointer; white-space: nowrap; }
+  #ssa-{{ section.id }} .ssa-meta { font-size: 13px; color: var(--ssa-slate); display: grid; gap: 4px; }
+  #ssa-{{ section.id }} .ssa-empty { background: var(--ssa-white); border-radius: 22px; padding: 28px; text-align: center; display: grid; gap: 10px; justify-items: center; }
+
+  /* Levels */
+  #ssa-{{ section.id }} .ssa-levels { background: var(--ssa-navy); color: var(--ssa-cream); border-radius: 28px; padding: clamp(24px, 4vw, 44px); display: grid; gap: 22px; }
+  #ssa-{{ section.id }} .ssa-levels h2, #ssa-{{ section.id }} .ssa-levels h3 { color: var(--ssa-cream); }
+  #ssa-{{ section.id }} .ssa-levels .ssa-eyebrow { color: var(--ssa-water); }
+  #ssa-{{ section.id }} .ssa-track { display: grid; grid-template-columns: repeat({{ section.blocks | where: 'type', 'level' | size | at_least: 1 }}, 1fr); gap: 12px; }
+  #ssa-{{ section.id }} .ssa-level { border-radius: 18px; padding: 16px; background: rgba(255,255,255,.08); display: grid; gap: 6px; align-content: start; }
+  #ssa-{{ section.id }} .ssa-level--on { background: var(--ssa-cream); color: var(--ssa-navy); }
+  #ssa-{{ section.id }} .ssa-level--on h3 { color: var(--ssa-navy); }
+  #ssa-{{ section.id }} .ssa-level small { opacity: .8; }
+  #ssa-{{ section.id }} .ssa-bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,.15); overflow: hidden; }
+  #ssa-{{ section.id }} .ssa-bar span { display: block; height: 100%; background: var(--ssa-sun); border-radius: 999px; }
+
+  /* Refill + steps */
+  #ssa-{{ section.id }} .ssa-split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  #ssa-{{ section.id }} .ssa-panel { background: var(--ssa-white); border-radius: 22px; padding: 24px; display: grid; gap: 12px; align-content: start; }
+  #ssa-{{ section.id }} .ssa-panel p { margin: 0; }
+  #ssa-{{ section.id }} .ssa-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; counter-reset: s; }
+  #ssa-{{ section.id }} .ssa-steps li { counter-increment: s; display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; }
+  #ssa-{{ section.id }} .ssa-steps li::before { content: counter(s); width: 34px; height: 34px; border-radius: 50%; background: var(--ssa-sun-soft); display: grid; place-items: center; font-weight: 700; }
+  #ssa-{{ section.id }} .ssa-drop { height: 12px; border-radius: 999px; background: var(--ssa-sand); overflow: hidden; }
+  #ssa-{{ section.id }} .ssa-drop span { display: block; height: 100%; background: linear-gradient(90deg, var(--ssa-water), var(--ssa-slate)); }
+  #ssa-{{ section.id }} details.ssa-past summary { cursor: pointer; font-weight: 600; }
+
+
+  /* Missions */
+  #ssa-{{ section.id }} .ssa-missions { display: grid; gap: 22px; }
+  #ssa-{{ section.id }} .ssa-mgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; counter-reset: m; }
+  #ssa-{{ section.id }} .ssa-mission { counter-increment: m; background: var(--ssa-white); border-radius: 22px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; border: 1.5px solid var(--ssa-sand); }
+  #ssa-{{ section.id }} .ssa-mission__img { aspect-ratio: 4 / 3; position: relative; background: linear-gradient(135deg, var(--ssa-water), var(--ssa-sand)); }
+  #ssa-{{ section.id }} .ssa-mission__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  #ssa-{{ section.id }} .ssa-mission__img::after { content: counter(m); position: absolute; left: 14px; bottom: -20px; width: 42px; height: 42px; border-radius: 50%; background: var(--ssa-sun); color: var(--ssa-navy); font-weight: 700; font-size: 18px; display: grid; place-items: center; box-shadow: 0 0 0 4px var(--ssa-white); }
+  #ssa-{{ section.id }} .ssa-mission__body { padding: 30px 20px 20px; display: grid; gap: 10px; align-content: start; }
+  #ssa-{{ section.id }} .ssa-mission__body p { margin: 0; }
+  #ssa-{{ section.id }} .ssa-reward { display: flex; gap: 10px; align-items: center; background: var(--ssa-sun-soft); border-radius: 14px; padding: 10px 12px; font-weight: 600; }
+  #ssa-{{ section.id }} .ssa-reward::before { content: ""; flex: none; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle, var(--ssa-sun) 0 45%, transparent 47%), repeating-conic-gradient(var(--ssa-sun) 0 10deg, transparent 10deg 30deg); }
+  #ssa-{{ section.id }} .ssa-fine { font-size: 12px; color: var(--ssa-slate); }
+  #ssa-{{ section.id }} .ssa-label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--ssa-slate); margin: 4px 0 -4px; }
+  #ssa-{{ section.id }} .ssa-how ol, #ssa-{{ section.id }} .ssa-how ul, #ssa-{{ section.id }} .ssa-rules__body ul, #ssa-{{ section.id }} .ssa-rules__body ol { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+  #ssa-{{ section.id }} .ssa-note { background: var(--ssa-white); border-left: 4px solid var(--ssa-sun); border-radius: 12px; padding: 14px 16px; font-size: 14px; }
+  #ssa-{{ section.id }} .ssa-note p { margin: 0; }
+  #ssa-{{ section.id }} .ssa-rules { background: var(--ssa-white); border-radius: 16px; padding: 14px 18px; }
+  #ssa-{{ section.id }} .ssa-rules summary { cursor: pointer; font-weight: 600; }
+  #ssa-{{ section.id }} .ssa-rules__body { margin-top: 12px; font-size: 14px; display: grid; gap: 10px; }
+  #ssa-{{ section.id }} .ssa-rules__body p, #ssa-{{ section.id }} .ssa-rules__body h4 { margin: 0; }
+
+  @media (max-width: 760px) {
+    #ssa-{{ section.id }} .ssa-hero, #ssa-{{ section.id }} .ssa-split { grid-template-columns: 1fr; }
+    #ssa-{{ section.id }} .ssa-hero__img { min-height: 220px; }
+    #ssa-{{ section.id }} .ssa-track { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div id="ssa-{{ section.id }}">
+  <div class="ssa-wrap">
+
+    {%- comment -%} ---------- Hero ---------- {%- endcomment -%}
+    <div class="ssa-hero">
+      <div class="ssa-hero__text">
+        <div class="ssa-sun" aria-hidden="true"></div>
+        <p class="ssa-eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- if customer -%}
+          {%- assign fname = customer.first_name | default: '' -%}
+          <h1>{{ section.settings.heading_logged | replace: '[prénom]', fname | replace: 'Bonjour ,', 'Bonjour,' }}</h1>
+          <div>{{ section.settings.intro_logged }}</div>
+          <div class="ssa-stats">
+            <div class="ssa-stat"><b>{{ customer.orders_count }}</b><span>commande{% if customer.orders_count > 1 %}s{% endif %}</span></div>
+            <div class="ssa-stat"><b>{{ customer.total_spent | money_without_trailing_zeros }}</b><span>de rituels</span></div>
+            <div class="ssa-stat"><b id="ssa-count-{{ section.id }}">0</b><span>avantage(s) disponible(s)</span></div>
+          </div>
+          <div class="ssa-actions">
+            <a class="ssa-btn" href="{{ routes.account_url }}">Mes commandes</a>
+            <a class="ssa-btn ssa-btn--ghost" href="{{ section.settings.shop_link | default: routes.all_products_collection_url }}">{{ section.settings.shop_label }}</a>
+          </div>
+        {%- else -%}
+          <h1>{{ section.settings.heading_guest }}</h1>
+          <div>{{ section.settings.intro_guest }}</div>
+          <div class="ssa-actions">
+            <a class="ssa-btn" href="{{ routes.account_login_url }}">Me connecter</a>
+            <a class="ssa-btn ssa-btn--ghost" href="{{ routes.account_login_url }}">Créer mon compte</a>
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="ssa-hero__img">
+        {%- if section.settings.hero_image != blank -%}
+          {{ section.settings.hero_image | image_url: width: 1200 | image_tag: loading: 'eager', sizes: '(max-width: 760px) 100vw, 50vw', alt: section.settings.hero_image.alt }}
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- comment -%} ---------- Codes & avantages ---------- {%- endcomment -%}
+    <div style="display:grid;gap:22px">
+      <div class="ssa-head">
+        <p class="ssa-eyebrow">{{ section.settings.codes_eyebrow }}</p>
+        <h2>{{ section.settings.codes_heading }}</h2>
+        <div>{{ section.settings.codes_text }}</div>
+      </div>
+
+      {%- capture past_cards -%}{%- endcapture -%}
+      <div class="ssa-grid" data-ssa-grid>
+        {%- assign shown = 0 -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type != 'code' and block.type != 'perk' -%}{%- continue -%}{%- endif -%}
+
+          {%- liquid
+            assign visible = true
+            assign mine = false
+            if block.type == 'code' and block.settings.customers != blank or block.type == 'code' and block.settings.customer_tag != blank
+              assign visible = false
+              if customer
+                if block.settings.customers != blank
+                  assign list = block.settings.customers | downcase | replace: ' ', '' | replace: ';', ',' | split: ','
+                  if list contains email
+                    assign visible = true
+                    assign mine = true
+                  endif
+                endif
+                if block.settings.customer_tag != blank
+                  assign wanted_tag = block.settings.customer_tag | strip | downcase
+                  for t in customer.tags
+                    assign t2 = t | strip | downcase
+                    if t2 == wanted_tag
+                      assign visible = true
+                      assign mine = true
+                      break
+                    endif
+                  endfor
+                endif
+              endif
+            endif
+            if block.settings.members_only and customer == nil
+              assign visible = false
+            endif
+            unless visible
+              continue
+            endunless
+
+            assign status = 'ok'
+            assign status_label = 'Disponible'
+            if block.type == 'code'
+              assign code_key = '|' | append: block.settings.code | upcase | append: '|'
+              if block.settings.end_date != blank
+                assign end_s = block.settings.end_date | append: ' 23:59:59' | date: '%s' | plus: 0
+                assign left = end_s | minus: now_s
+                if left < 0
+                  assign status = 'expired'
+                  assign status_label = 'Expiré'
+                elsif left < soon_s
+                  assign status = 'soon'
+                  assign days = left | divided_by: 86400 | plus: 1
+                  assign status_label = 'Expire dans ' | append: days | append: ' j'
+                endif
+              endif
+              if status != 'expired' and block.settings.once and used_codes contains code_key
+                assign status = 'used'
+                assign status_label = 'Déjà utilisé'
+              endif
+              if status == 'ok' and block.settings.first_order and customer and customer.orders_count > 0
+                assign status = 'used'
+                assign status_label = 'Réservé à la 1re commande'
+              endif
+            else
+              assign status_label = block.settings.badge | default: 'Avantage'
+            endif
+          -%}
+
+          {%- capture card -%}
+            <article class="ssa-card ssa-card--{{ status }}" {{ block.shopify_attributes }} data-status="{{ status }}">
+              <div class="ssa-card__img">
+                {%- if block.settings.image != blank -%}
+                  {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', sizes: '(max-width: 760px) 100vw, 33vw', alt: block.settings.image.alt }}
+                {%- endif -%}
+                <span class="ssa-pill ssa-pill--{{ status }}">{{ status_label }}</span>
+                {%- if mine -%}<span class="ssa-pill ssa-pill--mine">Rien que pour toi</span>{%- endif -%}
+              </div>
+              <div class="ssa-card__body">
+                <h3>{{ block.settings.title }}</h3>
+                {%- if block.settings.text != blank -%}<div>{{ block.settings.text }}</div>{%- endif -%}
+                {%- if block.type == 'code' and block.settings.code != blank -%}
+                  <div class="ssa-code">
+                    <strong>{{ block.settings.code | upcase }}</strong>
+                    {%- if status == 'ok' or status == 'soon' -%}
+                      <button type="button" class="ssa-copy" data-copy="{{ block.settings.code | upcase | escape }}">Copier</button>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+                <div class="ssa-meta">
+                  {%- if block.settings.conditions != blank -%}<span>{{ block.settings.conditions }}</span>{%- endif -%}
+                  {%- if block.type == 'code' and block.settings.end_date != blank -%}<span>Valable jusqu'au {{ block.settings.end_date | date: '%d/%m/%Y' }}</span>{%- endif -%}
+                  {%- if block.type == 'code' and block.settings.once -%}<span>Utilisable une seule fois</span>{%- endif -%}
+                </div>
+                {%- if block.type == 'code' and status == 'ok' or block.type == 'code' and status == 'soon' -%}
+                  <div class="ssa-actions">
+                    <a class="ssa-btn ssa-btn--sun" href="/discount/{{ block.settings.code | upcase | url_encode }}?redirect={{ block.settings.link | default: routes.all_products_collection_url | url_encode }}">Activer et faire mon shopping</a>
+                  </div>
+                {%- elsif block.type == 'perk' and block.settings.link != blank -%}
+                  <div class="ssa-actions"><a class="ssa-btn ssa-btn--ghost" href="{{ block.settings.link }}">{{ block.settings.link_label | default: 'Découvrir' }}</a></div>
+                {%- endif -%}
+              </div>
+            </article>
+          {%- endcapture -%}
+
+          {%- if status == 'used' or status == 'expired' -%}
+            {%- capture past_cards -%}{{ past_cards }}{{ card }}{%- endcapture -%}
+          {%- else -%}
+            {{ card }}
+            {%- assign shown = shown | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      {%- if shown == 0 -%}
+        <div class="ssa-empty">
+          <h3>Pas d'avantage en cours pour le moment</h3>
+          <p>Inscris-toi à notre newsletter pour être la première informée de nos prochaines surprises.</p>
+        </div>
+      {%- endif -%}
+
+      {%- if past_cards != blank -%}
+        <details class="ssa-past">
+          <summary>Mes codes déjà utilisés ou expirés</summary>
+          <div class="ssa-grid" style="margin-top:16px">{{ past_cards }}</div>
+        </details>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} ---------- Missions : avis, réseaux, parrainage ---------- {%- endcomment -%}
+    {%- assign missions = section.blocks | where: 'type', 'mission' -%}
+    {%- if missions.size > 0 -%}
+      <div class="ssa-missions">
+        <div class="ssa-head">
+          <p class="ssa-eyebrow">{{ section.settings.missions_eyebrow }}</p>
+          <h2>{{ section.settings.missions_heading }}</h2>
+          <div>{{ section.settings.missions_text }}</div>
+        </div>
+        <div class="ssa-mgrid">
+          {%- for m in missions -%}
+            <article class="ssa-mission" {{ m.shopify_attributes }}>
+              <div class="ssa-mission__img">
+                {%- if m.settings.image != blank -%}
+                  {{ m.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', sizes: '(max-width: 760px) 100vw, 33vw', alt: m.settings.image.alt }}
+                {%- endif -%}
+              </div>
+              <div class="ssa-mission__body">
+                <h3>{{ m.settings.title }}</h3>
+                {%- if m.settings.text != blank -%}<p class="ssa-label">Comment faire</p><div class="ssa-how">{{ m.settings.text }}</div>{%- endif -%}
+                {%- if m.settings.reward != blank -%}<p class="ssa-label">Tu reçois</p><p class="ssa-reward">{{ m.settings.reward }}</p>{%- endif -%}
+                {%- if m.settings.when != blank -%}<p class="ssa-label">Quand</p><p>{{ m.settings.when }}</p>{%- endif -%}
+                {%- if m.settings.link != blank -%}
+                  <div class="ssa-actions"><a class="ssa-btn ssa-btn--ghost" href="{{ m.settings.link }}"{% if m.settings.link contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ m.settings.link_label | default: "C'est parti" }}</a></div>
+                {%- endif -%}
+                {%- if m.settings.fine != blank -%}<div class="ssa-fine"><strong>Bon à savoir :</strong> {{ m.settings.fine }}</div>{%- endif -%}
+              </div>
+            </article>
+          {%- endfor -%}
+        </div>
+        {%- if section.settings.missions_note != blank -%}<div class="ssa-note">{{ section.settings.missions_note }}</div>{%- endif -%}
+        {%- if section.settings.missions_rules != blank -%}
+          <details class="ssa-rules">
+            <summary>{{ section.settings.missions_rules_title }}</summary>
+            <div class="ssa-rules__body">{{ section.settings.missions_rules }}</div>
+          </details>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} ---------- Paliers ---------- {%- endcomment -%}
+    {%- assign levels = section.blocks | where: 'type', 'level' -%}
+    {%- if levels.size > 0 -%}
+      {%- liquid
+        assign current = levels.first
+        assign next = nil
+        assign spent_val = spent | default: 0
+        for l in levels
+          if spent_val >= l.settings.min_spent
+            assign current = l
+          endif
+        endfor
+        for l in levels
+          if l.settings.min_spent > spent_val
+            assign next = l
+            break
+          endif
+        endfor
+      -%}
+      <div class="ssa-levels">
+        <div class="ssa-head">
+          <p class="ssa-eyebrow">{{ section.settings.levels_eyebrow }}</p>
+          <h2>{{ section.settings.levels_heading }}</h2>
+          {%- if customer -%}
+            <p>Ton palier actuel : <strong>{{ current.settings.name }}</strong>.
+              {%- if next -%}
+                {%- assign gap = next.settings.min_spent | minus: spent_val -%}
+                Encore <strong>{{ gap }} €</strong> de rituels pour atteindre <strong>{{ next.settings.name }}</strong>.
+              {%- else -%}
+                Tu as atteint le plus haut palier, merci pour ta fidélité.
+              {%- endif -%}
+            </p>
+            {%- if next -%}
+              {%- assign pct = spent_val | times: 100 | divided_by: next.settings.min_spent | at_most: 100 -%}
+              <div class="ssa-bar" role="img" aria-label="Progression vers {{ next.settings.name }} : {{ pct }} %"><span style="width:{{ pct }}%"></span></div>
+            {%- endif -%}
+          {%- else -%}
+            <p>{{ section.settings.levels_guest }}</p>
+          {%- endif -%}
+        </div>
+        <div class="ssa-track">
+          {%- for l in levels -%}
+            <div class="ssa-level{% if customer and l.id == current.id %} ssa-level--on{% endif %}" {{ l.shopify_attributes }}>
+              <small>{% if l.settings.min_spent == 0 %}Dès ta première commande{% else %}Dès {{ l.settings.min_spent }} € de rituels{% endif %}</small>
+              <h3>{{ l.settings.name }}</h3>
+              <div>{{ l.settings.text }}</div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} ---------- Rappel recharge + mode d'emploi ---------- {%- endcomment -%}
+    <div class="ssa-split">
+      <div class="ssa-panel">
+        <p class="ssa-eyebrow">{{ section.settings.refill_eyebrow }}</p>
+        <h2>{{ section.settings.refill_heading }}</h2>
+        {%- if customer and last_refill_s > 0 -%}
+          {%- liquid
+            assign days_since = now_s | minus: last_refill_s | divided_by: 86400
+            assign cycle = section.settings.refill_days
+            assign pct_used = days_since | times: 100 | divided_by: cycle | at_most: 100
+          -%}
+          <p>Ta dernière commande de recharges date d'il y a <strong>{{ days_since }} jour{% if days_since > 1 %}s{% endif %}</strong>.</p>
+          <div class="ssa-drop" role="img" aria-label="Environ {{ pct_used }} % du cycle indicatif écoulé"><span style="width:{{ pct_used }}%"></span></div>
+          <p class="ssa-meta">
+            {%- if days_since >= cycle -%}C'est peut-être le moment de penser à tes prochaines recharges.{%- else -%}Il te reste environ {{ cycle | minus: days_since }} jours avant le prochain renouvellement indicatif.{%- endif -%}
+            {{ section.settings.refill_note }}
+          </p>
+        {%- else -%}
+          <div>{{ section.settings.refill_empty }}</div>
+        {%- endif -%}
+        <div class="ssa-actions"><a class="ssa-btn" href="{{ section.settings.refill_link | default: routes.all_products_collection_url }}">{{ section.settings.refill_label }}</a></div>
+      </div>
+      <div class="ssa-panel">
+        <p class="ssa-eyebrow">Mode d'emploi</p>
+        <h2>Utiliser un code en 3 gestes</h2>
+        <ol class="ssa-steps">
+          <li><span>Clique sur <strong>« Activer et faire mon shopping »</strong> : le code s'ajoute tout seul à ton panier.</span></li>
+          <li><span>Ou clique sur <strong>« Copier »</strong> et colle le code dans le champ « Code de réduction » au moment du paiement.</span></li>
+          <li><span>La remise s'affiche avant de payer. Un seul code par commande, et les codes ne se cumulent pas avec la livraison offerte, sauf mention contraire.</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root = document.getElementById('ssa-{{ section.id }}');
+    if (!root) return;
+    var count = root.querySelectorAll('[data-ssa-grid] [data-status="ok"], [data-ssa-grid] [data-status="soon"]').length;
+    var el = document.getElementById('ssa-count-{{ section.id }}');
+    if (el) el.textContent = count;
+    root.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-copy]');
+      if (!btn) return;
+      var code = btn.getAttribute('data-copy');
+      var done = function () { var t = btn.textContent; btn.textContent = 'Copié ✓'; setTimeout(function () { btn.textContent = t; }, 1800); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).then(done, function () { window.prompt('Copie ton code :', code); });
+      } else { window.prompt('Copie ton code :', code); }
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Sunsoari · Mes avantages",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "header", "content": "Bandeau" },
+    { "type": "image_picker", "id": "hero_image", "label": "Image" },
+    { "type": "text", "id": "eyebrow", "label": "Surtitre", "default": "Mon espace Sunsoari" },
+    { "type": "text", "id": "heading_logged", "label": "Titre (cliente connectée)", "info": "[prénom] est remplacé par le prénom de la cliente.", "default": "Bonjour [prénom], voici tes avantages" },
+    { "type": "richtext", "id": "intro_logged", "label": "Texte (cliente connectée)", "default": "<p>Tes codes, ton palier et tes rappels de recharge, réunis au même endroit. Tout se met à jour automatiquement.</p>" },
+    { "type": "text", "id": "heading_guest", "label": "Titre (visiteuse)", "default": "Tes avantages t'attendent" },
+    { "type": "richtext", "id": "intro_guest", "label": "Texte (visiteuse)", "default": "<p>Connecte-toi avec ton adresse email pour retrouver tes codes personnels, savoir lesquels sont encore valables et suivre ton palier.</p>" },
+    { "type": "text", "id": "shop_label", "label": "Bouton boutique", "default": "Composer mon rituel" },
+    { "type": "url", "id": "shop_link", "label": "Lien du bouton boutique" },
+    { "type": "header", "content": "Codes" },
+    { "type": "text", "id": "codes_eyebrow", "label": "Surtitre", "default": "Mes codes & avantages" },
+    { "type": "text", "id": "codes_heading", "label": "Titre", "default": "Ce qui t'attend en ce moment" },
+    { "type": "richtext", "id": "codes_text", "label": "Texte", "default": "<p>Les codes déjà utilisés ou expirés sont rangés plus bas. Le statut se met à jour tout seul.</p>" },
+    { "type": "range", "id": "soon_days", "label": "Prévenir « expire bientôt » (jours avant)", "min": 1, "max": 30, "step": 1, "default": 7 },
+    { "type": "header", "content": "Missions (avis, réseaux, parrainage)" },
+    { "type": "text", "id": "missions_eyebrow", "label": "Surtitre", "default": "Petits gestes, petites attentions" },
+    { "type": "text", "id": "missions_heading", "label": "Titre", "default": "Partage ton rituel, on te remercie" },
+    { "type": "richtext", "id": "missions_text", "label": "Texte", "default": "<p>Ton avis, ta story ou ta recommandation aident d'autres personnes à découvrir Sunsoari. Pour te dire merci, chaque geste est récompensé.</p>" },
+    { "type": "richtext", "id": "missions_note", "label": "Encadré récapitulatif" },
+    { "type": "text", "id": "missions_rules_title", "label": "Titre des règles complètes", "default": "Lire les règles complètes des missions" },
+    { "type": "richtext", "id": "missions_rules", "label": "Règles complètes" },
+    { "type": "header", "content": "Paliers" },
+    { "type": "text", "id": "levels_eyebrow", "label": "Surtitre", "default": "Ton chemin Sunsoari" },
+    { "type": "text", "id": "levels_heading", "label": "Titre", "default": "Tes paliers de rituel" },
+    { "type": "text", "id": "levels_guest", "label": "Texte (visiteuse)", "default": "Chaque commande fait avancer ton palier. Connecte-toi pour voir où tu en es." },
+    { "type": "header", "content": "Rappel de recharge" },
+    { "type": "text", "id": "refill_eyebrow", "label": "Surtitre", "default": "Mon rituel" },
+    { "type": "text", "id": "refill_heading", "label": "Titre", "default": "Où en sont mes recharges ?" },
+    { "type": "text", "id": "refill_skus", "label": "Débuts de SKU des recharges (séparés par des virgules)", "default": "ONSHA-FILTRE,ONSHA-CAPSULE,ONSHA-SEDIMENT,ONSHA-SET,ONSHA-STARTER,ONSHA-PREMIER,ONSHA-COFFRET,SHIFT-CAPS6,SHIFT-PUREWATER,SHIFT-COFFRET,SULLAB-SEDIMENT" },
+    { "type": "range", "id": "refill_days", "label": "Cycle indicatif (jours)", "min": 7, "max": 91, "step": 1, "default": 28 },
+    { "type": "text", "id": "refill_note", "label": "Précision", "default": "Selon les marques, un filtre thermal Home dure environ 3 à 4 semaines et une capsule Nomade 10 à 15 jours, selon ta fréquence de douche." },
+    { "type": "richtext", "id": "refill_empty", "label": "Texte sans commande de recharge", "default": "<p>Dès ta première commande de filtres ou de capsules, tu verras ici une estimation du moment où penser à tes recharges.</p>" },
+    { "type": "text", "id": "refill_label", "label": "Bouton", "default": "Voir les recharges" },
+    { "type": "url", "id": "refill_link", "label": "Lien du bouton" },
+    { "type": "header", "content": "Espacements" },
+    { "type": "range", "id": "padding_top", "label": "Marge haute", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 32 },
+    { "type": "range", "id": "padding_bottom", "label": "Marge basse", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 64 }
+  ],
+  "blocks": [
+    {
+      "type": "code",
+      "name": "Code promo",
+      "settings": [
+        { "type": "text", "id": "code", "label": "Code (exactement comme dans Shopify)" },
+        { "type": "text", "id": "title", "label": "Titre", "default": "-10 % sur ta commande" },
+        { "type": "richtext", "id": "text", "label": "Description" },
+        { "type": "text", "id": "conditions", "label": "Conditions", "info": "Ex. : Dès 15 € d'achat, première commande." },
+        { "type": "text", "id": "end_date", "label": "Date de fin (AAAA-MM-JJ)", "info": "Laisse vide si le code n'expire pas." },
+        { "type": "checkbox", "id": "once", "label": "Utilisable une seule fois par cliente", "default": true },
+        { "type": "checkbox", "id": "first_order", "label": "Réservé à la première commande", "default": false },
+        { "type": "textarea", "id": "customers", "label": "Réservé à ces clientes (emails séparés par des virgules)", "info": "Laisse vide pour l'afficher à toutes les clientes." },
+        { "type": "text", "id": "customer_tag", "label": "Ou réservé aux clientes ayant ce tag", "info": "Ex. : avis-ok. Le code s'affiche tout seul dès que tu ajoutes ce tag sur la fiche cliente." },
+        { "type": "checkbox", "id": "members_only", "label": "Visible seulement par les clientes connectées", "default": false },
+        { "type": "url", "id": "link", "label": "Page ouverte après activation" },
+        { "type": "image_picker", "id": "image", "label": "Image" }
+      ]
+    },
+    {
+      "type": "perk",
+      "name": "Avantage sans code",
+      "settings": [
+        { "type": "text", "id": "badge", "label": "Étiquette", "default": "Automatique" },
+        { "type": "text", "id": "title", "label": "Titre", "default": "Livraison offerte dès 80 €" },
+        { "type": "richtext", "id": "text", "label": "Description" },
+        { "type": "text", "id": "conditions", "label": "Conditions" },
+        { "type": "checkbox", "id": "members_only", "label": "Visible seulement par les clientes connectées", "default": false },
+        { "type": "url", "id": "link", "label": "Lien" },
+        { "type": "text", "id": "link_label", "label": "Texte du lien", "default": "Découvrir" },
+        { "type": "image_picker", "id": "image", "label": "Image" }
+      ]
+    },
+    {
+      "type": "level",
+      "name": "Palier de fidélité",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Nom", "default": "Rosée" },
+        { "type": "number", "id": "min_spent", "label": "À partir de (€ dépensés au total)", "default": 0 },
+        { "type": "richtext", "id": "text", "label": "Description" }
+      ]
+    },
+    {
+      "type": "mission",
+      "name": "Mission bonus",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Titre", "default": "Donne ton avis" },
+        { "type": "richtext", "id": "text", "label": "Comment faire (étapes)" },
+        { "type": "text", "id": "reward", "label": "Tu reçois", "default": "-5 % sur ta prochaine commande" },
+        { "type": "text", "id": "when", "label": "Quand" },
+        { "type": "url", "id": "link", "label": "Lien du bouton" },
+        { "type": "text", "id": "link_label", "label": "Texte du bouton" },
+        { "type": "textarea", "id": "fine", "label": "Bon à savoir (conditions)" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Sunsoari · Mes avantages" }]
+}
+{% endschema %}

@@ -1,0 +1,60 @@
+{%- comment -%}
+  Sunsoari · Accessoire compatible à cocher au-dessus du bouton "Ajouter au panier"
+  Params :
+    addon         : produit à proposer (all_products['handle'])
+    variant_title : (optionnel) variante imposée, ex. "Grand format"
+    title         : phrase d'accroche
+    note          : petite précision sous le nom
+    section_id    : id de la section main-product
+  Si la case est cochée, l'accessoire est ajouté au panier juste avant le produit principal.
+{%- endcomment -%}
+{%- if addon != blank and addon.available -%}
+  {%- assign ss_key = 'ssadd-' | append: section_id | append: '-' | append: addon.id -%}
+  {%- assign ss_v = addon.selected_or_first_available_variant -%}
+  {%- if variant_title != blank -%}
+    {%- for v in addon.variants -%}{%- if v.title == variant_title -%}{%- assign ss_v = v -%}{%- endif -%}{%- endfor -%}
+  {%- endif -%}
+  <div class="ss-addon-wrap" id="{{ ss_key }}" data-section="{{ section_id }}">
+    {%- if title != blank -%}<p class="ss-addon__title">{{ title }}</p>{%- endif -%}
+    <label class="ss-addon">
+      <input type="checkbox" data-ss-addon value="{{ ss_v.id }}" aria-label="Ajouter {{ addon.title | escape }}">
+      <span class="ss-addon__img">{%- assign ss_img = ss_v.featured_image | default: addon.featured_image -%}{%- if ss_img -%}{{ ss_img | image_url: width: 160 | image_tag: loading: 'lazy', alt: addon.title }}{%- endif -%}</span>
+      <span class="ss-addon__txt">
+        <strong>{{ addon.title | remove: 'Onsha - ' | remove: 'Onsha – ' | remove: 'Onsha · ' | remove: 'SHIFT - ' | remove: 'SHIFT · ' | remove: 'Shift – ' | remove: 'Sullab · ' }}</strong>
+        {%- if note != blank -%}<small>{{ note }}</small>{%- endif -%}
+        {%- if variant_title == blank and addon.has_only_default_variant == false -%}
+          <select data-ss-addon-variant aria-label="Choisir une option">
+            {%- for v in addon.variants -%}
+              <option value="{{ v.id }}" data-price="{{ v.price | money }}"{% if v.id == ss_v.id %} selected{% endif %}{% unless v.available %} disabled{% endunless %}>{{ v.title }}</option>
+            {%- endfor -%}
+          </select>
+        {%- endif -%}
+      </span>
+      <span class="ss-addon__price" data-ss-addon-price>+ {{ ss_v.price | money }}</span>
+    </label>
+  </div>
+  <script>
+  (function(){
+    var root=document.getElementById('{{ ss_key }}'); if(!root||root.dataset.ready) return; root.dataset.ready='1';
+    var cb=root.querySelector('[data-ss-addon]'), sel=root.querySelector('[data-ss-addon-variant]');
+    if(sel){sel.addEventListener('change',function(){cb.value=sel.value;var o=sel.selectedOptions[0];root.querySelector('[data-ss-addon-price]').textContent='+ '+o.dataset.price;cb.checked=true;});
+      sel.addEventListener('click',function(e){e.stopPropagation();});}
+    var fid='product-form-'+root.dataset.section;
+    window.__ssAddon=window.__ssAddon||{}; if(window.__ssAddon[fid]) return; window.__ssAddon[fid]=1;
+    document.addEventListener('submit',function(e){
+      var f=e.target; if(!f||f.id!==fid||f.dataset.ssAddonPass==='1') return;
+      var boxes=document.querySelectorAll('[data-section="'+root.dataset.section+'"] [data-ss-addon]:checked');
+      if(!boxes.length) return;
+      e.preventDefault(); e.stopImmediatePropagation();
+      var items=[].map.call(boxes,function(b){return {id:+b.value,quantity:1};});
+      fetch((window.Shopify&&Shopify.routes?Shopify.routes.root:'/')+'cart/add.js',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({items:items})})
+        .catch(function(){})
+        .finally(function(){
+          f.dataset.ssAddonPass='1';
+          if(f.requestSubmit){f.requestSubmit(e.submitter||undefined);}else{f.dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}));}
+          setTimeout(function(){delete f.dataset.ssAddonPass;boxes.forEach(function(b){b.checked=false;});},400);
+        });
+    },true);
+  })();
+  </script>
+{%- endif -%}

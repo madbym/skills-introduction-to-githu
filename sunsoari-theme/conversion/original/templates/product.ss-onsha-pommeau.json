@@ -1,0 +1,461 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">La base du rituel</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "ss_pills": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-pills\"><span>Jet fin et régulier</span><span>Design transparent</span><span>Installation sans outil</span></div>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Préoccupations</b>Eau calcaire, jet irrégulier, sensation de peau qui tire après la douche</div><div><b>Technologie</b>197 micro-trous de précision, filtration intégrée dans le manche</div><div><b>Durée d&#x27;utilisation</b>Durable : seules les recharges se remplacent</div></div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "ss_systems": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-systems', current: 'pommeau-de-douche-filtrant' %}"
+          }
+        },
+        "ss_addon_1": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-addon', addon: all_products['coque-de-diffusion'], variant_title: \"Grand format\", title: \"Passe au rituel thermal complet :\", note: \"La coque qui accueille les filtres thermaux vitaminés\", section_id: section.id %}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Caractéristiques et matériaux",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Polycarbonate (PC), polypropylène (PP), acier inoxydable, filtration intégrée. Matériaux annoncés conformes aux normes FDA par le fabricant. Compatible avec les flexibles de douche standard, la coque de diffusion Onsha Home et les filtres thermaux vitaminés.</p><p>Usage domestique uniquement. L'eau de la douche n'est pas destinée à la consommation. Ne pas forcer le vissage.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "ss_pills",
+        "price",
+        "description",
+        "ss_facts",
+        "variant_picker",
+        "ss_systems",
+        "ss_addon_1",
+        "buy_buttons",
+        "reassurance",
+        "acc_1",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_visuals": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Le jet des 197 micro-trous",
+            "text": "",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-8777658.png"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Le système thermal complet",
+            "text": "",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-7897741.png"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2"
+      ],
+      "settings": {
+        "layout": "visuals",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "",
+        "heading": "Le rituel en images",
+        "text": "",
+        "columns": 2,
+        "columns_mobile": "1",
+        "ratio": "4/5",
+        "open_first": false
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Dévisse</strong> ta pomme de douche actuelle."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Visse</strong> le pommeau Onsha sur ton flexible, à la main, sans forcer."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Fais couler l'eau</strong> quelques secondes et vérifie l'étanchéité : ton rituel peut commencer."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Comment l'utiliser",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": "<p>Pour le rituel thermal complet, fixe d'abord la coque de diffusion sur ton flexible, insère un filtre thermal vitaminé (Hinoki, Océan, Forêt de Pin ou Fleur de Prunier), puis visse le pommeau sur la coque. Deux minutes, pas plus.</p>",
+        "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-7837412.png"
+      }
+    },
+    "ss_cards": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "197 micro-trous de précision",
+            "text": "<p>Un jet fin, régulier et enveloppant.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-8724387.jpg"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Filtration intégrée",
+            "text": "<p>Retient les sédiments et particules visibles de l'eau.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-5452678.png"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Design transparent",
+            "text": "<p>Tu vois ta filtration travailler.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-8777658.png"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Compatible recharges thermales",
+            "text": "<p>Avec la coque de diffusion Home et les filtres vitaminés.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-pommeau-de-douche-filtrant-7897741.png"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "La technologie Onsha",
+        "heading": "Un pommeau pensé comme la base du rituel",
+        "text": "<p>Conçu en Corée pour un jet précis et un système qui évolue avec toi.</p>",
+        "columns": 4,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce que je peux l'installer moi-même ?",
+            "text": "<p>Oui. Il se visse à la main sur un flexible standard, en quelques secondes, sans outil ni plombier. Vérifie simplement l'étanchéité à la première utilisation.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Le pommeau filtre-t-il l'eau tout seul ?",
+            "text": "<p>Oui, sa filtration intégrée retient les sédiments et particules visibles. Pour l'expérience thermale (eau enrichie et senteurs coréennes), associe-le à la coque de diffusion et à un filtre thermal vitaminé Onsha.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Quelle senteur choisir pour commencer ?",
+            "text": "<p>Hinoki si tu cherches le calme, Océan ou Forêt de Pin pour l'énergie du matin, Fleur de Prunier pour la douceur du soir. Si tu hésites, le coffret Home te permet de toutes les découvrir.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "À quelle fréquence remplacer les recharges ?",
+            "text": "<p>Le pommeau ne se remplace pas : installé une fois, il est là pour durer. Le filtre thermal vitaminé se change environ toutes les 3 à 4 semaines, selon ta fréquence de douche.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b5": {
+          "type": "item",
+          "settings": {
+            "title": "Quels sont les délais de livraison ?",
+            "text": "<p>Ta commande est préparée avec soin et expédiée en livraison suivie partout en France métropolitaine. Les délais et frais exacts s'affichent au moment du paiement.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b6": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je retourner le produit ?",
+            "text": "<p>Oui, tu disposes de 14 jours pour changer d'avis. Pour des raisons d'hygiène, le produit doit nous revenir non ouvert, non utilisé, complet et dans son emballage d'origine. Tous les détails sont dans notre politique de retours.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    },
+    "ss_related": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>Le cœur du rituel thermal, senteur au choix.</p>",
+            "tag": "",
+            "link_label": "Découvrir",
+            "show_price": true,
+            "product": "filtre-vitamine-showerfilter-sunsoari"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>La pièce qui accueille ta recharge.</p>",
+            "tag": "",
+            "link_label": "Découvrir",
+            "show_price": true,
+            "product": "coque-de-diffusion"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>Le rituel complet dès le premier jour.</p>",
+            "tag": "",
+            "link_label": "Découvrir",
+            "show_price": true,
+            "product": "coffret-home-onsha-sullab-sunsoari"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Complète ton rituel",
+        "heading": "Découvre aussi",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_visuals",
+    "ss_steps",
+    "ss_cards",
+    "ss_faq",
+    "ss_related"
+  ]
+}

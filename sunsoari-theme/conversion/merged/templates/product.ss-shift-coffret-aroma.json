@@ -1,0 +1,348 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">Le système SHIFT complet</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Contenu</b>Pommeau de douche, flexible silicone 2 m, 3 filtres à sédiments Pure Water, 6 capsules soin</div><div><b>Autonomie</b>Environ 3 mois de capsules, 6 à 9 mois de filtres</div><div><b>Couleur</b>Choisis la couleur de ton pommeau de douche</div></div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Installation",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>1. Raccorde le flexible sur ton robinet. 2. Visse le pommeau de douche à l'autre bout. 3. Insère un filtre à sédiments Pure Water. 4. Glisse une capsule dans le second compartiment. 5. Ouvre l'eau. Environ 2 minutes, sans outil.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "acc_2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Actifs et INCI",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Chaque capsule associe une senteur (huiles essentielles) à des actifs hydratants : glycérine et acide hyaluronique. La liste INCI complète et les allergènes par senteur figurent sur l'emballage.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "acc_3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Précautions",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Usage externe et domestique uniquement. En cas de sensibilité connue aux parfums ou aux huiles essentielles, consulte la liste INCI avant utilisation. Ne force pas le vissage.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        },
+        "ss_complements": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-complements', items: \"pack-6-capsules-vitaminees-shift-sunsoari||6 capsules soin et aromathérapie;pack-3-sediments-pure-water||3 filtres à sédiments Pure Water\", title: \"Pour la suite de ton rituel\", note: \"Les recharges SHIFT sont vendues séparément.\" %}"
+          }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "ss_rating",
+        "price",
+        "description",
+        "variant_picker",
+        "buy_buttons",
+        "ss_complements",
+        "ss_facts",
+        "reassurance",
+        "acc_1",
+        "acc_2",
+        "acc_3",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_box": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Pommeau de douche filtrant",
+            "text": "<p>La base réutilisable, 4 coloris</p>",
+            "tag": "x1",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/shift-coffret-douche-aromatherapie-3669659.png"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Flexible silicone 2 m",
+            "text": "<p>Se raccorde sans outil</p>",
+            "tag": "x1",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/shift-coffret-douche-aromatherapie-1689826.png"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Filtres à sédiments Pure Water",
+            "text": "<p>6 à 9 mois de filtration</p>",
+            "tag": "x3",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/shift-coffret-douche-aromatherapie-8616169.png"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Capsules soin & aromathérapie",
+            "text": "<p>2 Tea Tree &amp; Lavender, 2 Basil &amp; Grass, 2 Ginger &amp; Bergamote</p>",
+            "tag": "x6",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/shift-coffret-douche-aromatherapie-2557752.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "boxes",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Dans ton coffret",
+        "heading": "Les 4 éléments de ton coffret",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "note": ""
+      }
+    },
+    "ss_cards": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Tea Tree & Lavender",
+            "text": "<p>Pour les douches du soir et la détente.</p>",
+            "tag": "Apaisant",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/shift-capsule-tea-tree-lavender.png"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Basil & Grass",
+            "text": "<p>Pour bien commencer la journée.</p>",
+            "tag": "Herbacé",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/shift-capsule-basil-grass.png"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Ginger & Bergamote",
+            "text": "<p>Pour les douches qui réveillent.</p>",
+            "tag": "Solaire",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/shift-capsule-ginger-bergamote.png"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Les 3 senteurs du coffret",
+        "heading": "Apaiser, réveiller, réchauffer",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce compatible avec ma douche ?",
+            "text": "<p>Le flexible se raccorde sur les robinets de douche standards, à la main, sans outil.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "La senteur convient-elle aux peaux sensibles ?",
+            "text": "<p>Le produit s'utilise diffusé dans l'eau de la douche, en usage externe. Si tu as une sensibilité connue aux parfums ou aux huiles essentielles, consulte la liste INCI sur l'emballage avant utilisation et demande conseil à un professionnel de santé en cas de doute.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_box",
+    "ss_cards",
+    "ss_reviews",
+    "ss_faq"
+  ]
+}

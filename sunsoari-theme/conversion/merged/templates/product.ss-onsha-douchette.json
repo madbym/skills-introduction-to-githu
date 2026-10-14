@@ -1,0 +1,382 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">Format nomade</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Pour qui</b>Celles qui veulent garder leur rituel de douche, à la maison comme en déplacement</div><div><b>Technologie</b>Filtre intégré au corps de la douchette, bouchon anti-écoulement</div><div><b>Durée d&#x27;utilisation</b>Durable : seul le filtre sédiment se remplace</div></div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Caractéristiques et matériaux",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>ABS, polycarbonate (PC), polypropylène (PP), acier inoxydable. Matériaux annoncés conformes aux normes FDA par le fabricant. Compatible avec les flexibles de douche standard. Bouchon anti-écoulement intégré.</p><p>Usage domestique uniquement. L'eau de la douche n'est pas destinée à la consommation. Ne pas forcer le vissage.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        },
+        "ss_complements": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-complements', items: \"coque-de-diffusion-nomade||Accueille la capsule thermale;capsule-vitaminee-shower-filter-sunsoari||4 senteurs thermales au choix;product-onsha-coque-douchette-filtrante||Housse en silicone, 6 coloris;filtre-sediment-recharge||Boîte de 3 recharges, une toutes les 4 à 6 semaines\", title: \"La douchette est vendue seule\", note: \"Elle s'utilise telle quelle, filtre sédiment inclus. Pour le rituel thermal Nomade, ajoute :\" %}"
+          }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "ss_rating",
+        "price",
+        "description",
+        "variant_picker",
+        "buy_buttons",
+        "ss_complements",
+        "ss_facts",
+        "reassurance",
+        "acc_1",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_visuals": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "La douchette en action",
+            "text": "",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/Copie_de_GIF_03_eab09fbf-6d87-4ce0-a395-0b420c2521ca.gif"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Prête à voyager",
+            "text": "",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-douchette-filtrante-2456043.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2"
+      ],
+      "settings": {
+        "layout": "visuals",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "",
+        "heading": "Le rituel en images",
+        "text": "",
+        "columns": 2,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Dévisse</strong> ton pommeau de douche ou ta douchette actuels du flexible."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Visse</strong> la douchette Onsha sur le flexible, à la main, sans forcer."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Option rituel Nomade :</strong> visse la coque de diffusion sous la douchette, puis le flexible sur la coque."
+          }
+        },
+        "b4": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Fais couler l'eau</strong> quelques secondes : ton rituel peut commencer."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Comment l'utiliser",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "16/9",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": "<p>Le bouchon te permet de refermer la douchette après usage pour la ranger plus facilement dans ta trousse. Pour un rituel sensoriel en déplacement, découvre le coffret Nomade et ses capsules thermales.</p>",
+        "image": "shopify://shop_images/onsha-nomade-installation-coque-sur-douchette.gif"
+      }
+    },
+    "ss_cards": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Filtre intégré au corps",
+            "text": "<p>Un seul objet, léger et prêt à te suivre.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-douchette-filtrante-5144667.png"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Bouchon anti-écoulement",
+            "text": "<p>Referme la douchette après usage et range-la sans souci.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/Copie_de_IMG_2098_0f0e7153-0b2f-4dc2-9d3e-450988aa1d1b.gif"
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Format compact",
+            "text": "<p>Se glisse dans une valise ou une trousse.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-douchette-filtrante-1474368.png"
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Compatible rituel Nomade",
+            "text": "<p>Avec la coque Nomade et les capsules thermales.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-nomade-installation-capsule-dans-coque.gif"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "La technologie Onsha",
+        "heading": "Tout est intégré, rien ne t'encombre",
+        "text": "",
+        "columns": 4,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Quelle différence avec le pommeau de douche Onsha ?",
+            "text": "<p>Ce sont deux formats différents, avec deux modes de filtration. La douchette intègre directement un filtre à sédiments dans son corps : un seul objet, compact, idéal en déplacement ou pour un rituel simple à la maison. Le pommeau de douche reste installé chez toi, avec la coque de diffusion Home, et utilise un autre mode de filtration à base de billes de céramique, selon la marque. Les deux se complètent selon ton usage.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce que je peux l'installer moi-même ?",
+            "text": "<p>Oui. Elle se visse à la main sur tout flexible standard, en quelques secondes, sans outil.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Le filtre est-il inclus ?",
+            "text": "<p>Oui, la douchette est livrée prête à l'emploi avec son filtre sédiment. Les recharges sont disponibles sur Sunsoari.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Quand remplacer le filtre sédiment ?",
+            "text": "<p>Trois signes : le débit diminue, le filtre change de couleur, ou l'eau te semble moins agréable. En moyenne toutes les 4 à 6 semaines selon ton eau et ta fréquence de douche.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_visuals",
+    "ss_steps",
+    "ss_cards",
+    "ss_reviews",
+    "ss_faq"
+  ]
+}

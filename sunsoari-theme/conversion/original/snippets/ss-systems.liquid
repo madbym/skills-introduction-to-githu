@@ -1,0 +1,20 @@
+{%- comment -%}
+  Sunsoari · Nos différents systèmes de douche Onsha (tuiles image + lien)
+  Param : current (handle du produit affiché)
+{%- endcomment -%}
+{%- assign ss_sys = 'pommeau-de-douche-filtrant|Pommeau filtrant,douchette-filtrante|Douchette filtrante,product-onsha-coque-douchette-filtrante|Housse douchette,coque-de-diffusion|Coque de diffusion' | split: ',' -%}
+<div class="ss-systems">
+  <p class="ss-systems__title">Nos différents systèmes de douche</p>
+  <div class="ss-systems__list">
+    {%- for item in ss_sys -%}
+      {%- assign parts = item | split: '|' -%}
+      {%- assign p = all_products[parts[0]] -%}
+      {%- if p != blank -%}
+        <a class="ss-system" href="{{ p.url }}"{% if parts[0] == current %} aria-current="true"{% endif %}>
+          {%- if p.featured_image -%}{{ p.featured_image | image_url: width: 200 | image_tag: loading: 'lazy', alt: parts[1] }}{%- endif -%}
+          <span>{{ parts[1] }}</span>
+        </a>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>

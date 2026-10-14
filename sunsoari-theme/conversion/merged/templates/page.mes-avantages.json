@@ -1,0 +1,258 @@
+{
+  "sections": {
+    "avantages": {
+      "type": "ss-mes-avantages",
+      "blocks": {
+        "c1": {
+          "type": "code",
+          "settings": {
+            "code": "BIENVENUE10",
+            "title": "-10 % sur ta première commande",
+            "text": "<p>Pour découvrir le rituel Sunsoari en douceur.</p>",
+            "conditions": "Dès 15 € d'achat, pour une première commande.",
+            "end_date": "",
+            "once": true,
+            "first_order": true,
+            "customers": "",
+            "members_only": false,
+            "link": "/pages/composez-votre-rituel",
+            "image": "shopify://shop_images/onsha-capsules-nomade-quatre-senteurs.jpg"
+          }
+        },
+        "c2": {
+          "type": "code",
+          "settings": {
+            "code": "ALEXANDRA5",
+            "title": "5 € offerts, rien que pour toi",
+            "text": "<p>Un petit geste de notre part, avec toute notre gratitude.</p>",
+            "conditions": "Sur toute ta commande.",
+            "end_date": "2027-01-13",
+            "once": true,
+            "first_order": false,
+            "customers": "alexandra.tranvanloc@gmail.com, libilulle@yahoo.fr",
+            "members_only": true,
+            "link": "",
+            "image": "shopify://shop_images/onsha-housse-personnalisable-pour-douchette-2337251.jpg"
+          }
+        },
+        "p1": {
+          "type": "perk",
+          "settings": {
+            "badge": "Automatique",
+            "title": "Livraison offerte dès 80 €",
+            "text": "<p>En point relais Mondial Relay, Chronopost ou à domicile, en France métropolitaine.</p>",
+            "conditions": "Hors remises et codes promo. Dès 100 € après remise dans tous les cas.",
+            "members_only": false,
+            "link": "/pages/livraison-expedition",
+            "link_label": "Voir les tarifs de livraison",
+            "image": "shopify://shop_images/onsha-coffret-nomade-ambiance-pierre.jpg"
+          }
+        },
+        "p2": {
+          "type": "perk",
+          "settings": {
+            "badge": "Jusqu'à -15 %",
+            "title": "Compose ton rituel",
+            "text": "<p>-5 % dès 3 produits, -10 % dès 5, -15 % dès 7. La remise s'applique toute seule au panier.</p>",
+            "conditions": "Sur les produits à l'unité de la page Compose ton rituel.",
+            "members_only": false,
+            "link": "/pages/composez-votre-rituel",
+            "link_label": "Composer mon rituel",
+            "image": "shopify://shop_images/ingredient-eau-thermale.jpg"
+          }
+        },
+        "p3": {
+          "type": "perk",
+          "settings": {
+            "badge": "Automatique",
+            "title": "Plus de recharges, plus doux",
+            "text": "<p>Filtres thermaux : -5 % dès 2, -10 % dès 4. Capsules : -5 % dès 2, -10 % dès 4, -15 % dès 6.</p>",
+            "conditions": "Remise appliquée automatiquement au panier.",
+            "members_only": false,
+            "link": "/products/filtre-vitamine-showerfilter-sunsoari",
+            "link_label": "Voir les filtres",
+            "image": "shopify://shop_images/onsha-filtre-thermal-vitamine-home-3992705.png"
+          }
+        },
+        "l1": {
+          "type": "level",
+          "settings": {
+            "name": "Rosée",
+            "min_spent": 0,
+            "text": "<p>Tu découvres le rituel Sunsoari. Bienvenue dans la maison.</p>"
+          }
+        },
+        "l2": {
+          "type": "level",
+          "settings": {
+            "name": "Source",
+            "min_spent": 100,
+            "text": "<p>Ton rituel devient une habitude douce, douche après douche.</p>"
+          }
+        },
+        "l3": {
+          "type": "level",
+          "settings": {
+            "name": "Soleil",
+            "min_spent": 250,
+            "text": "<p>Tu fais partie des fidèles de la maison Sunsoari. Merci de briller avec nous.</p>"
+          }
+        },
+        "m1": {
+          "type": "mission",
+          "settings": {
+            "image": "shopify://shop_images/shift-coffret-soin-douche-coreenne-5893737.jpg",
+            "title": "Donne-nous ton avis",
+            "text": "<ol><li>Attends d'avoir reçu ta commande et testé tes produits quelques jours.</li><li>Va sur la page Contact, choisis l'objet <strong>« Mission avis »</strong>, indique ton numéro de commande et écris ton avis. Une photo est la bienvenue par email, mais pas obligatoire.</li></ol>",
+            "reward": "-5 % sur ta prochaine commande",
+            "link": "/pages/contact",
+            "link_label": "Envoyer mon avis",
+            "fine": "Ton avis peut être positif ou négatif : tu reçois ton code dans tous les cas, tant qu'il est sincère et concerne un produit acheté chez nous. 1 avis récompensé par commande.",
+            "when": "Ton code t'est envoyé par email sous 7 jours après réception de ton avis."
+          }
+        },
+        "m2": {
+          "type": "mission",
+          "settings": {
+            "image": "shopify://shop_images/shift-pommeaux-etageres-coloris.jpg",
+            "title": "Partage ton rituel en post ou en story",
+            "text": "<ol><li>Publie un post ou une story avec ton produit Sunsoari et ton avis en quelques mots, depuis un compte public.</li><li>Identifie <strong>@sunsoari</strong> et ajoute la mention <strong>« Publicité »</strong> ou <strong>« Collaboration commerciale »</strong>.</li><li>Envoie la capture d'écran par email à <a href=\"mailto:contact.sunsoari@gmail.com?subject=Mission%20post\">contact.sunsoari@gmail.com</a> avec l'objet <strong>« Mission post »</strong>, depuis l'adresse email de ton compte client.</li></ol>",
+            "reward": "-5 % sur ta prochaine commande",
+            "link": "https://www.instagram.com/sunsoari",
+            "link_label": "Suivre @sunsoari",
+            "fine": "Pas besoin de montrer ton visage : tes mains ou ton produit suffisent. La mention « Publicité » est obligatoire car tu reçois une réduction en échange (loi française sur l'influence). 1 publication récompensée par commande.",
+            "when": "Ton code t'est envoyé par email sous 7 jours après réception de ta capture."
+          }
+        },
+        "m3": {
+          "type": "mission",
+          "settings": {
+            "image": "shopify://shop_images/ingredient-vitamine-c-orange-bulles-eau.jpg",
+            "title": "Parraine une amie",
+            "text": "<ol><li>Va sur la page Contact, choisis l'objet <strong>« Mission parrainage »</strong> et indique le prénom et l'email de la personne que tu parraines.</li><li>Elle passe sa première commande chez Sunsoari (elle peut utiliser le code de bienvenue BIENVENUE10).</li></ol>",
+            "reward": "5 € de réduction sur ta prochaine commande",
+            "link": "/pages/contact",
+            "link_label": "Parrainer une amie",
+            "fine": "La personne parrainée ne doit jamais avoir commandé chez Sunsoari et doit être différente de toi (autre nom, autre email). 1 code de 5 € par amie parrainée, jusqu'à 3 amies.",
+            "when": "Ton code t'est envoyé par email 14 jours après la livraison de sa commande (fin du délai de rétractation)."
+          }
+        },
+        "c3": {
+          "type": "code",
+          "settings": {
+            "code": "AVIS5",
+            "title": "-5 % pour te remercier de ton avis",
+            "text": "<p>Merci d'avoir pris le temps de nous partager ton ressenti.</p>",
+            "conditions": "Utilisable une seule fois. Non cumulable avec un autre code ni avec la livraison offerte.",
+            "end_date": "",
+            "once": true,
+            "first_order": false,
+            "customers": "",
+            "customer_tag": "avis-ok",
+            "members_only": true,
+            "link": "/pages/composez-votre-rituel",
+            "image": "shopify://shop_images/shift-coffret-soin-douche-coreenne-5893737.jpg"
+          }
+        },
+        "c4": {
+          "type": "code",
+          "settings": {
+            "code": "POST5",
+            "title": "-5 % pour te remercier de ton partage",
+            "text": "<p>Merci d'avoir partagé ton rituel Sunsoari sur les réseaux.</p>",
+            "conditions": "Utilisable une seule fois. Non cumulable avec un autre code ni avec la livraison offerte.",
+            "end_date": "",
+            "once": true,
+            "first_order": false,
+            "customers": "",
+            "customer_tag": "post-ok",
+            "members_only": true,
+            "link": "/pages/composez-votre-rituel",
+            "image": "shopify://shop_images/shift-pommeaux-etageres-coloris.jpg"
+          }
+        },
+        "c5": {
+          "type": "code",
+          "settings": {
+            "code": "PARRAIN5",
+            "title": "5 € pour te remercier de ton parrainage",
+            "text": "<p>Ton amie a rejoint la maison Sunsoari, merci de nous avoir recommandées.</p>",
+            "conditions": "Utilisable une seule fois. Non cumulable avec un autre code ni avec la livraison offerte.",
+            "end_date": "",
+            "once": true,
+            "first_order": false,
+            "customers": "",
+            "customer_tag": "parrain-ok",
+            "members_only": true,
+            "link": "/pages/composez-votre-rituel",
+            "image": "shopify://shop_images/ingredient-vitamine-c-orange-bulles-eau.jpg"
+          }
+        },
+        "c6": {
+          "type": "code",
+          "settings": {
+            "code": "PARRAIN5-2",
+            "title": "5 € pour ton 2e parrainage",
+            "text": "<p>Encore une amie qui rejoint la maison Sunsoari grâce à toi. Merci !</p>",
+            "conditions": "Utilisable une seule fois. Non cumulable avec un autre code ni avec la livraison offerte.",
+            "end_date": "",
+            "once": true,
+            "first_order": false,
+            "customers": "",
+            "customer_tag": "parrain-ok-2",
+            "members_only": true,
+            "link": "/pages/composez-votre-rituel",
+            "image": "shopify://shop_images/ingredient-vitamine-c-orange-bulles-eau.jpg"
+          }
+        },
+        "c7": {
+          "type": "code",
+          "settings": {
+            "code": "PARRAIN5-3",
+            "title": "5 € pour ton 3e parrainage",
+            "text": "<p>Encore une amie qui rejoint la maison Sunsoari grâce à toi. Merci !</p>",
+            "conditions": "Utilisable une seule fois. Non cumulable avec un autre code ni avec la livraison offerte.",
+            "end_date": "",
+            "once": true,
+            "first_order": false,
+            "customers": "",
+            "customer_tag": "parrain-ok-3",
+            "members_only": true,
+            "link": "/pages/composez-votre-rituel",
+            "image": "shopify://shop_images/ingredient-vitamine-c-orange-bulles-eau.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "c2",
+        "c1",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "p1",
+        "p2",
+        "p3",
+        "m1",
+        "m2",
+        "m3",
+        "l1",
+        "l2",
+        "l3"
+      ],
+      "settings": {
+        "hero_image": "shopify://shop_images/ambiance-eau-thermale-bain.jpg",
+        "shop_link": "/pages/composez-votre-rituel",
+        "refill_link": "/pages/composez-votre-rituel",
+        "refill_label": "Recommander mes recharges",
+        "missions_note": "<p><strong>En résumé :</strong> chaque récompense est un code personnel, utilisable <strong>une seule fois</strong>. <strong>Les codes ne sont pas cumulables</strong> : un seul code par commande, et pas de cumul avec la livraison offerte. Ton code apparaît dans ton espace, dans « Mes codes », dès que ta mission est validée.</p>",
+        "missions_rules_title": "Lire les règles complètes des missions",
+        "missions_rules": "<p><strong>1. Qui peut participer ?</strong> Toute personne majeure ayant un compte client Sunsoari et au moins une commande livrée.</p><p><strong>2. Les codes</strong> sont personnels : ils ne peuvent être ni échangés, ni revendus, ni transformés en argent.</p><p><strong>3. Pas de cumul :</strong> un seul code par commande. Les codes ne se cumulent ni entre eux, ni avec la livraison offerte. Si tu as plusieurs codes, tu les utilises sur des commandes différentes.</p><p><strong>4. Validation :</strong> chaque mission est vérifiée par notre équipe avant l'activation du code, en général sous 7 jours.</p><p><strong>5. Retours et remboursements :</strong> si la commande concernée est retournée ou remboursée, la récompense liée n'est pas attribuée, ou est annulée si elle n'a pas encore été utilisée.</p><p><strong>6. Abus :</strong> faux avis, comptes multiples, auto-parrainage ou publication supprimée juste après l'envoi de la capture : dans ces cas, Sunsoari peut refuser ou annuler la récompense.</p><p><strong>7. Évolution :</strong> ces missions peuvent changer ou s'arrêter. Les codes déjà reçus restent valables pendant au moins 3 mois après l'annonce du changement.</p><p>Une question ? Écris-nous depuis la page <a href=\"/pages/contact\">Contact</a>.</p>"
+      }
+    }
+  },
+  "order": [
+    "avantages"
+  ]
+}

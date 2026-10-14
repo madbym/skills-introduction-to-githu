@@ -1,0 +1,225 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_Gxg9wp": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "collection_info_zUNyKV": {
+          "type": "collection_info",
+          "settings": {
+            "heading_size": "h1",
+            "heading_tag": "h1",
+            "show_description": true,
+            "padding_top": 56,
+            "padding_bottom": 56
+          }
+        }
+      },
+      "block_order": [
+        "collection_info_zUNyKV"
+      ],
+      "custom_css": [
+        ".collection-hero__description {max-width: 40rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-6",
+        "text_alignment": "left",
+        "show_collection_image": true,
+        "image_overlay_opacity": 0,
+        "image_position": "right",
+        "image_height": "extra-small",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "image_height_mobile": "auto",
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
+    "collection_list_slider_6qbNfj": {
+      "type": "collection-list-slider",
+      "blocks": {
+        "featured_collection_gxdACj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "onsha",
+            "image": "shopify://shop_images/Copie_de_Hot_Spring_Filter___Shower_Head.jpg",
+            "title": "Onsha"
+          }
+        },
+        "featured_collection_4H9LzM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "kit-de-douche",
+            "image": "shopify://shop_images/Copie_de_Hot_spring_Filter_Mini_set_01.jpg",
+            "title": "Kit & coffrets"
+          }
+        },
+        "featured_collection_jMA9xm": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "capsule-vitamine",
+            "image": "shopify://shop_images/Capsule_dans_une_coque__06.jpg",
+            "title": "Capsules vitaminées"
+          }
+        },
+        "featured_collection_J6hxH9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "recharge-filtre",
+            "image": "shopify://shop_images/CopiedeTravelShowerheadFilter_01.jpg",
+            "title": "Recharge filtrantes"
+          }
+        },
+        "featured_collection_HwzPfD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "douchette",
+            "image": "shopify://shop_images/CopiedeTravelShowerHead_04_1cd10c9c-5673-4eda-a684-ff622496ab44.jpg",
+            "title": "Pommeaux filtrantes"
+          }
+        },
+        "featured_collection_nzTqcR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "accessoires",
+            "title": "Accessoires"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_gxdACj",
+        "featured_collection_4H9LzM",
+        "featured_collection_jMA9xm",
+        "featured_collection_J6hxH9",
+        "featured_collection_HwzPfD",
+        "featured_collection_nzTqcR"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "card_color_scheme": "",
+        "card_style": "standard",
+        "card_heading_size": "text-base",
+        "card_image_ratio": "1/1",
+        "card_image_width": "medium",
+        "card_image_padding": "none",
+        "rounded_card_image": true,
+        "mobile_layout": "vertical",
+        "carousel_item_size": "auto",
+        "columns_desktop": 6,
+        "carousel_control_color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "products_per_page": 20,
+        "columns_desktop": 4,
+        "column_gap": "2xs",
+        "row_gap": "inherit",
+        "pagination": "number",
+        "enable_filtering": true,
+        "enable_color_swatch": true,
+        "filter_type": "vertical",
+        "expand_filter_groups": "Availability, Price, Color, Size, Category, Product Type",
+        "enable_sorting": true,
+        "enable_layout_switching": true,
+        "columns_mobile": "2",
+        "padding_top": 28,
+        "padding_bottom": 0,
+        "show_section_divider": true,
+        "divider_width": "fixed"
+      }
+    },
+    "rich_text_dgPtDV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kVf6qj": {
+          "type": "heading",
+          "settings": {
+            "heading": "À  propos d'Onsha",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        },
+        "text_xtLQE8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>ONSHA est une expression de l’eau dans sa forme la plus pure et la plus respectueuse de la peau.</p><p>Née de la recherche coréenne sur l’eau et la sensibilité cutanée, la marque explore le lien profond entre eau, peau et équilibre.</p><p>Au cœur d’ONSHA se trouve une eau naturellement minéralisée, issue de sources profondes, sélectionnée pour sa capacité à apaiser, renforcer et protéger les peaux les plus délicates.</p><p>Chaque formule est pensée comme un rituel, inspiré des spas coréens, où la douceur prime sur l’agression, et où la pureté devient un soin.</p><p>ONSHA ne cherche pas à transformer la peau, mais à respecter son rythme, à soutenir sa barrière naturelle et à recréer les conditions idéales d’un environnement sain.</p><p>Minimalisme, sécurité et sérénité guident chaque création.</p><p>Une approche essentielle, silencieuse, presque méditative.</p><p>ONSHA, quand l’eau devient soin.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "5-lines",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kVf6qj",
+        "text_xtLQE8"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-10",
+        "use_color_scheme_in_container": true,
+        "content_spacing": "standard",
+        "content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_Gxg9wp",
+    "banner",
+    "collection_list_slider_6qbNfj",
+    "product-grid",
+    "rich_text_dgPtDV"
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">L&#x27;accessoire à ton image</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Compatibilité</b>Exclusivement la douchette filtrante Onsha</div><div><b>Matière</b>Silicone souple et résistant, sans BPA selon le fabricant</div><div><b>Entretien</b>Lavable à l&#x27;eau tiède</div></div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Caractéristiques et matière",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Silicone souple et résistant, sans BPA selon le fabricant. Compatible exclusivement avec la douchette filtrante Onsha. Lavable à l'eau tiède. Tenir les petits éléments hors de portée des enfants.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        },
+        "ss_complements": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-complements', items: \"douchette-filtrante||Filtre sédiment inclus\", title: \"La housse est vendue seule\", note: \"Elle s'adapte uniquement à la douchette filtrante Onsha.\" %}"
+          }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "ss_rating",
+        "price",
+        "description",
+        "variant_picker",
+        "buy_buttons",
+        "ss_complements",
+        "ss_facts",
+        "reassurance",
+        "acc_1",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_visuals": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Six coloris à associer",
+            "text": "",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-housse-personnalisable-pour-douchette-2337251.jpg"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Housse installée sur la douchette",
+            "text": "",
+            "tag": "",
+            "link_label": "",
+            "show_price": true,
+            "image": "shopify://shop_images/onsha-housse-personnalisable-pour-douchette-7891355.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2"
+      ],
+      "settings": {
+        "layout": "visuals",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "",
+        "heading": "Le style Onsha",
+        "text": "",
+        "columns": 2,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Glisse</strong> la housse sur ta douchette filtrante Onsha."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Ajuste</strong> pour qu'elle épouse bien la forme."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Change</strong> de coloris selon les saisons ou ta déco."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Comment l'utiliser",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": "<p>Tu cherches une petite attention à offrir avec un coffret Onsha ? La housse est le complément parfait : utile, jolie et à petit prix.</p>",
+        "image": "shopify://shop_images/onsha-housse-personnalisable-pour-douchette-3837798.jpg"
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Avec quels produits est-elle compatible ?",
+            "text": "<p>Exclusivement avec la douchette filtrante Onsha.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Comment l'entretenir ?",
+            "text": "<p>Un simple lavage à l'eau tiède suffit.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Gêne-t-elle l'utilisation ?",
+            "text": "<p>Non, elle ne gêne ni la prise en main, ni le jet, ni le changement de filtre.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_visuals",
+    "ss_steps",
+    "ss_reviews",
+    "ss_faq"
+  ]
+}

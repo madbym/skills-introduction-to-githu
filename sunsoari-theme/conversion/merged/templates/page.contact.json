@@ -1,0 +1,138 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_xYaBHj": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "slideshow_nm7nzh": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_tGLM6J": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "background": "shopify://shop_images/sunsoari-banniere-contact.jpg",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": true
+          }
+        }
+      },
+      "block_order": [
+        "slide_tGLM6J"
+      ],
+      "name": "t:sections.slideshow.name",
+      "settings": {
+        "container": "full",
+        "slide_height": "small",
+        "show_controls": false,
+        "autoplay": false,
+        "autoplay_delay": 3,
+        "show_text_below": false,
+        "text_alignment_mobile": "center",
+        "accessibility_info": "Sunsoari, nous contacter"
+      }
+    },
+    "rich_text_GbBtkQ": {
+      "type": "rich-text",
+      "blocks": {
+        "text_WMytrX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Une question sur un produit, un conseil pour choisir ta senteur, un suivi de commande ou une demande de partenariat ? Écris-nous avec le formulaire ci-dessous ou à <a href=\"mailto:contact.sunsoari@gmail.com\">contact.sunsoari@gmail.com</a>. On te répond par e-mail dès que possible, les jours ouvrés.</p><p>Ta réponse est peut-être déjà ici : <a href=\"/pages/questions-frequentes\">Questions fréquentes</a> · <a href=\"/pages/livraison-expedition\">Livraison</a> · <a href=\"/pages/retours-remboursements\">Retours</a> · <a href=\"/pages/garantie-serenite\">Garantie sérénité</a></p>",
+            "text_size": "text-lg",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "text_WMytrX"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 40,
+        "padding_bottom": 30,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "blocks": {
+        "custom_field_d63Kne": {
+          "type": "custom_field",
+          "settings": {
+            "field_type": "select",
+            "heading": "Objet",
+            "placeholder": "Objet de ton message",
+            "required": false,
+            "full_width": true,
+            "select_options": "Question sur un produit,Conseil pour choisir,Suivi de commande,Retour ou échange,Partenariat ou presse,Autre",
+            "checkbox_checked_value": "Yes",
+            "checkbox_uncheck_value": "No",
+            "radio_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_field_d63Kne"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "section_color_scheme": "",
+        "heading": "Écris-nous",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "hd2",
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_xYaBHj",
+    "slideshow_nm7nzh",
+    "rich_text_GbBtkQ",
+    "form"
+  ]
+}

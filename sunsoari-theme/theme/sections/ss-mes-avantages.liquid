@@ -198,13 +198,26 @@
           {%- liquid
             assign visible = true
             assign mine = false
-            if block.type == 'code' and block.settings.customers != blank
+            if block.type == 'code' and block.settings.customers != blank or block.type == 'code' and block.settings.customer_tag != blank
               assign visible = false
               if customer
-                assign list = block.settings.customers | downcase | replace: ' ', '' | replace: ';', ',' | split: ','
-                if list contains email
-                  assign visible = true
-                  assign mine = true
+                if block.settings.customers != blank
+                  assign list = block.settings.customers | downcase | replace: ' ', '' | replace: ';', ',' | split: ','
+                  if list contains email
+                    assign visible = true
+                    assign mine = true
+                  endif
+                endif
+                if block.settings.customer_tag != blank
+                  assign wanted_tag = block.settings.customer_tag | strip | downcase
+                  for t in customer.tags
+                    assign t2 = t | strip | downcase
+                    if t2 == wanted_tag
+                      assign visible = true
+                      assign mine = true
+                      break
+                    endif
+                  endfor
                 endif
               endif
             endif
@@ -507,6 +520,7 @@
         { "type": "checkbox", "id": "once", "label": "Utilisable une seule fois par cliente", "default": true },
         { "type": "checkbox", "id": "first_order", "label": "Réservé à la première commande", "default": false },
         { "type": "textarea", "id": "customers", "label": "Réservé à ces clientes (emails séparés par des virgules)", "info": "Laisse vide pour l'afficher à toutes les clientes." },
+        { "type": "text", "id": "customer_tag", "label": "Ou réservé aux clientes ayant ce tag", "info": "Ex. : avis-ok. Le code s'affiche tout seul dès que tu ajoutes ce tag sur la fiche cliente." },
         { "type": "checkbox", "id": "members_only", "label": "Visible seulement par les clientes connectées", "default": false },
         { "type": "url", "id": "link", "label": "Page ouverte après activation" },
         { "type": "image_picker", "id": "image", "label": "Image" }

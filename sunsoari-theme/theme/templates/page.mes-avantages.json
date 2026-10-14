@@ -136,11 +136,65 @@
             "fine": "La personne parrainée ne doit jamais avoir commandé chez Sunsoari et doit être différente de toi (autre nom, autre email). 1 code de 5 € par amie parrainée.",
             "when": "Ton code t'est envoyé par email 14 jours après la livraison de sa commande (fin du délai de rétractation)."
           }
+        },
+        "c3": {
+          "type": "code",
+          "settings": {
+            "code": "AVIS5",
+            "title": "-5 % pour te remercier de ton avis",
+            "text": "<p>Merci d'avoir pris le temps de nous partager ton ressenti.</p>",
+            "conditions": "Valable 3 mois après réception. Non cumulable avec un autre code ni avec la livraison offerte.",
+            "end_date": "",
+            "once": true,
+            "first_order": false,
+            "customers": "",
+            "customer_tag": "avis-ok",
+            "members_only": true,
+            "link": "/pages/composez-votre-rituel",
+            "image": "shopify://shop_images/shift-coffret-soin-douche-coreenne-5893737.jpg"
+          }
+        },
+        "c4": {
+          "type": "code",
+          "settings": {
+            "code": "POST5",
+            "title": "-5 % pour te remercier de ton partage",
+            "text": "<p>Merci d'avoir partagé ton rituel Sunsoari sur les réseaux.</p>",
+            "conditions": "Valable 3 mois après réception. Non cumulable avec un autre code ni avec la livraison offerte.",
+            "end_date": "",
+            "once": true,
+            "first_order": false,
+            "customers": "",
+            "customer_tag": "post-ok",
+            "members_only": true,
+            "link": "/pages/composez-votre-rituel",
+            "image": "shopify://shop_images/shift-pommeaux-etageres-coloris.jpg"
+          }
+        },
+        "c5": {
+          "type": "code",
+          "settings": {
+            "code": "PARRAIN5",
+            "title": "5 € pour te remercier de ton parrainage",
+            "text": "<p>Ton amie a rejoint la maison Sunsoari, merci de nous avoir recommandées.</p>",
+            "conditions": "Valable 3 mois après réception. Non cumulable avec un autre code ni avec la livraison offerte.",
+            "end_date": "",
+            "once": true,
+            "first_order": false,
+            "customers": "",
+            "customer_tag": "parrain-ok",
+            "members_only": true,
+            "link": "/pages/composez-votre-rituel",
+            "image": "shopify://shop_images/ingredient-vitamine-c-orange-bulles-eau.jpg"
+          }
         }
       },
       "block_order": [
         "c2",
         "c1",
+        "c3",
+        "c4",
+        "c5",
         "p1",
         "p2",
         "p3",

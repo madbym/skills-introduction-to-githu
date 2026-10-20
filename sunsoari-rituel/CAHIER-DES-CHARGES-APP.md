@@ -42,6 +42,11 @@ Une question par écran, mascotte Sunsoari (petit soleil souriant) qui « parle 
 **Ressources** : guides (rituel 7 jours, protection solaire, rituel douche, cheveux bouclés à crépus), vidéos de gestes, bibliothèque d'ingrédients, tendances France / Asie / Afrique avec sources.
 **Assistante** : chat IA qui connaît le profil, la routine et le catalogue ; questions suggérées ; réponses courtes et prudentes.
 
+## 4 bis. Contenus façon Lóvi (stories, tutoriels, scan visage)
+- **Stories plein écran** (barre de progression segmentée en haut, toucher à droite pour avancer, à gauche pour revenir, croix pour fermer), rangées en rubriques dans Ressources : « Sunsoari, c'est quoi ? » (histoire du nom), « Mythe ou vérité » (étiquettes Mythe / Vérité / Astuce), « Académie », « Tendances ». Reprendre `STORIES` du fichier joint.
+- **Tutoriels** par étape (protection solaire, double nettoyage, sérum, installer son pommeau) : d'abord en cartes sous-titrées (`TUTOS`), puis en vidéos verticales filmées par Fanta (mains, voix off, sous-titres, lecteur avec avance et retour de 5 secondes). Bouton « Tutoriel » sur chaque fiche produit.
+- **Scan du visage** : filtres (Tout, Brillance, Sécheresse, Rougeurs, Boutons, Taches, Grain irrégulier), points de couleur sur les zones du visage, liste « Analyse de ta peau » par zone, bouton « Enregistrer ». **Mon suivi** : historique daté (miniature seulement si l'utilisatrice l'accepte), objectif, nombre de signes notés et statut par rapport au scan précédent (« Moins de signes notés », « Pas de changement noté », « Plus de signes notés »), avec la mention que la lumière et l'angle changent le résultat. Sunsoari+ : comparaison avant / après côte à côte.
+
 ## 5. Routine révélée
 Onglets **Matin · Soir · Hebdo · Douche**. Chaque produit : étape, marque, prix, origine, badge « Fabriqué au… », **% de compatibilité**, « Pourquoi on l'a choisi » (ingrédients cliquables), 3 questions à poser à l'assistante, bouton Acheter (Sunsoari : ajout au panier Shopify ; autres marques : où l'acheter), carrousel « Autres options pour toi » avec leur %. Onglet Douche : SHIFT mis en avant, sauf profils sensibles / sans parfum / grossesse → Onsha sans senteur, avec explication. Comparatif SHIFT / Onsha.
 

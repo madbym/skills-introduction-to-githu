@@ -50,6 +50,15 @@ Une question par écran, mascotte Sunsoari (petit soleil souriant) qui « parle 
 ## 5. Routine révélée
 Onglets **Matin · Soir · Hebdo · Douche**. Chaque produit : étape, marque, prix, origine, badge « Fabriqué au… », **% de compatibilité**, « Pourquoi on l'a choisi » (ingrédients cliquables), 3 questions à poser à l'assistante, bouton Acheter (Sunsoari : ajout au panier Shopify ; autres marques : où l'acheter), carrousel « Autres options pour toi » avec leur %. Onglet Douche : SHIFT mis en avant, sauf profils sensibles / sans parfum / grossesse → Onsha sans senteur, avec explication. Comparatif SHIFT / Onsha.
 
+## 5 bis. SHIFT, gamme prioritaire (produits les plus rentables)
+- Toujours afficher la **collection SHIFT complète** dans l'onglet Douche, la boutique et les collections : Coffret Douche & Aromathérapie (109,90 €, 4 coloris : blanc, noir, rose, vert), Coffret Soin Douche Coréenne (59,90 €), Pack 6 capsules soin & aromathérapie (32,90 €), Pack 3 filtres Pure Water (25,90 €).
+- **Senteurs SHIFT** : Tea Tree & Lavender, Basil & Grass, Ginger & Bergamote (dans le coffret) ; Hinoki Spring, Cherry Blossom, Patchouli & Rose, Fruité, Découverte (6 senteurs) en packs de 6. Question « senteur » du diagnostic avec ces choix ; choix de senteur et de coloris directement sur les cartes, avec lien panier vers la bonne variante Shopify.
+- SHIFT = recommandation principale dès que le budget dépasse 30 € ou qu'une senteur SHIFT est choisie, sauf peau sensible, réaction aux huiles essentielles, sans parfum ou grossesse (les capsules contiennent des huiles essentielles, dont le tea tree) : alors Onsha sans senteur, avec l'explication, et la gamme SHIFT reste visible.
+- Recharges SHIFT dans le planner (Pure Water ; capsules selon la fréquence de douche).
+
+## 5 ter. Mobile et web
+Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
+
 ## 6. Ludique et interactif
 Séries de jours (streak) et badges (1re semaine, 10 scans, routine complète 30 jours), confettis aux étapes clés, mascotte animée, cartes « Le savais-tu ? », quiz ingrédients de la semaine, avant/après dans le temps (Sunsoari+, avec consentement), rappels push (routine, recharge, météo UV).
 

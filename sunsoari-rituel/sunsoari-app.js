@@ -15,7 +15,8 @@
   // ---------------------------------------------------------------------------
   var IMG = "https://cdn.shopify.com/s/files/1/0932/8191/1117/files/";
   var SCENTS = ["hinoki", "ocean", "pin", "fleur", "sans"];
-  var SCENT_LABEL = { hinoki: "Hinoki", ocean: "Océan", pin: "Forêt de Pin", fleur: "Fleur de Prunier", sans: "Sans senteur" };
+  var SCENT_LABEL = { hinoki: "Hinoki", ocean: "Océan", pin: "Forêt de Pin", fleur: "Fleur de Prunier", sans: "Sans senteur", patchouli: "Patchouli & Rose", fruite: "Fruité", decouverte: "Découverte (6 senteurs)" };
+  var SHIFT_ONLY = ["patchouli", "fruite", "decouverte"];
 
   var P = {
     premierHome: {
@@ -39,8 +40,8 @@
     shiftAroma: {
       title: "SHIFT · Coffret Douche & Aromathérapie", handle: "shift-coffret-douche-aromatherapie", price: 109.9,
       img: IMG + "shift-coffret-douche-aromatherapie-3669659.png?v=1787169803&width=480",
-      pitch: "Le système SHIFT prêt à installer : pommeau filtrant, flexible 2 m, 3 filtres Pure Water et 6 capsules soin & aromathérapie.",
-      variants: { all: 54532797301069 }, variantNote: "4 coloris au choix sur la fiche produit", act: ["vitc", "aloe", "karite", "teatree"]
+      pitch: "Le système SHIFT complet, prêt à installer : pommeau filtrant, flexible silicone 2 m, 3 filtres Pure Water et 6 capsules soin & aromathérapie (2 Tea Tree & Lavender, 2 Basil & Grass, 2 Ginger & Bergamote). L'eau est filtrée, puis enrichie en actifs hydratants et en senteur.",
+      variants: { all: 54532797301069 }, colors: [["Blanc", 54532797301069], ["Noir", 54532797268301], ["Rose", 54532797333837], ["Vert", 54532797366605]], variantNote: "4 coloris : blanc, noir, rose, vert", act: ["vitc", "aloe", "karite", "teatree"]
     },
     shiftSoin: {
       title: "SHIFT · Coffret Soin Douche Coréenne", handle: "pommeau-de-douche-filtrant-a-vitamine-c-aromatherapie", price: 59.9,
@@ -106,8 +107,9 @@
       title: "SHIFT · Pack 6 Capsules Soin & Aromathérapie", handle: "pack-6-capsules-vitaminees-shift-sunsoari", price: 32.9,
       img: IMG + "shift-6-capsules-aromatherapie-vitamine-c-3834627.jpg?v=1791181284&width=480",
       pitch: "Six capsules à base d'actifs hydratants et de vitamine C, avec leurs huiles essentielles.", act: ["vitc", "aloe", "karite", "teatree"],
-      variants: { hinoki: 54487730520397, fleur: 54487735533901, ocean: 54487733174605, pin: 54487733174605 },
-      scentLabel: function (s) { return "Collection : " + ({ hinoki: "Hinoki Spring", fleur: "Cherry Blossom" }[s] || "Découverte"); }
+      variants: { hinoki: 54487730520397, fleur: 54487735533901, patchouli: 54487733895501, fruite: 54487733600589, decouverte: 54487733174605, ocean: 54487733174605, pin: 54487733174605, sans: 54487733174605 },
+      scents: [["hinoki", "Hinoki Spring"], ["fleur", "Cherry Blossom"], ["patchouli", "Patchouli & Rose"], ["fruite", "Fruité"], ["decouverte", "Découverte · 6 senteurs"]],
+      scentLabel: function (s) { return "Collection : " + ({ hinoki: "Hinoki Spring", fleur: "Cherry Blossom", patchouli: "Patchouli & Rose", fruite: "Fruité" }[s] || "Découverte"); }
     },
     pureWater: {
       title: "SHIFT · Pack 3 Filtres à Sédiments (Pure Water)", handle: "pack-3-sediments-pure-water", price: 25.9,
@@ -433,7 +435,7 @@
   // PRODUITS SUNSOARI : ce qui distingue chaque système de douche (fiches produits)
   // ---------------------------------------------------------------------------
   var SHOWER_FACTS = {
-    shift: { name: "SHIFT", pts: ["Filtre à sédiments Pure Water, puis capsule de soin", "Capsules : vitamine C, aloe vera, huile de coco, karité, tréhalose et huiles essentielles", "Aromathérapie : Tea Tree & Lavender, Basil & Grass, Ginger & Bergamote, Hinoki Spring…", "Coffret complet avec flexible silicone 2 m, 4 coloris"], care: "Les capsules contiennent des huiles essentielles, dont le tea tree." },
+    shift: { name: "SHIFT", pts: ["Filtre à sédiments Pure Water, puis capsule de soin", "Capsules : vitamine C, aloe vera, huile de coco, karité, tréhalose et huiles essentielles", "Senteurs : Tea Tree & Lavender, Basil & Grass, Ginger & Bergamote (coffret) · Hinoki Spring, Cherry Blossom, Patchouli & Rose, Fruité, Découverte (packs de 6)", "Coffret complet avec flexible silicone 2 m, 4 coloris"], care: "Les capsules contiennent des huiles essentielles, dont le tea tree." },
     onsha: { name: "Onsha", pts: ["Pommeau au jet fin (197 micro-trous)", "Filtre thermal vitaminé 2-en-1 (sédiments + capsule thermale)", "5 senteurs dont une version sans senteur", "Formats Home et Nomade (voyage)"], care: "Version sans senteur disponible pour les peaux qui réagissent aux parfums." }
   };
 
@@ -482,7 +484,7 @@
     { id: "envies", sec: 4, title: "Qu'attends-tu de ta douche ?", sub: "Plusieurs choix possibles.", multi: true,
       options: [["senteur", "Un moment senteur", "Aromathérapie, rituel", "flower"], ["chlore", "Moins de chlore", "Selon la fiche du fabricant", "drop"], ["soin", "Une eau « soin »", "Capsules aux actifs hydratants", "halfsun"], ["soir", "Un rituel du soir", "Ralentir, se poser", "moon"], ["jet", "Un jet plus doux", "", "shower"], ["sansparfum", "Rien de parfumé", "Je préfère sans senteur", "none"]] },
     { id: "senteur", sec: 4, title: "Quelle senteur t'attire ?", sub: "Tu pourras en changer à chaque recharge.", skipIf: function (a) { return has(a, "envies", "sansparfum"); },
-      options: [["hinoki", "Hinoki", "Bois clair, apaisant", "tree"], ["ocean", "Océan", "Frais, iodé", "wave"], ["pin", "Forêt de Pin", "Vert, résineux", "leaf"], ["fleur", "Fleur de Prunier", "Floral, doux", "flower"], ["sans", "Sans senteur", "", "none"]] },
+      options: [["hinoki", "Hinoki", "Bois clair · Onsha et SHIFT Hinoki Spring", "tree"], ["fleur", "Floral", "Fleur de Prunier (Onsha) · Cherry Blossom (SHIFT)", "flower"], ["patchouli", "Patchouli & Rose", "Capsules SHIFT · chaud, enveloppant", "flower"], ["fruite", "Fruité", "Capsules SHIFT · énergie", "sun"], ["decouverte", "Découverte", "SHIFT · 6 senteurs à tester", "sprout"], ["ocean", "Océan", "Onsha · frais, iodé", "wave"], ["pin", "Forêt de Pin", "Onsha · vert, résineux", "leaf"], ["sans", "Sans senteur", "Onsha", "none"]] },
     { id: "origines", sec: 4, title: "Quelles beautés du monde t'attirent ?", sub: "Pour orienter les autres marques qu'on te propose.", multi: true, none: "toutes",
       options: [["Corée", "K-beauty", "Corée", "sprout"], ["Japon", "J-beauty", "Japon", "flower"], ["Afrique", "Marques africaines", "Karité, argan, savon noir…", "sun"], ["toutes", "Un peu de tout", "", "heart"]] },
     { id: "budget", sec: 4, title: "Pour ta douche, ton budget de départ ?", sub: "Tu pourras compléter ton rituel plus tard.",
@@ -591,8 +593,9 @@
       main = a.budget === "petit" ? "setNomade" : "coffretNomade";
       alts = main === "setNomade" ? ["coffretNomade", "douchette"] : ["setNomade", "douchette"];
       refills = ["capsule", "sediment"];
-    } else if (shiftOk && a.budget !== "petit") {
+    } else if (shiftOk && (a.budget !== "petit" || SHIFT_ONLY.indexOf(s) > -1)) {
       main = a.budget === "grand" ? "shiftAroma" : "shiftSoin";
+      if (SHIFT_ONLY.indexOf(s) > -1) why.push("Ta senteur, " + SCENT_LABEL[s] + ", existe en capsules SHIFT.");
       alts = main === "shiftAroma" ? ["shiftSoin", "coffretHome"] : ["shiftAroma", "starterHome"];
       refills = ["pureWater", "shiftCaps"];
       why.push(wantsShift ? "Tu veux une douche sensorielle : SHIFT associe filtration et capsules d'aromathérapie aux actifs hydratants." : "SHIFT réunit filtration et capsules de soin dans un seul geste.");
@@ -763,6 +766,9 @@
     ".chatform .btn{width:48px;padding:0}",
     ".sheet.top{z-index:23}",
     ".photoacts{flex-wrap:wrap;gap:8px}",
+    ".app.full{border:0;border-radius:0;max-width:none;min-height:100vh}.app.full .body{max-width:640px;margin:0 auto}.app.full .bnav{max-width:none}",
+    ".shiftbox{background:linear-gradient(160deg,var(--water-soft),var(--paper));border-radius:24px;padding:14px;margin:6px 0 14px}.shiftbox h4{margin:8px 0 4px}.shiftbox>p{font-size:14px;color:var(--muted);margin:0 0 12px}",
+    "a.chip{text-decoration:none;display:inline-flex;align-items:center}",
     ".sect.left{text-align:left;margin-left:2px}",
     ".stories .storycard{flex:0 0 150px;height:190px;border:0;border-radius:20px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;text-align:left;cursor:pointer;font:inherit;color:var(--ink);scroll-snap-align:start}",
     ".storycard b{font-family:var(--display);font-weight:400;font-size:21px;line-height:1.1}",
@@ -1110,7 +1116,7 @@
   A.renderKeepFocus = function (id) { this.render(); var el = this.root.getElementById ? this.root.getElementById(id) : null; if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); } };
 
   A.render = function () {
-    var v = this.view, html = "<style>" + CSS + "</style><div class='app'>";
+    var v = this.view, html = "<style>" + CSS + "</style><div class='app" + (this.host.hasAttribute("data-fullscreen") ? " full" : "") + "'>";
     if (v === "diag") html += "<div class='body'>" + this.vDiag() + "</div>";
     else {
       html += "<div class='body paper'>" + ({ reveal: this.vReveal, today: this.vToday, produits: this.vProduits, scan: this.vScan, ressources: this.vRessources, assistant: this.vAssistant, peau: this.vPeau }[v] || this.vToday).call(this) + "</div>";
@@ -1219,9 +1225,16 @@
     if (this.rtab === "douche" && R.reco.why.length) html += "<p class='why big'>" + esc(R.reco.why.join(" ")) + "</p>";
     if (!list.length) html += "<p class='empty'>Rien à ajouter ici pour ton profil : ta routine reste courte, c'est voulu.</p>";
     list.forEach(function (it, i) { html += self.routineCard(byId(it.id), it.step, i + 1, R.reco.scent); });
-    if (this.rtab === "douche") html += this.compareBox(R.reco);
+    if (this.rtab === "douche") html += this.shiftCollection(R.reco) + this.compareBox(R.reco);
     html += "<div class='cta row'><button class='btn ghost' data-act='addroutine'>Tout ajouter à mon étagère</button><button class='btn' data-view='today'>Continuer</button></div>";
     return html;
+  };
+  // Toute la gamme SHIFT, avec coloris et senteurs.
+  A.shiftCollection = function (r) {
+    var self = this, keys = ["shiftAroma", "shiftSoin", "shiftCaps", "pureWater"].filter(function (k) { return r.main !== k && r.refills.indexOf(k) < 0; });
+    var html = "<div class='shiftbox'><span class='tag'>Collection SHIFT</span><h4>Le rituel douche coréen SHIFT</h4><p>Filtration Pure Water + capsules soin & aromathérapie à la vitamine C, aloe vera, coco, karité et tréhalose." + (r.shiftOk ? "" : " Ses capsules contiennent des huiles essentielles : pour ton profil, on te conseille plutôt Onsha, mais voici la gamme si tu veux la découvrir.") + "</p>";
+    html += keys.map(function (k, i) { return self.routineCard(byId("s:" + k), k === "pureWater" || k === "shiftCaps" ? "recharge" : "douche", "S" + (i + 1), r.scent); }).join("");
+    return html + "</div>";
   };
   A.goalLabel = function () { var c = (this.state.answers.concerns || []).filter(function (x) { return x !== "aucune"; }); return c.length ? "Objectif : " + c.map(function (x) { return TAG_LABEL[x]; }).join(", ") : "Objectif : une peau confortable"; };
   A.scoreBadge = function (s) { return "<span class='fit " + bandClass(s.total) + "'>" + s.total + " % adapté</span>"; };
@@ -1230,6 +1243,8 @@
     var a = this.state.answers, s = fitScore(p, a), self = this, alts = p.own ? [] : alternatives(p, a, 4);
     var html = "<article class='rcard'><div class='rtop'><span class='num'>" + n + "</span><div class='rinfo'><small>" + esc(STEP_LABEL[step] || (step === "douche" ? "Ton rituel douche" : step === "recharge" ? "Recharge" : step)) + "</small><b>" + esc(p.name) + "</b><span>" + esc(p.brand) + (p.price ? " · " + euro(p.price) : "") + (p.origin ? " · " + esc(p.origin) : "") + "</span><div class='badges'>" + this.scoreBadge(s) + (p.madeIn ? "<span class='made'>Fabriqué " + esc(p.madeIn) + "</span>" : "") + (p.trend ? "<span class='made trend'>Tendance 2026</span>" : "") + "</div></div><button class='heart' data-wish='" + p.id + "' aria-pressed='" + (this.state.wish.indexOf(p.id) > -1) + "' aria-label='Ajouter à mes souhaits'>♡</button></div>";
     html += "<div class='whybox'><b>Pourquoi on l'a choisi</b><p>" + esc(this.whyFor(p, s)) + "</p>" + this.actChips(p.act) + "<div class='qchips'>" + this.questionsFor(p).map(function (q) { return "<button class='qchip' data-ask='" + esc(q) + "' data-pid='" + p.id + "'>" + esc(q) + "</button>"; }).join("") + "</div></div>";
+    if (p.own && P[p.key].colors) html += "<p class='alt-t'>Choisis ton coloris</p><div class='chipset'>" + P[p.key].colors.map(function (c) { return "<a class='chip' href='" + self.shop + "/cart/" + c[1] + ":1?utm_source=mon-rituel&utm_medium=app' target='_top' data-add='" + p.id + "'>" + c[0] + "</a>"; }).join("") + "</div>";
+    if (p.own && P[p.key].scents) html += "<p class='alt-t'>Choisis ta senteur</p><div class='chipset'>" + P[p.key].scents.map(function (c) { return "<a class='chip' href='" + self.shop + "/cart/" + P[p.key].variants[c[0]] + ":1?utm_source=mon-rituel&utm_medium=app' target='_top' data-add='" + p.id + "' aria-pressed='" + (c[0] === scent) + "'>" + c[1] + "</a>"; }).join("") + "</div>";
     html += "<div class='acts'>" + (p.own ? "<a class='btn' href='" + this.cartUrl(p.key, scent) + "' target='_top' data-add='" + p.id + "'>Ajouter au panier · " + euro(p.price) + "</a>" : "<a class='btn' href='" + esc(this.extUrl(p)) + "' target='_blank' rel='noopener' data-ext='" + p.id + "'>Où l'acheter ↗</a>") + "<button class='btn ghost' data-detail='" + p.id + "'>Détails</button></div>";
     if (alts.length) html += "<p class='alt-t'>Autres options pour toi</p><div class='carousel'>" + alts.map(function (x) { return "<button class='mini' data-detail='" + x.p.id + "'><b>" + esc(x.p.name) + "</b><small>" + esc(x.p.brand) + " · " + esc(x.p.origin || "") + "</small><span class='fit " + bandClass(x.s) + "'>" + x.s + " % adapté</span></button>"; }).join("") + "</div>";
     return html + "</article>";
@@ -1345,7 +1360,7 @@
       else html += "<div class='list'>" + ids.map(function (id) { var p = byId(id) || (s.scans.filter(function (x) { return x.id === id; })[0] || {}).p; return p ? self.rowProduct(p) : ""; }).join("") + "</div>";
       if (this.ptab === "etagere" && s.shelf.length > 1) html += this.shelfCheck();
     }
-    html += "<p class='sect'>Sélections</p>" + this.collection("Les trésors d'Afrique", "Karité, argan, savon noir : des marques fabriquées sur place.", allProducts().filter(function (p) { return p.madeIn; })) + this.collection("Apaiser à la coréenne", "Centella, heartleaf, céramides : les incontournables des peaux sensibles.", allProducts().filter(function (p) { return (p.act || []).some(function (x) { return ["centella", "heartleaf", "ceramides"].indexOf(x) > -1; }); })) + this.collection("Le rituel douche", "Filtration et capsules de soin, chez Sunsoari.", allProducts().filter(function (p) { return p.own && ["shiftAroma", "shiftSoin", "starterHome", "premierHome"].indexOf(p.key) > -1; }));
+    html += "<p class='sect'>Sélections</p>" + this.collection("Les trésors d'Afrique", "Karité, argan, savon noir : des marques fabriquées sur place.", allProducts().filter(function (p) { return p.madeIn; })) + this.collection("Apaiser à la coréenne", "Centella, heartleaf, céramides : les incontournables des peaux sensibles.", allProducts().filter(function (p) { return (p.act || []).some(function (x) { return ["centella", "heartleaf", "ceramides"].indexOf(x) > -1; }); })) + this.collection("Le rituel douche", "Filtration et capsules de soin, chez Sunsoari.", allProducts().filter(function (p) { return p.own && ["shiftAroma", "shiftSoin", "shiftCaps", "pureWater", "starterHome", "premierHome"].indexOf(p.key) > -1; }));
     return html;
   };
   A.rowProduct = function (p) {

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mon Rituel · Sunsoari</title>
+  <meta name="description" content="Ton coach beauté Sunsoari : diagnostic, routine, scanner de produits, planner et assistante.">
+  <meta name="theme-color" content="#fbf8f3">
+  <!-- Installation sur l'écran d'accueil (iPhone et Android) -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Mon Rituel">
+  <style>
+    html, body { margin: 0; background: #fbf8f3; min-height: 100%; }
+    body { padding: env(safe-area-inset-top, 0px) 0 0; }
+  </style>
+</head>
+<body>
+  <!-- data-ai-endpoint="https://ton-serveur/ia" pour activer l'assistante et l'analyse des photos -->
+  <div id="sunsoari-rituel" data-shop="https://sunsoari.fr" data-fullscreen></div>
+  <script src="../sunsoari-app.js" defer></script>
+</body>
+</html>

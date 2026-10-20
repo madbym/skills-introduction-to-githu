@@ -4,6 +4,8 @@
 >
 > **IA** : ajoute `data-ai-endpoint="https://ton-serveur/ia"` sur la balise. Le serveur reçoit `POST {input, json, images:[{media_type, data(base64)}]}` (input = texte ou liste de messages `{role, content}`) et renvoie `{text}` en appelant l'API Claude avec ta clé. Sans serveur, tout fonctionne sauf la lecture des photos et l'assistante (réponses de base).
 
+> **Mobile et web** : le dossier `app/` est la version application installable (plein écran, icône, manifeste). Héberge le dossier `sunsoari-rituel/` sur un hébergement statique (Netlify, Cloudflare Pages, GitHub Pages) à une adresse comme `app.sunsoari.fr/app/`. Sur iPhone : Safari > Partager > « Sur l'écran d'accueil ». Sur Android : Chrome > « Installer l'application ». Sur ordinateur, la même adresse s'ouvre comme un site.
+
 > **Version 2 : `sunsoari-beaute.js`** (recommandée). Diagnostic en 5 étapes (douche, visage, corps, cheveux, envies), mode photo visage et cuir chevelu traité sur l'appareil, routine soins étape par étape avec des marques de Corée, du Japon et d'Afrique (« pourquoi ce produit », « plutôt que… »), bibliothèque de 34 ingrédients, tendances 2026 France, Asie et Afrique, SHIFT mis en avant quand il convient au profil, et planner. Remplace `sunsoari-rituel.js` par `sunsoari-beaute.js` dans les instructions ci-dessous. La version 1 reste disponible.
 
 Un widget de diagnostic beauté pour sunsoari.fr : questionnaire peau, cheveux et eau → rituel personnalisé → produits de la boutique avec lien et ajout au panier → planner de recharges et de semaine de soin.

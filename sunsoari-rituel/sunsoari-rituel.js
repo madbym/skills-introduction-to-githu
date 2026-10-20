@@ -141,7 +141,19 @@
     { brand: "Les Secrets de Loly", name: "Pink Paradise", origin: "France", cat: "Cheveux",
       desc: "Après-shampoing de la gamme cheveux bouclés.", for: ["ondules", "boucles"], url: "", affiliate: false },
     { brand: "Activilong", name: "Actiforce Masque-Soin", origin: "France", cat: "Cheveux",
-      desc: "Masque au beurre de karité, conçu pour les cheveux bouclés, frisés et crépus.", for: ["crepus", "boucles", "secs"], url: "", affiliate: false }
+      desc: "Masque au beurre de karité, conçu pour les cheveux bouclés, frisés et crépus.", for: ["crepus", "boucles", "secs"], url: "", affiliate: false },
+
+    // Marques africaines. `madeIn` seulement si la fabrication sur place est confirmée par une source.
+    { brand: "Kocos Cosmétiques", name: "Soins au beurre de karité", origin: "Mali", madeIn: "au Mali", cat: "Corps",
+      desc: "Laits, crèmes et savons au karité, créés par une pharmacienne malienne en 2014.", for: ["seche", "secheresse", "normale", "secs", "crepus"], url: "https://kocos.ml/", affiliate: false },
+    { brand: "Skin Gourmet", name: "Beurre de karité brut", origin: "Ghana", madeIn: "au Ghana", cat: "Corps et cheveux",
+      desc: "Marque d'Accra qui travaille des ingrédients ghanéens bruts : karité, moringa, baobab, cacao.", for: ["seche", "secheresse", "secs", "crepus", "boucles"], url: "", affiliate: false },
+    { brand: "Arami Essentials", name: "Eden's Elixir", origin: "Nigeria", madeIn: "au Nigeria", cat: "Visage",
+      desc: "Tonique inspiré du savon noir africain, par une marque de Lagos.", for: ["mixte", "imperfections", "normale"], url: "", affiliate: false },
+    { brand: "Nectarome", name: "Huile d'argan bio", origin: "Maroc", madeIn: "au Maroc", cat: "Cheveux et corps",
+      desc: "Huile d'argan pressée près de Marrakech, pour les longueurs ou le corps.", for: ["secs", "colores", "ondules", "raides", "seche"], url: "", affiliate: false },
+    { brand: "Adaa Ada", name: "Soins cheveux crépus", origin: "Sénégal", cat: "Cheveux",
+      desc: "Marque sénégalaise dédiée aux cheveux crépus, fondée par Ramatoulaye Bocoum.", for: ["crepus", "boucles"], url: "", affiliate: false }
   ];
 
   function externals(a) {
@@ -151,11 +163,13 @@
       var hx = x.for.some(function (k) { return cs.indexOf(k) > -1; }) ? 0 : 1, hy = y.for.some(function (k) { return cs.indexOf(k) > -1; }) ? 0 : 1;
       return hx - hy;
     });
+    var hit = function (p) { return p.for.some(function (k) { return keys.indexOf(k) > -1; }); };
+    var africa = ["Mali", "Ghana", "Nigeria", "Maroc", "Sénégal"];
+    sorted.filter(function (p) { return hit(p) && africa.indexOf(p.origin) > -1; }).slice(0, 2).forEach(function (p) { picked.push(p); cats[p.cat] = (cats[p.cat] || 0) + 1; });
     sorted.forEach(function (p) {
-      var hit = p.for.some(function (k) { return keys.indexOf(k) > -1; });
-      if (hit && (cats[p.cat] || 0) < 2) { picked.push(p); cats[p.cat] = (cats[p.cat] || 0) + 1; }
+      if (picked.indexOf(p) < 0 && hit(p) && (cats[p.cat] || 0) < 2) { picked.push(p); cats[p.cat] = (cats[p.cat] || 0) + 1; }
     });
-    return picked.slice(0, 4);
+    return picked.slice(0, 5);
   }
 
   function extUrl(p) {
@@ -425,6 +439,7 @@
     ".mono span{font-family:var(--display);font-size:34px;color:var(--water);line-height:1}",
     ".mono small{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}",
     ".disc{font-size:12px;color:var(--muted)}",
+    ".made{align-self:flex-start;font-size:12px;background:#f3e3cf;color:#8a5526;border-radius:999px;padding:3px 10px}",
     ".refill{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:10px}",
     ".refill .row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}",
     ".bar{height:8px;background:var(--water-soft);border-radius:8px;overflow:hidden}",
@@ -584,10 +599,11 @@
     html += "<h4>D'autres options qui pourraient te convenir</h4><div class='cards'>" + r.alts.concat(r.extras).map(function (k) { return self.productCard(k, r.scent); }).join("") + "</div>";
     var ext = externals(a);
     if (ext.length) {
-      html += "<h4>Pour compléter, d'autres marques qu'on aime</h4><p class='sub' style='margin:-6px 0 12px;color:var(--muted)'>Non vendues sur Sunsoari. Des idées de K-beauty, J-beauty et de marques pensées pour les cheveux texturés et les peaux noires et métissées.</p><div class='cards'>";
+      html += "<h4>Pour compléter, d'autres marques qu'on aime</h4><p class='sub' style='margin:-6px 0 12px;color:var(--muted)'>Non vendues sur Sunsoari. Des marques fabriquées en Afrique, de la K-beauty, de la J-beauty et des soins pensés pour les cheveux texturés.</p><div class='cards'>";
       ext.forEach(function (p, i) {
         var initials = p.brand.split(" ").map(function (w) { return w[0]; }).join("").slice(0, 3);
         html += "<div class='card'><div class='mono'><span>" + esc(initials) + "</span><small>" + esc(p.origin) + " · " + esc(p.cat) + "</small></div>";
+        if (p.madeIn) html += "<span class='made'>Fabriqué " + esc(p.madeIn) + "</span>";
         html += "<p class='pt' style='font-size:15px;margin:0'>" + esc(p.name) + "</p><small style='color:var(--muted)'>" + esc(p.brand) + "</small><p class='pp' style='margin:0'>" + esc(p.desc) + "</p>";
         html += "<div class='acts'><a class='btn ghost' href='" + esc(extUrl(p)) + "' target='_blank' rel='noopener" + (p.affiliate ? " sponsored" : "") + "' data-ext='" + i + "'>Où l'acheter ↗</a></div>";
         html += p.affiliate ? "<small class='disc'>Lien affilié : Sunsoari peut toucher une commission.</small>" : "";

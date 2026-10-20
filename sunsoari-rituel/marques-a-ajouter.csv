@@ -1,0 +1,2 @@
+marque,produit,pays,fabrique_sur_place (oui/non/je ne sais pas),categorie (Visage/Corps/Cheveux),description courte (format et usage seulement),pour quels profils (ex. peau seche; cheveux crepus),lien ou acheter,lien affilie (oui/non)
+Exemple Marque,Beurre corporel au karité,Mali,oui,Corps,Beurre pour le corps au karité non raffiné,peau seche; cheveux secs,https://exemple.com/produit,non

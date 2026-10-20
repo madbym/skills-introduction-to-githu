@@ -762,11 +762,119 @@
     ".chatform input{flex:1;border-radius:999px;padding:10px 16px}",
     ".chatform .btn{width:48px;padding:0}",
     ".sheet.top{z-index:23}",
-    ".photoacts{flex-wrap:wrap;gap:8px}"
+    ".photoacts{flex-wrap:wrap;gap:8px}",
+    ".sect.left{text-align:left;margin-left:2px}",
+    ".stories .storycard{flex:0 0 150px;height:190px;border:0;border-radius:20px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;text-align:left;cursor:pointer;font:inherit;color:var(--ink);scroll-snap-align:start}",
+    ".storycard b{font-family:var(--display);font-weight:400;font-size:21px;line-height:1.1}",
+    ".storycard .tag{background:rgba(255,255,255,.7);font-size:10px}",
+    ".sun{background:linear-gradient(160deg,#f6d9a8,#efe6d8)}.water{background:linear-gradient(160deg,#cfe4e8,#efe6d8)}.lilac{background:linear-gradient(160deg,#e3d8f0,#f6f1ea)}.sand{background:linear-gradient(160deg,#ead7c0,#f6f1ea)}",
+    ".storyview{position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;padding:calc(14px + env(safe-area-inset-top,0px)) max(18px,env(safe-area-inset-right,0px)) calc(18px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px));color:var(--ink)}",
+    ".sbar{display:flex;gap:4px}.sbar i{flex:1;height:3px;border-radius:3px;background:rgba(43,38,34,.18)}.sbar i.done,.sbar i.now{background:var(--ink)}",
+    ".shead{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:13px;position:relative;z-index:2}",
+    ".x.light{position:static;color:var(--ink)}",
+    ".sbody{flex:1;display:flex;flex-direction:column;justify-content:center;gap:14px;max-width:520px;margin:0 auto;width:100%}",
+    ".sbody h3{font-family:var(--display);font-weight:400;font-size:clamp(30px,8vw,44px);line-height:1.08;margin:0;text-wrap:balance}",
+    ".sbody p{font-size:17px;line-height:1.5;margin:0}",
+    ".slab{align-self:flex-start;font-size:13px;font-weight:600;border-radius:8px;padding:4px 10px;background:#fff}",
+    ".slab.mythe{color:#9a3b2a}.slab.verite{background:var(--water);color:#fff}.slab.astuce{background:var(--sun);color:#fff}",
+    ".snav{position:absolute;top:80px;bottom:60px;width:40%;border:0;background:transparent;cursor:pointer;z-index:1}.snav.prev{left:0}.snav.next{right:0;width:60%}",
+    ".shint{text-align:center;font-size:12px;color:var(--muted);margin:0}",
+    ".sdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;vertical-align:middle}",
+    ".zone .dots{display:inline-flex;margin-left:4px}.zone .dots .sdot{margin:0 1px;border:1px solid #fff}",
+    ".zrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.zrow span{font-weight:600;min-width:90px}.zrow em{font-style:normal;font-size:12px;border:1.5px solid;border-radius:999px;padding:2px 8px;background:#fff}",
+    ".toggle{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:10px 0;color:var(--ink)}.toggle input{min-height:auto;width:20px;height:20px;flex:none;margin-top:2px}",
+    ".logrow{display:flex;gap:12px;align-items:center;background:#fff;border-radius:16px;padding:10px}.logrow img,.nothumb{width:52px;height:52px;border-radius:12px;object-fit:cover;flex:none;background:var(--sand);display:flex;align-items:center;justify-content:center}",
+    ".nothumb svg{width:24px;height:24px;fill:none;stroke:var(--sun);stroke-width:1.4}",
+    ".logrow>.lgt{flex:1;display:flex;flex-direction:column;gap:3px;min-width:0}.logrow small{color:var(--muted);font-size:12px}.logrow .fit{align-self:flex-start}"
   ].join("");
   // ---------------------------------------------------------------------------
   // GUIDES (gratuits)
   // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // STORIES (format « stories », comme Lóvi) · k : titre | mythe | verite | astuce | texte | etape
+  // ---------------------------------------------------------------------------
+  var STORIES = [
+    { rub: "Sunsoari", title: "Sunsoari, c'est quoi ?", tone: "sun", slides: [
+      { k: "titre", t: "Bienvenue dans ta maison de soin", d: "Sunsoari est née de deux sœurs, Fanta et Seyo, et d'une conviction : prendre soin de soi commence dès la douche." },
+      { k: "texte", t: "Sun", d: "Le soleil : la lumière, la chaleur, la joie." },
+      { k: "texte", t: "Sunsu · 순수", d: "Pour nous, ce mot coréen évoque la pureté et ce qui est authentique." },
+      { k: "texte", t: "So", d: "« Maison » en bambara. Un lieu de réconfort, de transmission et de soin." },
+      { k: "texte", t: "Soari et Seyo", d: "Le prénom du fils de Fanta, et celui de sa sœur, qui porte le prénom de leur grand-mère et évoque la joie." },
+      { k: "astuce", t: "Ici, on te promet de l'honnêteté", d: "Pas de promesse miracle : des produits choisis avec exigence, et des conseils qui disent la vérité." }
+    ] },
+    { rub: "Mythe ou vérité", title: "Filtre de douche : ce qu'il fait vraiment", tone: "water", slides: [
+      { k: "titre", t: "Filtre de douche : ce qu'il fait vraiment", d: "On démêle le vrai du faux, sans marketing." },
+      { k: "mythe", t: "« Un filtre de douche adoucit l'eau »", d: "" },
+      { k: "verite", t: "La plupart ne retirent pas le calcaire de façon significative.", d: "Un adoucisseur est un autre appareil. Les filtres de douche sont surtout conçus pour réduire une partie du chlore et des sédiments, selon leurs fabricants." },
+      { k: "mythe", t: "« L'eau du robinet est mauvaise pour la peau »", d: "" },
+      { k: "verite", t: "En France, l'eau du robinet est potable et très contrôlée.", d: "Un filtre est un choix de confort et de sensorialité, pas une nécessité." },
+      { k: "astuce", t: "Le bon réflexe", d: "Change ta cartouche aux dates conseillées : ton planner te le rappelle." }
+    ] },
+    { rub: "Mythe ou vérité", title: "Le soleil et les peaux foncées", tone: "sun", slides: [
+      { k: "titre", t: "Le soleil et les peaux foncées", d: "Une idée reçue tenace." },
+      { k: "mythe", t: "« Les peaux foncées n'ont pas besoin de protection solaire »", d: "" },
+      { k: "verite", t: "Elles brûlent moins facilement, mais les UV agissent sur toutes les peaux.", d: "Taches, teint inégal et vieillissement lié au soleil concernent toutes les carnations." },
+      { k: "astuce", t: "Astuce", d: "Cherche une texture qui ne laisse pas de traces blanches : les solaires asiatiques sont souvent très fluides." }
+    ] },
+    { rub: "Mythe ou vérité", title: "Spicules : exfoliation ou micro-aiguilles ?", tone: "lilac", slides: [
+      { k: "titre", t: "Les spicules, nouvelle star de TikTok", d: "De minuscules fragments issus d'éponges marines, utilisés dans certains sérums coréens." },
+      { k: "mythe", t: "« C'est du microneedling à la maison »", d: "" },
+      { k: "verite", t: "Ils agissent en surface, sans la profondeur d'un acte réalisé en cabinet.", d: "Ils picotent volontairement : une sorte d'exfoliation physique douce." },
+      { k: "mythe", t: "« Ça convient à tout le monde »", d: "" },
+      { k: "verite", t: "À éviter sur peau sensible, à rougeurs ou abîmée.", d: "Et jamais le même soir qu'un exfoliant acide ou un rétinoïde." }
+    ] },
+    { rub: "Mythe ou vérité", title: "Le PDRN, tendance 2026", tone: "lilac", slides: [
+      { k: "titre", t: "Le PDRN, ingrédient star de la K-beauty", d: "Des fragments d'ADN, souvent issus du saumon, passés des cabinets coréens aux sérums." },
+      { k: "mythe", t: "« Ses effets sont prouvés comme en cabinet »", d: "" },
+      { k: "verite", t: "En cosmétique, les preuves restent limitées et varient selon les formules.", d: "Une tendance à suivre avec curiosité, mais avec recul." },
+      { k: "astuce", t: "À savoir", d: "Il est d'origine animale : à éviter si tu fais le choix du vegan." }
+    ] },
+    { rub: "Mythe ou vérité", title: "Le karité, trésor d'Afrique de l'Ouest", tone: "sand", slides: [
+      { k: "titre", t: "Le karité, trésor d'Afrique de l'Ouest", d: "Un beurre extrait des noix de l'arbre à karité, souvent travaillé par des coopératives de femmes." },
+      { k: "mythe", t: "« Le karité convient à toutes les peaux du visage »", d: "" },
+      { k: "verite", t: "Il est riche : parfait pour le corps et les longueurs, parfois trop sur une peau grasse.", d: "Sur le visage, teste-le d'abord sur une petite zone." },
+      { k: "astuce", t: "Le geste", d: "Réchauffe une noisette entre tes mains et applique-la sur peau encore humide après la douche." }
+    ] },
+    { rub: "Académie", title: "Les taches : comprendre avant d'agir", tone: "sand", slides: [
+      { k: "titre", t: "Les taches : comprendre avant d'agir", d: "Teint inégal, marques après un bouton, taches de soleil : elles n'ont pas toutes la même origine." },
+      { k: "texte", t: "Le geste numéro un", d: "La protection solaire tous les matins, toute l'année." },
+      { k: "texte", t: "Les ingrédients les plus utilisés", d: "Niacinamide, vitamine C, acide tranexamique, acide azélaïque, réglisse." },
+      { k: "astuce", t: "Patience et prudence", d: "Une tache qui change de forme, de couleur ou saigne se montre à un ou une dermatologue." }
+    ] },
+    { rub: "Académie", title: "Introduire un nouvel actif", tone: "water", slides: [
+      { k: "titre", t: "Introduire un nouvel actif", d: "La règle d'or : un seul nouveau produit à la fois." },
+      { k: "etape", t: "1 · Teste", d: "Applique un peu de produit derrière l'oreille ou sur le cou pendant 2 à 3 jours." },
+      { k: "etape", t: "2 · Commence doucement", d: "Un soir sur deux, puis tous les soirs si ta peau est confortable." },
+      { k: "etape", t: "3 · Observe", d: "Note ton ressenti dans ton journal de peau." },
+      { k: "astuce", t: "Si ça pique", d: "Fais une pause et reviens à une routine douce : nettoyant, hydratant, protection solaire." }
+    ] }
+  ];
+  // Tutoriels pas à pas (une vidéo de Fanta peut remplacer chaque tutoriel : champ video).
+  var TUTOS = {
+    spf: { title: "Appliquer sa protection solaire", video: "", slides: [
+      { k: "etape", t: "Le bon moment", d: "Chaque matin, en dernière étape de ta routine, après l'hydratant." },
+      { k: "etape", t: "La bonne quantité", d: "Environ deux longueurs de doigt pour le visage et le cou." },
+      { k: "etape", t: "Les zones oubliées", d: "Oreilles, cou, racine des cheveux, dessus des mains." },
+      { k: "etape", t: "Renouveler", d: "Toutes les deux heures en cas d'exposition, et après la baignade." }
+    ] },
+    demaquillant: { title: "Le double nettoyage", video: "", slides: [
+      { k: "etape", t: "1 · L'huile", d: "Sur peau sèche, masse l'huile démaquillante 30 à 60 secondes." },
+      { k: "etape", t: "2 · Émulsionner", d: "Ajoute un peu d'eau : l'huile devient laiteuse. Rince." },
+      { k: "etape", t: "3 · Le nettoyant doux", d: "Termine avec ton nettoyant habituel, puis sèche en tamponnant." }
+    ] },
+    serum: { title: "Appliquer un sérum", video: "", slides: [
+      { k: "etape", t: "Sur peau propre", d: "Après le tonique, sur peau encore légèrement humide." },
+      { k: "etape", t: "2 à 3 gouttes", d: "Réchauffe-les entre tes paumes et presse-les doucement sur le visage." },
+      { k: "etape", t: "Sceller", d: "Termine avec ta crème pour garder l'hydratation." }
+    ] },
+    douche: { title: "Installer ton pommeau ou ta coque", video: "", slides: [
+      { k: "etape", t: "Avant de commencer", d: "Vérifie que ta douche a un flexible avec un raccord standard. Lis la notice du fabricant." },
+      { k: "etape", t: "Dévisser", d: "Dévisse ton ancien pommeau à la main, sans outil, et vérifie la présence du joint." },
+      { k: "etape", t: "Visser", d: "Visse le nouveau pommeau ou la coque à la main, sans forcer." },
+      { k: "etape", t: "Noter la date", d: "Indique la date d'installation dans ton planner : on te rappelle quand changer la recharge." }
+    ] }
+  };
+
   var GUIDES = [
     { tag: "7 jours", title: "Mon rituel de la semaine", sub: "Un geste nouveau par jour, sans tout changer d'un coup.", days: [
       ["Jour 1 · Repartir en douceur", "Nettoyant doux le soir, hydratant, et c'est tout. Eau tiède, on tamponne pour sécher."],
@@ -1009,6 +1117,7 @@
       html += this.nav();
     }
     if (this.detail) html += this.vDetail(this.detail);
+    if (this.story) html += this.vStory();
     if (this.sheet && ING[this.sheet]) html += this.vSheet(this.sheet);
     html += "</div>";
     this.root.innerHTML = html;
@@ -1079,7 +1188,7 @@
   A.mirror = function (target, marks, img) {
     var cfg = PHOTO[target], self = this;
     var html = "<div class='mirror" + (img ? " has" : "") + "'>" + (img ? "<img src='" + img + "' alt='Ta photo'>" : "<div class='silh'>" + icon(target === "visage" ? "heart" : "curly") + "<span>Pas de photo ? Touche directement les zones.</span></div>");
-    cfg.zones.forEach(function (z) { var n = (marks[z[0]] || []).length; html += "<button class='zone" + (self.zone === z[0] ? " on" : "") + (n ? " marked" : "") + "' style='left:" + z[2] + "%;top:" + z[3] + "%' data-zone='" + z[0] + "'>" + esc(z[1]) + (n ? " · " + n : "") + "</button>"; });
+    cfg.zones.forEach(function (z) { var l = marks[z[0]] || [], n = l.length; html += "<button class='zone" + (self.zone === z[0] ? " on" : "") + (n ? " marked" : "") + "' style='left:" + z[2] + "%;top:" + z[3] + "%' data-zone='" + z[0] + "'>" + esc(z[1]) + (n ? " <span class='dots'>" + l.map(function (o) { return "<i class='sdot' style='background:" + (SIGN_COLOR[o] || "#fff") + "'></i>"; }).join("") + "</span>" : "") + "</button>"; });
     return html + "</div>";
   };
   A.obsPicker = function (target, pq, marks) {
@@ -1157,7 +1266,7 @@
       html += "<span class='day" + (i === 0 ? " now" : "") + "'><small>" + DSHORT[d.getDay()] + "</small><b>" + (done ? "✓" : d.getDate()) + "</b></span>";
     }
     html += "</div>";
-    var first = [["diag", "Faire mon diagnostic", true], ["scan", "Scanner un premier produit", s.scans.length > 0], ["peau", "Vérifier l'état de ma peau", !!s.steps.peau], ["shelf", "Ajouter ma routine à mon étagère", s.shelf.length > 0]];
+    var first = [["diag", "Faire mon diagnostic", true], ["scan", "Scanner un premier produit", s.scans.length > 0], ["peau", "Scanner mon visage", !!s.steps.peau], ["shelf", "Ajouter ma routine à mon étagère", s.shelf.length > 0]];
     html += "<p class='sect'>Premiers pas</p>" + first.map(function (f) { return "<button class='task" + (f[2] ? " done" : "") + "' data-first='" + f[0] + "'><span class='tick'>" + (f[2] ? "✓" : "") + "</span>" + esc(f[1]) + "</button>"; }).join("");
     html += "<p class='sect'>Plan du jour</p>";
     [["matin", "Routine du matin", R.matin], ["soir", "Routine du soir", R.soir]].forEach(function (blk) {
@@ -1188,14 +1297,35 @@
   };
 
   // ---------- Vérifier l'état de ma peau ----------
+  var SIGN_COLOR = { brillance: "#c9853f", secheresse: "#7d8f76", rougeurs: "#c0553f", imperfections: "#9b5d9e", taches: "#8a5526", texture: "#2f6f7e" };
   A.vPeau = function () {
-    var marks = this.state.answers.photoVisage || {};
-    var html = "<div class='q'><h3>L'état de ma peau</h3><p class='sub'>Fais une photo à la lumière du jour, sans maquillage. Tes observations mettent à jour ta routine.</p></div>";
+    var self = this, all = this.state.answers.photoVisage || {}, f = this.skinFilter || "all", log = this.state.skinLog || [];
+    var marks = {}; Object.keys(all).forEach(function (z) { var l = f === "all" ? all[z] : all[z].filter(function (o) { return o === f; }); if (l.length) marks[z] = l; });
+    var html = "<div class='q'><h3>Scanner mon visage</h3><p class='sub'>Lumière du jour, visage sans maquillage, cheveux attachés. L'assistante repère des signes visibles, tu valides.</p></div>";
+    html += "<div class='chipset'>" + [["all", "Tout"]].concat(PHOTO.visage.obs).map(function (o) { return "<button class='chip' data-sf='" + o[0] + "' aria-pressed='" + (f === o[0]) + "'>" + (o[0] !== "all" ? "<i class='sdot' style='background:" + SIGN_COLOR[o[0]] + "'></i>" : "") + esc(o[1]) + "</button>"; }).join("") + "</div>";
     html += this.mirror("visage", marks, this.photos.visage) + "<div class='photoacts'><label class='btn ghost' for='cam-v2'>" + (this.photos.visage ? "Reprendre la photo" : "Prendre ou choisir une photo") + "</label><input id='cam-v2' type='file' accept='image/*' capture='user' data-photo='visage' hidden>";
     if (this.photos.visage && AI.images) html += "<button class='btn' data-act='aiphoto' data-target='visage' data-pq='photoVisage'" + (this.busy ? " disabled" : "") + ">" + (this.busy ? "Lecture en cours…" : "Analyser avec l'assistante") + "</button>";
-    html += "</div>" + (this.aiMsg ? "<p class='why'>" + esc(this.aiMsg) + "</p>" : "") + (this.zone ? this.obsPicker("visage", "photoVisage", marks) : "");
-    html += "<p class='note'>Ta photo n'est jamais enregistrée. Observations cosmétiques, pas d'examen médical : une tache qui change, saigne ou démange se montre à un ou une dermatologue.</p><div class='cta'><button class='btn big' data-act='peaudone'>Mettre à jour ma routine</button></div>";
-    return html;
+    html += "</div>" + (this.aiMsg ? "<p class='why'>" + esc(this.aiMsg) + "</p>" : "") + (this.zone ? this.obsPicker("visage", "photoVisage", all) : "");
+    var zones = Object.keys(all);
+    if (zones.length) html += "<div class='whybox'><b>Analyse de ta peau</b>" + zones.map(function (z) { var zl = PHOTO.visage.zones.filter(function (x) { return x[0] === z; })[0]; return "<p class='zrow'><span>" + esc(zl ? zl[1] : z) + "</span>" + all[z].map(function (o) { var ol = PHOTO.visage.obs.filter(function (x) { return x[0] === o; })[0]; return "<em style='border-color:" + SIGN_COLOR[o] + "'>" + esc(ol ? ol[1] : o) + "</em>"; }).join("") + "</p>"; }).join("") + "</div>";
+    html += "<label class='toggle'><input type='checkbox' data-keepthumb='1'" + (this.state.keepThumb ? " checked" : "") + "> Garder une miniature de ma photo sur mon téléphone pour suivre mon évolution</label>";
+    html += "<div class='cta'><button class='btn big' data-act='peaudone'>Enregistrer et mettre à jour ma routine</button></div>";
+    if (log.length) {
+      html += "<p class='sect'>Mon suivi</p><div class='list'>" + log.slice(0, 12).map(function (e, i) {
+        var prev = log[i + 1], st = !prev ? ["Premier scan", "b-mid"] : e.n < prev.n ? ["Moins de signes notés", "b-hi"] : e.n > prev.n ? ["Plus de signes notés", "b-lo"] : ["Pas de changement noté", "b-mid"];
+        return "<div class='logrow'>" + (e.thumb ? "<img src='" + e.thumb + "' alt=''>" : "<i class='nothumb'>" + icon("heart") + "</i>") + "<span class='lgt'><b>" + new Date(e.at).toLocaleDateString("fr-FR", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" }) + "</b><small>Objectif : " + esc(e.goal) + " · " + e.n + " signe" + (e.n > 1 ? "s" : "") + " noté" + (e.n > 1 ? "s" : "") + "</small><em class='fit " + st[1] + "'>" + st[0] + "</em></span><button class='btn link' data-dellog='" + i + "' aria-label='Supprimer ce scan'>×</button></div>";
+      }).join("") + "</div><p class='note'>Ce suivi compare tes propres observations d'un scan à l'autre. La lumière et l'angle de la photo changent beaucoup le résultat.</p>";
+    }
+    return html + "<p class='note'>Les photos ne quittent pas ton téléphone, sauf si tu demandes l'analyse : elle est alors envoyée une fois à l'assistante, puis oubliée. Observations cosmétiques, pas d'examen médical : une tache qui change, saigne ou démange se montre à un ou une dermatologue.</p>";
+  };
+  A.makeThumb = function () {
+    var f = this.photoFiles && this.photoFiles.visage;
+    if (!f) return Promise.resolve("");
+    return new Promise(function (res) {
+      var img = new Image(), url = URL.createObjectURL(f);
+      img.onload = function () { var k = 160 / Math.max(img.width, img.height), c = document.createElement("canvas"); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k); c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url); res(c.toDataURL("image/jpeg", 0.7)); };
+      img.onerror = function () { res(""); }; img.src = url;
+    });
   };
 
   // ---------- Produits : recherche, trousse, collections ----------
@@ -1299,8 +1429,22 @@
     if (this.rsTab === "ingredients") return html + this.vIngredients();
     if (this.rsTab === "tendances") return html + this.vTrends();
     if (this.guide) return html + this.vGuide();
+    ["Sunsoari", "Mythe ou vérité", "Académie"].forEach(function (rub) {
+      html += "<p class='sect left'>" + esc(rub) + "</p><div class='carousel stories'>" + STORIES.map(function (st, i) { return st.rub === rub ? "<button class='storycard " + st.tone + "' data-story='" + i + "'><span class='tag'>" + (rub === "Mythe ou vérité" ? "Mythe ou vérité" : rub === "Académie" ? "Académie" : "Sunsoari") + " · " + st.slides.length + " écrans</span><b>" + esc(st.title) + "</b></button>" : ""; }).join("") + "</div>";
+    });
+    html += "<p class='sect left'>Tutoriels</p><div class='carousel stories'>" + Object.keys(TUTOS).map(function (k) { return "<button class='storycard water' data-tuto='" + k + "'><span class='tag'>Tutoriel · " + TUTOS[k].slides.length + " étapes</span><b>" + esc(TUTOS[k].title) + "</b></button>"; }).join("") + "</div><p class='sect left'>Guides</p>";
     html += "<div class='guides'>" + GUIDES.map(function (g, i) { return "<button class='guide' data-guide='" + i + "'><span class='tag'>" + esc(g.tag) + "</span><b>" + esc(g.title) + "</b><small>" + esc(g.sub) + "</small></button>"; }).join("") + "</div>";
     return html + "<p class='note'>Tous les guides Sunsoari sont gratuits.</p>";
+  };
+  A.vStory = function () {
+    var st = this.story, data = st.tuto ? { title: TUTOS[st.tuto].title, tone: "water", slides: TUTOS[st.tuto].slides } : STORIES[st.i], sl = data.slides[st.s];
+    var lab = { mythe: "Mythe", verite: "Vérité", astuce: "Astuce", etape: "Étape" }[sl.k] || "";
+    var html = "<div class='storyview " + data.tone + "' role='dialog' aria-label='" + esc(data.title) + "'><div class='sbar'>" + data.slides.map(function (x, i) { return "<i class='" + (i < st.s ? "done" : i === st.s ? "now" : "") + "'></i>"; }).join("") + "</div>";
+    html += "<div class='shead'><span>" + esc(data.title) + "</span><button class='x light' data-act='closestory' aria-label='Fermer'>×</button></div>";
+    html += "<div class='sbody'>" + (lab ? "<span class='slab " + sl.k + "'>" + lab + "</span>" : "") + "<h3>" + esc(sl.t) + "</h3>" + (sl.d ? "<p>" + esc(sl.d) + "</p>" : "") + "</div>";
+    html += "<button class='snav prev' data-act='storyprev' aria-label='Écran précédent'></button><button class='snav next' data-act='storynext' aria-label='Écran suivant'></button>";
+    html += "<p class='shint'>" + (st.s < data.slides.length - 1 ? "Touche à droite pour continuer" : "Touche pour terminer") + "</p></div>";
+    return html;
   };
   A.vGuide = function () {
     var g = GUIDES[this.guide.i];
@@ -1368,6 +1512,8 @@
     html += "<div class='subscores'>" + [["Tolérance", s.tol], ["Tes objectifs", s.obj], ["Ton type", s.type]].map(function (x) { return "<span><b>" + x[1] + "</b><small>" + x[0] + "</small></span>"; }).join("") + "</div>";
     html += "<p>" + esc(this.whyFor(p, s)) + "</p>" + this.actChips(p.act);
     if (p.step && STEP_FREQ[p.step]) html += "<p class='care'><b>Comment l'utiliser :</b> " + esc(STEP_FREQ[p.step]) + "</p>";
+    var tk = TUTOS[p.step] ? p.step : p.step === "douche" ? "douche" : p.step === "nettoyant" ? "demaquillant" : null;
+    if (tk) html += "<button class='btn ghost' data-tuto='" + tk + "'>▶ Tutoriel : " + esc(TUTOS[tk].title) + "</button>";
     html += "<div class='acts'>" + (p.own ? "<a class='btn' href='" + this.cartUrl(p.key, R.scent) + "' target='_top' data-add='" + p.id + "'>Ajouter au panier · " + euro(p.price) + "</a>" : p.id.indexOf("x:") ? "<a class='btn' href='" + esc(this.extUrl(p)) + "' target='_blank' rel='noopener' data-ext='" + p.id + "'>Où l'acheter ↗</a>" : "") + "<button class='btn ghost' data-shelf='" + p.id + "'>" + (this.state.shelf.indexOf(p.id) > -1 ? "Sur mon étagère ✓" : "Ajouter à mon étagère") + "</button><button class='btn ghost' data-wish='" + p.id + "'>" + (this.state.wish.indexOf(p.id) > -1 ? "♥ Dans mes souhaits" : "♡ Souhaits") + "</button></div>";
     html += "<div class='qchips'>" + this.questionsFor(p).map(function (q) { return "<button class='qchip' data-ask='" + esc(q) + "' data-pid='" + p.id + "'>" + esc(q) + "</button>"; }).join("") + "</div>";
     if (!p.own && p.id.indexOf("x:")) html += "<p class='note'>Marque non vendue par Sunsoari et non partenaire. Vérifie la liste d'ingrédients sur l'emballage : les formules varient selon les pays.</p>";
@@ -1392,6 +1538,11 @@
     if (d.rtab) { this.rtab = d.rtab; return this.render(); }
     if (d.ptab) { this.ptab = d.ptab; return this.render(); }
     if (d.rstab) { this.rsTab = d.rstab; this.guide = null; return this.render(); }
+    if (d.story) { this.story = { i: +d.story, s: 0 }; return this.render(); }
+    if (d.tuto) { this.detail = null; this.story = { tuto: d.tuto, s: 0 }; return this.render(); }
+    if (d.act === "closestory") { this.story = null; return this.render(); }
+    if (d.act === "storyprev") { this.story.s = Math.max(0, this.story.s - 1); return this.render(); }
+    if (d.act === "storynext") { var len = this.story.tuto ? TUTOS[this.story.tuto].slides.length : STORIES[this.story.i].slides.length; if (this.story.s < len - 1) this.story.s++; else this.story = null; return this.render(); }
     if (d.guide) { this.guide = d.guide === "close" ? null : { i: +d.guide }; return this.render(); }
     if (d.wish) { var w = s.wish.indexOf(d.wish); if (w > -1) s.wish.splice(w, 1); else s.wish.push(d.wish); this.save(); return this.render(); }
     if (d.shelf) { var h = s.shelf.indexOf(d.shelf); if (h > -1) s.shelf.splice(h, 1); else s.shelf.push(d.shelf); this.save(); return this.render(); }
@@ -1418,7 +1569,16 @@
       return this.render();
     }
     if (d.act === "aiphoto") return this.aiPhoto(d.target, d.pq);
-    if (d.act === "peaudone") { s.steps.peau = true; this.save(); this.view = "reveal"; this.zone = null; this.aiMsg = null; return this.render(); }
+    if (d.act === "peaudone") {
+      var marksNow = s.answers.photoVisage || {}, n = Object.keys(marksNow).reduce(function (t, z) { return t + marksNow[z].length; }, 0);
+      (s.keepThumb ? this.makeThumb() : Promise.resolve("")).then(function (thumb) {
+        s.skinLog = [{ at: Date.now(), marks: marksNow, n: n, goal: self.goalLabel().replace("Objectif : ", ""), thumb: thumb }].concat(s.skinLog || []).slice(0, 24);
+        s.steps.peau = true; self.save(); self.zone = null; self.aiMsg = null; self.render();
+      });
+      return;
+    }
+    if (d.sf) { this.skinFilter = d.sf; return this.render(); }
+    if (d.dellog) { s.skinLog.splice(+d.dellog, 1); this.save(); return this.render(); }
     if (d.act === "addroutine") { var R = buildRoutine(s.answers); ["matin", "soir", "hebdo"].forEach(function (k) { R[k].forEach(function (it) { if (s.shelf.indexOf(it.id) < 0) s.shelf.push(it.id); }); }); this.save(); t.textContent = "Ajoutée ✓"; return; }
     if (d.act === "restart") { s.answers = {}; s.done = false; this.save(); this.step = 0; this.view = "diag"; return this.render(); }
     if (d.act === "scanpaste") { this.scan = { mode: "paste" }; return this.render(); }
@@ -1441,6 +1601,7 @@
     var d = e.target.dataset, f = e.target.files && e.target.files[0];
     if (d.photo && f) { if (this.photos[d.photo]) URL.revokeObjectURL(this.photos[d.photo]); this.photos[d.photo] = URL.createObjectURL(f); this.photoFiles = this.photoFiles || {}; this.photoFiles[d.photo] = f; this.aiMsg = null; return this.render(); }
     if (d.scanphoto && f) return this.scanPhoto(f);
+    if (d.keepthumb) { this.state.keepThumb = e.target.checked; this.save(); return; }
     if (d.refill) { var st = this.state.refills[d.refill] || {}; st[d.f] = e.target.value; this.state.refills[d.refill] = st; this.save(); this.render(); }
   };
   A.onSubmit = function (e) {

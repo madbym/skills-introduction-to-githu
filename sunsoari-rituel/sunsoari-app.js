@@ -384,6 +384,21 @@
     { id: "illiyoon", brand: "Illiyoon", name: "Ceramide Ato Concentrate Cream", origin: "Corée", zone: "visage", step: "hydratant", act: ["ceramides"], for: ["seche", "sensible", "secheresse", "rougeurs", "normale"], avoid: [], desc: "Crème aux céramides pour le visage et le corps." },
     { id: "curel", brand: "Curel (Kao)", name: "Intensive Moisture Cream", origin: "Japon", zone: "visage", step: "hydratant", act: ["ceramides"], for: ["sensible", "seche", "rougeurs"], avoid: [], desc: "Crème hydratante aux céramides, pensée pour les peaux sensibles." },
     { id: "cosrxlotion", brand: "COSRX", name: "Oil-Free Ultra-Moisturizing Lotion", origin: "Corée", zone: "visage", step: "hydratant", act: [], for: ["mixte", "imperfections", "texture"], avoid: [], desc: "Lotion hydratante légère, sans huile, à la sève de bouleau." },
+    // Visage · ajouts pour des routines complètes
+    { id: "imfromrice", brand: "I'm From", name: "Rice Toner", origin: "Corée", zone: "visage", step: "tonique", act: ["riz"], for: ["teint", "seche", "normale", "texture"], avoid: [], desc: "Tonique laiteux à l'extrait de riz." },
+    { id: "klairs", brand: "Klairs", name: "Supple Preparation Unscented Toner", origin: "Corée", zone: "visage", step: "tonique", act: ["hyaluronique", "panthenol"], for: ["sensible", "rougeurs", "seche", "normale"], avoid: [], desc: "Tonique hydratant, version sans parfum." },
+    { id: "nectaromerose", brand: "Nectarome", name: "Eau de rose de Damas", origin: "Maroc", madeIn: "au Maroc", zone: "visage", step: "tonique", act: [], for: ["normale", "seche", "mixte", "teint"], avoid: [], desc: "Eau florale de rose distillée au Maroc, en brume ou sur un coton." },
+    { id: "missha", brand: "Missha", name: "Time Revolution The First Essence", origin: "Corée", zone: "visage", step: "essence", act: ["ferments"], for: ["teint", "texture", "normale", "seche", "mixte"], avoid: [], desc: "Essence aux ferments, à presser sur la peau après le tonique." },
+    { id: "snailess", brand: "COSRX", name: "Advanced Snail 96 Mucin Essence", origin: "Corée", zone: "visage", step: "essence", act: ["mucine"], for: ["secheresse", "texture", "normale", "mixte"], avoid: ["vegan"], desc: "Essence fluide à la mucine d'escargot." },
+    { id: "anuaserum", brand: "Anua", name: "Niacinamide 10% + TXA 4% Serum", origin: "Corée", zone: "visage", step: "serum", act: ["niacinamide", "tranexamique"], for: ["taches", "teint", "imperfections", "mixte"], avoid: [], desc: "Sérum à la niacinamide et à l'acide tranexamique." },
+    { id: "bojlight", brand: "Beauty of Joseon", name: "Light On Serum Centella + Vita C", origin: "Corée", zone: "visage", step: "serum", act: ["centella", "vitc"], for: ["teint", "taches", "sensible", "normale"], avoid: [], desc: "Sérum doux à la vitamine C et à la centella." },
+    { id: "cosrxvitc", brand: "COSRX", name: "The Vitamin C 23 Serum", origin: "Corée", zone: "visage", step: "serum", act: ["vitc"], for: ["taches", "teint"], avoid: ["sensible", "rougeurs"], desc: "Sérum concentré en vitamine C pure, à introduire progressivement." },
+    { id: "bojdynasty", brand: "Beauty of Joseon", name: "Dynasty Cream", origin: "Corée", zone: "visage", step: "hydratant", act: ["riz", "niacinamide", "squalane"], for: ["seche", "normale", "teint", "secheresse"], avoid: [], desc: "Crème riche au riz et au ginseng, inspirée de rituels coréens anciens." },
+    { id: "roundlabbirch", brand: "Round Lab", name: "Birch Juice Moisturizing Cream", origin: "Corée", zone: "visage", step: "hydratant", act: ["hyaluronique", "panthenol"], for: ["mixte", "normale", "secheresse"], avoid: [], desc: "Crème hydratante légère à la sève de bouleau." },
+    { id: "laneige", brand: "Laneige", name: "Water Sleeping Mask", origin: "Corée", zone: "visage", step: "nuit", act: ["hyaluronique"], for: ["secheresse", "teint", "normale", "seche", "mixte"], avoid: [], desc: "Masque de nuit gel, en dernière étape le soir, 2 à 3 fois par semaine." },
+    { id: "abib", brand: "Abib", name: "Mild Acidic pH Sheet Mask Heartleaf Fit", origin: "Corée", zone: "visage", step: "masquev", act: ["heartleaf"], for: ["sensible", "rougeurs", "mixte", "normale"], avoid: [], desc: "Masque en tissu apaisant, 15 à 20 minutes." },
+    { id: "imfrommask", brand: "I'm From", name: "Rice Mask", origin: "Corée", zone: "visage", step: "masquev", act: ["riz"], for: ["teint", "texture", "seche", "normale"], avoid: [], desc: "Masque à rincer au riz, texture granuleuse douce." },
+    { id: "cosrxahabha", brand: "COSRX", name: "AHA/BHA Clarifying Treatment Toner", origin: "Corée", zone: "visage", step: "exfoliant", act: ["aha", "bha"], for: ["texture", "imperfections", "mixte"], avoid: ["sensible", "rougeurs", "acides", "enceinte"], desc: "Tonique exfoliant léger aux AHA et BHA." },
     // Visage · protection solaire
     { id: "bojsun", brand: "Beauty of Joseon", name: "Relief Sun Rice + Probiotics SPF 50+", origin: "Corée", zone: "visage", step: "spf", act: ["spf", "riz"], for: ["taches", "teint", "seche", "normale", "mixte", "sensible"], avoid: [], desc: "Crème solaire visage au riz, finition légère." },
     { id: "biore", brand: "Bioré", name: "UV Aqua Rich Watery Essence SPF 50+", origin: "Japon", zone: "visage", step: "spf", act: ["spf", "hyaluronique"], for: ["mixte", "imperfections", "taches", "normale"], avoid: [], desc: "Solaire très fluide, texture gel." },
@@ -404,7 +419,7 @@
     { id: "daenggi", brand: "Daeng Gi Meo Ri", name: "Ki Gold Energizing Shampoo", origin: "Corée", zone: "cuir", step: "shampoing", act: ["ginseng"], for: ["cuirOk", "cuirGras", "fins"], avoid: [], desc: "Shampoing coréen aux extraits de plantes de la pharmacopée traditionnelle." }
   ];
 
-  var STEP_LABEL = { demaquillant: "Démaquillage", nettoyant: "Nettoyant", tonique: "Tonique", serum: "Sérum", exfoliant: "Exfoliant (1 à 2 fois par semaine)", yeux: "Contour des yeux", hydratant: "Hydratant", spf: "Protection solaire", corps: "Soin du corps", huile: "Huile", shampoing: "Shampoing", soin: "Soin sans rinçage", masque: "Masque" };
+  var STEP_LABEL = { essence: "Essence", nuit: "Masque de nuit", masquev: "Masque visage", demaquillant: "Démaquillage", nettoyant: "Nettoyant", tonique: "Tonique", serum: "Sérum", exfoliant: "Exfoliant (1 à 2 fois par semaine)", yeux: "Contour des yeux", hydratant: "Hydratant", spf: "Protection solaire", corps: "Soin du corps", huile: "Huile", shampoing: "Shampoing", soin: "Soin cheveux sans rinçage", masque: "Masque cheveux" };
 
   // ---------------------------------------------------------------------------
   // TENDANCES · formulées avec recul (sources listées en bas de l'onglet)
@@ -487,6 +502,8 @@
       options: [["hinoki", "Hinoki", "Bois clair · Onsha et SHIFT Hinoki Spring", "tree"], ["fleur", "Floral", "Fleur de Prunier (Onsha) · Cherry Blossom (SHIFT)", "flower"], ["patchouli", "Patchouli & Rose", "Capsules SHIFT · chaud, enveloppant", "flower"], ["fruite", "Fruité", "Capsules SHIFT · énergie", "sun"], ["decouverte", "Découverte", "SHIFT · 6 senteurs à tester", "sprout"], ["ocean", "Océan", "Onsha · frais, iodé", "wave"], ["pin", "Forêt de Pin", "Onsha · vert, résineux", "leaf"], ["sans", "Sans senteur", "Onsha", "none"]] },
     { id: "origines", sec: 4, title: "Quelles beautés du monde t'attirent ?", sub: "Pour orienter les autres marques qu'on te propose.", multi: true, none: "toutes",
       options: [["Corée", "K-beauty", "Corée", "sprout"], ["Japon", "J-beauty", "Japon", "flower"], ["Afrique", "Marques africaines", "Karité, argan, savon noir…", "sun"], ["toutes", "Un peu de tout", "", "heart"]] },
+    { id: "format", sec: 4, title: "Quelle routine te ressemble ?", sub: "Tu pourras changer à tout moment depuis ta routine.",
+      options: [["essentielle", "L'essentiel", "3 ou 4 gestes, le strict nécessaire", "sprout"], ["complete", "La routine complète", "Toutes les étapes, façon K-beauty", "sunmoon"], ["equilibree", "Entre les deux", "Les bases et un soin ciblé", "halfsun"]] },
     { id: "budget", sec: 4, title: "Pour ta douche, ton budget de départ ?", sub: "Tu pourras compléter ton rituel plus tard.",
       options: [["petit", "Moins de 30 €", "", "coin"], ["moyen", "30 à 70 €", "", "coin"], ["grand", "Plus de 70 €", "", "coin"]] }
   ];
@@ -769,6 +786,7 @@
     ".app.full{border:0;border-radius:0;max-width:none;min-height:100vh}.app.full .body{max-width:640px;margin:0 auto}.app.full .bnav{max-width:none}",
     ".shiftbox{background:linear-gradient(160deg,var(--water-soft),var(--paper));border-radius:24px;padding:14px;margin:6px 0 14px}.shiftbox h4{margin:8px 0 4px}.shiftbox>p{font-size:14px;color:var(--muted);margin:0 0 12px}",
     "a.chip{text-decoration:none;display:inline-flex;align-items:center}",
+    ".modes{display:flex;align-items:center;gap:6px;margin:0 0 8px;flex-wrap:wrap}.modes span{font-size:12px;color:var(--muted);margin-right:2px}.modes button{font:inherit;font-size:13px;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;cursor:pointer;color:var(--ink)}.modes button[aria-pressed=true]{border-color:var(--water);background:var(--water-soft);color:var(--water);font-weight:600}",
     ".sect.left{text-align:left;margin-left:2px}",
     ".stories .storycard{flex:0 0 150px;height:190px;border:0;border-radius:20px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;text-align:left;cursor:pointer;font:inherit;color:var(--ink);scroll-snap-align:start}",
     ".storycard b{font-family:var(--display);font-weight:400;font-size:21px;line-height:1.1}",
@@ -993,7 +1011,7 @@
   function band(n) { return n >= 95 ? "Idéal" : n >= 70 ? "Très adapté" : n >= 50 ? "Adapté" : n >= 35 ? "Avec précautions" : "Peu adapté"; }
   function bandClass(n) { return n >= 70 ? "b-hi" : n >= 50 ? "b-mid" : "b-lo"; }
 
-  var STEP_FREQ = { demaquillant: "Chaque soir, sur peau sèche, puis rince.", nettoyant: "Matin et/ou soir, en massant 30 secondes.", tonique: "Après le nettoyage, matin et soir.", serum: "Quelques gouttes après le tonique.", exfoliant: "1 à 2 fois par semaine, le soir, jamais le même soir qu'un rétinoïde.", yeux: "Le soir, une petite quantité en tapotant.", hydratant: "Matin et soir, en dernière étape avant la protection solaire.", spf: "Chaque matin, en quantité généreuse, à renouveler en cas d'exposition.", corps: "Après la douche, sur peau encore humide.", huile: "Quelques gouttes sur les longueurs ou la peau.", shampoing: "Selon ta fréquence de lavage, en massant le cuir chevelu.", soin: "Sur cheveux humides, sans rincer.", masque: "1 fois par semaine, 10 à 20 minutes." };
+  var STEP_FREQ = { essence: "Après le tonique, quelques gouttes pressées avec les paumes.", nuit: "Le soir en dernière étape, 2 à 3 fois par semaine.", masquev: "1 à 2 fois par semaine, 15 à 20 minutes.", demaquillant: "Chaque soir, sur peau sèche, puis rince.", nettoyant: "Matin et/ou soir, en massant 30 secondes.", tonique: "Après le nettoyage, matin et soir.", serum: "Quelques gouttes après le tonique.", exfoliant: "1 à 2 fois par semaine, le soir, jamais le même soir qu'un rétinoïde.", yeux: "Le soir, une petite quantité en tapotant.", hydratant: "Matin et soir, en dernière étape avant la protection solaire.", spf: "Chaque matin, en quantité généreuse, à renouveler en cas d'exposition.", corps: "Après la douche, sur peau encore humide.", huile: "Quelques gouttes sur les longueurs ou la peau.", shampoing: "Selon ta fréquence de lavage, en massant le cuir chevelu.", soin: "Sur cheveux humides, sans rincer.", masque: "1 fois par semaine, 10 à 20 minutes." };
   // ---------------------------------------------------------------------------
   // IA · deux branchements possibles
   //  1. data-ai-endpoint="https://…" : ton serveur (Claude API) reçoit {input, json, images} et renvoie {text}
@@ -1067,18 +1085,79 @@
   function byId(id) { return allProducts().filter(function (p) { return p.id === id; })[0]; }
 
   // La routine révélée : Matin · Soir · Hebdo · Douche
-  function buildRoutine(a) {
-    var plan = routinePlan(a), r = recommend(a), steps = {};
-    plan.forEach(function (g) { g.items.forEach(function (it) { steps[g.group.indexOf("Cheveux") === 0 ? "c:" + it.step : g.group.indexOf("Cuir") === 0 ? "cc:" + it.step : g.group.indexOf("Corps") === 0 ? "b:" + it.step : it.step] = "e:" + it.r.best.p.id; }); });
-    var pick = function (list) { return list.filter(function (k) { return steps[k]; }).map(function (k) { return { step: k.replace(/^.*:/, ""), id: steps[k] }; }); };
-    return {
-      matin: pick(["nettoyant", "hydratant", "spf"]).filter(function (x, i) { return a.routine !== "aucune" || x.step === "spf"; }),
-      soir: pick(["demaquillant", "nettoyant", "tonique", "serum", "yeux", "hydratant"]),
-      hebdo: pick(["exfoliant", "c:masque", "c:shampoing", "c:soin", "cc:shampoing", "b:corps", "b:huile"]),
-      douche: [{ step: "douche", id: "s:" + r.main }].concat(r.refills.map(function (k) { return { step: "recharge", id: "s:" + k }; })),
-      reco: r
-    };
+  // Choisit le meilleur produit pour une étape : on écarte ce qui est déconseillé, puis on classe
+  // par score de compatibilité, réponses correspondantes, origine préférée et ingrédients recherchés.
+  function pickFor(zone, step, a, opts) {
+    opts = opts || {};
+    var tags = tagsOf(a), origins = a.origines || [];
+    var list = allProducts().filter(function (p) { return !p.own && p.zone === zone && p.step === step && (opts.exclude || []).indexOf(p.id) < 0; }).map(function (p) {
+      var bad = (p.avoid || []).some(function (x) { return tags.indexOf(x) > -1; }) || (tags.indexOf("acides") > -1 && p.act.some(function (x) { return ["aha", "bha", "pha"].indexOf(x) > -1; }));
+      var match = (p.for || []).filter(function (x) { return tags.indexOf(x) > -1; }).length;
+      var pref = (opts.prefer || []).filter(function (x) { return p.act.indexOf(x) > -1; }).length;
+      var orig = origins.length && origins.indexOf("toutes") < 0 && (origins.indexOf(p.origin) > -1 || (origins.indexOf("Afrique") > -1 && ["Mali", "Ghana", "Nigeria", "Maroc", "Sénégal"].indexOf(p.origin) > -1)) ? 6 : 0;
+      return { p: p, bad: bad, score: fitScore(p, a).total + match * 4 + pref * 8 + orig + (p.madeIn ? 2 : 0) };
+    }).filter(function (x) { return !x.bad; }).sort(function (x, y) { return y.score - x.score; });
+    return list.length ? list[0].p : null;
   }
+
+  function buildRoutine(a) {
+    var r = recommend(a), mode = a.format || "equilibree", used = [];
+    var concerns = (a.concerns || []).filter(function (c) { return c !== "aucune"; });
+    var add = function (arr, zone, step, opts) { opts = opts || {}; opts.exclude = used; var p = pickFor(zone, step, a, opts); if (p) { used.push(p.id); arr.push({ step: step, id: p.id }); } };
+    var morningActs = ["vitc", "niacinamide", "tranexamique", "centella", "hyaluronique"], nightActs = ["retinoides", "pdrn", "ceramides", "mucine", "panthenol", "niacinamide", "hyaluronique"];
+    var matin = [], soir = [], hebdo = [];
+    var makeup = a.routine === "deux" || a.routine === "soir";
+    if (mode === "essentielle") {
+      add(matin, "visage", "nettoyant"); add(matin, "visage", "hydratant"); add(matin, "visage", "spf");
+      if (makeup) add(soir, "visage", "demaquillant");
+      soir.push({ step: "nettoyant", id: matin[0] && matin[0].id }); if (concerns.length) add(soir, "visage", "serum", { prefer: nightActs });
+      soir.push({ step: "hydratant", id: matin[1] && matin[1].id });
+    } else {
+      add(matin, "visage", "nettoyant"); add(matin, "visage", "tonique"); add(matin, "visage", "serum", { prefer: morningActs });
+      if (mode === "complete") add(matin, "visage", "essence");
+      add(matin, "visage", "hydratant"); add(matin, "visage", "spf");
+      add(soir, "visage", "demaquillant");
+      soir.push({ step: "nettoyant", id: matin[0] && matin[0].id }); soir.push({ step: "tonique", id: matin[1] && matin[1].id });
+      if (mode === "complete") soir.push({ step: "essence", id: (matin.filter(function (x) { return x.step === "essence"; })[0] || {}).id });
+      add(soir, "visage", "serum", { prefer: nightActs });
+      if (mode === "complete" || concerns.indexOf("rides") > -1) add(soir, "visage", "yeux");
+      add(soir, "visage", "hydratant");
+      if (mode === "complete") add(soir, "visage", "nuit");
+    }
+    matin = matin.filter(function (x) { return x.id; }); soir = soir.filter(function (x) { return x.id; });
+    // Ordre d'application : essence avant sérum le matin
+    var order = ["demaquillant", "nettoyant", "tonique", "essence", "serum", "yeux", "hydratant", "nuit", "spf"];
+    var byOrder = function (x, y) { return order.indexOf(x.step) - order.indexOf(y.step); };
+    matin.sort(byOrder); soir.sort(byOrder);
+    if (concerns.indexOf("texture") > -1 || concerns.indexOf("imperfections") > -1 || mode === "complete") add(hebdo, "visage", "exfoliant");
+    add(hebdo, "visage", "masquev");
+    add(hebdo, "cheveux", "masque"); if (mode !== "essentielle") { add(hebdo, "cheveux", "shampoing"); add(hebdo, "cheveux", "soin"); }
+    if ((a.cuir || []).some(function (c) { return c !== "cuirOk"; })) add(hebdo, "cuir", "shampoing");
+    add(hebdo, "corps", "corps"); if (mode === "complete") add(hebdo, "corps", "huile");
+    return { matin: matin, soir: soir, hebdo: hebdo, mode: mode,
+      douche: [{ step: "douche", id: "s:" + r.main }].concat(r.refills.map(function (k) { return { step: "recharge", id: "s:" + k }; })), reco: r };
+  }
+
+  // Recommandations « pour toi », par besoin, pour nourrir l'accueil et la boutique.
+  function forYou(a) {
+    var tags = tagsOf(a), groups = [];
+    var concerns = (a.concerns || []).filter(function (c) { return c !== "aucune"; });
+    concerns.forEach(function (c) {
+      var l = allProducts().filter(function (p) { return !p.own && p.zone === "visage" && ((p.for || []).indexOf(c) > -1 || p.act.some(function (x) { return (ACT_GOALS[x] || []).indexOf(c) > -1; })); })
+        .map(function (p) { return { p: p, s: fitScore(p, a).total }; }).filter(function (x) { return x.s >= 50; }).sort(function (x, y) { return y.s - x.s; }).slice(0, 6);
+      if (l.length) groups.push({ title: "Pour " + (TAG_LABEL[c] === "taches" ? "tes taches" : "ton objectif : " + TAG_LABEL[c]), items: l });
+    });
+    var hair = allProducts().filter(function (p) { return !p.own && (p.zone === "cheveux" || p.zone === "cuir"); }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).sort(function (x, y) { return y.s - x.s; }).slice(0, 6);
+    if (hair.length) groups.push({ title: "Pour tes cheveux " + (TAG_LABEL[a.texture] || "").replace("cheveux ", ""), items: hair });
+    var body = allProducts().filter(function (p) { return !p.own && p.zone === "corps"; }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).sort(function (x, y) { return y.s - x.s; }).slice(0, 6);
+    if (body.length) groups.push({ title: "Pour ton corps", items: body });
+    var shift = ["shiftAroma", "shiftSoin", "shiftCaps", "pureWater"].map(function (k) { var p = byId("s:" + k); return { p: p, s: fitScore(p, a).total }; });
+    groups.splice(1, 0, { title: "Ton rituel douche SHIFT", items: shift });
+    var africa = allProducts().filter(function (p) { return p.madeIn; }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).sort(function (x, y) { return y.s - x.s; });
+    groups.push({ title: "Fabriqué en Afrique, pour toi", items: africa });
+    return groups;
+  }
+
   function alternatives(p, a, n) {
     return allProducts().filter(function (x) { return x.id !== p.id && x.zone === p.zone && x.step === p.step; })
       .map(function (x) { return { p: x, s: fitScore(x, a).total }; }).sort(function (x, y) { return y.s - x.s; }).slice(0, n || 4);
@@ -1221,6 +1300,8 @@
   A.vReveal = function () {
     var a = this.state.answers, R = buildRoutine(a), self = this, tabs = [["matin", "Matin", "sun"], ["soir", "Soir", "moon"], ["hebdo", "Hebdo", "sprout"], ["douche", "Douche", "shower"]];
     var html = "<div class='revealhead'><p class='kicker'>Ta nouvelle routine est prête</p><h3>" + esc(this.goalLabel()) + "</h3></div><div class='seg-tabs'>" + tabs.map(function (t) { return "<button data-rtab='" + t[0] + "' aria-pressed='" + (self.rtab === t[0]) + "'>" + icon(t[2]) + t[1] + "</button>"; }).join("") + "</div>";
+    html += "<div class='modes'><span>Format</span>" + [["essentielle", "Essentielle"], ["equilibree", "Équilibrée"], ["complete", "Complète"]].map(function (m) { return "<button data-mode='" + m[0] + "' aria-pressed='" + (R.mode === m[0]) + "'>" + m[1] + "</button>"; }).join("") + "</div>";
+    if (this.rtab === "matin" || this.rtab === "soir") html += "<p class='sub' style='margin:0 0 12px'>" + R[this.rtab].length + " étapes · " + ({ essentielle: "le strict nécessaire", equilibree: "les bases et un soin ciblé", complete: "la routine complète, façon K-beauty" })[R.mode] + "</p>";
     var list = R[this.rtab];
     if (this.rtab === "douche" && R.reco.why.length) html += "<p class='why big'>" + esc(R.reco.why.join(" ")) + "</p>";
     if (!list.length) html += "<p class='empty'>Rien à ajouter ici pour ton profil : ta routine reste courte, c'est voulu.</p>";
@@ -1290,6 +1371,7 @@
     });
     html += "<p class='sect'>Journal de peau</p><div class='mood'><p>Comment ta peau se sent-elle aujourd'hui ?</p><div>" + [["1", "Mauvais", "☹"], ["2", "Bof", "🙁"], ["3", "Ça va", "🙂"], ["4", "Bien", "😊"], ["5", "Génial", "😄"]].map(function (m) { return "<button data-mood='" + m[0] + "' aria-pressed='" + (s.journal[today] === m[0]) + "'><span>" + m[2] + "</span><small>" + m[1] + "</small></button>"; }).join("") + "</div></div>";
     html += this.refillsBox(R.reco);
+    html += forYou(a).slice(0, 4).map(function (g) { return self.reccarousel(g); }).join("");
     html += "<button class='reco-card' data-view='reveal'><b>Recommandé</b><span>Ta routine Matin · Soir · Hebdo · Douche</span></button>";
     html += "<p class='sect'>Demander à l'assistante</p><div class='qgrid'>" + ["Quels produits ne jamais mélanger ?", "Qu'est-ce que la niacinamide ?", "Karité ou céramides pour ma peau sèche ?", "SHIFT ou Onsha pour moi ?"].map(function (q) { return "<button class='qchip' data-ask='" + esc(q) + "'>" + esc(q) + "</button>"; }).join("") + "</div>";
     return html;
@@ -1360,8 +1442,12 @@
       else html += "<div class='list'>" + ids.map(function (id) { var p = byId(id) || (s.scans.filter(function (x) { return x.id === id; })[0] || {}).p; return p ? self.rowProduct(p) : ""; }).join("") + "</div>";
       if (this.ptab === "etagere" && s.shelf.length > 1) html += this.shelfCheck();
     }
+    html += "<p class='sect'>Pour toi</p>" + forYou(a).map(function (g) { return self.reccarousel(g); }).join("");
     html += "<p class='sect'>Sélections</p>" + this.collection("Les trésors d'Afrique", "Karité, argan, savon noir : des marques fabriquées sur place.", allProducts().filter(function (p) { return p.madeIn; })) + this.collection("Apaiser à la coréenne", "Centella, heartleaf, céramides : les incontournables des peaux sensibles.", allProducts().filter(function (p) { return (p.act || []).some(function (x) { return ["centella", "heartleaf", "ceramides"].indexOf(x) > -1; }); })) + this.collection("Le rituel douche", "Filtration et capsules de soin, chez Sunsoari.", allProducts().filter(function (p) { return p.own && ["shiftAroma", "shiftSoin", "shiftCaps", "pureWater", "starterHome", "premierHome"].indexOf(p.key) > -1; }));
     return html;
+  };
+  A.reccarousel = function (g) {
+    return "<div class='coll'><b>" + esc(g.title) + "</b><div class='carousel'>" + g.items.map(function (x) { return "<button class='mini' data-detail='" + x.p.id + "'>" + (x.p.madeIn ? "<span class='made'>Fabriqué " + esc(x.p.madeIn) + "</span>" : "") + "<b>" + esc(x.p.name) + "</b><small>" + esc(x.p.brand) + (x.p.price ? " · " + euro(x.p.price) : x.p.origin ? " · " + esc(x.p.origin) : "") + "</small><span class='fit " + bandClass(x.s) + "'>" + x.s + " % adapté</span></button>"; }).join("") + "</div></div>";
   };
   A.rowProduct = function (p) {
     var s = fitScore(p, this.state.answers);
@@ -1550,6 +1636,7 @@
     if (d.ing) { this.sheet = d.ing; return this.render(); }
     if (d.detail) { this.detail = d.detail; return this.render(); }
     if (d.view) { this.view = d.view; this.detail = null; this.zone = null; this.aiMsg = null; if (d.view === "scan" && this.scan && this.scan.result) this.scan = null; return this.render(); }
+    if (d.mode) { s.answers.format = d.mode; this.save(); return this.render(); }
     if (d.rtab) { this.rtab = d.rtab; return this.render(); }
     if (d.ptab) { this.ptab = d.ptab; return this.render(); }
     if (d.rstab) { this.rsTab = d.rstab; this.guide = null; return this.render(); }

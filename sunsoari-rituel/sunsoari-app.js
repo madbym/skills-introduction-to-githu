@@ -786,6 +786,13 @@
     ".app.full{border:0;border-radius:0;max-width:none;min-height:100vh}.app.full .body{max-width:640px;margin:0 auto}.app.full .bnav{max-width:none}",
     ".shiftbox{background:linear-gradient(160deg,var(--water-soft),var(--paper));border-radius:24px;padding:14px;margin:6px 0 14px}.shiftbox h4{margin:8px 0 4px}.shiftbox>p{font-size:14px;color:var(--muted);margin:0 0 12px}",
     "a.chip{text-decoration:none;display:inline-flex;align-items:center}",
+    ".pluspill{font:inherit;font-size:13px;font-weight:600;border:0;border-radius:999px;padding:7px 14px;cursor:pointer;color:#fff;background:linear-gradient(135deg,var(--water),#4f8f9c)}",
+    ".plushead{background:linear-gradient(160deg,#f6d9a8,var(--water-soft));border-radius:24px;padding:18px;margin-bottom:12px}.plushead h3{font-family:var(--display);font-weight:400;font-size:34px;margin:8px 0 4px;line-height:1.05}.plushead p{margin:0}",
+    ".perks{list-style:none;padding:0;margin:0 0 14px;display:grid;gap:8px}.perks li{display:flex;gap:10px;align-items:center;background:#fff;border-radius:14px;padding:10px 12px;font-size:15px}.perks svg{width:20px;height:20px;fill:none;stroke:var(--sun);stroke-width:1.6;flex:none}",
+    ".plans{display:grid;grid-template-columns:1fr 1fr;gap:10px}.plan2{font:inherit;position:relative;text-align:left;background:#fff;border:2px solid var(--line);border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:4px;cursor:pointer;color:var(--ink)}.plan2[aria-pressed=true]{border-color:var(--water);background:var(--water-soft)}.plan2 .pr{font-size:22px;font-weight:600}.plan2 .pr small,.plan2>small{font-size:12px;color:var(--muted);font-weight:400}",
+    ".best{position:absolute;top:-10px;right:10px;font-size:11px;background:var(--sun);color:#fff;border-radius:999px;padding:2px 8px}",
+    ".paylist{display:grid;gap:8px;margin-bottom:14px}.pay{font:inherit;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;column-gap:10px;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:12px 14px;cursor:pointer;color:var(--ink)}.pay small{grid-column:1;color:var(--muted);font-size:12px}.pay .rad{grid-column:2;grid-row:1/3;align-self:center}.pay[aria-pressed=true]{border-color:var(--water)}.pay[aria-pressed=true] .rad{border:8px solid var(--water)}.pay:disabled{opacity:.5;cursor:not-allowed}",
+    "a.btn.big{display:flex}",
     ".modes{display:flex;align-items:center;gap:6px;margin:0 0 8px;flex-wrap:wrap}.modes span{font-size:12px;color:var(--muted);margin-right:2px}.modes button{font:inherit;font-size:13px;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;cursor:pointer;color:var(--ink)}.modes button[aria-pressed=true]{border-color:var(--water);background:var(--water-soft);color:var(--water);font-weight:600}",
     ".sect.left{text-align:left;margin-left:2px}",
     ".stories .storycard{flex:0 0 150px;height:190px;border:0;border-radius:20px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;text-align:left;cursor:pointer;font:inherit;color:var(--ink);scroll-snap-align:start}",
@@ -1198,7 +1205,7 @@
     var v = this.view, html = "<style>" + CSS + "</style><div class='app" + (this.host.hasAttribute("data-fullscreen") ? " full" : "") + "'>";
     if (v === "diag") html += "<div class='body'>" + this.vDiag() + "</div>";
     else {
-      html += "<div class='body paper'>" + ({ reveal: this.vReveal, today: this.vToday, produits: this.vProduits, scan: this.vScan, ressources: this.vRessources, assistant: this.vAssistant, peau: this.vPeau }[v] || this.vToday).call(this) + "</div>";
+      html += "<div class='body paper'>" + ({ plus: this.vPlus, reveal: this.vReveal, today: this.vToday, produits: this.vProduits, scan: this.vScan, ressources: this.vRessources, assistant: this.vAssistant, peau: this.vPeau }[v] || this.vToday).call(this) + "</div>";
       html += this.nav();
     }
     if (this.detail) html += this.vDetail(this.detail);
@@ -1355,7 +1362,7 @@
   // ---------- Aujourd'hui ----------
   A.vToday = function () {
     var s = this.state, a = s.answers, today = iso(), self = this, R = buildRoutine(a);
-    var html = "<div class='todayhead'><h3>Aujourd'hui</h3><span class='goal'>" + esc(this.goalLabel().replace("Objectif : ", "")) + "</span></div>";
+    var html = "<div class='todayhead'><h3>Aujourd'hui</h3><button class='pluspill' data-view='plus'>Sunsoari+</button></div><p class='goal' style='display:inline-block;margin:0 0 12px'>" + esc(this.goalLabel()) + "</p>";
     html += "<div class='week'>";
     for (var i = -3; i <= 3; i++) {
       var d = addDays(today, i), k = iso(d), c = s.checks[k] || {}, done = (c.matin || []).length + (c.soir || []).length > 0;
@@ -1395,6 +1402,24 @@
 
   // ---------- Vérifier l'état de ma peau ----------
   var SIGN_COLOR = { brillance: "#c9853f", secheresse: "#7d8f76", rougeurs: "#c0553f", imperfections: "#9b5d9e", taches: "#8a5526", texture: "#2f6f7e" };
+  // ---------- Sunsoari+ : abonnement ----------
+  // data-checkout-url="https://…" : page de paiement Stripe (reçoit ?plan=mensuel|annuel&method=…).
+  var PLANS = { mensuel: { label: "Mensuel", price: "4,90 €", per: "par mois", note: "Sans engagement" }, annuel: { label: "Annuel", price: "39 €", per: "par an", note: "Soit 3,25 € par mois · −33 %" } };
+  var PAY = [["applepay", "Apple Pay", "Paiement en un geste sur iPhone, iPad et Mac"], ["carte", "Carte bancaire", "CB, Visa, Mastercard"], ["paypal", "PayPal", "Avec ton compte PayPal"], ["klarna", "Klarna", "Paiement fractionné, avec l'abonnement annuel"]];
+  A.vPlus = function () {
+    var self = this, plan = this.plan || "annuel", pay = this.pay || "applepay";
+    if (pay === "klarna" && plan === "mensuel") pay = "applepay";
+    var html = "<div class='plushead'><span class='tag'>Sunsoari+</span><h3>Va plus loin dans ton rituel</h3><p>7 jours d'essai gratuit, puis " + PLANS[plan].price + " " + PLANS[plan].per + ".</p></div>";
+    html += "<ul class='perks'>" + ["Scans de produits illimités", "Analyse photo du visage et du cuir chevelu", "Suivi de ton évolution dans le temps", "Assistante beauté illimitée", "Nouveau diagnostic à chaque saison", "Alertes météo peau : UV, humidité, pollution", "Guides et stories premium", "−10 % sur sunsoari.fr, SHIFT compris"].map(function (x) { return "<li>" + icon("heart") + "<span>" + esc(x) + "</span></li>"; }).join("") + "</ul>";
+    html += "<div class='plans'>" + Object.keys(PLANS).map(function (k) { var P2 = PLANS[k]; return "<button class='plan2' data-plan='" + k + "' aria-pressed='" + (plan === k) + "'>" + (k === "annuel" ? "<span class='best'>Meilleure offre</span>" : "") + "<b>" + P2.label + "</b><span class='pr'>" + P2.price + " <small>" + P2.per + "</small></span><small>" + P2.note + "</small></button>"; }).join("") + "</div>";
+    html += "<p class='alt-t'>Moyen de paiement</p><div class='paylist'>" + PAY.map(function (m) { var off = m[0] === "klarna" && plan === "mensuel"; return "<button class='pay' data-pay='" + m[0] + "' aria-pressed='" + (pay === m[0]) + "'" + (off ? " disabled" : "") + "><b>" + m[1] + "</b><small>" + esc(off ? "Disponible avec l'abonnement annuel" : m[2]) + "</small><span class='rad'></span></button>"; }).join("") + "</div>";
+    var co = this.host.getAttribute("data-checkout-url");
+    html += co ? "<a class='btn big' href='" + esc(co) + (co.indexOf("?") > -1 ? "&" : "?") + "plan=" + plan + "&method=" + pay + "' target='_top'>Commencer mon essai gratuit</a>" : "<button class='btn big' data-act='plusdemo'>Commencer mon essai gratuit</button>";
+    if (this.plusMsg) html += "<p class='why'>" + esc(this.plusMsg) + "</p>";
+    html += "<p class='note'>Toujours gratuit : diagnostic, routine, planner, journal de peau et 5 scans par mois.<br>Sans engagement : résiliation en 3 clics depuis ton compte. Rappel 2 jours avant la fin de l'essai. Prix TTC. Droit de rétractation de 14 jours.</p>";
+    return html;
+  };
+
   A.vPeau = function () {
     var self = this, all = this.state.answers.photoVisage || {}, f = this.skinFilter || "all", log = this.state.skinLog || [];
     var marks = {}; Object.keys(all).forEach(function (z) { var l = f === "all" ? all[z] : all[z].filter(function (o) { return o === f; }); if (l.length) marks[z] = l; });
@@ -1636,6 +1661,9 @@
     if (d.ing) { this.sheet = d.ing; return this.render(); }
     if (d.detail) { this.detail = d.detail; return this.render(); }
     if (d.view) { this.view = d.view; this.detail = null; this.zone = null; this.aiMsg = null; if (d.view === "scan" && this.scan && this.scan.result) this.scan = null; return this.render(); }
+    if (d.plan) { this.plan = d.plan; this.plusMsg = null; return this.render(); }
+    if (d.pay) { this.pay = d.pay; this.plusMsg = null; return this.render(); }
+    if (d.act === "plusdemo") { this.plusMsg = "Démo : le paiement sera actif sur la version en ligne (" + (PAY.filter(function (m) { return m[0] === (self.pay || "applepay"); })[0] || PAY[0])[1] + ", " + PLANS[this.plan || "annuel"].label.toLowerCase() + ")."; return this.render(); }
     if (d.mode) { s.answers.format = d.mode; this.save(); return this.render(); }
     if (d.rtab) { this.rtab = d.rtab; return this.render(); }
     if (d.ptab) { this.ptab = d.ptab; return this.render(); }

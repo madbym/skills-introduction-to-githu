@@ -15,7 +15,10 @@ Crée une application web mobile (installable sur l'écran d'accueil, PWA), en f
 ## 2. Abonnement (Stripe)
 - **Gratuit à vie** : diagnostic complet, routine Matin · Soir · Hebdo · Douche, planner (plan du jour, recharges, rappels), journal de peau, 5 scans par mois, guides de base, bibliothèque d'ingrédients.
 - **Sunsoari+ à 4,90 € / mois** ou **39 € / an** (7 jours d'essai gratuit) : scans illimités, analyse photo du visage et du cuir chevelu par l'IA, suivi de l'évolution dans le temps, assistante IA illimitée, re-diagnostic à chaque saison, alertes météo peau (UV, humidité, pollution), guides premium, **-10 % sur sunsoari.fr** (code Shopify personnel).
-- Paiement Stripe Checkout + portail client Stripe. Webhooks pour activer / désactiver l'accès.
+- **Moyens de paiement** : **Apple Pay**, **carte bancaire** (CB, Visa, Mastercard), **PayPal** et **Klarna**, via Stripe Checkout (un seul compte Stripe, chaque moyen s'active dans le tableau de bord Stripe > Paramètres > Moyens de paiement). Google Pay activé en plus pour Android. Apple Pay nécessite de vérifier le domaine de l'application dans Stripe.
+- **Abonnement mensuel 4,90 €** : Apple Pay, carte, PayPal (prélèvement automatique chaque mois). **Klarna** : proposé surtout pour l'**abonnement annuel à 39 €** et pour les achats de produits ; vérifier dans Stripe que Klarna est disponible pour les paiements récurrents en France avant de l'afficher sur le mensuel.
+- Portail client Stripe pour changer de moyen de paiement, voir ses factures et résilier. Webhooks Stripe pour activer / désactiver Sunsoari+.
+- Les achats de produits restent sur Shopify (sunsoari.fr), qui gère déjà Apple Pay, carte, PayPal et Klarna via Shopify Payments.
 - **Obligatoire en France** : bouton « Résilier mon abonnement » visible dans le compte (résiliation en 3 clics), rappel par e-mail avant la fin de l'essai, CGV d'abonnement, prix TTC affichés, information sur le droit de rétractation de 14 jours.
 - Paywall doux : jamais bloquant pendant le diagnostic ; affiché quand on touche une fonction Sunsoari+.
 

@@ -19,6 +19,14 @@ Je joins `sunsoari-rituel.js`, un widget déjà fonctionnel. Reprends **exacteme
 - la sélection d'autres marques `EXT` et la fonction `externals` (K-beauty, J-beauty, marques pour cheveux texturés et peaux noires et métissées).
 Ne modifie pas les textes de conseil sans me le demander : ils ont été relus pour respecter la réglementation.
 
+## Expérience (inspirée des meilleurs quiz beauté)
+- **Une question par écran**, plein écran sur mobile, grand titre, sous-titre court.
+- En haut : flèche retour + **barre de progression en 4 segments** (Ta douche, Ta peau, Tes cheveux, Tes envies) + petit label de l'étape.
+- Réponses en **grandes pilules blanches arrondies** : icône au trait à gauche (couleur soleil), texte, rond à cocher à droite (carré pour les choix multiples). Choix unique → passage automatique à l'écran suivant après 0,25 s. Choix multiple → bouton « Continuer » collant en bas.
+- **Écrans intermédiaires** : « Le savais-tu ? » (3 faits vérifiables sur l'eau en France) après l'étape douche, puis « Ton rituel se précise » avec un anneau « X % de ton profil » (pourcentage réel de questions répondues) et des étiquettes du profil, bouton « Affiner mon rituel ».
+- **Interdit** : graphiques de résultats comparatifs inventés (« 47 % plus adapté », « avec nous vs en moyenne »), compte à rebours, fausse urgence. Pas de question sur le sexe : inutile ici.
+- Questions peau à ajouter : priorités (choix multiple : sécheresse, imperfections, rougeurs, teint terne, grain de peau, taches, rien de particulier — exclusif) et routine (matin et soir / matin / soir / pas encore).
+
 ## Écrans
 1. **Accueil** : « Trouve ton rituel de douche » + bouton « Commencer mon diagnostic » + 3 étapes illustrées (diagnostic, rituel, planner).
 2. **Diagnostic** : une question par écran, barre de progression, retour possible. 9 questions : lieu (maison / voyage / les deux), flexible de douche, dureté de l'eau (lien vers https://www.eaupotable.sante.gouv.fr/), ressenti de la peau, texture des cheveux, état des cheveux, attentes (choix multiple), senteur (Hinoki, Océan, Forêt de Pin, Fleur de Prunier, Sans senteur ; question masquée si « rien de parfumé »), budget.

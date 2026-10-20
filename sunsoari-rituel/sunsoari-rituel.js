@@ -127,13 +127,13 @@
   // ---------------------------------------------------------------------------
   var EXT = [
     { brand: "Round Lab", name: "1025 Dokdo Cleanser", origin: "Corée", cat: "Visage",
-      desc: "Nettoyant visage moussant, à utiliser matin et soir.", for: ["seche", "sensible", "normale"], url: "", affiliate: false },
+      desc: "Nettoyant visage moussant, à utiliser matin et soir.", for: ["seche", "sensible", "normale", "rougeurs"], url: "", affiliate: false },
     { brand: "Hada Labo", name: "Gokujyun Lotion", origin: "Japon", cat: "Visage",
-      desc: "Lotion hydratante à l'acide hyaluronique, à appliquer après le nettoyage.", for: ["seche", "normale", "mixte"], url: "", affiliate: false },
+      desc: "Lotion hydratante à l'acide hyaluronique, à appliquer après le nettoyage.", for: ["seche", "normale", "mixte", "secheresse"], url: "", affiliate: false },
     { brand: "COSRX", name: "Advanced Snail 96 Mucin Power Essence", origin: "Corée", cat: "Visage",
-      desc: "Essence à la mucine d'escargot, texture fluide.", for: ["mixte", "normale"], url: "", affiliate: false },
+      desc: "Essence à la mucine d'escargot, texture fluide.", for: ["mixte", "normale", "texture"], url: "", affiliate: false },
     { brand: "Beauty of Joseon", name: "Relief Sun Rice + Probiotics SPF 50+", origin: "Corée", cat: "Visage",
-      desc: "Crème solaire visage au riz, finition légère.", for: ["seche", "sensible", "mixte", "normale"], url: "", affiliate: false },
+      desc: "Crème solaire visage au riz, finition légère.", for: ["taches", "teint", "seche", "sensible", "mixte", "normale"], url: "", affiliate: false },
     { brand: "Nuhanciam", name: "Baume Corps Réparateur Intense", origin: "France", cat: "Corps",
       desc: "Baume corps au karité, pensé pour les peaux noires et métissées.", for: ["seche"], url: "", affiliate: false },
     { brand: "Les Secrets de Loly", name: "Kurl Nectar", origin: "France", cat: "Cheveux",
@@ -145,8 +145,13 @@
   ];
 
   function externals(a) {
-    var keys = [a.peau, a.texture, a.cheveux], picked = [], cats = {};
-    EXT.forEach(function (p) {
+    var keys = [a.peau, a.texture, a.cheveux].concat(a.concerns || []), picked = [], cats = {};
+    var cs = a.concerns || [];
+    var sorted = EXT.slice().sort(function (x, y) {
+      var hx = x.for.some(function (k) { return cs.indexOf(k) > -1; }) ? 0 : 1, hy = y.for.some(function (k) { return cs.indexOf(k) > -1; }) ? 0 : 1;
+      return hx - hy;
+    });
+    sorted.forEach(function (p) {
       var hit = p.for.some(function (k) { return keys.indexOf(k) > -1; });
       if (hit && (cats[p.cat] || 0) < 2) { picked.push(p); cats[p.cat] = (cats[p.cat] || 0) + 1; }
     });
@@ -160,26 +165,71 @@
   // ---------------------------------------------------------------------------
   // Questions du diagnostic
   // ---------------------------------------------------------------------------
+  // Icônes au trait (style Lovi), dessinées en SVG 24×24.
+  var ICONS = {
+    home: "<path d='M4 11l8-7 8 7v9H4z'/><path d='M10 20v-6h4v6'/>",
+    plane: "<path d='M3 13l18-7-7 18-2-8z'/>",
+    both: "<path d='M3 12l6-5 6 5v7H3z'/><path d='M14 9l7-3-3 7'/>",
+    yes: "<path d='M5 12l5 5 9-10'/>",
+    no: "<path d='M6 6l12 12M18 6L6 18'/>",
+    ask: "<circle cx='12' cy='12' r='9'/><path d='M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6M12 17h.01'/>",
+    drop: "<path d='M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z'/>",
+    drops: "<path d='M8 4s4 5 4 8a4 4 0 0 1-8 0c0-3 4-8 4-8z'/><path d='M17 9s3 3.5 3 5.5a3 3 0 0 1-6 0c0-2 3-5.5 3-5.5z'/>",
+    dots: "<circle cx='7' cy='8' r='1.2'/><circle cx='15' cy='6' r='1.2'/><circle cx='11' cy='13' r='1.2'/><circle cx='17' cy='16' r='1.2'/><circle cx='7' cy='17' r='1.2'/>",
+    flame: "<path d='M12 3c1 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-4 3-6 1 2 2 2 3 1-1-2 0-4 0-6z'/>",
+    halfsun: "<circle cx='12' cy='12' r='4'/><path d='M12 8v8' /><path d='M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5'/>",
+    wave: "<path d='M3 9c3-3 6 3 9 0s6 3 9 0M3 15c3-3 6 3 9 0s6 3 9 0'/>",
+    spots: "<circle cx='8' cy='9' r='4'/><circle cx='16' cy='15' r='4'/><circle cx='8' cy='18' r='2'/>",
+    leaf: "<path d='M5 19C5 9 11 5 20 4c-1 9-5 15-15 15z'/><path d='M5 19l8-8'/>",
+    sun: "<circle cx='12' cy='12' r='4'/><path d='M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5'/>",
+    moon: "<path d='M20 14A8 8 0 1 1 10 4a6 6 0 0 0 10 10z'/>",
+    sunmoon: "<circle cx='9' cy='12' r='4'/><path d='M9 3v2M9 19v2M2 12h2M3.5 6.5L5 8M3.5 17.5L5 16'/><path d='M21 15a5 5 0 0 1-6-7 5 5 0 1 0 6 7z'/>",
+    sprout: "<path d='M12 21v-8'/><path d='M12 13c0-4-3-6-7-6 0 4 3 6 7 6zM12 11c0-4 3-6 7-6 0 4-3 6-7 6z'/>",
+    straight: "<path d='M7 3v18M12 3v18M17 3v18'/>",
+    wavy: "<path d='M7 3c-2 4 2 6 0 9s2 6 0 9M12 3c-2 4 2 6 0 9s2 6 0 9M17 3c-2 4 2 6 0 9s2 6 0 9'/>",
+    curly: "<path d='M8 3a3 3 0 1 0 0 6 3 3 0 1 1 0 6 3 3 0 1 0 0 6M16 3a3 3 0 1 0 0 6 3 3 0 1 1 0 6 3 3 0 1 0 0 6'/>",
+    coily: "<path d='M6 4c3 0 3 3 0 3s-3 3 0 3 3 3 0 3-3 3 0 3 3 3 0 3M13 4c3 0 3 3 0 3s-3 3 0 3 3 3 0 3-3 3 0 3 3 3 0 3M20 4c-3 0-3 3 0 3'/>",
+    dry: "<path d='M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z'/><path d='M9 14l6-3'/>",
+    color: "<circle cx='12' cy='12' r='8'/><path d='M12 4a8 8 0 0 1 0 16z' fill='currentColor'/>",
+    thin: "<path d='M12 3v18'/><path d='M9 6c1 2 1 4 0 6'/>",
+    heart: "<path d='M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z'/>",
+    flower: "<circle cx='12' cy='12' r='2.5'/><path d='M12 9.5C10 4 14 4 12 9.5M14.5 12C20 10 20 14 14.5 12M12 14.5C14 20 10 20 12 14.5M9.5 12C4 14 4 10 9.5 12'/>",
+    tree: "<path d='M12 3l6 9h-4l4 6H6l4-6H6z'/><path d='M12 18v3'/>",
+    shower: "<path d='M4 20V8a4 4 0 0 1 8 0'/><path d='M9 8h6'/><path d='M10 12v1M12 12v2M14 12v1M11 16v1M13 16v1'/>",
+    none: "<circle cx='12' cy='12' r='8'/><path d='M7 17L17 7'/>",
+    coin: "<circle cx='12' cy='12' r='8'/><path d='M14.5 9.5a3 3 0 1 0 0 5M8 11h5M8 13h5'/>"
+  };
+  function icon(name) { return name && ICONS[name] ? "<svg viewBox='0 0 24 24' aria-hidden='true'>" + ICONS[name] + "</svg>" : ""; }
+
+  var SECTIONS = ["Ta douche", "Ta peau", "Tes cheveux", "Tes envies"];
+
+  // Une entrée par écran. type "info" = écran intermédiaire (comme Lovi), sans question.
   var QUESTIONS = [
-    { id: "lieu", title: "Où vas-tu surtout l'utiliser ?", sub: "On adapte le format à ta salle de bain.",
-      options: [["maison", "À la maison", "Ma douche de tous les jours"], ["voyage", "Souvent en déplacement", "Hôtel, location, salle de sport"], ["deux", "Les deux", "Un rituel à la maison et un qui me suit"]] },
-    { id: "flexible", title: "Ta douche a-t-elle un flexible avec une douchette à main ?", sub: "C'est ce qui permet de visser nos pommeaux et coques de diffusion.",
-      options: [["oui", "Oui", "Un tuyau souple et une douchette"], ["non", "Non", "Seulement une douche de tête fixe"], ["nsp", "Je ne sais pas", "On t'aide à vérifier"]] },
-    { id: "eau", title: "Comment est l'eau chez toi ?", sub: "Indice : des traces blanches sur la robinetterie signalent souvent une eau calcaire.",
-      link: ["Consulter la qualité de l'eau de ta commune", "https://www.eaupotable.sante.gouv.fr/"],
-      options: [["douce", "Plutôt douce", "Peu de traces blanches"], ["moyenne", "Moyenne", "Un peu de calcaire"], ["calcaire", "Calcaire", "Traces blanches fréquentes"], ["nsp", "Je ne sais pas", ""]] },
-    { id: "peau", title: "Après la douche, ta peau est plutôt…", sub: "Ton ressenti suffit. Ce n'est pas un diagnostic médical.",
-      options: [["seche", "Sèche, elle tiraille", ""], ["sensible", "Sensible, vite inconfortable", ""], ["mixte", "Mixte à grasse", ""], ["normale", "Confortable", ""]] },
-    { id: "texture", title: "Ta texture de cheveux ?", sub: "",
-      options: [["raides", "Raides", ""], ["ondules", "Ondulés", ""], ["boucles", "Bouclés", ""], ["crepus", "Frisés à crépus", ""]] },
-    { id: "cheveux", title: "Et leur état en ce moment ?", sub: "",
-      options: [["secs", "Secs ou ternes", ""], ["colores", "Colorés ou décolorés", ""], ["fins", "Fins, vite plats", ""], ["ok", "Plutôt contente", ""]] },
-    { id: "envies", title: "Qu'attends-tu de ta douche ?", sub: "Plusieurs choix possibles.", multi: true,
-      options: [["senteur", "Un moment senteur", "Une douche qui sent bon"], ["chlore", "Moins de chlore", "Selon la fiche du fabricant"], ["soir", "Un rituel du soir", "Ralentir, se poser"], ["jet", "Un jet plus doux", "Un jet plus fin"], ["sansparfum", "Rien de parfumé", "Je préfère sans senteur"]] },
-    { id: "senteur", title: "Quelle senteur t'attire ?", sub: "Tu pourras en changer à chaque recharge.", skipIf: function (a) { return (a.envies || []).indexOf("sansparfum") > -1; },
-      options: [["hinoki", "Hinoki", "Bois clair, apaisant"], ["ocean", "Océan", "Frais, iodé"], ["pin", "Forêt de Pin", "Vert, résineux"], ["fleur", "Fleur de Prunier", "Floral, doux"], ["sans", "Sans senteur", ""]] },
-    { id: "budget", title: "Pour commencer, ton budget ?", sub: "Tu pourras compléter ton rituel plus tard.",
-      options: [["petit", "Moins de 30 €", ""], ["moyen", "30 à 60 €", ""], ["grand", "Plus de 60 €", ""]] }
+    { id: "lieu", sec: 0, title: "Où vas-tu surtout prendre soin de toi ?", sub: "On adapte le format à ta salle de bain.",
+      options: [["maison", "À la maison", "Ma douche de tous les jours", "home"], ["voyage", "Souvent en déplacement", "Hôtel, location, salle de sport", "plane"], ["deux", "Les deux", "Un rituel à la maison et un qui me suit", "both"]] },
+    { id: "flexible", sec: 0, title: "Ta douche a-t-elle un flexible avec une douchette à main ?", sub: "C'est ce qui permet de visser nos pommeaux et coques de diffusion.",
+      options: [["oui", "Oui", "Un tuyau souple et une douchette", "shower"], ["non", "Non", "Seulement une douche de tête fixe", "no"], ["nsp", "Je ne sais pas", "On t'aide à vérifier", "ask"]] },
+    { id: "eau", sec: 0, title: "Comment est l'eau chez toi ?", sub: "Indice : des traces blanches sur la robinetterie signalent souvent une eau calcaire.",
+      link: ["Voir la qualité de l'eau de ta commune", "https://www.eaupotable.sante.gouv.fr/"],
+      options: [["douce", "Plutôt douce", "Peu de traces blanches", "drop"], ["moyenne", "Moyenne", "Un peu de calcaire", "drops"], ["calcaire", "Calcaire", "Traces blanches fréquentes", "dots"], ["nsp", "Je ne sais pas", "", "ask"]] },
+    { id: "infoEau", sec: 0, type: "info", kind: "eau" },
+    { id: "peau", sec: 1, title: "Après la douche, ta peau est plutôt…", sub: "Ton ressenti suffit. Ce n'est pas un diagnostic médical.",
+      options: [["seche", "Sèche, elle tiraille", "", "dry"], ["sensible", "Sensible, vite inconfortable", "", "flame"], ["mixte", "Mixte à grasse", "", "drops"], ["normale", "Confortable", "", "heart"]] },
+    { id: "concerns", sec: 1, title: "Qu'aimerais-tu chouchouter en priorité ?", sub: "Plusieurs choix possibles. On adapte tes conseils.", multi: true, none: "aucune",
+      options: [["secheresse", "Sécheresse, tiraillements", "", "dry"], ["imperfections", "Imperfections", "", "dots"], ["rougeurs", "Rougeurs, sensibilité", "", "flame"], ["teint", "Teint terne", "", "halfsun"], ["texture", "Grain de peau irrégulier", "", "wave"], ["taches", "Taches, teint inégal", "", "spots"], ["aucune", "Rien de particulier", "", "none"]] },
+    { id: "routine", sec: 1, title: "As-tu une routine de soin au quotidien ?", sub: "",
+      options: [["deux", "Oui, matin et soir", "", "sunmoon"], ["matin", "Seulement le matin", "", "sun"], ["soir", "Seulement le soir", "", "moon"], ["aucune", "Pas encore", "On commence simple", "sprout"]] },
+    { id: "infoProfil", sec: 1, type: "info", kind: "profil" },
+    { id: "texture", sec: 2, title: "Ta texture de cheveux ?", sub: "",
+      options: [["raides", "Raides", "", "straight"], ["ondules", "Ondulés", "", "wavy"], ["boucles", "Bouclés", "", "curly"], ["crepus", "Frisés à crépus", "", "coily"]] },
+    { id: "cheveux", sec: 2, title: "Et leur état en ce moment ?", sub: "",
+      options: [["secs", "Secs ou ternes", "", "dry"], ["colores", "Colorés ou décolorés", "", "color"], ["fins", "Fins, vite plats", "", "thin"], ["ok", "Plutôt contente", "", "heart"]] },
+    { id: "envies", sec: 3, title: "Qu'attends-tu de ta douche ?", sub: "Plusieurs choix possibles.", multi: true,
+      options: [["senteur", "Un moment senteur", "Une douche qui sent bon", "flower"], ["chlore", "Moins de chlore", "Selon la fiche du fabricant", "drop"], ["soir", "Un rituel du soir", "Ralentir, se poser", "moon"], ["jet", "Un jet plus doux", "Un jet plus fin", "shower"], ["sansparfum", "Rien de parfumé", "Je préfère sans senteur", "none"]] },
+    { id: "senteur", sec: 3, title: "Quelle senteur t'attire ?", sub: "Tu pourras en changer à chaque recharge.", skipIf: function (a) { return (a.envies || []).indexOf("sansparfum") > -1; },
+      options: [["hinoki", "Hinoki", "Bois clair, apaisant", "tree"], ["ocean", "Océan", "Frais, iodé", "wave"], ["pin", "Forêt de Pin", "Vert, résineux", "leaf"], ["fleur", "Fleur de Prunier", "Floral, doux", "flower"], ["sans", "Sans senteur", "", "none"]] },
+    { id: "budget", sec: 3, title: "Pour commencer, ton budget ?", sub: "Tu pourras compléter ton rituel plus tard.",
+      options: [["petit", "Moins de 30 €", "", "coin"], ["moyen", "30 à 60 €", "", "coin"], ["grand", "Plus de 60 €", "", "coin"]] }
   ];
 
   // ---------------------------------------------------------------------------
@@ -198,7 +248,7 @@
       // Les capsules Nomade sont toutes parfumées : on propose la douchette seule.
       main = "douchette"; alts = ["premierHome"]; refills = ["sediment"];
     } else if (nomade) {
-      main =a.budget === "petit" ? "setNomade" : "coffretNomade";
+      main = a.budget === "petit" ? "setNomade" : "coffretNomade";
       alts = main === "setNomade" ? ["coffretNomade", "douchette"] : ["setNomade", "douchette"];
       refills = ["capsule", "sediment"];
     } else {
@@ -241,6 +291,18 @@
     }[a.cheveux];
     if (etat) out.push(["Tes cheveux", (tex ? "Cheveux " + tex + ". " : "") + etat + (a.texture === "boucles" || a.texture === "crepus" ? " Pour les boucles et les cheveux crépus, beaucoup aiment espacer les shampoings et prévoir un moment soin dédié." : "")]);
 
+    var C = {
+      secheresse: "Sécheresse : une eau tiède, une douche courte et un soin hydratant appliqué sur peau encore légèrement humide font partie des gestes souvent conseillés.",
+      imperfections: "Imperfections : nettoie en douceur sans frotter, évite de toucher ou percer les boutons et change souvent ta taie d'oreiller. Si elles persistent, un ou une dermatologue peut t'accompagner.",
+      rougeurs: "Rougeurs : privilégie l'eau tiède et des produits sans parfum. Des rougeurs qui durent méritent l'avis d'un ou d'une dermatologue.",
+      teint: "Teint terne : sommeil, hydratation et protection solaire font partie des bases les plus souvent citées.",
+      texture: "Grain de peau : évite les gommages trop fréquents ou trop abrasifs. Un nettoyage doux et régulier reste une bonne base.",
+      taches: "Taches : la protection solaire quotidienne, toute l'année et sur toutes les carnations, est le geste le plus souvent conseillé. Un ou une dermatologue peut t'orienter."
+    };
+    var cs = (a.concerns || []).filter(function (k) { return C[k]; }).slice(0, 3);
+    if (cs.length) out.splice(2, 0, ["Tes priorités", cs.map(function (k) { return C[k]; }).join(" ")]);
+    if (a.routine === "aucune") out.push(["Ta routine", "Pas de routine pour l'instant ? Commence par deux gestes seulement : un nettoyage doux le soir et une protection solaire le matin. La régularité compte plus que le nombre de produits."]);
+
     if (a.flexible === "non") out.push(["Ta douche", "Sans flexible, nos pommeaux et coques ne se fixent pas directement. Écris-nous avec une photo de ta douche : on vérifie la compatibilité avec toi avant tout achat."]);
     if (a.flexible === "nsp") out.push(["Ta douche", "Regarde si ta douchette est reliée au mur par un tuyau souple. Si oui, nos produits se vissent sur le raccord standard. Un doute ? Envoie-nous une photo."]);
     return out;
@@ -250,6 +312,8 @@
     var g = [["douche", "Douche tiède et courte", [0, 1, 2, 3, 4, 5, 6]]];
     if (a.peau === "seche" || a.peau === "sensible") g.push(["hydrate", "Soin corps après la douche", [0, 1, 2, 3, 4, 5, 6]]);
     else g.push(["hydrate", "Soin corps après la douche", [0, 2, 4, 6]]);
+    if (a.routine === "matin" || a.routine === "aucune") g.push(["soirv", "Routine visage du soir", [0, 1, 2, 3, 4, 5, 6]]);
+    if (a.routine === "soir" || a.routine === "aucune") g.push(["matinv", "Protection solaire le matin", [0, 1, 2, 3, 4, 5, 6]]);
     var masque = a.texture === "boucles" || a.texture === "crepus" || a.cheveux === "secs" ? [2, 6] : [6];
     g.push(["masque", "Moment soin cheveux", masque]);
     if ((a.envies || []).indexOf("soir") > -1 || (a.envies || []).indexOf("senteur") > -1) g.push(["soir", "Rituel senteur du soir", [4, 6]]);
@@ -277,7 +341,7 @@
   var DAYS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 
   var CSS = [
-    ":host{all:initial;display:block;min-width:0;max-width:100%;--sand:#efe6d8;--paper:#fbf8f3;--ink:#2b2622;--muted:#6f655c;--water:#2f6f7e;--water-soft:#dcebee;--sun:#c9853f;--line:#e2d8ca;--sage:#7d8f76;",
+    ":host{all:initial;display:block;min-width:0;max-width:100%;--sand:#efe6d8;--sand-soft:#f6f1ea;--paper:#fbf8f3;--ink:#2b2622;--muted:#6f655c;--water:#2f6f7e;--water-soft:#dcebee;--sun:#c9853f;--line:#e2d8ca;--sage:#7d8f76;",
     "--display:'Instrument Serif',Georgia,'Times New Roman',serif;--body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;font-family:var(--body);color:var(--ink);font-size:16px;line-height:1.5}",
     "*{box-sizing:border-box}",
     ".wrap{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;max-width:880px;margin:0 auto}",
@@ -290,13 +354,47 @@
     ".tab[aria-selected=true]{background:var(--paper);color:var(--ink);font-weight:600}",
     ".tab:disabled{opacity:.45;cursor:not-allowed}",
     ".body{padding:24px}",
-    ".progress{height:4px;background:var(--line);border-radius:4px;overflow:hidden;margin-bottom:20px}",
-    ".progress i{display:block;height:100%;background:var(--water);transition:width .3s}",
+    ".qhead{display:flex;align-items:center;gap:12px;margin-bottom:18px}",
+    ".back{width:40px;height:40px;border-radius:50%;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink);flex:none}",
+    ".back:disabled{opacity:.25;cursor:default}",
+    ".back svg,.ico svg,.facts svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}",
+    ".segs{display:flex;gap:6px;flex:1}",
+    ".seg{flex:1;height:4px;background:var(--line);border-radius:4px;overflow:hidden}",
+    ".seg i{display:block;height:100%;background:var(--water);border-radius:4px;transition:width .35s}",
+    ".kicker{margin:0 0 6px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sun)}",
+    ".ico{width:40px;height:40px;flex:none;display:flex;align-items:center;justify-content:center;color:var(--sun)}",
+    ".lbl{flex:1;display:flex;flex-direction:column;gap:2px;font-size:17px}",
+    ".rad,.chk{width:26px;height:26px;border:1.5px solid var(--line);border-radius:50%;flex:none;transition:all .2s}",
+    ".chk{border-radius:8px}",
+    ".opt[aria-pressed=true] .rad{border:8px solid var(--water)}",
+    ".opt[aria-pressed=true] .chk{background:var(--water) url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E\") center/16px no-repeat;border-color:var(--water)}",
+    ".cta{position:sticky;bottom:0;padding:16px 0 4px;background:linear-gradient(transparent,var(--paper) 30%);margin-top:8px}",
+    ".btn.big{width:100%;min-height:56px;font-size:17px;box-shadow:0 10px 28px -10px rgba(47,111,126,.55)}",
+    ".info{display:flex;flex-direction:column;gap:14px;padding:8px 0}",
+    ".info h3{font-family:var(--display);font-weight:400;font-size:clamp(28px,6vw,36px);line-height:1.1;margin:0;text-wrap:balance}",
+    ".center{text-align:center}",
+    ".facts{list-style:none;margin:0;padding:0;display:grid;gap:12px}",
+    ".facts li{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:18px;padding:16px;color:var(--ink)}",
+    ".facts svg{color:var(--water);flex:none}",
+    ".ringwrap{position:relative;width:180px;height:180px;margin:8px auto}",
+    ".ringwrap.small{width:130px;height:130px}",
+    ".ring{width:100%;height:100%}",
+    ".ring circle{fill:none;stroke-width:9}",
+    ".ring .rt{stroke:var(--water-soft)}",
+    ".ring .rv{stroke:var(--water);stroke-linecap:round;transition:stroke-dasharray .8s ease}",
+    ".ringtxt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}",
+    ".ringtxt b{font-family:var(--display);font-weight:400;font-size:40px;line-height:1;font-variant-numeric:tabular-nums}",
+    ".small .ringtxt b{font-size:30px}",
+    ".ringtxt small{font-size:12px;color:var(--muted)}",
+    ".chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}",
+    ".chips span{background:var(--water-soft);color:var(--water);border-radius:999px;padding:6px 14px;font-size:14px}",
     ".q h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,5vw,30px);line-height:1.15;margin:0 0 6px;text-wrap:balance}",
     ".q p.sub{margin:0 0 16px;color:var(--muted)}",
-    ".opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}",
-    ".opt{font:inherit;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;color:var(--ink);display:flex;flex-direction:column;gap:2px;min-height:64px}",
+    ".opts{display:grid;gap:10px}",
+    ".opt{font:inherit;text-align:left;background:#fff;border:1.5px solid transparent;border-radius:999px;padding:12px 18px 12px 14px;cursor:pointer;color:var(--ink);display:flex;align-items:center;gap:14px;min-height:72px;box-shadow:0 2px 10px -4px rgba(43,38,34,.12);transition:border-color .2s,background .2s}",
     ".opt small{color:var(--muted);font-size:13px}",
+    ".body{background:var(--sand-soft)}",
+    ".body.paper{background:var(--paper)}",
     ".opt:hover{border-color:var(--water)}",
     ".opt[aria-pressed=true]{border-color:var(--water);background:var(--water-soft)}",
     "button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--water);outline-offset:2px}",
@@ -347,7 +445,8 @@
     ".foot{padding:14px 24px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}",
     ".foot a{color:var(--muted)}",
     "@media (max-width:560px){.top,.body{padding-left:16px;padding-right:16px}.hero{grid-template-columns:1fr}.hero img{max-width:220px;margin:0 auto}}",
-    "@media (prefers-reduced-motion:reduce){*{transition:none!important}}"
+    "@media (prefers-reduced-motion:reduce){*{transition:none!important}}",
+    ".opt:active{transform:scale(.99)}"
   ].join("");
 
   // ---------------------------------------------------------------------------
@@ -401,31 +500,69 @@
       html += "<button class='tab' role='tab' data-tab='" + t[0] + "' aria-selected='" + (this.tab === t[0]) + "'" + (!done && t[0] !== "diag" ? " disabled" : "") + ">" + t[1] + "</button>";
     }
     html += "</div></div><div class='body'>";
+    html = html.replace("<div class='body'>", "<div class='body" + (this.tab === "diag" ? "" : " paper") + "'>");
     html += this.tab === "diag" ? this.renderDiag() : this.tab === "reco" ? this.renderReco() : this.renderPlan();
     html += "</div><div class='foot'><span>Tes réponses restent dans ton navigateur. Aucune donnée n'est envoyée.</span><a href='" + esc(this.contact) + "' target='_blank' rel='noopener'>Une question ? Écris-nous</a></div></div>";
     this.root.innerHTML = html;
   };
 
+  Widget.prototype.progressPct = function () {
+    var qs = this.visibleQuestions().filter(function (q) { return q.type !== "info"; }), a = this.state.answers;
+    var n = qs.filter(function (q) { return q.multi ? (a[q.id] || []).length : a[q.id]; }).length;
+    return { pct: Math.round((n / qs.length) * 100), left: qs.length - n };
+  };
+
   Widget.prototype.renderDiag = function () {
     var qs = this.visibleQuestions();
     if (this.step >= qs.length) this.step = qs.length - 1;
-    var q = qs[this.step], a = this.state.answers[q.id];
-    var pct = Math.round((this.step / qs.length) * 100);
-    var html = "<div class='progress' aria-hidden='true'><i style='width:" + pct + "%'></i></div><div class='q'>";
-    html += "<p class='sub' style='margin:0 0 6px;font-size:13px'>Question " + (this.step + 1) + " sur " + qs.length + "</p>";
-    html += "<h3>" + esc(q.title) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "");
+    var q = qs[this.step], a = this.state.answers, step = this.step;
+
+    // Barre de progression en segments, un par grande étape.
+    var segs = SECTIONS.map(function (name, i) {
+      var inSec = qs.filter(function (x) { return x.sec === i; });
+      var done = inSec.filter(function (x) { return qs.indexOf(x) < step; }).length;
+      var w = q.sec > i ? 100 : q.sec < i ? 0 : Math.max(6, Math.round((done / inSec.length) * 100));
+      return "<span class='seg' title='" + name + "'><i style='width:" + w + "%'></i></span>";
+    }).join("");
+    var html = "<div class='qhead'><button class='back' data-act='prev' aria-label='Question précédente'" + (step === 0 ? " disabled" : "") + "><svg viewBox='0 0 24 24'><path d='M15 5l-7 7 7 7'/></svg></button><div class='segs'>" + segs + "</div></div>";
+    html += "<p class='kicker'>" + SECTIONS[q.sec] + "</p>";
+
+    if (q.type === "info") return html + this.renderInfo(q);
+
+    var val = a[q.id];
+    html += "<div class='q'><h3>" + esc(q.title) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "");
     if (q.link) html += "<a class='ext' href='" + q.link[1] + "' target='_blank' rel='noopener'>" + esc(q.link[0]) + " ↗</a>";
-    html += "<div class='opts'>";
+    html += "<div class='opts' role='" + (q.multi ? "group" : "radiogroup") + "'>";
     for (var i = 0; i < q.options.length; i++) {
       var o = q.options[i];
-      var on = q.multi ? (a || []).indexOf(o[0]) > -1 : a === o[0];
-      html += "<button class='opt' data-q='" + q.id + "' data-v='" + o[0] + "' aria-pressed='" + on + "'>" + esc(o[1]) + (o[2] ? "<small>" + esc(o[2]) + "</small>" : "") + "</button>";
+      var on = q.multi ? (val || []).indexOf(o[0]) > -1 : val === o[0];
+      html += "<button class='opt' data-q='" + q.id + "' data-v='" + o[0] + "' aria-pressed='" + on + "'><span class='ico'>" + icon(o[3]) + "</span><span class='lbl'>" + esc(o[1]) + (o[2] ? "<small>" + esc(o[2]) + "</small>" : "") + "</span><span class='" + (q.multi ? "chk" : "rad") + "'></span></button>";
     }
-    html += "</div></div><div class='nav'>";
-    html += this.step > 0 ? "<button class='btn link' data-act='prev'>← Retour</button>" : "<span></span>";
-    var ready = q.multi ? (a || []).length > 0 : !!a;
-    if (q.multi || this.step === qs.length - 1) html += "<button class='btn' data-act='next'" + (ready ? "" : " disabled") + ">" + (this.step === qs.length - 1 ? "Voir mon rituel" : "Continuer") + "</button>";
-    html += "</div><p class='note'>Ce diagnostic repose sur ton ressenti. Il ne remplace pas l'avis d'un ou d'une professionnelle de santé.</p>";
+    html += "</div></div>";
+    var ready = q.multi ? (val || []).length > 0 : !!val;
+    if (q.multi || step === qs.length - 1) html += "<div class='cta'><button class='btn big' data-act='next'" + (ready ? "" : " disabled") + ">" + (step === qs.length - 1 ? "Découvrir mon rituel" : "Continuer") + "</button></div>";
+    html += "<p class='note'>Ce diagnostic repose sur ton ressenti. Il ne remplace pas l'avis d'un ou d'une professionnelle de santé.</p>";
+    return html;
+  };
+
+  // Écrans intermédiaires : on informe et on montre où en est le profil (chiffre réel, pas une promesse).
+  Widget.prototype.renderInfo = function (q) {
+    var p = this.progressPct(), a = this.state.answers;
+    var C = 2 * Math.PI * 52, ring = "<svg class='ring' viewBox='0 0 120 120' aria-hidden='true'><circle cx='60' cy='60' r='52' class='rt'/><circle cx='60' cy='60' r='52' class='rv' stroke-dasharray='" + (C * p.pct / 100).toFixed(1) + " " + C.toFixed(1) + "' transform='rotate(-90 60 60)'/></svg><div class='ringtxt'><b>" + p.pct + " %</b><small>de ton profil</small></div>";
+    var html = "<div class='info'>";
+    if (q.kind === "eau") {
+      html += "<h3>Le savais-tu ?</h3><ul class='facts'>" +
+        "<li>" + icon("drop") + "<span>En France, l'eau du robinet est potable et très contrôlée.</span></li>" +
+        "<li>" + icon("dots") + "<span>Sa teneur en calcaire varie beaucoup d'une région à l'autre.</span></li>" +
+        "<li>" + icon("shower") + "<span>Le chlore sert à la désinfecter : il est normal d'en trouver un peu. Certains filtres de douche sont conçus pour en réduire une partie, selon leurs fabricants.</span></li></ul>";
+      html += "<div class='ringwrap small'>" + ring + "</div><p class='sub center'>Passons à ta peau.</p>";
+    } else {
+      var labels = { seche: "Peau sèche", sensible: "Peau sensible", mixte: "Peau mixte à grasse", normale: "Peau confortable", calcaire: "Eau calcaire", douce: "Eau douce", moyenne: "Eau moyenne", voyage: "Nomade", maison: "Rituel maison", deux: "Maison et voyage" };
+      var chips = [a.lieu, a.eau, a.peau].map(function (k) { return labels[k]; }).filter(Boolean);
+      html += "<div class='ringwrap'>" + ring + "</div><h3 class='center'>Ton rituel se précise</h3><p class='sub center'>On connaît ta douche et ta peau. Encore " + p.left + " questions sur tes cheveux et tes envies pour qu'il te ressemble vraiment.</p>";
+      html += "<div class='chips'>" + chips.map(function (c) { return "<span>" + esc(c) + "</span>"; }).join("") + "</div>";
+    }
+    html += "</div><div class='cta'><button class='btn big' data-act='next'>" + (q.kind === "eau" ? "Continuer" : "Affiner mon rituel") + "</button></div>";
     return html;
   };
 
@@ -531,13 +668,19 @@
       var q = QUESTIONS.filter(function (x) { return x.id === d.q; })[0];
       if (q.multi) {
         var cur = (s.answers[q.id] || []).slice(), i = cur.indexOf(d.v);
-        if (i > -1) cur.splice(i, 1); else cur.push(d.v);
+        if (i > -1) cur.splice(i, 1);
+        else if (q.none && d.v === q.none) cur = [d.v];
+        else { cur.push(d.v); if (q.none) cur = cur.filter(function (v) { return v !== q.none; }); }
         s.answers[q.id] = cur; save(s); this.render(); return;
       }
       s.answers[q.id] = d.v; save(s);
-      var qs = this.visibleQuestions();
-      if (this.step < qs.length - 1) this.step++;
-      this.render(); return;
+      this.render();
+      var self = this, qs = this.visibleQuestions();
+      if (this.step < qs.length - 1) {
+        clearTimeout(this.adv);
+        this.adv = setTimeout(function () { self.step++; self.render(); }, 260);
+      }
+      return;
     }
     if (d.act === "prev") { this.step = Math.max(0, this.step - 1); this.render(); return; }
     if (d.act === "next") {

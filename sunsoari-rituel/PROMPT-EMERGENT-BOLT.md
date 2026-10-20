@@ -15,7 +15,8 @@ Je joins `sunsoari-rituel.js`, un widget déjà fonctionnel. Reprends **exacteme
 - le catalogue `P` (titres, handles, prix, images, identifiants de variantes Shopify par senteur) ;
 - les questions `QUESTIONS` ;
 - la fonction `recommend` (règles de recommandation) et `insights` (conseils) ;
-- les durées de recharge `REFILLS`.
+- les durées de recharge `REFILLS` ;
+- la sélection d'autres marques `EXT` et la fonction `externals` (K-beauty, J-beauty, marques pour cheveux texturés et peaux noires et métissées).
 Ne modifie pas les textes de conseil sans me le demander : ils ont été relus pour respecter la réglementation.
 
 ## Écrans
@@ -25,6 +26,7 @@ Ne modifie pas les textes de conseil sans me le demander : ils ont été relus p
 4. **Mon planner** :
    - recharges : date d'installation + fréquence en jours (modifiable), barre de progression, date de la prochaine recharge, boutons « Ajouter à Google Agenda », « Télécharger le rappel (.ics) », « Racheter » ;
    - semaine de soin : tableau lundi à dimanche des gestes suggérés selon le profil, à cocher, bouton « Nouvelle semaine ».
+   Après les produits Sunsoari, section **« Pour compléter, d'autres marques qu'on aime »** : carte avec marque, origine (Corée, Japon, France…), catégorie, description factuelle et bouton « Où l'acheter ». Mention « Non vendues sur Sunsoari ». Si un lien est affilié, afficher « Lien affilié : Sunsoari peut toucher une commission ». Pas de photos de ces marques sans autorisation : vignette avec initiales.
 5. **Mes favoris** : produits enregistrés d'un clic (cœur sur chaque carte).
 
 ## Liens vers la boutique

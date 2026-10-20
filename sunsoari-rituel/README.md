@@ -41,9 +41,10 @@ Si le site n'accepte pas les scripts (certaines offres Wix gratuites), utiliser 
 ```
 
 ### Suivi (facultatif)
-Le widget émet deux événements à brancher sur Google Analytics, Meta Pixel ou Klaviyo :
+Le widget émet trois événements à brancher sur Google Analytics, Meta Pixel ou Klaviyo :
 - `sunsoari:result` : diagnostic terminé (réponses + recommandation)
 - `sunsoari:add_to_cart` : clic sur « Ajouter au panier »
+- `sunsoari:external_click` : clic vers un produit d'une autre marque (pour repérer ce que tes clientes veulent que tu vendes un jour)
 
 Tous les liens produits portent `utm_source=mon-rituel` : tu vois les ventes générées dans Shopify Analytics.
 
@@ -51,6 +52,7 @@ Tous les liens produits portent `utm_source=mon-rituel` : tu vois les ventes gé
 
 - **Prix, photos, nouveaux produits** : objet `P` en haut du fichier.
 - **Durées de recharge** : objet `REFILLS` (reprises des fiches produits, à vérifier avec la documentation des fabricants).
+- **Autres marques** (non vendues sur Sunsoari) : tableau `EXT`. Sans `url`, le bouton « Où l'acheter » ouvre une recherche Google Shopping. Pour un lien affilié, renseigner `url` et `affiliate: true` : la mention « Lien affilié » s'affiche automatiquement (obligatoire).
 - **Questions** : tableau `QUESTIONS`. **Règles de recommandation** : fonction `recommend`.
 
 ## Données personnelles

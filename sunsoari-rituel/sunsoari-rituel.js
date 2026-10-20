@@ -119,6 +119,45 @@
   };
 
   // ---------------------------------------------------------------------------
+  // Sélection d'autres marques (non vendues sur Sunsoari).
+  // Descriptions factuelles uniquement (format, usage), aucune promesse d'effet.
+  // `url` vide → recherche Google Shopping (neutre, ne casse jamais).
+  // Lien affilié : renseigner `url` et passer `affiliate: true` (mention affichée).
+  // `for` : réponses du diagnostic auxquelles le produit correspond.
+  // ---------------------------------------------------------------------------
+  var EXT = [
+    { brand: "Round Lab", name: "1025 Dokdo Cleanser", origin: "Corée", cat: "Visage",
+      desc: "Nettoyant visage moussant, à utiliser matin et soir.", for: ["seche", "sensible", "normale"], url: "", affiliate: false },
+    { brand: "Hada Labo", name: "Gokujyun Lotion", origin: "Japon", cat: "Visage",
+      desc: "Lotion hydratante à l'acide hyaluronique, à appliquer après le nettoyage.", for: ["seche", "normale", "mixte"], url: "", affiliate: false },
+    { brand: "COSRX", name: "Advanced Snail 96 Mucin Power Essence", origin: "Corée", cat: "Visage",
+      desc: "Essence à la mucine d'escargot, texture fluide.", for: ["mixte", "normale"], url: "", affiliate: false },
+    { brand: "Beauty of Joseon", name: "Relief Sun Rice + Probiotics SPF 50+", origin: "Corée", cat: "Visage",
+      desc: "Crème solaire visage au riz, finition légère.", for: ["seche", "sensible", "mixte", "normale"], url: "", affiliate: false },
+    { brand: "Nuhanciam", name: "Baume Corps Réparateur Intense", origin: "France", cat: "Corps",
+      desc: "Baume corps au karité, pensé pour les peaux noires et métissées.", for: ["seche"], url: "", affiliate: false },
+    { brand: "Les Secrets de Loly", name: "Kurl Nectar", origin: "France", cat: "Cheveux",
+      desc: "Soin sans rinçage pour cheveux ondulés, bouclés, frisés et crépus. Marque fondée par Kelly Massol.", for: ["ondules", "boucles", "crepus"], url: "", affiliate: false },
+    { brand: "Les Secrets de Loly", name: "Pink Paradise", origin: "France", cat: "Cheveux",
+      desc: "Après-shampoing de la gamme cheveux bouclés.", for: ["ondules", "boucles"], url: "", affiliate: false },
+    { brand: "Activilong", name: "Actiforce Masque-Soin", origin: "France", cat: "Cheveux",
+      desc: "Masque au beurre de karité, conçu pour les cheveux bouclés, frisés et crépus.", for: ["crepus", "boucles", "secs"], url: "", affiliate: false }
+  ];
+
+  function externals(a) {
+    var keys = [a.peau, a.texture, a.cheveux], picked = [], cats = {};
+    EXT.forEach(function (p) {
+      var hit = p.for.some(function (k) { return keys.indexOf(k) > -1; });
+      if (hit && (cats[p.cat] || 0) < 2) { picked.push(p); cats[p.cat] = (cats[p.cat] || 0) + 1; }
+    });
+    return picked.slice(0, 4);
+  }
+
+  function extUrl(p) {
+    return p.url || "https://www.google.com/search?tbm=shop&q=" + encodeURIComponent(p.brand + " " + p.name);
+  }
+
+  // ---------------------------------------------------------------------------
   // Questions du diagnostic
   // ---------------------------------------------------------------------------
   var QUESTIONS = [
@@ -284,6 +323,10 @@
     ".card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:6px}",
     ".card .acts{margin-top:auto}",
     ".card .btn{padding:10px 14px;font-size:14px;flex:1}",
+    ".mono{aspect-ratio:16/9;border-radius:12px;background:linear-gradient(135deg,var(--water-soft),var(--sand));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;max-width:100%}",
+    ".mono span{font-family:var(--display);font-size:34px;color:var(--water);line-height:1}",
+    ".mono small{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}",
+    ".disc{font-size:12px;color:var(--muted)}",
     ".refill{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:10px}",
     ".refill .row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}",
     ".bar{height:8px;background:var(--water-soft);border-radius:8px;overflow:hidden}",
@@ -402,6 +445,19 @@
     html += "<div class='grid2'>" + ins.map(function (x) { return "<div class='ins'><b>" + esc(x[0]) + "</b><p>" + esc(x[1]) + "</p></div>"; }).join("") + "</div>";
     html += "<h4>Notre suggestion</h4>" + this.productCard(r.main, r.scent, true);
     html += "<h4>D'autres options qui pourraient te convenir</h4><div class='cards'>" + r.alts.concat(r.extras).map(function (k) { return self.productCard(k, r.scent); }).join("") + "</div>";
+    var ext = externals(a);
+    if (ext.length) {
+      html += "<h4>Pour compléter, d'autres marques qu'on aime</h4><p class='sub' style='margin:-6px 0 12px;color:var(--muted)'>Non vendues sur Sunsoari. Des idées de K-beauty, J-beauty et de marques pensées pour les cheveux texturés et les peaux noires et métissées.</p><div class='cards'>";
+      ext.forEach(function (p, i) {
+        var initials = p.brand.split(" ").map(function (w) { return w[0]; }).join("").slice(0, 3);
+        html += "<div class='card'><div class='mono'><span>" + esc(initials) + "</span><small>" + esc(p.origin) + " · " + esc(p.cat) + "</small></div>";
+        html += "<p class='pt' style='font-size:15px;margin:0'>" + esc(p.name) + "</p><small style='color:var(--muted)'>" + esc(p.brand) + "</small><p class='pp' style='margin:0'>" + esc(p.desc) + "</p>";
+        html += "<div class='acts'><a class='btn ghost' href='" + esc(extUrl(p)) + "' target='_blank' rel='noopener" + (p.affiliate ? " sponsored" : "") + "' data-ext='" + i + "'>Où l'acheter ↗</a></div>";
+        html += p.affiliate ? "<small class='disc'>Lien affilié : Sunsoari peut toucher une commission.</small>" : "";
+        html += "</div>";
+      });
+      html += "</div><p class='note' style='margin-top:12px'>Ces marques ne sont pas partenaires de Sunsoari. Vérifie toujours la liste des ingrédients et fais un test sur une petite zone avant un nouveau soin.</p>";
+    }
     html += "<h4>Tes recharges, à prévoir</h4><div class='cards'>" + r.refills.map(function (k) { return self.productCard(k, r.scent); }).join("") + "</div>";
     html += "<div class='nav'><button class='btn link' data-act='restart'>Refaire le diagnostic</button><button class='btn' data-tab='plan'>Organiser mon planner →</button></div>";
     html += "<p class='note'>Un filtre de douche n'est ni un soin ni un dispositif médical. Les effets décrits sont ceux annoncés par les fabricants, et le ressenti varie d'une personne à l'autre.</p>";
@@ -493,6 +549,7 @@
     if (d.act === "resetweek") { s.week = {}; save(s); this.render(); return; }
     if (d.week) { s.week[d.week] = !s.week[d.week]; save(s); this.render(); return; }
     if (d.ics) { this.downloadIcs(d.ics); return; }
+    if (d.ext) { var x = externals(s.answers)[+d.ext]; if (x) this.emit("external_click", { brand: x.brand, product: x.name }); return; }
     if (d.add) {
       this.emit("add_to_cart", { variantId: +d.add });
       // Sur la boutique Shopify elle-même : ajout au panier sans quitter la page.
@@ -530,6 +587,6 @@
     for (var i = 0; i < hosts.length; i++) if (!hosts[i].__sunsoari) hosts[i].__sunsoari = new Widget(hosts[i]);
   }
 
-  window.SunsoariRituel = { init: init, recommend: recommend, catalog: P };
+  window.SunsoariRituel = { init: init, recommend: recommend, externals: externals, catalog: P, otherBrands: EXT };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();

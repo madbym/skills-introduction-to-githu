@@ -1,0 +1,18 @@
+<title>Mon Rituel Sunsoari</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+  /* Une page d'accueil sobre qui met le widget au centre, comme sur sunsoari.fr. */
+  :root { --page: #f6f1ea; --ink: #2b2622; --muted: #6f655c; --water: #2f6f7e; color-scheme: light; }
+  body { background: var(--page); color: var(--ink); font-family: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  main { max-width: 920px; margin: 0 auto; padding-block: 32px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  header p { margin: 0; color: var(--muted); font-size: 15px; max-width: 60ch; line-height: 1.55; }
+  header small { display: block; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--water); margin-bottom: 8px; }
+</style>
+<main>
+  <header>
+    <small>Démo · exemple à intégrer sur sunsoari.fr</small>
+    <p>Réponds aux questions : le widget propose un rituel, des produits de la boutique avec leurs liens et un planner pour tes recharges et ta semaine de soin. Sur cette démo, les photos produits sont remplacées par une vignette ; elles s'affichent normalement sur ton site.</p>
+  </header>
+  <div id="sunsoari-rituel" data-shop="https://sunsoari.fr"></div>
+</main>
+<script src="sunsoari-rituel.js"></script>

@@ -123,13 +123,6 @@
     filtreThermal: { label: "Filtre thermal Home", days: 28, hint: "environ 3 à 4 semaines selon ta fréquence de douche" },
     capsule: { label: "Capsule thermale Nomade", days: 12, hint: "environ 10 à 15 jours selon ta fréquence de douche" },
     sediment: { label: "Filtre sédiment douchette", days: 75, hint: "environ 2 à 3 mois selon ton eau" },
-    shiftCaps: {
-      title: "SHIFT · Pack 6 Capsules Soin & Aromathérapie", handle: "pack-6-capsules-vitaminees-shift-sunsoari", price: 32.9,
-      img: IMG + "shift-6-capsules-aromatherapie-vitamine-c-3834627.jpg?v=1791181284&width=480",
-      pitch: "Six capsules à base d'actifs hydratants et de vitamine C, avec leurs huiles essentielles.", act: ["vitc", "aloe", "karite", "teatree"],
-      variants: { hinoki: 54487730520397, fleur: 54487735533901, ocean: 54487733174605, pin: 54487733174605 },
-      scentLabel: function (s) { return "Collection : " + ({ hinoki: "Hinoki Spring", fleur: "Cherry Blossom" }[s] || "Découverte"); }
-    },
     pureWater: { label: "Filtre Pure Water SHIFT", days: 75, hint: "environ 2 à 3 mois selon ton eau" }
   };
 

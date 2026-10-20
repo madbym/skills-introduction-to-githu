@@ -1,5 +1,9 @@
 # Mon Rituel Sunsoari
 
+> **Version 3 : `sunsoari-app.js`** (application, sur le modèle de Lovi). Diagnostic → « Ta nouvelle routine est prête » (Matin · Soir · Hebdo · Douche, score de compatibilité, « Pourquoi on l'a choisi », questions à l'assistante, autres options) → espace Aujourd'hui (semaine, premiers pas, plan du jour, journal de peau, recharges) → Produits (recherche, Routines, Étagère, Souhaits, Scans, sélections) → Scan (photo, liste INCI, code-barres Open Beauty Facts) → Ressources (guides gratuits, ingrédients, tendances) → Assistante.
+>
+> **IA** : ajoute `data-ai-endpoint="https://ton-serveur/ia"` sur la balise. Le serveur reçoit `POST {input, json, images:[{media_type, data(base64)}]}` (input = texte ou liste de messages `{role, content}`) et renvoie `{text}` en appelant l'API Claude avec ta clé. Sans serveur, tout fonctionne sauf la lecture des photos et l'assistante (réponses de base).
+
 > **Version 2 : `sunsoari-beaute.js`** (recommandée). Diagnostic en 5 étapes (douche, visage, corps, cheveux, envies), mode photo visage et cuir chevelu traité sur l'appareil, routine soins étape par étape avec des marques de Corée, du Japon et d'Afrique (« pourquoi ce produit », « plutôt que… »), bibliothèque de 34 ingrédients, tendances 2026 France, Asie et Afrique, SHIFT mis en avant quand il convient au profil, et planner. Remplace `sunsoari-rituel.js` par `sunsoari-beaute.js` dans les instructions ci-dessous. La version 1 reste disponible.
 
 Un widget de diagnostic beauté pour sunsoari.fr : questionnaire peau, cheveux et eau → rituel personnalisé → produits de la boutique avec lien et ajout au panier → planner de recharges et de semaine de soin.

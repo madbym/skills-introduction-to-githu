@@ -1,5 +1,7 @@
 # Mon Rituel Sunsoari
 
+> **Version 2 : `sunsoari-beaute.js`** (recommandée). Diagnostic en 5 étapes (douche, visage, corps, cheveux, envies), mode photo visage et cuir chevelu traité sur l'appareil, routine soins étape par étape avec des marques de Corée, du Japon et d'Afrique (« pourquoi ce produit », « plutôt que… »), bibliothèque de 34 ingrédients, tendances 2026 France, Asie et Afrique, SHIFT mis en avant quand il convient au profil, et planner. Remplace `sunsoari-rituel.js` par `sunsoari-beaute.js` dans les instructions ci-dessous. La version 1 reste disponible.
+
 Un widget de diagnostic beauté pour sunsoari.fr : questionnaire peau, cheveux et eau → rituel personnalisé → produits de la boutique avec lien et ajout au panier → planner de recharges et de semaine de soin.
 
 Un seul fichier (`sunsoari-rituel.js`), sans dépendance, isolé dans un Shadow DOM : il ne casse pas le style du site qui l'accueille.
@@ -53,6 +55,7 @@ Tous les liens produits portent `utm_source=mon-rituel` : tu vois les ventes gé
 - **Prix, photos, nouveaux produits** : objet `P` en haut du fichier.
 - **Durées de recharge** : objet `REFILLS` (reprises des fiches produits, à vérifier avec la documentation des fabricants).
 - **Autres marques** (non vendues sur Sunsoari) : tableau `EXT`. Sans `url`, le bouton « Où l'acheter » ouvre une recherche Google Shopping. Pour un lien affilié, renseigner `url` et `affiliate: true` : la mention « Lien affilié » s'affiche automatiquement (obligatoire).
+- **Ingrédients** (v2) : objet `ING`. **Tendances** (v2) : tableau `TRENDS` et ses sources `TREND_SOURCES`, à mettre à jour chaque saison.
 - **Questions** : tableau `QUESTIONS`. **Règles de recommandation** : fonction `recommend`.
 
 ## Données personnelles

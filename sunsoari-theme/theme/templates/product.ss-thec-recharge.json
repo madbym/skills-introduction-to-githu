@@ -1,0 +1,379 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">Garde ton flacon</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "ss_complements": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-complements', items: \"serum-tout-en-un-104-multi-boosting-serum-the-c|Flacon 50 ml|Le flacon airless à garder\", title: \"La recharge est vendue seule\", note: \"Elle se verse dans le flacon airless du sérum. Pas encore équipée ?\" %}"
+          }
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Compatibilité</b>Flacon airless 104 Multi Boosting Serum 50 ml</div><div><b>Contenance</b>50 ml</div><div><b>Formule</b>Identique au flacon</div></div>"
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Composition (INCI)",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Identique au 104 Multi Boosting Serum : Water (Aqua), Glycerin, Propanediol, Trehalose, Niacinamide, 1,2-Hexanediol, Panthenol, Cudrania Tricuspidata Bark Extract, Butylene Glycol, Caprylic/Capric Triglyceride, Ammonium Acryloyldimethyltaurate/VP Copolymer, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Polyisobutene, Sodium Hyaluronate, Allantoin, Lactobacillus Ferment Lysate, Xanthan Gum, Ethylhexylglycerin, Adenosine, Disodium EDTA, Polyglyceryl-10 Stearate, Caprylyl/Capryl Glucoside, Sorbitan Oleate, Simmondsia Chinensis (Jojoba) Seed Oil, Hydrogenated Lecithin, Lactobacillus/Soybean Ferment Extract, Lactobacillus/Rice Ferment Filtrate, Lactobacillus/Ginseng Root Ferment Filtrate, Saccharomyces/Coix Lacryma-Jobi Ma-Yuen Seed Ferment Filtrate, Saccharomyces/Potato Extract Ferment Filtrate, Ceramide AP, Ceramide NP, Ceramide NS, Ceramide EOP.</p><p><em>Cette liste peut évoluer : se référer à l'emballage du produit acheté.</em></p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "acc_2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Précautions",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Usage externe. Éviter le contact avec les yeux ; en cas de contact, rincer abondamment à l'eau claire. En cas de réaction inhabituelle, cesser l'utilisation et consulter un médecin. Conserver à l'abri du soleil et de la chaleur.</p><p>Manipuler avec des mains propres.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "ss_rating",
+        "price",
+        "description",
+        "variant_picker",
+        "buy_buttons",
+        "ss_complements",
+        "ss_facts",
+        "reassurance",
+        "acc_1",
+        "acc_2",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_why": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Même formule",
+            "text": "<p>Le sérum tout-en-un, sans compromis.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Moins d'emballage",
+            "text": "<p>Tu réutilises ton flacon au lieu d'en racheter un.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Un prix plus doux",
+            "text": "<p>27,90 € au lieu de 37,90 € pour le flacon.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "cards",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Pourquoi on l'aime",
+        "heading": "Le même sérum, moins d'emballage",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Vide</strong> complètement ton flacon, rince-le à l'eau claire et laisse-le bien sécher."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Verse</strong> la recharge dans le flacon avec des mains propres, puis referme la pompe."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Actionne</strong> la pompe quelques fois jusqu'à ce que le sérum sorte."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Recharge ton flacon",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": ""
+      }
+    },
+    "ss_cards": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Cudrania tricuspidata",
+            "text": "<p>Ingrédient signature de la ligne 104.</p>",
+            "tag": "Signature",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Niacinamide & adénosine",
+            "text": "<p>Deux actifs phares du soin coréen.</p>",
+            "tag": "Éclat",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Céramides & acide hyaluronique",
+            "text": "<p>Soutiennent le confort et l'hydratation de la peau.</p>",
+            "tag": "Hydratant",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Ingrédients clés",
+        "heading": "Ce que contient ta recharge",
+        "text": "<p>La liste INCI complète est dans l'onglet Composition, plus haut.</p>",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_brand": {
+      "type": "ss-story",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "layout": "cards",
+        "background": "sand",
+        "align": "center",
+        "eyebrow": "La marque",
+        "heading": "THE C, née pour Chloé",
+        "text": "<p>THE C est née pour Chloé. Après la naissance de son enfant, sa peau a changé, et avec elle sa confiance. Son mari, maquilleur professionnel, a voulu l'aider à se retrouver : des soins simples, essentiels et efficaces, pensés pour la vraie vie.</p><p>Une histoire de famille et de retour à soi, née à Jeonju, en Corée. C'est aussi pour ça qu'on l'a choisie.</p>",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "button_label": "Découvrir THE C",
+        "button_link": "shopify://collections/the-c"
+      }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce la même formule que le flacon ?",
+            "text": "<p>Oui, c'est exactement le même sérum.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Avec quel flacon l'utiliser ?",
+            "text": "<p>Avec le flacon airless 104 Multi Boosting Serum 50 ml.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_why",
+    "ss_steps",
+    "ss_cards",
+    "ss_brand",
+    "ss_reviews",
+    "ss_faq"
+  ]
+}

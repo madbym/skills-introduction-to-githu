@@ -1,0 +1,173 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "collection_info": {
+          "type": "collection_info",
+          "settings": {
+            "heading_size": "h1",
+            "heading_tag": "h1",
+            "show_description": true,
+            "padding_top": 56,
+            "padding_bottom": 56
+          }
+        }
+      },
+      "block_order": [
+        "collection_info"
+      ],
+      "custom_css": [
+        ".collection-hero__description {max-width: 40rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-6",
+        "text_alignment": "left",
+        "show_collection_image": true,
+        "image_overlay_opacity": 0,
+        "image_position": "right",
+        "image_height": "extra-small",
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "image_height_mobile": "auto",
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
+    "ss_lines": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Ligne 104",
+            "text": "<p>Des soins tout-en-un autour de l'extrait de Cudrania tricuspidata : un sérum et une crème pour une routine simplifiée.</p>",
+            "tag": "Tout-en-un",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Ligne Moju",
+            "text": "<p>Inspirée du Moju, boisson fermentée traditionnelle de Jeonju : riz fermenté, jujube, gingembre et cannelle.</p>",
+            "tag": "Fermentation",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Pensé pour la vraie vie",
+            "text": "<p>Des gestes simples, des formats rechargeables ou nomades, pour une routine qui s'adapte à ton quotidien.</p>",
+            "tag": "Simplicité",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "cards",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Deux lignes",
+        "heading": "La ligne 104 et la ligne Moju",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "products_per_page": 20,
+        "columns_desktop": 4,
+        "column_gap": "2xs",
+        "row_gap": "inherit",
+        "pagination": "number",
+        "enable_filtering": true,
+        "enable_color_swatch": true,
+        "filter_type": "vertical",
+        "expand_filter_groups": "Availability, Price, Color, Size, Category, Product Type",
+        "enable_sorting": true,
+        "enable_layout_switching": true,
+        "columns_mobile": "2",
+        "padding_top": 28,
+        "padding_bottom": 0,
+        "show_section_divider": true,
+        "divider_width": "fixed"
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "À propos de THE C",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Née pour Chloé, à Jeonju</h3><p>THE C est née pour Chloé. Après la naissance de son enfant, sa peau a changé, et avec elle sa confiance. Son mari, maquilleur professionnel, a voulu l'aider à se retrouver : des soins simples, essentiels et efficaces, pensés pour la vraie vie.</p><p>Une histoire de famille et de retour à soi, née à Jeonju, en Corée. Chez Sunsoari, on l'a choisie pour cette histoire de transmission, pour ses formules simples et pour son lien avec le savoir-faire coréen de la fermentation.</p><p>THE C est conçue par CNR Cosmetics, à Jeonju, en Corée du Sud.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "5-lines",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-10",
+        "use_color_scheme_in_container": true,
+        "content_spacing": "standard",
+        "content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "banner",
+    "ss_lines",
+    "product-grid",
+    "rich_text"
+  ]
+}

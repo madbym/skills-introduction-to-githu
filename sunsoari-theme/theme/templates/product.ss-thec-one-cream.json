@@ -1,0 +1,401 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">Format nomade · Ligne 104</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "ss_complements": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-complements', items: \"serum-tout-en-un-104-multi-boosting-serum-the-c||À appliquer juste avant la crème\", title: \"Le duo de la ligne 104\", note: \"Applique le sérum juste avant la crème pour compléter ta routine.\" %}"
+          }
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Pour qui</b>Tous types de peau, y compris sensibles</div><div><b>Format</b>Nomade 7 ml, idéal pour découvrir</div><div><b>Moment</b>Matin et soir, après le sérum</div></div>"
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Composition (INCI)",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Liste INCI en cours de vérification : elle figure sur l'emballage du produit.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "acc_2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Précautions",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Usage externe. Éviter le contact avec les yeux ; en cas de contact, rincer abondamment à l'eau claire. En cas de réaction inhabituelle, cesser l'utilisation et consulter un médecin. Conserver à l'abri du soleil et de la chaleur.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "ss_rating",
+        "price",
+        "description",
+        "variant_picker",
+        "buy_buttons",
+        "ss_complements",
+        "ss_facts",
+        "reassurance",
+        "acc_1",
+        "acc_2",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_why": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Tout-en-un",
+            "text": "<p>Hydratation, confort et éclat réunis dans un seul soin.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Évaluée par la marque",
+            "text": "<p>Selon les tests cliniques de THE C, amélioration de l'apparence des rides et de l'éclat après 2 et 4 semaines.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Format nomade",
+            "text": "<p>7 ml pour tester la texture avant d'adopter, ou pour l'emporter partout.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "cards",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Pourquoi on l'aime",
+        "heading": "Un seul geste, trois besoins",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Matin et soir</strong>, sur peau propre, après ton sérum."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Prélève</strong> une noisette de crème."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Applique</strong> sur le visage et le cou en mouvements doux, jusqu'à absorption."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Ta routine en 3 gestes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": "<p>Le matin, termine toujours par ta protection solaire.</p>"
+      }
+    },
+    "ss_cards": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Cudrania tricuspidata",
+            "text": "<p>Ingrédient signature de la ligne 104, issu d'un arbre fruitier d'Asie de l'Est.</p>",
+            "tag": "Signature",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Ginseng",
+            "text": "<p>Emblème du soin coréen.</p>",
+            "tag": "Tradition coréenne",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Karité & jojoba",
+            "text": "<p>Nourrissent et assouplissent la peau.</p>",
+            "tag": "Nourrissant",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "title": "Bêta-glucane",
+            "text": "<p>Hydrate et apporte du confort.</p>",
+            "tag": "Hydratant",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Ingrédients clés",
+        "heading": "Ce que contient ta crème",
+        "text": "<p>La liste INCI complète est dans l'onglet Composition, plus haut.</p>",
+        "columns": 4,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_brand": {
+      "type": "ss-story",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "layout": "cards",
+        "background": "sand",
+        "align": "center",
+        "eyebrow": "La marque",
+        "heading": "THE C, née pour Chloé",
+        "text": "<p>THE C est née pour Chloé. Après la naissance de son enfant, sa peau a changé, et avec elle sa confiance. Son mari, maquilleur professionnel, a voulu l'aider à se retrouver : des soins simples, essentiels et efficaces, pensés pour la vraie vie.</p><p>Une histoire de famille et de retour à soi, née à Jeonju, en Corée. C'est aussi pour ça qu'on l'a choisie.</p>",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "button_label": "Découvrir THE C",
+        "button_link": "shopify://collections/the-c"
+      }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je l'utiliser seule ?",
+            "text": "<p>C'est un soin complet en une étape. Tu peux aussi l'associer au sérum 104 Multi Boosting Serum.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "À quoi sert le format Nomade ?",
+            "text": "<p>À découvrir la crème ou à l'emporter partout avec toi : voyage, sac de sport, week-end.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Et si j'ai la peau sensible ?",
+            "text": "<p>Si ta peau est très réactive, fais un test sur une petite zone avant la première utilisation. En cas de doute, demande conseil à un professionnel de santé.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_why",
+    "ss_steps",
+    "ss_cards",
+    "ss_brand",
+    "ss_reviews",
+    "ss_faq"
+  ]
+}

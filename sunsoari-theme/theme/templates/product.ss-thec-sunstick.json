@@ -1,0 +1,390 @@
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "ss_badge": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span class=\"ss-pdp-badge\">Protection du quotidien</span>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "ss_rating": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-rating', product: product %}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_type": "shopify_swatch",
+            "swatch_style": "circle",
+            "swatch_size": 32,
+            "button_style": "normal",
+            "size_title": "Size",
+            "size_chart_from_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "ss_complements": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'ss-complements', items: \"nettoyant-mousse-sensitive-moju-c-cleanser-the-c||Pour retirer ta protection le soir\", title: \"Le soir\", note: \"Retire ta protection solaire avec une mousse douce.\" %}"
+          }
+        },
+        "ss_facts": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ss-pdp-facts\"><div><b>Protection</b>SPF 50+</div><div><b>Fini</b>Mat, effet base de maquillage</div><div><b>Format</b>Stick 20 g, nomade</div></div>"
+          }
+        },
+        "reassurance": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "title_font": "body",
+            "title_size": "text-base",
+            "icon_1": "check",
+            "heading_1": "<strong>Sélection Sunsoari</strong> : marques choisies avec exigence",
+            "icon_2": "truck",
+            "heading_2": "<strong>Livraison suivie</strong> en France métropolitaine",
+            "icon_3": "check",
+            "heading_3": "<strong>Paiement sécurisé</strong> : CB, Apple Pay, PayPal"
+          }
+        },
+        "sticky_atc": {
+          "type": "sticky-atc-bar",
+          "settings": {
+            "visibility": "all",
+            "style": "minimalist",
+            "container": "full",
+            "show_atc_button": true,
+            "show_dynamic_checkout_buttons": false,
+            "show_quantity": true
+          }
+        },
+        "acc_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Composition (INCI)",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Dibutyl Adipate, Synthetic Wax, Silica, Vinyl Dimethicone/Methicone Silsesquioxane Crosspolymer, Cetyl Ethylhexanoate, Diethylhexyl Carbonate, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Butyloctyl Salicylate, Ethylhexyl Triazone, Polysilicone-15, C12-15 Alkyl Benzoate, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Microcrystalline Wax, Cetyl Alcohol, 1,2-Hexanediol, Caprylic/Capric Glycerides, Water, Butylene Glycol, Galactomyces Ferment Filtrate, Rice Ferment Filtrate (Sake), Glycerin, Zingiber Officinale (Ginger) Root Extract, Mentha Piperita (Peppermint) Leaf Extract, Dipropylene Glycol, Leuconostoc/Radish Root Ferment Filtrate, Diospyros Kaki Fruit Extract, Oryza Sativa (Rice) Extract, Artemisia Princeps Leaf Extract, Origanum Vulgare Leaf Extract, Chamaecyparis Obtusa Leaf Extract, Salix Alba (Willow) Bark Extract, Lactobacillus/Soybean Ferment Extract, Portulaca Oleracea Extract, Cinnamomum Cassia Bark Extract, Scutellaria Baicalensis Root Extract, Hydrogenated Lecithin, Phytosterols, Ceramide NP.</p><p><em>Cette liste peut évoluer : se référer à l'emballage du produit acheté.</em></p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        },
+        "acc_2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Précautions",
+            "heading_size": "h4",
+            "icon": "none",
+            "content": "<p>Ne pas rester longtemps au soleil, même avec une protection solaire. Réappliquer fréquemment pour maintenir la protection. Ne pas exposer les bébés et les jeunes enfants directement au soleil. Éviter le contact avec les yeux. En cas de réaction inhabituelle, cesser l'utilisation et consulter un médecin. Conserver à l'abri de la chaleur.</p>",
+            "page": "",
+            "default_open": false,
+            "show_below_product_media": false
+          }
+        }
+      },
+      "block_order": [
+        "ss_badge",
+        "title",
+        "ss_rating",
+        "price",
+        "description",
+        "variant_picker",
+        "buy_buttons",
+        "ss_complements",
+        "ss_facts",
+        "reassurance",
+        "acc_1",
+        "acc_2",
+        "sticky_atc"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {.product {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "gallery_layout": "vertical-carousel",
+        "mobile_thumbnails": "show",
+        "show_image_border": false,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "ss_why": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Sans PEG",
+            "text": "<p>Formulé sans émulsifiants PEG, enrichi en ferments et extraits botaniques.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Fini mat",
+            "text": "<p>Fini doux et effet flouteur, idéal sous le maquillage.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Sans te salir les doigts",
+            "text": "<p>Le stick se réapplique facilement dans la journée.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "cards",
+        "background": "cream",
+        "align": "center",
+        "eyebrow": "Pourquoi on l'aime",
+        "heading": "La protection qui se glisse dans ton sac",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_steps": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Le matin</strong>, en dernière étape de ta routine, avant l'exposition au soleil."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Applique</strong> généreusement sur le visage, en plusieurs passages sur chaque zone."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "text": "<strong>Réapplique</strong> souvent, surtout après avoir transpiré, nagé ou t'être essuyée."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "steps",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Mode d'emploi",
+        "heading": "Ta protection en 3 gestes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "tip_title": "Les conseils de l'équipe",
+        "tip_text": ""
+      }
+    },
+    "ss_cards": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Ferments de riz & galactomyces",
+            "text": "<p>Ingrédients signatures de la ligne Moju.</p>",
+            "tag": "Fermentation",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Gingembre & cannelle",
+            "text": "<p>Ingrédients traditionnels du Moju de Jeonju.</p>",
+            "tag": "Tradition",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Céramide NP",
+            "text": "<p>Soutient le confort de la peau.</p>",
+            "tag": "Confort",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "scroll",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "Ingrédients clés",
+        "heading": "Ce que contient ton stick",
+        "text": "<p>La liste INCI complète est dans l'onglet Composition, plus haut.</p>",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false
+      }
+    },
+    "ss_brand": {
+      "type": "ss-story",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "layout": "cards",
+        "background": "sand",
+        "align": "center",
+        "eyebrow": "La marque",
+        "heading": "THE C, née pour Chloé",
+        "text": "<p>THE C est née pour Chloé. Après la naissance de son enfant, sa peau a changé, et avec elle sa confiance. Son mari, maquilleur professionnel, a voulu l'aider à se retrouver : des soins simples, essentiels et efficaces, pensés pour la vraie vie.</p><p>Une histoire de famille et de retour à soi, née à Jeonju, en Corée. C'est aussi pour ça qu'on l'a choisie.</p>",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": false,
+        "button_label": "Découvrir THE C",
+        "button_link": "shopify://collections/the-c"
+      }
+    },
+    "ss_reviews": {
+      "type": "ss-reviews",
+      "settings": {
+        "heading": "Avis clientes",
+        "open": false
+      }
+    },
+    "ss_faq": {
+      "type": "ss-story",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "title": "Peut-on l'utiliser sous le maquillage ?",
+            "text": "<p>Oui, son fini mat en fait une base de maquillage. Laisse-le poser une minute avant ton teint.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "title": "Comment le retirer le soir ?",
+            "text": "<p>Avec un nettoyant doux comme le Sensitive Moju C Cleanser.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "title": "Et si j'ai la peau sensible ?",
+            "text": "<p>Si ta peau est très réactive, fais un test sur une petite zone avant la première utilisation. En cas de doute, demande conseil à un professionnel de santé.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "layout": "faq",
+        "background": "white",
+        "align": "center",
+        "eyebrow": "On répond à tes questions",
+        "heading": "Questions fréquentes",
+        "text": "",
+        "columns": 3,
+        "columns_mobile": "1",
+        "ratio": "1/1",
+        "open_first": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "ss_why",
+    "ss_steps",
+    "ss_cards",
+    "ss_brand",
+    "ss_reviews",
+    "ss_faq"
+  ]
+}

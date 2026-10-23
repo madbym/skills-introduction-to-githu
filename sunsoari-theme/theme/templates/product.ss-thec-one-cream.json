@@ -101,7 +101,7 @@
             "heading": "Composition (INCI)",
             "heading_size": "h4",
             "icon": "none",
-            "content": "<p>Liste INCI en cours de vérification : elle figure sur l'emballage du produit.</p>",
+            "content": "<p>Water (Aqua), Glycerin, Caprylic/Capric Triglyceride, Niacinamide, Betaine, Butylene Glycol Dicaprylate/Dicaprate, Cetearyl Alcohol, 1,2-Hexanediol, Butyrospermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, Cudrania Tricuspidata Bark Extract, Butylene Glycol, Trehalose, Glyceryl Stearate, Beeswax, Carbomer, Cetearyl Olivate, Tromethamine, Sorbitan Olivate, Cetearyl Glucoside, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Polyisobutene, Panthenol, Allantoin, Hydrogenated Lecithin, Portulaca Oleracea Extract, Cannabis Sativa Seed Oil, Ethylhexylglycerin, Beta-Glucan, Adenosine, Propanediol, Sodium Hyaluronate, Disodium EDTA, Fragrance (Parfum), Caprylyl/Capryl Glucoside, Sorbitan Oleate, Ethoxydiglycol, Poloxamer 338, Resveratrol, Glucose, Lactobacillus/Soybean Ferment Extract, Lactobacillus/Rice Ferment Filtrate, Lactobacillus/Ginseng Root Ferment Filtrate, Saccharomyces/Coix Lacryma-Jobi Ma-Yuen Seed Ferment Filtrate, Saccharomyces/Potato Extract Ferment Filtrate, Hydrolyzed Hemp Seed Extract.</p><p><em>Cette liste peut évoluer : se référer à l'emballage du produit acheté.</em></p>",
             "page": "",
             "default_open": false,
             "show_below_product_media": false
@@ -262,9 +262,9 @@
         "b2": {
           "type": "item",
           "settings": {
-            "title": "Ginseng",
-            "text": "<p>Emblème du soin coréen.</p>",
-            "tag": "Tradition coréenne",
+            "title": "Niacinamide & adénosine",
+            "text": "<p>Deux actifs phares du soin coréen.</p>",
+            "tag": "Éclat",
             "link_label": "",
             "show_price": true
           }
@@ -272,8 +272,8 @@
         "b3": {
           "type": "item",
           "settings": {
-            "title": "Karité & jojoba",
-            "text": "<p>Nourrissent et assouplissent la peau.</p>",
+            "title": "Karité, jojoba & chanvre",
+            "text": "<p>Beurre et huiles végétales qui nourrissent et assouplissent la peau.</p>",
             "tag": "Nourrissant",
             "link_label": "",
             "show_price": true
@@ -282,8 +282,8 @@
         "b4": {
           "type": "item",
           "settings": {
-            "title": "Bêta-glucane",
-            "text": "<p>Hydrate et apporte du confort.</p>",
+            "title": "Bêta-glucane & acide hyaluronique",
+            "text": "<p>Hydratent et apportent du confort.</p>",
             "tag": "Hydratant",
             "link_label": "",
             "show_price": true
@@ -361,6 +361,16 @@
         "b3": {
           "type": "item",
           "settings": {
+            "title": "Est-elle parfumée ?",
+            "text": "<p>Oui, elle contient un parfum en très faible quantité. En cas de sensibilité connue aux parfums, consulte la liste INCI avant utilisation.</p>",
+            "tag": "",
+            "link_label": "",
+            "show_price": true
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
             "title": "Et si j'ai la peau sensible ?",
             "text": "<p>Si ta peau est très réactive, fais un test sur une petite zone avant la première utilisation. En cas de doute, demande conseil à un professionnel de santé.</p>",
             "tag": "",
@@ -372,7 +382,8 @@
       "block_order": [
         "b1",
         "b2",
-        "b3"
+        "b3",
+        "b4"
       ],
       "settings": {
         "layout": "faq",

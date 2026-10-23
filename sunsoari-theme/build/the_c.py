@@ -50,6 +50,18 @@ MASK_INCI = (
     "Cinnamomum Cassia Bark Extract, Aloe Barbadensis Leaf Extract, Cucumis Melo (Melon) Fruit Extract, "
     "Calendula Officinalis Flower Extract, Aspergillus/Camellia Sinensis Leaf Ferment Extract Filtrate, Salix Alba (Willow) Bark Extract."
 )
+CREAM_INCI = (
+    "Water (Aqua), Glycerin, Caprylic/Capric Triglyceride, Niacinamide, Betaine, Butylene Glycol Dicaprylate/Dicaprate, "
+    "Cetearyl Alcohol, 1,2-Hexanediol, Butyrospermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, "
+    "Cudrania Tricuspidata Bark Extract, Butylene Glycol, Trehalose, Glyceryl Stearate, Beeswax, Carbomer, Cetearyl Olivate, "
+    "Tromethamine, Sorbitan Olivate, Cetearyl Glucoside, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, "
+    "Polyisobutene, Panthenol, Allantoin, Hydrogenated Lecithin, Portulaca Oleracea Extract, Cannabis Sativa Seed Oil, "
+    "Ethylhexylglycerin, Beta-Glucan, Adenosine, Propanediol, Sodium Hyaluronate, Disodium EDTA, Fragrance (Parfum), "
+    "Caprylyl/Capryl Glucoside, Sorbitan Oleate, Ethoxydiglycol, Poloxamer 338, Resveratrol, Glucose, "
+    "Lactobacillus/Soybean Ferment Extract, Lactobacillus/Rice Ferment Filtrate, Lactobacillus/Ginseng Root Ferment Filtrate, "
+    "Saccharomyces/Coix Lacryma-Jobi Ma-Yuen Seed Ferment Filtrate, Saccharomyces/Potato Extract Ferment Filtrate, "
+    "Hydrolyzed Hemp Seed Extract."
+)
 SUNSTICK_INCI = (
     "Dibutyl Adipate, Synthetic Wax, Silica, Vinyl Dimethicone/Methicone Silsesquioxane Crosspolymer, Cetyl Ethylhexanoate, "
     "Diethylhexyl Carbonate, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Butyloctyl Salicylate, Ethylhexyl Triazone, "
@@ -177,7 +189,7 @@ PRODUCTS = {
         "complements": ([("serum-tout-en-un-104-multi-boosting-serum-the-c", "", "À appliquer juste avant la crème")],
                         "Le duo de la ligne 104", "Applique le sérum juste avant la crème pour compléter ta routine."),
         "accordions": [
-            ("Composition (INCI)", "<p>Liste INCI en cours de vérification : elle figure sur l'emballage du produit.</p>"),
+            ("Composition (INCI)", f"<p>{CREAM_INCI}</p>{INCI_NOTE}"),
             ("Précautions", PRECAUTIONS),
         ],
         "why_heading": "Un seul geste, trois besoins",
@@ -196,13 +208,14 @@ PRODUCTS = {
         "ingredients_heading": "Ce que contient ta crème",
         "ingredients": [
             ("Cudrania tricuspidata", "Ingrédient signature de la ligne 104, issu d'un arbre fruitier d'Asie de l'Est.", "Signature"),
-            ("Ginseng", "Emblème du soin coréen.", "Tradition coréenne"),
-            ("Karité & jojoba", "Nourrissent et assouplissent la peau.", "Nourrissant"),
-            ("Bêta-glucane", "Hydrate et apporte du confort.", "Hydratant"),
+            ("Niacinamide & adénosine", "Deux actifs phares du soin coréen.", "Éclat"),
+            ("Karité, jojoba & chanvre", "Beurre et huiles végétales qui nourrissent et assouplissent la peau.", "Nourrissant"),
+            ("Bêta-glucane & acide hyaluronique", "Hydratent et apportent du confort.", "Hydratant"),
         ],
         "faq": [
             ("Puis-je l'utiliser seule ?", "C'est un soin complet en une étape. Tu peux aussi l'associer au sérum 104 Multi Boosting Serum."),
             ("À quoi sert le format Nomade ?", "À découvrir la crème ou à l'emporter partout avec toi : voyage, sac de sport, week-end."),
+            ("Est-elle parfumée ?", "Oui, elle contient un parfum en très faible quantité. En cas de sensibilité connue aux parfums, consulte la liste INCI avant utilisation."),
             FAQ_SENSITIVE,
         ],
     },

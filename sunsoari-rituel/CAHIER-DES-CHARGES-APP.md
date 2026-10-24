@@ -64,6 +64,42 @@ Onglets **Matin · Soir · Hebdo · Douche**. Chaque produit : étape, marque, p
 - SHIFT = recommandation principale dès que le budget dépasse 30 € ou qu'une senteur SHIFT est choisie, sauf peau sensible, réaction aux huiles essentielles, sans parfum ou grossesse (les capsules contiennent des huiles essentielles, dont le tea tree) : alors Onsha sans senteur, avec l'explication, et la gamme SHIFT reste visible.
 - Recharges SHIFT dans le planner (Pure Water ; capsules selon la fréquence de douche).
 
+## 5 quater. Espace soin personnalisé (format « Rituel de [prénom] »)
+Après le diagnostic, chaque cliente a son espace, sur le modèle validé par Fanta. Onglets :
+- **Ma routine** : Matin, Journée (SPF), Soir, Corps. Étapes à cocher, remises à zéro chaque jour. Le soir change selon le jour.
+- **Mon planner** : chaque jour, « routine faite ? » oui ou non, sans culpabiliser. Vue mois avec ‹ ›.
+- **Mon évolution** : une étape toutes les 2 semaines. Elle contient la date, 3 photos (face, profil gauche, profil droit), « Comment va ta peau ? », ce que tu remarques et ton ressenti. Même lumière, sans filtre ni maquillage.
+- **Ma semaine** :
+  - plan d'introduction, un produit par semaine, avec un test de 48 h sur la mâchoire. Ordre : SPF et nettoyant, puis démaquillant, lotion ou essence, hydratant et contour des yeux, sérum doux, actif fort 1 soir puis 2 soirs, masques ;
+  - calendrier du soir : un seul actif par soir, jamais le même soir qu'un exfoliant ;
+  - au mois 3, un actif peut passer à 3 ou 4 soirs si tout va bien.
+- **Protection solaire** :
+  - une journée type : 7 h 30, midi, après le sport, soir ;
+  - les règles : choix (SPF 50 ou 50+, logo UVA), quantité (deux longueurs de doigt), zones oubliées, tous les jours, retouche toutes les 2 h dehors, corps, que faire si ça picote, ombre et chapeau ;
+  - ses produits solaires.
+- **Recommandations** :
+  - 5 produits par catégorie, en priorité coréens et japonais, avec des marques africaines quand elles conviennent ;
+  - le produit de sa routine est encadré ;
+  - prix indicatifs et budget total ;
+  - un rappel : « vérifie la liste d'ingrédients, achète chez un revendeur officiel ».
+- **Mes produits** : ce que devient chaque produit qu'elle possède déjà, avec un statut parmi « garder », « finir puis remplacer », « mettre en pause » ou « ne pas combiner avec… ».
+- **Diagnostic** : photos du jour 0, puis type de peau, sensibilité, imperfections, marques, texture, tonicité et corps. Ensuite :
+  - un « À retenir » ;
+  - des pistes à vérifier avec un ou une dermatologue ;
+  - des délais réalistes : semaines 2 à 4, 6 à 10, mois 3 à 4, 4 à 6 ;
+  - quand arrêter un produit.
+- **Astuces** : les gestes qui comptent (ne pas percer, taie d'oreiller, ligne des cheveux, après le sport, vacances, filtre de douche). Le filtre est présenté comme un geste de confort : il ne traite ni l'acné ni les marques.
+
+Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'introduction (`introPlan`), le calendrier du soir (`eveningCalendar`), les étapes « à partir de la semaine N » et les délais réalistes.
+
+**Données sensibles, à respecter strictement :**
+- les photos du visage et les mentions comme « acné hormonale » sont des données personnelles, voire des données de santé (RGPD, article 9) ;
+- consentement explicite et séparé avant tout envoi de photo ;
+- stockage chiffré dans l'UE, accès réservé à la cliente et à Sunsoari, suppression en un clic ;
+- jamais de photo de cliente dans un dépôt de code, un lien public ou une publicité sans accord écrit ;
+- à faire valider par un ou une juriste avant le lancement ;
+- toujours rappeler : « Conseil cosmétique personnalisé, il ne remplace pas l'avis d'un dermatologue ».
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

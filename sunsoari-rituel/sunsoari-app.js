@@ -401,7 +401,7 @@
     { id: "cosrxahabha", brand: "COSRX", name: "AHA/BHA Clarifying Treatment Toner", origin: "Corée", zone: "visage", step: "exfoliant", act: ["aha", "bha"], for: ["texture", "imperfections", "mixte"], avoid: ["sensible", "rougeurs", "acides", "enceinte"], desc: "Tonique exfoliant léger aux AHA et BHA." },
     // Visage · protection solaire
     { id: "bojsun", brand: "Beauty of Joseon", name: "Relief Sun Rice + Probiotics SPF 50+", origin: "Corée", zone: "visage", step: "spf", act: ["spf", "riz"], for: ["taches", "teint", "seche", "normale", "mixte", "sensible"], avoid: [], desc: "Crème solaire visage au riz, finition légère." },
-    { id: "biore", brand: "Bioré", name: "UV Aqua Rich Watery Essence SPF 50+", origin: "Japon", zone: "visage", step: "spf", act: ["spf", "hyaluronique"], for: ["mixte", "imperfections", "taches", "normale"], avoid: [], desc: "Solaire très fluide, texture gel." },
+    { id: "biore", brand: "Bioré", name: "UV Aqua Rich Watery Essence SPF 50+", origin: "Japon", zone: "visage", step: "spf", act: ["spf", "hyaluronique"], for: ["mixte", "imperfections", "taches", "normale"], avoid: ["sensible", "rougeurs"], desc: "Solaire très fluide, texture gel." },
     // Corps
     { id: "skingourmet", brand: "Skin Gourmet", name: "Beurre de karité brut", origin: "Ghana", madeIn: "au Ghana", zone: "corps", step: "corps", act: ["karite"], for: ["corpsSec", "corpsTresSec", "secs", "crepus"], avoid: [], desc: "Marque d'Accra qui travaille des ingrédients ghanéens bruts." },
     { id: "kocos", brand: "Kocos Cosmétiques", name: "Soins au beurre de karité", origin: "Mali", madeIn: "au Mali", zone: "corps", step: "corps", act: ["karite"], for: ["corpsSec", "corpsTresSec", "corpsOk"], avoid: [], desc: "Laits, crèmes et savons au karité, créés par une pharmacienne malienne." },
@@ -731,6 +731,14 @@
     ".plan{background:var(--sand-soft);border-radius:20px;padding:12px;margin-bottom:10px}",
     ".plan>b{display:block;margin:0 0 8px 4px}",
     ".pstep small{color:var(--muted)}",
+    ".pstep.later{opacity:.55;cursor:default}",
+    ".intro{background:var(--sand-soft);border-radius:20px;padding:14px;margin-bottom:10px}.intro>p{margin:0 0 10px;font-size:14px;color:var(--muted)}",
+    ".intro ol{list-style:none;margin:0;padding:0;display:grid;gap:8px}.intro li{display:flex;gap:10px;align-items:flex-start;background:#fff;border-radius:16px;padding:10px 12px}",
+    ".intro li>span:last-child{display:flex;flex-direction:column;gap:2px;min-width:0}.intro li small{color:var(--muted);font-size:12px}.intro li em{font-style:normal;font-size:12px;color:var(--water)}",
+    ".wn{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600}",
+    ".intro li.now{box-shadow:0 0 0 2px var(--water)}.intro li.now .wn{background:var(--water);color:#fff;border-color:var(--water)}.intro li.past{opacity:.6}.intro li.past .wn{background:var(--water-soft)}",
+    ".evecal{background:#fff;border-radius:20px;padding:6px 14px;margin-bottom:10px}.evecal p{display:grid;grid-template-columns:44px minmax(0,1fr);gap:8px;margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}.evecal p:last-child{border:0}.evecal p.now b{color:var(--water)}",
+    ".delays p{display:grid;grid-template-columns:120px minmax(0,1fr);gap:10px;margin:8px 0;font-size:14px}",
     ".mood{background:#fff;border-radius:20px;padding:14px}",
     ".mood p{margin:0 0 10px}",
     ".mood div{display:flex;justify-content:space-between;gap:4px}",
@@ -1145,6 +1153,43 @@
       douche: [{ step: "douche", id: "s:" + r.main }].concat(r.refills.map(function (k) { return { step: "recharge", id: "s:" + k }; })), reco: r };
   }
 
+  // Plan d'introduction : un nouveau produit par semaine, les actifs forts en dernier, d'abord 1 soir puis 2.
+  var STRONG = ["retinoides", "aha", "bha", "pha", "vitc", "azelaique"];
+  function isStrong(p) { return !!p && (p.act || []).some(function (x) { return STRONG.indexOf(x) > -1; }); }
+  function introPlan(R) {
+    var weeks = [], seen = {};
+    var push = function (label, items, note) { items = items.filter(function (it) { if (!it || !it.id || seen[it.id]) return false; seen[it.id] = 1; return true; }); if (!items.length) return; weeks.push({ label: label, items: items, note: note || "" }); };
+    var find = function (list, step) { return list.filter(function (x) { return x.step === step; })[0]; };
+    var m = R.matin, so = R.soir, sm = find(m, "serum"), ss = find(so, "serum");
+    push("Les bases", [find(m, "nettoyant"), find(m, "spf")], "La protection solaire d'abord : c'est le soin qui compte le plus.");
+    push("Le démaquillage du soir", [find(so, "demaquillant")]);
+    push("La lotion", [find(m, "tonique"), find(m, "essence")]);
+    push("L'hydratation", [find(m, "hydratant"), find(so, "hydratant"), find(so, "yeux"), find(so, "nuit")]);
+    if (sm && !isStrong(byId(sm.id))) push("Le sérum du matin", [sm]);
+    if (ss && !isStrong(byId(ss.id))) push("Le sérum du soir", [ss]);
+    if (sm && isStrong(byId(sm.id))) push("Le sérum actif du matin", [sm], "Un matin sur deux la première semaine, puis tous les matins si ta peau est à l'aise.");
+    if (ss && isStrong(byId(ss.id))) { push("Ton actif du soir, 1 soir", [ss], "Un seul soir cette semaine."); weeks.push({ label: "Ton actif du soir, 2 soirs", items: [], note: "Passe à 2 soirs si tu n'as ni picotement qui dure ni rougeur. Jamais le même soir que l'exfoliant." }); }
+    push("Les soins de la semaine", R.hebdo.filter(function (x) { return byId(x.id) && byId(x.id).zone === "visage"; }), "Exfoliant et masque visage, jamais le même soir qu'un actif.");
+    return weeks;
+  }
+  // Semaine en cours (1 = première) depuis le début du plan.
+  function planWeek(start) { return Math.max(1, Math.floor((Date.now() - start) / (7 * 864e5)) + 1); }
+  // Calendrier du soir : un seul actif par soir, des soirs de réparation entre deux.
+  function eveningCalendar(R, week, wk) {
+    var ss = R.soir.filter(function (x) { return x.step === "serum"; })[0], strong = ss && isStrong(byId(ss.id));
+    var activeAt = -1, exfo = R.hebdo.filter(function (x) { return x.step === "exfoliant"; })[0], mask = R.hebdo.filter(function (x) { return x.step === "masquev"; })[0], hebdoAt = -1;
+    wk.forEach(function (w, i) { if (ss && w.items.some(function (it) { return it.id === ss.id; })) activeAt = i + 1; if (w.label === "Les soins de la semaine") hebdoAt = i + 1; });
+    // 0 = dimanche … 6 = samedi
+    var nights = !strong ? [] : week < activeAt ? [] : week === activeAt ? [2] : [2, 5];
+    return [1, 2, 3, 4, 5, 6, 0].map(function (d) {
+      var t = "Réparation : nettoyant et hydratant";
+      if (ss && !strong && week >= activeAt) t = "Sérum " + byId(ss.id).name;
+      if (nights.indexOf(d) > -1) t = "Actif : " + byId(ss.id).name;
+      if (week >= hebdoAt && hebdoAt > 0) { if (exfo && d === 0) t = "Exfoliant : " + byId(exfo.id).name; if (mask && d === 3) t = "Masque : " + byId(mask.id).name; }
+      return { d: d, t: t };
+    });
+  }
+
   // Recommandations « pour toi », par besoin, pour nourrir l'accueil et la boutique.
   function forYou(a) {
     var tags = tagsOf(a), groups = [];
@@ -1371,12 +1416,21 @@
     html += "</div>";
     var first = [["diag", "Faire mon diagnostic", true], ["scan", "Scanner un premier produit", s.scans.length > 0], ["peau", "Scanner mon visage", !!s.steps.peau], ["shelf", "Ajouter ma routine à mon étagère", s.shelf.length > 0]];
     html += "<p class='sect'>Premiers pas</p>" + first.map(function (f) { return "<button class='task" + (f[2] ? " done" : "") + "' data-first='" + f[0] + "'><span class='tick'>" + (f[2] ? "✓" : "") + "</span>" + esc(f[1]) + "</button>"; }).join("");
+    var start = s.planStart || s.doneAt || Date.now(), wk = introPlan(R), cw = planWeek(start), intro = {};
+    wk.forEach(function (w, i) { w.items.forEach(function (it) { intro[it.id] = i + 1; }); });
+    html += "<p class='sect'>Mon plan d'introduction</p><div class='intro'><p>Un nouveau produit par semaine : si quelque chose irrite, tu sais tout de suite lequel. Teste chaque nouveauté 48 h sur la mâchoire.</p><ol>" + wk.map(function (w, i) {
+      var n = i + 1, st = n < cw ? "past" : n === cw ? "now" : "";
+      return "<li class='" + st + "'><span class='wn'>" + (n < cw ? "✓" : "S" + n) + "</span><span><b>" + esc(w.label) + "</b>" + (w.items.length ? "<small>" + w.items.map(function (it) { var p = byId(it.id); return esc(p ? p.brand + " " + p.name : ""); }).join(" · ") + "</small>" : "") + (w.note && n >= cw ? "<em>" + esc(w.note) + "</em>" : "") + "</span></li>";
+    }).join("") + "</ol><button class='btn link' data-act='planreset'>Recommencer le plan à partir d'aujourd'hui</button></div>";
+    var cal = eveningCalendar(R, cw, wk), dnow = new Date().getDay();
+    html += "<p class='sect'>Mes soirs de la semaine</p><div class='evecal'>" + cal.map(function (c) { return "<p class='" + (c.d === dnow ? "now" : "") + "'><b>" + DSHORT[c.d] + "</b><span>" + esc(c.t) + "</span></p>"; }).join("") + "</div>";
     html += "<p class='sect'>Plan du jour</p>";
     [["matin", "Routine du matin", R.matin], ["soir", "Routine du soir", R.soir]].forEach(function (blk) {
       var c = (s.checks[today] || {})[blk[0]] || [];
-      html += "<div class='plan'><b>" + blk[1] + "</b>" + (blk[2].length ? blk[2].map(function (it) { var p = byId(it.id), on = c.indexOf(it.step) > -1; return "<button class='pstep' data-check='" + blk[0] + "|" + it.step + "' aria-pressed='" + on + "'><span class='tick'>" + (on ? "✓" : "") + "</span><span>" + esc(STEP_LABEL[it.step] || it.step) + " · <small>" + esc(p ? p.name : "") + "</small></span></button>"; }).join("") : "<p class='empty'>Un nettoyage doux suffit.</p>") + "</div>";
+      html += "<div class='plan'><b>" + blk[1] + "</b>" + (blk[2].length ? blk[2].map(function (it) { var p = byId(it.id), on = c.indexOf(it.step) > -1; var later = (intro[it.id] || 1) > cw; if (later) return "<p class='pstep later'><span class='tick'></span><span>" + esc(STEP_LABEL[it.step] || it.step) + " · <small>à partir de la semaine " + intro[it.id] + "</small></span></p>"; return "<button class='pstep' data-check='" + blk[0] + "|" + it.step + "' aria-pressed='" + on + "'><span class='tick'>" + (on ? "✓" : "") + "</span><span>" + esc(STEP_LABEL[it.step] || it.step) + " · <small>" + esc(p ? p.name : "") + "</small></span></button>"; }).join("") : "<p class='empty'>Un nettoyage doux suffit.</p>") + "</div>";
     });
     html += "<p class='sect'>Journal de peau</p><div class='mood'><p>Comment ta peau se sent-elle aujourd'hui ?</p><div>" + [["1", "Mauvais", "☹"], ["2", "Bof", "🙁"], ["3", "Ça va", "🙂"], ["4", "Bien", "😊"], ["5", "Génial", "😄"]].map(function (m) { return "<button data-mood='" + m[0] + "' aria-pressed='" + (s.journal[today] === m[0]) + "'><span>" + m[2] + "</span><small>" + m[1] + "</small></button>"; }).join("") + "</div></div>";
+    html += "<details class='compare'><summary>Ce que tu peux attendre, et quand</summary><div class='delays'>" + [["Semaines 2 à 4", "Une peau plus confortable, moins de réactions"], ["Semaines 6 à 10", "Une petite poussée est possible quand les actifs arrivent : elle doit se calmer"], ["Mois 3 à 4", "Un grain de peau plus régulier"], ["Mois 4 à 6", "Des marques qui s'estompent, avec la protection solaire chaque jour"]].map(function (x) { return "<p><b>" + x[0] + "</b><span>" + x[1] + "</span></p>"; }).join("") + "</div><p class='note'>Repères généraux : chaque peau va à son rythme. Brûlure, rougeur qui dure, démangeaisons, plaques ou peau qui pèle : arrête le dernier produit ajouté et demande conseil à un ou une dermatologue.</p></details>";
     html += this.refillsBox(R.reco);
     html += forYou(a).slice(0, 4).map(function (g) { return self.reccarousel(g); }).join("");
     html += "<button class='reco-card' data-view='reveal'><b>Recommandé</b><span>Ta routine Matin · Soir · Hebdo · Douche</span></button>";
@@ -1710,6 +1764,7 @@
     if (d.sf) { this.skinFilter = d.sf; return this.render(); }
     if (d.dellog) { s.skinLog.splice(+d.dellog, 1); this.save(); return this.render(); }
     if (d.act === "addroutine") { var R = buildRoutine(s.answers); ["matin", "soir", "hebdo"].forEach(function (k) { R[k].forEach(function (it) { if (s.shelf.indexOf(it.id) < 0) s.shelf.push(it.id); }); }); this.save(); t.textContent = "Ajoutée ✓"; return; }
+    if (d.act === "planreset") { s.planStart = Date.now(); this.save(); return this.render(); }
     if (d.act === "restart") { s.answers = {}; s.done = false; this.save(); this.step = 0; this.view = "diag"; return this.render(); }
     if (d.act === "scanpaste") { this.scan = { mode: "paste" }; return this.render(); }
     if (d.act === "scanbar") { this.scan = { mode: "bar" }; return this.render(); }

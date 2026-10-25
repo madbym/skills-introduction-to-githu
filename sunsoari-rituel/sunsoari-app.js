@@ -359,6 +359,7 @@
     marula: { n: "Huile de marula", f: "Nutrition", what: "Huile du fruit du marula, en Afrique australe.", use: "Utilisée pour nourrir la peau, avec un toucher assez léger.", care: "Bien tolérée en général.", reg: "Afrique australe" },
     baobab: { n: "Huile de baobab", f: "Nutrition", what: "Huile des graines du baobab.", use: "Utilisée pour la peau sèche et les cheveux.", care: "Bien tolérée en général.", reg: "Afrique" },
     moringa: { n: "Moringa", f: "Nutrition", what: "Arbre cultivé en Afrique et en Asie, utilisé en huile ou en extrait.", use: "Utilisé dans des soins nourrissants pour la peau et les cheveux.", care: "Bien toléré en général.", reg: "Afrique, Asie" },
+    ricin: { n: "Huile de ricin", f: "Cheveux", what: "Huile épaisse, très utilisée dans les routines des cheveux texturés (dont la version « jamaïcaine », torréfiée).", use: "Utilisée pour nourrir les longueurs et les sourcils.", care: "Très épaisse : quelques gouttes suffisent, plutôt sur les longueurs.", reg: "Caraïbes, Afrique, Inde" },
     chebe: { n: "Poudre de chébé", f: "Cheveux", what: "Mélange de graines et de plantes utilisé traditionnellement par des femmes du Tchad pour les longueurs.", use: "Appliquée sur les longueurs pour les protéger de la casse dans les rituels traditionnels.", care: "Les promesses de pousse ne sont pas prouvées. Ne l'applique pas sur le cuir chevelu irrité.", reg: "Tchad" },
     camelia: { n: "Huile de camélia (tsubaki)", f: "Cheveux", what: "Huile utilisée depuis longtemps au Japon pour les cheveux.", use: "Utilisée pour la douceur et la brillance des cheveux.", care: "Bien tolérée en général.", reg: "Japon" },
     romarin: { n: "Romarin", f: "Cuir chevelu", what: "Plante aromatique, en extrait ou en huile.", use: "Très tendance dans les soins du cuir chevelu.", care: "Les promesses de pousse ne sont pas prouvées. L'huile essentielle peut irriter.", reg: "Partout" },
@@ -494,6 +495,30 @@
     { id: "bolden", brand: "Bolden", name: "SPF 30 Brightening Moisturizer", origin: "États-Unis", zone: "visage", step: "spf", act: ["spf"], for: ["normale", "taches"], avoid: [], desc: "Hydratant solaire d'une marque créée pour les peaux mates à foncées. SPF 30." },
     { id: "bioil", brand: "Bio-Oil", name: "Huile de Soin", origin: "Afrique du Sud", madeIn: "en Afrique du Sud", zone: "corps", step: "huile", act: [], for: ["corpsSec", "corpsMarques"], avoid: ["reactifHE"], desc: "Huile corps conçue en Afrique du Sud, très répandue pour l'aspect des vergetures et cicatrices. Contient du parfum." },
     { id: "africology", brand: "Africology", name: "Soins corps aux plantes africaines", origin: "Afrique du Sud", madeIn: "en Afrique du Sud", zone: "corps", step: "corps", act: [], for: ["corpsSec", "corpsOk"], avoid: ["reactifHE"], desc: "Marque sud-africaine de spa aux plantes du continent. Vérifie la composition du soin choisi." },
+    // Cheveux : Corée, Japon, Chine, Afrique, diaspora et Europe
+    { id: "drforhair", brand: "Dr.FORHAIR", name: "Folligen Original Shampoo", origin: "Corée", zone: "cuir", step: "shampoing", act: [], for: ["cuirGras", "fins"], avoid: [], desc: "Shampoing coréen pour cuir chevelu qui regraisse et cheveux fins." },
+    { id: "masilvolume", brand: "Masil", name: "5 Probiotics Perfect Volume Shampoo", origin: "Corée", zone: "cheveux", step: "shampoing", act: ["ferments"], for: ["fins", "raides", "ondules"], avoid: [], desc: "Shampoing volume aux probiotiques, pour cheveux fins et plats." },
+    { id: "lador", brand: "Lador", name: "Perfect Hair Fill-Up", origin: "Corée", zone: "cheveux", step: "soin", act: [], for: ["secs", "colores"], avoid: [], desc: "Soin en ampoule pour cheveux abîmés ou colorés, très populaire en Corée." },
+    { id: "moremo", brand: "Moremo", name: "Water Treatment Miracle 10", origin: "Corée", zone: "cheveux", step: "masque", act: [], for: ["secs", "colores", "fins"], avoid: [], desc: "Soin express à rincer, texture eau, pour démêler et adoucir." },
+    { id: "unove", brand: "Unove", name: "Deep Damage Treatment EX", origin: "Corée", zone: "cheveux", step: "masque", act: [], for: ["secs", "colores"], avoid: [], desc: "Masque réparateur pour longueurs abîmées." },
+    { id: "ichikami", brand: "Ichikami", name: "Smoothing Shampoo", origin: "Japon", zone: "cheveux", step: "shampoing", act: [], for: ["secs", "raides", "ondules"], avoid: [], desc: "Shampoing japonais aux plantes, pour des cheveux lisses et doux." },
+    { id: "andhoney", brand: "&honey", name: "Deep Moist Shampoo", origin: "Japon", zone: "cheveux", step: "shampoing", act: [], for: ["secs", "boucles", "ondules"], avoid: ["ruche"], desc: "Shampoing hydratant au miel, une marque japonaise très suivie." },
+    { id: "bawang", brand: "Bawang", name: "Shampoing aux plantes chinoises", origin: "Chine", zone: "cuir", step: "shampoing", act: ["ginseng"], for: ["cuirGras", "fins"], avoid: [], desc: "Marque chinoise historique de shampoings aux plantes. Distribution limitée en France : vérifie le produit et son revendeur." },
+    { id: "chebetchad", brand: "Chébé du Tchad", name: "Poudre de chébé", origin: "Tchad", madeIn: "au Tchad", zone: "cheveux", step: "soin", act: ["chebe"], for: ["crepus", "secs", "boucles"], avoid: [], desc: "Mélange traditionnel des femmes du Tchad pour protéger les longueurs. Choisis un revendeur qui indique l'origine et la composition." },
+    { id: "ghassoul", brand: "Nectarome", name: "Ghassoul (argile du Maroc)", origin: "Maroc", madeIn: "au Maroc", zone: "cuir", step: "shampoing", act: [], for: ["cuirGras", "crepus", "boucles"], avoid: [], desc: "Argile lavante traditionnelle du Maroc, pour un lavage doux sans mousse." },
+    { id: "miellepom", brand: "Mielle Organics", name: "Pomegranate & Honey Leave-In Conditioner", origin: "États-Unis", zone: "cheveux", step: "soin", act: [], for: ["crepus", "boucles", "secs"], avoid: [], desc: "Après-shampoing sans rinçage pour boucles serrées à crépus." },
+    { id: "camillerose", brand: "Camille Rose", name: "Curl Maker", origin: "États-Unis", zone: "cheveux", step: "soin", act: [], for: ["boucles", "crepus"], avoid: [], desc: "Gel-crème pour définir les boucles." },
+    { id: "auntjackie", brand: "Aunt Jackie's", name: "Curl La La Defining Curl Custard", origin: "États-Unis", zone: "cheveux", step: "soin", act: [], for: ["boucles", "crepus"], avoid: [], desc: "Crème coiffante petit prix pour boucles et frisottis." },
+    { id: "kinkycurly", brand: "Kinky-Curly", name: "Knot Today Leave-In Detangler", origin: "États-Unis", zone: "cheveux", step: "soin", act: [], for: ["crepus", "boucles"], avoid: [], desc: "Sans rinçage qui facilite le démêlage des cheveux crépus." },
+    { id: "tgin", brand: "tgin", name: "Honey Miracle Hair Mask", origin: "États-Unis", zone: "cheveux", step: "masque", act: [], for: ["crepus", "secs", "boucles"], avoid: ["ruche"], desc: "Masque nourrissant au miel pour cheveux crépus secs." },
+    { id: "thedoux", brand: "The Doux", name: "Mousse Def Texture Foam", origin: "États-Unis", zone: "cheveux", step: "soin", act: [], for: ["boucles", "crepus"], avoid: [], desc: "Mousse coiffante pour définir boucles et twists." },
+    { id: "sheashampoo", brand: "SheaMoisture", name: "Jamaican Black Castor Oil Strengthen & Restore Shampoo", origin: "États-Unis", zone: "cheveux", step: "shampoing", act: ["ricin", "karite"], for: ["crepus", "secs", "boucles"], avoid: [], desc: "Shampoing doux à l'huile de ricin pour cheveux crépus et fragiles." },
+    { id: "briogeo", brand: "Briogeo", name: "Don't Despair, Repair! Deep Conditioning Mask", origin: "États-Unis", zone: "cheveux", step: "masque", act: [], for: ["secs", "colores", "boucles"], avoid: [], desc: "Masque réparateur pour tous types de cheveux abîmés." },
+    { id: "olaplex3", brand: "Olaplex", name: "No.3 Hair Perfector", origin: "États-Unis", zone: "cheveux", step: "masque", act: [], for: ["colores", "secs"], avoid: [], desc: "Soin avant shampoing pour cheveux colorés, décolorés ou lissés." },
+    { id: "furterer", brand: "René Furterer", name: "Karité Nutri Masque Nutrition Intense", origin: "France", zone: "cheveux", step: "masque", act: ["karite"], for: ["secs", "crepus", "boucles"], avoid: [], desc: "Masque de pharmacie au karité pour cheveux très secs." },
+    { id: "kloranemangue", brand: "Klorane", name: "Masque Nutrition à la Mangue", origin: "France", zone: "cheveux", step: "masque", act: [], for: ["secs", "ondules", "boucles"], avoid: [], desc: "Masque nourrissant de pharmacie, bon rapport qualité-prix." },
+    { id: "anaphase", brand: "Ducray", name: "Anaphase+ Shampooing", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["fins", "cuirOk"], avoid: [], desc: "Shampoing de pharmacie pour cheveux fins qui manquent de densité. Une chute importante se montre à un médecin." },
+    { id: "nodeds", brand: "Bioderma", name: "Nodé DS+ Shampooing", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirPellicules", "cuirSensible"], avoid: [], desc: "Shampoing de pharmacie pour les pellicules et les rougeurs du cuir chevelu." },
     { id: "skingourmet", brand: "Skin Gourmet", name: "Beurre de karité brut", origin: "Ghana", madeIn: "au Ghana", zone: "corps", step: "corps", act: ["karite"], for: ["corpsSec", "corpsTresSec", "secs", "crepus"], avoid: [], desc: "Marque d'Accra qui travaille des ingrédients ghanéens bruts." },
     { id: "kocos", brand: "Kocos Cosmétiques", name: "Soins au beurre de karité", origin: "Mali", madeIn: "au Mali", zone: "corps", step: "corps", act: ["karite"], for: ["corpsSec", "corpsTresSec", "corpsOk"], avoid: [], desc: "Laits, crèmes et savons au karité, créés par une pharmacienne malienne." },
     { id: "nuhanciam", brand: "Nuhanciam", name: "Baume Corps Réparateur Intense", origin: "France", zone: "corps", step: "corps", act: ["karite", "hyaluronique"], for: ["corpsTresSec", "corpsSec", "corpsMarques"], avoid: [], desc: "Baume corps pensé pour les peaux noires et métissées." },
@@ -638,7 +663,7 @@
     if (tags.indexOf("acides") > -1 && p.act.some(function (x) { return ["aha", "bha", "pha"].indexOf(x) > -1; })) excl.push("acides");
     var match = p.for.filter(function (x) { return tags.indexOf(x) > -1; });
     var origins = a.origines || [];
-    var bonus = origins.length && origins.indexOf("toutes") < 0 && (origins.indexOf(p.origin) > -1 || (origins.indexOf("Afrique") > -1 && ["Mali", "Ghana", "Nigeria", "Maroc", "Sénégal", "Afrique du Sud", "Kenya", "Côte d'Ivoire"].indexOf(p.origin) > -1)) ? 1.5 : 0;
+    var bonus = origins.length && origins.indexOf("toutes") < 0 && (origins.indexOf(p.origin) > -1 || (origins.indexOf("Afrique") > -1 && ["Mali", "Ghana", "Nigeria", "Maroc", "Sénégal", "Afrique du Sud", "Kenya", "Côte d'Ivoire", "Tchad"].indexOf(p.origin) > -1)) ? 1.5 : 0;
     // Un produit doit correspondre à au moins une réponse : l'origine préférée ne fait que départager.
     return { p: p, match: match, excl: excl, score: excl.length || !match.length ? -1 : match.length + bonus + (p.madeIn ? 0.3 : 0) };
   }
@@ -1079,7 +1104,7 @@
     retinoides: ["rides", "texture"], bakuchiol: ["rides", "texture"], pdrn: ["rides", "secheresse"], aha: ["texture", "teint"],
     bha: ["imperfections", "texture"], pha: ["texture"], azelaique: ["imperfections", "taches", "rougeurs"], spf: ["taches", "rides"],
     squalane: ["secheresse"], karite: ["secheresse", "corpsSec", "corpsTresSec", "secs"], argan: ["secs", "corpsSec"], marula: ["secheresse"],
-    baobab: ["secs", "corpsSec"], camelia: ["secs"], aloe: ["secheresse"], ginseng: ["teint", "rides"], arbutine: ["taches", "teint"], thiamidol: ["taches"], kojique: ["taches"], reglisse: ["taches", "rougeurs"], romarin: ["cuirGras"], teatree: ["imperfections"]
+    baobab: ["secs", "corpsSec"], camelia: ["secs"], aloe: ["secheresse"], ginseng: ["teint", "rides"], arbutine: ["taches", "teint"], thiamidol: ["taches"], kojique: ["taches"], reglisse: ["taches", "rougeurs"], romarin: ["cuirGras"], ricin: ["secs"], teatree: ["imperfections"]
   };
 
   // INCI → ingrédient de la bibliothèque (minuscules, recherche par fragment).
@@ -1091,7 +1116,7 @@
     ["glycolic", "aha"], ["lactic acid", "aha"], ["mandelic", "aha"], ["salicyl", "bha"], ["gluconolactone", "pha"], ["lactobionic", "pha"],
     ["azel", "azelaique"], ["arbutin", "arbutine"], ["isobutylamido thiazolyl resorcinol", "thiamidol"], ["kojic", "kojique"], ["glycyrrhiza", "reglisse"], ["licorice", "reglisse"], ["sodium dna", "pdrn"], ["polydeoxyribonucleotide", "pdrn"], ["pdrn", "pdrn"], ["panthenol", "panthenol"],
     ["squalane", "squalane"], ["butyrospermum", "karite"], ["shea", "karite"], ["argania", "argan"], ["sclerocarya", "marula"],
-    ["adansonia", "baobab"], ["moringa", "moringa"], ["camellia japonica", "camelia"], ["rosmarinus", "romarin"], ["melaleuca", "teatree"],
+    ["adansonia", "baobab"], ["moringa", "moringa"], ["camellia japonica", "camelia"], ["rosmarinus", "romarin"], ["ricinus", "ricin"], ["melaleuca", "teatree"],
     ["aloe barbadensis", "aloe"], ["olea europaea", "olive"], ["panax ginseng", "ginseng"],
     ["octocrylene", "spf"], ["ethylhexyl triazone", "spf"], ["bis-ethylhexyloxyphenol", "spf"], ["diethylamino hydroxybenzoyl", "spf"], ["zinc oxide", "spf"], ["titanium dioxide", "spf"], ["methylene bis-benzotriazolyl", "spf"]
   ];
@@ -1231,9 +1256,11 @@
       var bad = (p.avoid || []).some(function (x) { return tags.indexOf(x) > -1; }) || (tags.indexOf("acides") > -1 && p.act.some(function (x) { return ["aha", "bha", "pha"].indexOf(x) > -1; }));
       var match = (p.for || []).filter(function (x) { return tags.indexOf(x) > -1; }).length;
       var pref = (opts.prefer || []).filter(function (x) { return p.act.indexOf(x) > -1; }).length;
-      var orig = origins.length && origins.indexOf("toutes") < 0 && (origins.indexOf(p.origin) > -1 || (origins.indexOf("Afrique") > -1 && ["Mali", "Ghana", "Nigeria", "Maroc", "Sénégal", "Afrique du Sud", "Kenya", "Côte d'Ivoire"].indexOf(p.origin) > -1)) ? 6 : 0;
+      var orig = origins.length && origins.indexOf("toutes") < 0 && (origins.indexOf(p.origin) > -1 || (origins.indexOf("Afrique") > -1 && ["Mali", "Ghana", "Nigeria", "Maroc", "Sénégal", "Afrique du Sud", "Kenya", "Côte d'Ivoire", "Tchad"].indexOf(p.origin) > -1)) ? 6 : 0;
       if (opts.morning && p.night) bad = true;
       if (p.needs && !p.needs.some(function (x) { return tags.indexOf(x) > -1; })) bad = true;
+      // Cuir chevelu : le shampoing doit répondre à ce que la cliente a coché.
+      if (zone === "cuir" && !(p.for || []).some(function (x) { return (a.cuir || []).indexOf(x) > -1; })) bad = true;
       var deep = a.carnation === "foncee" || a.carnation === "tresfoncee" || a.carnation === "mate";
       var rev = p.rev || [], revB = (deep && (rev.indexOf("nocast") > -1 || rev.indexOf("fonce") > -1) ? 8 : 0) + (rev.indexOf("afro") > -1 && (a.texture === "crepus" || a.texture === "boucles") ? 8 : 0) + (rev.length ? 2 : 0);
       return { p: p, bad: bad, score: fitScore(p, a).total + match * 4 + pref * 8 + orig + (p.madeIn ? 2 : 0) + revB };
@@ -1294,9 +1321,14 @@
     sensibio: ["eu"], toleriane: ["eu"], effaclarduo: ["eu"], cicalfate: ["eu"], lrpmelab3: ["eu"], uvmune: ["eu", "nocast"], eucerinurea: ["eu"], lipikar: ["eu"], atoderm: ["eu"], kelual: ["eu"], kloraneavoine: ["eu"],
     nuhanciam: ["fonce"], madeforhue: ["fonce"], hyperskin: ["fonce"], eadem: ["fonce"], bgsunscreen: ["fonce", "nocast"], bolden: ["fonce", "nocast"],
     medicube: ["kr"], drjart: ["kr"], innisfree: ["kr"], sulwhasoo: ["kr"], mixsoon: ["kr"], numbuzin3: ["kr"], purito: ["kr"], heimish: ["kr"], shiseidoanessa: ["jp", "nocast"], senka: ["jp"], minon: ["jp"], kikumasamune: ["jp"],
-    winona: ["cn"], proya: ["cn"], chando: ["cn"], mielle: ["afro"], cantu: ["afro"], sheamoisture: ["afro"], sheamasque: ["afro"], asiam: ["afro"], pattern: ["afro"], boucleme: ["afro"], loly: ["afro"], activilong: ["afro"]
+    winona: ["cn"], proya: ["cn"], chando: ["cn"], mielle: ["afro"], miellepom: ["afro"], camillerose: ["afro"], auntjackie: ["afro"], kinkycurly: ["afro"], tgin: ["afro"], thedoux: ["afro"], sheashampoo: ["afro"],
+    drforhair: ["kr"], masilvolume: ["kr"], lador: ["kr"], moremo: ["kr"], unove: ["kr"], ichikami: ["jp"], andhoney: ["jp"], bawang: ["cn"], furterer: ["eu"], kloranemangue: ["eu"], anaphase: ["eu"], nodeds: ["eu"], cantu: ["afro"], sheamoisture: ["afro"], sheamasque: ["afro"], asiam: ["afro"], pattern: ["afro"], boucleme: ["afro"], loly: ["afro"], activilong: ["afro"]
   };
-  EXT.forEach(function (p) { p.rev = REV_BY_ID[p.id] || []; });
+  EXT.forEach(function (p) {
+    p.rev = REV_BY_ID[p.id] || [];
+    // Les soins pensés pour cheveux texturés ne sont proposés qu'aux cheveux ondulés à crépus.
+    if (p.rev.indexOf("afro") > -1 && !p.needs) p.needs = ["crepus", "boucles", "ondules"];
+  });
 
   // Plan d'introduction : un nouveau produit par semaine, les actifs forts en dernier, d'abord 1 soir puis 2.
   var STRONG = ["retinoides", "aha", "bha", "pha", "vitc", "azelaique"];

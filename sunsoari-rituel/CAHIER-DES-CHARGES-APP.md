@@ -121,7 +121,7 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
   - un code-barres cherche le produit dans Open Beauty Facts, puis calcule le score ;
   - un QR code `sunsoari.fr/products/…` ouvre la fiche Sunsoari ; un autre lien s'affiche avec son domaine, sans ouverture automatique ;
   - la page doit être servie en HTTPS pour accéder à la caméra.
-- **Bibliothèque** : environ 120 produits d'autres marques (visage, corps, cheveux, cuir chevelu) en plus de la gamme Sunsoari, avec des classiques coréens, japonais et de pharmacie européenne, des marques pour peaux noires et métissées et des soins pour cheveux bouclés à crépus.
+- **Bibliothèque** : environ 145 produits d'autres marques (visage, corps, cheveux, cuir chevelu) en plus de la gamme Sunsoari, avec des classiques coréens, japonais et de pharmacie européenne, des marques pour peaux noires et métissées et des soins pour cheveux bouclés à crépus.
 - **Repères de réputation** (`REV_BY_ID`), affichés en badges : Best-seller en Corée, Classique au Japon, Référence en pharmacie, Marque pensée pour les peaux noires et métissées, Sans trace blanche sur peau foncée, Pensé pour les cheveux bouclés à crépus.
   - Ce sont des repères publics, pas des avis vérifiés. Ne jamais inventer d'avis, de notes ni de nombres d'avis.
 - **À construire** : avis vérifiés de clientes Sunsoari (acheteuses identifiées), filtrables par type de peau, carnation et texture de cheveux, avec modération et sans contrepartie cachée.

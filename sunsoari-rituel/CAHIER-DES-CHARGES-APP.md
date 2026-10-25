@@ -35,7 +35,7 @@ Une question par écran, mascotte Sunsoari (petit soleil souriant) qui « parle 
 9. Préférences : K-beauty, J-beauty, marques africaines, budget.
 10. Photo facultative du visage et du cuir chevelu (analyse IA, observations à valider).
 11. Écran « Ton profil est complet à X % » (pourcentage réel des questions répondues).
-12. **Engagement** : « Engageons-nous à prendre soin de toi » + curseur « Glisse pour valider » + confettis.
+12. **Engagement** : « Je m'engage à prendre soin de moi » + curseur « Glisse pour valider » + confettis.
 13. Révélation : « Ta nouvelle routine est prête ! »
 
 ## 4. Écrans principaux (barre du bas)

@@ -111,6 +111,7 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
   - vignette de chaque produit Sunsoari (correspondance dans `PROD_PHOTO`).
 - Produits d'autres marques : jamais de photo officielle sans autorisation. Afficher une vignette douce avec les initiales de la marque.
 - Pas de photo de cliente, de visage retouché ni d'avant/après.
+- Les contenus à venir (vidéos d'installation, coulisses, UGC) sont listés dans `sunsoari-rituel/MEDIATHEQUE-A-EXPLOITER.md`.
 
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).

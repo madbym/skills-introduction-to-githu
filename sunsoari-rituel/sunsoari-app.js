@@ -339,6 +339,10 @@
     ferments: { n: "Ferments (galactomyces, riz…)", f: "Éclat", what: "Ingrédients obtenus par fermentation, très présents en J-beauty et K-beauty.", use: "Utilisés pour l'éclat et le confort de la peau.", care: "Teste d'abord sur une petite zone si ta peau est réactive.", reg: "Japon, Corée" },
     vitc: { n: "Vitamine C", f: "Éclat · taches", what: "Antioxydant, sous forme pure (acide ascorbique) ou de dérivés plus doux.", use: "Souvent utilisée pour l'éclat et l'apparence des taches.", care: "Peut picoter. Garde le flacon à l'abri de la lumière. Protection solaire le matin indispensable.", reg: "Partout" },
     tranexamique: { n: "Acide tranexamique", f: "Taches", what: "Actif venu du monde médical, devenu courant en cosmétique.", use: "Utilisé dans des soins qui ciblent l'apparence des taches et du teint inégal.", care: "Les taches ont des causes variées : demande l'avis d'un ou d'une dermatologue si elles changent.", reg: "Corée, Japon" },
+    arbutine: { n: "Alpha-arbutine", f: "Taches", what: "Molécule qui freine la production de mélanine, très utilisée dans les sérums anti-taches.", use: "Utilisée pour l'apparence des taches et du teint inégal, souvent dès les premières marques.", care: "Plutôt bien tolérée. À associer à une protection solaire quotidienne.", reg: "Partout" },
+    thiamidol: { n: "Thiamidol", f: "Taches", what: "Actif breveté par Beiersdorf (Nivea, Eucerin), qui agit sur une enzyme de la pigmentation.", use: "Utilisé dans des soins qui ciblent l'apparence des taches.", care: "Résultats progressifs, sur plusieurs semaines. Protection solaire indispensable.", reg: "Europe" },
+    kojique: { n: "Acide kojique", f: "Taches", what: "Actif issu de la fermentation, traditionnel au Japon.", use: "Utilisé pour l'apparence des taches, souvent en association.", care: "Peut irriter les peaux sensibles, surtout en savon très concentré. Teste toujours avant.", reg: "Japon, Asie" },
+    reglisse: { n: "Réglisse (extrait de racine)", f: "Taches · apaisant", what: "Extrait de plante utilisé à la fois pour unifier et pour apaiser.", use: "Utilisé pour le teint inégal et les peaux réactives.", care: "Généralement bien tolérée.", reg: "Asie, Europe" },
     retinoides: { n: "Rétinoïdes (rétinol, rétinal)", f: "Anti-âge", what: "Dérivés de la vitamine A, parmi les actifs anti-âge les plus étudiés.", use: "Utilisés pour le grain de peau et l'apparence des ridules.", care: "Pas pendant la grossesse ni l'allaitement. Introduis-les progressivement, le soir, et protège-toi du soleil le jour.", reg: "Partout" },
     bakuchiol: { n: "Bakuchiol", f: "Anti-âge", what: "Extrait végétal souvent présenté comme une alternative douce au rétinol.", use: "Utilisé pour le grain de peau et la souplesse.", care: "Les études restent moins nombreuses que pour le rétinol.", reg: "Partout" },
     aha: { n: "AHA (acides glycolique, lactique)", f: "Exfoliant", what: "Acides de fruits qui exfolient la surface de la peau.", use: "Utilisés pour le grain de peau et l'éclat.", care: "Peuvent irriter : commence 1 à 2 fois par semaine. Protection solaire indispensable.", reg: "Partout" },
@@ -410,6 +414,21 @@
     { id: "bojsun", brand: "Beauty of Joseon", name: "Relief Sun Rice + Probiotics SPF 50+", origin: "Corée", zone: "visage", step: "spf", act: ["spf", "riz"], for: ["taches", "teint", "seche", "normale", "mixte", "sensible"], avoid: [], desc: "Crème solaire visage au riz, finition légère." },
     { id: "biore", brand: "Bioré", name: "UV Aqua Rich Watery Essence SPF 50+", origin: "Japon", zone: "visage", step: "spf", act: ["spf", "hyaluronique"], for: ["mixte", "imperfections", "taches", "normale"], avoid: ["sensible", "rougeurs"], desc: "Solaire très fluide, texture gel." },
     // Corps
+    // Sélection anti-taches et corps
+    { id: "gmdiscolo", brand: "Good Molecules", name: "Discoloration Correcting Serum", origin: "États-Unis", zone: "visage", step: "serum", act: ["tranexamique", "niacinamide"], for: ["taches", "teint"], avoid: [], desc: "Sérum léger à l'acide tranexamique et à la niacinamide, à petit prix, pour le teint inégal." },
+    { id: "axisydark", brand: "Axis-Y", name: "Dark Spot Correcting Glow Serum", origin: "Corée", zone: "visage", step: "serum", act: ["niacinamide"], for: ["taches", "teint"], avoid: [], desc: "Sérum coréen à la niacinamide, pensé pour les marques laissées par les boutons." },
+    { id: "toarbutin", brand: "The Ordinary", name: "Alpha Arbutin 2% + HA", origin: "Canada", zone: "visage", step: "serum", act: ["arbutine", "hyaluronique"], for: ["taches", "teint"], avoid: [], desc: "Alpha-arbutine et acide hyaluronique : une formule simple pour commencer sur les taches." },
+    { id: "naturiumarb", brand: "Naturium", name: "Alpha Arbutin Serum 2%", origin: "États-Unis", zone: "visage", step: "serum", act: ["arbutine"], for: ["taches", "teint"], avoid: [], desc: "Sérum à l'alpha-arbutine pour l'apparence des taches." },
+    { id: "niveathia", brand: "Nivea", name: "Luminous630 Sérum anti-taches", origin: "Allemagne", zone: "visage", step: "serum", act: ["thiamidol"], for: ["taches"], avoid: [], desc: "Sérum au Thiamidol, facile à trouver en grande surface et en pharmacie." },
+    { id: "ondotxa", brand: "Ondo Beauty 36.5", name: "Tranexamic Acid & Licorice Dark Spot Treatment", origin: "États-Unis", zone: "visage", step: "serum", act: ["tranexamique", "reglisse"], for: ["taches", "rougeurs"], avoid: [], desc: "Acide tranexamique et réglisse, une association douce pour les taches." },
+    { id: "faded", brand: "Topicals", name: "Faded Serum", origin: "États-Unis", zone: "visage", step: "serum", act: ["tranexamique", "kojique", "azelaique", "niacinamide"], for: ["taches"], avoid: ["sensible", "rougeurs", "enceinte"], desc: "Plusieurs actifs anti-taches dans une formule, pour des marques installées. Commence 2 fois par semaine." },
+    { id: "lrpmelab3", brand: "La Roche-Posay", name: "Mela B3 Sérum", origin: "France", zone: "visage", step: "serum", act: ["niacinamide"], for: ["taches", "teint", "sensible"], avoid: [], desc: "Sérum anti-taches de pharmacie, avec niacinamide et Melasyl, testé sur peaux sensibles selon la marque." },
+    { id: "pcazelaic", brand: "Paula's Choice", name: "10% Azelaic Acid Booster", origin: "États-Unis", zone: "visage", step: "serum", act: ["azelaique"], for: ["taches", "imperfections", "rougeurs"], avoid: [], desc: "Acide azélaïque 10 % : marques, boutons et teint inégal. Commence 2 fois par semaine." },
+    { id: "ggcglow", brand: "Geek & Gorgeous", name: "C-Glow", origin: "Allemagne", zone: "visage", step: "serum", act: ["vitc"], for: ["taches", "teint"], avoid: ["sensible", "rougeurs"], desc: "Vitamine C à petit prix. Commence 2 fois par semaine, le flacon se garde à l'abri de la lumière." },
+    { id: "versedretinol", brand: "Versed", name: "Press Restart Gentle Retinol Serum", origin: "États-Unis", zone: "visage", step: "serum", act: ["retinoides"], for: ["taches", "texture", "rides"], avoid: ["enceinte", "sensible"], night: true, desc: "Rétinol doux pour débuter, le soir uniquement, avec une protection solaire le jour." },
+    { id: "ggagame", brand: "Geek & Gorgeous", name: "A-Game 5", origin: "Allemagne", zone: "visage", step: "serum", act: ["retinoides"], for: ["taches", "texture", "rides"], avoid: ["enceinte", "sensible"], night: true, desc: "Rétinal à petit prix, le soir. Commence 1 à 2 fois par semaine." },
+    { id: "toretinal", brand: "The Ordinary", name: "Retinal 0.2% Emulsion", origin: "Canada", zone: "visage", step: "serum", act: ["retinoides"], for: ["taches", "texture", "rides"], avoid: ["enceinte", "sensible", "rougeurs"], night: true, desc: "Rétinal plus concentré, pour les peaux déjà habituées aux rétinoïdes. Le soir, 1 fois par semaine au début." },
+    { id: "acmdepiwhite", brand: "Laboratoire ACM", name: "Dépiwhite Crème Zones Sensibles", origin: "France", zone: "corps", step: "corps", act: ["niacinamide", "reglisse", "aha"], for: ["corpsMarques"], needs: ["corpsMarques"], avoid: ["acides"], desc: "Crème de pharmacie pour les taches des aisselles, du maillot, des genoux et des coudes." },
     { id: "skingourmet", brand: "Skin Gourmet", name: "Beurre de karité brut", origin: "Ghana", madeIn: "au Ghana", zone: "corps", step: "corps", act: ["karite"], for: ["corpsSec", "corpsTresSec", "secs", "crepus"], avoid: [], desc: "Marque d'Accra qui travaille des ingrédients ghanéens bruts." },
     { id: "kocos", brand: "Kocos Cosmétiques", name: "Soins au beurre de karité", origin: "Mali", madeIn: "au Mali", zone: "corps", step: "corps", act: ["karite"], for: ["corpsSec", "corpsTresSec", "corpsOk"], avoid: [], desc: "Laits, crèmes et savons au karité, créés par une pharmacienne malienne." },
     { id: "nuhanciam", brand: "Nuhanciam", name: "Baume Corps Réparateur Intense", origin: "France", zone: "corps", step: "corps", act: ["karite", "hyaluronique"], for: ["corpsTresSec", "corpsSec", "corpsMarques"], avoid: [], desc: "Baume corps pensé pour les peaux noires et métissées." },
@@ -478,6 +497,8 @@
       options: [["seche", "Sèche, elle tiraille", "", "dry"], ["sensible", "Sensible, vite inconfortable", "", "flame"], ["mixte", "Mixte à grasse", "", "drops"], ["normale", "Confortable", "", "heart"]] },
     { id: "concerns", sec: 1, title: "Qu'aimerais-tu chouchouter en priorité ?", sub: "Jusqu'à 3 choix. On adapte tes conseils et tes produits.", multi: true, max: 3, none: "aucune",
       options: [["secheresse", "Sécheresse, tiraillements", "", "dry"], ["imperfections", "Imperfections", "", "dots"], ["rougeurs", "Rougeurs, sensibilité", "", "flame"], ["teint", "Teint terne", "", "halfsun"], ["texture", "Grain de peau irrégulier", "", "wave"], ["taches", "Taches, teint inégal", "", "spots"], ["rides", "Ridules, fermeté", "", "sprout"], ["aucune", "Rien de particulier", "", "none"]] },
+    { id: "tachesNiveau", sec: 1, title: "Tes taches, aujourd'hui, c'est plutôt…", sub: "Ton ressenti suffit. Ça nous aide à doser ta routine.", skipIf: function (a) { return !has(a, "concerns", "taches"); },
+      options: [["t1", "Légères ou récentes", "Quelques marques après des boutons", "halfsun"], ["t2", "Visibles depuis plusieurs mois", "", "spots"], ["t3", "Marquées, anciennes ou étendues", "", "dots"], ["t4", "Très marquées, ou une tache qui change", "Un avis médical d'abord", "ask"]] },
     { id: "reactions", sec: 1, title: "Ta peau a-t-elle déjà mal réagi à…", sub: "Plusieurs choix possibles. Ça nous aide à écarter certains produits.", multi: true, none: "rien",
       options: [["reactifHE", "Parfums ou huiles essentielles", "", "flower"], ["acides", "Acides exfoliants", "", "wave"], ["ruche", "Produits de la ruche", "Miel, propolis", "leaf"], ["rien", "Rien de particulier", "", "none"]] },
     { id: "valeurs", sec: 1, title: "Tu évites certains ingrédients par choix ?", sub: "", multi: true, none: "aucun",
@@ -651,7 +672,7 @@
       rougeurs: "Rougeurs : eau tiède, produits sans parfum. Des rougeurs qui durent méritent un avis médical.",
       teint: "Teint terne : sommeil, hydratation et protection solaire font partie des bases.",
       texture: "Grain de peau : évite les gommages trop fréquents. Un exfoliant doux 1 à 2 fois par semaine suffit.",
-      taches: "Taches : la protection solaire quotidienne, toute l'année et sur toutes les carnations, est le geste le plus conseillé.",
+      taches: "Taches : la protection solaire quotidienne, toute l'année et sur toutes les carnations, est le geste le plus conseillé." + ({ t2: " Tes marques sont installées : ta routine associe un soin qui unifie et un soin qui renouvelle, sans exfolier trop souvent.", t3: " Tes taches sont marquées : la patience compte, comptez plusieurs mois. Un avis dermatologique t'aidera à aller plus loin.", t4: " Montre d'abord tes taches à un ou une dermatologue, surtout si l'une d'elles change. Les traitements les plus forts (trétinoïne, cystéamine, acide azélaïque à 20 %, peelings, laser) se font sur prescription ou en cabinet." }[a.tachesNiveau] || ""),
       rides: "Ridules : protection solaire, hydratation et, hors grossesse, rétinoïdes introduits progressivement."
     };
     var cs = (a.concerns || []).filter(function (k) { return C[k]; });
@@ -739,6 +760,7 @@
     ".plan>b{display:block;margin:0 0 8px 4px}",
     ".pstep small{color:var(--muted)}",
     ".pstep.later{opacity:.55;cursor:default}",
+    ".tri{background:#fff;border-radius:20px;padding:14px;margin:0 0 14px}.tri>div{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px;margin:10px 0}.tri p{margin:0;background:var(--sand-soft);border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:2px;font-size:13px;min-width:0}.tri p span{width:22px;height:22px;border-radius:50%;background:var(--line);display:flex;align-items:center;justify-content:center;font-size:12px}.tri p.on span{background:var(--water);color:#fff}.tri p small{color:var(--muted);font-size:11px;overflow-wrap:anywhere}.tri>small{color:var(--muted);font-size:12px;display:block}",
     ".intro{background:var(--sand-soft);border-radius:20px;padding:14px;margin-bottom:10px}.intro>p{margin:0 0 10px;font-size:14px;color:var(--muted)}",
     ".intro ol{list-style:none;margin:0;padding:0;display:grid;gap:8px}.intro li{display:flex;gap:10px;align-items:flex-start;background:#fff;border-radius:16px;padding:10px 12px}",
     ".intro li>span:last-child{display:flex;flex-direction:column;gap:2px;min-width:0}.intro li small{color:var(--muted);font-size:12px}.intro li em{font-style:normal;font-size:12px;color:var(--water)}",
@@ -892,6 +914,21 @@
       { k: "texte", t: "Les ingrédients les plus utilisés", d: "Niacinamide, vitamine C, acide tranexamique, acide azélaïque, réglisse." },
       { k: "astuce", t: "Patience et prudence", d: "Une tache qui change de forme, de couleur ou saigne se montre à un ou une dermatologue." }
     ] },
+    { rub: "Académie", title: "Trois types de taches", tone: "sand", slides: [
+      { k: "titre", t: "Trois types de taches", d: "Avant de choisir un soin, on regarde d'où vient la tache." },
+      { k: "texte", t: "Les marques après une inflammation", d: "Après un bouton, une piqûre, une irritation, un eczéma ou un soin trop fort. Ce sont les plus fréquentes sur les peaux foncées." },
+      { k: "texte", t: "Le mélasma", d: "Des plaques souvent symétriques sur les joues, le front ou la lèvre. Liées aux hormones (grossesse, contraception) et au soleil. Un suivi dermatologique est conseillé." },
+      { k: "texte", t: "Les taches de soleil (lentigos)", d: "Liées au soleil reçu au fil des années, sur le visage, les mains, le décolleté." },
+      { k: "astuce", t: "Une tache qui change", d: "Forme, couleur, taille ou saignement : montre-la à un ou une dermatologue, sans attendre." }
+    ] },
+    { rub: "Académie", title: "Le triangle anti-taches", tone: "water", slides: [
+      { k: "titre", t: "Le triangle anti-taches", d: "Trois gestes qui travaillent ensemble." },
+      { k: "texte", t: "1. Protéger", d: "Crème solaire SPF 50 chaque matin, même l'hiver. Sans elle, les autres soins ne suffisent pas." },
+      { k: "texte", t: "2. Unifier", d: "Un actif qui freine la mélanine : alpha-arbutine, niacinamide, acide tranexamique, acide azélaïque, thiamidol, réglisse, vitamine C." },
+      { k: "texte", t: "3. Renouveler", d: "Un rétinoïde le soir ou un exfoliant doux 1 à 2 fois par semaine, pour des marques installées. Sans exagérer : l'irritation crée de nouvelles taches." },
+      { k: "texte", t: "Et le corps ?", d: "Mêmes familles d'ingrédients, mais en soins formulés pour le corps. La peau s'y renouvelle plus lentement : il faut encore plus de patience." },
+      { k: "astuce", t: "Ce qui relève du médecin", d: "Trétinoïne, cystéamine, acide azélaïque à 20 %, peelings et laser se font sur prescription ou en cabinet." }
+    ] },
     { rub: "Académie", title: "Introduire un nouvel actif", tone: "water", slides: [
       { k: "titre", t: "Introduire un nouvel actif", d: "La règle d'or : un seul nouveau produit à la fois." },
       { k: "etape", t: "1 · Teste", d: "Applique un peu de produit derrière l'oreille ou sur le cou pendant 2 à 3 jours." },
@@ -969,7 +1006,7 @@
     retinoides: ["rides", "texture"], bakuchiol: ["rides", "texture"], pdrn: ["rides", "secheresse"], aha: ["texture", "teint"],
     bha: ["imperfections", "texture"], pha: ["texture"], azelaique: ["imperfections", "taches", "rougeurs"], spf: ["taches", "rides"],
     squalane: ["secheresse"], karite: ["secheresse", "corpsSec", "corpsTresSec", "secs"], argan: ["secs", "corpsSec"], marula: ["secheresse"],
-    baobab: ["secs", "corpsSec"], camelia: ["secs"], aloe: ["secheresse"], ginseng: ["teint", "rides"], romarin: ["cuirGras"], teatree: ["imperfections"]
+    baobab: ["secs", "corpsSec"], camelia: ["secs"], aloe: ["secheresse"], ginseng: ["teint", "rides"], arbutine: ["taches", "teint"], thiamidol: ["taches"], kojique: ["taches"], reglisse: ["taches", "rougeurs"], romarin: ["cuirGras"], teatree: ["imperfections"]
   };
 
   // INCI → ingrédient de la bibliothèque (minuscules, recherche par fragment).
@@ -979,7 +1016,7 @@
     ["galactomyces", "ferments"], ["ferment", "ferments"], ["ascorbic", "vitc"], ["ascorbyl", "vitc"], ["tranexamic", "tranexamique"],
     ["retinol", "retinoides"], ["retinal", "retinoides"], ["retinyl", "retinoides"], ["bakuchiol", "bakuchiol"],
     ["glycolic", "aha"], ["lactic acid", "aha"], ["mandelic", "aha"], ["salicyl", "bha"], ["gluconolactone", "pha"], ["lactobionic", "pha"],
-    ["azel", "azelaique"], ["sodium dna", "pdrn"], ["polydeoxyribonucleotide", "pdrn"], ["pdrn", "pdrn"], ["panthenol", "panthenol"],
+    ["azel", "azelaique"], ["arbutin", "arbutine"], ["isobutylamido thiazolyl resorcinol", "thiamidol"], ["kojic", "kojique"], ["glycyrrhiza", "reglisse"], ["licorice", "reglisse"], ["sodium dna", "pdrn"], ["polydeoxyribonucleotide", "pdrn"], ["pdrn", "pdrn"], ["panthenol", "panthenol"],
     ["squalane", "squalane"], ["butyrospermum", "karite"], ["shea", "karite"], ["argania", "argan"], ["sclerocarya", "marula"],
     ["adansonia", "baobab"], ["moringa", "moringa"], ["camellia japonica", "camelia"], ["rosmarinus", "romarin"], ["melaleuca", "teatree"],
     ["aloe barbadensis", "aloe"], ["olea europaea", "olive"], ["panax ginseng", "ginseng"],
@@ -1107,7 +1144,7 @@
   // Tous les produits sous une même forme : Sunsoari (douche) + autres marques.
   function allProducts() {
     var own = Object.keys(P).map(function (k) { var p = P[k]; return { id: "s:" + k, key: k, own: true, brand: p.title.split(" · ")[0], name: p.title.split(" · ")[1] || p.title, zone: "douche", step: "douche", act: p.act || [], flags: (p.act || []).indexOf("teatree") > -1 ? ["allergenes"] : [], for: [], price: p.price, desc: p.pitch, img: PROD_PHOTO[k] ? photo(PROD_PHOTO[k]) : p.img }; });
-    return own.concat(EXT.map(function (p) { return { id: "e:" + p.id, brand: p.brand, name: p.name, zone: p.zone, step: p.step, act: p.act, flags: p.act.indexOf("teatree") > -1 ? ["allergenes"] : [], for: p.for, avoid: p.avoid, origin: p.origin, madeIn: p.madeIn, trend: p.trend, desc: p.desc, url: p.url, affiliate: p.affiliate }; }));
+    return own.concat(EXT.map(function (p) { return { id: "e:" + p.id, brand: p.brand, name: p.name, zone: p.zone, step: p.step, act: p.act, flags: p.act.indexOf("teatree") > -1 ? ["allergenes"] : [], for: p.for, avoid: p.avoid, needs: p.needs, night: p.night, origin: p.origin, madeIn: p.madeIn, trend: p.trend, desc: p.desc, url: p.url, affiliate: p.affiliate }; }));
   }
   function byId(id) { return allProducts().filter(function (p) { return p.id === id; })[0]; }
 
@@ -1122,6 +1159,8 @@
       var match = (p.for || []).filter(function (x) { return tags.indexOf(x) > -1; }).length;
       var pref = (opts.prefer || []).filter(function (x) { return p.act.indexOf(x) > -1; }).length;
       var orig = origins.length && origins.indexOf("toutes") < 0 && (origins.indexOf(p.origin) > -1 || (origins.indexOf("Afrique") > -1 && ["Mali", "Ghana", "Nigeria", "Maroc", "Sénégal"].indexOf(p.origin) > -1)) ? 6 : 0;
+      if (opts.morning && p.night) bad = true;
+      if (p.needs && !p.needs.some(function (x) { return tags.indexOf(x) > -1; })) bad = true;
       return { p: p, bad: bad, score: fitScore(p, a).total + match * 4 + pref * 8 + orig + (p.madeIn ? 2 : 0) };
     }).filter(function (x) { return !x.bad; }).sort(function (x, y) { return y.score - x.score; });
     return list.length ? list[0].p : null;
@@ -1132,6 +1171,12 @@
     var concerns = (a.concerns || []).filter(function (c) { return c !== "aucune"; });
     var add = function (arr, zone, step, opts) { opts = opts || {}; opts.exclude = used; var p = pickFor(zone, step, a, opts); if (p) { used.push(p.id); arr.push({ step: step, id: p.id }); } };
     var morningActs = ["vitc", "niacinamide", "tranexamique", "centella", "hyaluronique"], nightActs = ["retinoides", "pdrn", "ceramides", "mucine", "panthenol", "niacinamide", "hyaluronique"];
+    // Taches : on dose selon l'intensité. Niveau 1 = unifier ; dès le niveau 2, triangle complet (protéger, unifier, renouveler).
+    var tn = concerns.indexOf("taches") > -1 ? ({ t1: 1, t2: 2, t3: 3, t4: 2 })[a.tachesNiveau] || 1 : 0;
+    var fragile = a.peau === "sensible" || a.grossesse === "oui" || has(a, "reactions", "acides");
+    if (tn) morningActs = ["arbutine", "thiamidol", "tranexamique", "niacinamide", "vitc", "reglisse"].concat(morningActs);
+    if (tn >= 3 && !fragile) nightActs = ["retinoides"].concat(nightActs);
+    else if (tn >= 2) nightActs = ["azelaique", "arbutine", "tranexamique"].concat(nightActs);
     var matin = [], soir = [], hebdo = [];
     var makeup = a.routine === "deux" || a.routine === "soir";
     if (mode === "essentielle") {
@@ -1140,7 +1185,7 @@
       soir.push({ step: "nettoyant", id: matin[0] && matin[0].id }); if (concerns.length) add(soir, "visage", "serum", { prefer: nightActs });
       soir.push({ step: "hydratant", id: matin[1] && matin[1].id });
     } else {
-      add(matin, "visage", "nettoyant"); add(matin, "visage", "tonique"); add(matin, "visage", "serum", { prefer: morningActs });
+      add(matin, "visage", "nettoyant"); add(matin, "visage", "tonique"); add(matin, "visage", "serum", { prefer: morningActs, morning: true });
       if (mode === "complete") add(matin, "visage", "essence");
       add(matin, "visage", "hydratant"); add(matin, "visage", "spf");
       add(soir, "visage", "demaquillant");
@@ -1156,12 +1201,12 @@
     var order = ["demaquillant", "nettoyant", "tonique", "essence", "serum", "yeux", "hydratant", "nuit", "spf"];
     var byOrder = function (x, y) { return order.indexOf(x.step) - order.indexOf(y.step); };
     matin.sort(byOrder); soir.sort(byOrder);
-    if (concerns.indexOf("texture") > -1 || concerns.indexOf("imperfections") > -1 || mode === "complete") add(hebdo, "visage", "exfoliant");
+    if (concerns.indexOf("texture") > -1 || concerns.indexOf("imperfections") > -1 || mode === "complete" || (tn >= 2 && !fragile)) add(hebdo, "visage", "exfoliant");
     add(hebdo, "visage", "masquev");
     add(hebdo, "cheveux", "masque"); if (mode !== "essentielle") { add(hebdo, "cheveux", "shampoing"); add(hebdo, "cheveux", "soin"); }
     if ((a.cuir || []).some(function (c) { return c !== "cuirOk"; })) add(hebdo, "cuir", "shampoing");
     add(hebdo, "corps", "corps"); if (mode === "complete") add(hebdo, "corps", "huile");
-    return { matin: matin, soir: soir, hebdo: hebdo, mode: mode,
+    return { matin: matin, soir: soir, hebdo: hebdo, mode: mode, tn: tn, fragile: fragile, enceinte: a.grossesse === "oui", dermato: a.tachesNiveau === "t4",
       douche: [{ step: "douche", id: "s:" + r.main }].concat(r.refills.map(function (k) { return { step: "recharge", id: "s:" + k }; })), reco: r };
   }
 
@@ -1368,6 +1413,7 @@
     html += "<div class='modes'><span>Format</span>" + [["essentielle", "Essentielle"], ["equilibree", "Équilibrée"], ["complete", "Complète"]].map(function (m) { return "<button data-mode='" + m[0] + "' aria-pressed='" + (R.mode === m[0]) + "'>" + m[1] + "</button>"; }).join("") + "</div>";
     if (this.rtab === "matin" || this.rtab === "soir") html += "<p class='sub' style='margin:0 0 12px'>" + R[this.rtab].length + " étapes · " + ({ essentielle: "le strict nécessaire", equilibree: "les bases et un soin ciblé", complete: "la routine complète, façon K-beauty" })[R.mode] + "</p>";
     var list = R[this.rtab];
+    if (R.tn && (this.rtab === "matin" || this.rtab === "soir")) html += this.triangle(R);
     if (this.rtab === "douche" && R.reco.why.length) html += "<p class='why big'>" + esc(R.reco.why.join(" ")) + "</p>";
     if (!list.length) html += "<p class='empty'>Rien à ajouter ici pour ton profil : ta routine reste courte, c'est voulu.</p>";
     list.forEach(function (it, i) { html += self.routineCard(byId(it.id), it.step, i + 1, R.reco.scent); });
@@ -1376,6 +1422,15 @@
     return html;
   };
   // Toute la gamme SHIFT, avec coloris et senteurs.
+  // Le triangle anti-taches : protéger, unifier, renouveler.
+  var UNIFY = ["arbutine", "thiamidol", "kojique", "reglisse", "tranexamique", "niacinamide", "vitc", "azelaique"], RENEW = ["retinoides", "aha", "bha", "pha", "azelaique"];
+  A.triangle = function (R) {
+    var all = R.matin.concat(R.soir, R.hebdo).map(function (x) { return byId(x.id); }).filter(Boolean);
+    var find = function (acts, step) { return all.filter(function (p) { return p.zone === "visage" && (step ? p.step === step : ["serum", "exfoliant", "nuit", "tonique", "essence"].indexOf(p.step) > -1 && (p.act || []).some(function (x) { return acts.indexOf(x) > -1; })); })[0]; };
+    var c = [["Protéger", "Crème solaire chaque matin", find(null, "spf")], ["Unifier", "Un actif qui freine la mélanine", find(UNIFY)], ["Renouveler", "Rétinoïde ou exfoliant doux", find(RENEW)]];
+    var need = R.tn >= 2 ? 3 : 2;
+    return "<div class='tri'><b>Ton triangle anti-taches</b><div>" + c.slice(0, need).map(function (x) { return "<p class='" + (x[2] ? "on" : "") + "'><span>" + (x[2] ? "✓" : "·") + "</span><b>" + x[0] + "</b><small>" + esc(x[2] ? x[2].brand + " " + x[2].name : x[1]) + "</small></p>"; }).join("") + "</div><small>" + (R.dermato ? "Une tache très marquée ou qui change se montre d'abord à un ou une dermatologue. En attendant, ta routine reste douce. " : "") + (need === 3 && !c[2][2] && R.enceinte ? "Pendant la grossesse ou l'allaitement, pas de rétinoïde ni d'exfoliant fort : on garde le renouvellement pour plus tard. Demande l'avis de ton médecin ou de ta sage-femme avant tout nouvel actif." : need === 3 && !c[2][2] ? "Ta peau est fragile en ce moment : on garde le renouvellement pour plus tard, idéalement avec l'avis d'un ou une dermatologue." : need === 3 ? "Pour des marques installées, ta routine coche les trois angles. Un produit peut en couvrir deux." : "Pour des marques légères, protéger et unifier suffisent.") + " Attention à ne pas trop exfolier : c'est l'irritation qui crée de nouvelles taches.</small></div>";
+  };
   A.shiftCollection = function (r) {
     var self = this, keys = ["shiftAroma", "shiftSoin", "shiftCaps", "pureWater"].filter(function (k) { return r.main !== k && r.refills.indexOf(k) < 0; });
     var html = "<div class='shiftbox'><img class='shiftph' src='" + photo(AMB.shift) + "' alt='Pommeaux SHIFT dans une salle de bain' loading='lazy'><span class='tag'>Collection SHIFT</span><h4>Le rituel douche coréen SHIFT</h4><p>Filtration Pure Water + capsules soin & aromathérapie à la vitamine C, aloe vera, coco, karité et tréhalose." + (r.shiftOk ? "" : " Ses capsules contiennent des huiles essentielles : pour ton profil, on te conseille plutôt Onsha, mais voici la gamme si tu veux la découvrir.") + "</p>";

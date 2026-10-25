@@ -512,7 +512,7 @@
     { id: "corps", sec: 2, title: "Et la peau de ton corps ?", sub: "",
       options: [["corpsOk", "Confortable", "", "heart"], ["corpsSec", "Sèche après la douche", "", "dry"], ["corpsTresSec", "Très sèche, rugueuse par endroits", "Coudes, genoux, jambes", "wave"], ["corpsSensible", "Sensible, elle réagit vite", "", "flame"]] },
     { id: "corpsEnvies", sec: 2, title: "Pour ton corps, tu aimerais…", sub: "Plusieurs choix possibles.", multi: true, none: "corpsRien",
-      options: [["corpsNourrir", "Une peau plus nourrie", "", "drop"], ["corpsMarques", "Un grain plus uniforme", "Marques, petites rugosités", "spots"], ["corpsSenteur", "Un moment sensoriel", "", "flower"], ["corpsRien", "Rien de particulier", "", "none"]] },
+      options: [["corpsNourrir", "Une peau plus nourrie", "", "drop"], ["corpsMarques", "Un grain plus uniforme", "Marques, petites rugosités", "spots"], ["corpsSenteur", "Des soins qui sentent bon", "", "flower"], ["corpsRien", "Rien de particulier", "", "none"]] },
 
     { id: "photoCuir", sec: 3, type: "photo", target: "cuir" },
     { id: "texture", sec: 3, title: "Quelle est la texture de tes cheveux ?", sub: "",
@@ -524,8 +524,8 @@
     { id: "lavage", sec: 3, title: "À quelle fréquence laves-tu tes cheveux ?", sub: "",
       options: [["l1", "Tous les jours ou presque", "", "shower"], ["l2", "2 à 3 fois par semaine", "", "drops"], ["l3", "1 fois par semaine", "", "drop"], ["l4", "Moins souvent", "", "sprout"]] },
 
-    { id: "envies", sec: 4, title: "Qu'aimerais-tu ressentir sous la douche ?", sub: "Plusieurs choix possibles.", multi: true,
-      options: [["senteur", "Un moment senteur", "Aromathérapie, rituel", "flower"], ["chlore", "Moins de chlore", "Selon la fiche du fabricant", "drop"], ["soin", "Une eau « soin »", "Capsules aux actifs hydratants", "halfsun"], ["soir", "Un rituel du soir", "Ralentir, se poser", "moon"], ["jet", "Un jet plus doux", "", "shower"], ["sansparfum", "Rien de parfumé", "Je préfère sans senteur", "none"]] },
+    { id: "envies", sec: 4, title: "Qu'est-ce qui compte pour toi sous la douche ?", sub: "Plusieurs choix possibles.", multi: true,
+      options: [["senteur", "Une douche parfumée", "Une senteur qui détend, façon aromathérapie", "flower"], ["chlore", "Moins de chlore", "Selon les informations du fabricant", "drop"], ["soin", "Une eau qui prend soin de moi", "Capsules aux actifs hydratants", "halfsun"], ["soir", "Me détendre le soir", "Ralentir et souffler après la journée", "moon"], ["jet", "Un jet plus doux", "", "shower"], ["sansparfum", "Sans parfum", "Je préfère une douche sans senteur", "none"]] },
     { id: "senteur", sec: 4, title: "Quelle senteur t'attire ?", sub: "Tu pourras en changer à chaque recharge.", skipIf: function (a) { return has(a, "envies", "sansparfum"); },
       options: [["hinoki", "Hinoki", "Bois clair · Onsha et SHIFT Hinoki Spring", "tree"], ["fleur", "Floral", "Fleur de Prunier (Onsha) · Cherry Blossom (SHIFT)", "flower"], ["patchouli", "Patchouli & Rose", "Capsules SHIFT · chaud, enveloppant", "flower"], ["fruite", "Fruité", "Capsules SHIFT · énergie", "sun"], ["decouverte", "Découverte", "SHIFT · 6 senteurs à tester", "sprout"], ["ocean", "Océan", "Onsha · frais, iodé", "wave"], ["pin", "Forêt de Pin", "Onsha · vert, résineux", "leaf"], ["sans", "Sans senteur", "Onsha", "none"]] },
     { id: "origines", sec: 4, title: "Quelles marques aimerais-tu découvrir ?", sub: "On en tient compte pour te proposer d'autres marques que Sunsoari.", multi: true, none: "toutes",

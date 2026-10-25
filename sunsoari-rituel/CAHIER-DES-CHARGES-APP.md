@@ -259,6 +259,11 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - **Micro** : si le navigateur ou la page intégrée bloque le micro, l'application l'explique et place le curseur dans le champ pour utiliser la dictée du clavier du téléphone. Dans un aperçu claude.ai, le micro intégré est bloqué ; sur sunsoari.fr, il fonctionne.
 - **Vidéo et photos** : l'analyse par l'IA demande la capacité « images ». Sans IA, la cliente coche ce qu'elle voit sur ses images, et sa routine en tient compte.
 
+## 5 quindecies. Homme, femme, ludique et fluide
+- **Cohérence selon le genre** : la question grossesse et ménopause n'apparaît pas pour un homme. Une question « barbe » (rasé, barbe courte, barbe longue, pas concerné) s'affiche pour les hommes et les personnes qui se décrivent autrement. Elle ajoute à la routine du matin l'étape rasage (Bevel, marque fondée par Tristan Walker, pensée pour les poils frisés) ou soin de la barbe (Horace, Bulldog), avec des conseils contre le feu du rasoir et les poils incarnés. Nouvelle préoccupation « feu du rasoir, poils incarnés » et habitude « je me rase souvent », pour tous. Les exemples de texte sont neutres (« parent » plutôt que « maman »).
+- **Diagnostic ludique** : un émoji cohérent pour chaque réponse (mains de 4 carnations, drapeaux pour les origines, symboles de texture de cheveux…). Un émoji pour chaque partie, et un petit message d'encouragement au début de chaque nouvelle partie.
+- **Fluidité** : la feuille de style n'est chargée qu'une fois, seul le contenu change. Les choix multiples se mettent à jour sans recharger l'écran. Une animation douce accompagne chaque nouvel écran, désactivée si le téléphone demande moins d'animations. Le catalogue est calculé une seule fois. Chaque écran s'affiche en moins de 20 ms sur ordinateur.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

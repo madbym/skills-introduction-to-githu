@@ -457,7 +457,7 @@
     { id: "atoderm", brand: "Bioderma", name: "Atoderm Crème", origin: "France", zone: "corps", step: "corps", act: [], for: ["corpsSec", "corpsSensible"], avoid: [], desc: "Crème simple, grand format, bien tolérée." },
     { id: "mielle", brand: "Mielle Organics", name: "Rosemary Mint Scalp & Hair Strengthening Oil", origin: "États-Unis", zone: "cheveux", step: "soin", act: ["romarin"], for: ["crepus", "boucles", "secs"], avoid: ["reactifHE"], desc: "Huile au romarin et à la menthe pour le cuir chevelu et les pointes. Contient des huiles essentielles." },
     { id: "cantu", brand: "Cantu", name: "Shea Butter Leave-In Conditioning Repair Cream", origin: "États-Unis", zone: "cheveux", step: "soin", act: ["karite"], for: ["crepus", "boucles", "secs"], avoid: [], desc: "Crème sans rinçage au karité, très répandue et petit prix." },
-    { id: "sheamoisture", brand: "SheaMoisture", name: "Coconut & Hibiscus Curl Enhancing Smoothie", origin: "États-Unis", zone: "cheveux", step: "soin", act: ["karite"], for: ["boucles", "crepus"], avoid: [], desc: "Crème coiffante qui définit les boucles et limite les frisottis." },
+    { id: "sheamoisture", brand: "SheaMoisture", name: "Coconut & Hibiscus Curl Enhancing Smoothie", origin: "États-Unis", zone: "cheveux", step: "soin", act: ["karite"], for: ["boucles", "crepus"], avoid: [], founder: "Fondée par Richelieu Dennis, né au Liberia", desc: "Crème coiffante qui définit les boucles et limite les frisottis." },
     { id: "sheamasque", brand: "SheaMoisture", name: "Jamaican Black Castor Oil Strengthen & Restore Masque", origin: "États-Unis", zone: "cheveux", step: "masque", act: ["karite"], for: ["crepus", "secs", "boucles"], avoid: [], desc: "Masque riche pour les cheveux crépus secs et cassants." },
     { id: "asiam", brand: "As I Am", name: "Coconut CoWash", origin: "États-Unis", zone: "cheveux", step: "shampoing", act: [], for: ["crepus", "boucles", "secs"], avoid: [], desc: "Après-shampoing lavant, pour laver sans dessécher les cheveux crépus." },
     { id: "pattern", brand: "Pattern Beauty", name: "Leave-In Conditioner", origin: "États-Unis", zone: "cheveux", step: "soin", act: [], for: ["crepus", "boucles"], avoid: [], desc: "Soin sans rinçage pour boucles serrées à crépus." },
@@ -495,6 +495,15 @@
     { id: "bolden", brand: "Bolden", name: "SPF 30 Brightening Moisturizer", origin: "États-Unis", zone: "visage", step: "spf", act: ["spf"], for: ["normale", "taches"], avoid: [], desc: "Hydratant solaire d'une marque créée pour les peaux mates à foncées. SPF 30." },
     { id: "bioil", brand: "Bio-Oil", name: "Huile de Soin", origin: "Afrique du Sud", madeIn: "en Afrique du Sud", zone: "corps", step: "huile", act: [], for: ["corpsSec", "corpsMarques"], avoid: ["reactifHE"], desc: "Huile corps conçue en Afrique du Sud, très répandue pour l'aspect des vergetures et cicatrices. Contient du parfum." },
     { id: "africology", brand: "Africology", name: "Soins corps aux plantes africaines", origin: "Afrique du Sud", madeIn: "en Afrique du Sud", zone: "corps", step: "corps", act: [], for: ["corpsSec", "corpsOk"], avoid: ["reactifHE"], desc: "Marque sud-africaine de spa aux plantes du continent. Vérifie la composition du soin choisi." },
+    // Cheveux texturés : marques fondées par des personnes d'origine africaine, afro-caribéenne ou afro-asiatique
+    { id: "musoya", brand: "Musoya", name: "Soins cheveux crépus, frisés et bouclés", origin: "France", founder: "Fondée par Aminata Doucouré, d'origine ivoirienne", zone: "cheveux", step: "soin", act: [], for: ["crepus", "boucles", "secs"], avoid: [], desc: "Marque française pour cheveux crépus, frisés, lockés et bouclés, formulée en France avec une majorité d'ingrédients d'origine naturelle." },
+    { id: "kalia", brand: "Kalia Nature", name: "Shampoing solide à l'hibiscus", origin: "France", founder: "Fondée par Sandrine Sophie, d'origine antillaise", zone: "cheveux", step: "shampoing", act: [], for: ["crepus", "boucles", "ondules"], avoid: [], desc: "Marque française naturelle inspirée des traditions caribéennes (hibiscus, coco, spiruline), pour cheveux ondulés à crépus, enfants compris." },
+    { id: "tropikalbliss", brand: "Tropikalbliss", name: "Soins vegan cheveux crépus", origin: "France", founder: "Fondée par Inguela Coudoux, d'origine congolaise et vietnamienne", zone: "cheveux", step: "soin", act: [], for: ["crepus", "boucles"], avoid: [], desc: "Soins vegan pour cheveux crépus et naturels, d'une créatrice afro-asiatique." },
+    { id: "carolinab", brand: "Carolina B", name: "Soins naturels cheveux frisés à crépus", origin: "", founder: "Fondée par Caroline Njiné, originaire de l'Ouest Cameroun", zone: "cheveux", step: "masque", act: [], for: ["crepus", "boucles", "secs"], avoid: [], desc: "Gamme naturelle pour cheveux frisés à crépus. Vérifie le lieu de vente et la composition du soin choisi." },
+    { id: "adeba", brand: "Adeba Nature", name: "Soins capillaires naturels", origin: "Côte d'Ivoire", founder: "Fondée par Linda Dempah, en Côte d'Ivoire", zone: "cheveux", step: "soin", act: [], for: ["crepus", "boucles", "secs"], avoid: [], desc: "Marque ivoirienne de soins naturels. Disponibilité en France à vérifier." },
+    { id: "nilotiqa", brand: "Nilotiqa", name: "Soins cheveux naturels", origin: "Afrique du Sud", founder: "Fondée par Thokozile Mangwiro, en Afrique du Sud", zone: "cheveux", step: "soin", act: [], for: ["crepus", "boucles"], avoid: [], desc: "Marque sud-africaine de soins capillaires créée par une femme pour les cheveux texturés." },
+    { id: "afrocenchix", brand: "Afrocenchix", name: "Soins cheveux afro et bouclés", origin: "Royaume-Uni", founder: "Fondée par Rachael Twumasi-Corson et Joycelyn Mate", zone: "cheveux", step: "shampoing", act: [], for: ["crepus", "boucles"], avoid: [], desc: "Marque britannique de soins doux pour cheveux afro, fondée par deux femmes noires." },
+    { id: "adwoa", brand: "Adwoa Beauty", name: "Soins cheveux texturés", origin: "États-Unis", founder: "Fondée par Julian Addo, inspirée de la diaspora africaine", zone: "cheveux", step: "masque", act: [], for: ["crepus", "boucles", "secs"], avoid: [], desc: "Marque pour cheveux très texturés, enracinée dans la culture de la diaspora africaine." },
     // Cheveux : Corée, Japon, Chine, Afrique, diaspora et Europe
     { id: "drforhair", brand: "Dr.FORHAIR", name: "Folligen Original Shampoo", origin: "Corée", zone: "cuir", step: "shampoing", act: [], for: ["cuirGras", "fins"], avoid: [], desc: "Shampoing coréen pour cuir chevelu qui regraisse et cheveux fins." },
     { id: "masilvolume", brand: "Masil", name: "5 Probiotics Perfect Volume Shampoo", origin: "Corée", zone: "cheveux", step: "shampoing", act: ["ferments"], for: ["fins", "raides", "ondules"], avoid: [], desc: "Shampoing volume aux probiotiques, pour cheveux fins et plats." },
@@ -611,10 +620,13 @@
       options: [["t1", "Légères ou récentes", "Quelques marques après des boutons", "halfsun"], ["t2", "Visibles depuis plusieurs mois", "", "spots"], ["t3", "Marquées, anciennes ou étendues", "", "dots"], ["t4", "Très marquées, ou une tache qui change", "Un avis médical d'abord", "ask"]] },
     { id: "reactions", sec: 1, title: "Ta peau a-t-elle déjà mal réagi à…", sub: "Plusieurs choix possibles. Ça nous aide à écarter certains produits.", multi: true, none: "rien",
       options: [["reactifHE", "Parfums ou huiles essentielles", "", "flower"], ["acides", "Acides exfoliants", "", "wave"], ["ruche", "Produits de la ruche", "Miel, propolis", "leaf"], ["rien", "Rien de particulier", "", "none"]] },
+    { id: "reacCause", sec: 1, title: "D'après toi, cette réaction a pu venir…", sub: "Plusieurs choix possibles. Une réaction n'a pas toujours la cause qu'on croit.", multi: true, none: "nsp",
+      skipIf: function (a) { var r = a.reactions || []; return !r.length || r.indexOf("rien") > -1; },
+      options: [["fort", "D'un produit trop fort ou utilisé trop souvent", "", "flame"], ["peeling", "D'un peeling ou d'un soin en institut", "", "wave"], ["medicament", "D'un traitement médical", "Acné, rétinoïde sur ordonnance, antibiotique…", "ask"], ["soleil", "Du soleil après le produit", "", "sun"], ["melange", "D'un mélange de plusieurs actifs", "", "dots"], ["nsp", "Je ne sais pas", "", "none"]] },
     { id: "valeurs", sec: 1, title: "Évites-tu certains ingrédients par conviction ?", sub: "", multi: true, none: "aucun",
       options: [["vegan", "Ingrédients d'origine animale", "Je préfère le vegan", "leaf"], ["aucun", "Non, pas particulièrement", "", "none"]] },
-    { id: "grossesse", sec: 1, title: "Es-tu enceinte ou allaitante en ce moment ?", sub: "Certains actifs sont déconseillés dans ce cas. Ta réponse reste sur ton téléphone.",
-      options: [["oui", "Oui", "", "heart"], ["non", "Non", "", "none"], ["nsp", "Je préfère ne pas répondre", "", "ask"]] },
+    { id: "grossesse", sec: 1, title: "En ce moment, es-tu…", sub: "Ta peau change avec les hormones, et certains actifs sont déconseillés pendant la grossesse. Ta réponse reste sur ton téléphone.",
+      options: [["oui", "Enceinte ou allaitante", "", "heart"], ["menopause", "En ménopause ou périménopause", "", "moon"], ["non", "Rien de tout ça", "", "none"], ["nsp", "Je préfère ne pas répondre", "", "ask"]] },
     { id: "routine", sec: 1, title: "As-tu une routine visage au quotidien ?", sub: "",
       options: [["deux", "Oui, matin et soir", "", "sunmoon"], ["matin", "Seulement le matin", "", "sun"], ["soir", "Seulement le soir", "", "moon"], ["aucune", "Pas encore", "On commence simple", "sprout"]] },
     { id: "infoProfil", sec: 1, type: "info", kind: "profil" },
@@ -706,6 +718,7 @@
     });
     if (t.indexOf("brillance") > -1) t.push("mixte");
     if (a.grossesse === "oui") t.push("enceinte");
+    if (a.grossesse === "menopause") t.push("secheresse", "rides");
     return t;
   }
 
@@ -824,6 +837,16 @@
       rides: "Ridules : protection solaire, hydratation et, hors grossesse, rétinoïdes introduits progressivement."
     };
     if (a.carnation === "foncee" || a.carnation === "tresfoncee" || a.carnation === "mate") out.push(["Ta carnation", "Les peaux mates à foncées marquent plus facilement après un bouton, une irritation ou un soin trop fort. Douceur, pas de grattage, et une crème solaire sans trace blanche chaque matin : c'est la meilleure prévention."]);
+    var rc = a.reacCause || [];
+    if (rc.length && rc.indexOf("nsp") < 0) {
+      var rtxt = [];
+      if (rc.indexOf("peeling") > -1) rtxt.push("Une réaction après un peeling ne veut pas dire que ta peau ne supporte aucun acide : les exfoliants doux pourront revenir plus tard, à faible dose, une fois ta peau calmée.");
+      if (rc.indexOf("medicament") > -1) rtxt.push("Certains traitements (contre l'acné, rétinoïdes sur ordonnance, quelques antibiotiques) rendent la peau plus fragile et plus sensible au soleil. Si tu en suis un, demande l'avis de ton médecin ou de ton pharmacien avant d'ajouter un actif.");
+      if (rc.indexOf("soleil") > -1) rtxt.push("Certains actifs (acides, rétinoïdes) rendent la peau plus sensible au soleil : on les garde pour le soir, avec une crème solaire chaque matin.");
+      if (rc.indexOf("fort") > -1 || rc.indexOf("melange") > -1) rtxt.push("Trop d'actifs, trop concentrés ou trop souvent : c'est la cause la plus fréquente. Ta routine introduit un seul produit à la fois.");
+      if (rtxt.length) out.push(["Ta réaction passée", rtxt.join(" ")]);
+    }
+    if (a.grossesse === "menopause") out.push(["Ménopause", "Avec la baisse des hormones, la peau devient souvent plus sèche, plus fine et un peu moins ferme. Une crème plus riche aux céramides, la protection solaire chaque matin et, si ta peau les tolère, des rétinoïdes introduits doucement le soir. Si ta peau change beaucoup, parles-en à ton médecin."]);
     var cs = (a.concerns || []).filter(function (k) { return C[k]; });
     if (cs.length) out.push(["Ton visage", cs.map(function (k) { return C[k]; }).join(" ")]);
     var pv = a.photoVisage || {};
@@ -909,8 +932,9 @@
     ".plan>b{display:block;margin:0 0 8px 4px}",
     ".pstep small{color:var(--muted)}",
     ".pstep.later{opacity:.55;cursor:default}",
+    ".advice{display:grid;gap:8px;margin-bottom:10px}.advice details{background:#fff;border-radius:16px;padding:12px 14px}.advice summary{cursor:pointer;font-weight:600}.advice p{margin:8px 0 0;font-size:14px;color:var(--ink)}",
     ".tipl{margin:6px 0 0;padding-left:18px;display:grid;gap:6px;font-size:14px}.myth{background:#fff4e8;border-radius:18px;padding:14px;margin:10px 0}.myth p{margin:6px 0 0;font-size:14px}.srcs{margin:12px 0;font-size:13px}.srcs ul{padding-left:18px}.srcs a{color:var(--water)}.srcs small{color:var(--muted)}",
-    ".made.rev{background:#eef3f6;color:var(--water)}.revnote{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.revnote small{flex-basis:100%;color:var(--muted);font-size:11px}",
+    ".made.fnd{background:#fbefe4;color:#8a4b1f}.made.rev{background:#eef3f6;color:var(--water)}.revnote{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.revnote small{flex-basis:100%;color:var(--muted);font-size:11px}",
     ".scanhero{width:100%;font:inherit;display:flex;align-items:center;gap:14px;text-align:left;border:0;border-radius:22px;padding:18px;margin:4px 0 12px;background:var(--water);color:#fff;cursor:pointer}.scanhero svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.6;flex:none}.scanhero span{display:flex;flex-direction:column;gap:2px}.scanhero small{opacity:.85}",
     ".camview{position:fixed;inset:0;z-index:50;background:#0d1214;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:16px}.camview video{width:100%;max-width:520px;max-height:62vh;border-radius:20px;object-fit:cover;background:#000}",
     ".camframe{position:absolute;width:min(70vw,320px);height:min(36vw,170px);border:3px solid rgba(255,255,255,.85);border-radius:18px;top:calc(50% - 60px);box-shadow:0 0 0 999px rgba(0,0,0,.18);pointer-events:none}",
@@ -1301,7 +1325,7 @@
   // Tous les produits sous une même forme : Sunsoari (douche) + autres marques.
   function allProducts() {
     var own = Object.keys(P).map(function (k) { var p = P[k]; return { id: "s:" + k, key: k, own: true, brand: p.title.split(" · ")[0], name: p.title.split(" · ")[1] || p.title, zone: "douche", step: "douche", act: p.act || [], flags: (p.act || []).indexOf("teatree") > -1 ? ["allergenes"] : [], for: [], price: p.price, desc: p.pitch, img: PROD_PHOTO[k] ? photo(PROD_PHOTO[k]) : p.img }; });
-    return own.concat(EXT.map(function (p) { return { id: "e:" + p.id, brand: p.brand, name: p.name, zone: p.zone, step: p.step, act: p.act, flags: p.act.indexOf("teatree") > -1 ? ["allergenes"] : [], for: p.for, avoid: p.avoid, needs: p.needs, night: p.night, rev: p.rev, origin: p.origin, madeIn: p.madeIn, trend: p.trend, desc: p.desc, url: p.url, affiliate: p.affiliate }; }));
+    return own.concat(EXT.map(function (p) { return { id: "e:" + p.id, brand: p.brand, name: p.name, zone: p.zone, step: p.step, act: p.act, flags: p.act.indexOf("teatree") > -1 ? ["allergenes"] : [], for: p.for, avoid: p.avoid, needs: p.needs, night: p.night, rev: p.rev, founder: p.founder, origin: p.origin, madeIn: p.madeIn, trend: p.trend, desc: p.desc, url: p.url, affiliate: p.affiliate }; }));
   }
   function byId(id) { return allProducts().filter(function (p) { return p.id === id; })[0]; }
 
@@ -1322,7 +1346,8 @@
       if (zone === "cuir" && !(p.for || []).some(function (x) { return (a.cuir || []).indexOf(x) > -1; })) bad = true;
       var deep = a.carnation === "foncee" || a.carnation === "tresfoncee" || a.carnation === "mate";
       var rev = p.rev || [], revB = (deep && (rev.indexOf("nocast") > -1 || rev.indexOf("fonce") > -1) ? 8 : 0) + (rev.indexOf("afro") > -1 && (a.texture === "crepus" || a.texture === "boucles") ? 8 : 0) + (rev.length ? 2 : 0);
-      return { p: p, bad: bad, score: fitScore(p, a).total + match * 4 + pref * 8 + orig + (p.madeIn ? 2 : 0) + revB };
+      var afroAsia = p.founder || ["Corée", "Japon", "Chine", "Mali", "Ghana", "Nigeria", "Maroc", "Sénégal", "Afrique du Sud", "Kenya", "Côte d'Ivoire", "Tchad"].indexOf(p.origin) > -1 ? 4 : 0;
+      return { p: p, bad: bad, score: fitScore(p, a).total + match * 4 + pref * 8 + orig + (p.madeIn ? 2 : 0) + revB + afroAsia };
     }).filter(function (x) { return !x.bad; }).sort(function (x, y) { return y.score - x.score; });
     return list.length ? list[0].p : null;
   }
@@ -1380,7 +1405,7 @@
     sensibio: ["eu"], toleriane: ["eu"], effaclarduo: ["eu"], cicalfate: ["eu"], lrpmelab3: ["eu"], uvmune: ["eu", "nocast"], eucerinurea: ["eu"], lipikar: ["eu"], atoderm: ["eu"], kelual: ["eu"], kloraneavoine: ["eu"],
     nuhanciam: ["fonce"], madeforhue: ["fonce"], hyperskin: ["fonce"], eadem: ["fonce"], bgsunscreen: ["fonce", "nocast"], bolden: ["fonce", "nocast"],
     medicube: ["kr"], drjart: ["kr"], innisfree: ["kr"], sulwhasoo: ["kr"], mixsoon: ["kr"], numbuzin3: ["kr"], purito: ["kr"], heimish: ["kr"], shiseidoanessa: ["jp", "nocast"], senka: ["jp"], minon: ["jp"], kikumasamune: ["jp"],
-    winona: ["cn"], proya: ["cn"], chando: ["cn"], mielle: ["afro"], miellepom: ["afro"], camillerose: ["afro"], auntjackie: ["afro"], kinkycurly: ["afro"], tgin: ["afro"], thedoux: ["afro"], sheashampoo: ["afro"],
+    winona: ["cn"], proya: ["cn"], chando: ["cn"], mielle: ["afro"], musoya: ["afro"], kalia: ["afro"], tropikalbliss: ["afro"], carolinab: ["afro"], adeba: ["afro"], nilotiqa: ["afro"], afrocenchix: ["afro"], adwoa: ["afro"], miellepom: ["afro"], camillerose: ["afro"], auntjackie: ["afro"], kinkycurly: ["afro"], tgin: ["afro"], thedoux: ["afro"], sheashampoo: ["afro"],
     drforhair: ["kr"], masilvolume: ["kr"], lador: ["kr"], moremo: ["kr"], unove: ["kr"], ichikami: ["jp"], andhoney: ["jp"], bawang: ["cn"], furterer: ["eu"], kloranemangue: ["eu"], anaphase: ["eu"], nodeds: ["eu"], cantu: ["afro"], sheamoisture: ["afro"], sheamasque: ["afro"], asiam: ["afro"], pattern: ["afro"], boucleme: ["afro"], loly: ["afro"], activilong: ["afro"]
   };
   EXT.forEach(function (p) {
@@ -1664,7 +1689,7 @@
   A.routineCard = function (p, step, n, scent) {
     if (!p) return "";
     var a = this.state.answers, s = fitScore(p, a), self = this, alts = p.own ? [] : alternatives(p, a, 4);
-    var html = "<article class='rcard'><div class='rtop'><span class='num'>" + n + "</span>" + (p.img ? "<img class='pthumb' src='" + esc(p.img) + "' alt='" + esc(p.name) + "' loading='lazy'>" : "<span class='ptile' aria-hidden='true'>" + esc(p.brand.replace(/[^A-Za-z\u00C0-\u00FF ]/g, "").split(" ").filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join("").toUpperCase()) + "</span>") + "<div class='rinfo'><small>" + esc(STEP_LABEL[step] || (step === "douche" ? "Ton rituel douche" : step === "recharge" ? "Recharge" : step)) + "</small><b>" + esc(p.name) + "</b><span>" + esc(p.brand) + (p.price ? " · " + euro(p.price) : "") + (p.origin ? " · " + esc(p.origin) : "") + "</span><div class='badges'>" + this.scoreBadge(s) + (p.madeIn ? "<span class='made'>Fabriqué " + esc(p.madeIn) + "</span>" : "") + (p.trend ? "<span class='made trend'>Tendance 2026</span>" : "") + (p.rev || []).map(function (r) { return "<span class='made rev'>" + esc(REV_LABEL[r]) + "</span>"; }).join("") + "</div></div><button class='heart' data-wish='" + p.id + "' aria-pressed='" + (this.state.wish.indexOf(p.id) > -1) + "' aria-label='Ajouter à mes souhaits'>♡</button></div>";
+    var html = "<article class='rcard'><div class='rtop'><span class='num'>" + n + "</span>" + (p.img ? "<img class='pthumb' src='" + esc(p.img) + "' alt='" + esc(p.name) + "' loading='lazy'>" : "<span class='ptile' aria-hidden='true'>" + esc(p.brand.replace(/[^A-Za-z\u00C0-\u00FF ]/g, "").split(" ").filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join("").toUpperCase()) + "</span>") + "<div class='rinfo'><small>" + esc(STEP_LABEL[step] || (step === "douche" ? "Ton rituel douche" : step === "recharge" ? "Recharge" : step)) + "</small><b>" + esc(p.name) + "</b><span>" + esc(p.brand) + (p.price ? " · " + euro(p.price) : "") + (p.origin ? " · " + esc(p.origin) : "") + "</span><div class='badges'>" + this.scoreBadge(s) + (p.madeIn ? "<span class='made'>Fabriqué " + esc(p.madeIn) + "</span>" : "") + (p.trend ? "<span class='made trend'>Tendance 2026</span>" : "") + (p.rev || []).map(function (r) { return "<span class='made rev'>" + esc(REV_LABEL[r]) + "</span>"; }).join("") + (p.founder ? "<span class='made fnd'>" + esc(p.founder) + "</span>" : "") + "</div></div><button class='heart' data-wish='" + p.id + "' aria-pressed='" + (this.state.wish.indexOf(p.id) > -1) + "' aria-label='Ajouter à mes souhaits'>♡</button></div>";
     html += "<div class='whybox'><b>Pourquoi on l'a choisi</b><p>" + esc(this.whyFor(p, s)) + "</p>" + this.actChips(p.act) + "<div class='qchips'>" + this.questionsFor(p).map(function (q) { return "<button class='qchip' data-ask='" + esc(q) + "' data-pid='" + p.id + "'>" + esc(q) + "</button>"; }).join("") + "</div></div>";
     if (p.own && P[p.key].colors) html += "<p class='alt-t'>Choisis ton coloris</p><div class='chipset'>" + P[p.key].colors.map(function (c) { return "<a class='chip' href='" + self.shop + "/cart/" + c[1] + ":1?utm_source=mon-rituel&utm_medium=app' target='_top' data-add='" + p.id + "'>" + c[0] + "</a>"; }).join("") + "</div>";
     if (p.own && P[p.key].scents) html += "<p class='alt-t'>Choisis ta senteur</p><div class='chipset'>" + P[p.key].scents.map(function (c) { return "<a class='chip' href='" + self.shop + "/cart/" + P[p.key].variants[c[0]] + ":1?utm_source=mon-rituel&utm_medium=app' target='_top' data-add='" + p.id + "' aria-pressed='" + (c[0] === scent) + "'>" + c[1] + "</a>"; }).join("") + "</div>";
@@ -1721,6 +1746,8 @@
       html += "<div class='plan'><b>" + blk[1] + "</b>" + (blk[2].length ? blk[2].map(function (it) { var p = byId(it.id), on = c.indexOf(it.step) > -1; var later = (intro[it.id] || 1) > cw; if (later) return "<p class='pstep later'><span class='tick'></span><span>" + esc(STEP_LABEL[it.step] || it.step) + " · <small>à partir de la semaine " + intro[it.id] + "</small></span></p>"; return "<button class='pstep' data-check='" + blk[0] + "|" + it.step + "' aria-pressed='" + on + "'><span class='tick'>" + (on ? "✓" : "") + "</span><span>" + esc(STEP_LABEL[it.step] || it.step) + " · <small>" + esc(p ? p.name : "") + "</small></span></button>"; }).join("") : "<p class='empty'>Un nettoyage doux suffit.</p>") + "</div>";
     });
     html += "<p class='sect'>Journal de peau</p><div class='mood'><p>Comment ta peau se sent-elle aujourd'hui ?</p><div>" + [["1", "Mauvais", "☹"], ["2", "Bof", "🙁"], ["3", "Ça va", "🙂"], ["4", "Bien", "😊"], ["5", "Génial", "😄"]].map(function (m) { return "<button data-mood='" + m[0] + "' aria-pressed='" + (s.journal[today] === m[0]) + "'><span>" + m[2] + "</span><small>" + m[1] + "</small></button>"; }).join("") + "</div></div>";
+    var tips = insights(a);
+    if (tips.length) html += "<p class='sect'>Mes conseils personnalisés</p><div class='advice'>" + tips.map(function (t) { return "<details><summary>" + esc(t[0]) + "</summary><p>" + esc(t[1]) + "</p></details>"; }).join("") + "</div>";
     html += "<details class='compare'><summary>Ce que tu peux attendre, et quand</summary><div class='delays'>" + [["Semaines 2 à 4", "Une peau plus confortable, moins de réactions"], ["Semaines 6 à 10", "Une petite poussée est possible quand les actifs arrivent : elle doit se calmer"], ["Mois 3 à 4", "Un grain de peau plus régulier"], ["Mois 4 à 6", "Des marques qui s'estompent, avec la protection solaire chaque jour"]].map(function (x) { return "<p><b>" + x[0] + "</b><span>" + x[1] + "</span></p>"; }).join("") + "</div><p class='note'>Repères généraux : chaque peau va à son rythme. Brûlure, rougeur qui dure, démangeaisons, plaques ou peau qui pèle : arrête le dernier produit ajouté et demande conseil à un ou une dermatologue.</p></details>";
     html += this.refillsBox(R.reco);
     html += forYou(a).slice(0, 4).map(function (g) { return self.reccarousel(g); }).join("");
@@ -2031,6 +2058,7 @@
     var html = "<div class='sheetbg' data-act='closedetail'></div><div class='sheet' role='dialog' aria-label='" + esc(p.name) + "'><button class='x' data-act='closedetail' aria-label='Fermer'>×</button><span class='tag'>" + esc(p.brand) + (p.origin ? " · " + esc(p.origin) : "") + "</span><h3>" + esc(p.name) + "</h3>" + this.scoreBadge(s);
     html += "<div class='subscores'>" + [["Tolérance", s.tol], ["Tes objectifs", s.obj], ["Ton type", s.type]].map(function (x) { return "<span><b>" + x[1] + "</b><small>" + x[0] + "</small></span>"; }).join("") + "</div>";
     html += "<p>" + esc(this.whyFor(p, s)) + "</p>" + this.actChips(p.act);
+    if (p.founder) html += "<p class='revnote'><span class='made fnd'>" + esc(p.founder) + "</span></p>";
     if ((p.rev || []).length) html += "<p class='revnote'>" + p.rev.map(function (r) { return "<span class='made rev'>" + esc(REV_LABEL[r]) + "</span>"; }).join("") + "<small>Repère de réputation publique, pas un avis vérifié Sunsoari. Les avis de nos clientes, par type de peau et carnation, arrivent bientôt.</small></p>";
     if (p.step && STEP_FREQ[p.step]) html += "<p class='care'><b>Comment l'utiliser :</b> " + esc(STEP_FREQ[p.step]) + "</p>";
     var tk = TUTOS[p.step] ? p.step : p.step === "douche" ? "douche" : p.step === "nettoyant" ? "demaquillant" : null;

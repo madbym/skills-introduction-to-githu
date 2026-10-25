@@ -148,6 +148,24 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
   - un agent « coach peau » qui s'appuie sur une base de sources validées (fiches de l'Académie américaine de dermatologie, de DermNet et de la Société française de dermatologie), avec citation des liens ;
   - sans jamais poser de diagnostic médical.
 
+## 5 octies. Questions de suivi, ménopause et créatrices africaines et asiatiques
+- **« D'après toi, cette réaction a pu venir… »** : la question s'affiche si la cliente a déjà réagi à un produit. Choix possibles :
+  - un produit trop fort ou utilisé trop souvent ;
+  - un peeling ou un soin en institut ;
+  - un traitement médical ;
+  - le soleil ;
+  - un mélange d'actifs ;
+  - je ne sais pas.
+
+  Chaque cause donne un conseil adapté. Par exemple, une réaction après un peeling ne rend pas tous les acides interdits, et un traitement peut sensibiliser la peau au soleil.
+- **Hormones** : la question propose « Enceinte ou allaitante », « En ménopause ou périménopause », « Rien de tout ça » ou « Je préfère ne pas répondre ». La ménopause oriente vers l'hydratation et le confort, et donne un conseil dédié.
+- **Conseils personnalisés** : `insights` s'affiche dans Aujourd'hui (eau, carnation, taches, réactions, ménopause…).
+- **Marques de cheveux texturés fondées par des créatrices d'origine africaine, afro-caribéenne ou afro-asiatique** (champ `founder`, affiché en badge) :
+  - Musoya, Kalia Nature, Tropikalbliss, Carolina B, Adeba Nature, Nilotiqa, Afrocenchix, Adwoa Beauty ;
+  - SheaMoisture (fondateur né au Liberia).
+- **Priorité aux créateurs et créatrices d'Afrique et d'Asie** : à compatibilité égale, les marques concernées passent devant (`afroAsia` dans `pickFor`).
+- **À vérifier avant la mise en ligne** : la disponibilité en France et le nom exact du produit pour chaque marque.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

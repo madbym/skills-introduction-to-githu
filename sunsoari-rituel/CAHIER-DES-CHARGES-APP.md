@@ -184,6 +184,29 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - **Service de rituel personnalisé** : avec `data-whatsapp="numéro"`, le résultat propose « Envoyer sur WhatsApp ». Le message est prérempli et la cliente ajoute elle-même ses 3 photos. Ensuite, Sunsoari crée son espace soin, sur le modèle du Rituel de Sira (section 5 quater).
 - **Confidentialité** : une page d'espace soin contient des photos et des données de santé. Elle ne doit jamais être partagée par un lien public. Elle doit être réservée à la cliente, par compte ou par lien privé, et effacée à sa demande.
 
+## 5 decies. Compte client, liste de produits et favoris
+- **Connexion** : avec le compte client Shopify (`/account/login`, `/account/register`). La section `shopify-section-mon-rituel-app.liquid` transmet le prénom (`data-customer-name`). L'écran « Mon compte » est accessible par le cœur en haut d'Aujourd'hui. Il contient :
+  - la connexion ou la création de compte ;
+  - le lien vers les commandes ;
+  - la routine.
+- **Favoris** :
+  - **produits** : le cœur sur chaque carte, puis « Ajouter mes produits Sunsoari au panier » en un geste ;
+  - **articles** : stories et guides ;
+  - **vidéos** : tutoriels ;
+  - **posts** : liens Instagram et TikTok.
+
+  Les contenus externes s'ajoutent sans code par `window.SUNSOARI_CONTENT = [{ id, type: "video"|"post"|"article", title, url, img, src }]`.
+- **Widget « liste de favoris »** : `data-widget="favoris"` affiche seulement la liste. Elle peut s'intégrer sur une page « Mes favoris » ou dans le compte client.
+- **À construire sur le serveur** : synchronisation du diagnostic, de la routine, du suivi et des favoris entre appareils. Deux possibilités : les métachamps client Shopify, ou une base de données avec connexion par e-mail (lien magique). Tout cela dans le respect du RGPD : consentement, export et suppression des données.
+- **Questionnaire complété** :
+  - prénom, âge et rythme de vie (facultatifs) ;
+  - routine actuelle en texte libre ;
+  - points noirs, brillance, marques après les boutons et cernes ;
+  - traitement de dermatologue en cours et allergies ;
+  - « Un mot de plus ».
+
+  Le résultat s'affiche à la cliente (« Fanta, voici ta peau ») et peut être envoyé par WhatsApp, copié, ou transmis par Instagram ou par le formulaire de contact.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

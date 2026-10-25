@@ -166,6 +166,24 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - **Priorité aux créateurs et créatrices d'Afrique et d'Asie** : à compatibilité égale, les marques concernées passent devant (`afroAsia` dans `pickFor`).
 - **À vérifier avant la mise en ligne** : la disponibilité en France et le nom exact du produit pour chaque marque.
 
+## 5 nonies. Ajouts issus du « Questionnaire peau » et du « Rituel de Sira »
+- **Avant le test du type de peau**, deux aides :
+  - le « test du visage nu » : nettoyer, ne rien appliquer, attendre une heure, observer à la lumière du jour et, en option, faire le test du mouchoir ;
+  - un encadré dépliable « Les 4 types de peau en bref ».
+- **Nouvelles questions** :
+  - « Quand tu mets une crème hydratante classique… » ;
+  - « Le soleil, le froid ou les vacances te donnent des irritations ? » ;
+  - « Tu mets une crème solaire sur le visage ? » ;
+  - la carnation décrite par la réaction au soleil ;
+  - « Je me maquille tous les jours ».
+- **Écran de résultat** :
+  - « Pourquoi ta peau est comme ça » ;
+  - deux colonnes « Ce qui t'aide » et « À éviter » ;
+  - une note pour les peaux mates à foncées ;
+  - une note « Ta priorité numéro un » si la crème solaire n'est pas quotidienne.
+- **Service de rituel personnalisé** : avec `data-whatsapp="numéro"`, le résultat propose « Envoyer sur WhatsApp ». Le message est prérempli et la cliente ajoute elle-même ses 3 photos. Ensuite, Sunsoari crée son espace soin, sur le modèle du Rituel de Sira (section 5 quater).
+- **Confidentialité** : une page d'espace soin contient des photos et des données de santé. Elle ne doit jamais être partagée par un lien public. Elle doit être réservée à la cliente, par compte ou par lien privé, et effacée à sa demande.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

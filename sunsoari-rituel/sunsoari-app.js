@@ -601,19 +601,25 @@
       options: [["peu", "Peu visibles", "", "none"], ["nez", "Visibles sur le nez et autour", "", "dots"], ["joues", "Visibles aussi sur les joues", "", "spots"]] },
     { id: "pt_peaux", sec: 1, title: "As-tu des zones rêches ou des petites peaux qui pèlent ?", sub: "",
       options: [["souvent", "Souvent", "", "dry"], ["hiver", "Parfois, surtout en hiver", "", "wave"], ["rare", "Rarement", "", "none"]] },
+    { id: "pt_creme", sec: 1, title: "Quand tu mets une crème hydratante classique…", sub: "",
+      options: [["boit", "Elle disparaît vite, j'en remets", "Ma peau en redemande", "dry"], ["ok", "Elle pénètre bien, c'est confortable", "", "heart"], ["zones", "Parfaite sur les joues, trop riche sur le front et le nez", "", "halfsun"], ["brille", "Elle me fait briller ou me donne des boutons", "", "drops"]] },
     { id: "pt_deshy", sec: 1, title: "Ta peau peut-elle briller et tirailler en même temps ?", sub: "C'est un signe fréquent de manque d'eau, quel que soit ton type de peau.",
       options: [["oui", "Oui, ça m'arrive", "", "yes"], ["non", "Non", "", "no"], ["nsp", "Je ne sais pas", "", "ask"]] },
     { id: "pt_reac", sec: 1, title: "Quand tu essaies un nouveau produit, ta peau…", sub: "",
       options: [["souvent", "Picote, rougit ou chauffe souvent", "", "flame"], ["parfois", "Réagit de temps en temps", "", "halfsun"], ["rare", "Réagit rarement", "", "heart"]] },
+    { id: "pt_reac2", sec: 1, title: "Le soleil, le froid ou les vacances te donnent des irritations ?", sub: "",
+      options: [["souvent", "Oui, souvent", "", "flame"], ["parfois", "Parfois", "", "halfsun"], ["rare", "Presque jamais", "", "heart"]] },
+    { id: "spfHabit", sec: 1, title: "Tu mets une crème solaire sur le visage ?", sub: "",
+      options: [["tlj", "Tous les jours", "", "sun"], ["ete", "Seulement en été ou en vacances", "", "halfsun"], ["jamais", "Jamais ou presque", "", "none"]] },
     { id: "saisons", sec: 1, title: "Et selon les saisons ?", sub: "Plusieurs choix possibles.", multi: true, none: "stable",
       options: [["hiver", "Plus sèche en hiver", "", "dry"], ["ete", "Plus grasse en été", "", "sun"], ["change", "Réactive aux changements de saison", "", "wave"], ["stable", "Pas de différence", "", "none"]] },
     { id: "antecedents", sec: 1, title: "Un ou une médecin t'a déjà parlé de…", sub: "Plusieurs choix possibles. On écartera ce qui pourrait irriter.", multi: true, none: "aucun",
       options: [["eczema", "Eczéma ou dermatite", "", "dry"], ["rosacee", "Rosacée", "", "flame"], ["psoriasis", "Psoriasis", "", "wave"], ["acne", "Acné suivie par un médecin", "", "dots"], ["aucun", "Rien de tout ça", "", "none"]] },
     { id: "modeVie", sec: 1, title: "Ton quotidien, c'est plutôt…", sub: "Plusieurs choix possibles. Pour des astuces adaptées.", multi: true, none: "rien",
-      options: [["soleil", "Souvent dehors ou au soleil", "", "sun"], ["sport", "Du sport régulier", "", "wave"], ["ville", "La ville, la pollution", "", "dots"], ["ecrans", "Beaucoup d'écrans", "", "halfsun"], ["sommeil", "Peu de sommeil ou du stress", "", "moon"], ["rien", "Rien de particulier", "", "none"]] },
+      options: [["soleil", "Souvent dehors ou au soleil", "", "sun"], ["sport", "Du sport régulier", "", "wave"], ["ville", "La ville, la pollution", "", "dots"], ["ecrans", "Beaucoup d'écrans", "", "halfsun"], ["sommeil", "Peu de sommeil ou du stress", "", "moon"], ["maquillage", "Je me maquille tous les jours", "", "flower"], ["rien", "Rien de particulier", "", "none"]] },
     { id: "infoPeau", sec: 1, type: "info", kind: "peau" },
     { id: "carnation", sec: 1, title: "Quelle est ta carnation ?", sub: "Pour choisir des solaires sans trace blanche et prévenir les marques. Tu peux passer.",
-      options: [["claire", "Claire", "", "halfsun"], ["mate", "Mate à métissée", "", "sun"], ["foncee", "Foncée", "", "heart"], ["tresfoncee", "Très foncée", "", "heart"], ["nsp", "Je préfère ne pas répondre", "", "ask"]] },
+      options: [["claire", "Claire", "Rougit et brûle facilement, bronze peu", "halfsun"], ["mate", "Mate à métissée", "Rougit parfois, bronze bien", "sun"], ["foncee", "Foncée", "Rougit rarement", "heart"], ["tresfoncee", "Très foncée", "Ne rougit presque jamais", "heart"], ["nsp", "Je préfère ne pas répondre", "", "ask"]] },
     { id: "concerns", sec: 1, title: "Qu'aimerais-tu améliorer en priorité ?", sub: "Jusqu'à 3 choix. On adapte tes conseils et tes produits.", multi: true, max: 3, none: "aucune",
       options: [["secheresse", "Sécheresse, tiraillements", "", "dry"], ["imperfections", "Imperfections", "", "dots"], ["rougeurs", "Rougeurs, sensibilité", "", "flame"], ["teint", "Teint terne", "", "halfsun"], ["texture", "Grain de peau irrégulier", "", "wave"], ["taches", "Taches, teint inégal", "", "spots"], ["rides", "Ridules, fermeté", "", "sprout"], ["aucune", "Rien de particulier", "", "none"]] },
     { id: "tachesNiveau", sec: 1, title: "Comment décrirais-tu tes taches aujourd'hui ?", sub: "Ton ressenti suffit. Ça nous aide à doser ta routine.", skipIf: function (a) { return !has(a, "concerns", "taches"); },
@@ -681,12 +687,19 @@
     oil += { tz: 1, tout: 2 }[a.pt_soir] || 0; dry += a.pt_soir === "mat" ? 1 : 0; tz += a.pt_soir === "tz" ? 1 : 0;
     oil += { nez: 0.5, joues: 1.5 }[a.pt_pores] || 0; tz += a.pt_pores === "nez" ? 1 : 0;
     dry += { souvent: 2, hiver: 1 }[a.pt_peaux] || 0;
-    var type = oil >= 3.5 && tz < 2 ? "grasse" : oil >= 1.5 ? "mixte" : dry >= 2 ? "seche" : "normale";
+    dry += a.pt_creme === "boit" ? 1.5 : 0; oil += { zones: 1, brille: 2 }[a.pt_creme] || 0; tz += a.pt_creme === "zones" ? 1 : 0;
+    var type = oil >= 4.5 && tz < 2 ? "grasse" : oil >= 2 ? "mixte" : dry >= 2.5 ? "seche" : "normale";
     var ante = a.antecedents || [];
-    var sensible = a.pt_reac === "souvent" || ante.indexOf("eczema") > -1 || ante.indexOf("rosacee") > -1 || (a.pt_reac === "parfois" && has(a, "saisons", "change"));
+    var sensible = a.pt_reac === "souvent" || a.pt_reac2 === "souvent" || (a.pt_reac === "parfois" && a.pt_reac2 === "parfois") || ante.indexOf("eczema") > -1 || ante.indexOf("rosacee") > -1 || (a.pt_reac === "parfois" && has(a, "saisons", "change"));
     var deshy = a.pt_deshy === "oui" || (oil >= 1.5 && (a.pt_apres === "tire" || a.pt_peaux === "souvent"));
     return { type: type, sensible: sensible, deshy: deshy, peau: sensible ? "sensible" : type === "grasse" ? "mixte" : type };
   }
+  var SKIN_WHY = {
+    grasse: { why: "Tes glandes sébacées sont très actives. C'est souvent génétique, et les hormones, le stress et la chaleur augmentent encore la production de sébum : d'où la brillance, les pores visibles et les imperfections. Bonne nouvelle : une peau grasse marque souvent les rides plus tard.", avoid: ["Laver ton visage plus de 2 fois par jour", "Les gommages agressifs et l'alcool asséchant", "Supprimer la crème hydratante", "Percer les boutons"] },
+    mixte: { why: "Ta zone T (front, nez, menton) a plus de glandes sébacées que tes joues. Elle produit donc plus de sébum et brille, alors que les joues restent normales ou sèches.", avoid: ["Traiter tout le visage comme une peau grasse", "Les produits très asséchants sur les joues", "L'argile ou les acides sur les joues"] },
+    seche: { why: "Ta peau produit peu de sébum, le film protecteur naturel. Elle retient moins bien l'eau, d'où les tiraillements et les petites peaux. C'est souvent génétique, et ça s'accentue avec le froid, le chauffage, l'eau très chaude ou les nettoyants trop décapants.", avoid: ["L'eau très chaude", "Les gommages à grains", "Les toniques alcoolisés", "Les nettoyants qui moussent beaucoup"] },
+    normale: { why: "Ton sébum et ton hydratation sont équilibrés. L'objectif est de garder cet équilibre et de protéger ta peau.", avoid: ["Multiplier les actifs sans raison", "Changer de routine trop souvent"] }
+  };
   var SKIN_INFO = {
     grasse: { t: "Peau grasse", what: "Ta peau produit beaucoup de sébum : elle brille sur l'ensemble du visage et les pores se voient davantage. C'est souvent une question de génétique et d'hormones, et ça varie avec la chaleur.",
       tips: ["Hydrate quand même, chaque jour : une peau grasse peut manquer d'eau. Choisis un gel ou une crème légère marquée « non comédogène ».", "Nettoie matin et soir, et après le sport, avec un nettoyant doux. Frotter fort ou décaper fait souvent briller davantage.", "Évite les produits très alcoolisés qui assèchent la surface.", "Dans la journée, un papier matifiant absorbe la brillance sans abîmer la peau.", "Ta crème solaire peut remplacer ta crème du matin si elle est légère et hydratante."] },
@@ -846,6 +859,8 @@
       if (rc.indexOf("fort") > -1 || rc.indexOf("melange") > -1) rtxt.push("Trop d'actifs, trop concentrés ou trop souvent : c'est la cause la plus fréquente. Ta routine introduit un seul produit à la fois.");
       if (rtxt.length) out.push(["Ta réaction passée", rtxt.join(" ")]);
     }
+    if (a.spfHabit && a.spfHabit !== "tlj") out.push(["Ta crème solaire", "Ta priorité : une crème solaire chaque matin, toute l'année. Sans elle, taches et marques reviennent, quels que soient tes autres soins. Choisis une texture que tu aimes, c'est celle que tu mettras vraiment."]);
+    if (has(a, "modeVie", "maquillage")) out.push(["Maquillage", "Le soir, démaquille-toi avant ton nettoyant (huile ou baume, puis nettoyant doux) : c'est le double nettoyage. Nettoie tes pinceaux et éponges chaque semaine."]);
     if (a.grossesse === "menopause") out.push(["Ménopause", "Avec la baisse des hormones, la peau devient souvent plus sèche, plus fine et un peu moins ferme. Une crème plus riche aux céramides, la protection solaire chaque matin et, si ta peau les tolère, des rétinoïdes introduits doucement le soir. Si ta peau change beaucoup, parles-en à ton médecin."]);
     var cs = (a.concerns || []).filter(function (k) { return C[k]; });
     if (cs.length) out.push(["Ton visage", cs.map(function (k) { return C[k]; }).join(" ")]);
@@ -933,6 +948,7 @@
     ".pstep small{color:var(--muted)}",
     ".pstep.later{opacity:.55;cursor:default}",
     ".advice{display:grid;gap:8px;margin-bottom:10px}.advice details{background:#fff;border-radius:16px;padding:12px 14px}.advice summary{cursor:pointer;font-weight:600}.advice p{margin:8px 0 0;font-size:14px;color:var(--ink)}",
+    ".dodont{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:8px}.whybox.do li::marker{color:#2E6B57}.whybox.dont li::marker{color:#C06F55}.guide{margin:6px 0 10px;padding-left:20px;display:grid;gap:6px;font-size:14px}.types{background:#fff;border-radius:16px;padding:10px 14px;margin:10px 0}.types summary{cursor:pointer;font-weight:600}.types p{font-size:14px}",
     ".tipl{margin:6px 0 0;padding-left:18px;display:grid;gap:6px;font-size:14px}.myth{background:#fff4e8;border-radius:18px;padding:14px;margin:10px 0}.myth p{margin:6px 0 0;font-size:14px}.srcs{margin:12px 0;font-size:13px}.srcs ul{padding-left:18px}.srcs a{color:var(--water)}.srcs small{color:var(--muted)}",
     ".made.fnd{background:#fbefe4;color:#8a4b1f}.made.rev{background:#eef3f6;color:var(--water)}.revnote{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.revnote small{flex-basis:100%;color:var(--muted);font-size:11px}",
     ".scanhero{width:100%;font:inherit;display:flex;align-items:center;gap:14px;text-align:left;border:0;border-radius:22px;padding:18px;margin:4px 0 12px;background:var(--water);color:#fff;cursor:pointer}.scanhero svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.6;flex:none}.scanhero span{display:flex;flex-direction:column;gap:2px}.scanhero small{opacity:.85}",
@@ -1579,8 +1595,12 @@
     var a = this.state.answers, sp = skinProfile(a);
     if (!sp) return "<p class='sub'>Réponds aux questions précédentes pour voir ton résultat.</p>";
     var I = SKIN_INFO[sp.type], label = I.t + (sp.deshy ? ", déshydratée" : "") + (sp.sensible ? " et sensible" : "");
+    var W = SKIN_WHY[sp.type];
     var html = "<p class='kicker'>Ton résultat</p><h3>" + esc(label) + "</h3><p>" + esc(I.what) + "</p>";
-    html += "<div class='whybox'><b>Comment en prendre soin</b><ul class='tipl'>" + I.tips.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>";
+    html += "<div class='whybox'><b>Pourquoi ta peau est comme ça</b><p>" + esc(W.why) + "</p></div>";
+    html += "<div class='dodont'><div class='whybox do'><b>Ce qui t'aide</b><ul class='tipl'>" + I.tips.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div><div class='whybox dont'><b>À éviter</b><ul class='tipl'>" + W.avoid.concat(sp.sensible ? ["Cumuler plusieurs actifs forts le même soir", "Les parfums et l'alcool asséchant"] : []).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div></div>";
+    if (a.carnation === "foncee" || a.carnation === "tresfoncee" || a.carnation === "mate") html += "<div class='myth'><b>Peau mate à foncée</b><p>La moindre inflammation (bouton percé, irritation, gommage trop fort) peut laisser une marque brune qui dure des mois. La crème solaire chaque matin et la douceur sont tes meilleures alliées.</p></div>";
+    if (a.spfHabit && a.spfHabit !== "tlj") html += "<div class='myth'><b>Ta priorité numéro un</b><p>Une crème solaire tous les matins, toute l'année, même par temps gris : les UVA traversent les nuages et les vitres. C'est le geste qui protège le plus ta peau, quel que soit son type.</p></div>";
     if (sp.type === "grasse" || sp.type === "mixte") html += "<div class='myth'><b>Idée reçue</b><p>« Une peau grasse n'a pas besoin de crème. » <strong>Faux.</strong> Le sébum (le gras) et l'eau sont deux choses différentes. Une peau grasse peut manquer d'eau, et une peau privée d'hydratation tiraille et peut devenir plus inconfortable. La bonne réponse : une texture légère, pas l'absence de crème.</p></div>";
     if (sp.deshy) html += "<div class='whybox'><b>Déshydratée : un état, pas un type</b><p>Ta peau manque d'eau en ce moment, même si elle brille. Signes : tiraillements, teint terne, petites ridules qui s'effacent quand tu hydrates. Eau tiède, nettoyant doux, un sérum à l'acide hyaluronique ou à la glycérine sur peau humide, puis une crème pour retenir l'eau. Ça s'améliore souvent en quelques semaines.</p></div>";
     if (sp.sensible) html += "<div class='whybox'><b>Sensible</b><p>Ta peau réagit vite. Moins de produits, sans parfum, un seul nouveau produit à la fois, testé 48 h sur la mâchoire. Dans tes recommandations, on évite au maximum les parfums, les huiles essentielles et les acides forts.</p></div>";
@@ -1594,13 +1614,15 @@
     if (ex.length) html += "<div class='whybox'><b>Petites astuces pour ton quotidien</b><ul class='tipl'>" + ex.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>";
     if ((a.antecedents || []).some(function (x) { return x !== "aucun"; })) html += "<p class='care'>Tu as un antécédent suivi par un médecin : ses conseils passent avant les nôtres. On garde ta routine douce et sans actif irritant.</p>";
     html += "<button class='qchip' data-ask='" + esc("J'ai une " + label.toLowerCase() + ". Comment adapter ma routine ?") + "'>Poser une question à l'assistante sur ma peau</button>";
+    var wa = this.host.getAttribute("data-whatsapp");
+    if (wa) html += "<div class='whybox'><b>Ton rituel personnalisé par Sunsoari</b><p>Envoie ton résultat et 3 photos (face, profil gauche, profil droit, à la lumière du jour, sans maquillage ni filtre) : on te prépare ton espace soin, avec ta routine jour par jour et ton suivi.</p><a class='btn' href='https://wa.me/" + esc(wa.replace(/\D/g, "").replace(/^0/, "33")) + "?text=" + encodeURIComponent("Bonjour Sunsoari, voici mon test de peau : " + label + ". Carnation : " + (a.carnation || "non précisée") + ". Saisons : " + (a.saisons || []).join(", ") + ". Quotidien : " + (a.modeVie || []).join(", ") + ". Crème solaire : " + (a.spfHabit || "non précisé") + ". J'ajoute mes 3 photos.") + "' target='_blank' rel='noopener'>Envoyer sur WhatsApp</a><small class='sub'>Tu choisis toi-même ce que tu envoies. Les photos ne partent jamais automatiquement.</small></div>";
     html += "<details class='srcs'><summary>Sources</summary><ul>" + SKIN_SOURCES.map(function (x) { return "<li><a href='" + x[1] + "' target='_blank' rel='noopener'>" + esc(x[0]) + "</a></li>"; }).join("") + "</ul><small>Résultat indicatif, basé sur tes observations. Il ne remplace pas l'avis d'un ou d'une dermatologue.</small></details>";
     return html;
   };
   A.vInfo = function (q) {
     var p = this.progressPct(), a = this.state.answers;
     var html = "<div class='info'>";
-    if (q.kind === "test") return html + "<h3>Découvrons ton type de peau</h3><p class='sub'>Beaucoup de personnes ne le connaissent pas, ou se trompent : une peau qui brille peut aussi manquer d'eau. Quelques questions sur ce que tu observes au quotidien, et on t'explique comment en prendre soin.</p><ul class='facts'><li>" + icon("drop") + "<span>Réponds selon ce que tu vois le plus souvent, pas un jour exceptionnel.</span></li><li>" + icon("ask") + "<span>Aucune mauvaise réponse : tu pourras refaire le test à chaque saison.</span></li></ul></div><div class='cta'><button class='btn big' data-act='next'>Commencer le test</button></div>";
+    if (q.kind === "test") return html + "<h3>Découvrons ton type de peau</h3><p class='sub'>Beaucoup de personnes ne le connaissent pas, ou se trompent : une peau qui brille peut aussi manquer d'eau. Quelques questions sur ce que tu observes au quotidien, et on t'explique comment en prendre soin.</p><p class='alt-t'>Le test du visage nu, pour des réponses justes</p><ol class='guide'><li>Lave ton visage avec un nettoyant doux, sèche en tamponnant.</li><li>N'applique rien : ni crème, ni maquillage.</li><li>Attends une heure sans toucher ton visage.</li><li>Observe-toi à la lumière du jour : où ça brille, où ça tire, tes pores.</li><li>En option, appuie un mouchoir fin sur le front, le nez, le menton et les joues : une trace grasse montre où ta peau produit du sébum.</li></ol><p class='sub'>Tu connais bien ta peau ? Réponds de mémoire, selon ce que tu vis le plus souvent.</p><details class='types'><summary>Les 4 types de peau en bref</summary>" + ["normale", "seche", "mixte", "grasse"].map(function (k) { return "<p><b>" + SKIN_INFO[k].t + "</b> · " + esc(SKIN_WHY[k].why) + "</p>"; }).join("") + "<p>Une peau peut aussi être <b>sensible</b> ou <b>déshydratée</b>, quel que soit son type : on le regarde aussi.</p></details></div><div class='cta'><button class='btn big' data-act='next'>C'est parti</button></div>";
     if (q.kind === "peau") return html + this.skinResult() + "</div><div class='cta'><button class='btn big' data-act='next'>Continuer</button></div>";
     if (q.kind === "eau") html += "<h3>Le savais-tu ?</h3><ul class='facts'><li>" + icon("drop") + "<span>En France, l'eau du robinet est potable et très contrôlée.</span></li><li>" + icon("dots") + "<span>Sa teneur en calcaire varie beaucoup d'une région à l'autre.</span></li><li>" + icon("shower") + "<span>Le chlore sert à la désinfecter. Certains filtres de douche sont conçus pour en réduire une partie, selon leurs fabricants.</span></li></ul>" + this.ring(p.pct, true);
     else {

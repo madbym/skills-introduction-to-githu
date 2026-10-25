@@ -127,6 +127,27 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - **À construire** : avis vérifiés de clientes Sunsoari (acheteuses identifiées), filtrables par type de peau, carnation et texture de cheveux, avec modération et sans contrepartie cachée.
 - **Question « carnation »** (facultative) : elle favorise les solaires sans trace blanche et explique la prévention des marques sur peau mate à foncée.
 
+## 5 septies. Test du type de peau (remplace la question unique)
+- **Le principe** : on ne déduit plus le type de peau d'une seule impression. Le test pose six questions d'observation :
+  - la peau une heure après le lavage ;
+  - la brillance en fin de journée ;
+  - les pores ;
+  - les zones rêches ;
+  - la peau qui brille et tiraille en même temps ;
+  - les réactions aux nouveaux produits.
+- **Questions reprises du Bilan Peau Visage** : les saisons, les antécédents suivis par un médecin (eczéma, rosacée, psoriasis, acné) et le quotidien (soleil, sport, ville, écrans, sommeil ou stress).
+- **Le calcul** (`skinProfile`) : un score de sébum et un score de sécheresse donnent le type (grasse, mixte, sèche ou normale). Deux mentions s'y ajoutent : « déshydratée », un état passager, et « sensible ».
+- **L'écran de résultat** :
+  - ce que veut dire le type de peau et comment en prendre soin ;
+  - l'idée reçue « une peau grasse n'a pas besoin de crème » ;
+  - des astuces selon les saisons et le quotidien ;
+  - les sources (Académie américaine de dermatologie, DermNet) ;
+  - un bouton pour poser une question à l'assistante.
+- **L'assistante sert aussi de coach peau** : elle reçoit le résultat du test et, si la cliente ne connaît pas son type de peau, l'aide à le découvrir par une ou deux questions.
+- **À prévoir sur le serveur** :
+  - un agent « coach peau » qui s'appuie sur une base de sources validées (fiches de l'Académie américaine de dermatologie, de DermNet et de la Société française de dermatologie), avec citation des liens ;
+  - sans jamais poser de diagnostic médical.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

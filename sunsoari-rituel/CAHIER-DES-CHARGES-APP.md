@@ -207,6 +207,27 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 
   Le résultat s'affiche à la cliente (« Fanta, voici ta peau ») et peut être envoyé par WhatsApp, copié, ou transmis par Instagram ou par le formulaire de contact.
 
+## 5 undecies. Espace soin automatique et prise de vue
+- **Automatique** : à la fin du diagnostic, la cliente arrive directement dans « Mon espace soin », sans intervention manuelle. Elle peut le rouvrir depuis Aujourd'hui. Il compte 9 onglets, sur le modèle du Rituel de Sira :
+  - **Ma routine** : Matin, Journée et SPF, Soir et Corps. Les étapes se cochent ; celles qui ne sont pas encore introduites affichent « à partir de la semaine N ». Une question « Routine faite aujourd'hui ? » attend un oui ou un non.
+  - **Mon planner** : le calendrier du mois, avec 4 repères par jour (matin, SPF, soir, corps), les jours d'affilée et le pourcentage de jours complets.
+  - **Mon évolution** : une étape toutes les 2 semaines, avec 3 photos, le ressenti, ce qu'elle remarque et une note ; un avant / maintenant ; le parcours depuis le jour 0.
+  - **Ma semaine** : le calendrier du soir (un actif par soir) et le plan d'introduction.
+  - **Protection solaire** : une journée type, 8 règles et sa crème solaire.
+  - **Recommandations** : la routine détaillée et des sélections par besoin.
+  - **Mes produits** : chaque produit qu'elle possède déjà reçoit un statut parmi « Garder », « Finir puis remplacer », « Mettre en pause » ou « À vérifier », à partir de « Ta routine actuelle ».
+  - **Diagnostic** : les photos du jour 0, les observations de l'IA, le résultat du test de peau, les délais réalistes et quand arrêter un produit.
+  - **Astuces** : les gestes qui comptent et les conseils personnalisés.
+- **Prise de vue** (étape « Montre-nous ta peau ») : deux choix possibles.
+  - **3 photos** : face, profil gauche et profil droit.
+  - **Une vidéo** : environ 10 secondes en selfie (face, gauche, droite, haut, bas). L'application en extrait 5 images et ne conserve pas la vidéo.
+
+  L'IA analyse ensuite toutes les images ensemble : signes visibles par zone, résumé, points observés, et un conseil dermatologique si nécessaire, sans jamais poser de diagnostic médical. Les miniatures ne sont gardées sur le téléphone qu'avec l'accord de la cliente (case à cocher).
+- **Sur le serveur, en production** :
+  - un agent IA génère et met à jour l'espace soin dans le compte de la cliente, par exemple après chaque étape d'évolution ;
+  - les photos sont stockées chiffrées dans l'UE avec un consentement explicite, et supprimables en un clic ;
+  - en option, une vérification par l'esthéticienne Sunsoari avant envoi, pour les clientes Sunsoari+.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

@@ -591,7 +591,7 @@
       options: [["douce", "Plutôt douce", "Peu de traces blanches", "drop"], ["moyenne", "Moyenne", "Un peu de calcaire", "drops"], ["calcaire", "Calcaire", "Traces blanches fréquentes", "dots"], ["nsp", "Je ne sais pas", "", "ask"]] },
     { id: "infoEau", sec: 0, type: "info", kind: "eau" },
 
-    { id: "photoVisage", sec: 1, type: "photo", target: "visage" },
+    { id: "photoVisage", sec: 1, type: "capture" },
     { id: "toi", sec: 1, type: "text", title: "Faisons connaissance", sub: "Facultatif : pour personnaliser ton résultat. Rien ne quitte ton téléphone.",
       fields: [["prenom", "Ton prénom", "text", ""], ["age", "Ton âge", "number", ""], ["rythme", "Ton rythme de vie", "text", "Ex. maman, travail de nuit, étudiante…"]] },
     { id: "infoTest", sec: 1, type: "info", kind: "test" },
@@ -962,6 +962,16 @@
     ".plan>b{display:block;margin:0 0 8px 4px}",
     ".pstep small{color:var(--muted)}",
     ".pstep.later{opacity:.55;cursor:default}",
+    ".capgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.capslot{display:grid;gap:6px;justify-items:center;cursor:pointer;font-size:12px;text-align:center}.capslot img,.capico{width:100%;aspect-ratio:3/4;border-radius:14px;object-fit:cover;border:1.5px dashed var(--water);display:flex;align-items:center;justify-content:center;font-size:26px;color:var(--water);background:#fff}.capslot.has img{border-style:solid;border-color:var(--line)}",
+    ".capframes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:10px 0}.capframes img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px}",
+    ".esphead{margin-bottom:10px}.esphead h3{font-family:var(--display);font-weight:400;font-size:clamp(28px,7vw,38px);margin:0 0 8px;line-height:1.05}.esphead .chips{display:flex;flex-wrap:wrap;gap:6px}.esphead .chips span{font-size:12px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--muted)}",
+    ".etabs{position:sticky;top:0;z-index:4;display:flex;overflow-x:auto;gap:0;background:var(--paper);border-bottom:1px solid var(--line);margin:0 -16px 14px;padding:0 16px;scrollbar-width:none}.etabs button{flex:none;font:inherit;font-size:13px;border:0;background:none;color:var(--muted);padding:12px 10px;border-bottom:2px solid transparent;cursor:pointer}.etabs button[aria-selected=true]{color:var(--ink);font-weight:600;border-bottom-color:var(--water)}",
+    ".markbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;background:#fff;border-radius:16px;padding:10px 14px;margin:8px 0;font-size:14px}.yn{display:flex;gap:6px}.yn button{font:inherit;font-size:13px;font-weight:600;min-width:58px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--paper);cursor:pointer}.yn button[aria-pressed=true]:first-child{background:var(--water);color:#fff;border-color:var(--water)}.yn button[aria-pressed=true]:last-child{background:#C06F55;color:#fff;border-color:#C06F55}",
+    ".stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}.stats div{background:#fff;border-radius:16px;padding:12px;display:flex;flex-direction:column}.stats b{font-size:24px;font-weight:500}.stats small{font-size:11px;color:var(--muted)}",
+    ".calh{display:flex;justify-content:space-between;align-items:center;margin:8px 0}.calh b{text-transform:capitalize;font-weight:500}.calh button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:18px;cursor:pointer}.pcal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.pcal .wd{font-style:normal;font-size:10px;text-align:center;color:var(--muted)}.pcell{font:inherit;background:#fff;border:1px solid var(--line);border-radius:10px;padding:5px 2px;display:grid;gap:4px;justify-items:center;cursor:pointer;min-height:48px;font-size:12px}.pcell.today{border-color:var(--water)}.pcell.sel{background:var(--water-soft)}.pcell:disabled{opacity:.4}.segs4{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;width:100%;max-width:34px}.segs4 i{height:5px;border-radius:3px;background:var(--line)}.segs4 i.oui{background:var(--water)}.segs4 i.non{background:#C06F55}.legend{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px;align-items:center}.sw{display:inline-block;width:14px;height:6px;border-radius:3px;background:var(--line)}.sw.oui{background:var(--water)}.sw.non{background:#C06F55}",
+    ".entry{background:#fff;border-radius:18px;padding:12px;margin-bottom:10px;display:grid;gap:8px}.entry.zero{background:var(--sand-soft)}.entry small{color:#9A4F37;font-weight:600}.entry .chips{display:flex;flex-wrap:wrap;gap:5px;margin:0}.entry .chips span{font-size:12px;background:var(--sand-soft);border-radius:999px;padding:2px 9px}.ph3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.ph3 img,.ph3 i{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;background:var(--line)}.pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pair figure{margin:0}.pair img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px}.pair figcaption{font-size:12px;color:var(--muted);text-align:center}",
+    ".slots{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:8px;margin-bottom:10px}.slots div{background:#fff;border-radius:16px;padding:12px}.slots b{display:block;font-weight:600}.slots small{color:#9A4F37;font-size:11px;text-transform:uppercase;letter-spacing:.1em}.slots p{margin:4px 0 0;font-size:13px;color:var(--muted)}",
+    ".mrow{display:flex;justify-content:space-between;gap:10px;background:#fff;border-radius:16px;padding:12px;margin-bottom:8px}.mrow span{display:flex;flex-direction:column;min-width:0}.mrow small{color:var(--muted);font-size:13px}.pill{font-style:normal;font-size:11px;font-weight:600;padding:4px 10px;border-radius:999px;white-space:nowrap;align-self:flex-start}.pill.keep{background:#DCEBE4;color:#2E6B57}.pill.adapt{background:#C4D3E4;color:#042850}.pill.pause{background:#F3DDD7;color:#9A3B2E}.reco-card.esp{background:linear-gradient(135deg,var(--water),#7591AA);color:#fff}.reco-card.esp span{color:rgba(255,255,255,.85)}",
     ".tfields{display:grid;gap:12px;margin-top:10px}.tfields label{display:grid;gap:6px;font-size:13px;color:var(--muted)}.tfields input,.tfields textarea{font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}",
     ".hacts{display:flex;gap:8px;align-items:center}.acctbtn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--water)}.acctbtn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7}",
     ".acct{background:#fff;border-radius:20px;padding:16px;margin-bottom:12px}.acct p{margin:6px 0 10px;font-size:14px;color:var(--muted)}.acct small{color:var(--muted);font-size:12px}",
@@ -1550,7 +1560,7 @@
     this.root.addEventListener("click", function (e) { self.onClick(e); });
     this.root.addEventListener("change", function (e) { self.onChange(e); });
     this.root.addEventListener("submit", function (e) { e.preventDefault(); self.onSubmit(e); });
-    this.root.addEventListener("input", function (e) { if (e.target.dataset && e.target.dataset.field) { self.state.answers[e.target.dataset.field] = e.target.value.slice(0, 600); self.save(); return; } if (e.target.id === "q-search") { self.query = e.target.value; self.renderKeepFocus("q-search"); } });
+    this.root.addEventListener("input", function (e) { if (e.target.dataset && e.target.dataset.evo) { self.evoDraft[e.target.dataset.evo] = e.target.value; return; } if (e.target.dataset && e.target.dataset.field) { self.state.answers[e.target.dataset.field] = e.target.value.slice(0, 600); self.save(); return; } if (e.target.id === "q-search") { self.query = e.target.value; self.renderKeepFocus("q-search"); } });
     this.root.addEventListener("error", function (e) { if (e.target.tagName === "IMG" && !e.target.dataset.fallback) { e.target.dataset.fallback = "1"; e.target.src = PLACEHOLDER; } }, true);
     initAI(host).then(function () { self.render(); });
   }
@@ -1567,7 +1577,7 @@
     if (this.widget === "favoris") { html += "<div class='body paper'>" + this.vCompte() + "</div>"; }
     else if (v === "diag") html += "<div class='body'>" + this.vDiag() + "</div>";
     else {
-      html += "<div class='body paper'>" + ({ compte: this.vCompte, plus: this.vPlus, reveal: this.vReveal, today: this.vToday, produits: this.vProduits, scan: this.vScan, ressources: this.vRessources, assistant: this.vAssistant, peau: this.vPeau }[v] || this.vToday).call(this) + "</div>";
+      html += "<div class='body paper'>" + ({ espace: this.vEspace, compte: this.vCompte, plus: this.vPlus, reveal: this.vReveal, today: this.vToday, produits: this.vProduits, scan: this.vScan, ressources: this.vRessources, assistant: this.vAssistant, peau: this.vPeau }[v] || this.vToday).call(this) + "</div>";
       html += this.nav();
     }
     if (this.detail) html += this.vDetail(this.detail);
@@ -1582,7 +1592,7 @@
 
   A.nav = function () {
     var v = this.view, items = [["today", "Aujourd'hui", "sun"], ["produits", "Produits", "leaf"], ["scan", "Scan", "dots"], ["ressources", "Ressources", "sprout"], ["assistant", "Assistante", "heart"]];
-    return "<nav class='bnav'>" + items.map(function (i) { return "<button data-view='" + i[0] + "' aria-current='" + (v === i[0] || (v === "reveal" && i[0] === "today") || (v === "peau" && i[0] === "scan")) + "'>" + icon(i[2]) + "<span>" + i[1] + "</span></button>"; }).join("") + "</nav>";
+    return "<nav class='bnav'>" + items.map(function (i) { return "<button data-view='" + i[0] + "' aria-current='" + (v === i[0] || ((v === "reveal" || v === "espace" || v === "compte") && i[0] === "today") || (v === "peau" && i[0] === "scan")) + "'>" + icon(i[2]) + "<span>" + i[1] + "</span></button>"; }).join("") + "</nav>";
   };
 
   // ---------- Onboarding : le diagnostic ----------
@@ -1606,6 +1616,7 @@
       return html + "<div class='cta'><button class='btn big' data-act='next'>Continuer</button></div>";
     }
     if (q.type === "photo") return html + this.vPhotoStep(q);
+    if (q.type === "capture") return html + this.vCapture(q);
     var val = a[q.id];
     html += "<div class='q'><h3>" + esc(q.title) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "");
     if (q.link) html += "<a class='ext' href='" + q.link[1] + "' target='_blank' rel='noopener'>" + esc(q.link[0]) + " ↗</a>";
@@ -1789,6 +1800,7 @@
     var s = this.state, a = s.answers, today = iso(), self = this, R = buildRoutine(a);
     var html = "<div class='todayhead'><h3>Aujourd'hui</h3><span class='hacts'><button class='pluspill' data-view='plus'>Sunsoari+</button><button class='acctbtn' data-view='compte' aria-label='Mon compte et mes favoris'>" + icon("heart") + "</button></span></div>";
     html += "<figure class='amb low'><img src='" + photo(AMB.today) + "' alt='' loading='lazy'><figcaption><small>Ton moment à toi</small><b>" + esc(this.goalLabel()) + "</b></figcaption></figure>";
+    if (s.done) html += "<button class='reco-card esp' data-view='espace'><b>Mon espace soin" + (a.prenom ? " · " + esc(a.prenom) : "") + "</b><span>Routine à cocher, planner, évolution, semaine, solaire, produits, diagnostic</span></button>";
     html += "<div class='week'>";
     for (var i = -3; i <= 3; i++) {
       var d = addDays(today, i), k = iso(d), c = s.checks[k] || {}, done = (c.matin || []).length + (c.soir || []).length > 0;
@@ -2033,6 +2045,200 @@
       .then(function () { self.busy = false; self.render(); });
   };
 
+  // ---------------------------------------------------------------------------
+  // PRISE DE VUE : 3 photos (face, profil gauche, profil droit) ou une vidéo
+  // ---------------------------------------------------------------------------
+  var CAP_SLOTS = [["face", "Face"], ["gauche", "Profil gauche"], ["droit", "Profil droit"]];
+  // Miniature JPEG (côté max en px) à partir d'une image ou d'une vidéo déjà prête.
+  function snap(src, w, h, max, q) { var k = Math.min(1, max / Math.max(w, h)), c = document.createElement("canvas"); c.width = Math.round(w * k); c.height = Math.round(h * k); c.getContext("2d").drawImage(src, 0, 0, c.width, c.height); return c; }
+  function fileThumb(file, max) {
+    return new Promise(function (res) { var img = new Image(), url = URL.createObjectURL(file); img.onload = function () { var c = snap(img, img.width, img.height, max || 240); URL.revokeObjectURL(url); res(c.toDataURL("image/jpeg", 0.72)); }; img.onerror = function () { res(""); }; img.src = url; });
+  }
+  // Extrait 5 images d'une vidéo (face, gauche, droite, haut, bas) pour l'analyse.
+  function videoFrames(file, n) {
+    return new Promise(function (res, rej) {
+      var v = document.createElement("video"), url = URL.createObjectURL(file), out = [], i = 0;
+      v.muted = true; v.playsInline = true; v.preload = "auto"; v.src = url;
+      var next = function () {
+        if (i >= n) { URL.revokeObjectURL(url); return res(out); }
+        v.currentTime = Math.max(0.05, v.duration * (i + 0.5) / n);
+      };
+      v.onloadedmetadata = function () { if (!isFinite(v.duration) || !v.duration) { URL.revokeObjectURL(url); return rej(); } next(); };
+      v.onseeked = function () { var c = snap(v, v.videoWidth, v.videoHeight, 1024); c.toBlob(function (b) { out.push({ blob: b, thumb: snap(v, v.videoWidth, v.videoHeight, 240).toDataURL("image/jpeg", 0.72) }); i++; next(); }, "image/jpeg", 0.85); };
+      v.onerror = function () { URL.revokeObjectURL(url); rej(); };
+    });
+  }
+
+  A.vCapture = function (q) {
+    var self = this, c = this.cap = this.cap || { mode: "photos", files: {}, thumbs: {}, frames: [] }, s = this.state;
+    var html = "<div class='q'><h3>Montre-nous ta peau</h3><p class='sub'>Pour un espace soin vraiment adapté, à la lumière du jour (face à une fenêtre), visage nu : sans maquillage, sans filtre, cheveux attachés.</p></div>";
+    html += "<div class='modes'>" + [["photos", "3 photos"], ["video", "Une vidéo"]].map(function (m) { return "<button data-capmode='" + m[0] + "' aria-pressed='" + (c.mode === m[0]) + "'>" + m[1] + "</button>"; }).join("") + "</div>";
+    if (c.mode === "photos") {
+      html += "<div class='capgrid'>" + CAP_SLOTS.map(function (sl) { var t = c.thumbs[sl[0]]; return "<label class='capslot" + (t ? " has" : "") + "' for='cap-" + sl[0] + "'>" + (t ? "<img src='" + t + "' alt='" + sl[1] + "'>" : "<span class='capico'>" + (sl[0] === "face" ? "◉" : sl[0] === "gauche" ? "◐" : "◑") + "</span>") + "<b>" + sl[1] + "</b><input id='cap-" + sl[0] + "' type='file' accept='image/*' capture='user' data-capslot='" + sl[0] + "' hidden></label>"; }).join("") + "</div>";
+      html += "<p class='note'>Face : regarde l'objectif. Profils : tourne la tête pour montrer toute la joue, de l'oreille au nez.</p>";
+    } else {
+      html += "<ol class='guide'><li>Filme-toi en selfie, téléphone à bout de bras, environ 10 secondes.</li><li>Commence de face, puis tourne lentement la tête à gauche, à droite, lève le menton, puis baisse-le.</li><li>Garde la même lumière tout du long.</li></ol>";
+      html += "<label class='btn ghost' for='cap-video'>" + (c.frames.length ? "Refaire la vidéo" : "Filmer ou choisir une vidéo") + "</label><input id='cap-video' type='file' accept='video/*' capture='user' data-capvideo='1' hidden>";
+      if (c.frames.length) html += "<div class='capframes'>" + c.frames.map(function (f) { return "<img src='" + f.thumb + "' alt=''>"; }).join("") + "</div><p class='note'>On a extrait " + c.frames.length + " images de ta vidéo pour l'analyse. La vidéo elle-même n'est pas conservée.</p>";
+    }
+    if (this.capMsg) html += "<p class='why'>" + esc(this.capMsg) + "</p>";
+    var ready = c.mode === "photos" ? Object.keys(c.files).length > 0 : c.frames.length > 0;
+    html += "<label class='toggle'><input type='checkbox' data-keepcap='1'" + (s.keepCap ? " checked" : "") + "> Garder des miniatures de mes photos sur ce téléphone pour suivre mon évolution</label>";
+    if (ready && AI.images) html += "<button class='btn big' data-act='capanalyse'" + (this.busy ? " disabled" : "") + ">" + (this.busy ? "Analyse en cours…" : "Analyser ma peau") + "</button>";
+    else if (ready) html += "<p class='note'>L'analyse automatique sera active sur l'application en ligne. Tes images restent sur ton téléphone.</p>";
+    if (s.analysis && s.analysis.resume) html += "<div class='whybox'><b>Ce que l'assistante observe</b><p>" + esc(s.analysis.resume) + "</p></div>";
+    html += "<p class='note'>Tes images ne sont envoyées que si tu demandes l'analyse : une seule fois, à l'assistante, puis oubliées. Observations cosmétiques, pas un examen médical.</p>";
+    return html + "<div class='cta'><button class='btn big' data-act='next'>" + (s.analysis ? "Continuer" : "Passer cette étape") + "</button></div>";
+  };
+  A.capAnalyse = function () {
+    var self = this, c = this.cap, s = this.state, cfg = PHOTO.visage;
+    var imgs = c.mode === "photos" ? CAP_SLOTS.map(function (sl) { return c.files[sl[0]]; }).filter(Boolean) : c.frames.map(function (f) { return f.blob; });
+    if (!imgs.length) return;
+    this.busy = true; this.capMsg = "Analyse de " + imgs.length + " image" + (imgs.length > 1 ? "s" : "") + "…"; this.render();
+    var prompt = "Voici " + imgs.length + " images du visage d'une cliente (face, profils" + (c.mode === "video" ? ", haut et bas, extraites d'une vidéo" : "") + "), prises pour choisir des cosmétiques. Décris uniquement des signes cosmétiques VISIBLES, sans diagnostic médical, sans deviner l'âge, l'origine ou l'identité. " +
+      "Zones : " + cfg.zones.map(function (z) { return z[0]; }).join(", ") + ". Signes : " + cfg.obs.map(function (o) { return o[0]; }).join(", ") + ". " +
+      "Si la lumière ou la netteté ne permettent pas de juger, dis-le. Si tu vois une lésion inhabituelle (tache qui paraît irrégulière, plaie), conseille simplement de la montrer à un ou une dermatologue, sans nommer de maladie. " +
+      "Réponds uniquement en JSON : {\"qualite\":\"bonne|moyenne|insuffisante\",\"marks\":{\"zone\":[\"signe\"]},\"resume\":\"3 phrases maximum en français, tutoiement, bienveillantes et concrètes\",\"points\":[\"observation courte\"],\"dermato\":\"phrase ou chaîne vide\"}";
+    aiCall(prompt, { images: imgs, modelTier: "default" }, true).then(function (r) {
+      r = r || {};
+      var marks = {}, okZ = cfg.zones.map(function (z) { return z[0]; }), okO = cfg.obs.map(function (o) { return o[0]; });
+      Object.keys(r.marks || {}).forEach(function (z) { if (okZ.indexOf(z) > -1) { var l = (r.marks[z] || []).filter(function (o) { return okO.indexOf(o) > -1; }); if (l.length) marks[z] = l; } });
+      s.answers.photoVisage = marks;
+      s.analysis = { at: Date.now(), qualite: String(r.qualite || ""), resume: String(r.resume || "").slice(0, 600), points: (r.points || []).slice(0, 6).map(String), dermato: String(r.dermato || "").slice(0, 300) };
+      self.capMsg = r.qualite === "insuffisante" ? "La lumière ou la netteté ne suffisent pas : refais les photos face à une fenêtre." : null;
+      self.saveDay0(); self.save();
+    }, function (e) { self.capMsg = AI_ERR[e && e.code] || AI_ERR.upstream_error; }).then(function () { self.busy = false; self.render(); });
+  };
+  // Photos du jour 0 et des étapes d'évolution : miniatures locales, seulement avec l'accord de la cliente.
+  A.saveDay0 = function () {
+    var s = this.state, c = this.cap; if (!s.keepCap || !c) return;
+    var th = c.mode === "photos" ? CAP_SLOTS.map(function (sl) { return c.thumbs[sl[0]] || ""; }) : c.frames.slice(0, 3).map(function (f) { return f.thumb; });
+    s.evo = s.evo || [];
+    if (!s.evo.some(function (e) { return e.day0; })) s.evo.push({ day0: true, at: Date.now(), photos: th, feel: "", tags: [], note: "Point de départ" });
+  };
+
+  // ---------------------------------------------------------------------------
+  // MON ESPACE SOIN : livré automatiquement après le diagnostic
+  // ---------------------------------------------------------------------------
+  var ESP_TABS = [["routine", "Ma routine"], ["planner", "Mon planner"], ["evolution", "Mon évolution"], ["semaine", "Ma semaine"], ["soleil", "Protection solaire"], ["reco", "Recommandations"], ["produits", "Mes produits"], ["diagnostic", "Diagnostic"], ["astuces", "Astuces"]];
+  var SLOTS4 = [["matin", "Matin"], ["jour", "SPF"], ["soir", "Soir"], ["corps", "Corps"]];
+  var FEELS = ["Très bien", "Bien", "Moyen", "Difficile"], EVO_TAGS = ["Moins de boutons", "Moins de marques", "Plus confortable", "Moins de brillance", "Teint plus uniforme", "Irritation", "Nouveaux boutons", "Peau sèche"];
+  A.vEspace = function () {
+    var self = this, s = this.state, a = s.answers, sp = skinProfile(a), tab = this.etab || "routine";
+    var chips = [a.age ? a.age + " ans" : "", sp ? SKIN_INFO[sp.type].t + (sp.sensible ? ", sensible" : "") : "", (a.concerns || []).filter(function (c) { return c !== "aucune"; }).slice(0, 3).map(function (c) { return TAG_LABEL[c] || c; }).join(" · ")].filter(Boolean);
+    var html = "<div class='esphead'><p class='kicker'>Ton espace soin · Diagnostic du " + new Date(s.doneAt || Date.now()).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) + "</p><h3>Le rituel " + (a.prenom ? "de " + esc(a.prenom) : "de ta peau") + "</h3><div class='chips'>" + chips.map(function (c) { return "<span>" + esc(c) + "</span>"; }).join("") + "</div></div>";
+    html += "<div class='etabs' role='tablist'>" + ESP_TABS.map(function (t) { return "<button role='tab' data-etab='" + t[0] + "' aria-selected='" + (tab === t[0]) + "'>" + t[1] + "</button>"; }).join("") + "</div>";
+    return html + ({ routine: this.eRoutine, planner: this.ePlanner, evolution: this.eEvolution, semaine: this.eSemaine, soleil: this.eSoleil, reco: this.eReco, produits: this.eProduits, diagnostic: this.eDiagnostic, astuces: this.eAstuces }[tab] || this.eRoutine).call(this);
+  };
+  A.eRoutine = function () {
+    var self = this, s = this.state, a = s.answers, R = buildRoutine(a), m = this.emode || "matin", today = iso();
+    var start = s.planStart || s.doneAt || Date.now(), wk = introPlan(R), cw = planWeek(start), intro = {};
+    wk.forEach(function (w, i) { w.items.forEach(function (it) { intro[it.id] = i + 1; }); });
+    var cal = eveningCalendar(R, cw, wk), tonight = cal.filter(function (c) { return c.d === new Date().getDay(); })[0];
+    var steps = m === "matin" ? R.matin : m === "soir" ? R.soir : m === "corps" ? R.hebdo.filter(function (x) { var p = byId(x.id); return p && p.zone === "corps"; }).concat(R.douche.slice(0, 1)) : [];
+    var ctx = { matin: "Le matin ne change jamais : nettoyer, hydrater, protéger.", jour: "Dans la journée, la crème solaire se renouvelle : toutes les 2 heures dehors, et après le sport.", soir: "Ce soir : " + (tonight ? tonight.t : "réparation") + ".", corps: "Après la douche, sur peau encore légèrement humide." }[m];
+    var html = "<div class='modes'>" + [["matin", "Matin"], ["jour", "Journée · SPF"], ["soir", "Soir"], ["corps", "Corps"]].map(function (x) { return "<button data-emode='" + x[0] + "' aria-pressed='" + (m === x[0]) + "'>" + x[1] + "</button>"; }).join("") + "</div><p class='why'>" + esc(ctx) + "</p>";
+    var done = ((s.checks[today] || {})[m] || []);
+    if (m === "jour") steps = [{ step: "retouche", id: (R.matin.filter(function (x) { return x.step === "spf"; })[0] || {}).id }, { step: "sport", id: null }];
+    html += "<div class='plan'>" + steps.map(function (it, i) {
+      var p = it.id ? byId(it.id) : null, key = it.step + (it.id || i), on = done.indexOf(key) > -1, later = it.id && (intro[it.id] || 1) > cw;
+      var label = { retouche: "Retouche de crème solaire, midi", sport: "Après le sport : rincer le visage, puis retoucher" }[it.step] || STEP_LABEL[it.step] || (it.step === "douche" ? "Rituel douche" : it.step);
+      if (later) return "<p class='pstep later'><span class='tick'></span><span>" + esc(label) + " · <small>à partir de la semaine " + intro[it.id] + "</small></span></p>";
+      return "<button class='pstep' data-check='" + m + "|" + esc(key) + "' aria-pressed='" + on + "'><span class='tick'>" + (on ? "✓" : "") + "</span><span>" + esc(label) + (p ? " · <small>" + esc(p.brand + " " + p.name) + "</small>" : "") + "</span></button>";
+    }).join("") + "</div>";
+    var pl = ((s.planner || {})[today] || {})[m];
+    html += "<div class='markbar'><span>Routine " + ({ matin: "du matin", jour: "SPF", soir: "du soir", corps: "corps" })[m] + " faite aujourd'hui ?</span><div class='yn'><button data-pmark='" + today + "|" + m + "|oui' aria-pressed='" + (pl === "oui") + "'>Oui</button><button data-pmark='" + today + "|" + m + "|non' aria-pressed='" + (pl === "non") + "'>Non</button></div></div>";
+    return html + "<p class='note'>Tu commences ? Ajoute les produits un par un, dans l'ordre de l'onglet « Ma semaine ». Tant qu'un produit n'est pas encore introduit, saute son étape.</p>";
+  };
+  A.ePlanner = function () {
+    var s = this.state, pl = s.planner = s.planner || {}, self = this, base = this.pmonth || iso().slice(0, 7), y = +base.slice(0, 4), mo = +base.slice(5, 7) - 1;
+    var first = new Date(y, mo, 1), days = new Date(y, mo + 1, 0).getDate(), off = (first.getDay() + 6) % 7, today = iso();
+    var last30 = 0, yes30 = 0, streak = 0;
+    for (var i = 0; i < 30; i++) { var k = iso(addDays(today, -i)), d = pl[k] || {}, vals = SLOTS4.map(function (x) { return d[x[0]]; }).filter(Boolean); if (vals.length) { last30++; if (vals.indexOf("non") < 0) yes30++; } }
+    for (var j = 0; j < 365; j++) { var dd = pl[iso(addDays(today, -j))] || {}; if (dd.matin === "oui" || dd.soir === "oui") streak++; else if (j > 0) break; }
+    var html = "<p class='sub'>Chaque jour, note si tu as suivi ta routine : oui ou non, sans culpabiliser. C'est ce qui permet de comprendre l'évolution de ta peau.</p>";
+    html += "<div class='stats'><div><b>" + streak + "</b><small>jours d'affilée</small></div><div><b>" + last30 + "</b><small>jours notés sur 30</small></div><div><b>" + (last30 ? Math.round(yes30 / last30 * 100) : 0) + " %</b><small>jours complets</small></div></div>";
+    html += "<div class='calh'><button data-pmonth='" + iso(new Date(y, mo - 1, 15)).slice(0, 7) + "' aria-label='Mois précédent'>‹</button><b>" + first.toLocaleDateString("fr-FR", { month: "long", year: "numeric" }) + "</b><button data-pmonth='" + iso(new Date(y, mo + 1, 15)).slice(0, 7) + "' aria-label='Mois suivant'>›</button></div><div class='pcal'>" + ["L", "M", "M", "J", "V", "S", "D"].map(function (x) { return "<i class='wd'>" + x + "</i>"; }).join("");
+    for (var b = 0; b < off; b++) html += "<i></i>";
+    for (var n = 1; n <= days; n++) { var key = base + "-" + (n < 10 ? "0" : "") + n, dv = pl[key] || {}, fut = key > today; html += "<button class='pcell" + (key === today ? " today" : "") + (this.pday === key ? " sel" : "") + "' data-pday='" + key + "'" + (fut ? " disabled" : "") + "><span>" + n + "</span><span class='segs4'>" + SLOTS4.map(function (x) { return "<i class='" + (dv[x[0]] || "") + "'></i>"; }).join("") + "</span></button>"; }
+    html += "</div><p class='legend'><i class='sw oui'></i>Oui <i class='sw non'></i>Non <i class='sw'></i>Pas noté · dans chaque jour : matin, SPF, soir, corps</p>";
+    var sel = this.pday || today, sv = pl[sel] || {};
+    html += "<div class='acct'><b>" + new Date(sel + "T12:00:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" }) + "</b>" + SLOTS4.map(function (x) { return "<div class='markbar'><span>" + x[1] + "</span><div class='yn'><button data-pmark='" + sel + "|" + x[0] + "|oui' aria-pressed='" + (sv[x[0]] === "oui") + "'>Oui</button><button data-pmark='" + sel + "|" + x[0] + "|non' aria-pressed='" + (sv[x[0]] === "non") + "'>Non</button></div></div>"; }).join("") + "</div>";
+    return html;
+  };
+  A.eEvolution = function () {
+    var s = this.state, self = this, evo = s.evo = s.evo || [], d = this.evoDraft = this.evoDraft || { date: iso(), photos: ["", "", ""], feel: "", tags: [], note: "" };
+    var html = "<p class='sub'>Ajoute tes photos et ton ressenti toutes les 2 semaines, au même endroit, à la même lumière, sans filtre ni maquillage.</p>";
+    html += "<div class='acct'><b>Nouvelle étape</b><label class='tfields'><span>Date</span><input type='date' data-evo='date' value='" + d.date + "' max='" + iso() + "'></label><div class='capgrid'>" + CAP_SLOTS.map(function (sl, i) { return "<label class='capslot" + (d.photos[i] ? " has" : "") + "' for='evo-" + i + "'>" + (d.photos[i] ? "<img src='" + d.photos[i] + "' alt='" + sl[1] + "'>" : "<span class='capico'>+</span>") + "<b>" + sl[1] + "</b><input id='evo-" + i + "' type='file' accept='image/*' capture='user' data-evophoto='" + i + "' hidden></label>"; }).join("") + "</div>";
+    html += "<p class='alt-t'>Comment va ta peau ?</p><div class='chipset'>" + FEELS.map(function (f) { return "<button class='chip' data-evofeel='" + f + "' aria-pressed='" + (d.feel === f) + "'>" + f + "</button>"; }).join("") + "</div>";
+    html += "<p class='alt-t'>Ce que tu remarques</p><div class='chipset'>" + EVO_TAGS.map(function (f) { return "<button class='chip' data-evotag='" + f + "' aria-pressed='" + (d.tags.indexOf(f) > -1) + "'>" + f + "</button>"; }).join("") + "</div>";
+    html += "<label class='tfields'><span>Ton ressenti</span><textarea data-evo='note' rows='3' maxlength='800' placeholder='Ex. : moins de petits boutons sur le front, la crème solaire ne picote pas…'>" + esc(d.note) + "</textarea></label><button class='btn big' data-act='evosave'>Enregistrer cette étape</button><small>Les photos restent sur ce téléphone, en miniature.</small></div>";
+    var withPh = evo.filter(function (e) { return e.photos && e.photos[0]; });
+    if (withPh.length > 1) html += "<p class='alt-t'>Avant · maintenant</p><div class='pair'><figure><img src='" + withPh[0].photos[0] + "' alt=''><figcaption>" + new Date(withPh[0].at).toLocaleDateString("fr-FR") + "</figcaption></figure><figure><img src='" + withPh[withPh.length - 1].photos[0] + "' alt=''><figcaption>" + new Date(withPh[withPh.length - 1].at).toLocaleDateString("fr-FR") + "</figcaption></figure></div>";
+    html += "<p class='sect left'>Ton parcours</p>" + (evo.length ? evo.slice().reverse().map(function (e) { var i = evo.indexOf(e), wkn = Math.max(0, Math.round((e.at - (s.doneAt || e.at)) / (7 * 864e5))); return "<div class='entry" + (e.day0 ? " zero" : "") + "'><small>" + (e.day0 ? "Jour 0" : "Semaine " + wkn) + " · " + new Date(e.at).toLocaleDateString("fr-FR") + (e.feel ? " · " + esc(e.feel) : "") + "</small>" + (e.photos && e.photos.some(Boolean) ? "<div class='ph3'>" + e.photos.map(function (p, k) { return p ? "<img src='" + p + "' alt='" + CAP_SLOTS[k][1] + "'>" : "<i></i>"; }).join("") + "</div>" : "") + (e.tags && e.tags.length ? "<p class='chips'>" + e.tags.map(function (t) { return "<span>" + esc(t) + "</span>"; }).join("") + "</p>" : "") + (e.note ? "<p>" + esc(e.note) + "</p>" : "") + "<button class='btn link' data-evodel='" + i + "'>Supprimer</button></div>"; }).join("") : "<p class='empty'>Ta première étape apparaîtra ici.</p>");
+    return html;
+  };
+  A.eSemaine = function () {
+    var s = this.state, R = buildRoutine(s.answers), start = s.planStart || s.doneAt || Date.now(), wk = introPlan(R), cw = planWeek(start), cal = eveningCalendar(R, cw, wk), dnow = new Date().getDay();
+    var html = "<p class='sub'>Le matin ne change jamais. Le soir, un seul actif à la fois pour ne pas irriter ta peau.</p><div class='evecal'>" + cal.map(function (c) { return "<p class='" + (c.d === dnow ? "now" : "") + "'><b>" + DSHORT[c.d] + "</b><span>" + esc(c.t) + "</span></p>"; }).join("") + "</div>";
+    html += "<p class='sect left'>Dans quel ordre commencer</p><div class='intro'><p>Un produit par semaine. Si quelque chose irrite, tu sais tout de suite lequel. Teste chaque nouveauté 48 h sur la mâchoire.</p><ol>" + wk.map(function (w, i) { var n = i + 1, st = n < cw ? "past" : n === cw ? "now" : ""; return "<li class='" + st + "'><span class='wn'>" + (n < cw ? "✓" : "S" + n) + "</span><span><b>" + esc(w.label) + "</b>" + (w.items.length ? "<small>" + w.items.map(function (it) { var p = byId(it.id); return esc(p ? p.brand + " " + p.name : ""); }).join(" · ") + "</small>" : "") + (w.note ? "<em>" + esc(w.note) + "</em>" : "") + "</span></li>"; }).join("") + "</ol></div>";
+    return html;
+  };
+  A.eSoleil = function () {
+    var R = buildRoutine(this.state.answers), spf = R.matin.filter(function (x) { return x.step === "spf"; }).map(function (x) { return byId(x.id); }).filter(Boolean);
+    var day = [["7 h 30", "Matin", "Dernière étape de la routine, 15 minutes avant de sortir. Deux longueurs de doigt."], ["12 h 30", "Midi", "Retouche, au stick par exemple, si tu sors ou si tu es près d'une fenêtre."], ["+ 0 h", "Après le sport", "Tamponne la sueur, puis retouche."], ["21 h", "Soir", "Démaquillant pour bien tout retirer, puis nettoyant."]];
+    var rules = [["Choisir", "SPF 50 ou 50+, large spectre", "En Europe, cherche le logo UVA entouré d'un cercle. Une texture sans trace blanche, que tu as envie de mettre."], ["Quantité", "Deux longueurs de doigt", "Une ligne de produit sur l'index et une sur le majeur, pour le visage et le cou. On en met presque toujours trop peu."], ["Où", "Les zones oubliées", "Oreilles, ligne des cheveux, nuque, contour de la bouche, paupières (sans entrer dans l'œil), dessus des mains."], ["Quand", "Tous les jours", "Même en hiver, par temps gris ou en télétravail près d'une fenêtre : les UVA traversent les nuages et les vitres."], ["Retouche", "Toutes les 2 h dehors", "Et après le sport, la baignade ou un coup de serviette."], ["Corps", "Lait SPF 50+", "Bras, décolleté, jambes dès qu'ils sont exposés."], ["Si ça picote", "Change de formule", "Arrête et essaie une autre texture. Teste 48 h sur la mâchoire."], ["En plus", "Ombre et chapeau", "Entre 12 h et 16 h l'été : ombre, chapeau, lunettes. Aucune crème ne protège à 100 %."]];
+    var html = "<p class='sub'>Sur toutes les carnations, c'est le soin qui protège le plus. Sans protection solaire quotidienne, les marques foncent et durent, quels que soient tes sérums.</p>";
+    html += "<p class='sect left'>Une journée type</p><div class='slots'>" + day.map(function (d) { return "<div><b>" + d[0] + "</b><small>" + d[1] + "</small><p>" + d[2] + "</p></div>"; }).join("") + "</div>";
+    html += "<p class='sect left'>Les règles</p><div class='slots rules'>" + rules.map(function (r) { return "<div><small>" + r[0] + "</small><b>" + r[1] + "</b><p>" + r[2] + "</p></div>"; }).join("") + "</div>";
+    if (spf.length) html += "<p class='sect left'>Ta crème solaire</p><div class='list'>" + spf.map(this.rowProduct, this).join("") + "</div>";
+    return html;
+  };
+  A.eReco = function () {
+    var self = this, a = this.state.answers;
+    return "<button class='reco-card' data-view='reveal'><b>Ma routine produit par produit</b><span>Pourquoi chaque produit, score de compatibilité, autres options</span></button>" + forYou(a).map(function (g) { return self.reccarousel(g); }).join("") + "<p class='note'>Prix indicatifs, ils varient selon les boutiques. Vérifie la liste d'ingrédients sur le produit acheté, et achète chez un revendeur officiel.</p>";
+  };
+  // « Mes produits » : ce que devient chaque produit que la cliente possède déjà.
+  A.eProduits = function () {
+    var self = this, a = this.state.answers, R = buildRoutine(a), inR = R.matin.concat(R.soir, R.hebdo).map(function (x) { return x.id; }), tags = tagsOf(a);
+    var raw = String(a.produitsVisage || "") + "\n" + String(a.produitsCorps || ""), items = raw.split(/[\n,;]+| et /).map(function (x) { return x.trim(); }).filter(function (x) { return x.length > 2; }).slice(0, 15);
+    if (!items.length) return "<p class='empty'>Indique tes produits actuels dans ton diagnostic (étape « Ta routine actuelle ») : on te dira lesquels garder, finir ou mettre en pause.</p><button class='btn' data-act='editactuels'>Ajouter mes produits</button>";
+    var all = allProducts().filter(function (p) { return !p.own; });
+    var html = "<p class='sub'>Ce que devient chaque produit que tu as déjà. Rien ne se jette : finis ce qui te convient avant d'acheter.</p><div class='list'>";
+    items.forEach(function (txt) {
+      var low = txt.toLowerCase(), m = all.filter(function (p) { return low.indexOf(p.brand.toLowerCase().split(" ")[0]) > -1 && p.name.toLowerCase().split(/\s+/).some(function (w) { return w.length > 3 && low.indexOf(w) > -1; }); })[0];
+      var pill, why;
+      if (!m) { pill = ["adapt", "À vérifier"]; why = "Scanne sa liste d'ingrédients dans l'onglet Scan pour savoir s'il te convient."; }
+      else {
+        var bad = (m.avoid || []).some(function (x) { return tags.indexOf(x) > -1; }), same = inR.filter(function (id) { var p = byId(id); return p && p.step === m.step && p.zone === m.zone; })[0];
+        if (inR.indexOf(m.id) > -1) { pill = ["keep", "Garder"]; why = "Il fait partie de ta routine."; }
+        else if (bad) { pill = ["pause", "Mettre en pause"]; why = "Il ne convient pas à ton profil en ce moment (" + (m.avoid || []).filter(function (x) { return tags.indexOf(x) > -1; }).map(function (x) { return TAG_LABEL[x] || x; }).join(", ") + ")."; }
+        else if (same) { pill = ["adapt", "Finir puis remplacer"]; why = "Termine-le, puis passe à " + byId(same).brand + " " + byId(same).name + ". Ne les utilise pas ensemble."; }
+        else { pill = ["keep", "Garder"]; why = "Il peut compléter ta routine. Introduis-le comme un nouveau produit."; }
+      }
+      html += "<div class='mrow'><span><b>" + esc(txt) + "</b><small>" + esc(why) + "</small></span><em class='pill " + pill[0] + "'>" + pill[1] + "</em></div>";
+    });
+    return html + "</div>";
+  };
+  A.eDiagnostic = function () {
+    var s = this.state, a = s.answers, an = s.analysis, d0 = (s.evo || []).filter(function (e) { return e.day0; })[0];
+    var html = "<p class='sub'>Analyse à partir de tes réponses" + (an ? " et de tes photos" : "") + ". C'est un diagnostic cosmétique, pas un avis médical.</p>";
+    if (d0 && d0.photos.some(Boolean)) html += "<p class='sect left'>Tes photos du jour 0</p><div class='ph3'>" + d0.photos.map(function (p, k) { return p ? "<img src='" + p + "' alt='" + CAP_SLOTS[k][1] + "'>" : "<i></i>"; }).join("") + "</div>";
+    if (an && an.resume) html += "<div class='whybox'><b>Ce que nous avons observé</b><p>" + esc(an.resume) + "</p>" + (an.points.length ? "<ul class='tipl'>" + an.points.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul>" : "") + "</div>";
+    if (an && an.dermato) html += "<p class='care'>" + esc(an.dermato) + "</p>";
+    html += this.skinResult();
+    html += "<p class='sect left'>Délais réalistes</p><div class='delays'>" + [["Semaines 2 à 4", "Peau plus confortable, moins de réactions"], ["Semaines 6 à 10", "Petite poussée possible quand les actifs arrivent : elle doit se calmer"], ["Mois 3 à 4", "Grain de peau plus régulier"], ["Mois 4 à 6", "Marques qui s'estompent, avec la crème solaire chaque jour"]].map(function (x) { return "<p><b>" + x[0] + "</b><span>" + x[1] + "</span></p>"; }).join("") + "</div>";
+    html += "<p class='care'>Quand arrêter un produit : brûlure, rougeur qui dure, démangeaisons, plaques ou peau qui pèle. Arrête le dernier produit ajouté et parles-en à un ou une dermatologue.</p>";
+    return html + "<button class='btn ghost' data-first='diag'>Refaire mon diagnostic</button>";
+  };
+  A.eAstuces = function () {
+    var a = this.state.answers, tips = [["Un nouveau produit à la fois", "Une semaine d'écart entre deux nouveautés, testées 48 h sur la mâchoire."], ["Ne perce pas tes boutons", "C'est la première cause des marques, surtout sur peau mate à foncée. Pose un patch la nuit à la place."], ["Ligne des cheveux", "Le gel et les huiles sur les cheveux, pas sur la peau du front. Le soir, insiste avec le démaquillant sur cette zone."], ["Après le sport", "Rince ton visage dès que possible et retouche ta crème solaire si tu ressors."], ["Taie et téléphone", "Taie d'oreiller changée une à deux fois par semaine, écran nettoyé souvent."], ["En vacances", "Garde ta routine habituelle, aucun produit nouveau avant le départ."], ["Ta douche", "Eau tiède, douche courte. Un filtre de douche est un geste de confort : il ne traite ni l'acné ni les marques."], ["Alimentation", "Certaines études relient sucres rapides et produits laitiers à l'acné chez certaines personnes. Observe, sans régime strict. Pas de compléments sans avis médical."]];
+    var html = "<div class='slots rules'>" + tips.map(function (t) { return "<div><b>" + t[0] + "</b><p>" + t[1] + "</p></div>"; }).join("") + "</div>";
+    var ins = insights(a);
+    if (ins.length) html += "<p class='sect left'>Pour toi</p><div class='advice'>" + ins.map(function (t) { return "<details><summary>" + esc(t[0]) + "</summary><p>" + esc(t[1]) + "</p></details>"; }).join("") + "</div>";
+    return html;
+  };
+
   // ---------- Contenus Sunsoari (articles, vidéos, posts) et favoris ----------
   // Liste extensible : window.SUNSOARI_CONTENT = [{ id, type: "video"|"post"|"article", title, url, img, src }]
   A.contentItems = function () {
@@ -2230,7 +2436,7 @@
     if (d.act === "prev") { this.step = Math.max(0, this.step - 1); this.zone = null; this.aiMsg = null; return this.render(); }
     if (d.act === "next") {
       if (this.step < this.visibleQuestions().length - 1) { this.step++; this.zone = null; this.aiMsg = null; }
-      else { s.done = true; s.doneAt = Date.now(); this.save(); this.view = "reveal"; this.rtab = "matin"; this.emit("result", { answers: s.answers }); }
+      else { s.done = true; s.doneAt = Date.now(); this.saveDay0(); this.save(); this.view = "espace"; this.etab = "routine"; this.emit("result", { answers: s.answers }); }
       return this.render();
     }
     if (d.act === "aiphoto") return this.aiPhoto(d.target, d.pq);
@@ -2250,6 +2456,18 @@
     if (d.act === "scanpaste") { this.scan = { mode: "paste" }; return this.render(); }
     if (d.act === "scanbar") { this.scan = { mode: "bar" }; return this.render(); }
     if (d.act === "camscan") return this.camScan();
+    if (d.capmode) { this.cap.mode = d.capmode; this.capMsg = null; return this.render(); }
+    if (d.act === "capanalyse") return this.capAnalyse();
+    if (d.etab) { this.etab = d.etab; return this.render(); }
+    if (d.emode) { this.emode = d.emode; return this.render(); }
+    if (d.pmark) { var pp = d.pmark.split("|"), pl = s.planner = s.planner || {}, dy = pl[pp[0]] = pl[pp[0]] || {}; dy[pp[1]] = dy[pp[1]] === pp[2] ? undefined : pp[2]; this.save(); return this.render(); }
+    if (d.pmonth) { this.pmonth = d.pmonth; return this.render(); }
+    if (d.pday) { this.pday = d.pday; return this.render(); }
+    if (d.evofeel) { this.evoDraft.feel = this.evoDraft.feel === d.evofeel ? "" : d.evofeel; return this.render(); }
+    if (d.evotag) { var tg = this.evoDraft.tags, ti = tg.indexOf(d.evotag); if (ti > -1) tg.splice(ti, 1); else tg.push(d.evotag); return this.render(); }
+    if (d.act === "evosave") { var dr = this.evoDraft; s.evo = s.evo || []; s.evo.push({ at: new Date(dr.date + "T12:00:00").getTime(), photos: dr.photos.slice(), feel: dr.feel, tags: dr.tags.slice(), note: dr.note }); s.evo.sort(function (x, y) { return x.at - y.at; }); s.evo = s.evo.slice(-24); this.evoDraft = null; this.save(); return this.render(); }
+    if (d.evodel) { s.evo.splice(+d.evodel, 1); this.save(); return this.render(); }
+    if (d.act === "editactuels") { var qs2 = this.visibleQuestions(), ix = qs2.map(function (q) { return q.id; }).indexOf("actuels"); this.view = "diag"; this.step = Math.max(0, ix); return this.render(); }
     if (d.act === "copysum") { var txt = this.summaryText(), self2 = this; var ok = function () { self2.copyMsg = "Réponses copiées. Colle-les dans ton message à Sunsoari."; self2.render(); }; try { navigator.clipboard.writeText(txt).then(ok, function () { self2.copyMsg = "Copie impossible ici : ouvre WhatsApp, tes réponses y sont déjà."; self2.render(); }); } catch (e) { this.copyMsg = "Copie impossible ici."; this.render(); } return; }
     if (d.fav) { var f = s.favs.indexOf(d.fav); if (f > -1) s.favs.splice(f, 1); else s.favs.push(d.fav); this.save(); return this.render(); }
     if (d.ftab) { this.ftab = d.ftab; return this.render(); }
@@ -2273,6 +2491,11 @@
     var d = e.target.dataset, f = e.target.files && e.target.files[0];
     if (d.photo && f) { if (this.photos[d.photo]) URL.revokeObjectURL(this.photos[d.photo]); this.photos[d.photo] = URL.createObjectURL(f); this.photoFiles = this.photoFiles || {}; this.photoFiles[d.photo] = f; this.aiMsg = null; return this.render(); }
     if (d.scanphoto && f) return this.scanPhoto(f);
+    var self3 = this;
+    if (d.capslot && f) { this.cap.files[d.capslot] = f; this.capMsg = null; fileThumb(f, 240).then(function (t) { self3.cap.thumbs[d.capslot] = t; self3.render(); }); return; }
+    if (d.capvideo && f) { this.capMsg = "Préparation de ta vidéo…"; this.render(); videoFrames(f, 5).then(function (fr) { self3.cap.frames = fr; self3.capMsg = null; self3.render(); }, function () { self3.capMsg = "Impossible de lire cette vidéo ici. Essaie les 3 photos."; self3.render(); }); return; }
+    if (d.keepcap) { this.state.keepCap = e.target.checked; if (this.state.keepCap && this.state.analysis) this.saveDay0(); this.save(); return; }
+    if (d.evophoto && f) { fileThumb(f, 240).then(function (t) { self3.evoDraft.photos[+d.evophoto] = t; self3.render(); }); return; }
     if (d.codephoto && f) { if (this.cam) { this.cam.msg = "Lecture de la photo…"; } return this.codeFromPhoto(f); }
     if (d.keepthumb) { this.state.keepThumb = e.target.checked; this.save(); return; }
     if (d.refill) { var st = this.state.refills[d.refill] || {}; st[d.f] = e.target.value; this.state.refills[d.refill] = st; this.save(); this.render(); }

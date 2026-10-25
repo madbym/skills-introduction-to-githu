@@ -7,7 +7,7 @@
 <!--
   Modèle de l'e-mail envoyé automatiquement à la fin du diagnostic (Klaviyo, Shopify Email ou serveur).
   Variables reçues de l'application (POST data-email-endpoint) :
-    prenom, resultat, routine.matin[], routine.soir[], routine.hebdo[] (chacun : etape, produit),
+    prenom, resultat, routine.matin[], routine.soir[], routine.hebdo[], routine.cheveux[] (chacun : etape, produit),
     lien_espace (adresse de l'espace soin dans le compte client).
   Syntaxe {{ }} et {% %} : Klaviyo et Shopify utilisent une syntaxe proche, à adapter à l'outil choisi.
   N'envoyer que si consentement_routine = true. Ne jamais inclure les photos.
@@ -29,6 +29,8 @@
     {% for e in routine.soir %}<p style="margin:0 0 6px;font-size:15px"><b>{{ e.etape }}</b> · {{ e.produit }}</p>{% endfor %}
     <p style="margin:16px 0 6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C06F55">Chaque semaine</p>
     {% for e in routine.hebdo %}<p style="margin:0 0 6px;font-size:15px"><b>{{ e.etape }}</b> · {{ e.produit }}</p>{% endfor %}
+    <p style="margin:16px 0 6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C06F55">Cheveux</p>
+    {% for e in routine.cheveux %}<p style="margin:0 0 6px;font-size:15px"><b>{{ e.etape }}</b> · {{ e.produit }}</p>{% endfor %}
   </td></tr>
   <tr><td style="padding:8px 24px 16px">
     <p style="margin:0;background:#E6DED1;border-radius:12px;padding:12px 14px;font-size:14px">Un nouveau produit par semaine, testé 48 h sur la mâchoire. La crème solaire chaque matin, toute l'année.</p>

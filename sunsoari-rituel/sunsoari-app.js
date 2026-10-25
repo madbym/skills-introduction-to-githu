@@ -465,7 +465,7 @@
     { id: "miseenscene", brand: "Mise en Scène", name: "Perfect Serum Original", origin: "Corée", zone: "cheveux", step: "soin", act: ["argan"], for: ["secs", "colores", "raides", "ondules"], avoid: [], desc: "Sérum capillaire coréen culte, pour la brillance et les pointes." },
     { id: "masil", brand: "Masil", name: "8 Seconds Salon Hair Mask", origin: "Corée", zone: "cheveux", step: "masque", act: [], for: ["secs", "colores", "fins"], avoid: [], desc: "Masque express, quelques secondes de pose." },
     { id: "ryo", brand: "Ryo", name: "Hair Loss Expert Care Shampoo", origin: "Corée", zone: "cuir", step: "shampoing", act: ["ginseng"], for: ["cuirGras", "fins"], avoid: [], desc: "Shampoing coréen au ginseng pour un cuir chevelu qui regraisse et des cheveux fins." },
-    { id: "kelual", brand: "Ducray", name: "Kelual DS Shampooing", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirPellicules"], avoid: [], desc: "Shampoing de pharmacie pour les pellicules et les démangeaisons." },
+    { id: "kelual", brand: "Ducray", name: "Kelual DS Shampooing", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirPellicules", "cuirDS"], avoid: [], desc: "Shampoing de pharmacie pour les pellicules et les démangeaisons." },
     { id: "kloraneavoine", brand: "Klorane", name: "Shampooing à l'Avoine", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirSensible", "cuirSec"], avoid: [], desc: "Shampoing très doux pour les lavages fréquents et les cuirs chevelus sensibles." },
     // Marques connues : Corée, Japon, Chine, Afrique et diaspora
     { id: "medicube", brand: "Medicube", name: "Zero Pore Pad 2.0", origin: "Corée", zone: "visage", step: "exfoliant", act: ["aha", "bha"], for: ["mixte", "imperfections", "texture"], avoid: ["acides", "sensible"], desc: "Disques exfoliants très populaires en Corée. 2 à 3 soirs par semaine, jamais avec un autre acide." },
@@ -527,7 +527,7 @@
     { id: "furterer", brand: "René Furterer", name: "Karité Nutri Masque Nutrition Intense", origin: "France", zone: "cheveux", step: "masque", act: ["karite"], for: ["secs", "crepus", "boucles"], avoid: [], desc: "Masque de pharmacie au karité pour cheveux très secs." },
     { id: "kloranemangue", brand: "Klorane", name: "Masque Nutrition à la Mangue", origin: "France", zone: "cheveux", step: "masque", act: [], for: ["secs", "ondules", "boucles"], avoid: [], desc: "Masque nourrissant de pharmacie, bon rapport qualité-prix." },
     { id: "anaphase", brand: "Ducray", name: "Anaphase+ Shampooing", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["fins", "cuirOk"], avoid: [], desc: "Shampoing de pharmacie pour cheveux fins qui manquent de densité. Une chute importante se montre à un médecin." },
-    { id: "nodeds", brand: "Bioderma", name: "Nodé DS+ Shampooing", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirPellicules", "cuirSensible"], avoid: [], desc: "Shampoing de pharmacie pour les pellicules et les rougeurs du cuir chevelu." },
+    { id: "nodeds", brand: "Bioderma", name: "Nodé DS+ Shampooing", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirPellicules", "cuirSensible", "cuirDS"], avoid: [], desc: "Shampoing de pharmacie pour les pellicules et les rougeurs du cuir chevelu." },
     { id: "skingourmet", brand: "Skin Gourmet", name: "Beurre de karité brut", origin: "Ghana", madeIn: "au Ghana", zone: "corps", step: "corps", act: ["karite"], for: ["corpsSec", "corpsTresSec", "secs", "crepus"], avoid: [], desc: "Marque d'Accra qui travaille des ingrédients ghanéens bruts." },
     { id: "kocos", brand: "Kocos Cosmétiques", name: "Soins au beurre de karité", origin: "Mali", madeIn: "au Mali", zone: "corps", step: "corps", act: ["karite"], for: ["corpsSec", "corpsTresSec", "corpsOk"], avoid: [], desc: "Laits, crèmes et savons au karité, créés par une pharmacienne malienne." },
     { id: "nuhanciam", brand: "Nuhanciam", name: "Baume Corps Réparateur Intense", origin: "France", zone: "corps", step: "corps", act: ["karite", "hyaluronique"], for: ["corpsTresSec", "corpsSec", "corpsMarques"], avoid: [], desc: "Baume corps pensé pour les peaux noires et métissées." },
@@ -541,10 +541,51 @@
     { id: "fino", brand: "Fino", name: "Premium Touch Hair Mask", origin: "Japon", zone: "cheveux", step: "masque", act: ["camelia"], for: ["secs", "colores", "raides", "ondules", "fins"], avoid: [], desc: "Masque capillaire japonais très populaire, texture riche." },
     // Cuir chevelu
     { id: "aromatica", brand: "Aromatica", name: "Rosemary Scalp Scaling Shampoo", origin: "Corée", zone: "cuir", step: "shampoing", act: ["romarin"], for: ["cuirGras", "cuirPellicules"], avoid: ["reactifHE", "cuirSensible"], desc: "Shampoing au romarin pour cuir chevelu qui regraisse vite." },
-    { id: "daenggi", brand: "Daeng Gi Meo Ri", name: "Ki Gold Energizing Shampoo", origin: "Corée", zone: "cuir", step: "shampoing", act: ["ginseng"], for: ["cuirOk", "cuirGras", "fins"], avoid: [], desc: "Shampoing coréen aux extraits de plantes de la pharmacopée traditionnelle." }
+    { id: "daenggi", brand: "Daeng Gi Meo Ri", name: "Ki Gold Energizing Shampoo", origin: "Corée", zone: "cuir", step: "shampoing", act: ["ginseng"], for: ["cuirOk", "cuirGras", "fins"], avoid: [], desc: "Shampoing coréen aux extraits de plantes de la pharmacopée traditionnelle." }    ,
+    // --- Cheveux et cuir chevelu : K-beauty, J-beauty et pharmacie (ajout du 25 octobre 2026) ---
+    { id: "sbmscalp", brand: "SOME BY MI", name: "Cica Peptide Anti Hair Loss Derma Scalp Shampoo", origin: "Corée", zone: "cuir", step: "shampoing", act: ["centella"], for: ["cuirGras", "cuirSensible", "chute", "fins", "tempes"], avoid: [], desc: "Shampoing coréen à la centella et aux peptides pour le cuir chevelu. « Anti-chute » désigne en cosmétique la chute par casse : une chute importante se montre à un médecin." },
+    { id: "lilyevescalp", brand: "lilyeve", name: "Scalp Turn Cica Pore Deep Clean Shampoo", origin: "Corée", zone: "cuir", step: "shampoing", act: ["centella"], for: ["cuirGras", "cuirPellicules"], avoid: ["cuirSec"], desc: "Shampoing purifiant coréen pour un cuir chevelu qui regraisse vite." },
+    { id: "b107", brand: "107 Beauty", name: "Scalp Purifying Microbiome Shampoo", origin: "Corée", zone: "cuir", step: "shampoing", act: ["ferments"], for: ["cuirGras", "cuirSensible", "cuirPellicules"], avoid: [], desc: "Shampoing coréen aux ferments, pensé pour l'équilibre du cuir chevelu." },
+    { id: "medicuberos", brand: "medicube", name: "Shampoing volume au romarin", origin: "Corée", zone: "cuir", step: "shampoing", act: ["romarin"], for: ["cuirGras", "fins"], avoid: ["reactifHE", "cuirSensible"], desc: "Shampoing coréen rafraîchissant au romarin, pour racines grasses et cheveux fins." },
+    { id: "kerium", brand: "La Roche-Posay", name: "Kerium DS Shampooing", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirDS", "cuirPellicules"], avoid: [], desc: "Shampoing de pharmacie pour les états pelliculaires sévères et les rougeurs. Il accompagne le suivi médical, il ne le remplace pas." },
+    { id: "kertyol", brand: "Ducray", name: "Kertyol P.S.O. Shampooing", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirPso"], avoid: [], desc: "Shampoing de pharmacie pour les cuirs chevelus à squames épaisses. Il accompagne le suivi médical du psoriasis, il ne le remplace pas." },
+    { id: "nodek", brand: "Bioderma", name: "Nodé K Shampooing", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirPso"], avoid: [], desc: "Shampoing de pharmacie pour les squames épaisses du cuir chevelu, à utiliser en complément d'un avis médical." },
+    { id: "aromaticaroot", brand: "Aromatica", name: "Rosemary Root Enhancer", origin: "Corée", zone: "cuir", step: "cuirsoin", act: ["romarin"], for: ["fins", "chute", "cuirGras", "tempes"], avoid: ["reactifHE", "cuirSensible", "cuirPso", "cuirDS", "enceinte"], desc: "Tonique coréen au romarin pour le cuir chevelu, sans rinçage. Les promesses de pousse ne sont pas prouvées." },
+    { id: "aromaticapdrn", brand: "Aromatica", name: "Rosemary PDRN Scalp Serum", origin: "Corée", zone: "cuir", step: "cuirsoin", act: ["romarin", "pdrn"], for: ["fins", "chute", "cuirSec"], avoid: ["reactifHE", "cuirSensible", "cuirPso", "cuirDS", "enceinte", "vegan"], desc: "Sérum coréen pour le cuir chevelu, au romarin et au PDRN." },
+    { id: "sbmtonic", brand: "SOME BY MI", name: "Cica Peptide Anti Hair Loss Derma Scalp Tonic", origin: "Corée", zone: "cuir", step: "cuirsoin", act: ["centella"], for: ["cuirGras", "chute", "fins", "tempes"], avoid: ["cuirPso", "cuirDS"], desc: "Tonique coréen pour le cuir chevelu, en spray. Il accompagne, il ne remplace pas un avis médical en cas de chute." },
+    { id: "lilyeveexo", brand: "lilyeve", name: "Grow Turn Exosome Brush Ampoule", origin: "Corée", zone: "cuir", step: "cuirsoin", act: [], for: ["fins", "chute", "tempes"], avoid: ["cuirSensible", "cuirPso", "cuirDS"], desc: "Ampoule coréenne avec embout massant. Les exosomes sont un actif récent, avec encore peu de recul." },
+    { id: "lilyevepdrn", brand: "lilyeve", name: "Scalp Turn Cica PDRN Brush Ampoule", origin: "Corée", zone: "cuir", step: "cuirsoin", act: ["centella", "pdrn"], for: ["cuirGras", "cuirSec"], avoid: ["cuirPso", "cuirDS", "vegan"], desc: "Ampoule coréenne à la centella et au PDRN, avec embout massant." },
+    { id: "vtpdrnhair", brand: "VT", name: "PDRN Reedle Shot Brush Hair Serum", origin: "Corée", zone: "cuir", step: "cuirsoin", act: ["pdrn"], for: ["fins", "chute", "cuirGras"], avoid: ["cuirSensible", "cuirPso", "cuirDS", "vegan"], desc: "Sérum coréen aux micro-aiguilles végétales (« reedle ») : picotements possibles, à éviter sur un cuir chevelu irrité." },
+    { id: "kaminomoto", brand: "Kaminomoto", name: "Super Strength Hair Serum Gold", origin: "Japon", zone: "cuir", step: "cuirsoin", act: [], for: ["chute", "fins", "tempes"], avoid: ["cuirSensible", "cuirPso", "cuirDS", "enceinte"], desc: "Lotion japonaise historique pour le cuir chevelu, classée « quasi-médicament » au Japon. Contient de l'alcool. Vérifie la composition et l'importateur en France." },
+    { id: "seapuri", brand: "Seapuri", name: "Scalpy Hair Serum", origin: "Corée", zone: "cuir", step: "cuirsoin", act: [], for: ["cuirSec", "cuirSensible", "fins"], avoid: [], desc: "Sérum coréen à bille pour le cuir chevelu et les longueurs." },
+    { id: "epais", brand: "epais", name: "Scalp Boosting Ampoule", origin: "Corée", zone: "cuir", step: "cuirsoin", act: [], for: ["fins", "chute"], avoid: ["cuirPso", "cuirDS"], desc: "Ampoule coréenne pour le cuir chevelu, pour cheveux fins." },
+    { id: "moevtonic", brand: "MOEV", name: "Annurcatin Hair Tonic", origin: "Corée", zone: "cuir", step: "cuirsoin", act: [], for: ["fins", "chute"], avoid: ["cuirPso", "cuirDS"], desc: "Tonique coréen à l'extrait de pomme Annurca, pour le cuir chevelu." },
+    { id: "dercosamx", brand: "Vichy", name: "Dercos Aminexil Clinical 5", origin: "France", zone: "cuir", step: "cuirsoin", act: [], for: ["chute", "fins", "tempes"], avoid: [], desc: "Soin de pharmacie pour les chutes passagères. Une chute qui dure plus de 3 mois se montre à un médecin." },
+    { id: "neoptide", brand: "Ducray", name: "Neoptide Expert", origin: "France", zone: "cuir", step: "cuirsoin", act: [], for: ["chute", "fins"], avoid: [], desc: "Sérum de pharmacie pour cheveux qui manquent de densité. Il accompagne, il ne remplace pas un bilan médical." },
+    { id: "aromaticascrub", brand: "Aromatica", name: "Rosemary Scalp Scrub", origin: "Corée", zone: "cuir", step: "gommagecuir", act: ["romarin"], for: ["cuirGras", "cuirPellicules"], avoid: ["cuirSensible", "cuirPso", "cuirDS", "reactifHE", "cuirSec"], desc: "Gommage coréen du cuir chevelu au romarin, une fois par semaine au plus." },
+    { id: "andhoneytreat", brand: "&honey", name: "Melty Moist Repair Hair Treatment 2.0", origin: "Japon", zone: "cheveux", step: "apres", act: [], for: ["secs", "colores", "boucles", "ondules", "crepus"], avoid: ["ruche"], desc: "Après-shampoing japonais au miel, très suivi au Japon." },
+    { id: "finocond", brand: "Fino", name: "Premium Touch Conditioner", origin: "Japon", zone: "cheveux", step: "apres", act: ["camelia"], for: ["secs", "colores", "raides", "ondules"], avoid: [], desc: "Après-shampoing japonais de la gamme du masque Fino." },
+    { id: "aromaticacond", brand: "Aromatica", name: "Rosemary Hair Thickening Conditioner", origin: "Corée", zone: "cheveux", step: "apres", act: ["romarin"], for: ["fins", "raides", "ondules"], avoid: ["reactifHE"], desc: "Après-shampoing coréen léger au romarin, pour cheveux fins." },
+    { id: "moevtreat", brand: "MOEV", name: "Annurcatin Treatment", origin: "Corée", zone: "cheveux", step: "apres", act: [], for: ["secs", "fins"], avoid: [], desc: "Soin capillaire coréen nourrissant, à rincer." },
+    { id: "tsubakimask", brand: "Tsubaki", name: "Premium EX Repair Mask", origin: "Japon", zone: "cheveux", step: "masque", act: ["camelia"], for: ["secs", "colores", "boucles", "crepus", "ondules"], avoid: [], desc: "Masque japonais à l'huile de camélia, pour les longueurs abîmées." },
+    { id: "elizavecca", brand: "Elizavecca", name: "CER-100 Collagen Ceramide Coating Protein Treatment", origin: "Corée", zone: "cheveux", step: "masque", act: ["ceramides"], for: ["secs", "colores", "boucles", "crepus"], avoid: [], desc: "Soin coréen très connu aux céramides et protéines, pour les cheveux abîmés." },
+    { id: "finooil", brand: "Fino", name: "Premium Touch Hair Oil", origin: "Japon", zone: "cheveux", step: "soin", act: ["camelia"], for: ["secs", "colores"], avoid: [], desc: "Huile capillaire japonaise pour les pointes." },
+    { id: "andhoneyoil", brand: "&honey", name: "Melty Moist Repair Hair Oil 3.0", origin: "Japon", zone: "cheveux", step: "soin", act: [], for: ["secs", "boucles", "ondules"], avoid: ["ruche"], desc: "Huile capillaire japonaise au miel, pour les longueurs sèches." },
+    { id: "orbishm", brand: "Orbis", name: "Essence In Hair Milk", origin: "Japon", zone: "cheveux", step: "soin", act: [], for: ["secs", "colores", "boucles", "ondules", "crepus"], avoid: [], desc: "Lait capillaire japonais sans rinçage, léger." },
+    { id: "elizaoil", brand: "Elizavecca", name: "CER-100 Hair Muscle Essence Oil", origin: "Corée", zone: "cheveux", step: "soin", act: [], for: ["secs", "colores"], avoid: [], desc: "Huile capillaire coréenne pour les pointes sèches." },
+    { id: "tocobo", brand: "TOCOBO", name: "Heat Proof Hair Mist", origin: "Corée", zone: "cheveux", step: "thermo", act: [], for: ["raides", "ondules", "boucles", "crepus", "secs", "colores"], avoid: [], desc: "Brume coréenne à vaporiser avant le sèche-cheveux ou le lisseur." },
+    // --- Douche et corps ---
+    { id: "saltstonewash", brand: "Salt & Stone", name: "Body Wash Santal & Vetiver", origin: "États-Unis", zone: "corps", step: "gel", act: ["niacinamide", "hyaluronique"], for: ["corpsOk", "corpsSec", "corpsSenteur"], avoid: ["corpsSensible", "reactifHE"], desc: "Gel douche parfumé à la niacinamide et à l'acide hyaluronique, en flacon rechargeable. Très parfumé : pas pour les peaux réactives." },
+    { id: "saltstonelotion", brand: "Salt & Stone", name: "Body Lotion Santal & Vetiver", origin: "États-Unis", zone: "corps", step: "corps", act: ["niacinamide"], for: ["corpsSec", "corpsSenteur", "corpsNourrir"], avoid: ["corpsSensible", "reactifHE"], desc: "Lait corps parfumé à la niacinamide, de la même gamme que le gel douche." },
+    { id: "summerfridays", brand: "Summer Fridays", name: "Body Butter", origin: "États-Unis", zone: "corps", step: "corps", act: [], for: ["corpsSec", "corpsSenteur", "corpsNourrir"], avoid: ["corpsSensible", "reactifHE"], desc: "Beurre corporel aux senteurs des baumes à lèvres de la marque (vanille, goyave rose, lait de pistache). Vérifie la composition sur le site de la marque." },
+    { id: "roundlabbody", brand: "Round Lab", name: "Pine Calming Cica Body Wash", origin: "Corée", zone: "corps", step: "gel", act: ["centella"], for: ["corpsSensible", "corpsOk", "corpsSec"], avoid: [], desc: "Gel douche coréen doux à la centella." },
+    { id: "curelbody", brand: "Curel (Kao)", name: "Intensive Moisture Care Body Wash", origin: "Japon", zone: "corps", step: "gel", act: ["ceramides"], for: ["corpsSec", "corpsTresSec", "corpsSensible"], avoid: [], desc: "Nettoyant corps japonais pour peaux sèches et sensibles." },
+    { id: "kosedeo", brand: "Kose", name: "Deo Carat Deodorant Body Wash", origin: "Japon", zone: "corps", step: "gel", act: [], for: ["corpsOk"], avoid: ["corpsSensible"], desc: "Gel douche japonais pensé contre les odeurs corporelles, pour le sport et l'été." },
+    { id: "pelicanback", brand: "Pelican", name: "For Back Soap", origin: "Japon", zone: "corps", step: "gel", act: [], for: ["imperfections", "corpsMarques"], avoid: ["corpsSensible"], desc: "Savon japonais pensé pour le dos sujet aux boutons. Vérifie la composition et l'importateur." },
+    { id: "sbmbody", brand: "SOME BY MI", name: "AHA BHA PHA 30 Days Miracle Acne Body Cleanser", origin: "Corée", zone: "corps", step: "gel", act: ["aha", "bha", "pha"], for: ["imperfections", "corpsMarques"], avoid: ["corpsSensible", "enceinte"], desc: "Nettoyant corps coréen aux acides exfoliants, pour le dos et le décolleté. À rincer, quelques fois par semaine pour commencer." }
   ];
 
-  var STEP_LABEL = { essence: "Essence", nuit: "Masque de nuit", masquev: "Masque visage", demaquillant: "Démaquillage", nettoyant: "Nettoyant", tonique: "Tonique", serum: "Sérum", exfoliant: "Exfoliant (1 à 2 fois par semaine)", yeux: "Contour des yeux", hydratant: "Hydratant", spf: "Protection solaire", corps: "Soin du corps", huile: "Huile", shampoing: "Shampoing", soin: "Soin cheveux sans rinçage", masque: "Masque cheveux" };
+  var STEP_LABEL = { essence: "Essence", nuit: "Masque de nuit", masquev: "Masque visage", demaquillant: "Démaquillage", nettoyant: "Nettoyant", tonique: "Tonique", serum: "Sérum", exfoliant: "Exfoliant (1 à 2 fois par semaine)", yeux: "Contour des yeux", hydratant: "Hydratant", spf: "Protection solaire", corps: "Soin du corps", huile: "Huile", shampoing: "Shampoing", soin: "Soin cheveux sans rinçage", masque: "Masque cheveux", apres: "Après-shampoing", cuirsoin: "Soin du cuir chevelu", gommagecuir: "Gommage du cuir chevelu", thermo: "Protection chaleur", gel: "Nettoyant corps" };
 
   // ---------------------------------------------------------------------------
   // TENDANCES · formulées avec recul (sources listées en bas de l'onglet)
@@ -656,6 +697,12 @@
       options: [["secs", "Sèches ou cassantes", "", "dry"], ["colores", "Colorées ou décolorées", "", "color"], ["fins", "Fines, vite plates", "", "thin"], ["ok", "En forme", "", "heart"]] },
     { id: "cuir", sec: 3, title: "Ton cuir chevelu est plutôt…", sub: "Plusieurs choix possibles.", multi: true, none: "cuirOk",
       options: [["cuirGras", "Il regraisse vite", "", "drops"], ["cuirSec", "Il tiraille, il est sec", "", "dry"], ["cuirPellicules", "Pellicules", "", "dots"], ["cuirSensible", "Sensible, il démange", "", "flame"], ["cuirOk", "Sans souci", "", "heart"]] },
+    { id: "cuirSignes", sec: 3, title: "Tu remarques aussi…", sub: "Plusieurs choix possibles. On ne pose pas de diagnostic : ça nous aide à t'orienter et à écarter ce qui pourrait irriter.", multi: true, none: "aucunSigne",
+      options: [["squamesGrasses", "Des squames grasses et des rougeurs", "Parfois aussi aux sourcils ou sur les ailes du nez", "drops"], ["plaques", "Des plaques épaisses, des squames blanches ou argentées", "Parfois au-delà de la lisière, derrière les oreilles", "wave"], ["tempes", "Des tempes ou une lisière qui se dégarnissent", "", "thin"], ["chute", "Plus de cheveux qui tombent que d'habitude", "", "dots"], ["zones", "Une zone ronde sans cheveux", "", "ask"], ["boutonsCuir", "Des boutons ou des croûtes sur le cuir chevelu", "", "flame"], ["aucunSigne", "Rien de tout ça", "", "none"]] },
+    { id: "cuirDiag", sec: 3, title: "Pour ton cuir chevelu, un ou une médecin t'a déjà parlé de…", sub: "Plusieurs choix possibles.", multi: true, none: "rienDiag",
+      options: [["dsDiag", "Dermatite séborrhéique", "", "drops"], ["psoDiag", "Psoriasis du cuir chevelu", "", "wave"], ["tractionDiag", "Alopécie de traction", "Liée aux coiffures qui tirent", "thin"], ["androDiag", "Alopécie androgénétique", "Cheveux qui s'affinent avec le temps", "thin"], ["peladeDiag", "Pelade", "", "ask"], ["rienDiag", "Rien de tout ça", "", "none"]] },
+    { id: "coiffures", sec: 3, title: "Tes coiffures, le plus souvent…", sub: "Plusieurs choix possibles.", multi: true, none: "libres",
+      options: [["tresses", "Tresses, nattes, vanilles ou locks", "", "coily"], ["perruques", "Perruques ou tissages", "", "curly"], ["defrisage", "Défrisage ou lissage chimique", "", "straight"], ["chaleur", "Lisseur, fer ou sèche-cheveux chaud", "", "flame"], ["queue", "Queue de cheval ou chignon serrés", "", "wavy"], ["libres", "Cheveux libres, sans tension", "", "heart"]] },
     { id: "lavage", sec: 3, title: "À quelle fréquence laves-tu tes cheveux ?", sub: "",
       options: [["l1", "Tous les jours ou presque", "", "shower"], ["l2", "2 à 3 fois par semaine", "", "drops"], ["l3", "1 fois par semaine", "", "drop"], ["l4", "Moins souvent", "", "sprout"]] },
 
@@ -730,12 +777,25 @@
     ["Académie américaine de dermatologie : rosacée, conseils de soin", "https://www.aad.org/public/diseases/rosacea/triggers/tips"]
   ];
 
+  // Cuir chevelu : des signes (pas un diagnostic) et ce qu'un médecin a déjà dit.
+  function hairTags(a) {
+    var t = [], sg = a.cuirSignes || [], dg = a.cuirDiag || [], co = a.coiffures || [];
+    if (sg.indexOf("squamesGrasses") > -1 || dg.indexOf("dsDiag") > -1) t.push("cuirDS");
+    if (sg.indexOf("plaques") > -1 || dg.indexOf("psoDiag") > -1) t.push("cuirPso");
+    if (sg.indexOf("tempes") > -1 || dg.indexOf("tractionDiag") > -1) t.push("tempes");
+    if (sg.indexOf("chute") > -1 || dg.indexOf("androDiag") > -1) t.push("chute");
+    if (co.indexOf("tresses") > -1 || co.indexOf("perruques") > -1 || co.indexOf("queue") > -1) t.push("tension");
+    if (co.indexOf("chaleur") > -1) t.push("chaleur");
+    if (t.indexOf("cuirDS") > -1 || t.indexOf("cuirPso") > -1) t.push("reactifHE");
+    return t;
+  }
   function tagsOf(a) {
     var t = [a.peau, a.corps, a.texture, a.cheveux, a.routine, a.lieu].filter(Boolean);
     var sp = skinProfile(a);
     if (sp) { if (sp.type === "grasse" || sp.type === "mixte") t.push("mixte"); if (sp.type === "seche") t.push("seche"); if (sp.deshy) t.push("secheresse"); if (sp.sensible) t.push("sensible"); }
     if ((a.antecedents || []).some(function (x) { return x === "eczema" || x === "rosacee" || x === "psoriasis"; })) t.push("reactifHE");
     ["concerns", "reactions", "valeurs", "corpsEnvies", "cuir", "envies"].forEach(function (k) { t = t.concat(a[k] || []); });
+    t = t.concat(hairTags(a));
     ["photoVisage", "photoCuir"].forEach(function (k) {
       var z = a[k] || {};
       Object.keys(z).forEach(function (zone) { t = t.concat(z[zone]); });
@@ -751,7 +811,7 @@
   }
 
   var TAG_LABEL_EXTRA = { pointsnoirs: "points noirs", brillance: "brillance", marques: "marques après les boutons", cernes: "cernes" };
-  var TAG_LABEL = { seche: "peau sèche", sensible: "peau sensible", mixte: "peau mixte à grasse", normale: "peau confortable", secheresse: "sécheresse", imperfections: "imperfections", rougeurs: "rougeurs", teint: "teint terne", texture: "grain de peau", taches: "taches", rides: "ridules", corpsSec: "corps sec", corpsTresSec: "corps très sec", corpsSensible: "corps sensible", corpsOk: "corps confortable", corpsMarques: "grain du corps", raides: "cheveux raides", ondules: "cheveux ondulés", boucles: "cheveux bouclés", crepus: "cheveux crépus", secs: "longueurs sèches", colores: "cheveux colorés", fins: "cheveux fins", cuirGras: "racines grasses", cuirSec: "cuir chevelu sec", cuirPellicules: "pellicules", cuirSensible: "cuir chevelu sensible", cuirOk: "cuir chevelu sans souci", deux: "routine matin et soir", soir: "routine du soir", brillance: "brillance (photo)", enceinte: "grossesse ou allaitement", reactifHE: "réaction aux huiles essentielles", acides: "réaction aux acides", ruche: "réaction aux produits de la ruche", vegan: "choix vegan" };
+  var TAG_LABEL = { seche: "peau sèche", sensible: "peau sensible", mixte: "peau mixte à grasse", normale: "peau confortable", secheresse: "sécheresse", imperfections: "imperfections", rougeurs: "rougeurs", teint: "teint terne", texture: "grain de peau", taches: "taches", rides: "ridules", corpsSec: "corps sec", corpsTresSec: "corps très sec", corpsSensible: "corps sensible", corpsOk: "corps confortable", corpsMarques: "grain du corps", raides: "cheveux raides", ondules: "cheveux ondulés", boucles: "cheveux bouclés", crepus: "cheveux crépus", secs: "longueurs sèches", colores: "cheveux colorés", fins: "cheveux fins", cuirGras: "racines grasses", cuirSec: "cuir chevelu sec", cuirPellicules: "pellicules", cuirSensible: "cuir chevelu sensible", cuirOk: "cuir chevelu sans souci", deux: "routine matin et soir", soir: "routine du soir", brillance: "brillance (photo)", enceinte: "grossesse ou allaitement", reactifHE: "réaction aux huiles essentielles", acides: "réaction aux acides", ruche: "réaction aux produits de la ruche", vegan: "choix vegan", cuirDS: "squames grasses et rougeurs", cuirPso: "plaques et squames épaisses", tempes: "tempes qui se dégarnissent", chute: "chute de cheveux", tension: "coiffures qui tirent", chaleur: "coiffage à la chaleur" };
   Object.keys(TAG_LABEL_EXTRA).forEach(function (k) { TAG_LABEL[k] = TAG_LABEL_EXTRA[k]; });
 
   // ---------------------------------------------------------------------------
@@ -895,6 +955,7 @@
     if (has(a, "cuir", "cuirPellicules")) cuir.push("Pellicules : si elles persistent ou s'accompagnent de rougeurs, un ou une dermatologue ou un pharmacien peut te conseiller.");
     if (has(a, "cuir", "cuirSensible")) cuir.push("Cuir chevelu qui démange : évite les huiles essentielles et les shampoings parfumés. Une démangeaison qui dure mérite un avis médical.");
     if (a.texture === "boucles" || a.texture === "crepus") cuir.push("Boucles et cheveux crépus : beaucoup espacent les shampoings et prévoient un moment soin dédié.");
+    scalpGuide(a).forEach(function (g) { cuir.push(g[0] + " : " + g[2]); });
     if (cuir.length) out.push(["Tes cheveux", cuir.join(" ")]);
     if (a.grossesse === "oui") out.push(["Grossesse", "Pendant la grossesse et l'allaitement, on a écarté les rétinoïdes, les exfoliants acides et les produits aux huiles essentielles. Demande conseil à ton ou ta médecin ou sage-femme avant un nouvel actif."]);
     if (a.routine === "aucune") out.push(["Ta routine", "Pas de routine pour l'instant ? Commence par deux gestes : un nettoyage doux le soir et une protection solaire le matin."]);
@@ -1308,7 +1369,7 @@
   function band(n) { return n >= 95 ? "Idéal" : n >= 70 ? "Très adapté" : n >= 50 ? "Adapté" : n >= 35 ? "Avec précautions" : "Peu adapté"; }
   function bandClass(n) { return n >= 70 ? "b-hi" : n >= 50 ? "b-mid" : "b-lo"; }
 
-  var STEP_FREQ = { essence: "Après le tonique, quelques gouttes pressées avec les paumes.", nuit: "Le soir en dernière étape, 2 à 3 fois par semaine.", masquev: "1 à 2 fois par semaine, 15 à 20 minutes.", demaquillant: "Chaque soir, sur peau sèche, puis rince.", nettoyant: "Matin et/ou soir, en massant 30 secondes.", tonique: "Après le nettoyage, matin et soir.", serum: "Quelques gouttes après le tonique.", exfoliant: "1 à 2 fois par semaine, le soir, jamais le même soir qu'un rétinoïde.", yeux: "Le soir, une petite quantité en tapotant.", hydratant: "Matin et soir, en dernière étape avant la protection solaire.", spf: "Chaque matin, en quantité généreuse, à renouveler en cas d'exposition.", corps: "Après la douche, sur peau encore humide.", huile: "Quelques gouttes sur les longueurs ou la peau.", shampoing: "Selon ta fréquence de lavage, en massant le cuir chevelu.", soin: "Sur cheveux humides, sans rincer.", masque: "1 fois par semaine, 10 à 20 minutes." };
+  var STEP_FREQ = { essence: "Après le tonique, quelques gouttes pressées avec les paumes.", nuit: "Le soir en dernière étape, 2 à 3 fois par semaine.", masquev: "1 à 2 fois par semaine, 15 à 20 minutes.", demaquillant: "Chaque soir, sur peau sèche, puis rince.", nettoyant: "Matin et/ou soir, en massant 30 secondes.", tonique: "Après le nettoyage, matin et soir.", serum: "Quelques gouttes après le tonique.", exfoliant: "1 à 2 fois par semaine, le soir, jamais le même soir qu'un rétinoïde.", yeux: "Le soir, une petite quantité en tapotant.", hydratant: "Matin et soir, en dernière étape avant la protection solaire.", spf: "Chaque matin, en quantité généreuse, à renouveler en cas d'exposition.", corps: "Après la douche, sur peau encore humide.", huile: "Quelques gouttes sur les longueurs ou la peau.", shampoing: "Selon ta fréquence de lavage, en massant le cuir chevelu.", soin: "Sur cheveux humides, sans rincer.", masque: "1 fois par semaine, 10 à 20 minutes.", apres: "À chaque lavage, sur les longueurs, puis rince.", cuirsoin: "Sur le cuir chevelu propre, raie par raie, en massant du bout des doigts. Arrête s'il pique ou démange.", gommagecuir: "1 fois par semaine au plus, avant le shampoing.", thermo: "Avant chaque passage de chaleur, sur cheveux humides ou secs.", gel: "Sous la douche, à l'eau tiède, puis rince bien." };
   // ---------------------------------------------------------------------------
   // IA · deux branchements possibles
   //  1. data-ai-endpoint="https://…" : ton serveur (Claude API) reçoit {input, json, images} et renvoie {text}
@@ -1397,10 +1458,15 @@
       if (opts.morning && p.night) bad = true;
       if (p.needs && !p.needs.some(function (x) { return tags.indexOf(x) > -1; })) bad = true;
       // Cuir chevelu : le shampoing doit répondre à ce que la cliente a coché.
-      if (zone === "cuir" && !(p.for || []).some(function (x) { return (a.cuir || []).indexOf(x) > -1; })) bad = true;
+      if (zone === "cuir" && step === "shampoing" && !(p.for || []).some(function (x) { return (a.cuir || []).concat(hairTags(a)).indexOf(x) > -1; })) bad = true;
+      // Squames épaisses ou grasses : d'abord les shampoings de pharmacie prévus pour ça.
+      var hz = hairTags(a), need = hz.indexOf("cuirPso") > -1 ? "cuirPso" : hz.indexOf("cuirDS") > -1 ? "cuirDS" : null;
+      if (zone === "cuir" && step === "shampoing" && need && (p.for || []).indexOf(need) < 0) bad = true;
+      if (zone === "cuir" && step !== "shampoing" && !(p.for || []).some(function (x) { return tags.indexOf(x) > -1; })) bad = true;
       var deep = a.carnation === "foncee" || a.carnation === "tresfoncee" || a.carnation === "mate";
       var rev = p.rev || [], revB = (deep && (rev.indexOf("nocast") > -1 || rev.indexOf("fonce") > -1) ? 8 : 0) + (rev.indexOf("afro") > -1 && (a.texture === "crepus" || a.texture === "boucles") ? 8 : 0) + (rev.length ? 2 : 0);
-      var afroAsia = p.founder || ["Corée", "Japon", "Chine", "Mali", "Ghana", "Nigeria", "Maroc", "Sénégal", "Afrique du Sud", "Kenya", "Côte d'Ivoire", "Tchad"].indexOf(p.origin) > -1 ? 4 : 0;
+      var kj = p.origin === "Corée" || p.origin === "Japon" ? 3 : 0;
+      var afroAsia = kj + ((p.founder || ["Corée", "Japon", "Chine", "Mali", "Ghana", "Nigeria", "Maroc", "Sénégal", "Afrique du Sud", "Kenya", "Côte d'Ivoire", "Tchad"].indexOf(p.origin) > -1) ? 4 : 0);
       return { p: p, bad: bad, score: fitScore(p, a).total + match * 4 + pref * 8 + orig + (p.madeIn ? 2 : 0) + revB + afroAsia };
     }).filter(function (x) { return !x.bad; }).sort(function (x, y) { return y.score - x.score; });
     return list.length ? list[0].p : null;
@@ -1443,10 +1509,20 @@
     matin.sort(byOrder); soir.sort(byOrder);
     if (concerns.indexOf("texture") > -1 || concerns.indexOf("imperfections") > -1 || mode === "complete" || (tn >= 2 && !fragile)) add(hebdo, "visage", "exfoliant");
     add(hebdo, "visage", "masquev");
-    add(hebdo, "cheveux", "masque"); if (mode !== "essentielle") { add(hebdo, "cheveux", "shampoing"); add(hebdo, "cheveux", "soin"); }
-    if ((a.cuir || []).some(function (c) { return c !== "cuirOk"; })) add(hebdo, "cuir", "shampoing");
-    add(hebdo, "corps", "corps"); if (mode === "complete") add(hebdo, "corps", "huile");
-    return { matin: matin, soir: soir, hebdo: hebdo, mode: mode, tn: tn, fragile: fragile, enceinte: a.grossesse === "oui", dermato: a.tachesNiveau === "t4",
+    // Cheveux : une routine à part entière, du cuir chevelu aux pointes.
+    var cheveux = [], ht = tagsOf(a), scalpIssue = (a.cuir || []).some(function (c) { return c !== "cuirOk"; }) || ["cuirDS", "cuirPso", "chute", "tempes"].some(function (x) { return ht.indexOf(x) > -1; });
+    var nCh = cheveux.length;
+    if (scalpIssue) add(cheveux, "cuir", "shampoing");
+    if (cheveux.length === nCh) add(cheveux, "cheveux", "shampoing");
+    add(cheveux, "cheveux", "apres");
+    if (mode !== "essentielle" || a.texture === "crepus" || a.texture === "boucles") add(cheveux, "cheveux", "soin");
+    if (ht.indexOf("chaleur") > -1) add(cheveux, "cheveux", "thermo");
+    var calm = ht.indexOf("cuirPso") > -1 || ht.indexOf("cuirDS") > -1;
+    if (!calm && (["chute", "tempes", "fins"].some(function (x) { return ht.indexOf(x) > -1; }) || has(a, "cuir", "cuirGras") || mode === "complete")) add(cheveux, "cuir", "cuirsoin");
+    if (!calm && (has(a, "cuir", "cuirGras") || has(a, "cuir", "cuirPellicules")) && mode !== "essentielle") add(cheveux, "cuir", "gommagecuir");
+    add(cheveux, "cheveux", "masque");
+    add(hebdo, "corps", "gel"); add(hebdo, "corps", "corps"); if (mode === "complete") add(hebdo, "corps", "huile");
+    return { matin: matin, soir: soir, hebdo: hebdo, cheveux: cheveux, mode: mode, tn: tn, fragile: fragile, enceinte: a.grossesse === "oui", dermato: a.tachesNiveau === "t4",
       douche: [{ step: "douche", id: "s:" + r.main }].concat(r.refills.map(function (k) { return { step: "recharge", id: "s:" + k }; })), reco: r };
   }
 
@@ -1460,7 +1536,7 @@
     nuhanciam: ["fonce"], madeforhue: ["fonce"], hyperskin: ["fonce"], eadem: ["fonce"], bgsunscreen: ["fonce", "nocast"], bolden: ["fonce", "nocast"],
     medicube: ["kr"], drjart: ["kr"], innisfree: ["kr"], sulwhasoo: ["kr"], mixsoon: ["kr"], numbuzin3: ["kr"], purito: ["kr"], heimish: ["kr"], shiseidoanessa: ["jp", "nocast"], senka: ["jp"], minon: ["jp"], kikumasamune: ["jp"],
     winona: ["cn"], proya: ["cn"], chando: ["cn"], mielle: ["afro"], musoya: ["afro"], kalia: ["afro"], tropikalbliss: ["afro"], carolinab: ["afro"], adeba: ["afro"], nilotiqa: ["afro"], afrocenchix: ["afro"], adwoa: ["afro"], miellepom: ["afro"], camillerose: ["afro"], auntjackie: ["afro"], kinkycurly: ["afro"], tgin: ["afro"], thedoux: ["afro"], sheashampoo: ["afro"],
-    drforhair: ["kr"], masilvolume: ["kr"], lador: ["kr"], moremo: ["kr"], unove: ["kr"], ichikami: ["jp"], andhoney: ["jp"], bawang: ["cn"], furterer: ["eu"], kloranemangue: ["eu"], anaphase: ["eu"], nodeds: ["eu"], cantu: ["afro"], sheamoisture: ["afro"], sheamasque: ["afro"], asiam: ["afro"], pattern: ["afro"], boucleme: ["afro"], loly: ["afro"], activilong: ["afro"]
+    drforhair: ["kr"], masilvolume: ["kr"], lador: ["kr"], moremo: ["kr"], unove: ["kr"], ichikami: ["jp"], andhoney: ["jp"], bawang: ["cn"], furterer: ["eu"], kloranemangue: ["eu"], anaphase: ["eu"], nodeds: ["eu"], kerium: ["eu"], kertyol: ["eu"], nodek: ["eu"], dercosamx: ["eu"], neoptide: ["eu"], sbmscalp: ["kr"], aromaticaroot: ["kr"], elizavecca: ["kr"], tsubakimask: ["jp"], finooil: ["jp"], finocond: ["jp"], andhoneytreat: ["jp"], andhoneyoil: ["jp"], kaminomoto: ["jp"], orbishm: ["jp"], curelbody: ["jp"], roundlabbody: ["kr"], cantu: ["afro"], sheamoisture: ["afro"], sheamasque: ["afro"], asiam: ["afro"], pattern: ["afro"], boucleme: ["afro"], loly: ["afro"], activilong: ["afro"]
   };
   EXT.forEach(function (p) {
     p.rev = REV_BY_ID[p.id] || [];
@@ -1621,7 +1697,7 @@
     if (q.type === "info") return html + this.vInfo(q);
     if (q.type === "text") {
       var dict = this.dictating;
-      html += "<div class='q'><h3>" + esc(q.title) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "") + "<div class='tfields'>" + q.fields.map(function (f) { var v = esc(a[f[0]] || ""); return "<label><span class='flab'>" + esc(f[1]) + (f[2] !== "number" ? "<button type='button' class='micsm" + (dict === f[0] ? " on" : "") + "' data-dictate='" + f[0] + "' aria-label='" + (dict === f[0] ? "Arrêter la dictée" : "Dicter") + "'>" + (dict === f[0] ? "■ Stop" : "🎤 Dicter") + "</button>" : "") + "</span>" + (f[2] === "area" ? "<textarea data-field='" + f[0] + "' rows='3' placeholder='" + esc(f[3]) + "'>" + v + "</textarea>" : "<input data-field='" + f[0] + "' type='" + f[2] + "' value='" + v + "' placeholder='" + esc(f[3]) + "'" + (f[2] === "number" ? " min='10' max='99' inputmode='numeric'" : "") + ">") + "</label>"; }).join("") + "</div></div>";
+      html += "<div class='q'><h3>" + esc(q.title) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "") + "<div class='tfields'>" + q.fields.map(function (f) { var v = esc(a[f[0]] || ""); return "<label><span class='flab'>" + esc(f[1]) + (f[2] !== "number" ? "<button type='button' class='micsm" + (dict === f[0] ? " on" : "") + "' data-dictate='" + f[0] + "' aria-label='" + (dict === f[0] ? "Arrêter la dictée" : "Dicter") + "'>" + (dict === f[0] ? "■ Stop" : "🎤 Dicter") + "</button>" : "") + "</span>" + (f[2] === "area" ? "<textarea data-field='" + f[0] + "' rows='3' placeholder='" + esc(f[3]) + "'>" + v + "</textarea>" : "<input data-field='" + f[0] + "' type='" + f[2] + "' value='" + v + "' placeholder='" + esc(f[3]) + "'" + (f[2] === "number" ? " min='10' max='99' inputmode='numeric'" : "") + ">") + "</label>"; }).join("") + "</div>" + (this.dictMsg ? "<p class='why'>" + esc(this.dictMsg) + "</p>" : "") + "<p class='note'>Astuce : le micro 🎤 du clavier de ton téléphone permet aussi de dicter, dans n'importe quel champ.</p></div>";
       return html + "<div class='cta'><button class='btn big' data-act='next'>Continuer</button></div>";
     }
     if (q.type === "photo") return html + this.vPhotoStep(q);
@@ -1743,7 +1819,7 @@
 
   // ---------- « Ta nouvelle routine est prête » ----------
   A.vReveal = function () {
-    var a = this.state.answers, R = buildRoutine(a), self = this, tabs = [["matin", "Matin", "sun"], ["soir", "Soir", "moon"], ["hebdo", "Hebdo", "sprout"], ["douche", "Douche", "shower"]];
+    var a = this.state.answers, R = buildRoutine(a), self = this, tabs = [["matin", "Matin", "sun"], ["soir", "Soir", "moon"], ["hebdo", "Hebdo", "sprout"], ["cheveux", "Cheveux", "wave"], ["douche", "Douche", "shower"]];
     var html = "<figure class='amb short'><img src='" + photo(AMB.reveal) + "' alt='' loading='lazy'></figure><div class='revealhead'><p class='kicker'>Ta nouvelle routine est prête</p><h3>" + esc(this.goalLabel()) + "</h3></div><div class='seg-tabs'>" + tabs.map(function (t) { return "<button data-rtab='" + t[0] + "' aria-pressed='" + (self.rtab === t[0]) + "'>" + icon(t[2]) + t[1] + "</button>"; }).join("") + "</div>";
     html += "<div class='modes'><span>Format</span>" + [["essentielle", "Essentielle"], ["equilibree", "Équilibrée"], ["complete", "Complète"]].map(function (m) { return "<button data-mode='" + m[0] + "' aria-pressed='" + (R.mode === m[0]) + "'>" + m[1] + "</button>"; }).join("") + "</div>";
     if (this.rtab === "matin" || this.rtab === "soir") html += "<p class='sub' style='margin:0 0 12px'>" + R[this.rtab].length + " étapes · " + ({ essentielle: "le strict nécessaire", equilibree: "les bases et un soin ciblé", complete: "la routine complète, façon K-beauty" })[R.mode] + "</p>";
@@ -1760,7 +1836,7 @@
   // Le triangle anti-taches : protéger, unifier, renouveler.
   var UNIFY = ["arbutine", "thiamidol", "kojique", "reglisse", "tranexamique", "niacinamide", "vitc", "azelaique"], RENEW = ["retinoides", "aha", "bha", "pha", "azelaique"];
   A.triangle = function (R) {
-    var all = R.matin.concat(R.soir, R.hebdo).map(function (x) { return byId(x.id); }).filter(Boolean);
+    var all = R.matin.concat(R.soir, R.hebdo, R.cheveux).map(function (x) { return byId(x.id); }).filter(Boolean);
     var find = function (acts, step) { return all.filter(function (p) { return p.zone === "visage" && (step ? p.step === step : ["serum", "exfoliant", "nuit", "tonique", "essence"].indexOf(p.step) > -1 && (p.act || []).some(function (x) { return acts.indexOf(x) > -1; })); })[0]; };
     var c = [["Protéger", "Crème solaire chaque matin", find(null, "spf")], ["Unifier", "Un actif qui freine la mélanine", find(UNIFY)], ["Renouveler", "Rétinoïde ou exfoliant doux", find(RENEW)]];
     var need = R.tn >= 2 ? 3 : 2;
@@ -2085,10 +2161,15 @@
   // « RACONTE-MOI » : la cliente parle (ou écrit) librement, l'IA remplit ses réponses
   // ---------------------------------------------------------------------------
   var SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+  // Dans une page intégrée (iframe), le navigateur peut interdire le micro : on le détecte, puis on bascule sur la dictée du clavier.
+  var MIC = { blocked: false };
+  try { var pp = document.permissionsPolicy || document.featurePolicy; if (pp && pp.allowsFeature && !pp.allowsFeature("microphone")) MIC.blocked = true; } catch (e) {}
+  var MIC_MSG = "Le micro intégré n'est pas autorisé sur cette page. Touche le champ, puis le 🎤 du clavier de ton téléphone : la dictée du clavier marche partout.";
+  function micFailed(err) { return ["not-allowed", "service-not-allowed", "audio-capture"].indexOf(err) > -1; }
   A.vVoice = function () {
     var v = this.voice = this.voice || { text: "", rec: false }, a = this.state.answers, filled = this.voiceFilled;
     var html = "<div class='q'><h3>Raconte-moi ta peau, en quelques phrases</h3><p class='sub'>Parle comme à une amie : qui tu es, ton âge, ton rythme de vie, ta routine, ce qui te gêne sur la peau, les cheveux ou le corps, ton budget. On remplit tes réponses pour toi, tu vérifies ensuite.</p></div>";
-    html += "<div class='voicebox'><button class='mic" + (v.rec ? " on" : "") + "' data-act='" + (v.rec ? "voicestop" : "voicestart") + "' aria-label='" + (v.rec ? "Arrêter" : "Parler") + "'>" + (v.rec ? "■" : "🎤") + "</button><span>" + (v.rec ? "Je t'écoute… touche pour arrêter" : SpeechRec ? "Touche le micro et parle" : "Dicte avec le micro de ton clavier, ou écris") + "</span></div>";
+    html += "<div class='voicebox'><button class='mic" + (v.rec ? " on" : "") + "' data-act='" + (v.rec ? "voicestop" : "voicestart") + "' aria-label='" + (v.rec ? "Arrêter" : "Parler") + "'>" + (v.rec ? "■" : "🎤") + "</button><span>" + (v.rec ? "Je t'écoute\u2026 touche pour arrêter" : SpeechRec && !MIC.blocked ? "Touche le micro et parle" : "Touche la zone de texte, puis le 🎤 de ton clavier") + "</span></div>";
     html += "<textarea id='voicetext' data-voicetext='1' rows='6' placeholder='Ex. : Je m'appelle Awa, j'ai 32 ans, je suis entrepreneure et maman. J'ai la peau mixte, des boutons sur le menton et des marques. Cheveux crépus secs. Je fais une routine le soir seulement. Budget 40 € par mois.'>" + esc(v.text) + "</textarea>";
     html += "<div class='ex'>" + ["Je suis…, j'ai … ans", "Mon métier, mon rythme", "Ma routine aujourd'hui", "Peau, cheveux, corps : ce qui me gêne", "Mon budget"].map(function (x) { return "<span>" + x + "</span>"; }).join("") + "</div>";
     if (this.voiceMsg) html += "<p class='why'>" + esc(this.voiceMsg) + "</p>";
@@ -2100,14 +2181,15 @@
   A.dictate = function (field) {
     var self = this, a = this.state.answers;
     if (this.dictating === field) { try { this.recog && this.recog.stop(); } catch (e) {} this.dictating = null; return this.render(); }
-    if (!SpeechRec) { this.voiceMsg = null; alertField(this, field); return; }
+    if (!SpeechRec || MIC.blocked) { this.dictMsg = MIC.blocked ? MIC_MSG : "La dictée intégrée n'existe pas sur ce navigateur : touche le champ, puis le 🎤 de ton clavier."; this.render(); alertField(this, field); return; }
     try {
       if (this.recog) try { this.recog.stop(); } catch (e) {}
       var rec = this.recog = new SpeechRec(), base = a[field] ? String(a[field]).trim() + " " : "";
       rec.lang = "fr-FR"; rec.continuous = true; rec.interimResults = true;
       rec.onresult = function (e) { var fin = "", tmp = ""; for (var i = 0; i < e.results.length; i++) { if (e.results[i].isFinal) fin += e.results[i][0].transcript; else tmp += e.results[i][0].transcript; } a[field] = (base + fin).slice(0, 600); self.save(); var el = self.root.querySelector("[data-field='" + field + "']"); if (el) el.value = a[field] + (tmp ? " " + tmp : ""); };
-      rec.onerror = rec.onend = function () { self.dictating = null; self.render(); };
-      rec.start(); this.dictating = field; this.render();
+      rec.onerror = function (e) { if (micFailed(e.error)) { MIC.blocked = true; self.dictMsg = MIC_MSG; } else if (e.error === "no-speech") self.dictMsg = "Je n'ai rien entendu : touche « Dicter » et parle près du téléphone."; self.dictating = null; self.render(); };
+      rec.onend = function () { self.dictating = null; self.render(); };
+      rec.start(); this.dictating = field; this.dictMsg = null; this.render();
     } catch (e) { alertField(this, field); }
   };
   // Sans dictée intégrée : on place le curseur dans le champ, le micro du clavier prend le relais.
@@ -2133,19 +2215,19 @@
     if (logged) return this.finishDiag();
     a.email = f.email; s.emailOk = f.ok; s.newsOk = f.news; this.save();
     var R = buildRoutine(a), names = function (l) { return l.map(function (it) { var p = byId(it.id); return p ? { etape: STEP_LABEL[it.step] || it.step, produit: p.brand + " " + p.name } : null; }).filter(Boolean); };
-    var payload = { email: f.email, prenom: a.prenom || "", consentement_routine: f.ok, consentement_offres: f.news, resultat: (skinProfile(a) ? SKIN_INFO[skinProfile(a).type].t : ""), routine: { matin: names(R.matin), soir: names(R.soir), hebdo: names(R.hebdo) }, resume: this.summaryText() };
+    var payload = { email: f.email, prenom: a.prenom || "", consentement_routine: f.ok, consentement_offres: f.news, resultat: (skinProfile(a) ? SKIN_INFO[skinProfile(a).type].t : ""), routine: { matin: names(R.matin), soir: names(R.soir), hebdo: names(R.hebdo), cheveux: names(R.cheveux) }, resume: this.summaryText() };
     if (!ep) { this.finMsg = "Démo : sur l'application en ligne, tu recevras ta routine à " + f.email + " et ton compte sera créé."; this.render(); var me = this; setTimeout(function () { me.finishDiag(); }, 1200); return; }
     this.busy = true; this.render();
     fetch(ep, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) }).then(function (r) { if (!r.ok) throw 0; self.finMsg = null; self.state.emailSent = Date.now(); self.save(); self.busy = false; self.finishDiag(); }, function () { self.busy = false; self.finMsg = "L'envoi n'a pas abouti. Ton espace est quand même prêt : réessaie plus tard depuis Mon compte."; self.render(); setTimeout(function () { self.finishDiag(); }, 1800); });
   };
   A.voiceStart = function () {
     var self = this, v = this.voice;
-    if (!SpeechRec) { this.voiceMsg = "La dictée directe n'est pas disponible ici : touche la zone de texte, puis le micro de ton clavier."; return this.render(); }
+    if (!SpeechRec || MIC.blocked) { this.voiceMsg = MIC.blocked ? MIC_MSG : "La dictée directe n'est pas disponible ici : touche la zone de texte, puis le micro de ton clavier."; this.render(); var ta0 = this.root.querySelector("#voicetext"); if (ta0) ta0.focus(); return; }
     try {
       var rec = this.recog = new SpeechRec(), base = v.text ? v.text.trim() + " " : "";
       rec.lang = "fr-FR"; rec.continuous = true; rec.interimResults = true;
       rec.onresult = function (e) { var fin = "", tmp = ""; for (var i = 0; i < e.results.length; i++) { if (e.results[i].isFinal) fin += e.results[i][0].transcript; else tmp += e.results[i][0].transcript; } v.text = (base + fin).slice(0, 3000); var ta = self.root.querySelector("#voicetext"); if (ta) ta.value = v.text + (tmp ? " " + tmp : ""); };
-      rec.onerror = function (e) { v.rec = false; self.voiceMsg = e.error === "not-allowed" ? "Le micro n'est pas autorisé : utilise le micro de ton clavier, ou écris." : "La dictée s'est arrêtée. Tu peux reprendre ou écrire."; self.render(); };
+      rec.onerror = function (e) { v.rec = false; if (micFailed(e.error)) MIC.blocked = true; self.voiceMsg = micFailed(e.error) ? MIC_MSG : e.error === "no-speech" ? "Je n'ai rien entendu : touche le micro et parle près du téléphone." : "La dictée s'est arrêtée. Tu peux reprendre ou écrire."; self.render(); };
       rec.onend = function () { v.rec = false; self.render(); };
       rec.start(); v.rec = true; this.voiceMsg = null; this.render();
     } catch (e) { this.voiceMsg = "La dictée n'est pas disponible ici : utilise le micro de ton clavier."; this.render(); }
@@ -2191,7 +2273,7 @@
     aiCall(prompt, { modelTier: "default" }, true).then(function (r) { self.applyVoice(r); if (!self.voiceFilled.length) self.applyVoice(voiceLocal(t)); }, function () { self.applyVoice(voiceLocal(t)); }).then(function () { self.busy = false; self.render(); });
   };
   A.vCapture = function (q) {
-    var self = this, c = this.cap = this.cap || { mode: "photos", files: {}, thumbs: {}, frames: [] }, s = this.state;
+    var self = this, c = this.cap = this.cap || { mode: "photos", files: {}, thumbs: {}, frames: [] }, s = this.state, cfg0 = PHOTO.visage;
     var html = "<div class='q'><h3>Montre-nous ta peau</h3><p class='sub'>Pour un espace soin vraiment adapté, à la lumière du jour (face à une fenêtre), visage nu : sans maquillage, sans filtre, cheveux attachés.</p></div>";
     html += "<div class='modes'>" + [["photos", "3 photos"], ["video", "Une vidéo"]].map(function (m) { return "<button data-capmode='" + m[0] + "' aria-pressed='" + (c.mode === m[0]) + "'>" + m[1] + "</button>"; }).join("") + "</div>";
     if (c.mode === "photos") {
@@ -2206,10 +2288,14 @@
     var ready = c.mode === "photos" ? Object.keys(c.files).length > 0 : c.frames.length > 0;
     html += "<label class='toggle'><input type='checkbox' data-keepcap='1'" + (s.keepCap ? " checked" : "") + "> Garder des miniatures de mes photos sur ce téléphone pour suivre mon évolution</label>";
     if (ready && AI.images) html += "<button class='btn big' data-act='capanalyse'" + (this.busy ? " disabled" : "") + ">" + (this.busy ? "Analyse en cours…" : "Analyser ma peau") + "</button>";
-    else if (ready) html += "<p class='note'>L'analyse automatique sera active sur l'application en ligne. Tes images restent sur ton téléphone.</p>";
-    if (s.analysis && s.analysis.resume) html += "<div class='whybox'><b>Ce que l'assistante observe</b><p>" + esc(s.analysis.resume) + "</p></div>";
+    else if (ready) {
+      // Sans IA ici : la cliente regarde ses images et coche ce qu'elle voit. Son diagnostic en tient compte.
+      var mine = (s.answers.photoVisage || {}).vu || [];
+      html += "<div class='whybox'><b>Regarde tes images : que vois-tu ?</b><p class='sub'>L'analyse automatique n'est pas disponible sur cette page. Coche ce que tu remarques, ta routine en tiendra compte.</p><div class='chipset'>" + cfg0.obs.map(function (o) { return "<button class='chip' data-capobs='" + o[0] + "' aria-pressed='" + (mine.indexOf(o[0]) > -1) + "'>" + esc(o[1]) + "</button>"; }).join("") + "</div></div>";
+    }
+    if (s.analysis && s.analysis.resume) html += "<div class='whybox'><b>Ce que l'assistante observe</b><p>" + esc(s.analysis.resume) + "</p>" + (s.analysis.points && s.analysis.points.length ? "<ul class='tipl'>" + s.analysis.points.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + (s.analysis.dermato ? "<p><b>À montrer à un ou une dermatologue :</b> " + esc(s.analysis.dermato) + "</p>" : "") + "</div>";
     html += "<p class='note'>Tes images ne sont envoyées que si tu demandes l'analyse : une seule fois, à l'assistante, puis oubliées. Observations cosmétiques, pas un examen médical.</p>";
-    return html + "<div class='cta'><button class='btn big' data-act='next'>" + (s.analysis ? "Continuer" : "Passer cette étape") + "</button></div>";
+    return html + "<div class='cta'><button class='btn big' data-act='next'>" + (s.analysis || ((s.answers.photoVisage || {}).vu || []).length ? "Continuer" : "Passer cette étape") + "</button></div>";
   };
   A.capAnalyse = function () {
     var self = this, c = this.cap, s = this.state, cfg = PHOTO.visage;
@@ -2241,7 +2327,7 @@
   // ---------------------------------------------------------------------------
   // MON ESPACE SOIN : livré automatiquement après le diagnostic
   // ---------------------------------------------------------------------------
-  var ESP_TABS = [["routine", "Ma routine"], ["planner", "Mon planner"], ["evolution", "Mon évolution"], ["semaine", "Ma semaine"], ["soleil", "Protection solaire"], ["reco", "Recommandations"], ["produits", "Mes produits"], ["diagnostic", "Diagnostic"], ["astuces", "Astuces"]];
+  var ESP_TABS = [["routine", "Ma routine"], ["planner", "Mon planner"], ["evolution", "Mon évolution"], ["semaine", "Ma semaine"], ["soleil", "Protection solaire"], ["reco", "Recommandations"], ["cheveux", "Cheveux"], ["produits", "Mes produits"], ["diagnostic", "Diagnostic"], ["astuces", "Astuces"]];
   var SLOTS4 = [["matin", "Matin"], ["jour", "SPF"], ["soir", "Soir"], ["corps", "Corps"]];
   var FEELS = ["Très bien", "Bien", "Moyen", "Difficile"], EVO_TAGS = ["Moins de boutons", "Moins de marques", "Plus confortable", "Moins de brillance", "Teint plus uniforme", "Irritation", "Nouveaux boutons", "Peau sèche"];
   A.vEspace = function () {
@@ -2249,16 +2335,16 @@
     var chips = [a.age ? a.age + " ans" : "", sp ? SKIN_INFO[sp.type].t + (sp.sensible ? ", sensible" : "") : "", (a.concerns || []).filter(function (c) { return c !== "aucune"; }).slice(0, 3).map(function (c) { return TAG_LABEL[c] || c; }).join(" · ")].filter(Boolean);
     var html = "<div class='esphead'><p class='kicker'>Ton espace soin · Diagnostic du " + new Date(s.doneAt || Date.now()).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) + "</p><h3>Le rituel " + (a.prenom ? "de " + esc(a.prenom) : "de ta peau") + "</h3><div class='chips'>" + chips.map(function (c) { return "<span>" + esc(c) + "</span>"; }).join("") + "</div></div>";
     html += "<div class='etabs' role='tablist'>" + ESP_TABS.map(function (t) { return "<button role='tab' data-etab='" + t[0] + "' aria-selected='" + (tab === t[0]) + "'>" + t[1] + "</button>"; }).join("") + "</div>";
-    return html + ({ routine: this.eRoutine, planner: this.ePlanner, evolution: this.eEvolution, semaine: this.eSemaine, soleil: this.eSoleil, reco: this.eReco, produits: this.eProduits, diagnostic: this.eDiagnostic, astuces: this.eAstuces }[tab] || this.eRoutine).call(this);
+    return html + ({ routine: this.eRoutine, planner: this.ePlanner, evolution: this.eEvolution, semaine: this.eSemaine, soleil: this.eSoleil, reco: this.eReco, cheveux: this.eCheveux, produits: this.eProduits, diagnostic: this.eDiagnostic, astuces: this.eAstuces }[tab] || this.eRoutine).call(this);
   };
   A.eRoutine = function () {
     var self = this, s = this.state, a = s.answers, R = buildRoutine(a), m = this.emode || "matin", today = iso();
     var start = s.planStart || s.doneAt || Date.now(), wk = introPlan(R), cw = planWeek(start), intro = {};
     wk.forEach(function (w, i) { w.items.forEach(function (it) { intro[it.id] = i + 1; }); });
     var cal = eveningCalendar(R, cw, wk), tonight = cal.filter(function (c) { return c.d === new Date().getDay(); })[0];
-    var steps = m === "matin" ? R.matin : m === "soir" ? R.soir : m === "corps" ? R.hebdo.filter(function (x) { var p = byId(x.id); return p && p.zone === "corps"; }).concat(R.douche.slice(0, 1)) : [];
-    var ctx = { matin: "Le matin ne change jamais : nettoyer, hydrater, protéger.", jour: "Dans la journée, la crème solaire se renouvelle : toutes les 2 heures dehors, et après le sport.", soir: "Ce soir : " + (tonight ? tonight.t : "réparation") + ".", corps: "Après la douche, sur peau encore légèrement humide." }[m];
-    var html = "<div class='modes'>" + [["matin", "Matin"], ["jour", "Journée · SPF"], ["soir", "Soir"], ["corps", "Corps"]].map(function (x) { return "<button data-emode='" + x[0] + "' aria-pressed='" + (m === x[0]) + "'>" + x[1] + "</button>"; }).join("") + "</div><p class='why'>" + esc(ctx) + "</p>";
+    var steps = m === "matin" ? R.matin : m === "soir" ? R.soir : m === "corps" ? R.hebdo.filter(function (x) { var p = byId(x.id); return p && p.zone === "corps"; }).concat(R.douche.slice(0, 1)) : m === "cheveux" ? R.cheveux : [];
+    var ctx = { matin: "Le matin ne change jamais : nettoyer, hydrater, protéger.", jour: "Dans la journée, la crème solaire se renouvelle : toutes les 2 heures dehors, et après le sport.", soir: "Ce soir : " + (tonight ? tonight.t : "réparation") + ".", corps: "Après la douche, sur peau encore légèrement humide.", cheveux: "Les jours de lavage. Le masque, une fois par semaine. Le soin du cuir chevelu, selon le produit." }[m];
+    var html = "<div class='modes'>" + [["matin", "Matin"], ["jour", "Journée · SPF"], ["soir", "Soir"], ["corps", "Corps"], ["cheveux", "Cheveux"]].map(function (x) { return "<button data-emode='" + x[0] + "' aria-pressed='" + (m === x[0]) + "'>" + x[1] + "</button>"; }).join("") + "</div><p class='why'>" + esc(ctx) + "</p>";
     var done = ((s.checks[today] || {})[m] || []);
     if (m === "jour") steps = [{ step: "retouche", id: (R.matin.filter(function (x) { return x.step === "spf"; })[0] || {}).id }, { step: "sport", id: null }];
     html += "<div class='plan'>" + steps.map(function (it, i) {
@@ -2268,7 +2354,7 @@
       return "<button class='pstep' data-check='" + m + "|" + esc(key) + "' aria-pressed='" + on + "'><span class='tick'>" + (on ? "✓" : "") + "</span><span>" + esc(label) + (p ? " · <small>" + esc(p.brand + " " + p.name) + "</small>" : "") + "</span></button>";
     }).join("") + "</div>";
     var pl = ((s.planner || {})[today] || {})[m];
-    html += "<div class='markbar'><span>Routine " + ({ matin: "du matin", jour: "SPF", soir: "du soir", corps: "corps" })[m] + " faite aujourd'hui ?</span><div class='yn'><button data-pmark='" + today + "|" + m + "|oui' aria-pressed='" + (pl === "oui") + "'>Oui</button><button data-pmark='" + today + "|" + m + "|non' aria-pressed='" + (pl === "non") + "'>Non</button></div></div>";
+    html += "<div class='markbar'><span>Routine " + ({ matin: "du matin", jour: "SPF", soir: "du soir", corps: "corps", cheveux: "cheveux" })[m] + " faite aujourd'hui ?</span><div class='yn'><button data-pmark='" + today + "|" + m + "|oui' aria-pressed='" + (pl === "oui") + "'>Oui</button><button data-pmark='" + today + "|" + m + "|non' aria-pressed='" + (pl === "non") + "'>Non</button></div></div>";
     return html + "<p class='note'>Tu commences ? Ajoute les produits un par un, dans l'ordre de l'onglet « Ma semaine ». Tant qu'un produit n'est pas encore introduit, saute son étape.</p>";
   };
   A.ePlanner = function () {
@@ -2321,7 +2407,7 @@
   };
   // « Mes produits » : ce que devient chaque produit que la cliente possède déjà.
   A.eProduits = function () {
-    var self = this, a = this.state.answers, R = buildRoutine(a), inR = R.matin.concat(R.soir, R.hebdo).map(function (x) { return x.id; }), tags = tagsOf(a);
+    var self = this, a = this.state.answers, R = buildRoutine(a), inR = R.matin.concat(R.soir, R.hebdo, R.cheveux).map(function (x) { return x.id; }), tags = tagsOf(a);
     var raw = String(a.produitsVisage || "") + "\n" + String(a.produitsCorps || ""), items = raw.split(/[\n,;]+| et /).map(function (x) { return x.trim(); }).filter(function (x) { return x.length > 2; }).slice(0, 15);
     if (!items.length) return "<p class='empty'>Indique tes produits actuels dans ton diagnostic (étape « Ta routine actuelle ») : on te dira lesquels garder, finir ou mettre en pause.</p><button class='btn' data-act='editactuels'>Ajouter mes produits</button>";
     var all = allProducts().filter(function (p) { return !p.own; });
@@ -2351,6 +2437,55 @@
     html += "<p class='sect left'>Délais réalistes</p><div class='delays'>" + [["Semaines 2 à 4", "Peau plus confortable, moins de réactions"], ["Semaines 6 à 10", "Petite poussée possible quand les actifs arrivent : elle doit se calmer"], ["Mois 3 à 4", "Grain de peau plus régulier"], ["Mois 4 à 6", "Marques qui s'estompent, avec la crème solaire chaque jour"]].map(function (x) { return "<p><b>" + x[0] + "</b><span>" + x[1] + "</span></p>"; }).join("") + "</div>";
     html += "<p class='care'>Quand arrêter un produit : brûlure, rougeur qui dure, démangeaisons, plaques ou peau qui pèle. Arrête le dernier produit ajouté et parles-en à un ou une dermatologue.</p>";
     return html + "<button class='btn ghost' data-first='diag'>Refaire mon diagnostic</button>";
+  };
+  // ---------------------------------------------------------------------------
+  // CHEVEUX ET CUIR CHEVELU : routine, orientation, compléments
+  // ---------------------------------------------------------------------------
+  // Orientation selon les signes cochés : jamais un diagnostic, toujours la bonne personne à voir.
+  function scalpGuide(a) {
+    var t = tagsOf(a), sg = a.cuirSignes || [], dg = a.cuirDiag || [], out = [];
+    if (t.indexOf("cuirDS") > -1) out.push(["Squames grasses et rougeurs", dg.indexOf("dsDiag") > -1 ? "Avec une dermatite séborrhéique, les poussées vont et viennent : le stress, le froid et la fatigue les réveillent souvent. Garde les shampoings traitants prescrits ou conseillés en pharmacie pour les poussées, et un shampoing doux entre deux." : "Ces signes sont souvent associés à la dermatite séborrhéique, une affection fréquente et bénigne qui va et vient. Seul un ou une médecin peut le confirmer. En pharmacie, il existe des shampoings « DS » et des shampoings traitants : demande conseil à ton pharmacien.", "Shampoing adapté 2 à 3 fois par semaine en le laissant poser quelques minutes, pas d'huile ni de beurre sur le cuir chevelu pendant une poussée, pas d'huiles essentielles."]);
+    if (t.indexOf("cuirPso") > -1) out.push(["Plaques et squames épaisses", dg.indexOf("psoDiag") > -1 ? "Le psoriasis du cuir chevelu se traite : garde ton suivi médical, les soins cosmétiques viennent en complément." : "Des plaques épaisses bien délimitées, avec des squames blanches ou argentées qui dépassent parfois la lisière, méritent l'avis d'un ou une médecin ou dermatologue : ces signes peuvent avoir plusieurs causes, dont le psoriasis, qui se traite.", "Ne gratte pas et n'arrache pas les squames. Évite les gommages, les huiles essentielles et l'eau très chaude. Les shampoings kératoréducteurs de pharmacie aident à décoller les squames en douceur."]);
+    if (t.indexOf("tempes") > -1 || (t.indexOf("tension") > -1 && (a.texture === "crepus" || a.texture === "boucles"))) out.push(["Tempes et lisière", "Les coiffures qui tirent longtemps au même endroit (tresses serrées, tissages, perruques collées, queues de cheval serrées, défrisages répétés) peuvent faire reculer la lisière : c'est l'alopécie de traction. Prise tôt, elle s'améliore souvent si on supprime la tension. Installée depuis longtemps, elle peut devenir définitive.", "Desserre et alterne les coiffures, évite les rajouts lourds, les élastiques serrés et la colle sur la lisière, et garde des jours « cheveux libres ». Si une tresse fait mal ou fait des petits boutons, elle est trop serrée. Si ta lisière ne repousse pas, consulte un ou une dermatologue."]);
+    if (t.indexOf("chute") > -1 || dg.indexOf("androDiag") > -1) out.push(["Chute de cheveux", "On perd normalement des cheveux chaque jour. Une chute soudaine, importante ou qui dure plus de 3 mois mérite un avis médical : un manque de fer ou de vitamine D, la thyroïde, l'après-grossesse, un choc ou un stress peuvent en être la cause." + (dg.indexOf("androDiag") > -1 ? " Pour l'alopécie androgénétique, les traitements qui ont fait leurs preuves sont des médicaments : parles-en à ton ou ta médecin." : ""), "Les soins du cuir chevelu accompagnent, ils ne remplacent pas un bilan. Masse ton cuir chevelu sans frotter, démêle doucement, des pointes vers les racines."]);
+    if (sg.indexOf("zones") > -1 || dg.indexOf("peladeDiag") > -1) out.push(["Zone sans cheveux", "Une zone ronde, lisse et sans cheveux doit être montrée rapidement à un ou une médecin.", "En attendant, évite tout produit irritant à cet endroit."]);
+    if (sg.indexOf("boutonsCuir") > -1) out.push(["Boutons ou croûtes", "Des boutons, des croûtes ou une douleur sur le cuir chevelu doivent être montrés à un ou une médecin, surtout s'ils durent ou s'étendent.", "Évite de gratter et de couvrir avec des perruques ou des bonnets serrés en attendant."]);
+    return out;
+  }
+  // Compléments alimentaires et plantes : prudence d'abord.
+  var SUPP = [
+    { g: "pharmacie", n: "Forcapil", b: "Arkopharma", d: "Gélules cheveux et ongles en pharmacie : levure de bière, vitamines B et acides aminés soufrés (selon l'étiquette)." },
+    { g: "pharmacie", n: "Phytophanère", b: "Phyto", d: "Capsules cheveux et ongles en pharmacie : vitamines, minéraux et acides gras." },
+    { g: "pharmacie", n: "Anacaps Reactiv", b: "Ducray", d: "Capsules de pharmacie présentées pour les chutes passagères." },
+    { g: "Japon", n: "Biotine ou collagène DHC", b: "DHC", d: "Marque japonaise de compléments très connue. Souvent vendue en import : vérifie l'étiquetage en français et la conformité européenne avant d'acheter." },
+    { g: "Corée", n: "Vital Beautie", b: "Amorepacific", d: "Gamme coréenne de compléments beauté. Même prudence : achète uniquement des produits étiquetés pour la France." },
+    { g: "plante", n: "Ortie, prêle, levure de bière", b: "Pharmacie, herboristerie", d: "Plantes et levure traditionnellement utilisées pour les cheveux et les ongles. Les preuves sont limitées." },
+    { g: "Afrique", n: "Moringa", b: "Afrique, Inde", d: "Feuille riche en nutriments, consommée en poudre. Intéressante dans l'alimentation, sans preuve d'effet direct sur la pousse." },
+    { g: "Afrique et Asie", n: "Fenugrec", b: "Afrique du Nord, Inde", d: "Graine utilisée traditionnellement pour les cheveux. Les études sont rares : déconseillé pendant la grossesse sans avis médical." }
+  ];
+  var SUPP_RULES = [
+    "Un complément aide surtout s'il y a un manque. Avant d'en prendre, fais un bilan sanguin avec ton ou ta médecin (fer et ferritine, vitamine D, zinc…) : un manque se corrige mieux avec le bon traitement.",
+    "La biotine peut fausser certains examens sanguins (thyroïde, cœur) : préviens le laboratoire si tu en prends.",
+    "Grossesse, allaitement, traitement en cours ou problème de thyroïde : demande l'avis de ton ou ta médecin ou pharmacien avant tout complément.",
+    "Ne cumule pas plusieurs compléments qui contiennent les mêmes vitamines.",
+    "La pousse est lente : compte au moins 3 mois avant de juger un résultat."
+  ];
+  var HAIR_SOURCES = [
+    ["DermNet : l'alopécie de traction", "https://dermnetnz.org/topics/traction-alopecia"],
+    ["British Association of Dermatologists : l'alopécie de traction", "https://www.skinhealthinfo.org.uk/condition/traction-alopecia"],
+    ["British Association of Dermatologists : la dermatite séborrhéique (PDF)", "https://www.skinhealthinfo.org.uk/wp-content/uploads/2018/11/Seborrhoeic-dermatitis-PIL-Jan-2023.pdf"]
+  ];
+  A.eCheveux = function () {
+    var self = this, a = this.state.answers, R = buildRoutine(a), wash = { l1: "presque tous les jours", l2: "2 à 3 fois par semaine", l3: "1 fois par semaine", l4: "moins d'une fois par semaine" }[a.lavage] || "selon ton rythme";
+    var html = "<p class='sub'>Ta routine " + esc(TAG_LABEL[a.texture] || "cheveux") + ", du cuir chevelu aux pointes. Lavage " + esc(wash) + ".</p>";
+    html += "<div class='list'>" + R.cheveux.map(function (it, i) { return self.routineCard(byId(it.id), it.step, i + 1); }).join("") + "</div>";
+    var g = scalpGuide(a);
+    if (g.length) html += "<p class='sect left'>Ton cuir chevelu</p><div class='advice'>" + g.map(function (x) { return "<details open><summary>" + esc(x[0]) + "</summary><p>" + esc(x[1]) + "</p><p><b>Au quotidien :</b> " + esc(x[2]) + "</p></details>"; }).join("") + "</div>";
+    html += "<p class='sect left'>Compléments alimentaires et plantes</p><div class='whybox'><b>Avant tout</b><ul class='tipl'>" + SUPP_RULES.map(function (r) { return "<li>" + esc(r) + "</li>"; }).join("") + "</ul></div>";
+    html += "<div class='acct'><ul class='tipl'>" + SUPP.filter(function (x) { return !(a.grossesse === "oui" && x.n === "Fenugrec"); }).map(function (x) { return "<li><b>" + esc(x.n) + "</b> <small>(" + esc(x.g === "pharmacie" ? "pharmacie" : x.g === "plante" ? "plantes" : x.g) + " · " + esc(x.b) + ")</small> : " + esc(x.d) + "</li>"; }).join("") + "</ul></div>";
+    html += "<p class='note'>Ces repères ne remplacent pas un avis médical. Sunsoari ne vend pas de compléments alimentaires pour l'instant.</p>";
+    html += "<details class='compare'><summary>Sources</summary><ul class='tipl'>" + HAIR_SOURCES.map(function (s) { return "<li><a href='" + s[1] + "' target='_blank' rel='noopener'>" + esc(s[0]) + "</a></li>"; }).join("") + "</ul></details>";
+    return html;
   };
   A.eAstuces = function () {
     var a = this.state.answers, tips = [["Un nouveau produit à la fois", "Une semaine d'écart entre deux nouveautés, testées 48 h sur la mâchoire."], ["Ne perce pas tes boutons", "C'est la première cause des marques, surtout sur peau mate à foncée. Pose un patch la nuit à la place."], ["Ligne des cheveux", "Le gel et les huiles sur les cheveux, pas sur la peau du front. Le soir, insiste avec le démaquillant sur cette zone."], ["Après le sport", "Rince ton visage dès que possible et retouche ta crème solaire si tu ressors."], ["Taie et téléphone", "Taie d'oreiller changée une à deux fois par semaine, écran nettoyé souvent."], ["En vacances", "Garde ta routine habituelle, aucun produit nouveau avant le départ."], ["Ta douche", "Eau tiède, douche courte. Un filtre de douche est un geste de confort : il ne traite ni l'acné ni les marques."], ["Alimentation", "Certaines études relient sucres rapides et produits laitiers à l'acné chez certaines personnes. Observe, sans régime strict. Pas de compléments sans avis médical."]];
@@ -2452,7 +2587,7 @@
   };
   A.profileText = function () {
     var a = this.state.answers, t = tagsOf(a).map(function (x) { return TAG_LABEL[x]; }).filter(Boolean);
-    var R = buildRoutine(a), names = ["matin", "soir", "hebdo", "douche"].map(function (k) { return k + " : " + R[k].map(function (it) { var p = byId(it.id); return p ? p.brand + " " + p.name : ""; }).join(", "); }).join(" | ");
+    var R = buildRoutine(a), names = ["matin", "soir", "hebdo", "cheveux", "douche"].map(function (k) { return k + " : " + R[k].map(function (it) { var p = byId(it.id); return p ? p.brand + " " + p.name : ""; }).join(", "); }).join(" | ");
     var cat = allProducts().map(function (p) { return p.brand + " " + p.name + " [" + (p.act || []).map(function (x) { return ING[x] ? ING[x].n : x; }).join(", ") + "]" + (p.own ? " (vendu par Sunsoari)" : ""); }).join("; ");
     var sp = skinProfile(a);
     return "Profil de la cliente : " + (a.genre ? "genre " + a.genre + ", " : "") + (a.age ? a.age + " ans, " : "") + (a.rythme ? "rythme : " + a.rythme + ", " : "") + (a.budgetSoin ? "budget mensuel " + a.budgetSoin + ", " : "") + (t.join(", ") || "non renseigné") + (sp ? ". Test de peau : " + SKIN_INFO[sp.type].t + (sp.deshy ? ", déshydratée" : "") + (sp.sensible ? ", sensible" : "") + ". Saisons : " + (a.saisons || []).join(", ") + ". Quotidien : " + (a.modeVie || []).join(", ") + ". Antécédents : " + (a.antecedents || []).join(", ") : ". Type de peau inconnu : aide-la à le découvrir") + ". Eau : " + (a.eau || "?") + ". Sa routine : " + names + ". Catalogue : " + cat + ".";
@@ -2556,7 +2691,7 @@
       return;
     }
     if (d.act === "prev") { this.step = Math.max(0, this.step - 1); this.zone = null; this.aiMsg = null; return this.render(); }
-    if (d.act === "next") {
+    if (d.act === "next") { this.dictMsg = null;
       if (this.step < this.visibleQuestions().length - 1) { this.step++; this.zone = null; this.aiMsg = null; }
       else { s.done = true; s.doneAt = Date.now(); this.saveDay0(); this.save(); this.view = "espace"; this.etab = "routine"; this.emit("result", { answers: s.answers }); }
       return this.render();
@@ -2572,7 +2707,7 @@
     }
     if (d.sf) { this.skinFilter = d.sf; return this.render(); }
     if (d.dellog) { s.skinLog.splice(+d.dellog, 1); this.save(); return this.render(); }
-    if (d.act === "addroutine") { var R = buildRoutine(s.answers); ["matin", "soir", "hebdo"].forEach(function (k) { R[k].forEach(function (it) { if (s.shelf.indexOf(it.id) < 0) s.shelf.push(it.id); }); }); this.save(); t.textContent = "Ajoutée ✓"; return; }
+    if (d.act === "addroutine") { var R = buildRoutine(s.answers); ["matin", "soir", "hebdo", "cheveux"].forEach(function (k) { R[k].forEach(function (it) { if (s.shelf.indexOf(it.id) < 0) s.shelf.push(it.id); }); }); this.save(); t.textContent = "Ajoutée ✓"; return; }
     if (d.act === "planreset") { s.planStart = Date.now(); this.save(); return this.render(); }
     if (d.act === "restart") { s.answers = {}; s.done = false; this.save(); this.step = 0; this.view = "diag"; return this.render(); }
     if (d.act === "scanpaste") { this.scan = { mode: "paste" }; return this.render(); }
@@ -2588,6 +2723,7 @@
     if (d.act === "voicego") { if (this.recog) try { this.recog.stop(); } catch (e) {} var qs3 = this.visibleQuestions(), a3 = s.answers, k3 = 1; for (; k3 < qs3.length; k3++) { var q3 = qs3[k3]; if (q3.type || !(q3.multi ? (a3[q3.id] || []).length : a3[q3.id])) break; } this.step = this.voiceFilled && this.voiceFilled.length ? k3 : 1; return this.render(); }
     if (d.capmode) { this.cap.mode = d.capmode; this.capMsg = null; return this.render(); }
     if (d.act === "capanalyse") return this.capAnalyse();
+    if (d.capobs) { var pv = s.answers.photoVisage = s.answers.photoVisage || {}, vu = pv.vu = pv.vu || [], ix = vu.indexOf(d.capobs); if (ix > -1) vu.splice(ix, 1); else vu.push(d.capobs); this.save(); return this.render(); }
     if (d.etab) { this.etab = d.etab; return this.render(); }
     if (d.emode) { this.emode = d.emode; return this.render(); }
     if (d.pmark) { var pp = d.pmark.split("|"), pl = s.planner = s.planner || {}, dy = pl[pp[0]] = pl[pp[0]] || {}; dy[pp[1]] = dy[pp[1]] === pp[2] ? undefined : pp[2]; this.save(); return this.render(); }

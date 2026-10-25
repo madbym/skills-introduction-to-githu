@@ -100,6 +100,18 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - à faire valider par un ou une juriste avant le lancement ;
 - toujours rappeler : « Conseil cosmétique personnalisé, il ne remplace pas l'avis d'un dermatologue ».
 
+## 5 quinquies. Photos
+- Utiliser les photos d'ambiance Sunsoari du dossier `sunsoari-rituel/img/` : lumière naturelle, mains, eau, fleurs, matières.
+- Où les placer :
+  - bandeau de l'accueil Aujourd'hui ;
+  - haut de la routine révélée ;
+  - collection SHIFT ;
+  - écran Sunsoari+ ;
+  - couvertures de stories ;
+  - vignette de chaque produit Sunsoari (correspondance dans `PROD_PHOTO`).
+- Produits d'autres marques : jamais de photo officielle sans autorisation. Afficher une vignette douce avec les initiales de la marque.
+- Pas de photo de cliente, de visage retouché ni d'avant/après.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

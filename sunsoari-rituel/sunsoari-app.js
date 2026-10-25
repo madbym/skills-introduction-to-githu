@@ -14,6 +14,13 @@
   // Pour mettre à jour : changer prix, images ou variantes ici.
   // ---------------------------------------------------------------------------
   var IMG = "https://cdn.shopify.com/s/files/1/0932/8191/1117/files/";
+  // Photos d'ambiance Sunsoari (dossier img/ à côté du script). data-img-base="https://…/" pour un autre emplacement.
+  var SCRIPT_BASE = ((document.currentScript && document.currentScript.src) || "").replace(/[^\/]*$/, "");
+  var IMG_BASE = SCRIPT_BASE + "img/";
+  function photo(name) { return IMG_BASE + name + ".webp"; }
+  var AMB = { today: "pomme-de-douche-jet-fin-ambiance-douche", reveal: "pomme-de-douche-ambiance-douche-mains-fleur-de-prunier", shift: "shift-flexibles-couleurs-ambiance-salle-de-bain", plus: "shift-capsule-blossom-ambiance-fleurs-2" };
+  // Photo de chaque produit Sunsoari ; sinon, le visuel de la fiche Shopify.
+  var PROD_PHOTO = { premierHome: "premier-rituel-ocean-mains-insertion-2", starterHome: "filtre-thermal-ocean-ambiance", coffretHome: "filtre-thermal-hinoki-ambiance", shiftAroma: "shift-coffret-paysage", shiftSoin: "shift-pommeau-changement-capsule-mains", douchette: "pomme-de-douche-ambiance-douche-mains-fleur-de-prunier", filtreThermal: "filtre-thermal-fleur-de-prunier-ambiance-fleurs", filtreSans: "filtre-thermal-sans-senteur-ambiance-pierre", shiftCaps: "shift-capsule-decouverte-coffret-ambiance-fleurs", capsule: "filtre-thermal-foret-de-pin-ambiance-branche" };
   var SCENTS = ["hinoki", "ocean", "pin", "fleur", "sans"];
   var SCENT_LABEL = { hinoki: "Hinoki", ocean: "Océan", pin: "Forêt de Pin", fleur: "Fleur de Prunier", sans: "Sans senteur", patchouli: "Patchouli & Rose", fruite: "Fruité", decouverte: "Découverte (6 senteurs)" };
   var SHIFT_ONLY = ["patchouli", "fruite", "decouverte"];
@@ -803,6 +810,11 @@
     "a.btn.big{display:flex}",
     ".modes{display:flex;align-items:center;gap:6px;margin:0 0 8px;flex-wrap:wrap}.modes span{font-size:12px;color:var(--muted);margin-right:2px}.modes button{font:inherit;font-size:13px;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;cursor:pointer;color:var(--ink)}.modes button[aria-pressed=true]{border-color:var(--water);background:var(--water-soft);color:var(--water);font-weight:600}",
     ".sect.left{text-align:left;margin-left:2px}",
+    ".amb{position:relative;margin:0 0 14px;border-radius:24px;overflow:hidden;height:180px;background:var(--sand)}.amb.short{height:140px}.amb.low img{object-position:center 85%}.amb img{width:100%;height:100%;object-fit:cover;display:block}",
+    ".amb figcaption{position:absolute;inset:auto 0 0 0;padding:28px 16px 14px;background:linear-gradient(180deg,rgba(20,24,28,0),rgba(20,24,28,.55));color:#fff;display:flex;flex-direction:column;gap:2px}.amb figcaption small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.9}.amb figcaption b{font-weight:500;font-size:16px}",
+    ".pthumb,.ptile{width:64px;height:64px;border-radius:16px;object-fit:cover;flex:none;background:var(--sand)}.ptile{display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:22px;color:var(--water);background:linear-gradient(150deg,var(--water-soft),var(--sand-soft))}",
+    ".shiftph{width:100%;height:170px;object-fit:cover;border-radius:18px;display:block;margin-bottom:10px}",
+    ".stories .storycard.ph{background-size:cover;background-position:center}",
     ".stories .storycard{flex:0 0 150px;height:190px;border:0;border-radius:20px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;text-align:left;cursor:pointer;font:inherit;color:var(--ink);scroll-snap-align:start}",
     ".storycard b{font-family:var(--display);font-weight:400;font-size:21px;line-height:1.1}",
     ".storycard .tag{background:rgba(255,255,255,.7);font-size:10px}",
@@ -833,7 +845,7 @@
   // STORIES (format « stories », comme Lóvi) · k : titre | mythe | verite | astuce | texte | etape
   // ---------------------------------------------------------------------------
   var STORIES = [
-    { rub: "Sunsoari", title: "Sunsoari, c'est quoi ?", tone: "sun", slides: [
+    { rub: "Sunsoari", title: "Sunsoari, c'est quoi ?", tone: "sun", img: "filtre-thermal-sans-senteur-ambiance-reflets-eau", slides: [
       { k: "titre", t: "Bienvenue dans ta maison de soin", d: "Sunsoari est née de deux sœurs, Fanta et Seyo, et d'une conviction : prendre soin de soi commence dès la douche." },
       { k: "texte", t: "Sun", d: "Le soleil : la lumière, la chaleur, la joie." },
       { k: "texte", t: "Sunsu · 순수", d: "Pour nous, ce mot coréen évoque la pureté et ce qui est authentique." },
@@ -841,7 +853,7 @@
       { k: "texte", t: "Soari et Seyo", d: "Le prénom du fils de Fanta, et celui de sa sœur, qui porte le prénom de leur grand-mère et évoque la joie." },
       { k: "astuce", t: "Ici, on te promet de l'honnêteté", d: "Pas de promesse miracle : des produits choisis avec exigence, et des conseils qui disent la vérité." }
     ] },
-    { rub: "Mythe ou vérité", title: "Filtre de douche : ce qu'il fait vraiment", tone: "water", slides: [
+    { rub: "Mythe ou vérité", title: "Filtre de douche : ce qu'il fait vraiment", tone: "water", img: "shift-pommeau-changement-capsule-mains", slides: [
       { k: "titre", t: "Filtre de douche : ce qu'il fait vraiment", d: "On démêle le vrai du faux, sans marketing." },
       { k: "mythe", t: "« Un filtre de douche adoucit l'eau »", d: "" },
       { k: "verite", t: "La plupart ne retirent pas le calcaire de façon significative.", d: "Un adoucisseur est un autre appareil. Les filtres de douche sont surtout conçus pour réduire une partie du chlore et des sédiments, selon leurs fabricants." },
@@ -1094,7 +1106,7 @@
 
   // Tous les produits sous une même forme : Sunsoari (douche) + autres marques.
   function allProducts() {
-    var own = Object.keys(P).map(function (k) { var p = P[k]; return { id: "s:" + k, key: k, own: true, brand: p.title.split(" · ")[0], name: p.title.split(" · ")[1] || p.title, zone: "douche", step: "douche", act: p.act || [], flags: (p.act || []).indexOf("teatree") > -1 ? ["allergenes"] : [], for: [], price: p.price, desc: p.pitch, img: p.img }; });
+    var own = Object.keys(P).map(function (k) { var p = P[k]; return { id: "s:" + k, key: k, own: true, brand: p.title.split(" · ")[0], name: p.title.split(" · ")[1] || p.title, zone: "douche", step: "douche", act: p.act || [], flags: (p.act || []).indexOf("teatree") > -1 ? ["allergenes"] : [], for: [], price: p.price, desc: p.pitch, img: PROD_PHOTO[k] ? photo(PROD_PHOTO[k]) : p.img }; });
     return own.concat(EXT.map(function (p) { return { id: "e:" + p.id, brand: p.brand, name: p.name, zone: p.zone, step: p.step, act: p.act, flags: p.act.indexOf("teatree") > -1 ? ["allergenes"] : [], for: p.for, avoid: p.avoid, origin: p.origin, madeIn: p.madeIn, trend: p.trend, desc: p.desc, url: p.url, affiliate: p.affiliate }; }));
   }
   function byId(id) { return allProducts().filter(function (p) { return p.id === id; })[0]; }
@@ -1222,6 +1234,7 @@
     this.host = host;
     this.shop = (host.getAttribute("data-shop") || "https://sunsoari.fr").replace(/\/$/, "");
     this.contact = host.getAttribute("data-contact") || this.shop + "/pages/contact";
+    if (host.getAttribute("data-img-base")) IMG_BASE = host.getAttribute("data-img-base").replace(/\/?$/, "/");
     this.root = host.attachShadow ? host.attachShadow({ mode: "open" }) : host;
     var s = this.state = load();
     ["answers", "refills", "journal", "checks", "steps"].forEach(function (k) { if (!s[k]) s[k] = {}; });
@@ -1351,7 +1364,7 @@
   // ---------- « Ta nouvelle routine est prête » ----------
   A.vReveal = function () {
     var a = this.state.answers, R = buildRoutine(a), self = this, tabs = [["matin", "Matin", "sun"], ["soir", "Soir", "moon"], ["hebdo", "Hebdo", "sprout"], ["douche", "Douche", "shower"]];
-    var html = "<div class='revealhead'><p class='kicker'>Ta nouvelle routine est prête</p><h3>" + esc(this.goalLabel()) + "</h3></div><div class='seg-tabs'>" + tabs.map(function (t) { return "<button data-rtab='" + t[0] + "' aria-pressed='" + (self.rtab === t[0]) + "'>" + icon(t[2]) + t[1] + "</button>"; }).join("") + "</div>";
+    var html = "<figure class='amb short'><img src='" + photo(AMB.reveal) + "' alt='' loading='lazy'></figure><div class='revealhead'><p class='kicker'>Ta nouvelle routine est prête</p><h3>" + esc(this.goalLabel()) + "</h3></div><div class='seg-tabs'>" + tabs.map(function (t) { return "<button data-rtab='" + t[0] + "' aria-pressed='" + (self.rtab === t[0]) + "'>" + icon(t[2]) + t[1] + "</button>"; }).join("") + "</div>";
     html += "<div class='modes'><span>Format</span>" + [["essentielle", "Essentielle"], ["equilibree", "Équilibrée"], ["complete", "Complète"]].map(function (m) { return "<button data-mode='" + m[0] + "' aria-pressed='" + (R.mode === m[0]) + "'>" + m[1] + "</button>"; }).join("") + "</div>";
     if (this.rtab === "matin" || this.rtab === "soir") html += "<p class='sub' style='margin:0 0 12px'>" + R[this.rtab].length + " étapes · " + ({ essentielle: "le strict nécessaire", equilibree: "les bases et un soin ciblé", complete: "la routine complète, façon K-beauty" })[R.mode] + "</p>";
     var list = R[this.rtab];
@@ -1365,7 +1378,7 @@
   // Toute la gamme SHIFT, avec coloris et senteurs.
   A.shiftCollection = function (r) {
     var self = this, keys = ["shiftAroma", "shiftSoin", "shiftCaps", "pureWater"].filter(function (k) { return r.main !== k && r.refills.indexOf(k) < 0; });
-    var html = "<div class='shiftbox'><span class='tag'>Collection SHIFT</span><h4>Le rituel douche coréen SHIFT</h4><p>Filtration Pure Water + capsules soin & aromathérapie à la vitamine C, aloe vera, coco, karité et tréhalose." + (r.shiftOk ? "" : " Ses capsules contiennent des huiles essentielles : pour ton profil, on te conseille plutôt Onsha, mais voici la gamme si tu veux la découvrir.") + "</p>";
+    var html = "<div class='shiftbox'><img class='shiftph' src='" + photo(AMB.shift) + "' alt='Pommeaux SHIFT dans une salle de bain' loading='lazy'><span class='tag'>Collection SHIFT</span><h4>Le rituel douche coréen SHIFT</h4><p>Filtration Pure Water + capsules soin & aromathérapie à la vitamine C, aloe vera, coco, karité et tréhalose." + (r.shiftOk ? "" : " Ses capsules contiennent des huiles essentielles : pour ton profil, on te conseille plutôt Onsha, mais voici la gamme si tu veux la découvrir.") + "</p>";
     html += keys.map(function (k, i) { return self.routineCard(byId("s:" + k), k === "pureWater" || k === "shiftCaps" ? "recharge" : "douche", "S" + (i + 1), r.scent); }).join("");
     return html + "</div>";
   };
@@ -1374,7 +1387,7 @@
   A.routineCard = function (p, step, n, scent) {
     if (!p) return "";
     var a = this.state.answers, s = fitScore(p, a), self = this, alts = p.own ? [] : alternatives(p, a, 4);
-    var html = "<article class='rcard'><div class='rtop'><span class='num'>" + n + "</span><div class='rinfo'><small>" + esc(STEP_LABEL[step] || (step === "douche" ? "Ton rituel douche" : step === "recharge" ? "Recharge" : step)) + "</small><b>" + esc(p.name) + "</b><span>" + esc(p.brand) + (p.price ? " · " + euro(p.price) : "") + (p.origin ? " · " + esc(p.origin) : "") + "</span><div class='badges'>" + this.scoreBadge(s) + (p.madeIn ? "<span class='made'>Fabriqué " + esc(p.madeIn) + "</span>" : "") + (p.trend ? "<span class='made trend'>Tendance 2026</span>" : "") + "</div></div><button class='heart' data-wish='" + p.id + "' aria-pressed='" + (this.state.wish.indexOf(p.id) > -1) + "' aria-label='Ajouter à mes souhaits'>♡</button></div>";
+    var html = "<article class='rcard'><div class='rtop'><span class='num'>" + n + "</span>" + (p.img ? "<img class='pthumb' src='" + esc(p.img) + "' alt='" + esc(p.name) + "' loading='lazy'>" : "<span class='ptile' aria-hidden='true'>" + esc(p.brand.replace(/[^A-Za-zÀ-ÿ ]/g, "").split(" ").filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join("").toUpperCase()) + "</span>") + "<div class='rinfo'><small>" + esc(STEP_LABEL[step] || (step === "douche" ? "Ton rituel douche" : step === "recharge" ? "Recharge" : step)) + "</small><b>" + esc(p.name) + "</b><span>" + esc(p.brand) + (p.price ? " · " + euro(p.price) : "") + (p.origin ? " · " + esc(p.origin) : "") + "</span><div class='badges'>" + this.scoreBadge(s) + (p.madeIn ? "<span class='made'>Fabriqué " + esc(p.madeIn) + "</span>" : "") + (p.trend ? "<span class='made trend'>Tendance 2026</span>" : "") + "</div></div><button class='heart' data-wish='" + p.id + "' aria-pressed='" + (this.state.wish.indexOf(p.id) > -1) + "' aria-label='Ajouter à mes souhaits'>♡</button></div>";
     html += "<div class='whybox'><b>Pourquoi on l'a choisi</b><p>" + esc(this.whyFor(p, s)) + "</p>" + this.actChips(p.act) + "<div class='qchips'>" + this.questionsFor(p).map(function (q) { return "<button class='qchip' data-ask='" + esc(q) + "' data-pid='" + p.id + "'>" + esc(q) + "</button>"; }).join("") + "</div></div>";
     if (p.own && P[p.key].colors) html += "<p class='alt-t'>Choisis ton coloris</p><div class='chipset'>" + P[p.key].colors.map(function (c) { return "<a class='chip' href='" + self.shop + "/cart/" + c[1] + ":1?utm_source=mon-rituel&utm_medium=app' target='_top' data-add='" + p.id + "'>" + c[0] + "</a>"; }).join("") + "</div>";
     if (p.own && P[p.key].scents) html += "<p class='alt-t'>Choisis ta senteur</p><div class='chipset'>" + P[p.key].scents.map(function (c) { return "<a class='chip' href='" + self.shop + "/cart/" + P[p.key].variants[c[0]] + ":1?utm_source=mon-rituel&utm_medium=app' target='_top' data-add='" + p.id + "' aria-pressed='" + (c[0] === scent) + "'>" + c[1] + "</a>"; }).join("") + "</div>";
@@ -1407,7 +1420,8 @@
   // ---------- Aujourd'hui ----------
   A.vToday = function () {
     var s = this.state, a = s.answers, today = iso(), self = this, R = buildRoutine(a);
-    var html = "<div class='todayhead'><h3>Aujourd'hui</h3><button class='pluspill' data-view='plus'>Sunsoari+</button></div><p class='goal' style='display:inline-block;margin:0 0 12px'>" + esc(this.goalLabel()) + "</p>";
+    var html = "<div class='todayhead'><h3>Aujourd'hui</h3><button class='pluspill' data-view='plus'>Sunsoari+</button></div>";
+    html += "<figure class='amb low'><img src='" + photo(AMB.today) + "' alt='' loading='lazy'><figcaption><small>Ton moment à toi</small><b>" + esc(this.goalLabel()) + "</b></figcaption></figure>";
     html += "<div class='week'>";
     for (var i = -3; i <= 3; i++) {
       var d = addDays(today, i), k = iso(d), c = s.checks[k] || {}, done = (c.matin || []).length + (c.soir || []).length > 0;
@@ -1463,7 +1477,7 @@
   A.vPlus = function () {
     var self = this, plan = this.plan || "annuel", pay = this.pay || "applepay";
     if (pay === "klarna" && plan === "mensuel") pay = "applepay";
-    var html = "<div class='plushead'><span class='tag'>Sunsoari+</span><h3>Va plus loin dans ton rituel</h3><p>7 jours d'essai gratuit, puis " + PLANS[plan].price + " " + PLANS[plan].per + ".</p></div>";
+    var html = "<figure class='amb short'><img src='" + photo(AMB.plus) + "' alt='' loading='lazy'></figure><div class='plushead'><span class='tag'>Sunsoari+</span><h3>Va plus loin dans ton rituel</h3><p>7 jours d'essai gratuit, puis " + PLANS[plan].price + " " + PLANS[plan].per + ".</p></div>";
     html += "<ul class='perks'>" + ["Scans de produits illimités", "Analyse photo du visage et du cuir chevelu", "Suivi de ton évolution dans le temps", "Assistante beauté illimitée", "Nouveau diagnostic à chaque saison", "Alertes météo peau : UV, humidité, pollution", "Guides et stories premium", "−10 % sur sunsoari.fr, SHIFT compris"].map(function (x) { return "<li>" + icon("heart") + "<span>" + esc(x) + "</span></li>"; }).join("") + "</ul>";
     html += "<div class='plans'>" + Object.keys(PLANS).map(function (k) { var P2 = PLANS[k]; return "<button class='plan2' data-plan='" + k + "' aria-pressed='" + (plan === k) + "'>" + (k === "annuel" ? "<span class='best'>Meilleure offre</span>" : "") + "<b>" + P2.label + "</b><span class='pr'>" + P2.price + " <small>" + P2.per + "</small></span><small>" + P2.note + "</small></button>"; }).join("") + "</div>";
     html += "<p class='alt-t'>Moyen de paiement</p><div class='paylist'>" + PAY.map(function (m) { var off = m[0] === "klarna" && plan === "mensuel"; return "<button class='pay' data-pay='" + m[0] + "' aria-pressed='" + (pay === m[0]) + "'" + (off ? " disabled" : "") + "><b>" + m[1] + "</b><small>" + esc(off ? "Disponible avec l'abonnement annuel" : m[2]) + "</small><span class='rad'></span></button>"; }).join("") + "</div>";
@@ -1610,7 +1624,7 @@
     if (this.rsTab === "tendances") return html + this.vTrends();
     if (this.guide) return html + this.vGuide();
     ["Sunsoari", "Mythe ou vérité", "Académie"].forEach(function (rub) {
-      html += "<p class='sect left'>" + esc(rub) + "</p><div class='carousel stories'>" + STORIES.map(function (st, i) { return st.rub === rub ? "<button class='storycard " + st.tone + "' data-story='" + i + "'><span class='tag'>" + (rub === "Mythe ou vérité" ? "Mythe ou vérité" : rub === "Académie" ? "Académie" : "Sunsoari") + " · " + st.slides.length + " écrans</span><b>" + esc(st.title) + "</b></button>" : ""; }).join("") + "</div>";
+      html += "<p class='sect left'>" + esc(rub) + "</p><div class='carousel stories'>" + STORIES.map(function (st, i) { return st.rub === rub ? "<button class='storycard " + st.tone + (st.img ? " ph" : "") + "' data-story='" + i + "'" + (st.img ? " style=\"background-image:linear-gradient(180deg,rgba(251,248,243,0) 35%,rgba(251,248,243,.92) 78%),url('" + photo(st.img) + "')\"" : "") + "><span class='tag'>" + (rub === "Mythe ou vérité" ? "Mythe ou vérité" : rub === "Académie" ? "Académie" : "Sunsoari") + " · " + st.slides.length + " écrans</span><b>" + esc(st.title) + "</b></button>" : ""; }).join("") + "</div>";
     });
     html += "<p class='sect left'>Tutoriels</p><div class='carousel stories'>" + Object.keys(TUTOS).map(function (k) { return "<button class='storycard water' data-tuto='" + k + "'><span class='tag'>Tutoriel · " + TUTOS[k].slides.length + " étapes</span><b>" + esc(TUTOS[k].title) + "</b></button>"; }).join("") + "</div><p class='sect left'>Guides</p>";
     html += "<div class='guides'>" + GUIDES.map(function (g, i) { return "<button class='guide' data-guide='" + i + "'><span class='tag'>" + esc(g.tag) + "</span><b>" + esc(g.title) + "</b><small>" + esc(g.sub) + "</small></button>"; }).join("") + "</div>";

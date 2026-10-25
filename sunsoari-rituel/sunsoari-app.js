@@ -429,6 +429,43 @@
     { id: "ggagame", brand: "Geek & Gorgeous", name: "A-Game 5", origin: "Allemagne", zone: "visage", step: "serum", act: ["retinoides"], for: ["taches", "texture", "rides"], avoid: ["enceinte", "sensible"], night: true, desc: "Rétinal à petit prix, le soir. Commence 1 à 2 fois par semaine." },
     { id: "toretinal", brand: "The Ordinary", name: "Retinal 0.2% Emulsion", origin: "Canada", zone: "visage", step: "serum", act: ["retinoides"], for: ["taches", "texture", "rides"], avoid: ["enceinte", "sensible", "rougeurs"], night: true, desc: "Rétinal plus concentré, pour les peaux déjà habituées aux rétinoïdes. Le soir, 1 fois par semaine au début." },
     { id: "acmdepiwhite", brand: "Laboratoire ACM", name: "Dépiwhite Crème Zones Sensibles", origin: "France", zone: "corps", step: "corps", act: ["niacinamide", "reglisse", "aha"], for: ["corpsMarques"], needs: ["corpsMarques"], avoid: ["acides"], desc: "Crème de pharmacie pour les taches des aisselles, du maillot, des genoux et des coudes." },
+    // Bibliothèque élargie : classiques coréens, japonais, européens, peaux foncées et cheveux texturés
+    { id: "anuaoil", brand: "Anua", name: "Heartleaf Pore Control Cleansing Oil", origin: "Corée", zone: "visage", step: "demaquillant", act: ["heartleaf"], for: ["mixte", "imperfections", "deux", "soir"], avoid: [], desc: "Huile démaquillante légère qui se rince sans film gras." },
+    { id: "banila", brand: "Banila Co", name: "Clean It Zero Cleansing Balm", origin: "Corée", zone: "visage", step: "demaquillant", act: [], for: ["normale", "seche", "deux", "soir"], avoid: ["reactifHE"], desc: "Baume fondant qui se transforme en huile, pour bien retirer maquillage et crème solaire." },
+    { id: "softymo", brand: "Kosé", name: "Softymo Speedy Cleansing Oil", origin: "Japon", zone: "visage", step: "demaquillant", act: [], for: ["normale", "mixte", "deux", "soir"], avoid: [], desc: "Huile démaquillante japonaise, efficace et petit prix." },
+    { id: "sensibio", brand: "Bioderma", name: "Sensibio H2O", origin: "France", zone: "visage", step: "demaquillant", act: [], for: ["sensible", "rougeurs", "deux", "soir"], avoid: [], desc: "Eau micellaire très douce, pensée pour les peaux sensibles." },
+    { id: "ceravehydra", brand: "CeraVe", name: "Crème Lavante Hydratante", origin: "États-Unis", zone: "visage", step: "nettoyant", act: ["ceramides", "hyaluronique"], for: ["seche", "sensible", "normale", "secheresse"], avoid: [], desc: "Nettoyant crème non moussant, aux céramides, qui ne tiraille pas." },
+    { id: "ceravefoam", brand: "CeraVe", name: "Gel Moussant", origin: "États-Unis", zone: "visage", step: "nettoyant", act: ["ceramides", "niacinamide"], for: ["mixte", "imperfections"], avoid: [], desc: "Gel moussant pour peau mixte à grasse, sans dessécher." },
+    { id: "toleriane", brand: "La Roche-Posay", name: "Toleriane Gel Nettoyant", origin: "France", zone: "visage", step: "nettoyant", act: ["ceramides", "niacinamide"], for: ["sensible", "rougeurs", "seche"], avoid: [], desc: "Nettoyant de pharmacie pour peaux sensibles, sans parfum." },
+    { id: "bojplum", brand: "Beauty of Joseon", name: "Green Plum Refreshing Cleanser", origin: "Corée", zone: "visage", step: "nettoyant", act: [], for: ["mixte", "normale"], avoid: [], desc: "Gel doux qui nettoie sans tirailler." },
+    { id: "toniacinamide", brand: "The Ordinary", name: "Niacinamide 10% + Zinc 1%", origin: "Canada", zone: "visage", step: "serum", act: ["niacinamide"], for: ["mixte", "imperfections", "taches"], avoid: ["sensible"], desc: "Sérum petit prix pour le sébum et les marques. Commence un jour sur deux." },
+    { id: "effaclarduo", brand: "La Roche-Posay", name: "Effaclar Duo+M", origin: "France", zone: "visage", step: "hydratant", act: ["niacinamide"], for: ["mixte", "imperfections"], avoid: ["sensible"], desc: "Soin hydratant pour peau à imperfections, de pharmacie." },
+    { id: "cicalfate", brand: "Avène", name: "Cicalfate+ Crème Réparatrice", origin: "France", zone: "visage", step: "hydratant", act: [], for: ["sensible", "rougeurs", "seche"], avoid: [], desc: "Crème réparatrice pour les peaux fragilisées ou irritées." },
+    { id: "aestura", brand: "Aestura", name: "Atobarrier 365 Cream", origin: "Corée", zone: "visage", step: "hydratant", act: ["ceramides"], for: ["seche", "sensible", "rougeurs", "secheresse"], avoid: [], desc: "Crème aux céramides qui renforce la barrière de la peau." },
+    { id: "soonjung", brand: "Etude", name: "SoonJung 2x Barrier Intensive Cream", origin: "Corée", zone: "visage", step: "hydratant", act: ["panthenol"], for: ["sensible", "rougeurs"], avoid: [], desc: "Crème très douce, sans parfum, pour les périodes d'irritation." },
+    { id: "skin1004sun", brand: "SKIN1004", name: "Hyalu-Cica Water-Fit Sun Serum SPF 50+", origin: "Corée", zone: "visage", step: "spf", act: ["spf", "centella", "hyaluronique"], for: ["mixte", "normale", "imperfections", "taches"], avoid: [], desc: "Solaire texture sérum, très léger, idéal sous le maquillage." },
+    { id: "isntreesun", brand: "Isntree", name: "Hyaluronic Acid Watery Sun Gel SPF 50+", origin: "Corée", zone: "visage", step: "spf", act: ["spf", "hyaluronique"], for: ["normale", "seche", "taches"], avoid: [], desc: "Gel solaire aqueux et frais." },
+    { id: "roundlabsun", brand: "Round Lab", name: "Birch Juice Moisturizing Sun Cream", origin: "Corée", zone: "visage", step: "spf", act: ["spf"], for: ["seche", "normale", "secheresse"], avoid: [], desc: "Solaire plus hydratant, parfait en hiver. Vérifie l'indice sur la version achetée." },
+    { id: "uvmune", brand: "La Roche-Posay", name: "Anthelios UVMune 400 Fluide Invisible SPF 50+", origin: "France", zone: "visage", step: "spf", act: ["spf"], for: ["sensible", "normale", "mixte", "taches"], avoid: [], desc: "Solaire de pharmacie très haute protection, fluide invisible." },
+    { id: "pcbha", brand: "Paula's Choice", name: "Skin Perfecting 2% BHA Liquid", origin: "États-Unis", zone: "visage", step: "exfoliant", act: ["bha"], for: ["mixte", "imperfections", "texture"], avoid: ["acides", "sensible"], desc: "Exfoliant BHA de référence pour les pores et les points noirs. 1 à 3 soirs par semaine." },
+    { id: "bojredbean", brand: "Beauty of Joseon", name: "Red Bean Refreshing Pore Mask", origin: "Corée", zone: "visage", step: "masquev", act: [], for: ["mixte", "imperfections"], avoid: [], desc: "Masque à l'argile douce, sur le front et le menton." },
+    { id: "axisymugwort", brand: "Axis-Y", name: "Mugwort Pore Clarifying Wash Off Pack", origin: "Corée", zone: "visage", step: "masquev", act: [], for: ["sensible", "imperfections", "rougeurs"], avoid: [], desc: "Masque argile et armoise, doux pour les peaux réactives." },
+    { id: "cerave_sa", brand: "CeraVe", name: "SA Crème Anti-Rugosités", origin: "États-Unis", zone: "corps", step: "corps", act: ["bha", "ceramides"], for: ["corpsTresSec", "corpsMarques"], avoid: ["acides"], desc: "Pour les zones rugueuses et les petits boutons sur les bras ou les jambes." },
+    { id: "eucerinurea", brand: "Eucerin", name: "UreaRepair Plus Lotion 10% Urée", origin: "Allemagne", zone: "corps", step: "corps", act: [], for: ["corpsSec", "corpsTresSec"], avoid: [], desc: "Lait à l'urée pour les peaux très sèches et rêches." },
+    { id: "lipikar", brand: "La Roche-Posay", name: "Lipikar Baume AP+M", origin: "France", zone: "corps", step: "corps", act: ["karite"], for: ["corpsTresSec", "corpsSensible", "corpsSec"], avoid: [], desc: "Baume de pharmacie pour les peaux très sèches et sensibles." },
+    { id: "atoderm", brand: "Bioderma", name: "Atoderm Crème", origin: "France", zone: "corps", step: "corps", act: [], for: ["corpsSec", "corpsSensible"], avoid: [], desc: "Crème simple, grand format, bien tolérée." },
+    { id: "mielle", brand: "Mielle Organics", name: "Rosemary Mint Scalp & Hair Strengthening Oil", origin: "États-Unis", zone: "cheveux", step: "soin", act: ["romarin"], for: ["crepus", "boucles", "secs"], avoid: ["reactifHE"], desc: "Huile au romarin et à la menthe pour le cuir chevelu et les pointes. Contient des huiles essentielles." },
+    { id: "cantu", brand: "Cantu", name: "Shea Butter Leave-In Conditioning Repair Cream", origin: "États-Unis", zone: "cheveux", step: "soin", act: ["karite"], for: ["crepus", "boucles", "secs"], avoid: [], desc: "Crème sans rinçage au karité, très répandue et petit prix." },
+    { id: "sheamoisture", brand: "SheaMoisture", name: "Coconut & Hibiscus Curl Enhancing Smoothie", origin: "États-Unis", zone: "cheveux", step: "soin", act: ["karite"], for: ["boucles", "crepus"], avoid: [], desc: "Crème coiffante qui définit les boucles et limite les frisottis." },
+    { id: "sheamasque", brand: "SheaMoisture", name: "Jamaican Black Castor Oil Strengthen & Restore Masque", origin: "États-Unis", zone: "cheveux", step: "masque", act: ["karite"], for: ["crepus", "secs", "boucles"], avoid: [], desc: "Masque riche pour les cheveux crépus secs et cassants." },
+    { id: "asiam", brand: "As I Am", name: "Coconut CoWash", origin: "États-Unis", zone: "cheveux", step: "shampoing", act: [], for: ["crepus", "boucles", "secs"], avoid: [], desc: "Après-shampoing lavant, pour laver sans dessécher les cheveux crépus." },
+    { id: "pattern", brand: "Pattern Beauty", name: "Leave-In Conditioner", origin: "États-Unis", zone: "cheveux", step: "soin", act: [], for: ["crepus", "boucles"], avoid: [], desc: "Soin sans rinçage pour boucles serrées à crépus." },
+    { id: "boucleme", brand: "Bouclème", name: "Curl Cream", origin: "Royaume-Uni", zone: "cheveux", step: "soin", act: [], for: ["boucles", "ondules"], avoid: [], desc: "Crème légère pour cheveux ondulés à bouclés." },
+    { id: "miseenscene", brand: "Mise en Scène", name: "Perfect Serum Original", origin: "Corée", zone: "cheveux", step: "soin", act: ["argan"], for: ["secs", "colores", "raides", "ondules"], avoid: [], desc: "Sérum capillaire coréen culte, pour la brillance et les pointes." },
+    { id: "masil", brand: "Masil", name: "8 Seconds Salon Hair Mask", origin: "Corée", zone: "cheveux", step: "masque", act: [], for: ["secs", "colores", "fins"], avoid: [], desc: "Masque express, quelques secondes de pose." },
+    { id: "ryo", brand: "Ryo", name: "Hair Loss Expert Care Shampoo", origin: "Corée", zone: "cuir", step: "shampoing", act: ["ginseng"], for: ["cuirGras", "fins"], avoid: [], desc: "Shampoing coréen au ginseng pour un cuir chevelu qui regraisse et des cheveux fins." },
+    { id: "kelual", brand: "Ducray", name: "Kelual DS Shampooing", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirPellicules"], avoid: [], desc: "Shampoing de pharmacie pour les pellicules et les démangeaisons." },
+    { id: "kloraneavoine", brand: "Klorane", name: "Shampooing à l'Avoine", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirSensible", "cuirSec"], avoid: [], desc: "Shampoing très doux pour les lavages fréquents et les cuirs chevelus sensibles." },
     { id: "skingourmet", brand: "Skin Gourmet", name: "Beurre de karité brut", origin: "Ghana", madeIn: "au Ghana", zone: "corps", step: "corps", act: ["karite"], for: ["corpsSec", "corpsTresSec", "secs", "crepus"], avoid: [], desc: "Marque d'Accra qui travaille des ingrédients ghanéens bruts." },
     { id: "kocos", brand: "Kocos Cosmétiques", name: "Soins au beurre de karité", origin: "Mali", madeIn: "au Mali", zone: "corps", step: "corps", act: ["karite"], for: ["corpsSec", "corpsTresSec", "corpsOk"], avoid: [], desc: "Laits, crèmes et savons au karité, créés par une pharmacienne malienne." },
     { id: "nuhanciam", brand: "Nuhanciam", name: "Baume Corps Réparateur Intense", origin: "France", zone: "corps", step: "corps", act: ["karite", "hyaluronique"], for: ["corpsTresSec", "corpsSec", "corpsMarques"], avoid: [], desc: "Baume corps pensé pour les peaux noires et métissées." },
@@ -495,6 +532,8 @@
     { id: "photoVisage", sec: 1, type: "photo", target: "visage" },
     { id: "peau", sec: 1, title: "Après la douche, ta peau du visage est plutôt…", sub: "Ton ressenti suffit. Ce n'est pas un diagnostic médical.",
       options: [["seche", "Sèche, elle tiraille", "", "dry"], ["sensible", "Sensible, vite inconfortable", "", "flame"], ["mixte", "Mixte à grasse", "", "drops"], ["normale", "Confortable", "", "heart"]] },
+    { id: "carnation", sec: 1, title: "Quelle est ta carnation ?", sub: "Pour choisir des solaires sans trace blanche et prévenir les marques. Tu peux passer.",
+      options: [["claire", "Claire", "", "halfsun"], ["mate", "Mate à métissée", "", "sun"], ["foncee", "Foncée", "", "heart"], ["tresfoncee", "Très foncée", "", "heart"], ["nsp", "Je préfère ne pas répondre", "", "ask"]] },
     { id: "concerns", sec: 1, title: "Qu'aimerais-tu améliorer en priorité ?", sub: "Jusqu'à 3 choix. On adapte tes conseils et tes produits.", multi: true, max: 3, none: "aucune",
       options: [["secheresse", "Sécheresse, tiraillements", "", "dry"], ["imperfections", "Imperfections", "", "dots"], ["rougeurs", "Rougeurs, sensibilité", "", "flame"], ["teint", "Teint terne", "", "halfsun"], ["texture", "Grain de peau irrégulier", "", "wave"], ["taches", "Taches, teint inégal", "", "spots"], ["rides", "Ridules, fermeté", "", "sprout"], ["aucune", "Rien de particulier", "", "none"]] },
     { id: "tachesNiveau", sec: 1, title: "Comment décrirais-tu tes taches aujourd'hui ?", sub: "Ton ressenti suffit. Ça nous aide à doser ta routine.", skipIf: function (a) { return !has(a, "concerns", "taches"); },
@@ -675,6 +714,7 @@
       taches: "Taches : la protection solaire quotidienne, toute l'année et sur toutes les carnations, est le geste le plus conseillé." + ({ t2: " Tes marques sont installées : ta routine associe un soin qui unifie et un soin qui renouvelle, sans exfolier trop souvent.", t3: " Tes taches sont marquées : la patience compte, comptez plusieurs mois. Un avis dermatologique t'aidera à aller plus loin.", t4: " Montre d'abord tes taches à un ou une dermatologue, surtout si l'une d'elles change. Les traitements les plus forts (trétinoïne, cystéamine, acide azélaïque à 20 %, peelings, laser) se font sur prescription ou en cabinet." }[a.tachesNiveau] || ""),
       rides: "Ridules : protection solaire, hydratation et, hors grossesse, rétinoïdes introduits progressivement."
     };
+    if (a.carnation === "foncee" || a.carnation === "tresfoncee" || a.carnation === "mate") out.push(["Ta carnation", "Les peaux mates à foncées marquent plus facilement après un bouton, une irritation ou un soin trop fort. Douceur, pas de grattage, et une crème solaire sans trace blanche chaque matin : c'est la meilleure prévention."]);
     var cs = (a.concerns || []).filter(function (k) { return C[k]; });
     if (cs.length) out.push(["Ton visage", cs.map(function (k) { return C[k]; }).join(" ")]);
     var pv = a.photoVisage || {};
@@ -760,6 +800,11 @@
     ".plan>b{display:block;margin:0 0 8px 4px}",
     ".pstep small{color:var(--muted)}",
     ".pstep.later{opacity:.55;cursor:default}",
+    ".made.rev{background:#eef3f6;color:var(--water)}.revnote{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.revnote small{flex-basis:100%;color:var(--muted);font-size:11px}",
+    ".scanhero{width:100%;font:inherit;display:flex;align-items:center;gap:14px;text-align:left;border:0;border-radius:22px;padding:18px;margin:4px 0 12px;background:var(--water);color:#fff;cursor:pointer}.scanhero svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.6;flex:none}.scanhero span{display:flex;flex-direction:column;gap:2px}.scanhero small{opacity:.85}",
+    ".camview{position:fixed;inset:0;z-index:50;background:#0d1214;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:16px}.camview video{width:100%;max-width:520px;max-height:62vh;border-radius:20px;object-fit:cover;background:#000}",
+    ".camframe{position:absolute;width:min(70vw,320px);height:min(36vw,170px);border:3px solid rgba(255,255,255,.85);border-radius:18px;top:calc(50% - 60px);box-shadow:0 0 0 999px rgba(0,0,0,.18);pointer-events:none}",
+    ".camview p{color:#fff;text-align:center;margin:0;max-width:34ch;font-size:15px}.camacts{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}.camview .btn.ghost{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.4)}",
     ".tri{background:#fff;border-radius:20px;padding:14px;margin:0 0 14px}.tri>div{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px;margin:10px 0}.tri p{margin:0;background:var(--sand-soft);border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:2px;font-size:13px;min-width:0}.tri p span{width:22px;height:22px;border-radius:50%;background:var(--line);display:flex;align-items:center;justify-content:center;font-size:12px}.tri p.on span{background:var(--water);color:#fff}.tri p small{color:var(--muted);font-size:11px;overflow-wrap:anywhere}.tri>small{color:var(--muted);font-size:12px;display:block}",
     ".intro{background:var(--sand-soft);border-radius:20px;padding:14px;margin-bottom:10px}.intro>p{margin:0 0 10px;font-size:14px;color:var(--muted)}",
     ".intro ol{list-style:none;margin:0;padding:0;display:grid;gap:8px}.intro li{display:flex;gap:10px;align-items:flex-start;background:#fff;border-radius:16px;padding:10px 12px}",
@@ -1144,7 +1189,7 @@
   // Tous les produits sous une même forme : Sunsoari (douche) + autres marques.
   function allProducts() {
     var own = Object.keys(P).map(function (k) { var p = P[k]; return { id: "s:" + k, key: k, own: true, brand: p.title.split(" · ")[0], name: p.title.split(" · ")[1] || p.title, zone: "douche", step: "douche", act: p.act || [], flags: (p.act || []).indexOf("teatree") > -1 ? ["allergenes"] : [], for: [], price: p.price, desc: p.pitch, img: PROD_PHOTO[k] ? photo(PROD_PHOTO[k]) : p.img }; });
-    return own.concat(EXT.map(function (p) { return { id: "e:" + p.id, brand: p.brand, name: p.name, zone: p.zone, step: p.step, act: p.act, flags: p.act.indexOf("teatree") > -1 ? ["allergenes"] : [], for: p.for, avoid: p.avoid, needs: p.needs, night: p.night, origin: p.origin, madeIn: p.madeIn, trend: p.trend, desc: p.desc, url: p.url, affiliate: p.affiliate }; }));
+    return own.concat(EXT.map(function (p) { return { id: "e:" + p.id, brand: p.brand, name: p.name, zone: p.zone, step: p.step, act: p.act, flags: p.act.indexOf("teatree") > -1 ? ["allergenes"] : [], for: p.for, avoid: p.avoid, needs: p.needs, night: p.night, rev: p.rev, origin: p.origin, madeIn: p.madeIn, trend: p.trend, desc: p.desc, url: p.url, affiliate: p.affiliate }; }));
   }
   function byId(id) { return allProducts().filter(function (p) { return p.id === id; })[0]; }
 
@@ -1161,7 +1206,9 @@
       var orig = origins.length && origins.indexOf("toutes") < 0 && (origins.indexOf(p.origin) > -1 || (origins.indexOf("Afrique") > -1 && ["Mali", "Ghana", "Nigeria", "Maroc", "Sénégal"].indexOf(p.origin) > -1)) ? 6 : 0;
       if (opts.morning && p.night) bad = true;
       if (p.needs && !p.needs.some(function (x) { return tags.indexOf(x) > -1; })) bad = true;
-      return { p: p, bad: bad, score: fitScore(p, a).total + match * 4 + pref * 8 + orig + (p.madeIn ? 2 : 0) };
+      var deep = a.carnation === "foncee" || a.carnation === "tresfoncee" || a.carnation === "mate";
+      var rev = p.rev || [], revB = (deep && (rev.indexOf("nocast") > -1 || rev.indexOf("fonce") > -1) ? 8 : 0) + (rev.indexOf("afro") > -1 && (a.texture === "crepus" || a.texture === "boucles") ? 8 : 0) + (rev.length ? 2 : 0);
+      return { p: p, bad: bad, score: fitScore(p, a).total + match * 4 + pref * 8 + orig + (p.madeIn ? 2 : 0) + revB };
     }).filter(function (x) { return !x.bad; }).sort(function (x, y) { return y.score - x.score; });
     return list.length ? list[0].p : null;
   }
@@ -1209,6 +1256,17 @@
     return { matin: matin, soir: soir, hebdo: hebdo, mode: mode, tn: tn, fragile: fragile, enceinte: a.grossesse === "oui", dermato: a.tachesNiveau === "t4",
       douche: [{ step: "douche", id: "s:" + r.main }].concat(r.refills.map(function (k) { return { step: "recharge", id: "s:" + k }; })), reco: r };
   }
+
+  // Repères de réputation (publics, pas des avis vérifiés Sunsoari).
+  var REV_LABEL = { kr: "Best-seller en Corée", jp: "Classique au Japon", eu: "Référence en pharmacie", fonce: "Marque pensée pour les peaux noires et métissées", nocast: "Sans trace blanche sur peau foncée", afro: "Pensé pour les cheveux bouclés à crépus" };
+  var REV_BY_ID = {
+    roundlab: ["kr"], anua: ["kr"], snail: ["kr"], skin1004: ["kr"], torriden: ["kr"], laneige: ["kr"], illiyoon: ["kr"], aestura: ["kr"], soonjung: ["kr"], anuaoil: ["kr"], banila: ["kr"], bojglow: ["kr"], bojsun: ["kr", "nocast"],
+    skin1004sun: ["kr", "nocast"], isntreesun: ["kr", "nocast"], roundlabsun: ["kr", "nocast"], miseenscene: ["kr"],
+    dhc: ["jp"], softymo: ["jp"], hadalabo: ["jp"], curel: ["jp"], melano: ["jp"], biore: ["jp", "nocast"], tsubaki: ["jp"], fino: ["jp"],
+    sensibio: ["eu"], toleriane: ["eu"], effaclarduo: ["eu"], cicalfate: ["eu"], lrpmelab3: ["eu"], uvmune: ["eu", "nocast"], eucerinurea: ["eu"], lipikar: ["eu"], atoderm: ["eu"], kelual: ["eu"], kloraneavoine: ["eu"],
+    nuhanciam: ["fonce"], mielle: ["afro"], cantu: ["afro"], sheamoisture: ["afro"], sheamasque: ["afro"], asiam: ["afro"], pattern: ["afro"], boucleme: ["afro"], loly: ["afro"], activilong: ["afro"]
+  };
+  EXT.forEach(function (p) { p.rev = REV_BY_ID[p.id] || []; });
 
   // Plan d'introduction : un nouveau produit par semaine, les actifs forts en dernier, d'abord 1 soir puis 2.
   var STRONG = ["retinoides", "aha", "bha", "pha", "vitc", "azelaique"];
@@ -1272,6 +1330,23 @@
       .map(function (x) { return { p: x, s: fitScore(x, a).total }; }).sort(function (x, y) { return y.s - x.s; }).slice(0, n || 4);
   }
 
+  // Lecture de codes-barres et QR codes : BarcodeDetector quand le navigateur l'a (Android),
+  // sinon la bibliothèque ZXing, chargée seulement au premier scan (iPhone).
+  var ZX_URL = "https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js";
+  var CODE_FORMATS = ["ean_13", "ean_8", "upc_a", "upc_e", "qr_code", "code_128", "data_matrix"];
+  var zxPromise = null;
+  function loadZX() {
+    if (window.ZXing) return Promise.resolve(window.ZXing);
+    if (!zxPromise) zxPromise = new Promise(function (res, rej) {
+      var sc = document.createElement("script"); sc.src = ZX_URL; sc.async = true;
+      sc.onload = function () { window.ZXing ? res(window.ZXing) : rej(); };
+      sc.onerror = function () { zxPromise = null; rej(); };
+      document.head.appendChild(sc);
+    });
+    return zxPromise;
+  }
+  function nativeDetector() { try { return "BarcodeDetector" in window ? new window.BarcodeDetector({ formats: CODE_FORMATS }) : null; } catch (e) { return null; } }
+
   // ---------------------------------------------------------------------------
   // APPLICATION
   // ---------------------------------------------------------------------------
@@ -1314,8 +1389,10 @@
     if (this.detail) html += this.vDetail(this.detail);
     if (this.story) html += this.vStory();
     if (this.sheet && ING[this.sheet]) html += this.vSheet(this.sheet);
+    if (this.cam) html += "<div class='camview' role='dialog' aria-label='Scanner un code'><video id='camvideo' playsinline muted autoplay></video><div class='camframe'></div><p>" + esc(this.cam.msg) + "</p><div class='camacts'><label class='btn ghost' for='codephoto2'>Prendre une photo du code</label><input id='codephoto2' type='file' accept='image/*' capture='environment' data-codephoto='1' hidden><button class='btn' data-act='camstop'>Fermer</button></div></div>";
     html += "</div>";
     this.root.innerHTML = html;
+    if (this.cam && this.cam.stream) { var cv = this.root.querySelector("#camvideo"); if (cv) { cv.srcObject = this.cam.stream; this.camDetect(cv); } }
     var log = this.root.querySelector && this.root.querySelector(".chatlog"); if (log) log.scrollTop = log.scrollHeight;
   };
 
@@ -1442,7 +1519,7 @@
   A.routineCard = function (p, step, n, scent) {
     if (!p) return "";
     var a = this.state.answers, s = fitScore(p, a), self = this, alts = p.own ? [] : alternatives(p, a, 4);
-    var html = "<article class='rcard'><div class='rtop'><span class='num'>" + n + "</span>" + (p.img ? "<img class='pthumb' src='" + esc(p.img) + "' alt='" + esc(p.name) + "' loading='lazy'>" : "<span class='ptile' aria-hidden='true'>" + esc(p.brand.replace(/[^A-Za-zÀ-ÿ ]/g, "").split(" ").filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join("").toUpperCase()) + "</span>") + "<div class='rinfo'><small>" + esc(STEP_LABEL[step] || (step === "douche" ? "Ton rituel douche" : step === "recharge" ? "Recharge" : step)) + "</small><b>" + esc(p.name) + "</b><span>" + esc(p.brand) + (p.price ? " · " + euro(p.price) : "") + (p.origin ? " · " + esc(p.origin) : "") + "</span><div class='badges'>" + this.scoreBadge(s) + (p.madeIn ? "<span class='made'>Fabriqué " + esc(p.madeIn) + "</span>" : "") + (p.trend ? "<span class='made trend'>Tendance 2026</span>" : "") + "</div></div><button class='heart' data-wish='" + p.id + "' aria-pressed='" + (this.state.wish.indexOf(p.id) > -1) + "' aria-label='Ajouter à mes souhaits'>♡</button></div>";
+    var html = "<article class='rcard'><div class='rtop'><span class='num'>" + n + "</span>" + (p.img ? "<img class='pthumb' src='" + esc(p.img) + "' alt='" + esc(p.name) + "' loading='lazy'>" : "<span class='ptile' aria-hidden='true'>" + esc(p.brand.replace(/[^A-Za-z\u00C0-\u00FF ]/g, "").split(" ").filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join("").toUpperCase()) + "</span>") + "<div class='rinfo'><small>" + esc(STEP_LABEL[step] || (step === "douche" ? "Ton rituel douche" : step === "recharge" ? "Recharge" : step)) + "</small><b>" + esc(p.name) + "</b><span>" + esc(p.brand) + (p.price ? " · " + euro(p.price) : "") + (p.origin ? " · " + esc(p.origin) : "") + "</span><div class='badges'>" + this.scoreBadge(s) + (p.madeIn ? "<span class='made'>Fabriqué " + esc(p.madeIn) + "</span>" : "") + (p.trend ? "<span class='made trend'>Tendance 2026</span>" : "") + (p.rev || []).map(function (r) { return "<span class='made rev'>" + esc(REV_LABEL[r]) + "</span>"; }).join("") + "</div></div><button class='heart' data-wish='" + p.id + "' aria-pressed='" + (this.state.wish.indexOf(p.id) > -1) + "' aria-label='Ajouter à mes souhaits'>♡</button></div>";
     html += "<div class='whybox'><b>Pourquoi on l'a choisi</b><p>" + esc(this.whyFor(p, s)) + "</p>" + this.actChips(p.act) + "<div class='qchips'>" + this.questionsFor(p).map(function (q) { return "<button class='qchip' data-ask='" + esc(q) + "' data-pid='" + p.id + "'>" + esc(q) + "</button>"; }).join("") + "</div></div>";
     if (p.own && P[p.key].colors) html += "<p class='alt-t'>Choisis ton coloris</p><div class='chipset'>" + P[p.key].colors.map(function (c) { return "<a class='chip' href='" + self.shop + "/cart/" + c[1] + ":1?utm_source=mon-rituel&utm_medium=app' target='_top' data-add='" + p.id + "'>" + c[0] + "</a>"; }).join("") + "</div>";
     if (p.own && P[p.key].scents) html += "<p class='alt-t'>Choisis ta senteur</p><div class='chipset'>" + P[p.key].scents.map(function (c) { return "<a class='chip' href='" + self.shop + "/cart/" + P[p.key].variants[c[0]] + ":1?utm_source=mon-rituel&utm_medium=app' target='_top' data-add='" + p.id + "' aria-pressed='" + (c[0] === scent) + "'>" + c[1] + "</a>"; }).join("") + "</div>";
@@ -1620,11 +1697,14 @@
     var r = this.scan, html = "<div class='todayhead'><h3>Scanner un produit</h3></div>";
     if (r && r.result) return html + this.vScanResult(r);
     html += "<p class='sub'>Découvre si un cosmétique te convient : on lit sa liste d'ingrédients et on la compare à ton profil.</p>";
+    html += "<button class='scanhero' data-act='camscan'>" + icon("straight") + "<span><b>Scanner un code-barres ou un QR code</b><small>Vise l'emballage avec la caméra</small></span></button>";
     html += "<div class='scanmodes'>";
     html += "<label class='smode' for='scanphoto'>" + icon("dots") + "<b>Photo du produit</b><small>" + (AI.images ? "Face avant et liste d'ingrédients" : "Disponible avec l'assistante") + "</small></label><input id='scanphoto' type='file' accept='image/*' capture='environment' data-scanphoto='1' hidden" + (AI.images ? "" : " disabled") + ">";
     html += "<button class='smode' data-act='scanpaste'>" + icon("leaf") + "<b>Coller les ingrédients</b><small>Copie la liste INCI depuis un site</small></button>";
-    html += "<button class='smode' data-act='scanbar'>" + icon("straight") + "<b>Code-barres</b><small>Base ouverte Open Beauty Facts</small></button></div>";
+    html += "<button class='smode' data-act='scanbar'>" + icon("straight") + "<b>Taper le code</b><small>Les chiffres sous le code-barres</small></button></div>";
     if (r && r.mode === "paste") html += "<form class='scanform' data-form='paste'><label for='inci'>Liste d'ingrédients (INCI)</label><textarea id='inci' rows='5' placeholder='Aqua, Glycerin, Niacinamide, …'>" + esc(r.text || "") + "</textarea><label for='pname'>Nom du produit (facultatif)</label><input id='pname' value='" + esc(r.name || "") + "'><button class='btn big'>Analyser</button></form>";
+    if (r && r.link) html += "<div class='whybox'><b>QR code lu</b><p>Ce code mène vers <b>" + esc(r.link.host) + "</b>.</p><a class='btn' href='" + esc(r.link.href) + "' target='_blank' rel='noopener'>Ouvrir le lien ↗</a></div>";
+    if (r && r.text) html += "<div class='whybox'><b>Code lu</b><p>" + esc(r.text) + "</p></div>";
     if (r && r.mode === "bar") html += "<form class='scanform' data-form='bar'><label for='ean'>Numéro du code-barres</label><input id='ean' inputmode='numeric' placeholder='8809…' value='" + esc(r.ean || "") + "'><button class='btn big'>Rechercher</button></form>";
     if (this.busy) html += "<p class='why'>Lecture en cours…</p>";
     if (r && r.error) html += "<p class='care'>" + esc(r.error) + "</p>";
@@ -1658,6 +1738,51 @@
     aiCall(prompt, { images: [file], modelTier: "default" }, true).then(function (r) {
       r = r || {}; self.finishScan(String(r.brand || ""), String(r.name || ""), String(r.inci || ""), String(r.step || ""));
     }, function (e) { self.scan = { error: AI_ERR[e && e.code] || AI_ERR.upstream_error }; }).then(function () { self.busy = false; self.render(); });
+  };
+  A.camScan = function () {
+    var self = this;
+    this.scan = null; this.cam = { msg: "Vise le code-barres ou le QR code, bien à plat et éclairé." }; this.render();
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { this.cam.msg = "La caméra n'est pas disponible ici. Prends une photo du code à la place."; return this.render(); }
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: "environment" } }, audio: false }).then(function (stream) {
+      if (!self.cam) { stream.getTracks().forEach(function (t) { t.stop(); }); return; }
+      self.cam.stream = stream; self.render();
+    }, function () { if (self.cam) { self.cam.msg = "Accès à la caméra refusé ou impossible. Prends une photo du code à la place."; self.render(); } });
+  };
+  A.camDetect = function (video) {
+    var self = this, cam = this.cam, det = nativeDetector();
+    clearTimeout(cam.t); if (cam.zx) { try { cam.zx.reset(); } catch (e) {} cam.zx = null; }
+    if (det) {
+      var tick = function () { if (self.cam !== cam || !video.isConnected) return; det.detect(video).then(function (c) { if (c && c.length) self.onCode(c[0].rawValue); else cam.t = setTimeout(tick, 250); }, function () { cam.t = setTimeout(tick, 400); }); };
+      return tick();
+    }
+    loadZX().then(function (ZX) {
+      if (self.cam !== cam || !video.isConnected) return;
+      cam.zx = new ZX.BrowserMultiFormatReader();
+      cam.zx.decodeFromStream(cam.stream, video, function (res) { if (res && self.cam === cam) self.onCode(res.getText()); });
+    }, function () { cam.msg = "Lecteur indisponible (connexion). Tape les chiffres du code-barres à la place."; self.render(); });
+  };
+  A.camStop = function () {
+    var cam = this.cam; this.cam = null;
+    if (cam) { clearTimeout(cam.t); if (cam.zx) { try { cam.zx.reset(); } catch (e) {} } if (cam.stream) cam.stream.getTracks().forEach(function (t) { t.stop(); }); }
+  };
+  // Photo d'un code : utile quand la caméra en direct n'est pas autorisée.
+  A.codeFromPhoto = function (file) {
+    var self = this, url = URL.createObjectURL(file), det = nativeDetector();
+    var done = function (txt) { URL.revokeObjectURL(url); if (txt) return self.onCode(txt); self.camStop(); self.scan = { mode: "bar", error: "Code illisible sur la photo. Rapproche-toi, évite les reflets, ou tape les chiffres." }; self.render(); };
+    if (det) { var img = new Image(); img.onload = function () { det.detect(img).then(function (c) { done(c && c[0] && c[0].rawValue); }, function () { done(""); }); }; img.onerror = function () { done(""); }; img.src = url; return; }
+    loadZX().then(function (ZX) { return new ZX.BrowserMultiFormatReader().decodeFromImageUrl(url).then(function (r) { done(r.getText()); }); }).catch(function () { done(""); });
+  };
+  A.onCode = function (raw) {
+    raw = String(raw || "").trim(); this.camStop();
+    if (navigator.vibrate) try { navigator.vibrate(60); } catch (e) {}
+    var digits = raw.replace(/\s/g, "");
+    if (/^\d{8,14}$/.test(digits)) return this.scanBarcode(digits);
+    var m = raw.match(/sunsoari\.fr\/(?:[a-z-]+\/)?products\/([a-z0-9-]+)/i);
+    if (m) { var key = Object.keys(P).filter(function (k) { return P[k].handle === m[1].toLowerCase(); })[0]; if (key) { this.scan = null; this.detail = "s:" + key; return this.render(); } }
+    var u = null; try { u = /^https?:\/\//i.test(raw) ? new URL(raw) : null; } catch (e) {}
+    this.scan = u ? { link: { href: u.href, host: u.hostname } } : { text: raw.slice(0, 300) };
+    this.emit("scan", { code: u ? u.hostname : "texte" });
+    this.render();
   };
   A.scanBarcode = function (ean) {
     var self = this; this.busy = true; this.render();
@@ -1760,6 +1885,7 @@
     var html = "<div class='sheetbg' data-act='closedetail'></div><div class='sheet' role='dialog' aria-label='" + esc(p.name) + "'><button class='x' data-act='closedetail' aria-label='Fermer'>×</button><span class='tag'>" + esc(p.brand) + (p.origin ? " · " + esc(p.origin) : "") + "</span><h3>" + esc(p.name) + "</h3>" + this.scoreBadge(s);
     html += "<div class='subscores'>" + [["Tolérance", s.tol], ["Tes objectifs", s.obj], ["Ton type", s.type]].map(function (x) { return "<span><b>" + x[1] + "</b><small>" + x[0] + "</small></span>"; }).join("") + "</div>";
     html += "<p>" + esc(this.whyFor(p, s)) + "</p>" + this.actChips(p.act);
+    if ((p.rev || []).length) html += "<p class='revnote'>" + p.rev.map(function (r) { return "<span class='made rev'>" + esc(REV_LABEL[r]) + "</span>"; }).join("") + "<small>Repère de réputation publique, pas un avis vérifié Sunsoari. Les avis de nos clientes, par type de peau et carnation, arrivent bientôt.</small></p>";
     if (p.step && STEP_FREQ[p.step]) html += "<p class='care'><b>Comment l'utiliser :</b> " + esc(STEP_FREQ[p.step]) + "</p>";
     var tk = TUTOS[p.step] ? p.step : p.step === "douche" ? "douche" : p.step === "nettoyant" ? "demaquillant" : null;
     if (tk) html += "<button class='btn ghost' data-tuto='" + tk + "'>▶ Tutoriel : " + esc(TUTOS[tk].title) + "</button>";
@@ -1783,6 +1909,7 @@
     if (d.ask) { this.sheet = null; return this.ask(d.ask, d.pid || (d.scanctx ? (this.scan && this.scan.result && this.scan.result.id) : null)); }
     if (d.ing) { this.sheet = d.ing; return this.render(); }
     if (d.detail) { this.detail = d.detail; return this.render(); }
+    if (d.view && this.cam) this.camStop();
     if (d.view) { this.view = d.view; this.detail = null; this.zone = null; this.aiMsg = null; if (d.view === "scan" && this.scan && this.scan.result) this.scan = null; return this.render(); }
     if (d.plan) { this.plan = d.plan; this.plusMsg = null; return this.render(); }
     if (d.pay) { this.pay = d.pay; this.plusMsg = null; return this.render(); }
@@ -1837,6 +1964,8 @@
     if (d.act === "restart") { s.answers = {}; s.done = false; this.save(); this.step = 0; this.view = "diag"; return this.render(); }
     if (d.act === "scanpaste") { this.scan = { mode: "paste" }; return this.render(); }
     if (d.act === "scanbar") { this.scan = { mode: "bar" }; return this.render(); }
+    if (d.act === "camscan") return this.camScan();
+    if (d.act === "camstop") { this.camStop(); return this.render(); }
     if (d.act === "scannew") { this.scan = null; return this.render(); }
     if (d.act === "scanshelf") { var sid = this.scan.result.id; if (s.shelf.indexOf(sid) < 0) s.shelf.push(sid); this.save(); t.textContent = "Sur mon étagère ✓"; return; }
     if (d.ext) { this.emit("external_click", { product: d.ext }); return; }
@@ -1855,6 +1984,7 @@
     var d = e.target.dataset, f = e.target.files && e.target.files[0];
     if (d.photo && f) { if (this.photos[d.photo]) URL.revokeObjectURL(this.photos[d.photo]); this.photos[d.photo] = URL.createObjectURL(f); this.photoFiles = this.photoFiles || {}; this.photoFiles[d.photo] = f; this.aiMsg = null; return this.render(); }
     if (d.scanphoto && f) return this.scanPhoto(f);
+    if (d.codephoto && f) { if (this.cam) { this.cam.msg = "Lecture de la photo…"; } return this.codeFromPhoto(f); }
     if (d.keepthumb) { this.state.keepThumb = e.target.checked; this.save(); return; }
     if (d.refill) { var st = this.state.refills[d.refill] || {}; st[d.f] = e.target.value; this.state.refills[d.refill] = st; this.save(); this.render(); }
   };

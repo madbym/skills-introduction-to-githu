@@ -113,6 +113,20 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - Pas de photo de cliente, de visage retouché ni d'avant/après.
 - Les contenus à venir (vidéos d'installation, coulisses, UGC) sont listés dans `sunsoari-rituel/MEDIATHEQUE-A-EXPLOITER.md`.
 
+## 5 sexies. Scanner, bibliothèque et repères de réputation
+- **Scanner de code-barres et de QR code** (onglet Scan, gros bouton en tête) :
+  - lecture en direct avec la caméra arrière : BarcodeDetector sur Android, sinon la bibliothèque ZXing (`@zxing/library` 0.21.3) chargée au premier scan, ce qui couvre l'iPhone ;
+  - si la caméra est refusée, « Prendre une photo du code » ;
+  - formats lus : EAN-13, EAN-8, UPC, Code 128, QR, Data Matrix ;
+  - un code-barres cherche le produit dans Open Beauty Facts, puis calcule le score ;
+  - un QR code `sunsoari.fr/products/…` ouvre la fiche Sunsoari ; un autre lien s'affiche avec son domaine, sans ouverture automatique ;
+  - la page doit être servie en HTTPS pour accéder à la caméra.
+- **Bibliothèque** : environ 95 produits d'autres marques (visage, corps, cheveux, cuir chevelu) en plus de la gamme Sunsoari, avec des classiques coréens, japonais et de pharmacie européenne, des marques pour peaux noires et métissées et des soins pour cheveux bouclés à crépus.
+- **Repères de réputation** (`REV_BY_ID`), affichés en badges : Best-seller en Corée, Classique au Japon, Référence en pharmacie, Marque pensée pour les peaux noires et métissées, Sans trace blanche sur peau foncée, Pensé pour les cheveux bouclés à crépus.
+  - Ce sont des repères publics, pas des avis vérifiés. Ne jamais inventer d'avis, de notes ni de nombres d'avis.
+- **À construire** : avis vérifiés de clientes Sunsoari (acheteuses identifiées), filtrables par type de peau, carnation et texture de cheveux, avec modération et sans contrepartie cachée.
+- **Question « carnation »** (facultative) : elle favorise les solaires sans trace blanche et explique la prévention des marques sur peau mate à foncée.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

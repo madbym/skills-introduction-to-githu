@@ -466,6 +466,34 @@
     { id: "ryo", brand: "Ryo", name: "Hair Loss Expert Care Shampoo", origin: "Corée", zone: "cuir", step: "shampoing", act: ["ginseng"], for: ["cuirGras", "fins"], avoid: [], desc: "Shampoing coréen au ginseng pour un cuir chevelu qui regraisse et des cheveux fins." },
     { id: "kelual", brand: "Ducray", name: "Kelual DS Shampooing", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirPellicules"], avoid: [], desc: "Shampoing de pharmacie pour les pellicules et les démangeaisons." },
     { id: "kloraneavoine", brand: "Klorane", name: "Shampooing à l'Avoine", origin: "France", zone: "cuir", step: "shampoing", act: [], for: ["cuirSensible", "cuirSec"], avoid: [], desc: "Shampoing très doux pour les lavages fréquents et les cuirs chevelus sensibles." },
+    // Marques connues : Corée, Japon, Chine, Afrique et diaspora
+    { id: "medicube", brand: "Medicube", name: "Zero Pore Pad 2.0", origin: "Corée", zone: "visage", step: "exfoliant", act: ["aha", "bha"], for: ["mixte", "imperfections", "texture"], avoid: ["acides", "sensible"], desc: "Disques exfoliants très populaires en Corée. 2 à 3 soirs par semaine, jamais avec un autre acide." },
+    { id: "drjart", brand: "Dr.Jart+", name: "Cicapair Tiger Grass Calming Gel Cream", origin: "Corée", zone: "visage", step: "hydratant", act: ["centella"], for: ["rougeurs", "sensible", "mixte"], avoid: [], desc: "Gel-crème à la centella pour calmer les rougeurs." },
+    { id: "innisfree", brand: "Innisfree", name: "Green Tea Seed Hyaluronic Serum", origin: "Corée", zone: "visage", step: "serum", act: ["hyaluronique"], for: ["secheresse", "normale", "mixte"], avoid: [], desc: "Sérum hydratant au thé vert de l'île de Jeju." },
+    { id: "sulwhasoo", brand: "Sulwhasoo", name: "First Care Activating Serum", origin: "Corée", zone: "visage", step: "essence", act: ["ginseng"], for: ["rides", "teint", "seche"], avoid: ["reactifHE"], desc: "Sérum de luxe coréen aux plantes, dont le ginseng. Contient du parfum." },
+    { id: "mixsoon", brand: "Mixsoon", name: "Bean Essence", origin: "Corée", zone: "visage", step: "essence", act: ["ferments"], for: ["texture", "teint", "mixte"], avoid: [], desc: "Essence fermentée au soja, pour le grain de peau et l'éclat." },
+    { id: "numbuzin3", brand: "Numbuzin", name: "No.3 Skin Softening Serum", origin: "Corée", zone: "visage", step: "serum", act: ["ferments", "niacinamide"], for: ["teint", "texture", "taches"], avoid: [], desc: "Sérum fermenté pour l'éclat et le grain de peau." },
+    { id: "purito", brand: "Purito Seoul", name: "Wonder Releaf Centella Serum Unscented", origin: "Corée", zone: "visage", step: "serum", act: ["centella"], for: ["sensible", "rougeurs"], avoid: [], desc: "Sérum apaisant à la centella, sans parfum." },
+    { id: "klairsvitc", brand: "Klairs", name: "Freshly Juiced Vitamin Drop", origin: "Corée", zone: "visage", step: "serum", act: ["vitc"], for: ["taches", "teint"], avoid: ["rougeurs"], desc: "Vitamine C à 5 %, plutôt douce, pour débuter." },
+    { id: "heimish", brand: "Heimish", name: "All Clean Balm", origin: "Corée", zone: "visage", step: "demaquillant", act: [], for: ["normale", "seche", "deux", "soir"], avoid: ["reactifHE"], desc: "Baume démaquillant fondant, un classique coréen." },
+    { id: "pyunkang", brand: "Pyunkang Yul", name: "Essence Toner", origin: "Corée", zone: "visage", step: "tonique", act: [], for: ["seche", "sensible", "secheresse"], avoid: [], desc: "Lotion minimaliste, très peu d'ingrédients." },
+    { id: "haruharu", brand: "Haruharu Wonder", name: "Black Rice Hyaluronic Toner", origin: "Corée", zone: "visage", step: "tonique", act: ["riz", "hyaluronique"], for: ["seche", "normale", "teint"], avoid: [], desc: "Lotion hydratante au riz noir fermenté." },
+    { id: "shiseidoanessa", brand: "Anessa (Shiseido)", name: "Perfect UV Sunscreen Skincare Milk SPF 50+", origin: "Japon", zone: "visage", step: "spf", act: ["spf"], for: ["mixte", "normale", "taches"], avoid: ["sensible"], desc: "Solaire japonais résistant à l'eau et à la transpiration. Contient de l'alcool." },
+    { id: "senka", brand: "Senka", name: "Perfect Whip", origin: "Japon", zone: "visage", step: "nettoyant", act: ["hyaluronique"], for: ["mixte", "normale"], avoid: ["sensible"], desc: "Mousse nettoyante japonaise dense, très petit prix." },
+    { id: "minon", brand: "Minon", name: "Amino Moist Charge Up Milky Lotion", origin: "Japon", zone: "visage", step: "hydratant", act: [], for: ["sensible", "seche", "secheresse"], avoid: [], desc: "Émulsion aux acides aminés, pensée au Japon pour les peaux sensibles et sèches." },
+    { id: "tatcha", brand: "Tatcha", name: "The Rice Polish Foaming Enzyme Powder", origin: "Japon", zone: "visage", step: "exfoliant", act: ["riz"], for: ["teint", "texture", "normale"], avoid: [], desc: "Poudre exfoliante enzymatique au riz, inspirée des rituels japonais (marque américano-japonaise)." },
+    { id: "kikumasamune", brand: "Kikumasamune", name: "High Moist Lotion (saké)", origin: "Japon", zone: "visage", step: "tonique", act: ["ferments"], for: ["seche", "teint"], avoid: [], desc: "Grande lotion au saké fermenté, classique des pharmacies japonaises." },
+    { id: "winona", brand: "Winona", name: "Soothing Repair Serum", origin: "Chine", zone: "visage", step: "serum", act: [], for: ["sensible", "rougeurs"], avoid: [], desc: "Marque chinoise de référence pour les peaux sensibles. Peu distribuée en France : vérifie le revendeur." },
+    { id: "proya", brand: "Proya", name: "Ruby Serum", origin: "Chine", zone: "visage", step: "serum", act: ["retinoides"], for: ["rides", "texture"], avoid: ["enceinte", "sensible"], night: true, desc: "Sérum anti-âge au rétinoïde d'une grande marque chinoise. Le soir uniquement. Peu distribué en France." },
+    { id: "chando", brand: "Chando", name: "Himalaya Hydrating Essence Lotion", origin: "Chine", zone: "visage", step: "tonique", act: [], for: ["seche", "normale"], avoid: [], desc: "Lotion hydratante d'une marque chinoise historique (Chando). Distribution limitée en Europe." },
+    { id: "herborist", brand: "Herborist", name: "Soins aux plantes de la médecine chinoise", origin: "Chine", zone: "visage", step: "hydratant", act: [], for: ["normale", "seche"], avoid: ["reactifHE"], desc: "Marque chinoise inspirée des plantes traditionnelles. Vérifie la composition du produit choisi." },
+    { id: "madeforhue", brand: "Made For Hue", name: "Supra Fade", origin: "Royaume-Uni", zone: "visage", step: "serum", act: ["arbutine", "tranexamique", "azelaique"], for: ["taches"], avoid: ["sensible", "enceinte"], desc: "Sérum anti-taches d'une marque créée pour les peaux riches en mélanine. Commence 2 fois par semaine." },
+    { id: "hyperskin", brand: "Hyper Skin", name: "Hyper Clear Brightening Vitamin C Serum", origin: "États-Unis", zone: "visage", step: "serum", act: ["vitc"], for: ["taches", "teint", "imperfections"], avoid: ["sensible"], desc: "Sérum vitamine C d'une marque créée pour les taches sur peaux mates à foncées." },
+    { id: "eadem", brand: "Eadem", name: "Milk Marvel Dark Spot Serum", origin: "États-Unis", zone: "visage", step: "serum", act: [], for: ["taches", "teint"], avoid: [], desc: "Sérum anti-taches d'une marque fondée pour les peaux mates à foncées. Vérifie la liste d'ingrédients." },
+    { id: "bgsunscreen", brand: "Black Girl Sunscreen", name: "Black Girl Sunscreen SPF 30", origin: "États-Unis", zone: "visage", step: "spf", act: ["spf"], for: ["normale", "seche"], avoid: [], desc: "Solaire pensé pour ne pas laisser de trace blanche. SPF 30 : pour la ville ; prends SPF 50 pour les taches ou le grand soleil." },
+    { id: "bolden", brand: "Bolden", name: "SPF 30 Brightening Moisturizer", origin: "États-Unis", zone: "visage", step: "spf", act: ["spf"], for: ["normale", "taches"], avoid: [], desc: "Hydratant solaire d'une marque créée pour les peaux mates à foncées. SPF 30." },
+    { id: "bioil", brand: "Bio-Oil", name: "Huile de Soin", origin: "Afrique du Sud", madeIn: "en Afrique du Sud", zone: "corps", step: "huile", act: [], for: ["corpsSec", "corpsMarques"], avoid: ["reactifHE"], desc: "Huile corps conçue en Afrique du Sud, très répandue pour l'aspect des vergetures et cicatrices. Contient du parfum." },
+    { id: "africology", brand: "Africology", name: "Soins corps aux plantes africaines", origin: "Afrique du Sud", madeIn: "en Afrique du Sud", zone: "corps", step: "corps", act: [], for: ["corpsSec", "corpsOk"], avoid: ["reactifHE"], desc: "Marque sud-africaine de spa aux plantes du continent. Vérifie la composition du soin choisi." },
     { id: "skingourmet", brand: "Skin Gourmet", name: "Beurre de karité brut", origin: "Ghana", madeIn: "au Ghana", zone: "corps", step: "corps", act: ["karite"], for: ["corpsSec", "corpsTresSec", "secs", "crepus"], avoid: [], desc: "Marque d'Accra qui travaille des ingrédients ghanéens bruts." },
     { id: "kocos", brand: "Kocos Cosmétiques", name: "Soins au beurre de karité", origin: "Mali", madeIn: "au Mali", zone: "corps", step: "corps", act: ["karite"], for: ["corpsSec", "corpsTresSec", "corpsOk"], avoid: [], desc: "Laits, crèmes et savons au karité, créés par une pharmacienne malienne." },
     { id: "nuhanciam", brand: "Nuhanciam", name: "Baume Corps Réparateur Intense", origin: "France", zone: "corps", step: "corps", act: ["karite", "hyaluronique"], for: ["corpsTresSec", "corpsSec", "corpsMarques"], avoid: [], desc: "Baume corps pensé pour les peaux noires et métissées." },
@@ -568,7 +596,7 @@
     { id: "senteur", sec: 4, title: "Quelle senteur t'attire ?", sub: "Tu pourras en changer à chaque recharge.", skipIf: function (a) { return has(a, "envies", "sansparfum"); },
       options: [["hinoki", "Hinoki", "Bois clair · Onsha et SHIFT Hinoki Spring", "tree"], ["fleur", "Floral", "Fleur de Prunier (Onsha) · Cherry Blossom (SHIFT)", "flower"], ["patchouli", "Patchouli & Rose", "Capsules SHIFT · chaud, enveloppant", "flower"], ["fruite", "Fruité", "Capsules SHIFT · énergie", "sun"], ["decouverte", "Découverte", "SHIFT · 6 senteurs à tester", "sprout"], ["ocean", "Océan", "Onsha · frais, iodé", "wave"], ["pin", "Forêt de Pin", "Onsha · vert, résineux", "leaf"], ["sans", "Sans senteur", "Onsha", "none"]] },
     { id: "origines", sec: 4, title: "Quelles marques aimerais-tu découvrir ?", sub: "On en tient compte pour te proposer d'autres marques que Sunsoari.", multi: true, none: "toutes",
-      options: [["Corée", "K-beauty", "Corée", "sprout"], ["Japon", "J-beauty", "Japon", "flower"], ["Afrique", "Marques africaines", "Karité, argan, savon noir…", "sun"], ["toutes", "Un peu de tout", "", "heart"]] },
+      options: [["Corée", "K-beauty", "Corée", "sprout"], ["Japon", "J-beauty", "Japon", "flower"], ["Chine", "C-beauty", "Chine", "leaf"], ["Afrique", "Marques africaines", "Karité, argan, savon noir…", "sun"], ["toutes", "Un peu de tout", "", "heart"]] },
     { id: "format", sec: 4, title: "Quelle routine te ressemble ?", sub: "Tu pourras changer à tout moment depuis ta routine.",
       options: [["essentielle", "L'essentiel", "3 ou 4 gestes, le strict nécessaire", "sprout"], ["complete", "La routine complète", "Toutes les étapes, façon K-beauty", "sunmoon"], ["equilibree", "Entre les deux", "Les bases et un soin ciblé", "halfsun"]] },
     { id: "budget", sec: 4, title: "Quel budget pour démarrer ton rituel douche ?", sub: "Tu pourras compléter ton rituel plus tard.",
@@ -610,7 +638,7 @@
     if (tags.indexOf("acides") > -1 && p.act.some(function (x) { return ["aha", "bha", "pha"].indexOf(x) > -1; })) excl.push("acides");
     var match = p.for.filter(function (x) { return tags.indexOf(x) > -1; });
     var origins = a.origines || [];
-    var bonus = origins.length && origins.indexOf("toutes") < 0 && (origins.indexOf(p.origin) > -1 || (origins.indexOf("Afrique") > -1 && ["Mali", "Ghana", "Nigeria", "Maroc", "Sénégal"].indexOf(p.origin) > -1)) ? 1.5 : 0;
+    var bonus = origins.length && origins.indexOf("toutes") < 0 && (origins.indexOf(p.origin) > -1 || (origins.indexOf("Afrique") > -1 && ["Mali", "Ghana", "Nigeria", "Maroc", "Sénégal", "Afrique du Sud", "Kenya", "Côte d'Ivoire"].indexOf(p.origin) > -1)) ? 1.5 : 0;
     // Un produit doit correspondre à au moins une réponse : l'origine préférée ne fait que départager.
     return { p: p, match: match, excl: excl, score: excl.length || !match.length ? -1 : match.length + bonus + (p.madeIn ? 0.3 : 0) };
   }
@@ -1203,7 +1231,7 @@
       var bad = (p.avoid || []).some(function (x) { return tags.indexOf(x) > -1; }) || (tags.indexOf("acides") > -1 && p.act.some(function (x) { return ["aha", "bha", "pha"].indexOf(x) > -1; }));
       var match = (p.for || []).filter(function (x) { return tags.indexOf(x) > -1; }).length;
       var pref = (opts.prefer || []).filter(function (x) { return p.act.indexOf(x) > -1; }).length;
-      var orig = origins.length && origins.indexOf("toutes") < 0 && (origins.indexOf(p.origin) > -1 || (origins.indexOf("Afrique") > -1 && ["Mali", "Ghana", "Nigeria", "Maroc", "Sénégal"].indexOf(p.origin) > -1)) ? 6 : 0;
+      var orig = origins.length && origins.indexOf("toutes") < 0 && (origins.indexOf(p.origin) > -1 || (origins.indexOf("Afrique") > -1 && ["Mali", "Ghana", "Nigeria", "Maroc", "Sénégal", "Afrique du Sud", "Kenya", "Côte d'Ivoire"].indexOf(p.origin) > -1)) ? 6 : 0;
       if (opts.morning && p.night) bad = true;
       if (p.needs && !p.needs.some(function (x) { return tags.indexOf(x) > -1; })) bad = true;
       var deep = a.carnation === "foncee" || a.carnation === "tresfoncee" || a.carnation === "mate";
@@ -1258,13 +1286,15 @@
   }
 
   // Repères de réputation (publics, pas des avis vérifiés Sunsoari).
-  var REV_LABEL = { kr: "Best-seller en Corée", jp: "Classique au Japon", eu: "Référence en pharmacie", fonce: "Marque pensée pour les peaux noires et métissées", nocast: "Sans trace blanche sur peau foncée", afro: "Pensé pour les cheveux bouclés à crépus" };
+  var REV_LABEL = { kr: "Best-seller en Corée", jp: "Classique au Japon", cn: "Marque phare en Chine", eu: "Référence en pharmacie", fonce: "Marque pensée pour les peaux noires et métissées", nocast: "Sans trace blanche sur peau foncée", afro: "Pensé pour les cheveux bouclés à crépus" };
   var REV_BY_ID = {
     roundlab: ["kr"], anua: ["kr"], snail: ["kr"], skin1004: ["kr"], torriden: ["kr"], laneige: ["kr"], illiyoon: ["kr"], aestura: ["kr"], soonjung: ["kr"], anuaoil: ["kr"], banila: ["kr"], bojglow: ["kr"], bojsun: ["kr", "nocast"],
     skin1004sun: ["kr", "nocast"], isntreesun: ["kr", "nocast"], roundlabsun: ["kr", "nocast"], miseenscene: ["kr"],
     dhc: ["jp"], softymo: ["jp"], hadalabo: ["jp"], curel: ["jp"], melano: ["jp"], biore: ["jp", "nocast"], tsubaki: ["jp"], fino: ["jp"],
     sensibio: ["eu"], toleriane: ["eu"], effaclarduo: ["eu"], cicalfate: ["eu"], lrpmelab3: ["eu"], uvmune: ["eu", "nocast"], eucerinurea: ["eu"], lipikar: ["eu"], atoderm: ["eu"], kelual: ["eu"], kloraneavoine: ["eu"],
-    nuhanciam: ["fonce"], mielle: ["afro"], cantu: ["afro"], sheamoisture: ["afro"], sheamasque: ["afro"], asiam: ["afro"], pattern: ["afro"], boucleme: ["afro"], loly: ["afro"], activilong: ["afro"]
+    nuhanciam: ["fonce"], madeforhue: ["fonce"], hyperskin: ["fonce"], eadem: ["fonce"], bgsunscreen: ["fonce", "nocast"], bolden: ["fonce", "nocast"],
+    medicube: ["kr"], drjart: ["kr"], innisfree: ["kr"], sulwhasoo: ["kr"], mixsoon: ["kr"], numbuzin3: ["kr"], purito: ["kr"], heimish: ["kr"], shiseidoanessa: ["jp", "nocast"], senka: ["jp"], minon: ["jp"], kikumasamune: ["jp"],
+    winona: ["cn"], proya: ["cn"], chando: ["cn"], mielle: ["afro"], cantu: ["afro"], sheamoisture: ["afro"], sheamasque: ["afro"], asiam: ["afro"], pattern: ["afro"], boucleme: ["afro"], loly: ["afro"], activilong: ["afro"]
   };
   EXT.forEach(function (p) { p.rev = REV_BY_ID[p.id] || []; });
 

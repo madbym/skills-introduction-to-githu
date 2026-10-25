@@ -236,6 +236,16 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - **Nouvelles questions** : « Tu es… » (femme, homme, autre, ne pas répondre ; la question sur la grossesse est sautée pour un homme) et « Ton budget soin par mois ».
 - **Plus tard** : enregistrer un message audio et le transcrire sur le serveur (par exemple avec Whisper), pour les navigateurs sans dictée.
 
+## 5 terdecies. Un parcours d'un seul tenant, puis l'espace et l'e-mail
+- **Le diagnostic se suit sans interruption.** Au milieu, le résultat du test de peau est court : le type, une ligne d'explication et l'idée reçue. Il n'y a plus d'envoi WhatsApp en cours de route. Les explications complètes sont dans l'espace soin (onglet Diagnostic). Le service WhatsApp avec l'esthéticienne reste disponible depuis cet onglet.
+- **Dictée sur chaque champ texte** : un bouton « 🎤 Dicter » à côté de chaque champ (prénom, rythme, routine actuelle, notes…).
+- **Dernière étape, « Ton espace soin est prêt »** : e-mail, consentement « recevoir ma routine et mes rappels » (obligatoire pour l'envoi), consentement « nouveautés et offres » (facultatif et séparé), puis « Créer mon espace et recevoir ma routine ». Une cliente déjà connectée passe directement à son espace. Il est aussi possible de « Voir mon espace sans e-mail ».
+- **Le serveur** reçoit un `POST data-email-endpoint` contenant `{ email, prenom, consentement_routine, consentement_offres, resultat, routine: { matin, soir, hebdo }, resume }`. Il doit :
+  1. créer le compte client Shopify, ou envoyer un lien magique de connexion ;
+  2. enregistrer l'espace soin dans le compte ;
+  3. envoyer l'e-mail de routine (modèle `email-routine.html`), puis les rappels (recharges, étape d'évolution toutes les 2 semaines, nouveau diagnostic à chaque saison). Cela passe par Klaviyo ou Shopify Email, seulement si le consentement est donné.
+- **Mon compte** : si la cliente a passé l'étape, une carte « Reçois ta routine par e-mail » le lui propose à nouveau.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

@@ -671,7 +671,8 @@
     { id: "budgetSoin", sec: 4, title: "Ton budget soin par mois, visage, corps et cheveux ?", sub: "On te propose d'abord ce qui rentre dans ton budget.",
       options: [["b30", "Moins de 30 €", "", "coin"], ["b60", "30 à 60 €", "", "coin"], ["b100", "60 à 100 €", "", "coin"], ["b100p", "Plus de 100 €", "", "coin"]] },
     { id: "budget", sec: 4, title: "Quel budget pour démarrer ton rituel douche ?", sub: "Tu pourras compléter ton rituel plus tard.",
-      options: [["petit", "Moins de 30 €", "", "coin"], ["moyen", "30 à 70 €", "", "coin"], ["grand", "Plus de 70 €", "", "coin"]] }
+      options: [["petit", "Moins de 30 €", "", "coin"], ["moyen", "30 à 70 €", "", "coin"], ["grand", "Plus de 70 €", "", "coin"]] },
+    { id: "fin", sec: 4, type: "fin", kicker: "Ton espace" }
   ];
 
   // Zones des écrans photo (positions en % sur le cadre).
@@ -1567,7 +1568,7 @@
     this.root.addEventListener("click", function (e) { self.onClick(e); });
     this.root.addEventListener("change", function (e) { self.onChange(e); });
     this.root.addEventListener("submit", function (e) { e.preventDefault(); self.onSubmit(e); });
-    this.root.addEventListener("input", function (e) { if (e.target.dataset && e.target.dataset.voicetext) { self.voice.text = e.target.value.slice(0, 3000); var need = self.voice.text.trim().length > 15; if (need !== !!self.root.querySelector("[data-act='voicefill']") && !(self.voiceFilled && self.voiceFilled.length)) self.renderKeepFocus("voicetext"); return; } if (e.target.dataset && e.target.dataset.evo) { self.evoDraft[e.target.dataset.evo] = e.target.value; return; } if (e.target.dataset && e.target.dataset.field) { self.state.answers[e.target.dataset.field] = e.target.value.slice(0, 600); self.save(); return; } if (e.target.id === "q-search") { self.query = e.target.value; self.renderKeepFocus("q-search"); } });
+    this.root.addEventListener("input", function (e) { if (e.target.dataset && e.target.dataset.finemail) { self.fin.email = e.target.value.trim(); var b = self.root.querySelector("[data-act='finsend']"); if (b) b.disabled = !(/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(self.fin.email) && self.fin.ok); return; } if (e.target.dataset && e.target.dataset.voicetext) { self.voice.text = e.target.value.slice(0, 3000); var need = self.voice.text.trim().length > 15; if (need !== !!self.root.querySelector("[data-act='voicefill']") && !(self.voiceFilled && self.voiceFilled.length)) self.renderKeepFocus("voicetext"); return; } if (e.target.dataset && e.target.dataset.evo) { self.evoDraft[e.target.dataset.evo] = e.target.value; return; } if (e.target.dataset && e.target.dataset.field) { self.state.answers[e.target.dataset.field] = e.target.value.slice(0, 600); self.save(); return; } if (e.target.id === "q-search") { self.query = e.target.value; self.renderKeepFocus("q-search"); } });
     this.root.addEventListener("error", function (e) { if (e.target.tagName === "IMG" && !e.target.dataset.fallback) { e.target.dataset.fallback = "1"; e.target.src = PLACEHOLDER; } }, true);
     initAI(host).then(function () { self.render(); });
   }
@@ -1619,12 +1620,14 @@
     var html = "<div class='qhead'><button class='back' data-act='prev' aria-label='Retour'" + (step === 0 ? " disabled" : "") + "><svg viewBox='0 0 24 24'><path d='M15 5l-7 7 7 7'/></svg></button><div class='segs'>" + segs + "</div></div><p class='kicker'>" + (q.kicker || SECTIONS[q.sec]) + "</p>";
     if (q.type === "info") return html + this.vInfo(q);
     if (q.type === "text") {
-      html += "<div class='q'><h3>" + esc(q.title) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "") + "<div class='tfields'>" + q.fields.map(function (f) { var v = esc(a[f[0]] || ""); return "<label><span>" + esc(f[1]) + "</span>" + (f[2] === "area" ? "<textarea data-field='" + f[0] + "' rows='3' placeholder='" + esc(f[3]) + "'>" + v + "</textarea>" : "<input data-field='" + f[0] + "' type='" + f[2] + "' value='" + v + "' placeholder='" + esc(f[3]) + "'" + (f[2] === "number" ? " min='10' max='99' inputmode='numeric'" : "") + ">") + "</label>"; }).join("") + "</div></div>";
+      var dict = this.dictating;
+      html += "<div class='q'><h3>" + esc(q.title) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "") + "<div class='tfields'>" + q.fields.map(function (f) { var v = esc(a[f[0]] || ""); return "<label><span class='flab'>" + esc(f[1]) + (f[2] !== "number" ? "<button type='button' class='micsm" + (dict === f[0] ? " on" : "") + "' data-dictate='" + f[0] + "' aria-label='" + (dict === f[0] ? "Arrêter la dictée" : "Dicter") + "'>" + (dict === f[0] ? "■ Stop" : "🎤 Dicter") + "</button>" : "") + "</span>" + (f[2] === "area" ? "<textarea data-field='" + f[0] + "' rows='3' placeholder='" + esc(f[3]) + "'>" + v + "</textarea>" : "<input data-field='" + f[0] + "' type='" + f[2] + "' value='" + v + "' placeholder='" + esc(f[3]) + "'" + (f[2] === "number" ? " min='10' max='99' inputmode='numeric'" : "") + ">") + "</label>"; }).join("") + "</div></div>";
       return html + "<div class='cta'><button class='btn big' data-act='next'>Continuer</button></div>";
     }
     if (q.type === "photo") return html + this.vPhotoStep(q);
     if (q.type === "capture") return html + this.vCapture(q);
     if (q.type === "voice") return html + this.vVoice(q);
+    if (q.type === "fin") return html + this.vFin();
     var val = a[q.id];
     html += "<div class='q'><h3>" + esc(q.title) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "");
     if (q.link) html += "<a class='ext' href='" + q.link[1] + "' target='_blank' rel='noopener'>" + esc(q.link[0]) + " ↗</a>";
@@ -1636,11 +1639,12 @@
     if (q.multi || step === qs.length - 1) html += "<div class='cta'><button class='btn big' data-act='next'" + (ready ? "" : " disabled") + ">" + (step === qs.length - 1 ? "Créer ma routine" : "Continuer") + "</button></div>";
     return html + "<p class='note'>Ce diagnostic repose sur ton ressenti. Il ne remplace pas l'avis d'un ou d'une professionnelle de santé.</p>";
   };
-  A.skinResult = function () {
+  A.skinResult = function (short) {
     var a = this.state.answers, sp = skinProfile(a);
     if (!sp) return "<p class='sub'>Réponds aux questions précédentes pour voir ton résultat.</p>";
     var I = SKIN_INFO[sp.type], label = I.t + (sp.deshy ? ", déshydratée" : "") + (sp.sensible ? " et sensible" : "");
     var W = SKIN_WHY[sp.type];
+    if (short) return "<p class='kicker'>" + (a.prenom ? esc(a.prenom) + ", voici ta peau" : "Ton résultat") + "</p><h3>" + esc(label) + "</h3><p>" + esc(I.what) + "</p>" + (sp.type === "grasse" || sp.type === "mixte" ? "<div class='myth'><b>Idée reçue</b><p>« Une peau grasse n'a pas besoin de crème. » <strong>Faux.</strong> Le sébum et l'eau sont deux choses différentes : il faut une texture légère, pas l'absence de crème.</p></div>" : "") + "<p class='note'>Encore quelques questions sur ton corps, tes cheveux et tes envies. Toutes les explications et tes conseils t'attendent ensuite dans ton espace soin.</p>";
     var html = "<p class='kicker'>" + (a.prenom ? esc(a.prenom) + ", voici ta peau" : "Ton résultat") + "</p><h3>" + esc(label) + "</h3><p>" + esc(I.what) + "</p>";
     html += "<div class='whybox'><b>Pourquoi ta peau est comme ça</b><p>" + esc(W.why) + "</p></div>";
     html += "<div class='dodont'><div class='whybox do'><b>Ce qui t'aide</b><ul class='tipl'>" + I.tips.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div><div class='whybox dont'><b>À éviter</b><ul class='tipl'>" + W.avoid.concat(sp.sensible ? ["Cumuler plusieurs actifs forts le même soir", "Les parfums et l'alcool asséchant"] : []).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div></div>";
@@ -1685,7 +1689,7 @@
     var p = this.progressPct(), a = this.state.answers;
     var html = "<div class='info'>";
     if (q.kind === "test") return html + "<h3>Découvrons ton type de peau</h3><p class='sub'>Beaucoup de personnes ne le connaissent pas, ou se trompent : une peau qui brille peut aussi manquer d'eau. Quelques questions sur ce que tu observes au quotidien, et on t'explique comment en prendre soin.</p><p class='alt-t'>Le test du visage nu, pour des réponses justes</p><ol class='guide'><li>Lave ton visage avec un nettoyant doux, sèche en tamponnant.</li><li>N'applique rien : ni crème, ni maquillage.</li><li>Attends une heure sans toucher ton visage.</li><li>Observe-toi à la lumière du jour : où ça brille, où ça tire, tes pores.</li><li>En option, appuie un mouchoir fin sur le front, le nez, le menton et les joues : une trace grasse montre où ta peau produit du sébum.</li></ol><p class='sub'>Tu connais bien ta peau ? Réponds de mémoire, selon ce que tu vis le plus souvent.</p><details class='types'><summary>Les 4 types de peau en bref</summary>" + ["normale", "seche", "mixte", "grasse"].map(function (k) { return "<p><b>" + SKIN_INFO[k].t + "</b> · " + esc(SKIN_WHY[k].why) + "</p>"; }).join("") + "<p>Une peau peut aussi être <b>sensible</b> ou <b>déshydratée</b>, quel que soit son type : on le regarde aussi.</p></details></div><div class='cta'><button class='btn big' data-act='next'>C'est parti</button></div>";
-    if (q.kind === "peau") return html + this.skinResult() + "</div><div class='cta'><button class='btn big' data-act='next'>Continuer</button></div>";
+    if (q.kind === "peau") return html + this.skinResult(true) + "</div><div class='cta'><button class='btn big' data-act='next'>Continuer</button></div>";
     if (q.kind === "eau") html += "<h3>Le savais-tu ?</h3><ul class='facts'><li>" + icon("drop") + "<span>En France, l'eau du robinet est potable et très contrôlée.</span></li><li>" + icon("dots") + "<span>Sa teneur en calcaire varie beaucoup d'une région à l'autre.</span></li><li>" + icon("shower") + "<span>Le chlore sert à la désinfecter. Certains filtres de douche sont conçus pour en réduire une partie, selon leurs fabricants.</span></li></ul>" + this.ring(p.pct, true);
     else {
       var chips = [a.peau && TAG_LABEL[a.peau]].concat((a.concerns || []).map(function (c) { return TAG_LABEL[c]; })).filter(Boolean);
@@ -2092,6 +2096,48 @@
     html += "<div class='cta'>" + (v.text.trim().length > 15 && !(filled && filled.length) ? "<button class='btn big' data-act='voicefill'" + (this.busy ? " disabled" : "") + ">" + (this.busy ? "Je lis ton message…" : "Remplir mes réponses") + "</button>" : "") + "<button class='btn " + (filled && filled.length ? "big" : "ghost") + "' data-act='voicego'>" + (filled && filled.length ? "Continuer" : "Je préfère répondre aux questions") + "</button></div>";
     return html + "<p class='note'>Avec la dictée, ta voix est transformée en texte par ton téléphone ou ton navigateur. Rien n'est enregistré : seul le texte sert à remplir tes réponses.</p>";
   };
+  // Dictée dans un champ texte du diagnostic.
+  A.dictate = function (field) {
+    var self = this, a = this.state.answers;
+    if (this.dictating === field) { try { this.recog && this.recog.stop(); } catch (e) {} this.dictating = null; return this.render(); }
+    if (!SpeechRec) { this.voiceMsg = null; alertField(this, field); return; }
+    try {
+      if (this.recog) try { this.recog.stop(); } catch (e) {}
+      var rec = this.recog = new SpeechRec(), base = a[field] ? String(a[field]).trim() + " " : "";
+      rec.lang = "fr-FR"; rec.continuous = true; rec.interimResults = true;
+      rec.onresult = function (e) { var fin = "", tmp = ""; for (var i = 0; i < e.results.length; i++) { if (e.results[i].isFinal) fin += e.results[i][0].transcript; else tmp += e.results[i][0].transcript; } a[field] = (base + fin).slice(0, 600); self.save(); var el = self.root.querySelector("[data-field='" + field + "']"); if (el) el.value = a[field] + (tmp ? " " + tmp : ""); };
+      rec.onerror = rec.onend = function () { self.dictating = null; self.render(); };
+      rec.start(); this.dictating = field; this.render();
+    } catch (e) { alertField(this, field); }
+  };
+  // Sans dictée intégrée : on place le curseur dans le champ, le micro du clavier prend le relais.
+  function alertField(app, field) { var el = app.root.querySelector("[data-field='" + field + "']"); if (el) { el.focus(); el.placeholder = "Touche le micro de ton clavier pour dicter…"; } }
+  // Dernière étape : créer son espace et recevoir sa routine par e-mail.
+  A.vFin = function () {
+    var a = this.state.answers, logged = this.host.getAttribute("data-customer-name"), f = this.fin = this.fin || { email: a.email || "", ok: false, news: false };
+    var html = "<div class='q'><h3>Ton espace soin est prêt" + (a.prenom ? ", " + esc(a.prenom) : "") + "</h3><p class='sub'>Ta routine, ton planner, ton suivi et tes conseils t'attendent. " + (logged ? "Ils sont enregistrés dans ton compte." : "Crée ton compte pour les retrouver sur ton téléphone et ton ordinateur, et reçois ta routine par e-mail.") + "</p></div>";
+    if (!logged) {
+      html += "<div class='tfields'><label><span>Ton e-mail</span><input type='email' data-finemail='1' value='" + esc(f.email) + "' placeholder='prenom@exemple.fr' autocomplete='email'></label></div>";
+      html += "<label class='toggle'><input type='checkbox' data-finok='1'" + (f.ok ? " checked" : "") + "> Je veux recevoir ma routine et mes rappels de soin par e-mail</label>";
+      html += "<label class='toggle'><input type='checkbox' data-finnews='1'" + (f.news ? " checked" : "") + "> J'accepte aussi les nouveautés et offres Sunsoari (facultatif)</label>";
+    }
+    if (this.finMsg) html += "<p class='why'>" + esc(this.finMsg) + "</p>";
+    var valid = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email) && f.ok;
+    html += "<div class='cta'>" + (logged ? "<button class='btn big' data-act='finsend'>Ouvrir mon espace soin</button>" : "<button class='btn big' data-act='finsend'" + (valid && !this.busy ? "" : " disabled") + ">" + (this.busy ? "Envoi…" : "Créer mon espace et recevoir ma routine") + "</button><button class='btn link' data-act='finskip'>Voir mon espace sans e-mail</button>") + "</div>";
+    return html + "<p class='note'>Ton e-mail sert à t'envoyer ta routine et à créer ton espace. Désinscription en un clic dans chaque e-mail. Tes photos ne sont jamais envoyées par e-mail.</p>";
+  };
+  A.finishDiag = function () { var s = this.state; s.done = true; s.doneAt = Date.now(); this.saveDay0(); this.save(); this.view = "espace"; this.etab = "routine"; this.emit("result", { answers: s.answers, email: s.answers.email || "" }); this.render(); };
+  // Envoi au serveur (data-email-endpoint) : il crée le compte client et envoie l'e-mail de routine.
+  A.finSend = function () {
+    var self = this, s = this.state, a = s.answers, f = this.fin, ep = this.host.getAttribute("data-email-endpoint"), logged = this.host.getAttribute("data-customer-name");
+    if (logged) return this.finishDiag();
+    a.email = f.email; s.emailOk = f.ok; s.newsOk = f.news; this.save();
+    var R = buildRoutine(a), names = function (l) { return l.map(function (it) { var p = byId(it.id); return p ? { etape: STEP_LABEL[it.step] || it.step, produit: p.brand + " " + p.name } : null; }).filter(Boolean); };
+    var payload = { email: f.email, prenom: a.prenom || "", consentement_routine: f.ok, consentement_offres: f.news, resultat: (skinProfile(a) ? SKIN_INFO[skinProfile(a).type].t : ""), routine: { matin: names(R.matin), soir: names(R.soir), hebdo: names(R.hebdo) }, resume: this.summaryText() };
+    if (!ep) { this.finMsg = "Démo : sur l'application en ligne, tu recevras ta routine à " + f.email + " et ton compte sera créé."; this.render(); var me = this; setTimeout(function () { me.finishDiag(); }, 1200); return; }
+    this.busy = true; this.render();
+    fetch(ep, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) }).then(function (r) { if (!r.ok) throw 0; self.finMsg = null; self.state.emailSent = Date.now(); self.save(); self.busy = false; self.finishDiag(); }, function () { self.busy = false; self.finMsg = "L'envoi n'a pas abouti. Ton espace est quand même prêt : réessaie plus tard depuis Mon compte."; self.render(); setTimeout(function () { self.finishDiag(); }, 1800); });
+  };
   A.voiceStart = function () {
     var self = this, v = this.voice;
     if (!SpeechRec) { this.voiceMsg = "La dictée directe n'est pas disponible ici : touche la zone de texte, puis le micro de ton clavier."; return this.render(); }
@@ -2336,6 +2382,7 @@
     if (!this.widget) {
       if (name) html += "<div class='acct'><b>Bonjour " + esc(name) + "</b><p>Ton diagnostic, ta routine et tes favoris sont liés à ton compte Sunsoari.</p><div class='acts'><a class='btn ghost' href='" + esc(this.shop) + "/account' target='_top'>Mes commandes</a><a class='btn link' href='" + esc(this.shop) + "/account/logout' target='_top'>Me déconnecter</a></div></div>";
       else html += "<div class='acct'><b>Connecte-toi</b><p>Pour retrouver ton diagnostic, ta routine, ton suivi et tes favoris sur ton téléphone et ton ordinateur.</p><div class='acts'><a class='btn' href='" + esc(this.host.getAttribute("data-login-url") || this.shop + "/account/login") + "' target='_top'>Me connecter</a><a class='btn ghost' href='" + esc(this.host.getAttribute("data-register-url") || this.shop + "/account/register") + "' target='_top'>Créer mon compte</a></div><small>Sans compte, tout reste enregistré sur cet appareil.</small></div>";
+      if (s.done && !name && !s.emailSent && !s.answers.email) html += "<button class='reco-card' data-act='finopen'><b>Reçois ta routine par e-mail</b><span>Et crée ton espace pour le retrouver partout</span></button>";
       if (s.done) html += "<button class='reco-card' data-view='reveal'><b>" + (a.prenom ? esc(a.prenom) + ", ta routine" : "Ma routine") + "</b><span>Diagnostic du " + new Date(s.doneAt || Date.now()).toLocaleDateString("fr-FR") + "</span></button>";
     }
     var tab = this.ftab || "produits", tabs = [["produits", "Produits"], ["article", "Articles"], ["video", "Vidéos"], ["post", "Posts"]];
@@ -2532,6 +2579,10 @@
     if (d.act === "scanbar") { this.scan = { mode: "bar" }; return this.render(); }
     if (d.act === "camscan") return this.camScan();
     if (d.act === "voicestart") return this.voiceStart();
+    if (d.act === "finsend") return this.finSend();
+    if (d.act === "finskip") return this.finishDiag();
+    if (d.act === "finopen") { var qf = this.visibleQuestions(); this.view = "diag"; this.step = qf.length - 1; return this.render(); }
+    if (d.dictate) { e.preventDefault(); return this.dictate(d.dictate); }
     if (d.act === "voicestop") { if (this.recog) try { this.recog.stop(); } catch (e) {} this.voice.rec = false; return this.render(); }
     if (d.act === "voicefill") return this.voiceFill();
     if (d.act === "voicego") { if (this.recog) try { this.recog.stop(); } catch (e) {} var qs3 = this.visibleQuestions(), a3 = s.answers, k3 = 1; for (; k3 < qs3.length; k3++) { var q3 = qs3[k3]; if (q3.type || !(q3.multi ? (a3[q3.id] || []).length : a3[q3.id])) break; } this.step = this.voiceFilled && this.voiceFilled.length ? k3 : 1; return this.render(); }
@@ -2573,6 +2624,8 @@
     var self3 = this;
     if (d.capslot && f) { this.cap.files[d.capslot] = f; this.capMsg = null; fileThumb(f, 240).then(function (t) { self3.cap.thumbs[d.capslot] = t; self3.render(); }); return; }
     if (d.capvideo && f) { this.capMsg = "Préparation de ta vidéo…"; this.render(); videoFrames(f, 5).then(function (fr) { self3.cap.frames = fr; self3.capMsg = null; self3.render(); }, function () { self3.capMsg = "Impossible de lire cette vidéo ici. Essaie les 3 photos."; self3.render(); }); return; }
+    if (d.finok) { this.fin.ok = e.target.checked; return this.render(); }
+    if (d.finnews) { this.fin.news = e.target.checked; return; }
     if (d.keepcap) { this.state.keepCap = e.target.checked; if (this.state.keepCap && this.state.analysis) this.saveDay0(); this.save(); return; }
     if (d.evophoto && f) { fileThumb(f, 240).then(function (t) { self3.evoDraft.photos[+d.evophoto] = t; self3.render(); }); return; }
     if (d.codephoto && f) { if (this.cam) { this.cam.msg = "Lecture de la photo…"; } return this.codeFromPhoto(f); }

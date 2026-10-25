@@ -228,6 +228,14 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
   - les photos sont stockées chiffrées dans l'UE avec un consentement explicite, et supprimables en un clic ;
   - en option, une vérification par l'esthéticienne Sunsoari avant envoi, pour les clientes Sunsoari+.
 
+## 5 duodecies. « Raconte-moi » : description libre, à l'oral ou à l'écrit
+- **Premier écran du diagnostic** : la cliente parle ou écrit librement. Par exemple : prénom, âge, femme, homme ou autre, métier et rythme, routine actuelle, ce qui la gêne sur la peau, les cheveux ou le corps, son budget.
+- **La dictée** : bouton micro avec la reconnaissance vocale du navigateur (français), et sinon le micro du clavier du téléphone. L'audio n'est pas enregistré : seul le texte est utilisé.
+- **Le remplissage** : « Remplir mes réponses » envoie le texte à l'IA avec la liste des codes autorisés de chaque question. L'IA ne remplit que ce qui est dit clairement. Sans IA, un repli lit l'âge, le prénom, le genre, les préoccupations, la texture des cheveux, la routine et le budget.
+- **La vérification** : la cliente voit « On a rempli pour toi », puis le questionnaire reprend à la première question sans réponse.
+- **Nouvelles questions** : « Tu es… » (femme, homme, autre, ne pas répondre ; la question sur la grossesse est sautée pour un homme) et « Ton budget soin par mois ».
+- **Plus tard** : enregistrer un message audio et le transcrire sur le serveur (par exemple avec Whisper), pour les navigateurs sans dictée.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

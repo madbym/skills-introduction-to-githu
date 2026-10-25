@@ -582,6 +582,7 @@
   var SECTIONS = ["Ta douche", "Ton visage", "Ton corps", "Tes cheveux", "Tes envies"];
 
   var QUESTIONS = [
+    { id: "voix", sec: 0, type: "voice", kicker: "Toi" },
     { id: "lieu", sec: 0, title: "Où prends-tu ta douche le plus souvent ?", sub: "On te propose le bon format : à installer chez toi ou à emporter.",
       options: [["maison", "Chez moi", "Ma douche de tous les jours", "home"], ["voyage", "Souvent en déplacement", "Hôtel, location, salle de sport", "plane"], ["deux", "Les deux", "Chez moi et en voyage", "both"]] },
     { id: "flexible", sec: 0, title: "Ta douche a-t-elle une douchette reliée à un flexible ?", sub: "C'est là que se vissent nos pommeaux et nos coques.",
@@ -594,6 +595,8 @@
     { id: "photoVisage", sec: 1, type: "capture" },
     { id: "toi", sec: 1, type: "text", title: "Faisons connaissance", sub: "Facultatif : pour personnaliser ton résultat. Rien ne quitte ton téléphone.",
       fields: [["prenom", "Ton prénom", "text", ""], ["age", "Ton âge", "number", ""], ["rythme", "Ton rythme de vie", "text", "Ex. maman, travail de nuit, étudiante…"]] },
+    { id: "genre", sec: 1, title: "Tu es…", sub: "Pour adapter nos conseils. Tu peux passer.",
+      options: [["femme", "Une femme", "", "heart"], ["homme", "Un homme", "", "heart"], ["autre", "Je me décris autrement", "", "sprout"], ["nsp", "Je préfère ne pas répondre", "", "ask"]] },
     { id: "infoTest", sec: 1, type: "info", kind: "test" },
     { id: "pt_apres", sec: 1, title: "Une heure après t'être lavé le visage, sans rien appliquer, ta peau…", sub: "Pas sûre ? Fais le test ce soir avec un nettoyant doux, puis reviens.",
       options: [["tire", "Tiraille un peu partout", "", "dry"], ["tzone", "Brille sur le front, le nez ou le menton", "Le reste du visage va bien", "halfsun"], ["brille", "Brille un peu partout", "", "drops"], ["ok", "Est confortable", "Ni sèche, ni grasse", "heart"]] },
@@ -633,7 +636,7 @@
       options: [["fort", "D'un produit trop fort ou utilisé trop souvent", "", "flame"], ["peeling", "D'un peeling ou d'un soin en institut", "", "wave"], ["medicament", "D'un traitement médical", "Acné, rétinoïde sur ordonnance, antibiotique…", "ask"], ["soleil", "Du soleil après le produit", "", "sun"], ["melange", "D'un mélange de plusieurs actifs", "", "dots"], ["nsp", "Je ne sais pas", "", "none"]] },
     { id: "valeurs", sec: 1, title: "Évites-tu certains ingrédients par conviction ?", sub: "", multi: true, none: "aucun",
       options: [["vegan", "Ingrédients d'origine animale", "Je préfère le vegan", "leaf"], ["aucun", "Non, pas particulièrement", "", "none"]] },
-    { id: "grossesse", sec: 1, title: "En ce moment, es-tu…", sub: "Ta peau change avec les hormones, et certains actifs sont déconseillés pendant la grossesse. Ta réponse reste sur ton téléphone.",
+    { id: "grossesse", sec: 1, skipIf: function (a) { return a.genre === "homme"; }, title: "En ce moment, es-tu…", sub: "Ta peau change avec les hormones, et certains actifs sont déconseillés pendant la grossesse. Ta réponse reste sur ton téléphone.",
       options: [["oui", "Enceinte ou allaitante", "", "heart"], ["menopause", "En ménopause ou périménopause", "", "moon"], ["non", "Rien de tout ça", "", "none"], ["nsp", "Je préfère ne pas répondre", "", "ask"]] },
     { id: "actuels", sec: 1, type: "text", title: "Ta routine actuelle", sub: "Pas de stress : « rien » est une très bonne réponse. Ça nous aide à garder ce qui marche déjà.",
       fields: [["produitsVisage", "Les produits visage que tu utilises (nom et marque)", "area", "Ex. gel nettoyant CeraVe matin et soir, sérum niacinamide le matin…"], ["produitsCorps", "Et pour le corps ?", "text", "Ex. gel douche, crème Nivea…"]] },
@@ -665,6 +668,8 @@
     { id: "format", sec: 4, title: "Quelle routine te ressemble ?", sub: "Tu pourras changer à tout moment depuis ta routine.",
       options: [["essentielle", "L'essentiel", "3 ou 4 gestes, le strict nécessaire", "sprout"], ["complete", "La routine complète", "Toutes les étapes, façon K-beauty", "sunmoon"], ["equilibree", "Entre les deux", "Les bases et un soin ciblé", "halfsun"]] },
     { id: "notes", sec: 4, type: "text", title: "Un mot de plus ?", sub: "Facultatif.", fields: [["notes", "Allergies, objectifs, budget, ce que tu veux nous dire…", "area", ""]] },
+    { id: "budgetSoin", sec: 4, title: "Ton budget soin par mois, visage, corps et cheveux ?", sub: "On te propose d'abord ce qui rentre dans ton budget.",
+      options: [["b30", "Moins de 30 €", "", "coin"], ["b60", "30 à 60 €", "", "coin"], ["b100", "60 à 100 €", "", "coin"], ["b100p", "Plus de 100 €", "", "coin"]] },
     { id: "budget", sec: 4, title: "Quel budget pour démarrer ton rituel douche ?", sub: "Tu pourras compléter ton rituel plus tard.",
       options: [["petit", "Moins de 30 €", "", "coin"], ["moyen", "30 à 70 €", "", "coin"], ["grand", "Plus de 70 €", "", "coin"]] }
   ];
@@ -962,6 +967,8 @@
     ".plan>b{display:block;margin:0 0 8px 4px}",
     ".pstep small{color:var(--muted)}",
     ".pstep.later{opacity:.55;cursor:default}",
+    ".voicebox{display:flex;align-items:center;gap:14px;margin:12px 0}.mic{width:72px;height:72px;border-radius:50%;border:0;background:var(--water);color:#fff;font-size:28px;cursor:pointer;box-shadow:0 8px 24px -10px var(--water);flex:none}.mic.on{background:#C06F55;animation:pulse 1.2s infinite}@keyframes pulse{50%{box-shadow:0 0 0 12px rgba(192,111,85,.15)}}.voicebox span{color:var(--muted);font-size:14px}",
+    "#voicetext{width:100%;font:inherit;font-size:16px;border:1px solid var(--line);border-radius:16px;padding:12px;background:#fff;color:var(--ink);resize:vertical}.ex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.ex span{font-size:12px;background:var(--sand-soft);border-radius:999px;padding:4px 10px;color:var(--muted)}",
     ".capgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.capslot{display:grid;gap:6px;justify-items:center;cursor:pointer;font-size:12px;text-align:center}.capslot img,.capico{width:100%;aspect-ratio:3/4;border-radius:14px;object-fit:cover;border:1.5px dashed var(--water);display:flex;align-items:center;justify-content:center;font-size:26px;color:var(--water);background:#fff}.capslot.has img{border-style:solid;border-color:var(--line)}",
     ".capframes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:10px 0}.capframes img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px}",
     ".esphead{margin-bottom:10px}.esphead h3{font-family:var(--display);font-weight:400;font-size:clamp(28px,7vw,38px);margin:0 0 8px;line-height:1.05}.esphead .chips{display:flex;flex-wrap:wrap;gap:6px}.esphead .chips span{font-size:12px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--muted)}",
@@ -1560,7 +1567,7 @@
     this.root.addEventListener("click", function (e) { self.onClick(e); });
     this.root.addEventListener("change", function (e) { self.onChange(e); });
     this.root.addEventListener("submit", function (e) { e.preventDefault(); self.onSubmit(e); });
-    this.root.addEventListener("input", function (e) { if (e.target.dataset && e.target.dataset.evo) { self.evoDraft[e.target.dataset.evo] = e.target.value; return; } if (e.target.dataset && e.target.dataset.field) { self.state.answers[e.target.dataset.field] = e.target.value.slice(0, 600); self.save(); return; } if (e.target.id === "q-search") { self.query = e.target.value; self.renderKeepFocus("q-search"); } });
+    this.root.addEventListener("input", function (e) { if (e.target.dataset && e.target.dataset.voicetext) { self.voice.text = e.target.value.slice(0, 3000); var need = self.voice.text.trim().length > 15; if (need !== !!self.root.querySelector("[data-act='voicefill']") && !(self.voiceFilled && self.voiceFilled.length)) self.renderKeepFocus("voicetext"); return; } if (e.target.dataset && e.target.dataset.evo) { self.evoDraft[e.target.dataset.evo] = e.target.value; return; } if (e.target.dataset && e.target.dataset.field) { self.state.answers[e.target.dataset.field] = e.target.value.slice(0, 600); self.save(); return; } if (e.target.id === "q-search") { self.query = e.target.value; self.renderKeepFocus("q-search"); } });
     this.root.addEventListener("error", function (e) { if (e.target.tagName === "IMG" && !e.target.dataset.fallback) { e.target.dataset.fallback = "1"; e.target.src = PLACEHOLDER; } }, true);
     initAI(host).then(function () { self.render(); });
   }
@@ -1609,7 +1616,7 @@
       var inSec = qs.filter(function (x) { return x.sec === i; }), done = inSec.filter(function (x) { return qs.indexOf(x) < step; }).length;
       return "<span class='seg'><i style='width:" + (q.sec > i ? 100 : q.sec < i ? 0 : Math.max(6, Math.round(done / inSec.length * 100))) + "%'></i></span>";
     }).join("");
-    var html = "<div class='qhead'><button class='back' data-act='prev' aria-label='Retour'" + (step === 0 ? " disabled" : "") + "><svg viewBox='0 0 24 24'><path d='M15 5l-7 7 7 7'/></svg></button><div class='segs'>" + segs + "</div></div><p class='kicker'>" + SECTIONS[q.sec] + "</p>";
+    var html = "<div class='qhead'><button class='back' data-act='prev' aria-label='Retour'" + (step === 0 ? " disabled" : "") + "><svg viewBox='0 0 24 24'><path d='M15 5l-7 7 7 7'/></svg></button><div class='segs'>" + segs + "</div></div><p class='kicker'>" + (q.kicker || SECTIONS[q.sec]) + "</p>";
     if (q.type === "info") return html + this.vInfo(q);
     if (q.type === "text") {
       html += "<div class='q'><h3>" + esc(q.title) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "") + "<div class='tfields'>" + q.fields.map(function (f) { var v = esc(a[f[0]] || ""); return "<label><span>" + esc(f[1]) + "</span>" + (f[2] === "area" ? "<textarea data-field='" + f[0] + "' rows='3' placeholder='" + esc(f[3]) + "'>" + v + "</textarea>" : "<input data-field='" + f[0] + "' type='" + f[2] + "' value='" + v + "' placeholder='" + esc(f[3]) + "'" + (f[2] === "number" ? " min='10' max='99' inputmode='numeric'" : "") + ">") + "</label>"; }).join("") + "</div></div>";
@@ -1617,6 +1624,7 @@
     }
     if (q.type === "photo") return html + this.vPhotoStep(q);
     if (q.type === "capture") return html + this.vCapture(q);
+    if (q.type === "voice") return html + this.vVoice(q);
     var val = a[q.id];
     html += "<div class='q'><h3>" + esc(q.title) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "");
     if (q.link) html += "<a class='ext' href='" + q.link[1] + "' target='_blank' rel='noopener'>" + esc(q.link[0]) + " ↗</a>";
@@ -2069,6 +2077,73 @@
     });
   }
 
+  // ---------------------------------------------------------------------------
+  // « RACONTE-MOI » : la cliente parle (ou écrit) librement, l'IA remplit ses réponses
+  // ---------------------------------------------------------------------------
+  var SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+  A.vVoice = function () {
+    var v = this.voice = this.voice || { text: "", rec: false }, a = this.state.answers, filled = this.voiceFilled;
+    var html = "<div class='q'><h3>Raconte-moi ta peau, en quelques phrases</h3><p class='sub'>Parle comme à une amie : qui tu es, ton âge, ton rythme de vie, ta routine, ce qui te gêne sur la peau, les cheveux ou le corps, ton budget. On remplit tes réponses pour toi, tu vérifies ensuite.</p></div>";
+    html += "<div class='voicebox'><button class='mic" + (v.rec ? " on" : "") + "' data-act='" + (v.rec ? "voicestop" : "voicestart") + "' aria-label='" + (v.rec ? "Arrêter" : "Parler") + "'>" + (v.rec ? "■" : "🎤") + "</button><span>" + (v.rec ? "Je t'écoute… touche pour arrêter" : SpeechRec ? "Touche le micro et parle" : "Dicte avec le micro de ton clavier, ou écris") + "</span></div>";
+    html += "<textarea id='voicetext' data-voicetext='1' rows='6' placeholder='Ex. : Je m'appelle Awa, j'ai 32 ans, je suis entrepreneure et maman. J'ai la peau mixte, des boutons sur le menton et des marques. Cheveux crépus secs. Je fais une routine le soir seulement. Budget 40 € par mois.'>" + esc(v.text) + "</textarea>";
+    html += "<div class='ex'>" + ["Je suis…, j'ai … ans", "Mon métier, mon rythme", "Ma routine aujourd'hui", "Peau, cheveux, corps : ce qui me gêne", "Mon budget"].map(function (x) { return "<span>" + x + "</span>"; }).join("") + "</div>";
+    if (this.voiceMsg) html += "<p class='why'>" + esc(this.voiceMsg) + "</p>";
+    if (filled && filled.length) html += "<div class='whybox'><b>On a rempli pour toi</b><ul class='tipl'>" + filled.map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + "</ul><small>Tu pourras tout vérifier et corriger dans les questions suivantes.</small></div>";
+    html += "<div class='cta'>" + (v.text.trim().length > 15 && !(filled && filled.length) ? "<button class='btn big' data-act='voicefill'" + (this.busy ? " disabled" : "") + ">" + (this.busy ? "Je lis ton message…" : "Remplir mes réponses") + "</button>" : "") + "<button class='btn " + (filled && filled.length ? "big" : "ghost") + "' data-act='voicego'>" + (filled && filled.length ? "Continuer" : "Je préfère répondre aux questions") + "</button></div>";
+    return html + "<p class='note'>Avec la dictée, ta voix est transformée en texte par ton téléphone ou ton navigateur. Rien n'est enregistré : seul le texte sert à remplir tes réponses.</p>";
+  };
+  A.voiceStart = function () {
+    var self = this, v = this.voice;
+    if (!SpeechRec) { this.voiceMsg = "La dictée directe n'est pas disponible ici : touche la zone de texte, puis le micro de ton clavier."; return this.render(); }
+    try {
+      var rec = this.recog = new SpeechRec(), base = v.text ? v.text.trim() + " " : "";
+      rec.lang = "fr-FR"; rec.continuous = true; rec.interimResults = true;
+      rec.onresult = function (e) { var fin = "", tmp = ""; for (var i = 0; i < e.results.length; i++) { if (e.results[i].isFinal) fin += e.results[i][0].transcript; else tmp += e.results[i][0].transcript; } v.text = (base + fin).slice(0, 3000); var ta = self.root.querySelector("#voicetext"); if (ta) ta.value = v.text + (tmp ? " " + tmp : ""); };
+      rec.onerror = function (e) { v.rec = false; self.voiceMsg = e.error === "not-allowed" ? "Le micro n'est pas autorisé : utilise le micro de ton clavier, ou écris." : "La dictée s'est arrêtée. Tu peux reprendre ou écrire."; self.render(); };
+      rec.onend = function () { v.rec = false; self.render(); };
+      rec.start(); v.rec = true; this.voiceMsg = null; this.render();
+    } catch (e) { this.voiceMsg = "La dictée n'est pas disponible ici : utilise le micro de ton clavier."; this.render(); }
+  };
+  // Valeurs autorisées par question, pour cadrer l'IA et le repli sans IA.
+  A.voiceSchema = function () {
+    return QUESTIONS.filter(function (q) { return q.options && !q.type; }).map(function (q) { return q.id + (q.multi ? " (liste)" : "") + " : " + q.options.map(function (o) { return o[0] + "=" + o[1]; }).join(" | "); }).join("\n");
+  };
+  A.applyVoice = function (r) {
+    var a = this.state.answers, filled = [], ok = {};
+    QUESTIONS.forEach(function (q) { if (q.options && !q.type) ok[q.id] = q; });
+    Object.keys((r && r.answers) || {}).forEach(function (id) {
+      var q = ok[id], v = r.answers[id]; if (!q || v == null) return;
+      var codes = q.options.map(function (o) { return o[0]; });
+      if (q.multi) { var l = (Array.isArray(v) ? v : [v]).filter(function (x) { return codes.indexOf(x) > -1; }).slice(0, q.max || 9); if (l.length) { a[id] = l; filled.push(q.title.replace(/ ?[?\u2026]$/, "") + " : " + l.map(function (x) { return q.options[codes.indexOf(x)][1]; }).join(", ")); } }
+      else if (codes.indexOf(v) > -1) { a[id] = v; filled.push(q.title.replace(/ ?[?\u2026]$/, "") + " : " + q.options[codes.indexOf(v)][1]); }
+    });
+    ["prenom", "age", "rythme", "produitsVisage", "produitsCorps", "notes"].forEach(function (k) { var v = r && r.fields && r.fields[k]; if (v) { a[k] = String(v).slice(0, 600); filled.push({ prenom: "Prénom", age: "Âge", rythme: "Rythme de vie", produitsVisage: "Produits visage", produitsCorps: "Produits corps", notes: "Notes" }[k] + " : " + a[k]); } });
+    var sp = skinProfile(a); if (sp) a.peau = sp.peau;
+    this.voiceFilled = filled; this.save();
+  };
+  // Repli sans IA : quelques repères simples dans le texte.
+  function voiceLocal(t) {
+    var low = " " + t.toLowerCase() + " ", r = { answers: {}, fields: {} }, m;
+    if ((m = t.match(/(\d{2})\s*ans/))) r.fields.age = m[1];
+    if ((m = t.match(/je m'appelle\s+([A-Za-z\u00C0-\u017F-]+)/i))) r.fields.prenom = m[1];
+    if (/\b(une femme|maman|enceinte|je suis entrepreneure)\b/.test(low)) r.answers.genre = "femme"; if (/\b(un homme|papa)\b/.test(low)) r.answers.genre = "homme";
+    if (/enceinte|allaite/.test(low)) r.answers.grossesse = "oui"; if (/ménopause|menopause/.test(low)) r.answers.grossesse = "menopause";
+    var c = []; [["tach", "taches"], ["bouton", "imperfections"], ["acné", "imperfections"], ["points noirs", "pointsnoirs"], ["marque", "marques"], ["ride", "rides"], ["rougeur", "rougeurs"], ["cerne", "cernes"], ["terne", "teint"], ["brill", "brillance"], ["sèche", "secheresse"], ["tiraill", "secheresse"]].forEach(function (k) { if (low.indexOf(k[0]) > -1 && c.indexOf(k[1]) < 0) c.push(k[1]); }); if (c.length) r.answers.concerns = c.slice(0, 5);
+    [["crépu", "crepus"], ["frisé", "crepus"], ["bouclé", "boucles"], ["ondulé", "ondules"], ["raide", "raides"], ["lisse", "raides"]].some(function (k) { if (low.indexOf(k[0]) > -1) { r.answers.texture = k[1]; return true; } });
+    if (/matin et (le )?soir/.test(low)) r.answers.routine = "deux"; else if (/le soir seulement|seulement le soir/.test(low)) r.answers.routine = "soir"; else if (/pas de routine|aucune routine/.test(low)) r.answers.routine = "aucune";
+    if ((m = low.match(/(\d{2,3})\s*(€|euros)/))) { var b = +m[1]; r.answers.budgetSoin = b < 30 ? "b30" : b <= 60 ? "b60" : b <= 100 ? "b100" : "b100p"; }
+    if ((m = t.match(/je suis\s+([a-z\u00E0-\u00FF -]{4,40}?)(?:[,.]|\s+et\s|$)/i)) && !/femme|homme/.test(m[1])) r.fields.rythme = m[1].trim();
+    return r;
+  }
+  A.voiceFill = function () {
+    var self = this, t = (this.voice.text || "").trim(); if (t.length < 10) return;
+    if (this.recog) try { this.recog.stop(); } catch (e) {}
+    if (AI.mode === "none") { this.applyVoice(voiceLocal(t)); this.voiceMsg = this.voiceFilled.length ? null : "Je n'ai pas trouvé de réponse claire : passe aux questions."; return this.render(); }
+    this.busy = true; this.render();
+    var prompt = "Une cliente se décrit pour un diagnostic beauté. Remplis uniquement ce qui est dit clairement, n'invente rien. Utilise UNIQUEMENT les codes autorisés ci-dessous.\n" + this.voiceSchema() +
+      "\nChamps libres : prenom, age (nombre), rythme (métier, mode de vie), produitsVisage, produitsCorps, notes (allergies, objectifs, autres infos utiles).\nRéponds uniquement en JSON : {\"answers\":{\"id\":\"code\" ou [\"code\"]},\"fields\":{\"prenom\":\"\"}}\n\nTexte de la cliente :\n" + t.slice(0, 3000);
+    aiCall(prompt, { modelTier: "default" }, true).then(function (r) { self.applyVoice(r); if (!self.voiceFilled.length) self.applyVoice(voiceLocal(t)); }, function () { self.applyVoice(voiceLocal(t)); }).then(function () { self.busy = false; self.render(); });
+  };
   A.vCapture = function (q) {
     var self = this, c = this.cap = this.cap || { mode: "photos", files: {}, thumbs: {}, frames: [] }, s = this.state;
     var html = "<div class='q'><h3>Montre-nous ta peau</h3><p class='sub'>Pour un espace soin vraiment adapté, à la lumière du jour (face à une fenêtre), visage nu : sans maquillage, sans filtre, cheveux attachés.</p></div>";
@@ -2333,7 +2408,7 @@
     var R = buildRoutine(a), names = ["matin", "soir", "hebdo", "douche"].map(function (k) { return k + " : " + R[k].map(function (it) { var p = byId(it.id); return p ? p.brand + " " + p.name : ""; }).join(", "); }).join(" | ");
     var cat = allProducts().map(function (p) { return p.brand + " " + p.name + " [" + (p.act || []).map(function (x) { return ING[x] ? ING[x].n : x; }).join(", ") + "]" + (p.own ? " (vendu par Sunsoari)" : ""); }).join("; ");
     var sp = skinProfile(a);
-    return "Profil de la cliente : " + (t.join(", ") || "non renseigné") + (sp ? ". Test de peau : " + SKIN_INFO[sp.type].t + (sp.deshy ? ", déshydratée" : "") + (sp.sensible ? ", sensible" : "") + ". Saisons : " + (a.saisons || []).join(", ") + ". Quotidien : " + (a.modeVie || []).join(", ") + ". Antécédents : " + (a.antecedents || []).join(", ") : ". Type de peau inconnu : aide-la à le découvrir") + ". Eau : " + (a.eau || "?") + ". Sa routine : " + names + ". Catalogue : " + cat + ".";
+    return "Profil de la cliente : " + (a.genre ? "genre " + a.genre + ", " : "") + (a.age ? a.age + " ans, " : "") + (a.rythme ? "rythme : " + a.rythme + ", " : "") + (a.budgetSoin ? "budget mensuel " + a.budgetSoin + ", " : "") + (t.join(", ") || "non renseigné") + (sp ? ". Test de peau : " + SKIN_INFO[sp.type].t + (sp.deshy ? ", déshydratée" : "") + (sp.sensible ? ", sensible" : "") + ". Saisons : " + (a.saisons || []).join(", ") + ". Quotidien : " + (a.modeVie || []).join(", ") + ". Antécédents : " + (a.antecedents || []).join(", ") : ". Type de peau inconnu : aide-la à le découvrir") + ". Eau : " + (a.eau || "?") + ". Sa routine : " + names + ". Catalogue : " + cat + ".";
   };
   A.ask = function (question, pid) {
     var self = this, p = pid ? byId(pid) || (this.scan && this.scan.result) : null;
@@ -2456,6 +2531,10 @@
     if (d.act === "scanpaste") { this.scan = { mode: "paste" }; return this.render(); }
     if (d.act === "scanbar") { this.scan = { mode: "bar" }; return this.render(); }
     if (d.act === "camscan") return this.camScan();
+    if (d.act === "voicestart") return this.voiceStart();
+    if (d.act === "voicestop") { if (this.recog) try { this.recog.stop(); } catch (e) {} this.voice.rec = false; return this.render(); }
+    if (d.act === "voicefill") return this.voiceFill();
+    if (d.act === "voicego") { if (this.recog) try { this.recog.stop(); } catch (e) {} var qs3 = this.visibleQuestions(), a3 = s.answers, k3 = 1; for (; k3 < qs3.length; k3++) { var q3 = qs3[k3]; if (q3.type || !(q3.multi ? (a3[q3.id] || []).length : a3[q3.id])) break; } this.step = this.voiceFilled && this.voiceFilled.length ? k3 : 1; return this.render(); }
     if (d.capmode) { this.cap.mode = d.capmode; this.capMsg = null; return this.render(); }
     if (d.act === "capanalyse") return this.capAnalyse();
     if (d.etab) { this.etab = d.etab; return this.render(); }

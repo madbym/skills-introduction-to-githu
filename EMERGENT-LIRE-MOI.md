@@ -1,15 +1,56 @@
-# Mon Rituel · Sunsoari — point d'entrée pour Emergent
+# Mon Rituel · Sunsoari : point d'entrée pour Emergent (mis à jour le 26 octobre 2026)
 
-Ce dépôt contient tout ce qu'il faut pour construire l'application « Mon Rituel · Sunsoari ».
+L'application « Mon Rituel · Sunsoari » existe déjà sous forme de prototype complet et testé. Ton travail : la mettre en ligne et ajouter le serveur (IA, comptes, e-mails, données, abonnement), **sans changer le parcours ni les textes**.
 
-## Fichiers à lire, dans cet ordre
-1. `sunsoari-rituel/CAHIER-DES-CHARGES-APP.md` : le cahier des charges complet (comptes, abonnement Sunsoari+ à 4,90 €/mois ou 39 €/an avec 7 jours d'essai, parcours façon Lóvi, écrans, stories, tutoriels, scan visage, gamme SHIFT prioritaire, espace soin personnalisé avec plan d'introduction semaine par semaine (section 5 quater), mobile et web, règles de contenu).
-2. `sunsoari-rituel/sunsoari-app.js` : le prototype fonctionnel. Il contient les données et la logique validées à reprendre telles quelles : catalogue Shopify (`P`, avec les identifiants de variantes SHIFT et Onsha), autres marques (`EXT`), questions (`QUESTIONS`), moteur de recommandation (`recommend`, `routinePlan`, `insights`), score de compatibilité (`fitScore`, `parseInci`), ingrédients (`ING`), tendances (`TRENDS`), stories (`STORIES`), tutoriels (`TUTOS`), guides (`GUIDES`), recharges (`REFILLS`), plan d'introduction (`introPlan`) et calendrier du soir (`eveningCalendar`).
-3. `sunsoari-rituel/app/` : la version installable (manifeste, icônes) à reproduire.
-4. `sunsoari-rituel/demo.html` : la page de démonstration du prototype.
+## Fichiers, dans l'ordre de lecture
+| Fichier | Rôle |
+|---|---|
+| `sunsoari-rituel/PROMPT-EMERGENT.md` | Les 6 messages de travail, à suivre un par un |
+| `sunsoari-rituel/CAHIER-DES-CHARGES-APP.md` | Le cahier des charges complet (sections 1 à 9, avec 5 quater à 5 quindecies) |
+| `sunsoari-rituel/sunsoari-app.js` | **La référence** : l'application complète (données, questions, moteur de recommandation, écrans) |
+| `sunsoari-rituel/demo.html` | La page qui charge l'application |
+| `sunsoari-rituel/app/` | Manifeste et icônes pour l'installation sur téléphone (PWA) |
+| `sunsoari-rituel/img/` | 16 photos d'ambiance Sunsoari (Onsha, SHIFT) |
+| `sunsoari-rituel/email-routine.html` | Modèle de l'e-mail de routine (Klaviyo ou Shopify Email) |
+| `sunsoari-rituel/shopify-section-mon-rituel-app.liquid` | Section Shopify qui affiche l'application sur sunsoari.fr |
+| `sunsoari-rituel/PROMPT-SHOPIFY-BLOCKS.md` | Installation sur sunsoari.fr avec le générateur de blocs Shopify |
+| `sunsoari-rituel/MEDIATHEQUE-A-EXPLOITER.md` | Photos et vidéos du Drive : ce qu'on peut utiliser, et ce qu'il ne faut pas utiliser |
+| `sunsoari-rituel/marques-a-ajouter.csv` | Modèle pour ajouter des marques au catalogue |
 
-## Message à envoyer à Emergent
-> Lis `EMERGENT-LIRE-MOI.md`, puis `sunsoari-rituel/CAHIER-DES-CHARGES-APP.md`, et construis l'application décrite en reprenant exactement les données et la logique de `sunsoari-rituel/sunsoari-app.js`. Commence par la phase 1 : onboarding, routine révélée (Matin, Soir, Hebdo, Douche avec la collection SHIFT), barre de navigation et écrans Aujourd'hui, Produits, Scan, Ressources, Assistante. Ensuite : comptes, abonnement Stripe, IA.
+Les fichiers `sunsoari-rituel.js` et `sunsoari-beaute.js` sont d'anciennes versions : ne les utilise pas.
+
+## Ce que fait l'application aujourd'hui
+- **Diagnostic d'environ 50 écrans**, une question par écran, avec un émoji par réponse, une barre de progression en 5 parties et un message d'encouragement à chaque nouvelle partie. Il couvre :
+  - la douche ;
+  - la photo ou la vidéo du visage ;
+  - « Raconte-moi », à l'oral ou à l'écrit ;
+  - le test du type de peau en plusieurs questions ;
+  - les antécédents, la carnation et les préoccupations ;
+  - les réactions et leur cause ;
+  - grossesse et ménopause (masquées pour un homme), barbe et rasage (pour les hommes) ;
+  - le corps ;
+  - les cheveux : texture de 2A à 4C, porosité, cuir chevelu, signes et diagnostics médicaux, coiffures ;
+  - les envies, les marques préférées, le format de routine et le budget.
+- **Dictée** sur chaque champ texte. Si le micro est bloqué, l'app bascule sur la dictée du clavier.
+- **Fin du parcours** : e-mail et consentements séparés, puis l'espace soin.
+- **Espace soin en 10 onglets** : Ma routine (Matin, SPF, Soir, Corps, Cheveux), Mon planner, Mon évolution, Ma semaine, Protection solaire, Recommandations, Cheveux (routine, guide de texture, porosité, cuir chevelu, compléments), Mes produits, Diagnostic, Astuces.
+- **Autres écrans** : scanner de codes-barres et de QR codes (Open Beauty Facts), bibliothèque de plus de 220 produits (K-beauty, J-beauty, C-beauty, marques africaines et afro), assistante, compte et favoris.
+
+## Attributs de la balise `<div data-sunsoari-rituel>`
+| Attribut | Rôle |
+|---|---|
+| `data-shop` | Boutique, pour les liens produits et panier |
+| `data-whatsapp` | Numéro WhatsApp |
+| `data-instagram` | Compte Instagram |
+| `data-img-base` | Adresse des images |
+| `data-contact` | Page contact |
+| `data-customer-name` | Prénom de la cliente connectée |
+| `data-login-url` | Page de connexion |
+| `data-register-url` | Page d'inscription |
+| `data-widget="favoris"` | Affiche seulement les favoris |
+| `data-ai-endpoint` | Serveur IA : `POST {input, json, images}` → `{text}` |
+| `data-email-endpoint` | Envoi de la routine par e-mail |
+| `data-checkout-url` | Paiement de l'abonnement Sunsoari+ |
 
 ## Branche
-Tout le travail est sur la branche `claude/sunsoari-rituel-app`.
+Tout le travail est sur la branche `claude/sunsoari-rituel-app` du dépôt `madbym/skills-introduction-to-githu`.

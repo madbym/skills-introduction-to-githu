@@ -25,6 +25,8 @@
     {%- if section.settings.instagram != blank %} data-instagram="{{ section.settings.instagram }}"{% endif %}
     {%- if section.settings.img_base != blank %} data-img-base="{{ section.settings.img_base }}"{% endif %}
     {%- if section.settings.display == 'favoris' %} data-widget="favoris"{% endif %}
+    {%- if section.settings.ai_endpoint != blank %} data-ai-endpoint="{{ section.settings.ai_endpoint }}"{% endif %}
+    {%- if section.settings.email_endpoint != blank %} data-email-endpoint="{{ section.settings.email_endpoint }}"{% endif %}
     {%- if customer %} data-customer-name="{{ customer.first_name | escape }}"{% endif %}
     data-login-url="{{ routes.account_login_url }}"
     data-register-url="{{ routes.account_register_url }}"></div>
@@ -45,6 +47,8 @@
     { "type": "text", "id": "instagram", "label": "Compte Instagram (sans @)", "default": "sunsoari" },
     { "type": "text", "id": "img_base", "label": "Adresse des images (dossier Fichiers Shopify)" },
     { "type": "url", "id": "contact_url", "label": "Lien de contact" },
+    { "type": "text", "id": "ai_endpoint", "label": "Adresse du serveur IA (Emergent)", "info": "Laisser vide tant que le serveur n'est pas prêt : l'application fonctionne sans IA." },
+    { "type": "text", "id": "email_endpoint", "label": "Adresse d'envoi de la routine par e-mail (Emergent)", "info": "Laisser vide tant que le serveur n'est pas prêt." },
     { "type": "range", "id": "padding", "label": "Espacement vertical", "min": 0, "max": 80, "step": 8, "unit": "px", "default": 24 }
   ],
   "presets": [{ "name": "Mon Rituel (application)" }]

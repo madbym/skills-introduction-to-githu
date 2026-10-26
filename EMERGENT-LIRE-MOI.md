@@ -52,6 +52,7 @@ Les fichiers `sunsoari-rituel.js` et `sunsoari-beaute.js` sont d'anciennes versi
 | `data-ai-endpoint` | Serveur IA : `POST {input, json, images}` → `{text}` |
 | `data-email-endpoint` | Envoi de la routine par e-mail |
 | `data-checkout-url` | Paiement de l'abonnement Sunsoari+ |
+| `data-plus` | La cliente est abonnée à Sunsoari+ (étiquette Shopify `sunsoari-plus`) : débloque le planner, l'évolution, Ma semaine et l'Académie |
 
 ## Branche
 Tout le travail est sur la branche `claude/sunsoari-rituel-app` du dépôt `madbym/skills-introduction-to-githu`.

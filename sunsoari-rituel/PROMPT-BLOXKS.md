@@ -85,7 +85,7 @@ Branche l'application sur le serveur créé avec Emergent. Je te donnerai les ad
 
 ## Message 3 · Abonnement et publication
 
-- **Sunsoari+** : 4,90 €/mois ou 39 €/an, avec 7 jours d'essai. Sur iPhone et Android, l'abonnement numérique passe par les achats intégrés d'Apple et de Google. Vérifie les règles des stores avant la publication.
+- **Sunsoari+** : 2,99 €/mois ou 24,90 €/an, avec 7 jours d'essai. Le diagnostic et la routine restent gratuits ; l'abonnement débloque le planner, l'évolution, Ma semaine, les vidéos de l'Académie, l'IA et l'assistante sans limite. Sur iPhone et Android, l'abonnement numérique passe par les achats intégrés d'Apple et de Google. Vérifie les règles des stores avant la publication.
 - **Confidentialité :** prépare les fiches App Store et Google Play, en particulier les rubriques sur les données collectées (photos, données de santé). Les données de santé ne partent sur le serveur qu'avec un consentement explicite et séparé.
 - **Avant de publier**, fais-moi tester une version de test (TestFlight sur iPhone, test interne sur Android).
 

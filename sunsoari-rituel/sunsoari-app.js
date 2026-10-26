@@ -824,15 +824,59 @@
   var CHEERS = ["", "Ta douche, c'est noté 💧 On passe à ton visage.", "Ton visage n'a plus de secret pour nous 🌸 Au tour de ton corps.", "Corps noté ✅ Place à tes cheveux !", "Presque fini 🎉 Plus que tes envies."];
   // « C'est quoi ? » : les mots du filtre, expliqués simplement.
   var GLOSSAIRE = {
-    vitamine: ["C'est quoi, un filtre vitaminé ?", "C'est un filtre qui contient un gel enrichi en vitamine C. En se dissolvant doucement dans l'eau, la vitamine C réduit le chlore. L'eau devient plus douce au contact de ta peau et de tes cheveux, et ta barrière cutanée est moins agressée."],
-    sediments: ["C'est quoi, un filtre à sédiments ?", "C'est un filtre en plusieurs couches qui retient ce qui circule dans l'eau : dépôts de calcaire, rouille, sable, et certains métaux lourds selon les données du fabricant."],
-    chlore: ["Pourquoi réduire le chlore ?", "Le chlore sert à désinfecter l'eau du robinet. Sous une douche chaude, il peut dessécher la peau et ternir les cheveux. En le réduisant, tu gardes une eau plus agréable et tu ménages ta barrière cutanée."],
-    calcaire: ["Et le calcaire ?", "Le calcaire, c'est du calcium dissous dans l'eau. Le filtre à sédiments retient les dépôts de calcaire qui circulent dans l'eau. En eau calcaire, il se charge plus vite : change-le aux dates conseillées."],
-    barriere: ["C'est quoi, la barrière cutanée ?", "C'est la couche la plus externe de ta peau. Elle garde l'eau à l'intérieur et protège des agressions. Quand elle est fragilisée, la peau tire, picote ou rougit plus facilement."],
-    capsule: ["C'est quoi, une capsule de douche ?", "C'est la recharge qui contient le gel vitaminé et la senteur. Elle s'use au fil des douches : on la change aux dates conseillées, ton planner te le rappelle."],
-    durete: ["C'est quoi, la dureté de l'eau ?", "C'est la quantité de calcaire dans l'eau. Elle change selon les régions. Le site officiel eaupotable.sante.gouv.fr donne celle de ta commune."]
+    // Douche
+    vitamine: ["douche", "C'est quoi, un filtre vitaminé ?", "C'est un filtre qui contient un gel enrichi en vitamine C. En se dissolvant doucement dans l'eau, la vitamine C réduit le chlore. L'eau devient plus douce au contact de ta peau et de tes cheveux, et ta barrière cutanée est moins agressée."],
+    sediments: ["douche", "C'est quoi, un filtre à sédiments ?", "C'est un filtre en plusieurs couches qui retient ce qui circule dans l'eau : dépôts de calcaire, rouille, sable, et certains métaux lourds selon les données du fabricant."],
+    chlore: ["douche", "Pourquoi réduire le chlore ?", "Le chlore sert à désinfecter l'eau du robinet. Sous une douche chaude, il peut dessécher la peau et ternir les cheveux. En le réduisant, tu gardes une eau plus agréable et tu ménages ta barrière cutanée."],
+    calcaire: ["douche", "Et le calcaire ?", "Le calcaire, c'est du calcium dissous dans l'eau. Le filtre à sédiments retient les dépôts de calcaire qui circulent dans l'eau. En eau calcaire, il se charge plus vite : change-le aux dates conseillées."],
+    durete: ["douche", "C'est quoi, la dureté de l'eau ?", "C'est la quantité de calcaire dans l'eau. Elle change selon les régions. Le site officiel eaupotable.sante.gouv.fr donne celle de ta commune."],
+    capsule: ["douche", "C'est quoi, une capsule de douche ?", "C'est la recharge qui contient le gel vitaminé et la senteur. Elle s'use au fil des douches : on la change aux dates conseillées, ton planner te le rappelle."],
+    jetfin: ["douche", "C'est quoi, un jet fin ?", "Un pommeau percé de nombreux micro-trous : l'eau sort en gouttes plus fines, pour une sensation plus enveloppante."],
+    // Peau
+    barriere: ["peau", "C'est quoi, la barrière cutanée ?", "C'est la couche la plus externe de ta peau. Elle garde l'eau à l'intérieur et protège des agressions. Quand elle est fragilisée, la peau tire, picote ou rougit plus facilement."],
+    sebum: ["peau", "C'est quoi, le sébum ?", "Le film gras que ta peau fabrique naturellement. Il la protège. En excès, il fait briller et peut boucher les pores."],
+    grasse: ["peau", "C'est quoi, une peau grasse ?", "Une peau qui produit beaucoup de sébum : elle brille et ses pores se voient. Elle a quand même besoin d'hydratation, avec des textures légères."],
+    mixte: ["peau", "C'est quoi, une peau mixte ?", "Elle brille sur la zone T (front, nez, menton) et reste normale ou sèche sur les joues. On adapte les soins selon les zones."],
+    seche: ["peau", "C'est quoi, une peau sèche ?", "Une peau qui manque de sébum, durablement : elle tire, pèle ou est rêche. C'est un type de peau, qui aime les soins riches et les céramides."],
+    deshy: ["peau", "Sèche ou déshydratée ?", "Une peau sèche manque de gras, c'est son type. Une peau déshydratée manque d'eau, c'est un état passager : elle peut toucher toutes les peaux, même grasses."],
+    sensible: ["peau", "C'est quoi, une peau sensible ?", "Une peau qui réagit vite : picotements, rougeurs, sensation de chaleur. Elle préfère peu de produits, sans parfum, introduits un par un."],
+    comedons: ["peau", "Points noirs et points blancs ?", "Ce sont des pores bouchés par du sébum et des cellules mortes. Le point noir est ouvert : au contact de l'air, il s'oxyde et fonce. Le point blanc reste fermé."],
+    hyperpig: ["peau", "C'est quoi, l'hyperpigmentation ?", "Des zones plus foncées que le reste de la peau : marques après un bouton, taches de soleil, mélasma. Elle est fréquente sur les peaux mates à foncées, et la protection solaire est la base."],
+    zonet: ["peau", "C'est quoi, la zone T ?", "Le front, le nez et le menton, qui dessinent un T. C'est là que la peau produit le plus de sébum."],
+    // Routine
+    actif: ["routine", "C'est quoi, un actif ?", "L'ingrédient qui agit sur un besoin précis : niacinamide, vitamine C, rétinol… On en introduit un seul à la fois. Les fiches de l'onglet Ingrédients les détaillent."],
+    double: ["routine", "C'est quoi, le double nettoyage ?", "Le soir, d'abord une huile ou un baume démaquillant pour dissoudre le maquillage et la crème solaire, puis un nettoyant doux à l'eau."],
+    tonique: ["routine", "C'est quoi, un tonique ?", "Une lotion appliquée après le nettoyage pour réhydrater la peau et préparer les soins suivants. Les toniques actuels sont doux et souvent sans alcool."],
+    essence: ["routine", "C'est quoi, une essence ?", "Une lotion légère, très utilisée en K-beauty, entre le tonique et le sérum. On la tapote avec les paumes."],
+    serum: ["routine", "C'est quoi, un sérum ?", "Un soin concentré en actifs, en petite quantité, appliqué avant la crème. C'est souvent l'étape qui cible ton besoin."],
+    exfoliant: ["routine", "C'est quoi, un exfoliant ?", "Un soin qui retire les cellules mortes : avec des grains (gommage) ou avec des acides (AHA, BHA, PHA). Une à deux fois par semaine, jamais le même soir qu'un rétinoïde."],
+    acides: ["routine", "AHA, BHA, PHA : quelle différence ?", "Les AHA (acide glycolique, lactique) agissent en surface, pour l'éclat. Les BHA (acide salicylique) entrent dans les pores. Les PHA, plus doux, conviennent mieux aux peaux sensibles."],
+    tolerance: ["routine", "C'est quoi, un test de tolérance ?", "Appliquer un peu du nouveau produit sur la mâchoire ou derrière l'oreille pendant 48 h, avant de l'utiliser partout."],
+    purging: ["routine", "Et si ma peau « purge » ?", "Avec certains actifs (rétinoïdes, acides), de petits boutons peuvent apparaître au début, là où tu en as d'habitude. Ça doit se calmer en quelques semaines. Des rougeurs, brûlures ou plaques sont une irritation : arrête et demande conseil."],
+    // Soleil
+    spf: ["soleil", "C'est quoi, le SPF ?", "Le SPF mesure la protection contre les UVB, responsables des coups de soleil. SPF 50 = haute protection, à condition d'en mettre généreusement et de renouveler."],
+    pa: ["soleil", "PA+++ et UVA, c'est quoi ?", "Les UVA vieillissent la peau et aggravent les taches, même sur les peaux foncées. PA+ à PA++++ est la notation asiatique de la protection UVA. En Europe, cherche le logo « UVA » entouré."],
+    trace: ["soleil", "Pourquoi certaines crèmes laissent une trace blanche ?", "Les filtres minéraux (oxyde de zinc, dioxyde de titane) peuvent laisser un voile blanc ou gris sur les peaux foncées. Les filtres organiques ou hybrides en laissent souvent moins."],
+    // Cheveux
+    porosite: ["cheveux", "C'est quoi, la porosité ?", "La façon dont ton cheveu absorbe et garde l'eau. Faible : les soins restent en surface. Forte : il boit vite, mais sèche vite. Elle change les textures qui te conviennent."],
+    leavein: ["cheveux", "C'est quoi, un leave-in ?", "Un soin sans rinçage, appliqué sur cheveux humides pour hydrater, démêler et préparer le coiffage."],
+    cowash: ["cheveux", "C'est quoi, le co-wash ?", "Laver ses cheveux avec un après-shampoing lavant plutôt qu'un shampoing. Plus doux pour les longueurs sèches, à alterner avec un vrai shampoing pour le cuir chevelu."],
+    loc: ["cheveux", "C'est quoi, la méthode LOC ou LCO ?", "Trois couches, dans l'ordre : un Liquide (eau ou leave-in), une huile (Oil) et une Crème. Ou crème avant huile pour la LCO. On hydrate, puis on garde l'hydratation."],
+    prepoo: ["cheveux", "C'est quoi, le pre-poo ?", "Un bain d'huile ou d'après-shampoing sur les longueurs, avant le shampoing, pour les protéger du dessèchement."],
+    washday: ["cheveux", "C'est quoi, le wash day ?", "Le jour du lavage complet, surtout pour les cheveux bouclés à crépus : pre-poo, shampoing, masque, leave-in, puis coiffage."],
+    clarifiant: ["cheveux", "C'est quoi, un shampoing clarifiant ?", "Un shampoing plus nettoyant, environ une fois par mois, pour enlever les dépôts de produits, de calcaire ou de gel."],
+    proteines: ["cheveux", "C'est quoi, un soin protéiné ?", "Un soin qui renforce un cheveu abîmé, mou ou trop élastique. À alterner avec l'hydratation : trop de protéines rend le cheveu raide et cassant."],
+    protectrice: ["cheveux", "C'est quoi, une coiffure protectrice ?", "Une coiffure qui range les pointes (tresses, twists, chignons, perruques) pour limiter la casse. Elle ne doit jamais tirer sur la lisière."],
+    shrinkage: ["cheveux", "C'est quoi, le rétrécissement ?", "Un cheveu frisé à crépus paraît bien plus court sec que mouillé : c'est le « shrinkage ». C'est normal, ce n'est pas un manque de pousse."],
+    traction: ["cheveux", "C'est quoi, l'alopécie de traction ?", "La perte de cheveux causée par des coiffures qui tirent longtemps au même endroit, souvent sur les tempes et la lisière. Prise tôt, elle peut s'améliorer si on supprime la tension."],
+    dermsebo: ["cheveux", "C'est quoi, la dermatite séborrhéique ?", "Une inflammation fréquente et bénigne des zones riches en sébum : squames grasses, rougeurs, démangeaisons, sur le cuir chevelu, les sourcils ou les ailes du nez. Elle va et vient. Un médecin peut la confirmer."],
+    psoriasis: ["cheveux", "C'est quoi, le psoriasis du cuir chevelu ?", "Une maladie inflammatoire de la peau, non contagieuse, avec des plaques épaisses et des squames blanches ou argentées. Elle se traite avec un médecin ; les soins cosmétiques accompagnent."]
   };
-  function glossaire(keys) { return "<div class='advice'>" + (keys || Object.keys(GLOSSAIRE)).map(function (k) { var g = GLOSSAIRE[k]; return g ? "<details><summary>" + esc(g[0]) + "</summary><p>" + esc(g[1]) + "</p></details>" : ""; }).join("") + "</div>"; }
+  var LEX_CATS = [["douche", "🚿 La douche"], ["peau", "🧖🏾 La peau"], ["routine", "🧴 La routine"], ["soleil", "☀️ Le soleil"], ["cheveux", "💇🏾 Les cheveux"]];
+  function glossaire(keys) { return "<div class='advice lex'>" + (keys || Object.keys(GLOSSAIRE)).map(function (k) { var g = GLOSSAIRE[k]; return g ? "<details><summary>" + esc(g[1]) + "</summary><p>" + esc(g[2]) + "</p></details>" : ""; }).join("") + "</div>"; }
+  function lexCat(cat) { return Object.keys(GLOSSAIRE).filter(function (k) { return GLOSSAIRE[k][0] === cat; }); }
+  // Les mots d'une routine, d'après ses étapes.
+  var STEP_LEX = { demaquillant: "double", tonique: "tonique", essence: "essence", serum: "serum", exfoliant: "exfoliant", spf: "spf", soin: "leavein", masque: "proteines" };
   function has(a, k, v) { return (a[k] || []).indexOf(v) > -1; }
 
   // Toutes les réponses à plat, photo comprise, pour le moteur de recommandation.
@@ -1339,6 +1383,8 @@
     ] }
   ];
   // Tutoriels pas à pas (une vidéo de Fanta peut remplacer chaque tutoriel : champ video).
+  // Les stories de l'Académie font partie de Sunsoari+, sauf la première, offerte pour découvrir.
+  function storyLocked(i) { var st = STORIES[i]; if (!st || st.rub !== "Académie") return false; return STORIES.filter(function (x) { return x.rub === "Académie"; })[0] !== st; }
   var TUTOS = {
     spf: { title: "Appliquer sa protection solaire", video: "", slides: [
       { k: "etape", t: "Le bon moment", d: "Chaque matin, en dernière étape de ta routine, après l'hydratant." },
@@ -1894,7 +1940,7 @@
     var p = this.progressPct(), a = this.state.answers;
     var html = "<div class='info'>";
     if (q.kind === "test") return html + "<h3>Découvrons ton type de peau</h3><p class='sub'>Beaucoup de personnes ne le connaissent pas, ou se trompent : une peau qui brille peut aussi manquer d'eau. Quelques questions sur ce que tu observes au quotidien, et on t'explique comment en prendre soin.</p><p class='alt-t'>Le test du visage nu, pour des réponses justes</p><ol class='guide'><li>Lave ton visage avec un nettoyant doux, sèche en tamponnant.</li><li>N'applique rien : ni crème, ni maquillage.</li><li>Attends une heure sans toucher ton visage.</li><li>Observe-toi à la lumière du jour : où ça brille, où ça tire, tes pores.</li><li>En option, appuie un mouchoir fin sur le front, le nez, le menton et les joues : une trace grasse montre où ta peau produit du sébum.</li></ol><p class='sub'>Tu connais bien ta peau ? Réponds de mémoire, selon ce que tu vis le plus souvent.</p><details class='types'><summary>Les 4 types de peau en bref</summary>" + ["normale", "seche", "mixte", "grasse"].map(function (k) { return "<p><b>" + SKIN_INFO[k].t + "</b> · " + esc(SKIN_WHY[k].why) + "</p>"; }).join("") + "<p>Une peau peut aussi être <b>sensible</b> ou <b>déshydratée</b>, quel que soit son type : on le regarde aussi.</p></details></div><div class='cta'><button class='btn big' data-act='next'>C'est parti</button></div>";
-    if (q.kind === "peau") return html + this.skinResult(true) + "</div><div class='cta'><button class='btn big' data-act='next'>Continuer</button></div>";
+    if (q.kind === "peau") return html + this.skinResult(true) + glossaire(["deshy", "barriere", "sebum"]) + "</div><div class='cta'><button class='btn big' data-act='next'>Continuer</button></div>";
     if (q.kind === "eau") html += "<h3>Le savais-tu ?</h3><ul class='facts'><li>" + icon("drop") + "<span>En France, l'eau du robinet est potable et très contrôlée.</span></li><li>" + icon("dots") + "<span>Sa teneur en calcaire varie beaucoup d'une région à l'autre.</span></li><li>" + icon("shower") + "<span>Le chlore sert à la désinfecter, mais il peut dessécher. Le gel vitaminé de nos filtres le réduit, et le filtre à sédiments retient calcaire, rouille et sable.</span></li></ul>" + glossaire(["vitamine", "sediments", "chlore"]) + this.ring(p.pct, true);
     else {
       var chips = [a.peau && TAG_LABEL[a.peau]].concat((a.concerns || []).map(function (c) { return TAG_LABEL[c]; })).filter(Boolean);
@@ -2070,19 +2116,26 @@
   var SIGN_COLOR = { brillance: "#c9853f", secheresse: "#7d8f76", rougeurs: "#c0553f", imperfections: "#9b5d9e", taches: "#8a5526", texture: "#2f6f7e" };
   // ---------- Sunsoari+ : abonnement ----------
   // data-checkout-url="https://…" : page de paiement Stripe (reçoit ?plan=mensuel|annuel&method=…).
-  var PLANS = { mensuel: { label: "Mensuel", price: "4,90 €", per: "par mois", note: "Sans engagement" }, annuel: { label: "Annuel", price: "39 €", per: "par an", note: "Soit 3,25 € par mois · −33 %" } };
+  var PLANS = { mensuel: { label: "Mensuel", price: "2,99 €", per: "par mois", note: "Sans engagement" }, annuel: { label: "Annuel", price: "24,90 €", per: "par an", note: "Soit 2,08 € par mois · −31 %" } };
+  // Ce que débloque Sunsoari+ : le suivi dans le temps. Le diagnostic et la routine restent gratuits.
+  var PLUS_TABS = { planner: ["Ton planner", ["Note chaque jour ta routine du matin, du soir, ton SPF et ton corps", "Vois ta régularité sur le mois", "Reçois tes rappels de recharge"]], evolution: ["Ton évolution", ["Tes photos toutes les 2 semaines, toujours à la même lumière", "Ton ressenti et ce que tu remarques", "Ton avant · maintenant"]], semaine: ["Ta semaine", ["Ton plan d'introduction, un produit à la fois", "Tes soirs d'actifs et de réparation", "Ce que tu peux attendre, et quand"]] };
+  A.hasPlus = function () { return this.host.hasAttribute("data-plus") || (this.state.plusUntil || 0) > Date.now(); };
+  A.lockCard = function (tab) {
+    var t = PLUS_TABS[tab];
+    return "<div class='whybox lock'><b>🔒 " + esc(t[0]) + " avec Sunsoari+</b><ul class='tipl'>" + t[1].map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul><p class='sub'>7 jours gratuits, puis " + PLANS.mensuel.price + " par mois ou " + PLANS.annuel.price + " par an. Sans engagement.</p><button class='btn big' data-view='plus'>Essayer gratuitement</button></div><p class='note'>Ton diagnostic, ta routine et tes recommandations restent gratuits, pour toujours.</p>";
+  };
   var PAY = [["applepay", "Apple Pay", "Paiement en un geste sur iPhone, iPad et Mac"], ["carte", "Carte bancaire", "CB, Visa, Mastercard"], ["paypal", "PayPal", "Avec ton compte PayPal"], ["klarna", "Klarna", "Paiement fractionné, avec l'abonnement annuel"]];
   A.vPlus = function () {
     var self = this, plan = this.plan || "annuel", pay = this.pay || "applepay";
     if (pay === "klarna" && plan === "mensuel") pay = "applepay";
     var html = "<figure class='amb short'><img src='" + photo(AMB.plus) + "' alt='' loading='lazy'></figure><div class='plushead'><span class='tag'>Sunsoari+</span><h3>Va plus loin dans ton rituel</h3><p>7 jours d'essai gratuit, puis " + PLANS[plan].price + " " + PLANS[plan].per + ".</p></div>";
-    html += "<ul class='perks'>" + ["Scans de produits illimités", "Analyse photo du visage et du cuir chevelu", "Suivi de ton évolution dans le temps", "Assistante beauté illimitée", "Nouveau diagnostic à chaque saison", "Alertes météo peau : UV, humidité, pollution", "Guides et stories premium", "−10 % sur sunsoari.fr, SHIFT compris"].map(function (x) { return "<li>" + icon("heart") + "<span>" + esc(x) + "</span></li>"; }).join("") + "</ul>";
+    html += "<ul class='perks'>" + ["Mon planner et mes rappels (routine, recharges)", "Mon évolution : photos et ressenti dans le temps", "Ma semaine : mon plan d'introduction, produit par produit", "Les vidéos et stories de l'Académie", "L'analyse photo et vidéo par l'IA", "L'assistante beauté sans limite", "Un nouveau diagnostic à chaque saison"].map(function (x) { return "<li>" + icon("heart") + "<span>" + esc(x) + "</span></li>"; }).join("") + "</ul>";
     html += "<div class='plans'>" + Object.keys(PLANS).map(function (k) { var P2 = PLANS[k]; return "<button class='plan2' data-plan='" + k + "' aria-pressed='" + (plan === k) + "'>" + (k === "annuel" ? "<span class='best'>Meilleure offre</span>" : "") + "<b>" + P2.label + "</b><span class='pr'>" + P2.price + " <small>" + P2.per + "</small></span><small>" + P2.note + "</small></button>"; }).join("") + "</div>";
     html += "<p class='alt-t'>Moyen de paiement</p><div class='paylist'>" + PAY.map(function (m) { var off = m[0] === "klarna" && plan === "mensuel"; return "<button class='pay' data-pay='" + m[0] + "' aria-pressed='" + (pay === m[0]) + "'" + (off ? " disabled" : "") + "><b>" + m[1] + "</b><small>" + esc(off ? "Disponible avec l'abonnement annuel" : m[2]) + "</small><span class='rad'></span></button>"; }).join("") + "</div>";
     var co = this.host.getAttribute("data-checkout-url");
     html += co ? "<a class='btn big' href='" + esc(co) + (co.indexOf("?") > -1 ? "&" : "?") + "plan=" + plan + "&method=" + pay + "' target='_top'>Commencer mon essai gratuit</a>" : "<button class='btn big' data-act='plusdemo'>Commencer mon essai gratuit</button>";
     if (this.plusMsg) html += "<p class='why'>" + esc(this.plusMsg) + "</p>";
-    html += "<p class='note'>Toujours gratuit : diagnostic, routine, planner, journal de peau et 5 scans par mois.<br>Sans engagement : résiliation en 3 clics depuis ton compte. Rappel 2 jours avant la fin de l'essai. Prix TTC. Droit de rétractation de 14 jours.</p>";
+    html += "<p class='note'>Toujours gratuit : le diagnostic complet, ta routine, tes recommandations, le scanner, le lexique, les guides et les tutos d'installation.<br>Sans engagement : résiliation en 3 clics depuis ton compte. Rappel 2 jours avant la fin de l'essai. Prix TTC. Droit de rétractation de 14 jours.</p>";
     return html;
   };
 
@@ -2460,10 +2513,11 @@
   var SLOTS4 = [["matin", "Matin"], ["jour", "SPF"], ["soir", "Soir"], ["corps", "Corps"]];
   var FEELS = ["Très bien", "Bien", "Moyen", "Difficile"], EVO_TAGS = ["Moins de boutons", "Moins de marques", "Plus confortable", "Moins de brillance", "Teint plus uniforme", "Irritation", "Nouveaux boutons", "Peau sèche"];
   A.vEspace = function () {
-    var self = this, s = this.state, a = s.answers, sp = skinProfile(a), tab = this.etab || "routine";
+    var self = this, s = this.state, a = s.answers, sp = skinProfile(a), tab = this.etab || "routine", plus = this.hasPlus();
     var chips = [a.age ? a.age + " ans" : "", sp ? SKIN_INFO[sp.type].t + (sp.sensible ? ", sensible" : "") : "", (a.concerns || []).filter(function (c) { return c !== "aucune"; }).slice(0, 3).map(function (c) { return TAG_LABEL[c] || c; }).join(" · ")].filter(Boolean);
     var html = "<div class='esphead'><p class='kicker'>Ton espace soin · Diagnostic du " + new Date(s.doneAt || Date.now()).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) + "</p><h3>Le rituel " + (a.prenom ? "de " + esc(a.prenom) : "de ta peau") + "</h3><div class='chips'>" + chips.map(function (c) { return "<span>" + esc(c) + "</span>"; }).join("") + "</div></div>";
-    html += "<div class='etabs' role='tablist'>" + ESP_TABS.map(function (t) { return "<button role='tab' data-etab='" + t[0] + "' aria-selected='" + (tab === t[0]) + "'>" + t[1] + "</button>"; }).join("") + "</div>";
+    html += "<div class='etabs' role='tablist'>" + ESP_TABS.map(function (t) { return "<button role='tab' data-etab='" + t[0] + "' aria-selected='" + (tab === t[0]) + "'>" + t[1] + (PLUS_TABS[t[0]] && !plus ? " 🔒" : "") + "</button>"; }).join("") + "</div>";
+    if (PLUS_TABS[tab] && !plus) return html + this.lockCard(tab);
     return html + ({ routine: this.eRoutine, planner: this.ePlanner, evolution: this.eEvolution, semaine: this.eSemaine, soleil: this.eSoleil, reco: this.eReco, cheveux: this.eCheveux, produits: this.eProduits, diagnostic: this.eDiagnostic, astuces: this.eAstuces }[tab] || this.eRoutine).call(this);
   };
   A.eRoutine = function () {
@@ -2484,6 +2538,10 @@
     }).join("") + "</div>";
     var pl = ((s.planner || {})[today] || {})[m];
     html += "<div class='markbar'><span>Routine " + ({ matin: "du matin", jour: "SPF", soir: "du soir", corps: "corps", cheveux: "cheveux" })[m] + " faite aujourd'hui ?</span><div class='yn'><button data-pmark='" + today + "|" + m + "|oui' aria-pressed='" + (pl === "oui") + "'>Oui</button><button data-pmark='" + today + "|" + m + "|non' aria-pressed='" + (pl === "non") + "'>Non</button></div></div>";
+    var words = []; steps.forEach(function (it) { var k = STEP_LEX[it.step]; if (k && words.indexOf(k) < 0) words.push(k); });
+    if (m === "soir" && words.indexOf("actif") < 0) words.push("actif", "tolerance");
+    if (m === "cheveux") words = words.concat(["porosite", "loc", "washday"].filter(function (k) { return words.indexOf(k) < 0; }));
+    if (words.length) html += "<p class='sect left'>Les mots de ta routine</p>" + glossaire(words);
     return html + "<p class='note'>Tu commences ? Ajoute les produits un par un, dans l'ordre de l'onglet « Ma semaine ». Tant qu'un produit n'est pas encore introduit, saute son étape.</p>";
   };
   A.ePlanner = function () {
@@ -2528,7 +2586,7 @@
     html += "<p class='sect left'>Une journée type</p><div class='slots'>" + day.map(function (d) { return "<div><b>" + d[0] + "</b><small>" + d[1] + "</small><p>" + d[2] + "</p></div>"; }).join("") + "</div>";
     html += "<p class='sect left'>Les règles</p><div class='slots rules'>" + rules.map(function (r) { return "<div><small>" + r[0] + "</small><b>" + r[1] + "</b><p>" + r[2] + "</p></div>"; }).join("") + "</div>";
     if (spf.length) html += "<p class='sect left'>Ta crème solaire</p><div class='list'>" + spf.map(this.rowProduct, this).join("") + "</div>";
-    return html;
+    return html + "<p class='sect left'>C'est quoi ?</p>" + glossaire(lexCat("soleil"));
   };
   A.eReco = function () {
     var self = this, a = this.state.answers;
@@ -2657,6 +2715,7 @@
     html += "<p class='sect left'>Les autres textures</p><div class='advice'>" + ["raides", "ondules", "boucles", "crepus"].filter(function (k) { return k !== a.texture; }).map(function (k) { return textureCard(k, "", false); }).join("") + "</div><p class='note'>Le classement de 1 à 4C est un repère pratique, pas une mesure scientifique : la plupart des têtes mélangent plusieurs textures.</p>";
     var g = scalpGuide(a);
     if (g.length) html += "<p class='sect left'>Ton cuir chevelu</p><div class='advice'>" + g.map(function (x) { return "<details open><summary>" + esc(x[0]) + "</summary><p>" + esc(x[1]) + "</p><p><b>Au quotidien :</b> " + esc(x[2]) + "</p></details>"; }).join("") + "</div>";
+    html += "<p class='sect left'>C'est quoi ? Les mots des cheveux</p>" + glossaire(lexCat("cheveux"));
     html += "<p class='sect left'>Compléments alimentaires et plantes</p><div class='whybox'><b>Avant tout</b><ul class='tipl'>" + SUPP_RULES.map(function (r) { return "<li>" + esc(r) + "</li>"; }).join("") + "</ul></div>";
     html += "<div class='acct'><ul class='tipl'>" + SUPP.filter(function (x) { return !(a.grossesse === "oui" && x.n === "Fenugrec"); }).map(function (x) { return "<li><b>" + esc(x.n) + "</b> <small>(" + esc(x.g === "pharmacie" ? "pharmacie" : x.g === "plante" ? "plantes" : x.g) + " · " + esc(x.b) + ")</small> : " + esc(x.d) + "</li>"; }).join("") + "</ul></div>";
     html += "<p class='note'>Ces repères ne remplacent pas un avis médical. Sunsoari ne vend pas de compléments alimentaires pour l'instant.</p>";
@@ -2668,7 +2727,7 @@
     var html = "<div class='slots rules'>" + tips.map(function (t) { return "<div><b>" + t[0] + "</b><p>" + t[1] + "</p></div>"; }).join("") + "</div>";
     var ins = insights(a);
     if (ins.length) html += "<p class='sect left'>Pour toi</p><div class='advice'>" + ins.map(function (t) { return "<details><summary>" + esc(t[0]) + "</summary><p>" + esc(t[1]) + "</p></details>"; }).join("") + "</div>";
-    return html + "<p class='sect left'>C'est quoi ? Les mots du filtre</p>" + glossaire();
+    return html + "<p class='sect left'>C'est quoi ? Les mots du filtre</p>" + glossaire(lexCat("douche")) + "<p class='sect left'>C'est quoi ? Les mots de la peau</p>" + glossaire(lexCat("peau"));
   };
 
   // ---------- Contenus Sunsoari (articles, vidéos, posts) et favoris ----------
@@ -2714,14 +2773,15 @@
 
   // ---------- Ressources ----------
   A.vRessources = function () {
-    var self = this, tabs = [["guides", "Guides"], ["ingredients", "Ingrédients"], ["tendances", "Tendances"]];
+    var self = this, tabs = [["guides", "Guides"], ["lexique", "Lexique"], ["ingredients", "Ingrédients"], ["tendances", "Tendances"]];
     var html = "<div class='todayhead'><h3>Ressources</h3></div><div class='seg-tabs'>" + tabs.map(function (t) { return "<button data-rstab='" + t[0] + "' aria-pressed='" + (self.rsTab === t[0]) + "'>" + t[1] + "</button>"; }).join("") + "</div>";
+    if (this.rsTab === "lexique") return html + "<p class='sub'>Les mots de la beauté, expliqués simplement. Touche une question pour lire la réponse.</p>" + LEX_CATS.map(function (c) { return "<p class='sect left'>" + c[1] + "</p>" + glossaire(lexCat(c[0])); }).join("");
     if (this.rsTab === "ingredients") return html + this.vIngredients();
     if (this.rsTab === "tendances") return html + this.vTrends();
     if (this.guide) return html + this.vGuide();
-    html += "<p class='sect left'>C'est quoi ? Les mots du filtre</p>" + glossaire();
+    html += "<button class='reco-card' data-rstab='lexique'><b>📖 Le lexique</b><span>" + Object.keys(GLOSSAIRE).length + " mots expliqués simplement : douche, peau, routine, soleil, cheveux</span></button>";
     ["Sunsoari", "Mythe ou vérité", "Académie"].forEach(function (rub) {
-      html += "<p class='sect left'>" + esc(rub) + "</p><div class='carousel stories'>" + STORIES.map(function (st, i) { return st.rub === rub ? "<button class='storycard " + st.tone + (st.img ? " ph" : "") + "' data-story='" + i + "'" + (st.img ? " style=\"background-image:linear-gradient(180deg,rgba(251,248,243,0) 35%,rgba(251,248,243,.92) 78%),url('" + photo(st.img) + "')\"" : "") + "><span class='tag'>" + (rub === "Mythe ou vérité" ? "Mythe ou vérité" : rub === "Académie" ? "Académie" : "Sunsoari") + " · " + st.slides.length + " écrans</span><b>" + esc(st.title) + "</b></button>" : ""; }).join("") + "</div>";
+      html += "<p class='sect left'>" + esc(rub) + "</p><div class='carousel stories'>" + STORIES.map(function (st, i) { return st.rub === rub ? "<button class='storycard " + st.tone + (st.img ? " ph" : "") + "' data-story='" + i + "'" + (st.img ? " style=\"background-image:linear-gradient(180deg,rgba(251,248,243,0) 35%,rgba(251,248,243,.92) 78%),url('" + photo(st.img) + "')\"" : "") + "><span class='tag'>" + (rub === "Mythe ou vérité" ? "Mythe ou vérité" : rub === "Académie" ? "Académie" : "Sunsoari") + " · " + st.slides.length + " écrans" + (storyLocked(i) && !self.hasPlus() ? " · 🔒 Sunsoari+" : "") + "</span><b>" + esc(st.title) + "</b></button>" : ""; }).join("") + "</div>";
     });
     html += "<p class='sect left'>Tutoriels</p><div class='carousel stories'>" + Object.keys(TUTOS).map(function (k) { return "<button class='storycard water' data-tuto='" + k + "'><span class='tag'>Tutoriel · " + TUTOS[k].slides.length + " étapes</span><b>" + esc(TUTOS[k].title) + "</b></button>"; }).join("") + "</div><p class='sect left'>Guides</p>";
     var feed = this.contentItems();
@@ -2834,12 +2894,12 @@
     if (d.view) { this.view = d.view; this.detail = null; this.zone = null; this.aiMsg = null; if (d.view === "scan" && this.scan && this.scan.result) this.scan = null; return this.render(); }
     if (d.plan) { this.plan = d.plan; this.plusMsg = null; return this.render(); }
     if (d.pay) { this.pay = d.pay; this.plusMsg = null; return this.render(); }
-    if (d.act === "plusdemo") { this.plusMsg = "Démo : le paiement sera actif sur la version en ligne (" + (PAY.filter(function (m) { return m[0] === (self.pay || "applepay"); })[0] || PAY[0])[1] + ", " + PLANS[this.plan || "annuel"].label.toLowerCase() + ")."; return this.render(); }
+    if (d.act === "plusdemo") { s.plusUntil = Date.now() + 7 * 864e5; this.save(); this.plusMsg = "Démo : ton essai de 7 jours est activé sur ce téléphone. Sur la version en ligne, le paiement passera par " + (PAY.filter(function (m) { return m[0] === (self.pay || "applepay"); })[0] || PAY[0])[1] + " (" + PLANS[this.plan || "annuel"].label.toLowerCase() + ")."; return this.render(); }
     if (d.mode) { s.answers.format = d.mode; this.save(); return this.render(); }
     if (d.rtab) { this.rtab = d.rtab; return this.render(); }
     if (d.ptab) { this.ptab = d.ptab; return this.render(); }
     if (d.rstab) { this.rsTab = d.rstab; this.guide = null; return this.render(); }
-    if (d.story) { this.story = { i: +d.story, s: 0 }; return this.render(); }
+    if (d.story) { if (storyLocked(+d.story) && !this.hasPlus()) { this.view = "plus"; return this.render(); } this.story = { i: +d.story, s: 0 }; return this.render(); }
     if (d.tuto) { this.detail = null; this.story = { tuto: d.tuto, s: 0 }; return this.render(); }
     if (d.act === "closestory") { this.story = null; return this.render(); }
     if (d.act === "storyprev") { this.story.s = Math.max(0, this.story.s - 1); return this.render(); }

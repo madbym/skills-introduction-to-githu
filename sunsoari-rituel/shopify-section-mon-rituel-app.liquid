@@ -28,6 +28,7 @@
     {%- if section.settings.ai_endpoint != blank %} data-ai-endpoint="{{ section.settings.ai_endpoint }}"{% endif %}
     {%- if section.settings.email_endpoint != blank %} data-email-endpoint="{{ section.settings.email_endpoint }}"{% endif %}
     {%- if customer %} data-customer-name="{{ customer.first_name | escape }}"{% endif %}
+    {%- if customer and customer.tags contains 'sunsoari-plus' %} data-plus{% endif %}
     data-login-url="{{ routes.account_login_url }}"
     data-register-url="{{ routes.account_register_url }}"></div>
 </div>

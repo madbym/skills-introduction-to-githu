@@ -64,7 +64,8 @@ Le diagnostic contient des **données de santé** : grossesse, ménopause, eczé
 ## Message 5 · Abonnement Sunsoari+ (Stripe)
 
 Suis la section 2 du cahier des charges :
-- **formules :** 4,90 €/mois ou 39 €/an, 7 jours d'essai ;
+- **formules :** 2,99 €/mois ou 24,90 €/an, 7 jours d'essai. Le diagnostic et la routine restent gratuits ; l'abonnement débloque le planner, l'évolution, Ma semaine, les vidéos de l'Académie, l'IA et l'assistante sans limite (voir `PLUS_TABS` et `storyLocked`) ;
+- **reconnaître une abonnée :** le webhook ajoute l'étiquette client Shopify `sunsoari-plus` ; la section Shopify ajoute alors `data-plus` sur la balise ;
 - **paiement :** Apple Pay, carte et PayPal ; Klarna surtout pour l'abonnement annuel ;
 - **gestion :** portail client Stripe, et webhooks pour activer ou couper les fonctions Sunsoari+ ;
 - **adresse de paiement :** l'application l'attend dans l'attribut `data-checkout-url`.

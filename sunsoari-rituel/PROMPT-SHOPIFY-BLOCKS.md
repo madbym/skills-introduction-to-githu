@@ -30,6 +30,7 @@ Le bloc doit produire exactement :
    - `data-ai-endpoint` ← réglage texte « Adresse du serveur IA » (vide par défaut) ;
    - `data-email-endpoint` ← réglage texte « Adresse d'envoi de la routine par e-mail » (vide par défaut) ;
    - si une cliente est connectée : `data-customer-name="{{ customer.first_name | escape }}"` ;
+   - si la cliente connectée a l'étiquette `sunsoari-plus` : l'attribut `data-plus` (sans valeur) ;
    - toujours : `data-login-url="{{ routes.account_login_url }}"` et `data-register-url="{{ routes.account_register_url }}"`.
 2. juste après : `<script charset="utf-8" src="{{ 'sunsoari-app.js' | asset_url }}" defer></script>`.
 

@@ -14,6 +14,7 @@ L'application « Mon Rituel · Sunsoari » existe déjà sous forme de prototype
 | `sunsoari-rituel/email-routine.html` | Modèle de l'e-mail de routine (Klaviyo ou Shopify Email) |
 | `sunsoari-rituel/shopify-section-mon-rituel-app.liquid` | Section Shopify qui affiche l'application sur sunsoari.fr |
 | `sunsoari-rituel/PROMPT-SHOPIFY-BLOCKS.md` | Installation sur sunsoari.fr avec le générateur de blocs Shopify |
+| `sunsoari-rituel/PROMPT-BLOXKS.md` | Application iPhone et Android avec Bloxks, branchée sur le serveur Emergent |
 | `sunsoari-rituel/MEDIATHEQUE-A-EXPLOITER.md` | Photos et vidéos du Drive : ce qu'on peut utiliser, et ce qu'il ne faut pas utiliser |
 | `sunsoari-rituel/marques-a-ajouter.csv` | Modèle pour ajouter des marques au catalogue |
 

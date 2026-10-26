@@ -279,6 +279,6 @@ Couleurs : crème #fbf8f3, sable #efe6d8, encre #2b2622, bleu eau #2f6f7e (actio
 ## 9. Règles de contenu (non négociables)
 - Aucune allégation médicale, aucune promesse de résultat ni de date (« vous verrez la différence le … » interdit).
 - Pas de faux chiffres ni de fausse preuve sociale (« 10 342 inscrites aujourd'hui » interdit sauf chiffre réel), pas de comparaison « avec nous / en moyenne » inventée, pas de « vérifié par un médecin » sans médecin.
-- Ne jamais dire qu'un filtre adoucit l'eau ou retire le calcaire.
+- Filtres : le filtre à sédiments retient les dépôts de calcaire, la rouille, le sable et certains métaux lourds (selon les données du fabricant) ; le gel vitaminé à la vitamine C réduit le chlore, ce qui rend l'eau plus douce au contact de la peau et ménage la barrière cutanée. Ne pas employer « adoucisseur » ni « eau adoucie », et ne jamais dire qu'un filtre soigne. Un glossaire « C'est quoi ? » (filtre vitaminé, filtre à sédiments, chlore, calcaire, barrière cutanée, capsule, dureté de l'eau) s'affiche dans « Le savais-tu ? », dans Ressources et dans Astuces.
 - Score présenté comme « compatibilité avec ton profil », jamais comme une évaluation médicale.
 - Marques non vendues par Sunsoari signalées ; liens affiliés signalés.

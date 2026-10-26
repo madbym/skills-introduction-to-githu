@@ -757,7 +757,7 @@
       options: [["l1", "Tous les jours ou presque", "", "shower"], ["l2", "2 à 3 fois par semaine", "", "drops"], ["l3", "1 fois par semaine", "", "drop"], ["l4", "Moins souvent", "", "sprout"]] },
 
     { id: "envies", sec: 4, title: "Qu'est-ce qui compte pour toi sous la douche ?", sub: "Plusieurs choix possibles.", multi: true,
-      options: [["senteur", "Une douche parfumée", "Une senteur qui détend, façon aromathérapie", "flower"], ["chlore", "Moins de chlore", "Selon les informations du fabricant", "drop"], ["soin", "Une eau qui prend soin de moi", "Capsules aux actifs hydratants", "halfsun"], ["soir", "Me détendre le soir", "Ralentir et souffler après la journée", "moon"], ["jet", "Un jet plus doux", "", "shower"], ["sansparfum", "Sans parfum", "Je préfère une douche sans senteur", "none"]] },
+      options: [["senteur", "Une douche parfumée", "Une senteur qui détend, façon aromathérapie", "flower"], ["chlore", "Moins de chlore", "Grâce au gel vitaminé à la vitamine C", "drop"], ["soin", "Une eau qui prend soin de moi", "Capsules aux actifs hydratants", "halfsun"], ["soir", "Me détendre le soir", "Ralentir et souffler après la journée", "moon"], ["jet", "Un jet plus doux", "", "shower"], ["sansparfum", "Sans parfum", "Je préfère une douche sans senteur", "none"]] },
     { id: "senteur", sec: 4, title: "Quelle senteur t'attire ?", sub: "Tu pourras en changer à chaque recharge.", skipIf: function (a) { return has(a, "envies", "sansparfum"); },
       options: [["hinoki", "Hinoki", "Bois clair · Onsha et SHIFT Hinoki Spring", "tree"], ["fleur", "Floral", "Fleur de Prunier (Onsha) · Cherry Blossom (SHIFT)", "flower"], ["patchouli", "Patchouli & Rose", "Capsules SHIFT · chaud, enveloppant", "flower"], ["fruite", "Fruité", "Capsules SHIFT · énergie", "sun"], ["decouverte", "Découverte", "SHIFT · 6 senteurs à tester", "sprout"], ["ocean", "Océan", "Onsha · frais, iodé", "wave"], ["pin", "Forêt de Pin", "Onsha · vert, résineux", "leaf"], ["sans", "Sans senteur", "Onsha", "none"]] },
     { id: "origines", sec: 4, title: "Quelles marques aimerais-tu découvrir ?", sub: "On en tient compte pour te proposer d'autres marques que Sunsoari.", multi: true, none: "toutes",
@@ -822,6 +822,17 @@
   function emo(qid, v) { return EMO[qid + "." + v] || EMO_DEFAULT[v] || ""; }
   var SEC_EMO = ["🚿", "🧖🏾", "🧴", "💇🏾", "✨"];
   var CHEERS = ["", "Ta douche, c'est noté 💧 On passe à ton visage.", "Ton visage n'a plus de secret pour nous 🌸 Au tour de ton corps.", "Corps noté ✅ Place à tes cheveux !", "Presque fini 🎉 Plus que tes envies."];
+  // « C'est quoi ? » : les mots du filtre, expliqués simplement.
+  var GLOSSAIRE = {
+    vitamine: ["C'est quoi, un filtre vitaminé ?", "C'est un filtre qui contient un gel enrichi en vitamine C. En se dissolvant doucement dans l'eau, la vitamine C réduit le chlore. L'eau devient plus douce au contact de ta peau et de tes cheveux, et ta barrière cutanée est moins agressée."],
+    sediments: ["C'est quoi, un filtre à sédiments ?", "C'est un filtre en plusieurs couches qui retient ce qui circule dans l'eau : dépôts de calcaire, rouille, sable, et certains métaux lourds selon les données du fabricant."],
+    chlore: ["Pourquoi réduire le chlore ?", "Le chlore sert à désinfecter l'eau du robinet. Sous une douche chaude, il peut dessécher la peau et ternir les cheveux. En le réduisant, tu gardes une eau plus agréable et tu ménages ta barrière cutanée."],
+    calcaire: ["Et le calcaire ?", "Le calcaire, c'est du calcium dissous dans l'eau. Le filtre à sédiments retient les dépôts de calcaire qui circulent dans l'eau. En eau calcaire, il se charge plus vite : change-le aux dates conseillées."],
+    barriere: ["C'est quoi, la barrière cutanée ?", "C'est la couche la plus externe de ta peau. Elle garde l'eau à l'intérieur et protège des agressions. Quand elle est fragilisée, la peau tire, picote ou rougit plus facilement."],
+    capsule: ["C'est quoi, une capsule de douche ?", "C'est la recharge qui contient le gel vitaminé et la senteur. Elle s'use au fil des douches : on la change aux dates conseillées, ton planner te le rappelle."],
+    durete: ["C'est quoi, la dureté de l'eau ?", "C'est la quantité de calcaire dans l'eau. Elle change selon les régions. Le site officiel eaupotable.sante.gouv.fr donne celle de ta commune."]
+  };
+  function glossaire(keys) { return "<div class='advice'>" + (keys || Object.keys(GLOSSAIRE)).map(function (k) { var g = GLOSSAIRE[k]; return g ? "<details><summary>" + esc(g[0]) + "</summary><p>" + esc(g[1]) + "</p></details>" : ""; }).join("") + "</div>"; }
   function has(a, k, v) { return (a[k] || []).indexOf(v) > -1; }
 
   // Toutes les réponses à plat, photo comprise, pour le moteur de recommandation.
@@ -1006,7 +1017,7 @@
     var eau = {
       douce: "Ton eau semble plutôt douce. Ton rituel peut se concentrer sur la sensorialité et le confort du jet.",
       moyenne: "Ton eau est moyennement calcaire. Nettoie régulièrement ton pommeau pour garder un jet régulier.",
-      calcaire: "Ton eau semble calcaire. Nos filtres de douche ne sont pas des adoucisseurs et ne retirent pas le calcaire de façon significative. Un détartrage régulier du pommeau aide à garder un jet régulier.",
+      calcaire: "Ton eau semble calcaire. Le filtre à sédiments retient les dépôts de calcaire, la rouille et le sable qui circulent dans l'eau, et le gel vitaminé réduit le chlore. Change ton filtre aux dates conseillées : en eau calcaire, il se charge plus vite.",
       nsp: "Le site officiel eaupotable.sante.gouv.fr donne la qualité de l'eau de ta commune."
     }[a.eau];
     if (eau) out.push(["Ton eau", eau]);
@@ -1266,8 +1277,9 @@
     ] },
     { rub: "Mythe ou vérité", title: "Filtre de douche : ce qu'il fait vraiment", tone: "water", img: "shift-pommeau-changement-capsule-mains", slides: [
       { k: "titre", t: "Filtre de douche : ce qu'il fait vraiment", d: "On démêle le vrai du faux, sans marketing." },
-      { k: "mythe", t: "« Un filtre de douche adoucit l'eau »", d: "" },
-      { k: "verite", t: "La plupart ne retirent pas le calcaire de façon significative.", d: "Un adoucisseur est un autre appareil. Les filtres de douche sont surtout conçus pour réduire une partie du chlore et des sédiments, selon leurs fabricants." },
+      { k: "texte", t: "1. Le filtre à sédiments", d: "Il retient ce qui circule dans l'eau : dépôts de calcaire, rouille, sable et certains métaux lourds, selon les données du fabricant." },
+      { k: "texte", t: "2. Le gel vitaminé", d: "Enrichi en vitamine C, il se dissout doucement dans l'eau et réduit le chlore. Résultat : une eau plus douce au contact de la peau et des cheveux." },
+      { k: "astuce", t: "Pourquoi le chlore compte", d: "Il sert à désinfecter l'eau, mais il peut dessécher. En le réduisant, tu ménages la barrière cutanée de ta peau." },
       { k: "mythe", t: "« L'eau du robinet est mauvaise pour la peau »", d: "" },
       { k: "verite", t: "En France, l'eau du robinet est potable et très contrôlée.", d: "Un filtre est un choix de confort et de sensorialité, pas une nécessité." },
       { k: "astuce", t: "Le bon réflexe", d: "Change ta cartouche aux dates conseillées : ton planner te le rappelle." }
@@ -1513,7 +1525,7 @@
   var RULES = "Tu es l'assistante beauté de Sunsoari, concept-store français (filtres de douche Onsha et SHIFT, puis K-beauty, J-beauty et marques africaines). " +
     "Réponds en français, en tutoyant, avec un ton chaleureux, simple et concret, en 120 mots maximum, sans titre ni emoji. " +
     "Règles absolues : aucune allégation médicale, aucun diagnostic, aucune promesse de résultat ; si un symptôme dure, s'aggrave ou fait mal, oriente vers un ou une dermatologue, un pharmacien ou un médecin. " +
-    "Grossesse ou allaitement : pas de rétinoïdes, d'acides forts ni d'huiles essentielles sans avis médical. Ne dis jamais qu'un filtre de douche adoucit l'eau, retire le calcaire ou soigne la peau. " +
+    "Grossesse ou allaitement : pas de rétinoïdes, d'acides forts ni d'huiles essentielles sans avis médical. Sur les filtres : le filtre à sédiments retient les dépôts de calcaire, la rouille, le sable et certains métaux lourds (selon le fabricant) ; le gel vitaminé, enrichi en vitamine C, réduit le chlore, ce qui rend l'eau plus douce au contact de la peau et ménage la barrière cutanée. N'emploie jamais les mots « adoucisseur » ou « eau adoucie » (c'est un autre appareil, qui retire le calcium dissous), et ne dis jamais qu'un filtre soigne la peau ou une maladie. " +
     "Quand tu cites un produit, choisis uniquement dans le catalogue fourni et dis pourquoi en citant ses ingrédients. Si tu ne sais pas, dis-le. " +
     "Tu es aussi sa coach peau : si elle ne connaît pas son type de peau, pose-lui une ou deux questions simples (brillance en fin de journée, tiraillements après le nettoyage, réactions aux produits), puis explique ce que ça veut dire et comment s'en occuper. " +
     "Rappelle quand c'est utile qu'une peau grasse a aussi besoin d'hydratation, que la déshydratation est un état passager, et appuie-toi sur les recommandations des sociétés de dermatologie (Académie américaine de dermatologie, DermNet) sans inventer de chiffres ni de références.";
@@ -1883,7 +1895,7 @@
     var html = "<div class='info'>";
     if (q.kind === "test") return html + "<h3>Découvrons ton type de peau</h3><p class='sub'>Beaucoup de personnes ne le connaissent pas, ou se trompent : une peau qui brille peut aussi manquer d'eau. Quelques questions sur ce que tu observes au quotidien, et on t'explique comment en prendre soin.</p><p class='alt-t'>Le test du visage nu, pour des réponses justes</p><ol class='guide'><li>Lave ton visage avec un nettoyant doux, sèche en tamponnant.</li><li>N'applique rien : ni crème, ni maquillage.</li><li>Attends une heure sans toucher ton visage.</li><li>Observe-toi à la lumière du jour : où ça brille, où ça tire, tes pores.</li><li>En option, appuie un mouchoir fin sur le front, le nez, le menton et les joues : une trace grasse montre où ta peau produit du sébum.</li></ol><p class='sub'>Tu connais bien ta peau ? Réponds de mémoire, selon ce que tu vis le plus souvent.</p><details class='types'><summary>Les 4 types de peau en bref</summary>" + ["normale", "seche", "mixte", "grasse"].map(function (k) { return "<p><b>" + SKIN_INFO[k].t + "</b> · " + esc(SKIN_WHY[k].why) + "</p>"; }).join("") + "<p>Une peau peut aussi être <b>sensible</b> ou <b>déshydratée</b>, quel que soit son type : on le regarde aussi.</p></details></div><div class='cta'><button class='btn big' data-act='next'>C'est parti</button></div>";
     if (q.kind === "peau") return html + this.skinResult(true) + "</div><div class='cta'><button class='btn big' data-act='next'>Continuer</button></div>";
-    if (q.kind === "eau") html += "<h3>Le savais-tu ?</h3><ul class='facts'><li>" + icon("drop") + "<span>En France, l'eau du robinet est potable et très contrôlée.</span></li><li>" + icon("dots") + "<span>Sa teneur en calcaire varie beaucoup d'une région à l'autre.</span></li><li>" + icon("shower") + "<span>Le chlore sert à la désinfecter. Certains filtres de douche sont conçus pour en réduire une partie, selon leurs fabricants.</span></li></ul>" + this.ring(p.pct, true);
+    if (q.kind === "eau") html += "<h3>Le savais-tu ?</h3><ul class='facts'><li>" + icon("drop") + "<span>En France, l'eau du robinet est potable et très contrôlée.</span></li><li>" + icon("dots") + "<span>Sa teneur en calcaire varie beaucoup d'une région à l'autre.</span></li><li>" + icon("shower") + "<span>Le chlore sert à la désinfecter, mais il peut dessécher. Le gel vitaminé de nos filtres le réduit, et le filtre à sédiments retient calcaire, rouille et sable.</span></li></ul>" + glossaire(["vitamine", "sediments", "chlore"]) + this.ring(p.pct, true);
     else {
       var chips = [a.peau && TAG_LABEL[a.peau]].concat((a.concerns || []).map(function (c) { return TAG_LABEL[c]; })).filter(Boolean);
       html += this.ring(p.pct) + "<h3 class='center'>Ta routine se précise</h3><p class='sub center'>Encore " + p.left + " questions sur ton corps, tes cheveux et tes envies.</p><div class='chips'>" + chips.map(function (c) { return "<span>" + esc(c) + "</span>"; }).join("") + "</div>";
@@ -2656,7 +2668,7 @@
     var html = "<div class='slots rules'>" + tips.map(function (t) { return "<div><b>" + t[0] + "</b><p>" + t[1] + "</p></div>"; }).join("") + "</div>";
     var ins = insights(a);
     if (ins.length) html += "<p class='sect left'>Pour toi</p><div class='advice'>" + ins.map(function (t) { return "<details><summary>" + esc(t[0]) + "</summary><p>" + esc(t[1]) + "</p></details>"; }).join("") + "</div>";
-    return html;
+    return html + "<p class='sect left'>C'est quoi ? Les mots du filtre</p>" + glossaire();
   };
 
   // ---------- Contenus Sunsoari (articles, vidéos, posts) et favoris ----------
@@ -2707,6 +2719,7 @@
     if (this.rsTab === "ingredients") return html + this.vIngredients();
     if (this.rsTab === "tendances") return html + this.vTrends();
     if (this.guide) return html + this.vGuide();
+    html += "<p class='sect left'>C'est quoi ? Les mots du filtre</p>" + glossaire();
     ["Sunsoari", "Mythe ou vérité", "Académie"].forEach(function (rub) {
       html += "<p class='sect left'>" + esc(rub) + "</p><div class='carousel stories'>" + STORIES.map(function (st, i) { return st.rub === rub ? "<button class='storycard " + st.tone + (st.img ? " ph" : "") + "' data-story='" + i + "'" + (st.img ? " style=\"background-image:linear-gradient(180deg,rgba(251,248,243,0) 35%,rgba(251,248,243,.92) 78%),url('" + photo(st.img) + "')\"" : "") + "><span class='tag'>" + (rub === "Mythe ou vérité" ? "Mythe ou vérité" : rub === "Académie" ? "Académie" : "Sunsoari") + " · " + st.slides.length + " écrans</span><b>" + esc(st.title) + "</b></button>" : ""; }).join("") + "</div>";
     });

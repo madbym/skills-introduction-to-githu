@@ -89,5 +89,5 @@ Suis la section 2 du cahier des charges :
 ## Ce que je ne veux pas
 - Pas de faux avis, pas de compteur d'inscrites inventé, pas de compte à rebours, pas de « résultats garantis ».
 - Pas de produits « blanchissants » ou « éclaircissants ».
-- Ne jamais dire qu'un filtre de douche adoucit l'eau, retire le calcaire ou soigne la peau.
+- Sur les filtres, garde exactement les textes du prototype (`GLOSSAIRE`, story « Filtre de douche ») : sédiments (calcaire, rouille, sable, certains métaux lourds selon le fabricant) et gel vitaminé qui réduit le chlore. Jamais « adoucisseur », jamais « soigne ».
 - Pas de nouvelle fonction que je n'ai pas demandée : demande-moi d'abord.

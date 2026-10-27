@@ -700,8 +700,8 @@
       options: [["souvent", "Oui, souvent", "", "flame"], ["parfois", "Parfois", "", "halfsun"], ["rare", "Presque jamais", "", "heart"]] },
     { id: "pt_boutons", sec: 1, title: "Les boutons, chez toi…", sub: "Pour savoir si ta peau a tendance à l'acné*.",
       options: [["rare", "C'est rare", "", "heart"], ["parfois", "De temps en temps", "Stress, fatigue, cycle, alimentation…", "halfsun"], ["souvent", "Souvent, plusieurs à la fois", "", "dots"], ["beaucoup", "Beaucoup, parfois douloureux ou sous la peau", "", "flame"]] },
-    { id: "pt_apres", sec: 1, title: function (a, app) { return app && app.state.washAt ? "Ça fait 5 minutes : regarde-toi à la lumière du jour. Ta peau…" : "Quelques minutes après t'être lavé le visage, sans rien mettre, ta peau…"; }, sub: "Touche ton front, ton nez et tes joues du bout des doigts.", timer: true,
-      options: [["tire", "Tiraille un peu partout", "", "dry"], ["tzone", "Brille sur le front, le nez ou le menton", "Le reste du visage va bien", "halfsun"], ["brille", "Brille un peu partout", "", "drops"], ["ok", "Est confortable", "Ni sèche, ni grasse", "heart"], ["tire2", "Tire encore", "", "dry"]] },
+    { id: "pt_apres", sec: 1, title: function (a, app) { return app && app.state.washAt ? "5 minutes après le lavage, ta peau…" : "Quelques minutes après t'être lavé le visage, sans rien mettre, ta peau…"; }, sub: "Regarde-toi à la lumière du jour et touche ton front, ton nez et tes joues du bout des doigts : ça brille ? ça tire ?", timer: true,
+      options: [["tire", "Tire encore, un peu partout", "Elle ne brille pas", "dry"], ["tzone", "Brille sur le front, le nez ou le menton", "Le reste du visage va bien", "halfsun"], ["brille", "Brille un peu partout", "", "drops"], ["ok", "Est confortable", "Ni sèche, ni grasse", "heart"]] },
     { id: "spfHabit", sec: 1, title: "Tu mets une crème solaire sur le visage ?", sub: "",
       options: [["tlj", "Tous les jours", "", "sun"], ["ete", "Seulement en été ou en vacances", "", "halfsun"], ["jamais", "Jamais ou presque", "", "none"]] },
     { id: "saisons", sec: 1, title: "Et selon les saisons ?", sub: "Plusieurs choix possibles.", multi: true, none: "stable",
@@ -906,7 +906,6 @@
     "concerns.rasage": "Boutons, rougeurs ou poils qui repoussent sous la peau après le rasage ou l'épilation.",
     "pt_boutons.beaucoup": "Des boutons profonds, douloureux ou qui laissent des marques méritent l'avis d'un médecin : l'acné se soigne.",
     "pt_lavage.picote": "Une peau qui picote ou chauffe après un simple lavage est souvent une peau sensible, ou un nettoyant trop fort.",
-    "pt_apres.tire2": "Une peau qui tire encore après quelques minutes manque de gras ou d'eau.",
     "pt_deshy.oui": "Briller et tirailler à la fois, c'est le signe d'une peau qui fait du sébum mais manque d'eau : on dit qu'elle est déshydratée.",
     "reactions.reactifHE": "Les huiles essentielles sont des extraits de plantes très concentrés (lavande, arbre à thé…), allergisants pour certaines peaux.",
     "reactions.acides": "Les exfoliants chimiques : AHA (acide glycolique, lactique), BHA (acide salicylique), PHA.",
@@ -1920,7 +1919,7 @@
     this.mount.innerHTML = html;
     clearInterval(this.tick);
     var tm = this.mount.querySelector("[data-timer]");
-    if (tm) { var end = +tm.getAttribute("data-timer"), me = this; this.tick = setInterval(function () { if (!tm.isConnected) return clearInterval(me.tick); if (Date.now() >= end) { clearInterval(me.tick); tm.textContent = "✅ C'est l'heure : regarde ta peau et réponds."; return; } tm.textContent = "⏱ Encore " + fmtLeft(end) + ". Tu peux attendre, ou répondre maintenant."; }, 1000); }
+    if (tm) { var end = +tm.getAttribute("data-timer"), me = this; this.tick = setInterval(function () { if (!tm.isConnected) return clearInterval(me.tick); if (Date.now() >= end) { clearInterval(me.tick); tm.textContent = "✅ Les 5 minutes sont passées : regarde ta peau et réponds."; return; } tm.textContent = "⏱ Encore " + fmtLeft(end) + ". Tu peux attendre, ou répondre maintenant."; }, 1000); }
     if (changed) {
       var body = this.mount.querySelector(".body"); if (body) body.classList.add("enter");
       try { var top = this.host.getBoundingClientRect().top; if (top < 0) window.scrollBy({ top: top - 8, behavior: "smooth" }); } catch (e) {}
@@ -1966,7 +1965,7 @@
     if (q.link) html += "<a class='ext' href='" + q.link[1] + "' target='_blank' rel='noopener'>" + esc(q.link[0]) + " ↗</a>";
     html += "<div class='opts'>" + q.options.map(function (o) {
       var on = q.multi ? (val || []).indexOf(o[0]) > -1 : val === o[0];
-      return "<button class='opt' data-q='" + q.id + "' data-v='" + esc(o[0]) + "' aria-pressed='" + on + "'><span class='ico" + (emo(q.id, o[0]) ? " emo" : "") + "'>" + (emo(q.id, o[0]) || icon(o[3])) + "</span><span class='lbl'>" + esc(o[1]) + (OPT_DEF[q.id + "." + o[0]] ? "<sup class='ast'>*</sup>" : "") + (o[2] ? "<small>" + esc(o[2]) + "</small>" : "") + "</span><span class='" + (q.multi ? "chk" : "rad") + "'></span></button>";
+      return "<button class='opt' data-q='" + q.id + "' data-v='" + esc(o[0]) + "' aria-pressed='" + on + "'><span class='ico" + (emo(q.id, o[0]) ? " emo" : "") + "'>" + (emo(q.id, o[0]) || icon(o[3])) + "</span><span class='lbl'><span>" + esc(o[1]) + (OPT_DEF[q.id + "." + o[0]] ? "<sup class='ast'>*</sup>" : "") + "</span>" + (o[2] ? "<small>" + esc(o[2]) + "</small>" : "") + "</span><span class='" + (q.multi ? "chk" : "rad") + "'></span></button>";
     }).join("") + "</div>";
     var defl = q.options.filter(function (o) { return OPT_DEF[q.id + "." + o[0]]; });
     if (defl.length) html += "<details class='defs'><summary>* Ce que veulent dire ces mots</summary><dl>" + defl.map(function (o) { return "<dt>" + esc(o[1]) + "</dt><dd>" + esc(OPT_DEF[q.id + "." + o[0]]) + "</dd>"; }).join("") + (q.id === "pt_boutons" ? "<dt>Acné</dt><dd>" + esc(OPT_DEF["concerns.acne"]) + "</dd>" : "") + "</dl></details>";

@@ -31,7 +31,9 @@ Crée une application mobile iOS et Android, en français, avec tutoiement, appe
 - **photos :** celles du dossier `img/` joint.
 
 **Le diagnostic :**
-- une question par écran, environ 50 écrans en tout ;
+- un écran « Avant de commencer » (prévoir 10 à 15 minutes, près d'un lavabo) ;
+- une question par écran, 45 à 50 écrans selon les réponses ; les questions dont on connaît déjà la réponse sont sautées, et « Qu'aimerais-tu améliorer ? » est pré-coché ;
+- les mots compliqués des réponses portent un astérisque \* expliqué sous la question (`OPT_DEF`) ;
 - réponses en grandes pilules avec un émoji, passage automatique à l'écran suivant après un choix unique ;
 - barre de progression en 5 parties : 🚿 douche, 🧖🏾 visage, 🧴 corps, 💇🏾 cheveux, ✨ envies ;
 - un petit message d'encouragement au début de chaque partie ;
@@ -41,7 +43,7 @@ Le diagnostic couvre :
 - la douche et l'eau ;
 - une photo ou une vidéo du visage ;
 - « Raconte-moi », à l'oral ou à l'écrit ;
-- le test du type de peau en plusieurs questions ;
+- le test du visage nu : se laver le visage, dire ce qu'on ressent tout de suite, puis regarder sa peau 5 minutes après, avec un minuteur. Le résultat (`skinProfile`) donne le type de peau, « Ce qui nous fait dire ça » et une fiabilité ;
 - les antécédents, la carnation et les préoccupations ;
 - grossesse et ménopause, **masquées pour un homme** ;
 - barbe et rasage, **pour les hommes** ;

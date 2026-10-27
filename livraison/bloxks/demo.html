@@ -1,0 +1,18 @@
+<title>Mon Rituel Sunsoari</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+  /* Une page d'accueil sobre qui met le widget au centre, comme sur sunsoari.fr. */
+  :root { --page: #f6f1ea; --ink: #2b2622; --muted: #6f655c; --water: #2f6f7e; color-scheme: light; }
+  body { background: var(--page); color: var(--ink); font-family: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+  main { max-width: 560px; margin: 0 auto; padding-block: 32px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  header p { margin: 0; color: var(--muted); font-size: 15px; max-width: 60ch; line-height: 1.55; }
+  header small { display: block; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--water); margin-bottom: 8px; }
+</style>
+<main>
+  <header>
+    <small>Démo · exemple à intégrer sur sunsoari.fr</small>
+    <p>L'application Sunsoari : diagnostic, routine Matin · Soir · Hebdo · Douche avec score de compatibilité, scanner de produits, espace Aujourd'hui, trousse, guides et assistante. Dans cet aperçu, l'assistante et la lecture des photos utilisent l'IA de ton compte Claude ; sur sunsoari.fr, elles passeront par ton propre serveur.</p>
+  </header>
+  <div id="sunsoari-rituel" data-shop="https://sunsoari.fr" data-whatsapp="0781737521"></div>
+</main>
+<script charset="utf-8" src="sunsoari-app.js"></script>

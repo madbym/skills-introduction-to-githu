@@ -6,7 +6,7 @@ L'application « Mon Rituel · Sunsoari » existe déjà sous forme de prototype
 | Fichier | Rôle |
 |---|---|
 | `sunsoari-rituel/PROMPT-EMERGENT.md` | Les 6 messages de travail, à suivre un par un |
-| `sunsoari-rituel/CAHIER-DES-CHARGES-APP.md` | Le cahier des charges complet (sections 1 à 9, avec 5 quater à 5 quindecies) |
+| `sunsoari-rituel/CAHIER-DES-CHARGES-APP.md` | Le cahier des charges complet (sections 1 à 9, avec 5 quater à 5 septdecies) |
 | `sunsoari-rituel/sunsoari-app.js` | **La référence** : l'application complète (données, questions, moteur de recommandation, écrans) |
 | `sunsoari-rituel/demo.html` | La page qui charge l'application |
 | `sunsoari-rituel/app/` | Manifeste et icônes pour l'installation sur téléphone (PWA) |
@@ -21,17 +21,22 @@ L'application « Mon Rituel · Sunsoari » existe déjà sous forme de prototype
 Les fichiers `sunsoari-rituel.js` et `sunsoari-beaute.js` sont d'anciennes versions : ne les utilise pas.
 
 ## Ce que fait l'application aujourd'hui
-- **Diagnostic d'environ 50 écrans**, une question par écran, avec un émoji par réponse, une barre de progression en 5 parties et un message d'encouragement à chaque nouvelle partie. Il couvre :
+- **Diagnostic de 45 à 50 écrans selon les réponses**, une question par écran, avec un émoji par réponse, une barre de progression en 5 parties et un message d'encouragement à chaque nouvelle partie. Il couvre :
+  - un écran « Avant de commencer » (10 à 15 minutes, être près d'un lavabo) ;
   - la douche ;
   - la photo ou la vidéo du visage ;
-  - « Raconte-moi », à l'oral ou à l'écrit ;
-  - le test du type de peau en plusieurs questions ;
+  - « Raconte-moi », à l'oral ou à l'écrit (les questions déjà remplies ne sont pas reposées) ;
+  - le test du visage nu : se laver le visage, dire ce qu'on ressent tout de suite, puis regarder sa peau 5 minutes après (minuteur), avec des questions de mémoire pendant l'attente ;
+  - le type de peau (grasse, mixte, sèche, normale, plus « à tendance acnéique », « déshydratée » et « sensible »), avec « Ce qui nous fait dire ça » et une fiabilité ;
   - les antécédents, la carnation et les préoccupations ;
   - les réactions et leur cause ;
   - grossesse et ménopause (masquées pour un homme), barbe et rasage (pour les hommes) ;
   - le corps ;
   - les cheveux : texture de 2A à 4C, porosité, cuir chevelu, signes et diagnostics médicaux, coiffures ;
   - les envies, les marques préférées, le format de routine et le budget.
+- **Pas de question en double** : les questions dont on connaît déjà la réponse sont sautées, et « Qu'aimerais-tu améliorer ? » est pré-coché d'après les réponses précédentes.
+- **Astérisques \*** : les mots compliqués des réponses sont expliqués sous la question (`OPT_DEF`). Un **lexique** de 42 définitions est dans Ressources et à côté des écrans concernés (`GLOSSAIRE`).
+- **Abonnement Sunsoari+** (2,99 €/mois ou 24,90 €/an) : le diagnostic et la routine restent gratuits ; le planner, l'évolution, Ma semaine et l'Académie sont réservés (`PLUS_TABS`).
 - **Dictée** sur chaque champ texte. Si le micro est bloqué, l'app bascule sur la dictée du clavier.
 - **Fin du parcours** : e-mail et consentements séparés, puis l'espace soin.
 - **Espace soin en 10 onglets** : Ma routine (Matin, SPF, Soir, Corps, Cheveux), Mon planner, Mon évolution, Ma semaine, Protection solaire, Recommandations, Cheveux (routine, guide de texture, porosité, cuir chevelu, compléments), Mes produits, Diagnostic, Astuces.

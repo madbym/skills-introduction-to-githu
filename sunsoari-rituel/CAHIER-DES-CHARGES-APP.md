@@ -130,7 +130,7 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 
 ## 5 septies. Test du type de peau (remplace la question unique)
 - **Le principe** : on ne déduit plus le type de peau d'une seule impression. Le test pose six questions d'observation :
-  - la peau une heure après le lavage ;
+  - la peau juste après le lavage, puis 5 minutes après (voir 5 sexdecies) ;
   - la brillance en fin de journée ;
   - les pores ;
   - les zones rêches ;
@@ -169,7 +169,7 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 
 ## 5 nonies. Ajouts issus du « Questionnaire peau » et du « Rituel de Sira »
 - **Avant le test du type de peau**, deux aides :
-  - le « test du visage nu » : nettoyer, ne rien appliquer, attendre une heure, observer à la lumière du jour et, en option, faire le test du mouchoir ;
+  - le « test du visage nu » : nettoyer, ne rien appliquer, attendre 5 minutes, observer à la lumière du jour (remplacé par le test en 5 minutes, voir 5 sexdecies) ;
   - un encadré dépliable « Les 4 types de peau en bref ».
 - **Nouvelles questions** :
   - « Quand tu mets une crème hydratante classique… » ;

@@ -688,16 +688,14 @@
       options: [["mat", "Reste mat, voire tiraille", "", "dry"], ["tz", "Brille sur le front, le nez et le menton", "", "halfsun"], ["tout", "Brille sur tout le visage", "", "drops"], ["var", "Ça dépend des jours", "", "ask"]] },
     { id: "pt_pores", sec: 1, title: "Dans le miroir, tes pores sont…", sub: "",
       options: [["peu", "Peu visibles", "", "none"], ["nez", "Visibles sur le nez et autour", "", "dots"], ["joues", "Visibles aussi sur les joues", "", "spots"]] },
-    { id: "pt_peaux", sec: 1, title: "As-tu des zones rêches ou des petites peaux qui pèlent ?", sub: "",
+    { id: "pt_peaux", sec: 1, skipIf: function (a) { return a.pt_lavage === "tire"; }, title: "As-tu des zones rêches ou des petites peaux qui pèlent ?", sub: "",
       options: [["souvent", "Souvent", "", "dry"], ["hiver", "Parfois, surtout en hiver", "", "wave"], ["rare", "Rarement", "", "none"]] },
     { id: "pt_creme", sec: 1, title: "Quand tu mets une crème hydratante classique…", sub: "",
       options: [["boit", "Elle disparaît vite, j'en remets", "Ma peau en redemande", "dry"], ["ok", "Elle pénètre bien, c'est confortable", "", "heart"], ["zones", "Parfaite sur les joues, trop riche sur le front et le nez", "", "halfsun"], ["brille", "Elle me fait briller ou me donne des boutons", "", "drops"]] },
-    { id: "pt_deshy", sec: 1, title: "Ta peau peut-elle briller et tirailler en même temps ?", sub: "C'est un signe fréquent de manque d'eau, quel que soit ton type de peau.",
+    { id: "pt_deshy", sec: 1, skipIf: function (a) { return a.pt_soir === "mat" || (a.pt_lavage === "tire" && (a.pt_soir === "tz" || a.pt_soir === "tout")); }, title: "Ta peau peut-elle briller et tirailler en même temps ?", sub: "C'est un signe fréquent de manque d'eau, quel que soit ton type de peau.",
       options: [["oui", "Oui, ça m'arrive", "", "yes"], ["non", "Non", "", "no"], ["nsp", "Je ne sais pas", "", "ask"]] },
     { id: "pt_reac", sec: 1, title: "Quand tu essaies un nouveau produit, ta peau…", sub: "",
       options: [["souvent", "Picote, rougit ou chauffe souvent", "", "flame"], ["parfois", "Réagit de temps en temps", "", "halfsun"], ["rare", "Réagit rarement", "", "heart"]] },
-    { id: "pt_reac2", sec: 1, title: "Le soleil, le froid ou les vacances te donnent des irritations ?", sub: "",
-      options: [["souvent", "Oui, souvent", "", "flame"], ["parfois", "Parfois", "", "halfsun"], ["rare", "Presque jamais", "", "heart"]] },
     { id: "pt_boutons", sec: 1, title: "Les boutons, chez toi…", sub: "Pour savoir si ta peau a tendance à l'acné*.",
       options: [["rare", "C'est rare", "", "heart"], ["parfois", "De temps en temps", "Stress, fatigue, cycle, alimentation…", "halfsun"], ["souvent", "Souvent, plusieurs à la fois", "", "dots"], ["beaucoup", "Beaucoup, parfois douloureux ou sous la peau", "", "flame"]] },
     { id: "pt_apres", sec: 1, title: function (a, app) { return app && app.state.washAt ? "5 minutes après le lavage, ta peau…" : "Quelques minutes après t'être lavé le visage, sans rien mettre, ta peau…"; }, sub: "Regarde-toi à la lumière du jour et touche ton front, ton nez et tes joues du bout des doigts : ça brille ? ça tire ?", timer: true,
@@ -709,17 +707,26 @@
     { id: "antecedents", sec: 1, title: "Un ou une médecin t'a déjà parlé de…", sub: "Plusieurs choix possibles. On écartera ce qui pourrait irriter.", multi: true, none: "aucun",
       options: [["eczema", "Eczéma ou dermatite", "", "dry"], ["rosacee", "Rosacée", "", "flame"], ["psoriasis", "Psoriasis", "", "wave"], ["acne", "Acné suivie par un médecin", "", "dots"], ["traitement", "Un traitement de dermatologue en cours", "", "ask"], ["allergies", "Des allergies connues à des cosmétiques", "", "flame"], ["aucun", "Rien de tout ça", "", "none"]] },
     { id: "modeVie", sec: 1, title: "Ton quotidien, c'est plutôt…", sub: "Plusieurs choix possibles. Pour des astuces adaptées.", multi: true, none: "rien",
-      options: [["soleil", "Souvent dehors ou au soleil", "", "sun"], ["sport", "Du sport régulier", "", "wave"], ["ville", "La ville, la pollution", "", "dots"], ["ecrans", "Beaucoup d'écrans", "", "halfsun"], ["sommeil", "Peu de sommeil ou du stress", "", "moon"], ["maquillage", "Je me maquille tous les jours", "", "flower"], ["rasage", "Je me rase souvent (visage, jambes…)", "", "wave"], ["rien", "Rien de particulier", "", "none"]] },
+      options: [["soleil", "Souvent dehors ou au soleil", "", "sun"], ["sport", "Du sport régulier", "", "wave"], ["ville", "La ville, la pollution", "", "dots"], ["ecrans", "Beaucoup d'écrans", "", "halfsun"], ["sommeil", "Peu de sommeil ou du stress", "", "moon"], ["maquillage", "Je me maquille tous les jours", "", "flower"], ["rien", "Rien de particulier", "", "none"]] },
     { id: "infoPeau", sec: 1, type: "info", kind: "peau" },
     { id: "carnation", sec: 1, title: "Quelle est ta carnation ?", sub: "Pour choisir des solaires sans trace blanche et prévenir les marques. Tu peux passer.",
       options: [["claire", "Claire", "Rougit et brûle facilement, bronze peu", "halfsun"], ["mate", "Mate à métissée", "Rougit parfois, bronze bien", "sun"], ["foncee", "Foncée", "Rougit rarement", "heart"], ["tresfoncee", "Très foncée", "Ne rougit presque jamais", "heart"], ["nsp", "Je préfère ne pas répondre", "", "ask"]] },
-    { id: "concerns", sec: 1, title: "Qu'aimerais-tu améliorer ?", sub: "Jusqu'à 5 choix. On adapte tes conseils et tes produits.", multi: true, max: 5, none: "aucune",
+    { id: "concerns", sec: 1, prefill: function (a) {
+        var l = [], pv = a.photoVisage || {}, seen = [];
+        Object.keys(pv).forEach(function (z) { seen = seen.concat(pv[z] || []); });
+        if (a.pt_boutons === "beaucoup") l.push("acne"); else if (a.pt_boutons === "souvent" || seen.indexOf("imperfections") > -1) l.push("imperfections");
+        if (a.pt_soir === "tout" || a.pt_apres === "brille" || seen.indexOf("brillance") > -1) l.push("brillance");
+        if (a.pt_lavage === "tire" || a.pt_peaux === "souvent" || seen.indexOf("secheresse") > -1) l.push("secheresse");
+        if (a.pt_lavage === "picote" || a.pt_reac === "souvent" || seen.indexOf("rougeurs") > -1) l.push("rougeurs");
+        ["taches", "texture"].forEach(function (x) { if (seen.indexOf(x) > -1) l.push(x); });
+        return l.slice(0, 5);
+      }, title: "Qu'aimerais-tu améliorer ?", sub: "Jusqu'à 5 choix. On adapte tes conseils et tes produits.", multi: true, max: 5, none: "aucune",
       options: [["secheresse", "Sécheresse, tiraillements", "", "dry"], ["imperfections", "Boutons, imperfections", "", "dots"], ["pointsnoirs", "Points noirs", "", "dots"], ["brillance", "Brillance", "", "drops"], ["marques", "Marques après les boutons", "", "spots"], ["cernes", "Cernes", "", "moon"], ["rougeurs", "Rougeurs, sensibilité", "", "flame"], ["teint", "Teint terne", "", "halfsun"], ["texture", "Grain de peau irrégulier", "", "wave"], ["taches", "Taches, teint inégal", "", "spots"], ["rides", "Ridules, fermeté", "", "sprout"], ["acne", "Acné", "Beaucoup de boutons, parfois douloureux", "dots"], ["plaques", "Plaques, zones qui grattent ou qui pèlent", "Eczéma, psoriasis ou autre affection", "dry"], ["autre", "Autre chose", "Tu pourras l'expliquer", "ask"], ["rasage", "Feu du rasoir, poils incarnés", "", "flame"], ["aucune", "Rien de particulier", "", "none"]] },
     { id: "concernsAutre", sec: 1, type: "text", title: "Dis-nous en plus", sub: "Ce que tu remarques, depuis quand, ce qui l'aggrave ou l'apaise. Tu peux dicter.", skipIf: function (a) { return !has(a, "concerns", "autre") && !has(a, "concerns", "plaques"); },
       fields: [["concernsTexte", "Ce qui te gêne", "area", "Ex. : des plaques sèches qui grattent derrière les oreilles depuis l'hiver…"]] },
     { id: "tachesNiveau", sec: 1, title: "Comment décrirais-tu tes taches aujourd'hui ?", sub: "Ton ressenti suffit. Ça nous aide à doser ta routine.", skipIf: function (a) { return !has(a, "concerns", "taches") && !has(a, "concerns", "marques"); },
       options: [["t1", "Légères ou récentes", "Quelques marques après des boutons", "halfsun"], ["t2", "Visibles depuis plusieurs mois", "", "spots"], ["t3", "Marquées, anciennes ou étendues", "", "dots"], ["t4", "Très marquées, ou une tache qui change", "Un avis médical d'abord", "ask"]] },
-    { id: "reactions", sec: 1, title: "Ta peau a-t-elle déjà mal réagi à…", sub: "Plusieurs choix possibles. Ça nous aide à écarter certains produits.", multi: true, none: "rien",
+    { id: "reactions", sec: 1, skipIf: function (a) { return a.pt_reac === "rare" && !has(a, "antecedents", "allergies"); }, title: "Ta peau a-t-elle déjà mal réagi à…", sub: "Plusieurs choix possibles. Ça nous aide à écarter certains produits.", multi: true, none: "rien",
       options: [["reactifHE", "Parfums ou huiles essentielles", "", "flower"], ["acides", "Acides exfoliants", "", "wave"], ["ruche", "Produits de la ruche", "Miel, propolis", "leaf"], ["rien", "Rien de particulier", "", "none"]] },
     { id: "reacCause", sec: 1, title: "D'après toi, cette réaction a pu venir…", sub: "Plusieurs choix possibles. Une réaction n'a pas toujours la cause qu'on croit.", multi: true, none: "nsp",
       skipIf: function (a) { var r = a.reactions || []; return !r.length || r.indexOf("rien") > -1; },
@@ -754,9 +761,9 @@
       options: [["porBasse", "Ils mettent du temps à se mouiller et à sécher", "Les produits restent en surface, s'accumulent", "drop"], ["porMoy", "Entre les deux", "Ils prennent bien les soins", "halfsun"], ["porHaute", "Ils sèchent très vite et frisottent", "Ils boivent les soins, mais redeviennent secs vite", "dry"], ["nsp", "Je ne sais pas", "", "ask"]] },
     { id: "cheveux", sec: 3, title: "Et tes longueurs, en ce moment ?", sub: "",
       options: [["secs", "Sèches ou cassantes", "", "dry"], ["colores", "Colorées ou décolorées", "", "color"], ["fins", "Fines, vite plates", "", "thin"], ["ok", "En forme", "", "heart"]] },
-    { id: "cuir", sec: 3, title: "Ton cuir chevelu est plutôt…", sub: "Plusieurs choix possibles.", multi: true, none: "cuirOk",
+    { id: "cuir", sec: 3, prefill: function (a) { var l = []; Object.keys(a.photoCuir || {}).forEach(function (z) { (a.photoCuir[z] || []).forEach(function (o) { if (o.indexOf("cuir") === 0 && l.indexOf(o) < 0) l.push(o); }); }); return l; }, title: "Ton cuir chevelu est plutôt…", sub: "Plusieurs choix possibles.", multi: true, none: "cuirOk",
       options: [["cuirGras", "Il regraisse vite", "", "drops"], ["cuirSec", "Il tiraille, il est sec", "", "dry"], ["cuirPellicules", "Pellicules", "", "dots"], ["cuirSensible", "Sensible, il démange", "", "flame"], ["cuirOk", "Sans souci", "", "heart"]] },
-    { id: "cuirSignes", sec: 3, title: "Tu remarques aussi…", sub: "Plusieurs choix possibles. On ne pose pas de diagnostic : ça nous aide à t'orienter et à écarter ce qui pourrait irriter.", multi: true, none: "aucunSigne",
+    { id: "cuirSignes", sec: 3, hideOpts: function (a) { return (a.cuir || []).join() === "cuirOk" ? ["squamesGrasses", "plaques"] : []; }, title: "Tu remarques aussi…", sub: "Plusieurs choix possibles. On ne pose pas de diagnostic : ça nous aide à t'orienter et à écarter ce qui pourrait irriter.", multi: true, none: "aucunSigne",
       options: [["squamesGrasses", "Des squames grasses et des rougeurs", "Parfois aussi aux sourcils ou sur les ailes du nez", "drops"], ["plaques", "Des plaques épaisses, des squames blanches ou argentées", "Parfois au-delà de la lisière, derrière les oreilles", "wave"], ["tempes", "Des tempes ou une lisière qui se dégarnissent", "", "thin"], ["chute", "Plus de cheveux qui tombent que d'habitude", "", "dots"], ["zones", "Une zone ronde sans cheveux", "", "ask"], ["boutonsCuir", "Des boutons ou des croûtes sur le cuir chevelu", "", "flame"], ["aucunSigne", "Rien de tout ça", "", "none"]] },
     { id: "cuirDiag", sec: 3, title: "Pour ton cuir chevelu, un ou une médecin t'a déjà parlé de…", sub: "Plusieurs choix possibles.", multi: true, none: "rienDiag",
       options: [["dsDiag", "Dermatite séborrhéique", "", "drops"], ["psoDiag", "Psoriasis du cuir chevelu", "", "wave"], ["tractionDiag", "Alopécie de traction", "Liée aux coiffures qui tirent", "thin"], ["androDiag", "Alopécie androgénétique", "Cheveux qui s'affinent avec le temps", "thin"], ["peladeDiag", "Pelade", "", "ask"], ["rienDiag", "Rien de tout ça", "", "none"]] },
@@ -774,10 +781,8 @@
     { id: "format", sec: 4, title: "Quelle routine te ressemble ?", sub: "Tu pourras changer à tout moment depuis ta routine.",
       options: [["essentielle", "L'essentiel", "3 ou 4 gestes, le strict nécessaire", "sprout"], ["complete", "La routine complète", "Toutes les étapes, façon K-beauty", "sunmoon"], ["equilibree", "Entre les deux", "Les bases et un soin ciblé", "halfsun"]] },
     { id: "notes", sec: 4, type: "text", title: "Un mot de plus ?", sub: "Facultatif.", fields: [["notes", "Allergies, objectifs, budget, ce que tu veux nous dire…", "area", ""]] },
-    { id: "budgetSoin", sec: 4, title: "Ton budget soin par mois, visage, corps et cheveux ?", sub: "On te propose d'abord ce qui rentre dans ton budget.",
+    { id: "budgetSoin", sec: 4, title: "Ton budget soin par mois ?", sub: "Visage, corps, cheveux et douche. On te propose d'abord ce qui rentre dans ton budget.",
       options: [["b30", "Moins de 30 €", "", "coin"], ["b60", "30 à 60 €", "", "coin"], ["b100", "60 à 100 €", "", "coin"], ["b100p", "Plus de 100 €", "", "coin"]] },
-    { id: "budget", sec: 4, title: "Quel budget pour démarrer ton rituel douche ?", sub: "Tu pourras compléter ton rituel plus tard.",
-      options: [["petit", "Moins de 30 €", "", "coin"], ["moyen", "30 à 70 €", "", "coin"], ["grand", "Plus de 70 €", "", "coin"]] },
     { id: "fin", sec: 4, type: "fin", kicker: "Ton espace" }
   ];
 
@@ -1102,23 +1107,24 @@
     var s = scentOf(a), tags = tagsOf(a), main, alts = [], extras = [], refills = [], why = [];
     var nomade = a.lieu === "voyage";
     // SHIFT contient des huiles essentielles (dont tea tree) : on l'écarte si la peau y réagit, si elle ne veut pas de parfum, ou pendant la grossesse.
+    var bud = a.budget || ({ b30: "petit", b60: "moyen", b100: "grand", b100p: "grand" })[a.budgetSoin] || "moyen";
     var shiftOk = !has(a, "envies", "sansparfum") && tags.indexOf("reactifHE") < 0 && a.grossesse !== "oui" && a.peau !== "sensible";
     var wantsShift = has(a, "envies", "senteur") || has(a, "envies", "soin") || has(a, "envies", "soir");
 
     if (nomade && s === "sans") {
       main = "douchette"; alts = ["premierHome"]; refills = ["sediment"];
     } else if (nomade) {
-      main = a.budget === "petit" ? "setNomade" : "coffretNomade";
+      main = bud === "petit" ? "setNomade" : "coffretNomade";
       alts = main === "setNomade" ? ["coffretNomade", "douchette"] : ["setNomade", "douchette"];
       refills = ["capsule", "sediment"];
-    } else if (shiftOk && (a.budget !== "petit" || SHIFT_ONLY.indexOf(s) > -1)) {
-      main = a.budget === "grand" ? "shiftAroma" : "shiftSoin";
+    } else if (shiftOk && (bud !== "petit" || SHIFT_ONLY.indexOf(s) > -1)) {
+      main = bud === "grand" ? "shiftAroma" : "shiftSoin";
       if (SHIFT_ONLY.indexOf(s) > -1) why.push("Ta senteur, " + SCENT_LABEL[s] + ", existe en capsules SHIFT.");
       alts = main === "shiftAroma" ? ["shiftSoin", "coffretHome"] : ["shiftAroma", "starterHome"];
       refills = ["pureWater", "shiftCaps"];
       why.push(wantsShift ? "Tu veux une douche sensorielle : SHIFT associe filtration et capsules d'aromathérapie aux actifs hydratants." : "SHIFT réunit filtration et capsules de soin dans un seul geste.");
     } else {
-      main = a.budget === "petit" ? "premierHome" : a.budget === "moyen" ? "starterHome" : "coffretHome";
+      main = bud === "petit" ? "premierHome" : bud === "moyen" ? "starterHome" : "coffretHome";
       if (main === "premierHome") alts = shiftOk ? ["shiftSoin", "pommeau"] : ["starterHome", "pommeau"];
       else if (main === "starterHome") alts = ["premierHome", "coffretHome"];
       else alts = ["starterHome", "pommeau"];
@@ -1934,6 +1940,12 @@
   };
 
   // ---------- Onboarding : le diagnostic ----------
+  // Passe à la question suivante, sans reposer ce que « Raconte-moi » a déjà rempli.
+  A.nextStep = function () {
+    var qs = this.visibleQuestions(), done = this.state.voiceIds || [], a = this.state.answers;
+    this.step++;
+    while (this.step < qs.length - 1 && done.indexOf(qs[this.step].id) > -1 && a[qs[this.step].id] !== undefined) this.step++;
+  };
   A.visibleQuestions = function () { var a = this.state.answers; return QUESTIONS.filter(function (q) { return !(q.skipIf && q.skipIf(a)); }); };
   A.progressPct = function () {
     var a = this.state.answers, qs = this.visibleQuestions().filter(function (q) { return !q.type; });
@@ -1960,10 +1972,14 @@
     if (q.type === "fin") return html + this.vFin();
     var val = a[q.id];
     var qtitle = typeof q.title === "function" ? q.title(a, this) : q.title;
+    this.prefilled = this.prefilled || {};
+    if (q.prefill && a[q.id] === undefined) { var pf = q.prefill(a); if (pf.length) { a[q.id] = pf; this.prefilled[q.id] = true; this.save(); val = a[q.id]; } }
+    var hidden = q.hideOpts ? q.hideOpts(a) : [];
     html += "<div class='q'><h3>" + esc(qtitle) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "");
     if (q.timer && this.state.washAt && Date.now() - this.state.washAt < 300000) html += "<p class='timer' data-timer='" + (this.state.washAt + 300000) + "'>⏱ Encore " + fmtLeft(this.state.washAt + 300000) + ". Tu peux attendre, ou répondre maintenant.</p>";
+    if (this.prefilled[q.id]) html += "<p class='cheer'>✨ On a déjà coché ce que tu nous as dit. Décoche ou ajoute si besoin.</p>";
     if (q.link) html += "<a class='ext' href='" + q.link[1] + "' target='_blank' rel='noopener'>" + esc(q.link[0]) + " ↗</a>";
-    html += "<div class='opts'>" + q.options.map(function (o) {
+    html += "<div class='opts'>" + q.options.filter(function (o) { return hidden.indexOf(o[0]) < 0; }).map(function (o) {
       var on = q.multi ? (val || []).indexOf(o[0]) > -1 : val === o[0];
       return "<button class='opt' data-q='" + q.id + "' data-v='" + esc(o[0]) + "' aria-pressed='" + on + "'><span class='ico" + (emo(q.id, o[0]) ? " emo" : "") + "'>" + (emo(q.id, o[0]) || icon(o[3])) + "</span><span class='lbl'><span>" + esc(o[1]) + (OPT_DEF[q.id + "." + o[0]] ? "<sup class='ast'>*</sup>" : "") + "</span>" + (o[2] ? "<small>" + esc(o[2]) + "</small>" : "") + "</span><span class='" + (q.multi ? "chk" : "rad") + "'></span></button>";
     }).join("") + "</div>";
@@ -2506,17 +2522,17 @@
     return QUESTIONS.filter(function (q) { return q.options && !q.type; }).map(function (q) { return q.id + (q.multi ? " (liste)" : "") + " : " + q.options.map(function (o) { return o[0] + "=" + o[1]; }).join(" | "); }).join("\n");
   };
   A.applyVoice = function (r) {
-    var a = this.state.answers, filled = [], ok = {};
+    var a = this.state.answers, filled = [], ok = {}, ids = [];
     QUESTIONS.forEach(function (q) { if (q.options && !q.type) ok[q.id] = q; });
     Object.keys((r && r.answers) || {}).forEach(function (id) {
       var q = ok[id], v = r.answers[id]; if (!q || v == null) return;
       var codes = q.options.map(function (o) { return o[0]; });
-      if (q.multi) { var l = (Array.isArray(v) ? v : [v]).filter(function (x) { return codes.indexOf(x) > -1; }).slice(0, q.max || 9); if (l.length) { a[id] = l; filled.push((typeof q.title === "function" ? q.title({}, null) : q.title).replace(/ ?[?\u2026]$/, "") + " : " + l.map(function (x) { return q.options[codes.indexOf(x)][1]; }).join(", ")); } }
-      else if (codes.indexOf(v) > -1) { a[id] = v; filled.push((typeof q.title === "function" ? q.title({}, null) : q.title).replace(/ ?[?\u2026]$/, "") + " : " + q.options[codes.indexOf(v)][1]); }
+      if (q.multi) { var l = (Array.isArray(v) ? v : [v]).filter(function (x) { return codes.indexOf(x) > -1; }).slice(0, q.max || 9); if (l.length) { a[id] = l; ids.push(id); filled.push((typeof q.title === "function" ? q.title({}, null) : q.title).replace(/ ?[?\u2026]$/, "") + " : " + l.map(function (x) { return q.options[codes.indexOf(x)][1]; }).join(", ")); } }
+      else if (codes.indexOf(v) > -1) { a[id] = v; ids.push(id); filled.push((typeof q.title === "function" ? q.title({}, null) : q.title).replace(/ ?[?\u2026]$/, "") + " : " + q.options[codes.indexOf(v)][1]); }
     });
     ["prenom", "age", "rythme", "produitsVisage", "produitsCorps", "notes"].forEach(function (k) { var v = r && r.fields && r.fields[k]; if (v) { a[k] = String(v).slice(0, 600); filled.push({ prenom: "Prénom", age: "Âge", rythme: "Rythme de vie", produitsVisage: "Produits visage", produitsCorps: "Produits corps", notes: "Notes" }[k] + " : " + a[k]); } });
     var sp = skinProfile(a); if (sp) a.peau = sp.peau;
-    this.voiceFilled = filled; this.save();
+    this.voiceFilled = filled; this.state.voiceIds = ids; this.save();
   };
   // Repli sans IA : quelques repères simples dans le texte.
   function voiceLocal(t) {
@@ -3015,13 +3031,13 @@
       s.answers[q.id] = d.v;
       var sp = skinProfile(s.answers); if (sp) s.answers.peau = sp.peau;
       this.save(); this.render();
-      if (this.step < this.visibleQuestions().length - 1) { clearTimeout(this.adv); this.adv = setTimeout(function () { self.step++; self.zone = null; self.aiMsg = null; self.render(); }, 260); }
+      if (this.step < this.visibleQuestions().length - 1) { clearTimeout(this.adv); this.adv = setTimeout(function () { self.nextStep(); self.zone = null; self.aiMsg = null; self.render(); }, 260); }
       return;
     }
     if (d.act === "prev") { this.step = Math.max(0, this.step - 1); this.zone = null; this.aiMsg = null; return this.render(); }
-    if (d.act === "washdone" || d.act === "washmemo") { s.washAt = d.act === "washdone" ? Date.now() : 0; this.save(); this.step++; return this.render(); }
+    if (d.act === "washdone" || d.act === "washmemo") { s.washAt = d.act === "washdone" ? Date.now() : 0; this.save(); this.nextStep(); return this.render(); }
     if (d.act === "next") { this.dictMsg = null;
-      if (this.step < this.visibleQuestions().length - 1) { this.step++; this.zone = null; this.aiMsg = null; }
+      if (this.step < this.visibleQuestions().length - 1) { this.nextStep(); this.zone = null; this.aiMsg = null; }
       else { s.done = true; s.doneAt = Date.now(); this.saveDay0(); this.save(); this.view = "espace"; this.etab = "routine"; this.emit("result", { answers: s.answers }); }
       return this.render();
     }

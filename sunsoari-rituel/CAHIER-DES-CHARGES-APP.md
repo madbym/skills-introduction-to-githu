@@ -273,6 +273,19 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - **Astérisques** : les réponses qui demandent une explication portent un * et le bloc « * Ce que veulent dire ces mots » les définit sous la question (`OPT_DEF`). Cela concerne les préoccupations, les antécédents, les réactions, le cuir chevelu, le corps et le test de peau.
 - **Nouvelles préoccupations** : « Acné », « Plaques, zones qui grattent ou qui pèlent » (eczéma, psoriasis ou autre affection) et « Autre chose ». Elles ouvrent un champ « Dis-nous en plus », avec la dictée. Avec des plaques, la routine est très douce et un conseil oriente vers un médecin.
 
+## 5 septdecies. Pas de question en double
+- **Questions supprimées** :
+  - « Le soleil, le froid ou les vacances te donnent des irritations ? », déjà couvert par « Et selon les saisons ? » et par la question sur les nouveaux produits ;
+  - le budget douche : un seul budget mensuel (« visage, corps, cheveux et douche »), d'où l'on déduit le coffret douche ;
+  - « Je me rase souvent » dans « Ton quotidien », déjà couvert par les préoccupations et la question barbe.
+- **Questions sautées quand la réponse est déjà connue** :
+  - « zones rêches » si la peau tire après le lavage ;
+  - « briller et tirailler en même temps » si la réponse se déduit du test ;
+  - « Ta peau a-t-elle déjà mal réagi à… » si elle réagit rarement et n'a pas d'allergie connue.
+- **Pré-cochage** : « Qu'aimerais-tu améliorer ? » coche d'avance ce qui a déjà été dit (boutons, brillance, sécheresse, rougeurs, éléments vus sur la photo), avec le message « On a déjà coché ce que tu nous as dit ». Le cuir chevelu est pré-coché d'après la photo.
+- **Options masquées** : un cuir chevelu « sans souci » ne se voit plus proposer « squames » ni « plaques ».
+- **« Raconte-moi »** : les questions déjà remplies par la voix ou le texte ne sont plus reposées (`voiceIds`, `nextStep`).
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

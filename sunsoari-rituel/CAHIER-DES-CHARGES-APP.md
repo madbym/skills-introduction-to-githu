@@ -265,6 +265,14 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - **Diagnostic ludique** : un émoji cohérent pour chaque réponse (mains de 4 carnations, drapeaux pour les origines, symboles de texture de cheveux…). Un émoji pour chaque partie, et un petit message d'encouragement au début de chaque nouvelle partie.
 - **Fluidité** : la feuille de style n'est chargée qu'une fois, seul le contenu change. Les choix multiples se mettent à jour sans recharger l'écran. Une animation douce accompagne chaque nouvel écran, désactivée si le téléphone demande moins d'animations. Le catalogue est calculé une seule fois. Chaque écran s'affiche en moins de 20 ms sur ordinateur.
 
+## 5 sexdecies. Test de peau simplifié, explications et astérisques
+- **Écran « Avant de commencer »** au tout début : 10 à 15 minutes, être chez soi ou près d'un lavabo, nettoyant habituel et serviette à portée de main, une photo possible. Option « je réponds de mémoire ».
+- **Test du visage nu en 5 minutes** (au lieu d'une heure) : bouton « C'est fait, mon visage est lavé ». Question immédiate « Juste après le lavage, ta peau… » (tire partout, tire sur les joues, picote, confortable). Les questions de mémoire suivent pendant l'attente. Puis « Ça fait 5 minutes : ta peau… », avec un minuteur.
+- **Nouvelle question « Les boutons, chez toi… »** : elle détecte une peau à tendance acnéique.
+- **Le moteur `skinProfile`** donne le type de peau (grasse, mixte, sèche, normale), plus « à tendance acnéique », « déshydratée » et « sensible ». Il donne aussi les raisons (« Ce qui nous fait dire ça ») et une fiabilité (faible, moyenne ou élevée, selon le nombre de réponses). Le bouton « 🤖 Explique-moi ma peau » transmet ces raisons à l'assistante.
+- **Astérisques** : les réponses qui demandent une explication portent un * et le bloc « * Ce que veulent dire ces mots » les définit sous la question (`OPT_DEF`). Cela concerne les préoccupations, les antécédents, les réactions, le cuir chevelu, le corps et le test de peau.
+- **Nouvelles préoccupations** : « Acné », « Plaques, zones qui grattent ou qui pèlent » (eczéma, psoriasis ou autre affection) et « Autre chose ». Elles ouvrent un champ « Dis-nous en plus », avec la dictée. Avec des plaques, la routine est très douce et un conseil oriente vers un médecin.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

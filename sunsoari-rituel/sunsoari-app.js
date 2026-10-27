@@ -320,6 +320,8 @@
     ".made.trend{background:var(--water-soft);color:var(--water)}",
     "@media (max-width:560px){.top,.body{padding-left:16px;padding-right:16px}.hero{grid-template-columns:1fr}.hero img{max-width:220px;margin:0 auto}}",
     ".ico.emo{font-size:26px;line-height:1;transition:transform .2s}", ".opt[aria-pressed=true] .ico.emo{transform:scale(1.15)}", ".opt{transition:border-color .2s,background .2s,transform .12s}", ".opt:active{transform:scale(.98)}",
+    "sup.ast{color:var(--sun);font-weight:700;margin-left:2px}", ".defs{margin:12px 0 0;background:var(--sand-soft);border-radius:14px;padding:10px 14px;font-size:14px}", ".defs summary{cursor:pointer;color:var(--water);font-weight:600}", ".defs dt{font-weight:600;margin-top:8px}", ".defs dd{margin:2px 0 0;color:var(--muted)}",
+    ".timer{background:var(--water-soft);color:var(--water);border-radius:14px;padding:10px 14px;font-weight:600;font-size:15px}", ".prepa li{margin:6px 0}",
     ".cheer{margin:4px 0 12px;padding:10px 14px;border-radius:14px;background:var(--water-soft);color:var(--water);font-weight:600;font-size:14px;animation:pop .35s ease}",
     "@keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}", "@keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}", ".body.enter{animation:enter .22s ease}",
     "@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}",
@@ -663,6 +665,7 @@
   var SECTIONS = ["Ta douche", "Ton visage", "Ton corps", "Tes cheveux", "Tes envies"];
 
   var QUESTIONS = [
+    { id: "prepa", sec: 0, type: "info", kind: "prepa" },
     { id: "voix", sec: 0, type: "voice", kicker: "Toi" },
     { id: "lieu", sec: 0, title: "Où prends-tu ta douche le plus souvent ?", sub: "On te propose le bon format : à installer chez toi ou à emporter.",
       options: [["maison", "Chez moi", "Ma douche de tous les jours", "home"], ["voyage", "Souvent en déplacement", "Hôtel, location, salle de sport", "plane"], ["deux", "Les deux", "Chez moi et en voyage", "both"]] },
@@ -679,8 +682,8 @@
     { id: "genre", sec: 1, title: "Tu es…", sub: "Pour adapter nos conseils. Tu peux passer.",
       options: [["femme", "Une femme", "", "heart"], ["homme", "Un homme", "", "heart"], ["autre", "Je me décris autrement", "", "sprout"], ["nsp", "Je préfère ne pas répondre", "", "ask"]] },
     { id: "infoTest", sec: 1, type: "info", kind: "test" },
-    { id: "pt_apres", sec: 1, title: "Une heure après t'être lavé le visage, sans rien appliquer, ta peau…", sub: "Pas sûre ? Fais le test ce soir avec un nettoyant doux, puis reviens.",
-      options: [["tire", "Tiraille un peu partout", "", "dry"], ["tzone", "Brille sur le front, le nez ou le menton", "Le reste du visage va bien", "halfsun"], ["brille", "Brille un peu partout", "", "drops"], ["ok", "Est confortable", "Ni sèche, ni grasse", "heart"]] },
+    { id: "pt_lavage", sec: 1, title: "Juste après le lavage, sans rien mettre, ta peau…", sub: "Ce que tu ressens tout de suite, en sortant la serviette.",
+      options: [["tire", "Tire ou tiraille partout", "Elle semble trop petite", "dry"], ["joues", "Tire un peu sur les joues seulement", "Le front et le nez vont bien", "halfsun"], ["picote", "Picote, chauffe ou rougit", "", "flame"], ["ok", "Est confortable", "Aucune gêne", "heart"]] },
     { id: "pt_soir", sec: 1, title: "En fin de journée, ton visage…", sub: "",
       options: [["mat", "Reste mat, voire tiraille", "", "dry"], ["tz", "Brille sur le front, le nez et le menton", "", "halfsun"], ["tout", "Brille sur tout le visage", "", "drops"], ["var", "Ça dépend des jours", "", "ask"]] },
     { id: "pt_pores", sec: 1, title: "Dans le miroir, tes pores sont…", sub: "",
@@ -695,6 +698,10 @@
       options: [["souvent", "Picote, rougit ou chauffe souvent", "", "flame"], ["parfois", "Réagit de temps en temps", "", "halfsun"], ["rare", "Réagit rarement", "", "heart"]] },
     { id: "pt_reac2", sec: 1, title: "Le soleil, le froid ou les vacances te donnent des irritations ?", sub: "",
       options: [["souvent", "Oui, souvent", "", "flame"], ["parfois", "Parfois", "", "halfsun"], ["rare", "Presque jamais", "", "heart"]] },
+    { id: "pt_boutons", sec: 1, title: "Les boutons, chez toi…", sub: "Pour savoir si ta peau a tendance à l'acné*.",
+      options: [["rare", "C'est rare", "", "heart"], ["parfois", "De temps en temps", "Stress, fatigue, cycle, alimentation…", "halfsun"], ["souvent", "Souvent, plusieurs à la fois", "", "dots"], ["beaucoup", "Beaucoup, parfois douloureux ou sous la peau", "", "flame"]] },
+    { id: "pt_apres", sec: 1, title: function (a, app) { return app && app.state.washAt ? "Ça fait 5 minutes : regarde-toi à la lumière du jour. Ta peau…" : "Quelques minutes après t'être lavé le visage, sans rien mettre, ta peau…"; }, sub: "Touche ton front, ton nez et tes joues du bout des doigts.", timer: true,
+      options: [["tire", "Tiraille un peu partout", "", "dry"], ["tzone", "Brille sur le front, le nez ou le menton", "Le reste du visage va bien", "halfsun"], ["brille", "Brille un peu partout", "", "drops"], ["ok", "Est confortable", "Ni sèche, ni grasse", "heart"], ["tire2", "Tire encore", "", "dry"]] },
     { id: "spfHabit", sec: 1, title: "Tu mets une crème solaire sur le visage ?", sub: "",
       options: [["tlj", "Tous les jours", "", "sun"], ["ete", "Seulement en été ou en vacances", "", "halfsun"], ["jamais", "Jamais ou presque", "", "none"]] },
     { id: "saisons", sec: 1, title: "Et selon les saisons ?", sub: "Plusieurs choix possibles.", multi: true, none: "stable",
@@ -707,7 +714,9 @@
     { id: "carnation", sec: 1, title: "Quelle est ta carnation ?", sub: "Pour choisir des solaires sans trace blanche et prévenir les marques. Tu peux passer.",
       options: [["claire", "Claire", "Rougit et brûle facilement, bronze peu", "halfsun"], ["mate", "Mate à métissée", "Rougit parfois, bronze bien", "sun"], ["foncee", "Foncée", "Rougit rarement", "heart"], ["tresfoncee", "Très foncée", "Ne rougit presque jamais", "heart"], ["nsp", "Je préfère ne pas répondre", "", "ask"]] },
     { id: "concerns", sec: 1, title: "Qu'aimerais-tu améliorer ?", sub: "Jusqu'à 5 choix. On adapte tes conseils et tes produits.", multi: true, max: 5, none: "aucune",
-      options: [["secheresse", "Sécheresse, tiraillements", "", "dry"], ["imperfections", "Boutons, imperfections", "", "dots"], ["pointsnoirs", "Points noirs", "", "dots"], ["brillance", "Brillance", "", "drops"], ["marques", "Marques après les boutons", "", "spots"], ["cernes", "Cernes", "", "moon"], ["rougeurs", "Rougeurs, sensibilité", "", "flame"], ["teint", "Teint terne", "", "halfsun"], ["texture", "Grain de peau irrégulier", "", "wave"], ["taches", "Taches, teint inégal", "", "spots"], ["rides", "Ridules, fermeté", "", "sprout"], ["rasage", "Feu du rasoir, poils incarnés", "", "flame"], ["aucune", "Rien de particulier", "", "none"]] },
+      options: [["secheresse", "Sécheresse, tiraillements", "", "dry"], ["imperfections", "Boutons, imperfections", "", "dots"], ["pointsnoirs", "Points noirs", "", "dots"], ["brillance", "Brillance", "", "drops"], ["marques", "Marques après les boutons", "", "spots"], ["cernes", "Cernes", "", "moon"], ["rougeurs", "Rougeurs, sensibilité", "", "flame"], ["teint", "Teint terne", "", "halfsun"], ["texture", "Grain de peau irrégulier", "", "wave"], ["taches", "Taches, teint inégal", "", "spots"], ["rides", "Ridules, fermeté", "", "sprout"], ["acne", "Acné", "Beaucoup de boutons, parfois douloureux", "dots"], ["plaques", "Plaques, zones qui grattent ou qui pèlent", "Eczéma, psoriasis ou autre affection", "dry"], ["autre", "Autre chose", "Tu pourras l'expliquer", "ask"], ["rasage", "Feu du rasoir, poils incarnés", "", "flame"], ["aucune", "Rien de particulier", "", "none"]] },
+    { id: "concernsAutre", sec: 1, type: "text", title: "Dis-nous en plus", sub: "Ce que tu remarques, depuis quand, ce qui l'aggrave ou l'apaise. Tu peux dicter.", skipIf: function (a) { return !has(a, "concerns", "autre") && !has(a, "concerns", "plaques"); },
+      fields: [["concernsTexte", "Ce qui te gêne", "area", "Ex. : des plaques sèches qui grattent derrière les oreilles depuis l'hiver…"]] },
     { id: "tachesNiveau", sec: 1, title: "Comment décrirais-tu tes taches aujourd'hui ?", sub: "Ton ressenti suffit. Ça nous aide à doser ta routine.", skipIf: function (a) { return !has(a, "concerns", "taches") && !has(a, "concerns", "marques"); },
       options: [["t1", "Légères ou récentes", "Quelques marques après des boutons", "halfsun"], ["t2", "Visibles depuis plusieurs mois", "", "spots"], ["t3", "Marquées, anciennes ou étendues", "", "dots"], ["t4", "Très marquées, ou une tache qui change", "Un avis médical d'abord", "ask"]] },
     { id: "reactions", sec: 1, title: "Ta peau a-t-elle déjà mal réagi à…", sub: "Plusieurs choix possibles. Ça nous aide à écarter certains produits.", multi: true, none: "rien",
@@ -795,7 +804,9 @@
     "antecedents.eczema": "🩹", "antecedents.rosacee": "🌹", "antecedents.psoriasis": "🩹", "antecedents.acne": "🩺", "antecedents.traitement": "💊", "antecedents.allergies": "🤧",
     "modeVie.soleil": "☀️", "modeVie.sport": "🏃🏾", "modeVie.ville": "🏙️", "modeVie.ecrans": "💻", "modeVie.sommeil": "😴", "modeVie.maquillage": "💄", "modeVie.rasage": "🪒",
     "carnation.claire": "🖐🏻", "carnation.mate": "🖐🏽", "carnation.foncee": "🖐🏾", "carnation.tresfoncee": "🖐🏿",
-    "concerns.secheresse": "🏜️", "concerns.imperfections": "🔴", "concerns.pointsnoirs": "⚫", "concerns.brillance": "✨", "concerns.marques": "🟤", "concerns.cernes": "🐼", "concerns.rougeurs": "🌹", "concerns.teint": "🌫️", "concerns.texture": "🍊", "concerns.taches": "🎯", "concerns.rides": "⏳", "concerns.rasage": "🪒",
+    "concerns.secheresse": "🏜️", "concerns.imperfections": "🔴", "concerns.pointsnoirs": "⚫", "concerns.brillance": "✨", "concerns.marques": "🟤", "concerns.cernes": "🐼", "concerns.rougeurs": "🌹", "concerns.teint": "🌫️", "concerns.texture": "🍊", "concerns.taches": "🎯", "concerns.rides": "⏳", "concerns.rasage": "🪒", "concerns.acne": "😣", "concerns.plaques": "🩹", "concerns.autre": "✍️",
+    "pt_lavage.tire": "🏜️", "pt_lavage.joues": "⚖️", "pt_lavage.picote": "🔥", "pt_lavage.ok": "😌", "pt_apres.tire2": "🏜️",
+    "pt_boutons.rare": "🙂", "pt_boutons.parfois": "🌤️", "pt_boutons.souvent": "🔴", "pt_boutons.beaucoup": "😣",
     "tachesNiveau.t1": "🌱", "tachesNiveau.t2": "🌿", "tachesNiveau.t3": "🌳", "tachesNiveau.t4": "🩺",
     "reactions.reactifHE": "🌸", "reactions.acides": "🧪", "reactions.ruche": "🐝", "reacCause.fort": "💥", "reacCause.peeling": "🧖🏾", "reacCause.medicament": "💊", "reacCause.soleil": "☀️", "reacCause.melange": "🧪",
     "valeurs.vegan": "🌱", "grossesse.oui": "🤰🏾", "grossesse.menopause": "🌙", "grossesse.non": "🙂",
@@ -877,6 +888,42 @@
   function lexCat(cat) { return Object.keys(GLOSSAIRE).filter(function (k) { return GLOSSAIRE[k][0] === cat; }); }
   // Les mots d'une routine, d'après ses étapes.
   var STEP_LEX = { demaquillant: "double", tonique: "tonique", essence: "essence", serum: "serum", exfoliant: "exfoliant", spf: "spf", soin: "leavein", masque: "proteines" };
+  // Les mots marqués d'un astérisque : une explication courte, sous la question.
+  var OPT_DEF = {
+    "concerns.secheresse": "La peau tire, pèle ou est rêche : elle manque de gras ou d'eau.",
+    "concerns.imperfections": "Quelques boutons de temps en temps, rouges ou blancs.",
+    "concerns.acne": "Des boutons nombreux et réguliers, parfois douloureux ou sous la peau. Si c'est ton cas, un médecin ou un ou une dermatologue peut te proposer un traitement.",
+    "concerns.pointsnoirs": "De petits points foncés, surtout sur le nez : des pores bouchés par le sébum, qui fonce au contact de l'air.",
+    "concerns.brillance": "La peau luit, surtout sur le front, le nez et le menton : elle produit beaucoup de sébum.",
+    "concerns.marques": "Des taches brunes ou rosées laissées par d'anciens boutons. Très fréquentes sur les peaux mates à foncées.",
+    "concerns.cernes": "Des zones sombres ou creuses sous les yeux : fatigue, génétique ou pigmentation.",
+    "concerns.rougeurs": "Des rougeurs qui vont et viennent, une sensation de chaleur ou de picotement.",
+    "concerns.teint": "La peau manque d'éclat, elle paraît grise ou fatiguée.",
+    "concerns.texture": "La peau n'est pas lisse au toucher : petits reliefs, pores visibles, rugosités.",
+    "concerns.taches": "Des zones plus foncées que le reste : soleil, hormones (mélasma) ou anciennes marques.",
+    "concerns.rides": "De petites lignes et une peau qui se relâche avec le temps.",
+    "concerns.plaques": "Des plaques sèches, rouges ou épaisses, qui grattent ou pèlent. Elles peuvent venir d'un eczéma, d'un psoriasis, d'une dermatite séborrhéique, d'une mycose ou d'une allergie : seul un médecin peut dire laquelle.",
+    "concerns.rasage": "Boutons, rougeurs ou poils qui repoussent sous la peau après le rasage ou l'épilation.",
+    "pt_boutons.beaucoup": "Des boutons profonds, douloureux ou qui laissent des marques méritent l'avis d'un médecin : l'acné se soigne.",
+    "pt_lavage.picote": "Une peau qui picote ou chauffe après un simple lavage est souvent une peau sensible, ou un nettoyant trop fort.",
+    "pt_apres.tire2": "Une peau qui tire encore après quelques minutes manque de gras ou d'eau.",
+    "pt_deshy.oui": "Briller et tirailler à la fois, c'est le signe d'une peau qui fait du sébum mais manque d'eau : on dit qu'elle est déshydratée.",
+    "reactions.reactifHE": "Les huiles essentielles sont des extraits de plantes très concentrés (lavande, arbre à thé…), allergisants pour certaines peaux.",
+    "reactions.acides": "Les exfoliants chimiques : AHA (acide glycolique, lactique), BHA (acide salicylique), PHA.",
+    "reactions.ruche": "Miel, propolis, cire d'abeille, gelée royale.",
+    "antecedents.eczema": "Une peau sèche qui démange, avec des plaques rouges qui reviennent, souvent depuis l'enfance.",
+    "antecedents.rosacee": "Des rougeurs installées au centre du visage, de petits vaisseaux visibles, parfois des boutons.",
+    "antecedents.psoriasis": "Des plaques épaisses, bien délimitées, avec des squames blanches ou argentées.",
+    "antecedents.acne": "Une acné pour laquelle un médecin t'a déjà prescrit un traitement.",
+    "corps.corpsTresSec": "Une peau rugueuse qui peut craqueler, surtout sur les jambes, les coudes et les genoux.",
+    "cuir.cuirPellicules": "De petites peaux blanches qui tombent du cuir chevelu.",
+    "cuir.cuirSensible": "Des démangeaisons, des picotements ou des rougeurs sur le cuir chevelu.",
+    "cuirSignes.squamesGrasses": "Des peaux jaunâtres et grasses, collées au cuir chevelu, avec des rougeurs.",
+    "cuirSignes.plaques": "Des plaques en relief bien délimitées, avec des squames qui se détachent.",
+    "cuirSignes.tempes": "La ligne des cheveux recule sur les tempes ou sur le front.",
+    "cuirSignes.zones": "Une zone ronde, lisse, sans cheveux, apparue en quelques semaines."
+  };
+  function fmtLeft(end) { var sec = Math.max(0, Math.round((end - Date.now()) / 1000)); return Math.floor(sec / 60) + " min " + (sec % 60 < 10 ? "0" : "") + (sec % 60) + " s"; }
   function has(a, k, v) { return (a[k] || []).indexOf(v) > -1; }
 
   // Toutes les réponses à plat, photo comprise, pour le moteur de recommandation.
@@ -884,18 +931,44 @@
   // TEST DU TYPE DE PEAU : plusieurs signes, pas une seule impression
   // ---------------------------------------------------------------------------
   function skinProfile(a) {
-    if (!a.pt_apres) return null;
-    var oil = 0, dry = 0, tz = 0;
-    oil += { tzone: 1, brille: 2 }[a.pt_apres] || 0; dry += a.pt_apres === "tire" ? 2 : 0; tz += a.pt_apres === "tzone" ? 1 : 0;
+    if (!a.pt_apres && !a.pt_lavage) return null;
+    var oil = 0, dry = 0, tz = 0, why = [];
+    var say = function (cond, txt) { if (cond) why.push(txt); };
+    // Juste après le lavage
+    dry += { tire: 2, joues: 0.5 }[a.pt_lavage] || 0; tz += a.pt_lavage === "joues" ? 1 : 0;
+    say(a.pt_lavage === "tire", "Juste après le lavage, ta peau tire partout.");
+    say(a.pt_lavage === "joues", "Après le lavage, seules tes joues tirent.");
+    say(a.pt_lavage === "picote", "Ta peau picote ou chauffe après un simple lavage.");
+    // Quelques minutes après
+    oil += { tzone: 1, brille: 2 }[a.pt_apres] || 0; dry += { tire: 2, tire2: 1.5 }[a.pt_apres] || 0; tz += a.pt_apres === "tzone" ? 1 : 0;
+    say(a.pt_apres === "brille", "Quelques minutes après le lavage, elle brille déjà un peu partout.");
+    say(a.pt_apres === "tzone", "Quelques minutes après le lavage, ta zone T brille.");
+    say(a.pt_apres === "tire" || a.pt_apres === "tire2", "Elle tire encore quelques minutes après le lavage.");
+    // Au quotidien
     oil += { tz: 1, tout: 2 }[a.pt_soir] || 0; dry += a.pt_soir === "mat" ? 1 : 0; tz += a.pt_soir === "tz" ? 1 : 0;
+    say(a.pt_soir === "tout", "En fin de journée, tout ton visage brille.");
+    say(a.pt_soir === "tz", "En fin de journée, ton front, ton nez et ton menton brillent.");
+    say(a.pt_soir === "mat", "En fin de journée, ta peau reste mate, voire tiraille.");
     oil += { nez: 0.5, joues: 1.5 }[a.pt_pores] || 0; tz += a.pt_pores === "nez" ? 1 : 0;
+    say(a.pt_pores === "joues", "Tes pores se voient jusque sur les joues.");
     dry += { souvent: 2, hiver: 1 }[a.pt_peaux] || 0;
+    say(a.pt_peaux === "souvent", "Tu as souvent des zones rêches ou qui pèlent.");
     dry += a.pt_creme === "boit" ? 1.5 : 0; oil += { zones: 1, brille: 2 }[a.pt_creme] || 0; tz += a.pt_creme === "zones" ? 1 : 0;
+    say(a.pt_creme === "boit", "Ta peau « boit » la crème et en redemande.");
+    say(a.pt_creme === "zones", "La même crème convient à tes joues mais est trop riche pour ta zone T.");
+    say(a.pt_creme === "brille", "Une crème classique te fait briller ou te donne des boutons.");
     var type = oil >= 4.5 && tz < 2 ? "grasse" : oil >= 2 ? "mixte" : dry >= 2.5 ? "seche" : "normale";
+    say(type === "normale" && a.pt_lavage === "ok", "Après le lavage, ta peau est confortable.");
+    say(type === "normale" && (a.pt_apres === "ok" || a.pt_soir !== "tout"), "Elle ne brille pas particulièrement et ne tire pas.");
     var ante = a.antecedents || [];
-    var sensible = a.pt_reac === "souvent" || a.pt_reac2 === "souvent" || (a.pt_reac === "parfois" && a.pt_reac2 === "parfois") || ante.indexOf("eczema") > -1 || ante.indexOf("rosacee") > -1 || (a.pt_reac === "parfois" && has(a, "saisons", "change"));
-    var deshy = a.pt_deshy === "oui" || (oil >= 1.5 && (a.pt_apres === "tire" || a.pt_peaux === "souvent"));
-    return { type: type, sensible: sensible, deshy: deshy, peau: sensible ? "sensible" : type === "grasse" ? "mixte" : type };
+    var sensible = a.pt_lavage === "picote" || a.pt_reac === "souvent" || a.pt_reac2 === "souvent" || (a.pt_reac === "parfois" && a.pt_reac2 === "parfois") || ante.indexOf("eczema") > -1 || ante.indexOf("rosacee") > -1 || (a.pt_reac === "parfois" && has(a, "saisons", "change"));
+    say(a.pt_reac === "souvent", "Les nouveaux produits la font souvent picoter ou rougir.");
+    var deshy = a.pt_deshy === "oui" || (oil >= 1.5 && (a.pt_apres === "tire" || a.pt_apres === "tire2" || a.pt_lavage === "tire" || a.pt_peaux === "souvent"));
+    say(a.pt_deshy === "oui", "Elle peut briller et tirailler en même temps.");
+    var acne = a.pt_boutons === "souvent" || a.pt_boutons === "beaucoup" || has(a, "concerns", "acne") || ante.indexOf("acne") > -1;
+    say(a.pt_boutons === "souvent" || a.pt_boutons === "beaucoup", "Tu as souvent des boutons, parfois plusieurs à la fois.");
+    var n = ["pt_lavage", "pt_apres", "pt_soir", "pt_pores", "pt_peaux", "pt_creme", "pt_deshy", "pt_boutons", "pt_reac"].filter(function (k) { return a[k] && a[k] !== "nsp" && a[k] !== "var"; }).length;
+    return { type: type, sensible: sensible, deshy: deshy, acne: acne, why: why, sure: n >= 7 ? "élevée" : n >= 4 ? "moyenne" : "faible", peau: sensible ? "sensible" : type === "grasse" ? "mixte" : type };
   }
   var SKIN_WHY = {
     grasse: { why: "Tes glandes sébacées sont très actives. C'est souvent génétique, et les hormones, le stress et la chaleur augmentent encore la production de sébum : d'où la brillance, les pores visibles et les imperfections. Bonne nouvelle : une peau grasse marque souvent les rides plus tard.", avoid: ["Laver ton visage plus de 2 fois par jour", "Les gommages agressifs et l'alcool asséchant", "Supprimer la crème hydratante", "Percer les boutons"] },
@@ -952,6 +1025,8 @@
     if (a.grossesse === "oui") t.push("enceinte");
     if (has(a, "concerns", "pointsnoirs")) t.push("imperfections", "texture");
     if (has(a, "concerns", "marques")) t.push("taches");
+    if (has(a, "concerns", "acne") || a.pt_boutons === "souvent" || a.pt_boutons === "beaucoup") t.push("imperfections");
+    if (has(a, "concerns", "plaques")) t.push("sensible", "reactifHE", "acides");
     if (has(a, "concerns", "brillance")) t.push("mixte");
     if (has(a, "antecedents", "traitement")) t.push("sensible", "acides");
     if (a.grossesse === "menopause") t.push("secheresse", "rides");
@@ -959,7 +1034,7 @@
   }
 
   var TAG_LABEL_EXTRA = { pointsnoirs: "points noirs", brillance: "brillance", marques: "marques après les boutons", cernes: "cernes" };
-  var TAG_LABEL = { seche: "peau sèche", sensible: "peau sensible", mixte: "peau mixte à grasse", normale: "peau confortable", secheresse: "sécheresse", imperfections: "imperfections", rougeurs: "rougeurs", teint: "teint terne", texture: "grain de peau", taches: "taches", rides: "ridules", corpsSec: "corps sec", corpsTresSec: "corps très sec", corpsSensible: "corps sensible", corpsOk: "corps confortable", corpsMarques: "grain du corps", raides: "cheveux raides", ondules: "cheveux ondulés", boucles: "cheveux bouclés", crepus: "cheveux crépus", secs: "longueurs sèches", colores: "cheveux colorés", fins: "cheveux fins", cuirGras: "racines grasses", cuirSec: "cuir chevelu sec", cuirPellicules: "pellicules", cuirSensible: "cuir chevelu sensible", cuirOk: "cuir chevelu sans souci", deux: "routine matin et soir", soir: "routine du soir", brillance: "brillance (photo)", enceinte: "grossesse ou allaitement", reactifHE: "réaction aux huiles essentielles", acides: "réaction aux acides", ruche: "réaction aux produits de la ruche", vegan: "choix vegan", rasage: "rasage", courte: "barbe courte", longue: "barbe longue", cuirDS: "squames grasses et rougeurs", cuirPso: "plaques et squames épaisses", tempes: "tempes qui se dégarnissent", chute: "chute de cheveux", tension: "coiffures qui tirent", porBasse: "porosité faible", porHaute: "porosité forte", chaleur: "coiffage à la chaleur" };
+  var TAG_LABEL = { seche: "peau sèche", sensible: "peau sensible", mixte: "peau mixte à grasse", normale: "peau confortable", secheresse: "sécheresse", imperfections: "imperfections", rougeurs: "rougeurs", teint: "teint terne", texture: "grain de peau", taches: "taches", rides: "ridules", corpsSec: "corps sec", corpsTresSec: "corps très sec", corpsSensible: "corps sensible", corpsOk: "corps confortable", corpsMarques: "grain du corps", raides: "cheveux raides", ondules: "cheveux ondulés", boucles: "cheveux bouclés", crepus: "cheveux crépus", secs: "longueurs sèches", colores: "cheveux colorés", fins: "cheveux fins", cuirGras: "racines grasses", cuirSec: "cuir chevelu sec", cuirPellicules: "pellicules", cuirSensible: "cuir chevelu sensible", cuirOk: "cuir chevelu sans souci", deux: "routine matin et soir", soir: "routine du soir", brillance: "brillance (photo)", enceinte: "grossesse ou allaitement", reactifHE: "réaction aux huiles essentielles", acides: "réaction aux acides", ruche: "réaction aux produits de la ruche", vegan: "choix vegan", acne: "acné", plaques: "plaques qui grattent", autre: "autre préoccupation", rasage: "rasage", courte: "barbe courte", longue: "barbe longue", cuirDS: "squames grasses et rougeurs", cuirPso: "plaques et squames épaisses", tempes: "tempes qui se dégarnissent", chute: "chute de cheveux", tension: "coiffures qui tirent", porBasse: "porosité faible", porHaute: "porosité forte", chaleur: "coiffage à la chaleur" };
   Object.keys(TAG_LABEL_EXTRA).forEach(function (k) { TAG_LABEL[k] = TAG_LABEL_EXTRA[k]; });
 
   // ---------------------------------------------------------------------------
@@ -1107,6 +1182,8 @@
     if (cuir.length) out.push(["Tes cheveux", cuir.join(" ")]);
     if (a.barbe === "rase" || has(a, "concerns", "rasage") || has(a, "modeVie", "rasage")) out.push(["Rasage", "Les poils frisés ont tendance à repousser sous la peau et à faire des boutons. Rase-toi sur peau mouillée, dans le sens du poil, sans tendre la peau, avec une lame propre ou une tondeuse qui laisse un peu de longueur. Évite de repasser plusieurs fois au même endroit. Si les boutons durent ou laissent des marques, parles-en à un ou une dermatologue."]);
     if (a.barbe === "courte" || a.barbe === "longue") out.push(["Ta barbe", "La peau sous la barbe compte aussi : nettoie-la en même temps que ton visage, puis une huile ou un baume. Si ça gratte ou fait des plaques, ça peut être une dermatite séborrhéique : un pharmacien peut te conseiller."]);
+    if (has(a, "concerns", "plaques")) out.push(["Tes plaques", "Des plaques qui grattent, pèlent ou rougissent peuvent venir d'un eczéma, d'un psoriasis, d'une dermatite séborrhéique, d'une mycose ou d'une allergie. Seul un médecin peut dire laquelle : montre-les à ton médecin ou à un ou une dermatologue. En attendant, ta routine reste très douce : sans parfum, sans huiles essentielles, sans exfoliant, et une crème réparante." + (a.concernsTexte ? " Tu nous as dit : « " + String(a.concernsTexte).slice(0, 200) + " »." : "")]);
+    if (has(a, "concerns", "acne") || a.pt_boutons === "beaucoup") out.push(["Tes boutons", "Ne les perce pas : c'est la première cause de marques. Des produits non comédogènes, un seul actif à la fois, et de la patience : compte 8 à 12 semaines pour juger. Si tes boutons sont nombreux, douloureux ou laissent des marques, un médecin peut te proposer un traitement."]);
     if (a.grossesse === "oui") out.push(["Grossesse", "Pendant la grossesse et l'allaitement, on a écarté les rétinoïdes, les exfoliants acides et les produits aux huiles essentielles. Demande conseil à ton ou ta médecin ou sage-femme avant un nouvel actif."]);
     if (a.routine === "aucune") out.push(["Ta routine", "Pas de routine pour l'instant ? Commence par deux gestes : un nettoyage doux le soir et une protection solaire le matin."]);
     if (a.flexible === "non") out.push(["Ta douche", "Sans flexible, nos pommeaux et coques ne se fixent pas directement. Écris-nous avec une photo de ta douche : on vérifie la compatibilité avant tout achat."]);
@@ -1841,6 +1918,9 @@
     var key = [v, this.step, this.etab, this.rtab, this.emode, this.ptab, this.detail && this.detail.id, this.story ? 1 : 0].join("|"), changed = key !== this.lastKey;
     this.lastKey = key;
     this.mount.innerHTML = html;
+    clearInterval(this.tick);
+    var tm = this.mount.querySelector("[data-timer]");
+    if (tm) { var end = +tm.getAttribute("data-timer"), me = this; this.tick = setInterval(function () { if (!tm.isConnected) return clearInterval(me.tick); if (Date.now() >= end) { clearInterval(me.tick); tm.textContent = "✅ C'est l'heure : regarde ta peau et réponds."; return; } tm.textContent = "⏱ Encore " + fmtLeft(end) + ". Tu peux attendre, ou répondre maintenant."; }, 1000); }
     if (changed) {
       var body = this.mount.querySelector(".body"); if (body) body.classList.add("enter");
       try { var top = this.host.getBoundingClientRect().top; if (top < 0) window.scrollBy({ top: top - 8, behavior: "smooth" }); } catch (e) {}
@@ -1880,12 +1960,17 @@
     if (q.type === "voice") return html + this.vVoice(q);
     if (q.type === "fin") return html + this.vFin();
     var val = a[q.id];
-    html += "<div class='q'><h3>" + esc(q.title) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "");
+    var qtitle = typeof q.title === "function" ? q.title(a, this) : q.title;
+    html += "<div class='q'><h3>" + esc(qtitle) + "</h3>" + (q.sub ? "<p class='sub'>" + esc(q.sub) + "</p>" : "");
+    if (q.timer && this.state.washAt && Date.now() - this.state.washAt < 300000) html += "<p class='timer' data-timer='" + (this.state.washAt + 300000) + "'>⏱ Encore " + fmtLeft(this.state.washAt + 300000) + ". Tu peux attendre, ou répondre maintenant.</p>";
     if (q.link) html += "<a class='ext' href='" + q.link[1] + "' target='_blank' rel='noopener'>" + esc(q.link[0]) + " ↗</a>";
     html += "<div class='opts'>" + q.options.map(function (o) {
       var on = q.multi ? (val || []).indexOf(o[0]) > -1 : val === o[0];
-      return "<button class='opt' data-q='" + q.id + "' data-v='" + esc(o[0]) + "' aria-pressed='" + on + "'><span class='ico" + (emo(q.id, o[0]) ? " emo" : "") + "'>" + (emo(q.id, o[0]) || icon(o[3])) + "</span><span class='lbl'>" + esc(o[1]) + (o[2] ? "<small>" + esc(o[2]) + "</small>" : "") + "</span><span class='" + (q.multi ? "chk" : "rad") + "'></span></button>";
-    }).join("") + "</div></div>";
+      return "<button class='opt' data-q='" + q.id + "' data-v='" + esc(o[0]) + "' aria-pressed='" + on + "'><span class='ico" + (emo(q.id, o[0]) ? " emo" : "") + "'>" + (emo(q.id, o[0]) || icon(o[3])) + "</span><span class='lbl'>" + esc(o[1]) + (OPT_DEF[q.id + "." + o[0]] ? "<sup class='ast'>*</sup>" : "") + (o[2] ? "<small>" + esc(o[2]) + "</small>" : "") + "</span><span class='" + (q.multi ? "chk" : "rad") + "'></span></button>";
+    }).join("") + "</div>";
+    var defl = q.options.filter(function (o) { return OPT_DEF[q.id + "." + o[0]]; });
+    if (defl.length) html += "<details class='defs'><summary>* Ce que veulent dire ces mots</summary><dl>" + defl.map(function (o) { return "<dt>" + esc(o[1]) + "</dt><dd>" + esc(OPT_DEF[q.id + "." + o[0]]) + "</dd>"; }).join("") + (q.id === "pt_boutons" ? "<dt>Acné</dt><dd>" + esc(OPT_DEF["concerns.acne"]) + "</dd>" : "") + "</dl></details>";
+    html += "</div>";
     var ready = q.multi ? (val || []).length > 0 : !!val;
     if (q.multi || step === qs.length - 1) html += "<div class='cta'><button class='btn big' data-act='next'" + (ready ? "" : " disabled") + ">" + (step === qs.length - 1 ? "Créer ma routine" : "Continuer") + "</button></div>";
     return html + "<p class='note'>Ce diagnostic repose sur ton ressenti. Il ne remplace pas l'avis d'un ou d'une professionnelle de santé.</p>";
@@ -1893,10 +1978,12 @@
   A.skinResult = function (short) {
     var a = this.state.answers, sp = skinProfile(a);
     if (!sp) return "<p class='sub'>Réponds aux questions précédentes pour voir ton résultat.</p>";
-    var I = SKIN_INFO[sp.type], label = I.t + (sp.deshy ? ", déshydratée" : "") + (sp.sensible ? " et sensible" : "");
+    var I = SKIN_INFO[sp.type], label = I.t + (sp.acne ? " à tendance acnéique" : "") + (sp.deshy ? ", déshydratée" : "") + (sp.sensible ? " et sensible" : "");
+    var whyBox = sp.why.length ? "<div class='whybox'><b>Ce qui nous fait dire ça</b><ul class='tipl'>" + sp.why.slice(0, 6).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul><small>Fiabilité du résultat : " + sp.sure + (sp.sure !== "élevée" ? ". Refais le test du visage nu un autre jour pour l'affiner." : ".") + "</small></div>" : "";
     var W = SKIN_WHY[sp.type];
-    if (short) return "<p class='kicker'>" + (a.prenom ? esc(a.prenom) + ", voici ta peau" : "Ton résultat") + "</p><h3>" + esc(label) + "</h3><p>" + esc(I.what) + "</p>" + (sp.type === "grasse" || sp.type === "mixte" ? "<div class='myth'><b>Idée reçue</b><p>« Une peau grasse n'a pas besoin de crème. » <strong>Faux.</strong> Le sébum et l'eau sont deux choses différentes : il faut une texture légère, pas l'absence de crème.</p></div>" : "") + "<p class='note'>Encore quelques questions sur ton corps, tes cheveux et tes envies. Toutes les explications et tes conseils t'attendent ensuite dans ton espace soin.</p>";
-    var html = "<p class='kicker'>" + (a.prenom ? esc(a.prenom) + ", voici ta peau" : "Ton résultat") + "</p><h3>" + esc(label) + "</h3><p>" + esc(I.what) + "</p>";
+    if (short) return "<p class='kicker'>" + (a.prenom ? esc(a.prenom) + ", voici ta peau" : "Ton résultat") + "</p><h3>" + esc(label) + "</h3><p>" + esc(I.what) + "</p>" + whyBox + (sp.type === "grasse" || sp.type === "mixte" ? "<div class='myth'><b>Idée reçue</b><p>« Une peau grasse n'a pas besoin de crème. » <strong>Faux.</strong> Le sébum et l'eau sont deux choses différentes : il faut une texture légère, pas l'absence de crème.</p></div>" : "") + "<p class='note'>Encore quelques questions sur ton corps, tes cheveux et tes envies. Toutes les explications et tes conseils t'attendent ensuite dans ton espace soin.</p>";
+    var html = "<p class='kicker'>" + (a.prenom ? esc(a.prenom) + ", voici ta peau" : "Ton résultat") + "</p><h3>" + esc(label) + "</h3><p>" + esc(I.what) + "</p>" + whyBox;
+    if (sp.acne) html += "<div class='whybox'><b>À tendance acnéique</b><p>Ta peau fait facilement des boutons. Choisis des produits « non comédogènes », ne perce pas tes boutons (ils laissent des marques, surtout sur peau mate à foncée) et introduis un seul actif à la fois. Si tes boutons sont nombreux, douloureux, sous la peau ou laissent des marques, un médecin ou un ou une dermatologue peut te proposer un traitement : l'acné se soigne.</p></div>";
     html += "<div class='whybox'><b>Pourquoi ta peau est comme ça</b><p>" + esc(W.why) + "</p></div>";
     html += "<div class='dodont'><div class='whybox do'><b>Ce qui t'aide</b><ul class='tipl'>" + I.tips.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div><div class='whybox dont'><b>À éviter</b><ul class='tipl'>" + W.avoid.concat(sp.sensible ? ["Cumuler plusieurs actifs forts le même soir", "Les parfums et l'alcool asséchant"] : []).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div></div>";
     if (a.carnation === "foncee" || a.carnation === "tresfoncee" || a.carnation === "mate") html += "<div class='myth'><b>Peau mate à foncée</b><p>La moindre inflammation (bouton percé, irritation, gommage trop fort) peut laisser une marque brune qui dure des mois. La crème solaire chaque matin et la douceur sont tes meilleures alliées.</p></div>";
@@ -1913,7 +2000,7 @@
     if (mv.indexOf("sommeil") > -1) ex.push("Le manque de sommeil et le stress se voient sur la peau : une routine du soir simple et régulière aide à la garder confortable.");
     if (ex.length) html += "<div class='whybox'><b>Petites astuces pour ton quotidien</b><ul class='tipl'>" + ex.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>";
     if ((a.antecedents || []).some(function (x) { return x !== "aucun"; })) html += "<p class='care'>Tu as un antécédent suivi par un médecin : ses conseils passent avant les nôtres. On garde ta routine douce et sans actif irritant.</p>";
-    html += "<button class='qchip' data-ask='" + esc("J'ai une " + label.toLowerCase() + ". Comment adapter ma routine ?") + "'>Poser une question à l'assistante sur ma peau</button>";
+    html += "<button class='btn' data-ask='" + esc("Explique-moi simplement mon type de peau : " + label.toLowerCase() + ". Voici ce que j'ai observé : " + sp.why.join(" ") + " Pourquoi ma peau est comme ça, et comment en prendre soin au quotidien ?") + "'>🤖 Explique-moi ma peau</button>";
     var wa = this.host.getAttribute("data-whatsapp");
     if (wa) html += this.sendBox(label);
     if (false) html += "<div class='whybox'><b>Ton rituel personnalisé par Sunsoari</b><p>Envoie ton résultat et 3 photos (face, profil gauche, profil droit, à la lumière du jour, sans maquillage ni filtre) : on te prépare ton espace soin, avec ta routine jour par jour et ton suivi.</p><a class='btn' href='https://wa.me/" + esc(wa.replace(/\D/g, "").replace(/^0/, "33")) + "?text=" + encodeURIComponent("Bonjour Sunsoari, voici mon test de peau : " + label + ". Carnation : " + (a.carnation || "non précisée") + ". Saisons : " + (a.saisons || []).join(", ") + ". Quotidien : " + (a.modeVie || []).join(", ") + ". Crème solaire : " + (a.spfHabit || "non précisé") + ". J'ajoute mes 3 photos.") + "' target='_blank' rel='noopener'>Envoyer sur WhatsApp</a><small class='sub'>Tu choisis toi-même ce que tu envoies. Les photos ne partent jamais automatiquement.</small></div>";
@@ -1925,7 +2012,7 @@
     var a = this.state.answers, sp = skinProfile(a), lab = function (id) { var q = QUESTIONS.filter(function (x) { return x.id === id; })[0], v = a[id]; if (!q || v == null || v === "") return "non répondu"; var f = function (x) { var o = (q.options || []).filter(function (o) { return o[0] === x; })[0]; return o ? o[1] : x; }; return Array.isArray(v) ? v.map(f).join(", ") : f(v); };
     var L = ["QUESTIONNAIRE PEAU SUNSOARI", "Prénom : " + (a.prenom || "non précisé"), "Âge : " + (a.age || "non précisé"), "Rythme de vie : " + (a.rythme || "non précisé"), "",
       "Résultat indicatif : " + (sp ? SKIN_INFO[sp.type].t + (sp.deshy ? ", déshydratée" : "") + (sp.sensible ? ", sensible" : "") : "non calculé"), "",
-      "1 h après nettoyage : " + lab("pt_apres"), "Fin de journée : " + lab("pt_soir"), "Pores : " + lab("pt_pores"), "Zones rêches : " + lab("pt_peaux"), "Crème hydratante : " + lab("pt_creme"),
+      "Juste après le lavage : " + lab("pt_lavage"), "Quelques minutes après : " + lab("pt_apres"), "Boutons : " + lab("pt_boutons"), "Fin de journée : " + lab("pt_soir"), "Pores : " + lab("pt_pores"), "Zones rêches : " + lab("pt_peaux"), "Crème hydratante : " + lab("pt_creme"),
       "Brille et tiraille : " + lab("pt_deshy"), "Réactions aux produits : " + lab("pt_reac"), "Soleil, froid, vacances : " + lab("pt_reac2"), "Carnation : " + lab("carnation"), "",
       "À améliorer : " + lab("concerns"), "Produits visage : " + (a.produitsVisage || "non précisé"), "Produits corps : " + (a.produitsCorps || "non précisé"), "Crème solaire : " + lab("spfHabit"),
       "Saisons : " + lab("saisons"), "Antécédents : " + lab("antecedents"), "En ce moment : " + lab("grossesse"), "Quotidien : " + lab("modeVie"), "Notes : " + (a.notes || "aucune"), "",
@@ -1939,7 +2026,8 @@
   A.vInfo = function (q) {
     var p = this.progressPct(), a = this.state.answers;
     var html = "<div class='info'>";
-    if (q.kind === "test") return html + "<h3>Découvrons ton type de peau</h3><p class='sub'>Beaucoup de personnes ne le connaissent pas, ou se trompent : une peau qui brille peut aussi manquer d'eau. Quelques questions sur ce que tu observes au quotidien, et on t'explique comment en prendre soin.</p><p class='alt-t'>Le test du visage nu, pour des réponses justes</p><ol class='guide'><li>Lave ton visage avec un nettoyant doux, sèche en tamponnant.</li><li>N'applique rien : ni crème, ni maquillage.</li><li>Attends une heure sans toucher ton visage.</li><li>Observe-toi à la lumière du jour : où ça brille, où ça tire, tes pores.</li><li>En option, appuie un mouchoir fin sur le front, le nez, le menton et les joues : une trace grasse montre où ta peau produit du sébum.</li></ol><p class='sub'>Tu connais bien ta peau ? Réponds de mémoire, selon ce que tu vis le plus souvent.</p><details class='types'><summary>Les 4 types de peau en bref</summary>" + ["normale", "seche", "mixte", "grasse"].map(function (k) { return "<p><b>" + SKIN_INFO[k].t + "</b> · " + esc(SKIN_WHY[k].why) + "</p>"; }).join("") + "<p>Une peau peut aussi être <b>sensible</b> ou <b>déshydratée</b>, quel que soit son type : on le regarde aussi.</p></details></div><div class='cta'><button class='btn big' data-act='next'>C'est parti</button></div>";
+    if (q.kind === "prepa") return html + "<h3>Avant de commencer 🧴</h3><p class='sub'>Ton diagnostic dure 10 à 15 minutes. Il te donne ton type de peau, ta routine visage, corps et cheveux, et ton espace soin.</p><p class='alt-t'>Pour des réponses justes, prépare-toi</p><ul class='guide prepa'><li>🏠 Sois chez toi, ou près d'un lavabo.</li><li>🧼 Garde ton nettoyant habituel et une serviette propre à portée de main.</li><li>💧 Au milieu du diagnostic, on te demandera de te laver le visage, puis d'attendre 5 minutes sans rien mettre. Un minuteur t'accompagne.</li><li>📸 Si tu veux, une photo ou une courte vidéo de ton visage, à la lumière du jour.</li></ul><p class='sub'>Pas de lavabo sous la main ? Pas de souci : tu pourras répondre de mémoire.</p></div><div class='cta'><button class='btn big' data-act='next'>C'est parti</button></div>";
+    if (q.kind === "test") return html + "<h3>Découvrons ton type de peau</h3><p class='sub'>Beaucoup de personnes ne le connaissent pas, ou se trompent : une peau qui brille peut aussi manquer d'eau. On regarde plusieurs signes, pas un seul.</p><p class='alt-t'>Le test du visage nu, en 2 minutes</p><ol class='guide'><li>Lave ton visage avec ton nettoyant habituel, ou à l'eau tiède.</li><li>Sèche en tamponnant, sans frotter.</li><li>Ne mets rien : ni crème, ni maquillage.</li><li>Dis-nous tout de suite ce que tu ressens. Puis réponds aux questions suivantes pendant que les 5 minutes passent : on te redemandera ensuite comment est ta peau.</li></ol><details class='types'><summary>Les types de peau en bref</summary>" + ["normale", "seche", "mixte", "grasse"].map(function (k) { return "<p><b>" + SKIN_INFO[k].t + "</b> · " + esc(SKIN_WHY[k].why) + "</p>"; }).join("") + "<p>Une peau peut aussi être <b>sensible</b>, <b>déshydratée</b> ou <b>à tendance acnéique</b>, quel que soit son type : on le regarde aussi.</p></details></div><div class='cta'><button class='btn big' data-act='washdone'>C'est fait, mon visage est lavé</button><button class='btn link' data-act='washmemo'>Je ne peux pas maintenant : je réponds de mémoire</button></div>";
     if (q.kind === "peau") return html + this.skinResult(true) + glossaire(["deshy", "barriere", "sebum"]) + "</div><div class='cta'><button class='btn big' data-act='next'>Continuer</button></div>";
     if (q.kind === "eau") html += "<h3>Le savais-tu ?</h3><ul class='facts'><li>" + icon("drop") + "<span>En France, l'eau du robinet est potable et très contrôlée.</span></li><li>" + icon("dots") + "<span>Sa teneur en calcaire varie beaucoup d'une région à l'autre.</span></li><li>" + icon("shower") + "<span>Le chlore sert à la désinfecter, mais il peut dessécher. Le gel vitaminé de nos filtres le réduit, et le filtre à sédiments retient calcaire, rouille et sable.</span></li></ul>" + glossaire(["vitamine", "sediments", "chlore"]) + this.ring(p.pct, true);
     else {
@@ -2424,8 +2512,8 @@
     Object.keys((r && r.answers) || {}).forEach(function (id) {
       var q = ok[id], v = r.answers[id]; if (!q || v == null) return;
       var codes = q.options.map(function (o) { return o[0]; });
-      if (q.multi) { var l = (Array.isArray(v) ? v : [v]).filter(function (x) { return codes.indexOf(x) > -1; }).slice(0, q.max || 9); if (l.length) { a[id] = l; filled.push(q.title.replace(/ ?[?\u2026]$/, "") + " : " + l.map(function (x) { return q.options[codes.indexOf(x)][1]; }).join(", ")); } }
-      else if (codes.indexOf(v) > -1) { a[id] = v; filled.push(q.title.replace(/ ?[?\u2026]$/, "") + " : " + q.options[codes.indexOf(v)][1]); }
+      if (q.multi) { var l = (Array.isArray(v) ? v : [v]).filter(function (x) { return codes.indexOf(x) > -1; }).slice(0, q.max || 9); if (l.length) { a[id] = l; filled.push((typeof q.title === "function" ? q.title({}, null) : q.title).replace(/ ?[?\u2026]$/, "") + " : " + l.map(function (x) { return q.options[codes.indexOf(x)][1]; }).join(", ")); } }
+      else if (codes.indexOf(v) > -1) { a[id] = v; filled.push((typeof q.title === "function" ? q.title({}, null) : q.title).replace(/ ?[?\u2026]$/, "") + " : " + q.options[codes.indexOf(v)][1]); }
     });
     ["prenom", "age", "rythme", "produitsVisage", "produitsCorps", "notes"].forEach(function (k) { var v = r && r.fields && r.fields[k]; if (v) { a[k] = String(v).slice(0, 600); filled.push({ prenom: "Prénom", age: "Âge", rythme: "Rythme de vie", produitsVisage: "Produits visage", produitsCorps: "Produits corps", notes: "Notes" }[k] + " : " + a[k]); } });
     var sp = skinProfile(a); if (sp) a.peau = sp.peau;
@@ -2932,6 +3020,7 @@
       return;
     }
     if (d.act === "prev") { this.step = Math.max(0, this.step - 1); this.zone = null; this.aiMsg = null; return this.render(); }
+    if (d.act === "washdone" || d.act === "washmemo") { s.washAt = d.act === "washdone" ? Date.now() : 0; this.save(); this.step++; return this.render(); }
     if (d.act === "next") { this.dictMsg = null;
       if (this.step < this.visibleQuestions().length - 1) { this.step++; this.zone = null; this.aiMsg = null; }
       else { s.done = true; s.doneAt = Date.now(); this.saveDay0(); this.save(); this.view = "espace"; this.etab = "routine"; this.emit("result", { answers: s.answers }); }
@@ -2961,7 +3050,7 @@
     if (d.dictate) { e.preventDefault(); return this.dictate(d.dictate); }
     if (d.act === "voicestop") { if (this.recog) try { this.recog.stop(); } catch (e) {} this.voice.rec = false; return this.render(); }
     if (d.act === "voicefill") return this.voiceFill();
-    if (d.act === "voicego") { if (this.recog) try { this.recog.stop(); } catch (e) {} var qs3 = this.visibleQuestions(), a3 = s.answers, k3 = 1; for (; k3 < qs3.length; k3++) { var q3 = qs3[k3]; if (q3.type || !(q3.multi ? (a3[q3.id] || []).length : a3[q3.id])) break; } this.step = this.voiceFilled && this.voiceFilled.length ? k3 : 1; return this.render(); }
+    if (d.act === "voicego") { if (this.recog) try { this.recog.stop(); } catch (e) {} var qs3 = this.visibleQuestions(), a3 = s.answers, v3 = qs3.map(function (x) { return x.id; }).indexOf("voix") + 1, k3 = v3; for (; k3 < qs3.length; k3++) { var q3 = qs3[k3]; if (q3.type || !(q3.multi ? (a3[q3.id] || []).length : a3[q3.id])) break; } this.step = this.voiceFilled && this.voiceFilled.length ? k3 : v3; return this.render(); }
     if (d.capmode) { this.cap.mode = d.capmode; this.capMsg = null; return this.render(); }
     if (d.act === "capanalyse") return this.capAnalyse();
     if (d.capobs) { var pv = s.answers.photoVisage = s.answers.photoVisage || {}, vu = pv.vu = pv.vu || [], ix = vu.indexOf(d.capobs); if (ix > -1) vu.splice(ix, 1); else vu.push(d.capobs); this.save(); return this.render(); }

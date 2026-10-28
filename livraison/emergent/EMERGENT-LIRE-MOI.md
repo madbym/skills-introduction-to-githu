@@ -6,7 +6,7 @@ L'application « Mon Rituel · Sunsoari » existe déjà sous forme de prototype
 | Fichier | Rôle |
 |---|---|
 | `sunsoari-rituel/PROMPT-EMERGENT.md` | Les 6 messages de travail, à suivre un par un |
-| `sunsoari-rituel/CAHIER-DES-CHARGES-APP.md` | Le cahier des charges complet (sections 1 à 9, avec 5 quater à 5 septdecies) |
+| `sunsoari-rituel/CAHIER-DES-CHARGES-APP.md` | Le cahier des charges complet (sections 1 à 9, avec 5 quater à 5 octodecies) |
 | `sunsoari-rituel/sunsoari-app.js` | **La référence** : l'application complète (données, questions, moteur de recommandation, écrans) |
 | `sunsoari-rituel/demo.html` | La page qui charge l'application |
 | `sunsoari-rituel/app/` | Manifeste et icônes pour l'installation sur téléphone (PWA) |
@@ -34,6 +34,7 @@ Les fichiers `sunsoari-rituel.js` et `sunsoari-beaute.js` sont d'anciennes versi
   - le corps ;
   - les cheveux : texture de 2A à 4C, porosité, cuir chevelu, signes et diagnostics médicaux, coiffures ;
   - les envies, les marques préférées, le format de routine et le budget.
+- **Le petit soleil Sunsoari** dans une bulle sur chaque question, des réponses à cocher pour l'âge, les produits déjà utilisés et la situation particulière, et la **météo peau** (UV, humidité, qualité de l'air via Open-Meteo).
 - **Pas de question en double** : les questions dont on connaît déjà la réponse sont sautées, et « Qu'aimerais-tu améliorer ? » est pré-coché d'après les réponses précédentes.
 - **Astérisques \*** : les mots compliqués des réponses sont expliqués sous la question (`OPT_DEF`). Un **lexique** de 42 définitions est dans Ressources et à côté des écrans concernés (`GLOSSAIRE`).
 - **Abonnement Sunsoari+** (2,99 €/mois ou 24,90 €/an) : le diagnostic et la routine restent gratuits ; le planner, l'évolution, Ma semaine et l'Académie sont réservés (`PLUS_TABS`).

@@ -286,6 +286,14 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - **Options masquées** : un cuir chevelu « sans souci » ne se voit plus proposer « squames » ni « plaques ».
 - **« Raconte-moi »** : les questions déjà remplies par la voix ou le texte ne sont plus reposées (`voiceIds`, `nextStep`).
 
+## 5 octodecies. Repris de la version Emergent : soleil, cases à cocher, météo
+- **Le petit soleil Sunsoari** porte le sous-titre de chaque question dans une bulle (`SUNNY`, `bubble`). Un pourcentage s'affiche à côté de la barre de progression.
+- **« Pour qui crées-tu ce rituel ? »** (pour moi, pour quelqu'un que j'aime, je préfère ne pas le dire), en début de parcours.
+- **« Ta tranche d'âge ? »** en réponses à cocher (18-24, 25-34, 35-44, 45-54, 55 et plus), à la place du champ « âge ». L'âge dicté dans « Raconte-moi » est converti en tranche.
+- **« Une situation particulière en ce moment ? »** (cases à cocher) remplace la question grossesse : enceinte ou allaitante, ménopause, déséquilibre hormonal, maladie auto-immune, aucune. Pour un homme, seuls les deux derniers choix s'affichent. La valeur `grossesse` est déduite (`derive`).
+- **« Quels produits utilises-tu déjà ? »** (cases à cocher) remplace « As-tu une routine visage ? ». La routine (`routine`) en est déduite. Les noms des produits deviennent facultatifs.
+- **« Où vis-tu ? »** et la **météo peau** : indice UV du jour, humidité et qualité de l'air (Open-Meteo, gratuit, sans clé), avec des conseils, sur l'écran Aujourd'hui et dans Protection solaire.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

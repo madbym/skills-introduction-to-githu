@@ -36,7 +36,8 @@ Crée une application mobile iOS et Android, en français, avec tutoiement, appe
 - les mots compliqués des réponses portent un astérisque \* expliqué sous la question (`OPT_DEF`) ;
 - réponses en grandes pilules avec un émoji, passage automatique à l'écran suivant après un choix unique ;
 - barre de progression en 5 parties : 🚿 douche, 🧖🏾 visage, 🧴 corps, 💇🏾 cheveux, ✨ envies ;
-- un petit message d'encouragement au début de chaque partie ;
+- un petit message d'encouragement au début de chaque partie, et le petit soleil Sunsoari (`SUNNY`) qui porte le sous-titre de chaque question dans une bulle ;
+- l'âge, les produits déjà utilisés et la situation particulière se répondent par cases à cocher ; la météo peau (UV, humidité, qualité de l'air) s'appuie sur Open-Meteo ;
 - les questions, les réponses et les émojis sont dans `QUESTIONS` et `EMO` du fichier joint : reprends-les exactement.
 
 Le diagnostic couvre :

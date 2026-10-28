@@ -294,6 +294,12 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - **« Quels produits utilises-tu déjà ? »** (cases à cocher) remplace « As-tu une routine visage ? ». La routine (`routine`) en est déduite. Les noms des produits deviennent facultatifs.
 - **« Où vis-tu ? »** et la **météo peau** : indice UV du jour, humidité et qualité de l'air (Open-Meteo, gratuit, sans clé), avec des conseils, sur l'écran Aujourd'hui et dans Protection solaire.
 
+## 5 novodecies. Deux chemins : l'essentiel ou le complet
+- Dès l'écran « Avant de commencer », la cliente choisit **⚡ L'essentiel · 5 minutes** (environ 31 écrans) ou **🌿 Le diagnostic complet · 15 minutes** (environ 51 écrans).
+- L'essentiel garde ce qui change la routine ou la sécurité : douche, âge, genre, test du visage nu (lavage, fin de journée, réactions, boutons, 5 minutes après), crème solaire, antécédents, carnation, préoccupations, situation particulière, produits déjà utilisés, corps, texture et état des cheveux, cuir chevelu, lavage, envies douche, senteur et budget.
+- Les questions réservées au complet sont listées dans `FULL_ONLY` : « Raconte-moi », photos, pores, zones rêches, crème, déshydratation, saisons, quotidien, ville, cause des réactions, convictions, noms des produits, envies corps, sous-type de cheveux, porosité, diagnostics du cuir chevelu, coiffures, marques, format et notes.
+- Dans l'espace soin, l'onglet Diagnostic propose **« Compléter mon diagnostic »** : l'app reprend à la première question restée sans réponse, et les réponses déjà données sont gardées.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

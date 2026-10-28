@@ -6,7 +6,7 @@ L'application « Mon Rituel · Sunsoari » existe déjà sous forme de prototype
 | Fichier | Rôle |
 |---|---|
 | `sunsoari-rituel/PROMPT-EMERGENT.md` | Les 6 messages de travail, à suivre un par un |
-| `sunsoari-rituel/CAHIER-DES-CHARGES-APP.md` | Le cahier des charges complet (sections 1 à 9, avec 5 quater à 5 octodecies) |
+| `sunsoari-rituel/CAHIER-DES-CHARGES-APP.md` | Le cahier des charges complet (sections 1 à 9, avec 5 quater à 5 novodecies) |
 | `sunsoari-rituel/sunsoari-app.js` | **La référence** : l'application complète (données, questions, moteur de recommandation, écrans) |
 | `sunsoari-rituel/demo.html` | La page qui charge l'application |
 | `sunsoari-rituel/app/` | Manifeste et icônes pour l'installation sur téléphone (PWA) |
@@ -21,7 +21,8 @@ L'application « Mon Rituel · Sunsoari » existe déjà sous forme de prototype
 Les fichiers `sunsoari-rituel.js` et `sunsoari-beaute.js` sont d'anciennes versions : ne les utilise pas.
 
 ## Ce que fait l'application aujourd'hui
-- **Diagnostic de 45 à 50 écrans selon les réponses**, une question par écran, avec un émoji par réponse, une barre de progression en 5 parties et un message d'encouragement à chaque nouvelle partie. Il couvre :
+- **Deux chemins au choix** : « L'essentiel » en 5 minutes (environ 31 écrans) ou « Le diagnostic complet » en 15 minutes (environ 51 écrans), à compléter plus tard depuis l'espace soin (`FULL_ONLY`).
+- **Diagnostic complet de 45 à 51 écrans selon les réponses**, une question par écran, avec un émoji par réponse, une barre de progression en 5 parties et un message d'encouragement à chaque nouvelle partie. Il couvre :
   - un écran « Avant de commencer » (10 à 15 minutes, être près d'un lavabo) ;
   - la douche ;
   - la photo ou la vidéo du visage ;

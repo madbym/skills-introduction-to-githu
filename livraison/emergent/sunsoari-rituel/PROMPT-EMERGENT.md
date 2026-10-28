@@ -26,7 +26,7 @@ Ne réécris pas les textes de conseil. Ils ont été relus pour respecter la r�
 - Ajoute le manifeste et les icônes du dossier `app/` pour qu'elle soit installable.
 - Ne change ni le design ni le parcours.
 - **Vérifie et montre-moi :**
-  - le diagnostic complet (45 à 50 écrans selon les réponses, à partir de l'écran « Avant de commencer ») se termine sur « Ton espace soin est prêt » ;
+  - le diagnostic complet (environ 31 écrans pour « L'essentiel » et 51 pour « Le diagnostic complet », au choix sur l'écran « Avant de commencer ») se termine sur « Ton espace soin est prêt » ;
   - l'espace soin s'affiche avec ses 10 onglets ;
   - un bouton « Ajouter au panier » ouvre bien `https://sunsoari.fr/cart/…` avec le bon produit.
 

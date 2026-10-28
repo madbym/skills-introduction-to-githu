@@ -31,7 +31,7 @@ Crée une application mobile iOS et Android, en français, avec tutoiement, appe
 - **photos :** celles du dossier `img/` joint.
 
 **Le diagnostic :**
-- un écran « Avant de commencer » (prévoir 10 à 15 minutes, près d'un lavabo) ;
+- un écran « Avant de commencer » avec deux chemins : « L'essentiel » en 5 minutes (environ 31 écrans) ou « Le diagnostic complet » en 15 minutes (environ 51 écrans) ; la liste des questions réservées au complet est `FULL_ONLY` ;
 - une question par écran, 45 à 50 écrans selon les réponses ; les questions dont on connaît déjà la réponse sont sautées, et « Qu'aimerais-tu améliorer ? » est pré-coché ;
 - les mots compliqués des réponses portent un astérisque \* expliqué sous la question (`OPT_DEF`) ;
 - réponses en grandes pilules avec un émoji, passage automatique à l'écran suivant après un choix unique ;

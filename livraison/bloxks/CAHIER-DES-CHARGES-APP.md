@@ -305,6 +305,12 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - La mention « Portrait modèle créé par IA · ce n'est pas une cliente » s'affiche toujours sur l'image (transparence, et jamais présentée comme un résultat ni comme une cliente).
 - Cadrage attendu : photo verticale 3:4, visage de face, centré, du haut du front au menton ; front vers 18 % de la hauteur, nez vers 45 %, joues vers 55 %, menton vers 80 %.
 
+## 5 unvicies. Page d'accueil aux couleurs de la marque
+- **Grande photo d'eau** en plein cadre (`img/accueil-portrait.webp`), avec le mot SUNSOARI, le petit soleil qui tourne lentement et le titre « Ta maison de soin, *solaire* et pure ».
+- **Le nom en trois mots** : Sun, la lumière · Sunsu, la pureté · So, la maison.
+- **Deux grandes cartes** pour choisir son parcours : l'essentiel (5 minutes) ou le complet (15 minutes). Les conseils de préparation sont repliés dans « Pour des réponses justes ».
+- Mention en bas : « Gratuit · sans inscription · tu pourras compléter ton diagnostic plus tard ».
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

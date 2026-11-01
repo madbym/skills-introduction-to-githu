@@ -7,7 +7,7 @@ Ces 108 produits sont dans le catalogue de l'app (`EXT` dans `sunsoari-app.js`).
 - **Le profil de peau indiqué concerne la gamme citée**, pas toute la marque. Il faut confirmer sur la formule précise avant de vendre ou de recommander.
 - **Aucun de ces produits n'est encore vendu par Sunsoari.** L'app propose le lien « Où l'acheter », jamais « Ajouter au panier ».
 - **Les noms marqués « gamme »** sont des pistes : il faudra choisir une référence exacte, avec sa liste INCI, avant de la mettre en avant.
-- **Pas de médicaments dans l'app.** Azelderm 20 % (acide azélaïque), Acnelyse (trétinoïne) et Madecassol sont des médicaments : ils ne sont pas dans le catalogue. Leur choix revient à un médecin ou un pharmacien.
+- **Médicaments :** ils sont dans l'app avec une fiche dédiée (indication, contre-indications, précautions). Ils ne sont jamais placés automatiquement dans une routine, et la fiche renvoie toujours vers un médecin ou un pharmacien (voir plus bas).
 - **Peaux foncées :** seuls Eucerin Thiamidol, La Roche-Posay Mela B3, IN'OYA et Eadem ont des données publiées sur des phototypes foncés (petits effectifs, études liées aux fabricants).
 - **Maquillage :** Florasis, Flower Knows, Judydoll, Joocyee, M.O.I et Lemonade sont dans le catalogue, filtre Maquillage. Ils ne sont pas proposés dans les routines de soin.
 
@@ -165,3 +165,116 @@ Ces 108 produits sont dans le catalogue de l'app (`EXT` dans `sunsoari-app.js`).
 - **Afro-asiatique, cœur de Sunsoari :** Uncover (Kenya × Corée), Cocoon (Vietnam), Karethic, Suki Suki Naturals.
 
 Ne référence pas tout au lancement. Commence par 5 ou 6 produits au rôle clair, puis teste et récolte des retours.
+
+## Deuxième ajout : bibliothèque riche (78 produits et 21 médicaments)
+
+Ce sont des best-sellers de Corée, du Japon, de pharmacie et des cheveux texturés. Parmi eux, le masque gel **Biodance Bio-Collagen Real Deep Mask**.
+
+| Marque | Produit | Origine | Zone | Pour |
+|---|---|---|---|---|
+| Biodance | Bio-Collagen Real Deep Mask | Corée | Visage | secheresse, seche, normale, mixte, teint |
+| Medicube | Collagen Night Wrapping Mask | Corée | Visage | secheresse, seche, normale, teint |
+| Anua | Heartleaf Quercetinol Pore Deep Cleansing Foam | Corée | Visage | mixte, imperfections, pointsnoirs |
+| Anua | Rice 70 Glow Milky Toner | Corée | Visage | seche, normale, teint, secheresse |
+| Anua | Azelaic Acid 10 Hyaluron Redness Soothing Serum | Corée | Visage | rougeurs, marques, imperfections, sensible |
+| Torriden | DIVE-IN Low Molecular Hyaluronic Acid Soothing Cream | Corée | Visage | mixte, normale, secheresse, sensible |
+| Torriden | DIVE-IN Watery Moisture Sun Cream SPF 50+ | Corée | Visage | mixte, normale, secheresse |
+| Torriden | DIVE-IN Mask | Corée | Visage | secheresse, sensible |
+| SKIN1004 | Madagascar Centella Light Cleansing Oil | Corée | Visage | mixte, sensible, normale |
+| SKIN1004 | Madagascar Centella Toning Toner | Corée | Visage | mixte, texture, imperfections |
+| SKIN1004 | Madagascar Centella Poremizing Fresh Ampoule | Corée | Visage | mixte, pointsnoirs, brillance |
+| SKIN1004 | Madagascar Centella Soothing Cream | Corée | Visage | sensible, rougeurs, mixte, normale |
+| COSRX | Advanced Snail 92 All in One Cream | Corée | Visage | secheresse, normale, mixte, texture |
+| COSRX | Acne Pimple Master Patch | Corée | Visage | imperfections, acne |
+| COSRX | Full Fit Propolis Light Ampoule | Corée | Visage | secheresse, teint, imperfections |
+| COSRX | The Retinol 0.1 Cream | Corée | Visage | rides, texture, imperfections |
+| Beauty of Joseon | Revive Serum Ginseng + Snail Mucin | Corée | Visage | secheresse, teint, rides |
+| Beauty of Joseon | Calming Serum Green Tea + Panthenol | Corée | Visage | sensible, rougeurs, mixte |
+| Beauty of Joseon | Ginseng Essence Water | Corée | Visage | seche, normale, secheresse |
+| Beauty of Joseon | Radiance Cleansing Balm | Corée | Visage | normale, seche, mixte |
+| Abib | Heartleaf Sun Essence Calming Drop SPF 50+ | Corée | Visage | sensible, mixte, normale |
+| Abib | Jericho Rose Crème Nutrition Tube | Corée | Visage | seche, secheresse |
+| Numbuzin | No.5 Vitamin Concentrated Serum | Corée | Visage | teint, taches, marques |
+| Ma:nyo | Pure Cleansing Oil | Corée | Visage | normale, mixte, seche, pointsnoirs |
+| Dr.Jart+ | Ceramidin Cream | Corée | Visage | seche, sensible, secheresse |
+| Innisfree | Retinol Cica Moisture Recovery Serum | Corée | Visage | imperfections, texture, marques |
+| Dr.Ceuracle | Vegan Kombucha Tea Essence | Corée | Visage | teint, normale, mixte |
+| Benton | Snail Bee High Content Essence | Corée | Visage | secheresse, imperfections, texture |
+| Klairs | Midnight Blue Calming Cream | Corée | Visage | sensible, rougeurs |
+| Mediheal | Teatree Care Solution Essential Mask EX | Corée | Visage | mixte, imperfections |
+| Laneige | Lip Sleeping Mask | Corée | Visage | secheresse |
+| rom&nd | Juicy Lasting Tint | Corée | Maquillage | — |
+| CLIO | Kill Cover Cushion | Corée | Maquillage | — |
+| Amos Professional | Green Tea Active Shampoo | Corée | Cuir chevelu | cuirGras, cuirOk |
+| Skin Aqua (Rohto) | Super Moisture Gel SPF 50+ | Japon | Visage | mixte, normale, secheresse |
+| Shiseido | Ultimune Power Infusing Serum | Japon | Visage | normale, seche, rides |
+| Kanebo Suisai | Beauty Clear Powder Wash | Japon | Visage | texture, pointsnoirs, mixte, normale |
+| Naturie | Hatomugi Skin Conditioner | Japon | Visage | normale, mixte, secheresse |
+| Shu Uemura | Ultime8∞ Sublime Beauty Cleansing Oil | Japon | Visage | normale, seche, mixte |
+| MUJI | Sensitive Skin Moisture Toner | Japon | Visage | sensible, normale, secheresse |
+| La Roche-Posay | Cicaplast Baume B5+ | France | Visage | sensible, seche, rougeurs, rasage |
+| La Roche-Posay | Effaclar Gel Moussant Purifiant | France | Visage | mixte, imperfections |
+| La Roche-Posay | Hyalu B5 Sérum | France | Visage | secheresse, rides, sensible |
+| La Roche-Posay | Pure Vitamin C10 Sérum | France | Visage | teint, taches, rides |
+| La Roche-Posay | Retinol B3 Sérum | France | Visage | rides, texture |
+| La Roche-Posay | Lipikar Syndet AP+ | France | Corps | corpsSec, corpsTresSec, corpsSensible |
+| Avène | Cleanance Gel Nettoyant | France | Visage | mixte, imperfections |
+| Avène | XeraCalm A.D Crème Relipidante | France | Corps | corpsTresSec, corpsSensible |
+| Bioderma | Sébium Gel Moussant | France | Visage | mixte, imperfections, brillance |
+| Bioderma | Atoderm Huile de Douche | France | Corps | corpsSec, corpsTresSec, corpsSensible |
+| CeraVe | Crème Hydratante | France | Corps | corpsSec, corpsTresSec, seche |
+| CeraVe | Lotion Hydratante Visage | France | Visage | normale, mixte, secheresse |
+| CeraVe | Sérum Rétinol Anti-Marques | France | Visage | marques, texture, imperfections |
+| The Ordinary | Hyaluronic Acid 2% + B5 | Canada | Visage | secheresse, normale, mixte |
+| The Ordinary | Azelaic Acid Suspension 10% | Canada | Visage | rougeurs, marques, imperfections, teint |
+| The Ordinary | Glycolic Acid 7% Exfoliating Toner | Canada | Visage | texture, teint, normale |
+| The Ordinary | Natural Moisturizing Factors + HA | Canada | Visage | normale, mixte, secheresse |
+| The Ordinary | Multi-Peptide + HA Serum | Canada | Visage | rides, secheresse |
+| The Ordinary | Squalane Cleanser | Canada | Visage | seche, sensible, normale |
+| Embryolisse | Lait-Crème Concentré | France | Visage | seche, normale |
+| Uriage | Bariéderm Cica-Crème | France | Visage | sensible, seche, rougeurs |
+| SVR | Sebiaclear Sérum | France | Visage | mixte, imperfections, marques |
+| Caudalie | Vinoperfect Sérum Éclat | France | Visage | teint, taches |
+| Neutrogena | Hydro Boost Water Gel | États-Unis | Visage | mixte, normale, secheresse |
+| Hero Cosmetics | Mighty Patch Original | États-Unis | Visage | imperfections, acne |
+| Supergoop! | Unseen Sunscreen SPF 40 | États-Unis | Visage | mixte, normale |
+| Unsun | Mineral Tinted Face Sunscreen SPF 30 | États-Unis | Visage | normale, seche, sensible |
+| Nivea | Crème | Allemagne | Corps | corpsSec, corpsOk |
+| Palmer's | Cocoa Butter Formula Lotion | États-Unis | Corps | corpsSec, corpsMarques, corpsTresSec |
+| Sol de Janeiro | Brazilian Bum Bum Cream | Brésil | Corps | corpsSec, corpsSenteur |
+| Topicrem | Ultra-Hydratant Lait Corps | France | Corps | corpsSec, corpsOk, corpsSensible |
+| Olaplex | No.7 Bonding Oil | États-Unis | Cheveux | secs, colores, chaleur |
+| SheaMoisture | Jamaican Black Castor Oil Strengthen & Restore Leave-In | États-Unis | Cheveux | crepus, boucles, secs |
+| Eco Style | Olive Oil Styling Gel | États-Unis | Cheveux | boucles, crepus, ondules |
+| Kérastase | Nutritive Bain Satin | France | Cheveux | secs, raides, ondules |
+| K18 | Leave-In Molecular Repair Hair Mask | États-Unis | Cheveux | secs, colores, chaleur |
+| Gisou | Honey Infused Hair Oil | Pays-Bas | Cheveux | secs, raides, ondules |
+| Moroccanoil | Treatment Original | Israël | Cheveux | secs, colores, ondules, raides |
+
+## Médicaments (affichés à part, jamais dans une routine)
+
+Ils sont visibles dans **Produits > Catalogue > Médicaments** et dans le carrousel « À demander à ton pharmacien ou médecin », seulement quand ils correspondent au profil. Chaque fiche affiche le statut (avec ou sans ordonnance), l'indication, les contre-indications et les précautions. Il n'y a jamais de lien d'achat. **À faire relire par un pharmacien avant la mise en ligne.**
+
+| Médicament | Statut | Indication | Contre-indications |
+|---|---|---|---|
+| Differine 0,1 % gel (adapalène) (Galderma) | Sur ordonnance | Acné légère à modérée (points noirs, boutons). | Grossesse ou projet de grossesse, allaitement, allergie à l'un des composants. |
+| Epiduo gel (adapalène + peroxyde de benzoyle) (Galderma) | Sur ordonnance | Acné avec boutons inflammatoires. | Grossesse ou projet de grossesse, allergie à l'un des composants. |
+| Effederm 0,05 % crème (trétinoïne) (Pierre Fabre) | Sur ordonnance | Acné. | Grossesse ou projet de grossesse, allaitement, eczéma, peau irritée ou lésée, allergie à l'un des composants. |
+| Acnelyse crème (trétinoïne) (Abdi İbrahim) | Sur ordonnance | Acné. | Grossesse et projet de grossesse, allergie à l'un des composants. |
+| Skinoren 20 % crème (acide azélaïque) (Leo Pharma) | Sur ordonnance ou conseil, selon le pays | Acné ; selon la notice, certaines formes à 15 % (Finacea) traitent la rosacée. | Allergie à l'un des composants. |
+| Azelderm 20 % crème (acide azélaïque) (Orva) | Selon le pays | Acné, selon la notice turque. | Allergie à l'un des composants. |
+| Cutacnyl 5 % gel (peroxyde de benzoyle) (Galderma) | Sans ordonnance, conseil du pharmacien | Acné légère à modérée. | Allergie au peroxyde de benzoyle. |
+| Rozex gel (métronidazole) (Galderma) | Sur ordonnance | Rosacée avec petits boutons. | Allergie au métronidazole ou à un composant. |
+| Soolantra crème (ivermectine) (Galderma) | Sur ordonnance | Rosacée avec petits boutons, chez l'adulte. | Allergie à l'un des composants. |
+| Rubozinc (gluconate de zinc, gélules) (Labcatal) | Sur ordonnance ou conseil | Acné inflammatoire légère à modérée. | Allergie à l'un des composants. |
+| Isotrétinoïne orale (Curacné, Procuta…) (Divers laboratoires) | Sur prescription d'un ou une dermatologue | Acné sévère ou qui résiste aux autres traitements. | Grossesse (risque très grave pour le bébé : contraception obligatoire et tests de grossesse), allaitement, insuffisance hépatique, excès de lipides sanguins, certaines associations (tétracyclines, vitamine A). |
+| Hydroquinone (trio de Kligman, sur ordonnance) (Préparation magistrale) | Sur ordonnance uniquement (préparation en pharmacie) | Taches pigmentaires tenaces (mélasma), sous contrôle d'un ou une dermatologue. | Grossesse, allaitement, peau irritée, allergie. |
+| Hydrocortisone 0,5 % crème (Divers laboratoires) | Sans ordonnance, conseil du pharmacien | Démangeaisons et rougeurs passagères (piqûres d'insectes, petit eczéma), sur une courte durée. | Infection de la peau (bactérienne, virale comme l'herpès, ou à champignons), acné, rosacée, plaie ouverte, allergie. |
+| Dexeryl crème (Pierre Fabre) | Sans ordonnance | Sécheresse cutanée, en accompagnement de la dermatite atopique. | Allergie à l'un des composants. |
+| Bepanthen 5 % pommade (dexpanthénol) (Bayer) | Sans ordonnance | Gerçures, petites irritations, érythème fessier du bébé. | Allergie à l'un des composants. |
+| Biafine émulsion (trolamine) (Johnson & Johnson) | Sans ordonnance | Brûlures superficielles peu étendues et coups de soleil. | Plaie qui saigne ou infectée, allergie à l'un des composants (dont les parabènes selon la formule). |
+| Madecassol 1 % crème (Centella asiatica) (Bayer) | Sans ordonnance | Aide à la cicatrisation de petites plaies superficielles, selon la notice. | Allergie à l'un des composants. |
+| Ketoderm 2 % gel moussant (kétoconazole) (Janssen) | Sans ordonnance | Dermatite séborrhéique du visage et du cuir chevelu, pellicules, pityriasis versicolor. | Allergie au kétoconazole ou à un composant. |
+| Sebiprox 1,5 % shampooing (ciclopirox) (Pierre Fabre) | Sans ordonnance | Dermatite séborrhéique du cuir chevelu. | Allergie à l'un des composants. |
+| Minoxidil 2 % ou 5 % solution (Divers laboratoires) | Sans ordonnance, conseil du pharmacien | Chute de cheveux héréditaire (alopécie androgénétique) : 2 % chez la femme, 5 % chez l'homme. | Moins de 18 ans, cuir chevelu irrité ou lésé, grossesse et allaitement, allergie. |
+| Daivobet gel (calcipotriol + bétaméthasone) (Leo Pharma) | Sur ordonnance | Psoriasis du cuir chevelu et du corps. | Troubles du calcium, psoriasis pustuleux ou érythrodermique, infections de la peau, insuffisance rénale ou hépatique sévère, allergie. |

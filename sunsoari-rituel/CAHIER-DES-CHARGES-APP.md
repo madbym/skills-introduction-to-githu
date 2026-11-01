@@ -339,6 +339,17 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - **Médicaments exclus :** Azelderm, Acnelyse et Madecassol ne sont pas ajoutés. L'app ne recommande jamais de médicament.
 - **Règle :** le profil de peau d'une « gamme » est une orientation. Avant toute mise en avant, il faut choisir une référence précise et vérifier sa liste INCI.
 
+## 5 quinvicies. Bibliothèque riche et médicaments
+- **78 produits ajoutés** : best-sellers coréens, japonais, de pharmacie et pour cheveux texturés. Par exemple le masque gel Biodance Bio-Collagen, Medicube, Anua, Torriden, SKIN1004, COSRX, The Ordinary, La Roche-Posay, CeraVe, Olaplex, K18, Eco Style. Le catalogue n'est plus limité aux produits vendus par Sunsoari.
+- **« Pour toi » plus ouvert** : 10 produits par carrousel au lieu de 6.
+- **Nouvelles étapes** : patch boutons et soin des lèvres. On les voit dans le catalogue ; elles ne sont pas ajoutées aux routines.
+- **21 médicaments** (champ `med` : statut, indication, contre-indications, précautions) :
+  - ils sont affichés avec la mention « Médicament » et une fiche dédiée (`A.medBox`), **jamais** placés dans une routine (`pickFor` les exclut) et **sans lien d'achat** ;
+  - un carrousel « À demander à ton pharmacien ou médecin » n'apparaît que si le profil correspond ;
+  - un filtre « Médicaments » existe dans le catalogue ;
+  - l'assistante IA ne les prescrit jamais : elle donne l'indication et les contre-indications, puis renvoie vers un professionnel ;
+  - **les fiches doivent être relues par un pharmacien avant la mise en ligne.**
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

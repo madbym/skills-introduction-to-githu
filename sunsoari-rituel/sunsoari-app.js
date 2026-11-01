@@ -320,6 +320,7 @@
     ".made.trend{background:var(--water-soft);color:var(--water)}",
     "@media (max-width:560px){.top,.body{padding-left:16px;padding-right:16px}.hero{grid-template-columns:1fr}.hero img{max-width:220px;margin:0 auto}}",
     ".ico.emo{font-size:26px;line-height:1;transition:transform .2s}", ".opt[aria-pressed=true] .ico.emo{transform:scale(1.15)}", ".opt{transition:border-color .2s,background .2s,transform .12s}", ".opt:active{transform:scale(.98)}",
+    ".aitag{position:absolute;left:10px;bottom:10px;background:rgba(43,38,34,.55);color:#fff;font-size:10.5px;padding:3px 8px;border-radius:999px}",
     ".bubble{display:flex;gap:10px;align-items:center;margin:2px 0 14px}", ".bubble .sunny{width:54px;height:54px;flex:none}", ".bubble p{margin:0;background:#fff;border:1px solid #e6dccb;border-radius:18px 18px 18px 6px;padding:10px 14px;font-size:15px;line-height:1.4;color:var(--ink)}", ".qcount{font-size:13px;color:var(--muted);flex:none}",
     "sup.ast{color:var(--sun);font-weight:700;margin-left:2px}", ".defs{margin:12px 0 0;background:var(--sand-soft);border-radius:14px;padding:10px 14px;font-size:14px}", ".defs summary{cursor:pointer;color:var(--water);font-weight:600}", ".defs dt{font-weight:600;margin-top:8px}", ".defs dd{margin:2px 0 0;color:var(--muted)}",
     ".prepa{list-style:none;padding-left:4px}", ".timer{background:var(--water-soft);color:var(--water);border-radius:14px;padding:10px 14px;font-weight:600;font-size:15px}", ".prepa li{margin:6px 0}",
@@ -2098,7 +2099,9 @@
   };
   A.mirror = function (target, marks, img) {
     var cfg = PHOTO[target], self = this;
-    var html = "<div class='mirror" + (img ? " has" : "") + "'>" + (img ? "<img src='" + img + "' alt='Ta photo'>" : "<div class='silh'>" + icon(target === "visage" ? "heart" : "curly") + "<span>Pas de photo ? Touche directement les zones.</span></div>");
+    // Sans photo de la cliente : le portrait modèle de Sunsoari (data-face-model / data-scalp-model), sinon une silhouette.
+    var model = this.host.getAttribute(target === "visage" ? "data-face-model" : "data-scalp-model");
+    var html = "<div class='mirror" + (img || model ? " has" : "") + "'>" + (img ? "<img src='" + img + "' alt='Ta photo'>" : model ? "<img src='" + esc(model) + "' alt='Portrait modèle Sunsoari' data-fallback='1'><span class='aitag'>Portrait modèle créé par IA · ce n'est pas une cliente</span>" : "<div class='silh'>" + icon(target === "visage" ? "heart" : "curly") + "<span>Pas de photo ? Touche directement les zones.</span></div>");
     cfg.zones.forEach(function (z) { var l = marks[z[0]] || [], n = l.length; html += "<button class='zone" + (self.zone === z[0] ? " on" : "") + (n ? " marked" : "") + "' style='left:" + z[2] + "%;top:" + z[3] + "%' data-zone='" + z[0] + "'>" + esc(z[1]) + (n ? " <span class='dots'>" + l.map(function (o) { return "<i class='sdot' style='background:" + (SIGN_COLOR[o] || "#fff") + "'></i>"; }).join("") + "</span>" : "") + "</button>"; });
     return html + "</div>";
   };

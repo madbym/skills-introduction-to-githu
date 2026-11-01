@@ -24,6 +24,7 @@
     {%- if section.settings.whatsapp != blank %} data-whatsapp="{{ section.settings.whatsapp }}"{% endif %}
     {%- if section.settings.instagram != blank %} data-instagram="{{ section.settings.instagram }}"{% endif %}
     {%- if section.settings.img_base != blank %} data-img-base="{{ section.settings.img_base }}"{% endif %}
+    {%- if section.settings.face_model != blank %} data-face-model="{{ section.settings.face_model | image_url: width: 900 }}"{% endif %}
     {%- if section.settings.display == 'favoris' %} data-widget="favoris"{% endif %}
     {%- if section.settings.ai_endpoint != blank %} data-ai-endpoint="{{ section.settings.ai_endpoint }}"{% endif %}
     {%- if section.settings.email_endpoint != blank %} data-email-endpoint="{{ section.settings.email_endpoint }}"{% endif %}
@@ -46,6 +47,7 @@
     ] },
     { "type": "text", "id": "whatsapp", "label": "Numéro WhatsApp pour le rituel personnalisé", "default": "0781737521" },
     { "type": "text", "id": "instagram", "label": "Compte Instagram (sans @)", "default": "sunsoari" },
+    { "type": "image_picker", "id": "face_model", "label": "Portrait modèle du visage (créatrice IA)", "info": "Photo verticale 3:4, visage de face et centré. Mention « créé par IA » affichée automatiquement." },
     { "type": "text", "id": "img_base", "label": "Adresse des images (dossier Fichiers Shopify)" },
     { "type": "url", "id": "contact_url", "label": "Lien de contact" },
     { "type": "text", "id": "ai_endpoint", "label": "Adresse du serveur IA (Emergent)", "info": "Laisser vide tant que le serveur n'est pas prêt : l'application fonctionne sans IA." },

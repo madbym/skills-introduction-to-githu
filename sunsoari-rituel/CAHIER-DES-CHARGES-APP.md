@@ -300,6 +300,11 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - Les questions réservées au complet sont listées dans `FULL_ONLY` : « Raconte-moi », photos, pores, zones rêches, crème, déshydratation, saisons, quotidien, ville, cause des réactions, convictions, noms des produits, envies corps, sous-type de cheveux, porosité, diagnostics du cuir chevelu, coiffures, marques, format et notes.
 - Dans l'espace soin, l'onglet Diagnostic propose **« Compléter mon diagnostic »** : l'app reprend à la première question restée sans réponse, et les réponses déjà données sont gardées.
 
+## 5 vicies. Portrait modèle sur l'écran photo
+- Sans photo de la cliente, l'écran « Regarde ta peau de près » affiche le **portrait d'une créatrice UGC générée par IA** (attribut `data-face-model`, réglage « Portrait modèle » de la section Shopify), avec les zones front, nez, joues et menton par-dessus. Plus de dessin de visage.
+- La mention « Portrait modèle créé par IA · ce n'est pas une cliente » s'affiche toujours sur l'image (transparence, et jamais présentée comme un résultat ni comme une cliente).
+- Cadrage attendu : photo verticale 3:4, visage de face, centré, du haut du front au menton ; front vers 18 % de la hauteur, nez vers 45 %, joues vers 55 %, menton vers 80 %.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

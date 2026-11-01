@@ -278,3 +278,19 @@ Ils sont visibles dans **Produits > Catalogue > Médicaments** et dans le carrou
 | Sebiprox 1,5 % shampooing (ciclopirox) (Pierre Fabre) | Sans ordonnance | Dermatite séborrhéique du cuir chevelu. | Allergie à l'un des composants. |
 | Minoxidil 2 % ou 5 % solution (Divers laboratoires) | Sans ordonnance, conseil du pharmacien | Chute de cheveux héréditaire (alopécie androgénétique) : 2 % chez la femme, 5 % chez l'homme. | Moins de 18 ans, cuir chevelu irrité ou lésé, grossesse et allaitement, allergie. |
 | Daivobet gel (calcipotriol + bétaméthasone) (Leo Pharma) | Sur ordonnance | Psoriasis du cuir chevelu et du corps. | Troubles du calcium, psoriasis pustuleux ou érythrodermique, infections de la peau, insuffisance rénale ou hépatique sévère, allergie. |
+
+## K-beauty et J-beauty pensées pour les peaux noires et métissées
+
+Recherche en ligne de novembre 2026. Ces marques sont regroupées dans la sélection **« K-beauty et J-beauty pour peaux noires et métissées »** (Produits).
+
+| Marque | Origine | Ce qu'on sait | Prudence |
+|---|---|---|---|
+| K+BROWN | Corée | Dirigée par Melissa Alfer. Se présente comme la première marque coréenne formulée pour les peaux mélanisées, avec des tests annoncés sur les phototypes III à VI. | « Première » est une affirmation de la marque. Choisir une référence précise. |
+| wolGlow | Corée | Développée avec une dirigeante noire et des experts coréens. Lancée à New York en mai 2026 avec 4 produits. | Très récente : vérifier chaque formule. |
+| Gymsegbe | Corée | Développée en Corée par des dermatologues, pour les peaux mélanisées et sensibles. | Peu documentée : à tester d'abord. |
+| Uncover | Kenya × Corée | Formulation coréenne et ingrédients africains (déjà au catalogue). | — |
+| KINLÒ | États-Unis | Fondée par Naomi Osaka (héritage japonais et haïtien). Soins solaires pour peaux mélanisées. | Pas fabriquée au Japon. |
+| TIRTIR Mask Fit Red Cushion | Corée | Gamme de teintes élargie aux peaux foncées. | Vérifier la teinte la plus foncée vendue en Europe. |
+| Shiseido Synchro Skin | Japon | Fond de teint avec des teintes foncées. | Les plus foncées sont surtout vendues hors du Japon. |
+
+Aucune marque japonaise **créée spécifiquement** pour les peaux noires n'a été trouvée. Côté soin, ce sont surtout les solaires japonais et coréens sans trace blanche (Bioré, Beauty of Joseon, SKIN1004, Isntree, Round Lab) qui conviennent bien.

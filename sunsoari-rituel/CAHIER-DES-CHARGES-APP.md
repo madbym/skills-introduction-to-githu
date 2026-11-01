@@ -311,6 +311,23 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - **Deux grandes cartes** pour choisir son parcours : l'essentiel (5 minutes) ou le complet (15 minutes). Les conseils de préparation sont repliés dans « Pour des réponses justes ».
 - Mention en bas : « Gratuit · sans inscription · tu pourras compléter ton diagnostic plus tard ».
 
+## 5 duovicies. Recommandations sélectives et catalogue complet
+- **Plus sélectif** (`pickFor`) : un produit passe devant s'il répond précisément au profil. Les points vont au type de peau, de cheveux ou de corps visé (+6), et chaque besoin coché (+6). Les pénalités : un produit prévu pour un autre type perd 10 points, un produit sans cible précise en perd 4. Les bonus de popularité sont réduits : peaux foncées seulement pour les solaires, cheveux texturés seulement pour les soins cheveux, et +2 pour l'origine coréenne, japonaise ou africaine.
+- **Variété** :
+  - une même marque n'est pas proposée deux fois dans une routine (−12 points) ;
+  - un petit écart stable propre à chaque profil (`seedOf`, de 0 à 6 points) départage les produits qui se valent. Deux personnes proches ne reçoivent donc pas toujours la même routine, et une même personne garde la sienne ;
+  - dans « Pour toi », un produit n'apparaît qu'une fois et une marque au plus deux fois par carrousel.
+- **Résultat mesuré** sur 300 profils : le sérum le plus proposé passe de 84 % à 31 % des routines, et le nombre de produits différents dans « Pour toi » de 124 à 206.
+- **Catalogue complet** : nouvel onglet « Catalogue », ouvert par défaut dans Produits. Il montre **tous** les produits (Sunsoari et autres marques), filtrables par zone et classés du plus adapté au moins adapté, par pages de 40.
+- **14 produits ajoutés** sur les étapes qui n'en avaient qu'un ou deux : masques de nuit, contours des yeux, gommages du cuir chevelu, brosse de massage, huiles corps, protection thermique, shampoing sec.
+
+## 5 tervicies. Des mots variés, pas de question en double
+- « Picote » n'apparaît plus dans les réponses. Après le lavage : « Rougit ou devient inconfortable ». Avec un nouveau produit : « S'irrite souvent ». Pour le corps : « Elle gratte ou rougit facilement ».
+- La question « Quand tu essaies un nouveau produit… » est sautée si la peau réagit déjà au simple lavage.
+- La question de fin de journée devient **le test du mouchoir**, pour ne plus ressembler à celle des 5 minutes après le lavage.
+- « Qu'est-ce qui a déjà irrité ta peau ? » remplace « Ta peau a-t-elle déjà mal réagi à… ».
+- « Plaques » est pré-coché dans « Qu'aimerais-tu améliorer ? » quand l'eczéma ou le psoriasis a déjà été coché.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

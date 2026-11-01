@@ -699,6 +699,21 @@
     { id: "medicubedeoxy", brand: "medicube", name: "Deoxyribose Scalp Serum", origin: "Corée", zone: "cuir", step: "cuirsoin", act: [], for: ["fins", "chute"], avoid: ["cuirPso", "cuirDS"], desc: "Sérum coréen pour le cuir chevelu, récent : peu de recul." },
     { id: "apieudry", brand: "A'pieu", name: "Oily Hair Dry Powder", origin: "Corée", zone: "cuir", step: "shampoingsec", act: [], for: ["cuirGras", "fins"], avoid: ["cuirSensible", "cuirPso", "cuirDS"], desc: "Poudre coréenne à poser sur les racines grasses entre deux lavages. Elle ne remplace pas le shampoing." },
     { id: "lilyevegs", brand: "lilyeve", name: "Two-Way Gua Sha Brush", origin: "Corée", zone: "cuir", step: "massage", act: [], for: ["fins", "chute", "tempes", "cuirGras", "cuirOk"], avoid: ["cuirPso", "cuirDS", "cuirSensible"], desc: "Brosse coréenne pour masser le cuir chevelu sous la douche ou à sec. Masse sans frotter fort." },
+    // Plus de choix sur les étapes qui n'avaient qu'un ou deux produits.
+    { id: "laneigecica", brand: "Laneige", name: "Cica Sleeping Mask", origin: "Corée", zone: "visage", step: "nuit", act: ["centella"], for: ["sensible", "rougeurs", "mixte", "normale"], avoid: [], desc: "Masque de nuit à la centella, en dernière étape le soir, pour les peaux qui s'irritent facilement." },
+    { id: "sulwhasoonight", brand: "Sulwhasoo", name: "Overnight Vitalizing Mask", origin: "Corée", zone: "visage", step: "nuit", act: ["ginseng"], for: ["seche", "rides", "teint"], avoid: ["reactifHE"], desc: "Masque de nuit nourrissant aux plantes coréennes. Contient du parfum." },
+    { id: "klairsmaske", brand: "Klairs", name: "Freshly Juiced Vitamin E Mask", origin: "Corée", zone: "visage", step: "nuit", act: [], for: ["seche", "normale", "secheresse"], avoid: [], desc: "Masque de nuit crème à la vitamine E, pour les peaux qui manquent de confort." },
+    { id: "mizoneye", brand: "Mizon", name: "Snail Repair Eye Cream", origin: "Corée", zone: "visage", step: "yeux", act: ["mucine"], for: ["secheresse", "cernes", "rides"], avoid: ["vegan"], desc: "Crème contour des yeux à la mucine d'escargot, texture confortable." },
+    { id: "klairseye", brand: "Klairs", name: "Fundamental Eye Butter", origin: "Corée", zone: "visage", step: "yeux", act: [], for: ["secheresse", "seche", "sensible"], avoid: [], desc: "Baume riche pour le contour des yeux sec, sans parfum ajouté selon la marque." },
+    { id: "ordinarycaf", brand: "The Ordinary", name: "Caffeine Solution 5% + EGCG", origin: "Canada", zone: "visage", step: "yeux", act: [], for: ["cernes"], avoid: [], desc: "Sérum léger à la caféine, pour l'aspect des poches et des cernes du matin." },
+    { id: "sulwhasooeye", brand: "Sulwhasoo", name: "Concentrated Ginseng Renewing Eye Cream", origin: "Corée", zone: "visage", step: "yeux", act: ["ginseng"], for: ["rides", "seche"], avoid: ["reactifHE"], desc: "Crème contour des yeux au ginseng, texture riche. Contient du parfum." },
+    { id: "crobinscrub", brand: "Christophe Robin", name: "Shampooing Gommant Purifiant au Sel de Mer", origin: "France", zone: "cuir", step: "gommagecuir", act: [], for: ["cuirGras", "cuirPellicules"], avoid: ["cuirSensible", "cuirPso", "cuirDS", "cuirSec"], desc: "Gommage du cuir chevelu au sel marin, une fois par semaine au plus, à la place du shampoing." },
+    { id: "briogeoscrub", brand: "Briogeo", name: "Scalp Revival Charcoal + Coconut Oil Micro-Exfoliating Shampoo", origin: "États-Unis", zone: "cuir", step: "gommagecuir", act: [], for: ["cuirGras", "cuirPellicules", "crepus", "boucles"], avoid: ["cuirSensible", "cuirPso", "cuirDS"], desc: "Shampoing gommant au charbon et à la noix de coco, pensé aussi pour les cheveux texturés." },
+    { id: "tanglescalp", brand: "Tangle Teezer", name: "Scalp Exfoliator & Massager", origin: "Royaume-Uni", zone: "cuir", step: "massage", act: [], for: ["fins", "chute", "tempes", "cuirGras", "cuirOk", "crepus", "boucles"], avoid: ["cuirPso", "cuirDS", "cuirSensible"], desc: "Brosse souple pour masser le cuir chevelu pendant le shampoing, sans frotter fort." },
+    { id: "nuxeprodigieuse", brand: "Nuxe", name: "Huile Prodigieuse", origin: "France", zone: "corps", step: "huile", act: [], for: ["corpsSec", "secs"], avoid: ["reactifHE"], desc: "Huile sèche multi-usage, corps et cheveux. Contient du parfum." },
+    { id: "palmersoil", brand: "Palmer's", name: "Cocoa Butter Formula Skin Therapy Oil", origin: "États-Unis", zone: "corps", step: "huile", act: [], for: ["corpsSec", "corpsMarques", "corpsTresSec"], avoid: ["reactifHE"], desc: "Huile corps au beurre de cacao, très utilisée sur les peaux noires et métissées. Contient du parfum." },
+    { id: "moroccanoilpd", brand: "Moroccanoil", name: "Perfect Defense", origin: "Israël", zone: "cheveux", step: "thermo", act: ["argan"], for: ["raides", "ondules", "colores", "secs"], avoid: [], desc: "Spray à vaporiser avant le sèche-cheveux ou le lisseur." },
+    { id: "kloranesec", brand: "Klorane", name: "Shampooing Sec au Lait d'Avoine", origin: "France", zone: "cuir", step: "shampoingsec", act: [], for: ["cuirGras", "fins"], avoid: ["cuirPso", "cuirDS"], desc: "Shampoing sec doux entre deux lavages. Il ne remplace pas le shampoing." },
     { id: "utena", brand: "Utena", name: "Matomage Hair Styling Stick", origin: "Japon", zone: "cheveux", step: "finition", act: [], for: ["raides", "ondules", "boucles", "crepus"], avoid: [], desc: "Stick japonais pour discipliner les petits cheveux et la lisière sans gel collant. Ne tire jamais la lisière en coiffant." },
     { id: "royues", brand: "RoyueS", name: "Hair Finishing Stick", origin: "Corée", zone: "cheveux", step: "finition", act: [], for: ["raides", "ondules", "boucles", "crepus"], avoid: [], desc: "Mascara à cheveux coréen pour les mèches rebelles et les petits cheveux." },
     { id: "knockvanilla", brand: "Knock", name: "Whipping Milk Wash Seoul Vanilla", origin: "Corée", zone: "corps", step: "gel", act: [], for: ["corpsOk", "corpsSenteur", "corpsSec"], avoid: ["corpsSensible"], desc: "Gel douche coréen crémeux à la vanille, gourmand et parfumé." },
@@ -780,9 +795,9 @@
       options: [["femme", "Une femme", "", "heart"], ["homme", "Un homme", "", "heart"], ["autre", "Je me décris autrement", "", "sprout"], ["nsp", "Je préfère ne pas répondre", "", "ask"]] },
     { id: "infoTest", sec: 1, type: "info", kind: "test" },
     { id: "pt_lavage", sec: 1, title: "Juste après le lavage, sans rien mettre, ta peau…", sub: "Ce que tu ressens tout de suite, en sortant la serviette.",
-      options: [["tire", "Tire ou tiraille partout", "Elle semble trop petite", "dry"], ["joues", "Tire un peu sur les joues seulement", "Le front et le nez vont bien", "halfsun"], ["picote", "Picote, chauffe ou rougit", "", "flame"], ["ok", "Est confortable", "Aucune gêne", "heart"]] },
-    { id: "pt_soir", sec: 1, title: "En fin de journée, ton visage…", sub: "",
-      options: [["mat", "Reste mat, voire tiraille", "", "dry"], ["tz", "Brille sur le front, le nez et le menton", "", "halfsun"], ["tout", "Brille sur tout le visage", "", "drops"], ["var", "Ça dépend des jours", "", "ask"]] },
+      options: [["tire", "Tire ou tiraille partout", "Elle semble trop petite", "dry"], ["joues", "Tire un peu sur les joues seulement", "Le front et le nez vont bien", "halfsun"], ["picote", "Rougit ou devient inconfortable", "Chaleur, gêne", "flame"], ["ok", "Est confortable", "Aucune gêne", "heart"]] },
+    { id: "pt_soir", sec: 1, title: "Le test du mouchoir : en fin de journée, tamponne ton visage…", sub: "Pose un mouchoir sur ton front, ton nez puis tes joues. Pas sous la main ? Réponds de mémoire.",
+      options: [["mat", "Le mouchoir reste propre", "Ta peau est plutôt mate, voire sèche", "dry"], ["tz", "Il marque sur le front et le nez", "Les joues restent nettes", "halfsun"], ["tout", "Il marque aussi sur les joues", "", "drops"], ["var", "Ça dépend des jours", "", "ask"]] },
     { id: "pt_pores", sec: 1, title: "Dans le miroir, tes pores sont…", sub: "",
       options: [["peu", "Peu visibles", "", "none"], ["nez", "Visibles sur le nez et autour", "", "dots"], ["joues", "Visibles aussi sur les joues", "", "spots"]] },
     { id: "pt_peaux", sec: 1, skipIf: function (a) { return a.pt_lavage === "tire"; }, title: "As-tu des zones rêches ou des petites peaux qui pèlent ?", sub: "",
@@ -791,8 +806,8 @@
       options: [["boit", "Elle disparaît vite, j'en remets", "Ma peau en redemande", "dry"], ["ok", "Elle pénètre bien, c'est confortable", "", "heart"], ["zones", "Parfaite sur les joues, trop riche sur le front et le nez", "", "halfsun"], ["brille", "Elle me fait briller ou me donne des boutons", "", "drops"]] },
     { id: "pt_deshy", sec: 1, skipIf: function (a) { return a.pt_soir === "mat" || (a.pt_lavage === "tire" && (a.pt_soir === "tz" || a.pt_soir === "tout")); }, title: "Ta peau peut-elle briller et tirailler en même temps ?", sub: "C'est un signe fréquent de manque d'eau, quel que soit ton type de peau.",
       options: [["oui", "Oui, ça m'arrive", "", "yes"], ["non", "Non", "", "no"], ["nsp", "Je ne sais pas", "", "ask"]] },
-    { id: "pt_reac", sec: 1, title: "Quand tu essaies un nouveau produit, ta peau…", sub: "",
-      options: [["souvent", "Picote, rougit ou chauffe souvent", "", "flame"], ["parfois", "Réagit de temps en temps", "", "halfsun"], ["rare", "Réagit rarement", "", "heart"]] },
+    { id: "pt_reac", sec: 1, skipIf: function (a) { return a.pt_lavage === "picote"; }, title: "Quand tu essaies un nouveau produit, ta peau…", sub: "",
+      options: [["souvent", "S'irrite souvent", "Rougeurs, démangeaisons, sensation de chaleur", "flame"], ["parfois", "Réagit de temps en temps", "", "halfsun"], ["rare", "Supporte presque tout", "", "heart"]] },
     { id: "pt_boutons", sec: 1, title: "Les boutons, chez toi…", sub: "Pour savoir si ta peau a tendance à l'acné*.",
       options: [["rare", "C'est rare", "", "heart"], ["parfois", "De temps en temps", "Stress, fatigue, cycle, alimentation…", "halfsun"], ["souvent", "Souvent, plusieurs à la fois", "", "dots"], ["beaucoup", "Beaucoup, parfois douloureux ou sous la peau", "", "flame"]] },
     { id: "pt_apres", sec: 1, title: function (a, app) { return app && app.state.washAt ? "5 minutes après le lavage, ta peau…" : "Quelques minutes après t'être lavé le visage, sans rien mettre, ta peau…"; }, sub: "Regarde-toi à la lumière du jour et touche ton front, ton nez et tes joues du bout des doigts : ça brille ? ça tire ?", timer: true,
@@ -817,6 +832,7 @@
         if (a.pt_soir === "tout" || a.pt_apres === "brille" || seen.indexOf("brillance") > -1) l.push("brillance");
         if (a.pt_lavage === "tire" || a.pt_peaux === "souvent" || seen.indexOf("secheresse") > -1) l.push("secheresse");
         if (a.pt_lavage === "picote" || a.pt_reac === "souvent" || seen.indexOf("rougeurs") > -1) l.push("rougeurs");
+        if ((a.antecedents || []).some(function (x) { return x === "eczema" || x === "psoriasis"; })) l.push("plaques");
         ["taches", "texture"].forEach(function (x) { if (seen.indexOf(x) > -1) l.push(x); });
         return l.slice(0, 5);
       }, title: "Qu'aimerais-tu améliorer ?", sub: "Jusqu'à 5 choix. On adapte tes conseils et tes produits.", multi: true, max: 5, none: "aucune",
@@ -825,7 +841,7 @@
       fields: [["concernsTexte", "Ce qui te gêne", "area", "Ex. : des plaques sèches qui grattent derrière les oreilles depuis l'hiver…"]] },
     { id: "tachesNiveau", sec: 1, title: "Comment décrirais-tu tes taches aujourd'hui ?", sub: "Ton ressenti suffit. Ça nous aide à doser ta routine.", skipIf: function (a) { return !has(a, "concerns", "taches") && !has(a, "concerns", "marques"); },
       options: [["t1", "Légères ou récentes", "Quelques marques après des boutons", "halfsun"], ["t2", "Visibles depuis plusieurs mois", "", "spots"], ["t3", "Marquées, anciennes ou étendues", "", "dots"], ["t4", "Très marquées, ou une tache qui change", "Un avis médical d'abord", "ask"]] },
-    { id: "reactions", sec: 1, skipIf: function (a) { return a.pt_reac === "rare" && !has(a, "antecedents", "allergies"); }, title: "Ta peau a-t-elle déjà mal réagi à…", sub: "Plusieurs choix possibles. Ça nous aide à écarter certains produits.", multi: true, none: "rien",
+    { id: "reactions", sec: 1, skipIf: function (a) { return a.pt_reac === "rare" && !has(a, "antecedents", "allergies"); }, title: "Qu'est-ce qui a déjà irrité ta peau ?", sub: "Plusieurs choix possibles. Ça nous aide à écarter certains produits.", multi: true, none: "rien",
       options: [["reactifHE", "Parfums ou huiles essentielles", "", "flower"], ["acides", "Acides exfoliants", "", "wave"], ["ruche", "Produits de la ruche", "Miel, propolis", "leaf"], ["rien", "Rien de particulier", "", "none"]] },
     { id: "reacCause", sec: 1, title: "D'après toi, cette réaction a pu venir…", sub: "Plusieurs choix possibles. Une réaction n'a pas toujours la cause qu'on croit.", multi: true, none: "nsp",
       skipIf: function (a) { var r = a.reactions || []; return !r.length || r.indexOf("rien") > -1; },
@@ -846,7 +862,7 @@
     { id: "infoProfil", sec: 1, type: "info", kind: "profil" },
 
     { id: "corps", sec: 2, title: "Et la peau de ton corps ?", sub: "",
-      options: [["corpsOk", "Confortable", "", "heart"], ["corpsSec", "Sèche après la douche", "", "dry"], ["corpsTresSec", "Très sèche, rugueuse par endroits", "Coudes, genoux, jambes", "wave"], ["corpsSensible", "Sensible, elle réagit vite", "", "flame"]] },
+      options: [["corpsOk", "Confortable", "", "heart"], ["corpsSec", "Sèche après la douche", "", "dry"], ["corpsTresSec", "Très sèche, rugueuse par endroits", "Coudes, genoux, jambes", "wave"], ["corpsSensible", "Elle gratte ou rougit facilement", "", "flame"]] },
     { id: "corpsEnvies", sec: 2, title: "Pour ton corps, tu aimerais…", sub: "Plusieurs choix possibles.", multi: true, none: "corpsRien",
       options: [["corpsNourrir", "Une peau plus nourrie", "", "drop"], ["corpsMarques", "Un grain plus uniforme", "Marques, petites rugosités", "spots"], ["corpsSenteur", "Des soins qui sentent bon", "", "flower"], ["corpsRien", "Rien de particulier", "", "none"]] },
 
@@ -901,7 +917,7 @@
   };
 
   // Une icône dessinée par réponse (ICONS), le même trait fin dans tout le diagnostic.
-  var EMO = { "lieu.maison": "home", "lieu.voyage": "plane", "lieu.deux": "suitcase", "flexible.oui": "shower", "flexible.non": "no", "eau.douce": "drop", "eau.moyenne": "drops", "eau.calcaire": "stone", "genre.femme": "female", "genre.homme": "male", "genre.autre": "person", "genre.nsp": "ask", "pt_apres.tire": "crack", "pt_apres.tire2": "crack", "pt_apres.tzone": "tzone", "pt_apres.brille": "shine", "pt_apres.ok": "calm", "pt_soir.mat": "crack", "pt_soir.tz": "tzone", "pt_soir.tout": "shine", "pt_soir.var": "shuffle", "pt_pores.peu": "bubble", "pt_pores.nez": "nose", "pt_pores.joues": "search", "pt_peaux.souvent": "flake", "pt_peaux.hiver": "snow", "pt_peaux.rare": "check", "pt_creme.boit": "glass", "pt_creme.ok": "calm", "pt_creme.zones": "balance", "pt_creme.brille": "shine", "pt_deshy.oui": "yes", "pt_deshy.non": "no", "pt_reac.souvent": "flame", "pt_reac.parfois": "cloudsun", "pt_reac.rare": "shield", "spfHabit.tlj": "sun", "spfHabit.ete": "umbrella", "spfHabit.jamais": "eyeoff", "saisons.hiver": "snow", "saisons.ete": "sun", "saisons.change": "leaf", "saisons.stable": "balance", "antecedents.eczema": "patch", "antecedents.rosacee": "blush", "antecedents.psoriasis": "patch", "antecedents.acne": "stetho", "antecedents.traitement": "pill", "antecedents.allergies": "alert", "modeVie.soleil": "sun", "modeVie.sport": "pulse", "modeVie.ville": "city", "modeVie.ecrans": "screen", "modeVie.sommeil": "sleep", "modeVie.maquillage": "lipstick", "modeVie.rasage": "razor", "concerns.secheresse": "crack", "concerns.imperfections": "dot", "concerns.pointsnoirs": "dots", "concerns.brillance": "shine", "concerns.marques": "mark", "concerns.cernes": "eye", "concerns.rougeurs": "blush", "concerns.teint": "haze", "concerns.texture": "grain", "concerns.taches": "spots", "concerns.rides": "hourglass", "concerns.rasage": "razor", "concerns.acne": "dot", "concerns.plaques": "patch", "concerns.autre": "pen", "pourqui.moi": "person", "pourqui.proche": "people", "ageT.a18": "sprout", "ageT.a25": "flower", "ageT.a35": "sun", "ageT.a45": "cloudsun", "ageT.a55": "moon", "situation.enceinte": "pregnant", "situation.menopause": "moon", "situation.hormones": "cycle", "situation.autoimmune": "shield", "produitsDeja.nettoyant": "bubble", "produitsDeja.demaquillant": "cotton", "produitsDeja.tonique": "drop", "produitsDeja.serum": "dropper", "produitsDeja.hydratant": "jar", "produitsDeja.yeux": "eye", "produitsDeja.spf": "sun", "produitsDeja.exfoliant": "grain", "produitsDeja.aucun": "sprout", "pt_lavage.tire": "crack", "pt_lavage.joues": "balance", "pt_lavage.picote": "flame", "pt_lavage.ok": "calm", "pt_boutons.rare": "calm", "pt_boutons.parfois": "cloudsun", "pt_boutons.souvent": "dot", "pt_boutons.beaucoup": "dots", "tachesNiveau.t1": "sprout", "tachesNiveau.t2": "leaf", "tachesNiveau.t3": "tree", "tachesNiveau.t4": "stetho", "reactions.reactifHE": "flower", "reactions.acides": "flask", "reactions.ruche": "hive", "reacCause.fort": "burst", "reacCause.peeling": "grain", "reacCause.medicament": "pill", "reacCause.soleil": "sun", "reacCause.melange": "flask", "valeurs.vegan": "leaf", "grossesse.oui": "pregnant", "grossesse.menopause": "moon", "grossesse.non": "calm", "barbe.rase": "razor", "barbe.courte": "beard", "barbe.longue": "beard", "barbe.non": "calm", "routine.deux": "sunmoon", "routine.matin": "sunrise", "routine.soir": "moon", "routine.aucune": "sprout", "corps.corpsOk": "calm", "corps.corpsSec": "crack", "corps.corpsTresSec": "flake", "corps.corpsSensible": "flame", "corpsEnvies.corpsNourrir": "jar", "corpsEnvies.corpsMarques": "mark", "corpsEnvies.corpsSenteur": "flower", "texture.raides": "straight", "texture.ondules": "wavy", "texture.boucles": "curly", "texture.crepus": "coily", "texDetail2.2A": "wavy", "texDetail2.2B": "wavy", "texDetail2.2C": "curly", "texDetail3.3A": "curly", "texDetail3.3B": "curly", "texDetail3.3C": "coily", "texDetail4.4A": "coily", "texDetail4.4B": "zigzag", "texDetail4.4C": "coily", "porosite.porBasse": "ice", "porosite.porMoy": "balance", "porosite.porHaute": "sponge", "cheveux.secs": "dry", "cheveux.colores": "color", "cheveux.fins": "thin", "cheveux.ok": "check", "cuir.cuirGras": "oil", "cuir.cuirSec": "crack", "cuir.cuirPellicules": "snow", "cuir.cuirSensible": "flame", "cuir.cuirOk": "calm", "cuirSignes.squamesGrasses": "oil", "cuirSignes.plaques": "patch", "cuirSignes.tempes": "recede", "cuirSignes.chute": "fall", "cuirSignes.zones": "ring", "cuirSignes.boutonsCuir": "dot", "cuirDiag.dsDiag": "stetho", "cuirDiag.psoDiag": "stetho", "cuirDiag.tractionDiag": "stetho", "cuirDiag.androDiag": "stetho", "cuirDiag.peladeDiag": "stetho", "coiffures.tresses": "braid", "coiffures.perruques": "hair", "coiffures.defrisage": "flask", "coiffures.chaleur": "flame", "coiffures.queue": "bow", "coiffures.libres": "wind", "lavage.l1": "shower", "lavage.l2": "bubble", "lavage.l3": "cal", "lavage.l4": "cal", "envies.senteur": "flower", "envies.chlore": "pool", "envies.soin": "drop", "envies.soir": "moon", "envies.jet": "shower", "envies.sansparfum": "none", "senteur.hinoki": "tree", "senteur.fleur": "flower", "senteur.patchouli": "leaf", "senteur.fruite": "citrus", "senteur.decouverte": "gift", "senteur.ocean": "wave", "senteur.pin": "tree", "senteur.sans": "bubble", "format.essentielle": "sprout", "format.complete": "flower", "format.equilibree": "leaf" };
+  var EMO = { "lieu.maison": "home", "lieu.voyage": "plane", "lieu.deux": "suitcase", "flexible.oui": "shower", "flexible.non": "no", "eau.douce": "drop", "eau.moyenne": "drops", "eau.calcaire": "stone", "genre.femme": "female", "genre.homme": "male", "genre.autre": "person", "genre.nsp": "ask", "pt_apres.tire": "crack", "pt_apres.tire2": "crack", "pt_apres.tzone": "tzone", "pt_apres.brille": "shine", "pt_apres.ok": "calm", "pt_soir.mat": "cotton", "pt_soir.tz": "tzone", "pt_soir.tout": "drops", "pt_soir.var": "shuffle", "pt_pores.peu": "bubble", "pt_pores.nez": "nose", "pt_pores.joues": "search", "pt_peaux.souvent": "flake", "pt_peaux.hiver": "snow", "pt_peaux.rare": "check", "pt_creme.boit": "glass", "pt_creme.ok": "calm", "pt_creme.zones": "balance", "pt_creme.brille": "shine", "pt_deshy.oui": "yes", "pt_deshy.non": "no", "pt_reac.souvent": "flame", "pt_reac.parfois": "cloudsun", "pt_reac.rare": "shield", "spfHabit.tlj": "sun", "spfHabit.ete": "umbrella", "spfHabit.jamais": "eyeoff", "saisons.hiver": "snow", "saisons.ete": "sun", "saisons.change": "leaf", "saisons.stable": "balance", "antecedents.eczema": "patch", "antecedents.rosacee": "blush", "antecedents.psoriasis": "patch", "antecedents.acne": "stetho", "antecedents.traitement": "pill", "antecedents.allergies": "alert", "modeVie.soleil": "sun", "modeVie.sport": "pulse", "modeVie.ville": "city", "modeVie.ecrans": "screen", "modeVie.sommeil": "sleep", "modeVie.maquillage": "lipstick", "modeVie.rasage": "razor", "concerns.secheresse": "crack", "concerns.imperfections": "dot", "concerns.pointsnoirs": "dots", "concerns.brillance": "shine", "concerns.marques": "mark", "concerns.cernes": "eye", "concerns.rougeurs": "blush", "concerns.teint": "haze", "concerns.texture": "grain", "concerns.taches": "spots", "concerns.rides": "hourglass", "concerns.rasage": "razor", "concerns.acne": "dot", "concerns.plaques": "patch", "concerns.autre": "pen", "pourqui.moi": "person", "pourqui.proche": "people", "ageT.a18": "sprout", "ageT.a25": "flower", "ageT.a35": "sun", "ageT.a45": "cloudsun", "ageT.a55": "moon", "situation.enceinte": "pregnant", "situation.menopause": "moon", "situation.hormones": "cycle", "situation.autoimmune": "shield", "produitsDeja.nettoyant": "bubble", "produitsDeja.demaquillant": "cotton", "produitsDeja.tonique": "drop", "produitsDeja.serum": "dropper", "produitsDeja.hydratant": "jar", "produitsDeja.yeux": "eye", "produitsDeja.spf": "sun", "produitsDeja.exfoliant": "grain", "produitsDeja.aucun": "sprout", "pt_lavage.tire": "crack", "pt_lavage.joues": "balance", "pt_lavage.picote": "flame", "pt_lavage.ok": "calm", "pt_boutons.rare": "calm", "pt_boutons.parfois": "cloudsun", "pt_boutons.souvent": "dot", "pt_boutons.beaucoup": "dots", "tachesNiveau.t1": "sprout", "tachesNiveau.t2": "leaf", "tachesNiveau.t3": "tree", "tachesNiveau.t4": "stetho", "reactions.reactifHE": "flower", "reactions.acides": "flask", "reactions.ruche": "hive", "reacCause.fort": "burst", "reacCause.peeling": "grain", "reacCause.medicament": "pill", "reacCause.soleil": "sun", "reacCause.melange": "flask", "valeurs.vegan": "leaf", "grossesse.oui": "pregnant", "grossesse.menopause": "moon", "grossesse.non": "calm", "barbe.rase": "razor", "barbe.courte": "beard", "barbe.longue": "beard", "barbe.non": "calm", "routine.deux": "sunmoon", "routine.matin": "sunrise", "routine.soir": "moon", "routine.aucune": "sprout", "corps.corpsOk": "calm", "corps.corpsSec": "crack", "corps.corpsTresSec": "flake", "corps.corpsSensible": "flame", "corpsEnvies.corpsNourrir": "jar", "corpsEnvies.corpsMarques": "mark", "corpsEnvies.corpsSenteur": "flower", "texture.raides": "straight", "texture.ondules": "wavy", "texture.boucles": "curly", "texture.crepus": "coily", "texDetail2.2A": "wavy", "texDetail2.2B": "wavy", "texDetail2.2C": "curly", "texDetail3.3A": "curly", "texDetail3.3B": "curly", "texDetail3.3C": "coily", "texDetail4.4A": "coily", "texDetail4.4B": "zigzag", "texDetail4.4C": "coily", "porosite.porBasse": "ice", "porosite.porMoy": "balance", "porosite.porHaute": "sponge", "cheveux.secs": "dry", "cheveux.colores": "color", "cheveux.fins": "thin", "cheveux.ok": "check", "cuir.cuirGras": "oil", "cuir.cuirSec": "crack", "cuir.cuirPellicules": "snow", "cuir.cuirSensible": "flame", "cuir.cuirOk": "calm", "cuirSignes.squamesGrasses": "oil", "cuirSignes.plaques": "patch", "cuirSignes.tempes": "recede", "cuirSignes.chute": "fall", "cuirSignes.zones": "ring", "cuirSignes.boutonsCuir": "dot", "cuirDiag.dsDiag": "stetho", "cuirDiag.psoDiag": "stetho", "cuirDiag.tractionDiag": "stetho", "cuirDiag.androDiag": "stetho", "cuirDiag.peladeDiag": "stetho", "coiffures.tresses": "braid", "coiffures.perruques": "hair", "coiffures.defrisage": "flask", "coiffures.chaleur": "flame", "coiffures.queue": "bow", "coiffures.libres": "wind", "lavage.l1": "shower", "lavage.l2": "bubble", "lavage.l3": "cal", "lavage.l4": "cal", "envies.senteur": "flower", "envies.chlore": "pool", "envies.soin": "drop", "envies.soir": "moon", "envies.jet": "shower", "envies.sansparfum": "none", "senteur.hinoki": "tree", "senteur.fleur": "flower", "senteur.patchouli": "leaf", "senteur.fruite": "citrus", "senteur.decouverte": "gift", "senteur.ocean": "wave", "senteur.pin": "tree", "senteur.sans": "bubble", "format.essentielle": "sprout", "format.complete": "flower", "format.equilibree": "leaf" };
   // Monogrammes (origines, budget) et nuanciers (carnation) à la place des drapeaux et des mains.
   var MONO = { "origines.Corée": "한", "origines.Japon": "日", "origines.Chine": "中", "origines.Afrique": "Af", "origines.toutes": "∞", "budgetSoin.b30": "€", "budgetSoin.b60": "€€", "budgetSoin.b100": "€€€", "budgetSoin.b100p": "€€€€", "budget.petit": "€", "budget.moyen": "€€", "budget.grand": "€€€" };
   var SWATCH = { "carnation.claire": "#f1d6bf", "carnation.mate": "#c99a72", "carnation.foncee": "#8a5a3b", "carnation.tresfoncee": "#4a2f22" };
@@ -1019,7 +1035,7 @@
     dry += { tire: 2, joues: 0.5 }[a.pt_lavage] || 0; tz += a.pt_lavage === "joues" ? 1 : 0;
     say(a.pt_lavage === "tire", "Juste après le lavage, ta peau tire partout.");
     say(a.pt_lavage === "joues", "Après le lavage, seules tes joues tirent.");
-    say(a.pt_lavage === "picote", "Ta peau picote ou chauffe après un simple lavage.");
+    say(a.pt_lavage === "picote", "Ta peau rougit ou devient inconfortable après un simple lavage.");
     // Quelques minutes après
     oil += { tzone: 1, brille: 2 }[a.pt_apres] || 0; dry += { tire: 2, tire2: 1.5 }[a.pt_apres] || 0; tz += a.pt_apres === "tzone" ? 1 : 0;
     say(a.pt_apres === "brille", "Quelques minutes après le lavage, elle brille déjà un peu partout.");
@@ -1027,9 +1043,9 @@
     say(a.pt_apres === "tire" || a.pt_apres === "tire2", "Elle tire encore quelques minutes après le lavage.");
     // Au quotidien
     oil += { tz: 1, tout: 2 }[a.pt_soir] || 0; dry += a.pt_soir === "mat" ? 1 : 0; tz += a.pt_soir === "tz" ? 1 : 0;
-    say(a.pt_soir === "tout", "En fin de journée, tout ton visage brille.");
-    say(a.pt_soir === "tz", "En fin de journée, ton front, ton nez et ton menton brillent.");
-    say(a.pt_soir === "mat", "En fin de journée, ta peau reste mate, voire tiraille.");
+    say(a.pt_soir === "tout", "En fin de journée, ton visage marque le mouchoir jusque sur les joues.");
+    say(a.pt_soir === "tz", "En fin de journée, ton front et ton nez marquent le mouchoir, pas tes joues.");
+    say(a.pt_soir === "mat", "En fin de journée, le mouchoir reste propre : ta peau produit peu de sébum.");
     oil += { nez: 0.5, joues: 1.5 }[a.pt_pores] || 0; tz += a.pt_pores === "nez" ? 1 : 0;
     say(a.pt_pores === "joues", "Tes pores se voient jusque sur les joues.");
     dry += { souvent: 2, hiver: 1 }[a.pt_peaux] || 0;
@@ -1043,7 +1059,7 @@
     say(type === "normale" && (a.pt_apres === "ok" || a.pt_soir !== "tout"), "Elle ne brille pas particulièrement et ne tire pas.");
     var ante = a.antecedents || [];
     var sensible = a.pt_lavage === "picote" || a.pt_reac === "souvent" || a.pt_reac2 === "souvent" || (a.pt_reac === "parfois" && a.pt_reac2 === "parfois") || ante.indexOf("eczema") > -1 || ante.indexOf("rosacee") > -1 || (a.pt_reac === "parfois" && has(a, "saisons", "change"));
-    say(a.pt_reac === "souvent", "Les nouveaux produits la font souvent picoter ou rougir.");
+    say(a.pt_reac === "souvent", "Les nouveaux produits l'irritent souvent.");
     var deshy = a.pt_deshy === "oui" || (oil >= 1.5 && (a.pt_apres === "tire" || a.pt_apres === "tire2" || a.pt_lavage === "tire" || a.pt_peaux === "souvent"));
     say(a.pt_deshy === "oui", "Elle peut briller et tirailler en même temps.");
     var acne = a.pt_boutons === "souvent" || a.pt_boutons === "beaucoup" || has(a, "concerns", "acne") || ante.indexOf("acne") > -1;
@@ -1381,12 +1397,12 @@
     ".mood button span{font-size:28px;color:var(--water);width:46px;height:46px;border-radius:50%;background:var(--sand-soft);display:flex;align-items:center;justify-content:center}",
     ".mood button[aria-pressed=true] span{background:var(--water-soft);outline:2px solid var(--water)}",
     ".reco-card{font:inherit;width:100%;text-align:left;display:flex;flex-direction:column;gap:2px;background:linear-gradient(135deg,var(--water-soft),var(--sand));border:0;border-radius:20px;padding:16px;margin-top:14px;cursor:pointer;color:var(--ink)}",
-    ".reco-card span{font-size:13px;color:var(--muted)}",
+    ".reco-card span{font-size:13px;color:var(--muted)}", ".seg-tabs.cat{flex-wrap:wrap;gap:6px;background:none;padding:0}", ".seg-tabs.cat button{flex:none;background:var(--sand);border-radius:999px;padding:8px 14px}", ".seg-tabs.cat button[aria-pressed=true]{background:var(--water);color:#fff}",
     ".search{width:100%;margin-bottom:14px;border-radius:999px;padding:12px 16px}",
     ".list{display:flex;flex-direction:column;gap:8px}",
     ".prow{font:inherit;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border:0;border-radius:16px;padding:12px 14px;cursor:pointer;color:var(--ink)}",
     ".prow span{display:flex;flex-direction:column;min-width:0}",
-    ".prow small{color:var(--muted);font-size:12px}",
+    ".prow small{color:var(--muted);font-size:12px}", ".prow .fit{flex:none;display:inline-block;white-space:nowrap}",
     ".coll{background:#fff;border-radius:20px;padding:14px;margin-bottom:10px}",
     ".coll p{margin:2px 0 10px;font-size:13px;color:var(--muted)}",
     ".coll .mini{background:var(--sand-soft);border:0}",
@@ -1764,6 +1780,13 @@
   // La routine révélée : Matin · Soir · Hebdo · Douche
   // Choisit le meilleur produit pour une étape : on écarte ce qui est déconseillé, puis on classe
   // par score de compatibilité, réponses correspondantes, origine préférée et ingrédients recherchés.
+  // Petit écart stable (0 à 6 points) propre à chaque profil : deux personnes proches ne reçoivent pas
+  // toujours le même produit quand plusieurs se valent, et une même personne garde sa routine.
+  function seedOf(a, id) {
+    var k = [a.peau, a.texture, a.corps, a.carnation, a.genre, a.ageT, (a.concerns || []).join(), (a.cuir || []).join(), a.cheveux, (a.origines || []).join(), a.prenom || ""].join("|") + "#" + id, h = 2166136261;
+    for (var i = 0; i < k.length; i++) { h ^= k.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return (h >>> 0) % 7;
+  }
   function pickFor(zone, step, a, opts) {
     opts = opts || {};
     var tags = tagsOf(a), origins = a.origines || [];
@@ -1781,11 +1804,18 @@
       var hz = hairTags(a), need = hz.indexOf("cuirPso") > -1 ? "cuirPso" : hz.indexOf("cuirDS") > -1 ? "cuirDS" : null;
       if (zone === "cuir" && step === "shampoing" && need && (p.for || []).indexOf(need) < 0) bad = true;
       if (zone === "cuir" && step !== "shampoing" && !(p.for || []).some(function (x) { return tags.indexOf(x) > -1; })) bad = true;
+      // Sélectif : ce qui répond précisément à TES besoins passe devant ce qui est simplement populaire.
       var deep = a.carnation === "foncee" || a.carnation === "tresfoncee" || a.carnation === "mate";
-      var rev = p.rev || [], revB = (deep && (rev.indexOf("nocast") > -1 || rev.indexOf("fonce") > -1) ? 8 : 0) + (rev.indexOf("afro") > -1 && (a.texture === "crepus" || a.texture === "boucles") ? 8 : 0) + (rev.length ? 2 : 0);
-      var kj = p.origin === "Corée" || p.origin === "Japon" ? 3 : 0;
-      var afroAsia = kj + ((p.founder || ["Corée", "Japon", "Chine", "Mali", "Ghana", "Nigeria", "Maroc", "Sénégal", "Afrique du Sud", "Kenya", "Côte d'Ivoire", "Tchad"].indexOf(p.origin) > -1) ? 4 : 0);
-      return { p: p, bad: bad, score: fitScore(p, a).total + match * 4 + pref * 8 + orig + (p.madeIn ? 2 : 0) + revB + afroAsia };
+      var pf = p.for || [], rev = p.rev || [];
+      var typeSet = zone === "visage" ? ["seche", "mixte", "normale", "sensible"] : zone === "cheveux" ? ["raides", "ondules", "boucles", "crepus"] : zone === "corps" ? ["corpsOk", "corpsSec", "corpsTresSec", "corpsSensible"] : [];
+      var mine = zone === "visage" ? a.peau : zone === "cheveux" ? a.texture : zone === "corps" ? a.corps : null;
+      var listed = pf.filter(function (x) { return typeSet.indexOf(x) > -1; });
+      var spec = (mine && pf.indexOf(mine) > -1 ? 6 : 0) - (mine && listed.length && listed.indexOf(mine) < 0 ? 10 : 0) - (pf.length ? 0 : 4);
+      var needHit = pf.filter(function (x) { return typeSet.indexOf(x) < 0 && tags.indexOf(x) > -1; }).length;
+      var revB = (deep && step === "spf" && (rev.indexOf("nocast") > -1 || rev.indexOf("fonce") > -1) ? 10 : 0) + (rev.indexOf("afro") > -1 && (zone === "cheveux" || zone === "cuir") && (a.texture === "crepus" || a.texture === "boucles") ? 8 : 0);
+      var heritage = (p.origin === "Corée" || p.origin === "Japon" ? 2 : 0) + (p.founder || p.madeIn ? 2 : 0);
+      var brandPen = (opts.brands || []).indexOf(p.brand) > -1 ? 12 : 0;
+      return { p: p, bad: bad, score: fitScore(p, a).total + spec + needHit * 6 + Math.min(pref, 1) * 8 + orig + revB + heritage - brandPen + seedOf(a, p.id) };
     }).filter(function (x) { return !x.bad; }).sort(function (x, y) { return y.score - x.score; });
     return list.length ? list[0].p : null;
   }
@@ -1793,7 +1823,7 @@
   function buildRoutine(a) {
     var r = recommend(a), mode = a.format || "equilibree", used = [];
     var concerns = (a.concerns || []).filter(function (c) { return c !== "aucune"; });
-    var add = function (arr, zone, step, opts) { opts = opts || {}; opts.exclude = used; var p = pickFor(zone, step, a, opts); if (p) { used.push(p.id); arr.push({ step: step, id: p.id }); } };
+    var brands = [], add = function (arr, zone, step, opts) { opts = opts || {}; opts.exclude = used; opts.brands = brands; var p = pickFor(zone, step, a, opts); if (p) { used.push(p.id); brands.push(p.brand); arr.push({ step: step, id: p.id }); } };
     var morningActs = ["vitc", "niacinamide", "tranexamique", "centella", "hyaluronique"], nightActs = ["retinoides", "pdrn", "ceramides", "mucine", "panthenol", "niacinamide", "hyaluronique"];
     // Taches : on dose selon l'intensité. Niveau 1 = unifier ; dès le niveau 2, triangle complet (protéger, unifier, renouveler).
     var tn = concerns.indexOf("taches") > -1 || concerns.indexOf("marques") > -1 ? ({ t1: 1, t2: 2, t3: 3, t4: 2 })[a.tachesNiveau] || 1 : 0;
@@ -1908,24 +1938,30 @@
 
   // Recommandations « pour toi », par besoin, pour nourrir l'accueil et la boutique.
   function forYou(a) {
-    var tags = tagsOf(a), groups = [];
+    var tags = tagsOf(a), groups = [], seen = {};
+    // Chaque carrousel : les mieux notés pour toi, 2 produits au plus par marque, jamais le même produit deux fois.
+    var varied = function (l, n) { var per = {}, out = []; l.map(function (x) { return { p: x.p, s: x.s, k: x.s + seedOf(a, x.p.id) }; }).sort(function (x, y) { return y.k - x.k; }).forEach(function (x) { if (out.length >= n || seen[x.p.id] || (per[x.p.brand] || 0) >= 2) return; per[x.p.brand] = (per[x.p.brand] || 0) + 1; seen[x.p.id] = 1; out.push({ p: x.p, s: x.s }); }); return out; };
     var concerns = (a.concerns || []).filter(function (c) { return c !== "aucune"; });
     concerns.forEach(function (c) {
       var l = allProducts().filter(function (p) { return !p.own && p.zone === "visage" && ((p.for || []).indexOf(c) > -1 || p.act.some(function (x) { return (ACT_GOALS[x] || []).indexOf(c) > -1; })); })
-        .map(function (p) { return { p: p, s: fitScore(p, a).total }; }).filter(function (x) { return x.s >= 50; }).sort(function (x, y) { return y.s - x.s; }).slice(0, 6);
+        .map(function (p) { return { p: p, s: fitScore(p, a).total }; }).filter(function (x) { return x.s >= 50; });
+      l = varied(l, 6);
       if (l.length) groups.push({ title: "Pour " + (TAG_LABEL[c] === "taches" ? "tes taches" : "ton objectif : " + TAG_LABEL[c]), items: l });
     });
-    var hair = allProducts().filter(function (p) { return !p.own && (p.zone === "cheveux" || p.zone === "cuir"); }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).sort(function (x, y) { return y.s - x.s; }).slice(0, 6);
+    var hair = allProducts().filter(function (p) { return !p.own && (p.zone === "cheveux" || p.zone === "cuir"); }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).filter(function (x) { return x.s >= 50; });
+    hair = varied(hair, 6);
     if (hair.length) groups.push({ title: "Pour tes cheveux " + (TAG_LABEL[a.texture] || "").replace("cheveux ", ""), items: hair });
     var tg = tagsOf(a), okHair = function (p) { return !(p.avoid || []).some(function (x) { return tg.indexOf(x) > -1; }) && !(p.needs && !p.needs.some(function (x) { return tg.indexOf(x) > -1; })); };
-    var kjHair = allProducts().filter(function (p) { return !p.own && (p.zone === "cheveux" || p.zone === "cuir") && (p.origin === "Corée" || p.origin === "Japon") && okHair(p); }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).sort(function (x, y) { return y.s - x.s; }).slice(0, 8);
+    var kjHair = allProducts().filter(function (p) { return !p.own && (p.zone === "cheveux" || p.zone === "cuir") && (p.origin === "Corée" || p.origin === "Japon") && okHair(p); }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).filter(function (x) { return x.s >= 50; });
+    kjHair = varied(kjHair, 8);
     if (kjHair.length) groups.push({ title: "K-beauty et J-beauty pour tes cheveux", items: kjHair });
-    if (a.texture === "crepus" || a.texture === "boucles") { var afroHair = allProducts().filter(function (p) { return !p.own && p.zone === "cheveux" && (p.rev || []).indexOf("afro") > -1 && okHair(p); }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).sort(function (x, y) { return y.s - x.s; }).slice(0, 8); if (afroHair.length) groups.push({ title: "Pensé pour les cheveux texturés", items: afroHair }); }
-    var body = allProducts().filter(function (p) { return !p.own && p.zone === "corps"; }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).sort(function (x, y) { return y.s - x.s; }).slice(0, 6);
+    if (a.texture === "crepus" || a.texture === "boucles") { var afroHair = allProducts().filter(function (p) { return !p.own && p.zone === "cheveux" && (p.rev || []).indexOf("afro") > -1 && okHair(p); }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).filter(function (x) { return x.s >= 50; }); afroHair = varied(afroHair, 8); if (afroHair.length) groups.push({ title: "Pensé pour les cheveux texturés", items: afroHair }); }
+    var body = allProducts().filter(function (p) { return !p.own && p.zone === "corps"; }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).filter(function (x) { return x.s >= 50; });
+    body = varied(body, 6);
     if (body.length) groups.push({ title: "Pour ton corps", items: body });
     var shift = ["shiftAroma", "shiftSoin", "shiftCaps", "pureWater"].map(function (k) { var p = byId("s:" + k); return { p: p, s: fitScore(p, a).total }; });
     groups.splice(1, 0, { title: "Ton rituel douche SHIFT", items: shift });
-    var africa = allProducts().filter(function (p) { return p.madeIn; }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).sort(function (x, y) { return y.s - x.s; });
+    var africa = varied(allProducts().filter(function (p) { return p.madeIn; }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }), 8);
     groups.push({ title: "Fabriqué en Afrique, pour toi", items: africa });
     return groups;
   }
@@ -1966,7 +2002,7 @@
     ["shelf", "wish", "scans", "favs"].forEach(function (k) { if (!s[k]) s[k] = []; });
     this.widget = host.getAttribute("data-widget") || "";
     this.view = s.done ? "today" : "diag"; this.step = 0; this.photos = {}; this.zone = null;
-    this.rtab = "matin"; this.ptab = "routines"; this.rsTab = "guides"; this.chat = []; this.busy = false;
+    this.rtab = "matin"; this.ptab = "catalogue"; this.rsTab = "guides"; this.chat = []; this.busy = false;
     this.sheet = null; this.detail = null; this.scan = null; this.skin = null; this.query = "";
     var self = this;
     this.render();
@@ -2372,8 +2408,9 @@
       var res = allProducts().filter(function (p) { return (p.brand + " " + p.name + " " + (p.act || []).map(function (x) { return ING[x] ? ING[x].n : ""; }).join(" ") + " " + (p.origin || "")).toLowerCase().indexOf(q) > -1; });
       return html + "<div class='list'>" + (res.length ? res.map(function (p) { return self.rowProduct(p); }).join("") : "<p class='empty'>Aucun produit trouvé. Essaie de le scanner : on lira sa liste d'ingrédients.</p><button class='btn' data-view='scan'>Scanner un produit</button>") + "</div>";
     }
-    var tabs = [["routines", "Routines"], ["etagere", "Étagère"], ["souhaits", "Souhaits"], ["scans", "Scans"]];
+    var tabs = [["catalogue", "Catalogue"], ["routines", "Routines"], ["etagere", "Étagère"], ["souhaits", "Souhaits"], ["scans", "Scans"]];
     html += "<div class='seg-tabs'>" + tabs.map(function (t) { return "<button data-ptab='" + t[0] + "' aria-pressed='" + (self.ptab === t[0]) + "'>" + t[1] + "</button>"; }).join("") + "</div>";
+    if (this.ptab === "catalogue") return html + this.catalogue();
     if (this.ptab === "routines") html += "<button class='reco-card' data-view='reveal'><b>Ma routine Sunsoari</b><span>Créée " + (s.doneAt ? "le " + new Date(s.doneAt).toLocaleDateString("fr-FR") : "après ton diagnostic") + " · Matin, Soir, Hebdo, Douche</span></button><button class='btn link' data-act='restart'>Refaire mon diagnostic</button>";
     else {
       var ids = this.ptab === "etagere" ? s.shelf : this.ptab === "souhaits" ? s.wish : s.scans.map(function (x) { return x.id; });
@@ -2383,6 +2420,17 @@
     }
     html += "<p class='sect'>Pour toi</p>" + forYou(a).map(function (g) { return self.reccarousel(g); }).join("");
     html += "<p class='sect'>Sélections</p>" + this.collection("Les trésors d'Afrique", "Karité, argan, savon noir : des marques fabriquées sur place.", allProducts().filter(function (p) { return p.madeIn; })) + this.collection("Apaiser à la coréenne", "Centella, heartleaf, céramides : les incontournables des peaux sensibles.", allProducts().filter(function (p) { return (p.act || []).some(function (x) { return ["centella", "heartleaf", "ceramides"].indexOf(x) > -1; }); })) + this.collection("Le rituel douche", "Filtration et capsules de soin, chez Sunsoari.", allProducts().filter(function (p) { return p.own && ["shiftAroma", "shiftSoin", "shiftCaps", "pureWater", "starterHome", "premierHome"].indexOf(p.key) > -1; }));
+    return html;
+  };
+  // Tout le catalogue, sans filtre caché : toutes les marques, classées de la plus adaptée à la moins adaptée pour toi.
+  var CAT_ZONES = [["tout", "Tout"], ["visage", "Visage"], ["corps", "Corps"], ["cheveux", "Cheveux"], ["cuir", "Cuir chevelu"], ["barbe", "Barbe"], ["douche", "Douche"]];
+  A.catalogue = function () {
+    var self = this, a = this.state.answers, z = this.catZone || "tout", n = this.catMore || 40;
+    var list = allProducts().filter(function (p) { return z === "tout" || p.zone === z; }).map(function (p) { return { p: p, s: fitScore(p, a).total }; }).sort(function (x, y) { return y.s - x.s || (x.p.brand > y.p.brand ? 1 : -1); });
+    var html = "<div class='seg-tabs cat'>" + CAT_ZONES.map(function (c) { return "<button data-catzone='" + c[0] + "' aria-pressed='" + (z === c[0]) + "'>" + c[1] + "</button>"; }).join("") + "</div>";
+    html += "<p class='sub'>" + list.length + " produits de toutes les marques, du plus adapté au moins adapté à ton profil. Touche un produit pour voir pourquoi.</p>";
+    html += "<div class='list'>" + list.slice(0, n).map(function (x) { return self.rowProduct(x.p); }).join("") + "</div>";
+    if (list.length > n) html += "<button class='btn ghost' data-act='catmore'>Voir " + Math.min(40, list.length - n) + " produits de plus</button>";
     return html;
   };
   A.reccarousel = function (g) {
@@ -3129,6 +3177,8 @@
     if (d.mode) { s.answers.format = d.mode; this.save(); return this.render(); }
     if (d.rtab) { this.rtab = d.rtab; return this.render(); }
     if (d.ptab) { this.ptab = d.ptab; return this.render(); }
+    if (d.catzone) { this.catZone = d.catzone; this.catMore = 40; return this.render(); }
+    if (d.act === "catmore") { this.catMore = (this.catMore || 40) + 40; return this.render(); }
     if (d.rstab) { this.rsTab = d.rstab; this.guide = null; return this.render(); }
     if (d.story) { if (storyLocked(+d.story) && !this.hasPlus()) { this.view = "plus"; return this.render(); } this.story = { i: +d.story, s: 0 }; return this.render(); }
     if (d.tuto) { this.detail = null; this.story = { tuto: d.tuto, s: 0 }; return this.render(); }
@@ -3263,6 +3313,6 @@
     var hosts = document.querySelectorAll("#sunsoari-rituel, [data-sunsoari-rituel]");
     for (var i = 0; i < hosts.length; i++) if (!hosts[i].__sunsoari) hosts[i].__sunsoari = new App(hosts[i]);
   }
-  window.SunsoariRituel = { init: init, recommend: recommend, routinePlan: routinePlan, fitScore: fitScore, parseInci: parseInci, catalog: P, otherBrands: EXT, ingredients: ING };
+  window.SunsoariRituel = { init: init, recommend: recommend, buildRoutine: buildRoutine, forYou: forYou, routinePlan: routinePlan, fitScore: fitScore, parseInci: parseInci, catalog: P, otherBrands: EXT, ingredients: ING };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();

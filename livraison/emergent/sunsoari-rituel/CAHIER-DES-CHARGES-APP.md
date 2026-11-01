@@ -328,6 +328,17 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 - « Qu'est-ce qui a déjà irrité ta peau ? » remplace « Ta peau a-t-elle déjà mal réagi à… ».
 - « Plaques » est pré-coché dans « Qu'aimerais-tu améliorer ? » quand l'eczéma ou le psoriasis a déjà été coché.
 
+## 5 quatervicies. Bibliothèque de marques élargie (novembre 2026)
+- **108 produits ajoutés au catalogue (`EXT`), 349 en tout.** Le détail, région par région, est dans `BIBLIOTHEQUE-MARQUES.md`.
+  - Asie : Corée, Japon, Chine, Vietnam (V-beauty), Inde, Taïwan, Thaïlande, Indonésie, Malaisie, Singapour, Philippines.
+  - Turquie.
+  - Afrique et diaspora.
+  - Soins avec des données sur peaux foncées : Eucerin Thiamidol, IN'OYA.
+- **Nouveaux choix de marques :** la question « Quelles marques aimerais-tu découvrir ? » propose aussi « V-beauty et reste de l'Asie » et « Marques turques ».
+- **Maquillage :** une nouvelle zone `maquillage`, visible dans le catalogue (filtre Maquillage), mais jamais proposée dans les routines de soin.
+- **Médicaments exclus :** Azelderm, Acnelyse et Madecassol ne sont pas ajoutés. L'app ne recommande jamais de médicament.
+- **Règle :** le profil de peau d'une « gamme » est une orientation. Avant toute mise en avant, il faut choisir une référence précise et vérifier sa liste INCI.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

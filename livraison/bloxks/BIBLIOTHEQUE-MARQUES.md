@@ -294,3 +294,16 @@ Recherche en ligne de novembre 2026. Ces marques sont regroupées dans la sélec
 | Shiseido Synchro Skin | Japon | Fond de teint avec des teintes foncées. | Les plus foncées sont surtout vendues hors du Japon. |
 
 Aucune marque japonaise **créée spécifiquement** pour les peaux noires n'a été trouvée. Côté soin, ce sont surtout les solaires japonais et coréens sans trace blanche (Bioré, Beauty of Joseon, SKIN1004, Isntree, Round Lab) qui conviennent bien.
+
+## Dalglow in Seoul et NINELESS (novembre 2026)
+
+| Marque | Produit | Pour | Ce qu'on sait |
+|---|---|---|---|
+| Dalglow in Seoul | TREMELLACICA Foam Essence | Peau sensible ou déshydratée | Essence en micro-mousse : trémelle, figue, centella, céramides. Marque d'Eclat Seoul Cosmetics, pop-up à Paris en août 2026. |
+| Dalglow in Seoul | TREMELLACICA Comfort Cream | Peau sensible, sèche | Crème barrière à la cica fermentée, à l'allantoïne et au panthénol. |
+| NINELESS | A-Control 10% Azelaic Acid Serum | Imperfections, rougeurs | 9 ingrédients utiles, 9 irritants écartés. |
+| NINELESS | B-Boost 10% Niacinamide Serum | Teint terne, peau mature | Éclat et teint irrégulier. |
+| NINELESS | Mela-Pro Tranexamic Acid Serum | Taches, peau mature | Pour les taches, avec la crème solaire chaque matin. |
+| NINELESS | Hydra Max Deep Infusion Serum | Peau sèche ou mature | Hydratation. |
+
+Je n'ai pas trouvé de gamme NINELESS officiellement « peau mature » : ses sérums ciblent surtout l'éclat, les taches et l'hydratation, des besoins fréquents après 40 ans.

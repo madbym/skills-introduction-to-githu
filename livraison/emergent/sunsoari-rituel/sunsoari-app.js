@@ -167,6 +167,7 @@
     shower: "<path d='M4 20V8a4 4 0 0 1 8 0'/><path d='M9 8h6'/><path d='M10 12v1M12 12v2M14 12v1M11 16v1M13 16v1'/>",
     none: "<circle cx='12' cy='12' r='8'/><path d='M7 17L17 7'/>",
     coin: "<circle cx='12' cy='12' r='8'/><path d='M14.5 9.5a3 3 0 1 0 0 5M8 11h5M8 13h5'/>",
+    play: "<path d='M8 5v14l11-7z'/>",
     stone: "<path d='M5 16c-1-4 2-8 7-8s8 3 7 7-4 4-7 4-6 0-7-3z'/><path d='M9 12c1-1 3-1 4 0'/>",
     suitcase: "<rect x='4' y='8' width='16' height='11' rx='2'/><path d='M9 8V5h6v3M4 13h16'/>",
     female: "<circle cx='12' cy='9' r='5'/><path d='M12 14v7M9 18h6'/>",
@@ -910,6 +911,13 @@
     { id: "kinlo", brand: "KINLÒ", name: "Golden Rays Sunscreen SPF 50", origin: "États-Unis", founder: "Fondée par Naomi Osaka, d'héritage japonais et haïtien", zone: "visage", step: "spf", act: ["spf"], for: ["normale", "mixte"], avoid: [], desc: "Marque de soins solaires pensée pour les peaux mélanisées. Son nom mêle le japonais et le créole haïtien. Elle n'est pas fabriquée au Japon : vérifie la référence et sa disponibilité en Europe." },
     { id: "tirtircushion", brand: "TIRTIR", name: "Mask Fit Red Cushion", origin: "Corée", zone: "maquillage", step: "maquillage", act: [], for: [], avoid: [], desc: "Fond de teint coussin coréen dont la gamme de teintes a été élargie aux peaux foncées. Vérifie la teinte la plus foncée disponible en Europe." },
     { id: "shiseidosynchro", brand: "Shiseido", name: "Synchro Skin Self-Refreshing Foundation", origin: "Japon", zone: "maquillage", step: "maquillage", act: [], for: [], avoid: [], desc: "Fond de teint japonais avec des teintes foncées. Les plus foncées sont souvent vendues seulement hors du Japon." },
+    // Dalglow in Seoul et NINELESS (novembre 2026).
+    { id: "dalglowfoam", brand: "Dalglow in Seoul", name: "TREMELLACICA Foam Essence", origin: "Corée", zone: "visage", step: "tonique", act: ["centella", "ceramides"], for: ["sensible", "secheresse", "rougeurs", "normale", "mixte"], avoid: [], desc: "Essence-tonique en micro-mousse, juste après le nettoyage : champignon trémelle, figue, centella et céramides, pour l'hydratation et le confort. Marque d'Eclat Seoul Cosmetics, présentée à Paris en août 2026." },
+    { id: "dalglowcream", brand: "Dalglow in Seoul", name: "TREMELLACICA Comfort Cream", origin: "Corée", zone: "visage", step: "hydratant", act: ["centella", "panthenol"], for: ["sensible", "rougeurs", "secheresse", "seche"], avoid: [], desc: "Crème barrière à la cica fermentée, à l'allantoïne et au panthénol. Texture légère selon les premiers retours." },
+    { id: "ninelessacontrol", brand: "NINELESS", name: "A-Control 10% Azelaic Acid Serum", origin: "Corée", zone: "visage", step: "serum", act: ["azelaique"], for: ["imperfections", "rougeurs", "marques", "sensible"], avoid: [], desc: "Sérum à 10 % d'acide azélaïque, pour les peaux à imperfections et sensibles. NINELESS : 9 ingrédients utiles, 9 ingrédients irritants écartés (dont silicones, sulfates, parabènes)." },
+    { id: "ninelessbboost", brand: "NINELESS", name: "B-Boost 10% Niacinamide Serum", origin: "Corée", zone: "visage", step: "serum", act: ["niacinamide"], for: ["teint", "taches", "mixte", "rides"], avoid: [], desc: "Sérum à 10 % de niacinamide pour le teint terne et irrégulier, intéressant aussi sur peau mature qui perd en éclat." },
+    { id: "ninelessmela", brand: "NINELESS", name: "Mela-Pro Tranexamic Acid Serum", origin: "Corée", zone: "visage", step: "serum", act: ["tranexamique"], for: ["taches", "marques", "rides"], avoid: [], desc: "Sérum à l'acide tranexamique pour les taches, une préoccupation fréquente des peaux matures. Avec une crème solaire chaque matin." },
+    { id: "ninelesshydra", brand: "NINELESS", name: "Hydra Max Deep Infusion Serum", origin: "Corée", zone: "visage", step: "serum", act: ["hyaluronique"], for: ["secheresse", "seche", "rides"], avoid: [], desc: "Sérum hydratant pour les peaux sèches et matures qui manquent d'eau et de souplesse." },
     // Médicaments : affichés avec indication et contre-indications, jamais placés automatiquement dans une routine.
     { id: "differine", brand: "Galderma", name: "Differine 0,1 % gel (adapalène)", origin: "France", zone: "visage", step: "medicament", act: ["retinoides"], for: ["acne", "imperfections"], avoid: [], med: {"statut": "Sur ordonnance", "ind": "Acné légère à modérée (points noirs, boutons).", "ci": "Grossesse ou projet de grossesse, allaitement, allergie à l'un des composants.", "prec": "Irrite au début : petite quantité le soir, 2 à 3 soirs par semaine. Pas sur peau lésée, eczéma ou coup de soleil. Crème solaire chaque matin."}, desc: "Médicament : Acné légère à modérée (points noirs, boutons)." },
     { id: "epiduo", brand: "Galderma", name: "Epiduo gel (adapalène + peroxyde de benzoyle)", origin: "France", zone: "visage", step: "medicament", act: ["retinoides"], for: ["acne", "imperfections"], avoid: [], med: {"statut": "Sur ordonnance", "ind": "Acné avec boutons inflammatoires.", "ci": "Grossesse ou projet de grossesse, allergie à l'un des composants.", "prec": "Décolore le linge et les cheveux. Irritation fréquente au début. Crème solaire chaque matin."}, desc: "Médicament : Acné avec boutons inflammatoires." },
@@ -1620,7 +1628,7 @@
     ".list{display:flex;flex-direction:column;gap:8px}",
     ".prow{font:inherit;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border:0;border-radius:16px;padding:12px 14px;cursor:pointer;color:var(--ink)}",
     ".prow span{display:flex;flex-direction:column;min-width:0}",
-    ".prow small{color:var(--muted);font-size:12px}", ".prow .fit{flex:none;display:inline-block;white-space:nowrap}", ".fit.medb{background:#f6e7dd;color:#9a4f2c}", ".medbox{background:#fbf1ea;border:1px solid #f0d9c8;border-radius:16px;padding:14px;margin:12px 0}", ".medbox p{margin:6px 0;font-size:14px}", ".medbox small{display:block;color:var(--muted);font-size:12px;margin-top:8px}",
+    ".prow small{color:var(--muted);font-size:12px}", ".prow .fit{flex:none;display:inline-block;white-space:nowrap}", ".fit.medb{background:#f6e7dd;color:#9a4f2c}", ".minecard{flex:none;width:132px;height:176px;border:0;border-radius:18px;background:var(--sand) center/cover;position:relative;display:flex;align-items:flex-end;padding:10px;text-align:left;font:inherit;cursor:pointer;color:var(--ink);overflow:hidden}", ".minecard.ph{color:#fff}", ".minecard.ph::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.55))}", ".minecard b{position:relative;z-index:1;font-size:13px;line-height:1.25}", ".minecard .play{position:absolute;z-index:1;top:10px;left:10px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.9);color:var(--water);display:flex;align-items:center;justify-content:center}", ".minecard .play svg{width:14px;height:14px;fill:currentColor}", ".minecard .draft{position:absolute;z-index:1;top:10px;right:8px;font-size:10px;background:var(--sun);color:#fff;border-radius:999px;padding:2px 7px}", ".minevid{width:100%;max-height:62vh;border-radius:16px;background:#000;margin:10px 0;object-fit:contain}", ".adminbox{border:1px dashed var(--sun)}", ".adminbox .btn{margin:4px 6px 4px 0}", ".medbox{background:#fbf1ea;border:1px solid #f0d9c8;border-radius:16px;padding:14px;margin:12px 0}", ".medbox p{margin:6px 0;font-size:14px}", ".medbox small{display:block;color:var(--muted);font-size:12px;margin-top:8px}",
     ".coll{background:#fff;border-radius:20px;padding:14px;margin-bottom:10px}",
     ".coll p{margin:2px 0 10px;font-size:13px;color:var(--muted)}",
     ".coll .mini{background:var(--sand-soft);border:0}",
@@ -2099,6 +2107,7 @@
   // Repères de réputation (publics, pas des avis vérifiés Sunsoari).
   var REV_LABEL = { kr: "Best-seller en Corée", jp: "Classique au Japon", cn: "Marque phare en Chine", eu: "Référence en pharmacie", fonce: "Marque pensée pour les peaux noires et métissées", nocast: "Sans trace blanche sur peau foncée", afro: "Pensé pour les cheveux bouclés à crépus" };
   var REV_BY_ID = {
+    dalglowfoam: ["kr"], dalglowcream: ["kr"], ninelessacontrol: ["kr"], ninelessbboost: ["kr"], ninelessmela: ["kr"], ninelesshydra: ["kr"],
     kbrown: ["kr", "fonce"], wolglow: ["kr", "fonce"], gymsegbe: ["kr", "fonce"], kinlo: ["fonce", "nocast"], tirtircushion: ["kr"], shiseidosynchro: ["jp"],
     biodancecollagen: ["kr"], medicubenight: ["kr"], anuafoam: ["kr"], anuarice: ["kr"], anuaazelaic: ["kr"], torridencream: ["kr"], torridensun: ["kr", "nocast"], torridenmask: ["kr"], skin1004oil: ["kr"], skin1004toner: ["kr"], skin1004pore: ["kr"], skin1004cream: ["kr"], cosrx92: ["kr"], cosrxpatch: ["kr"], cosrxpropolis: ["kr"], cosrxretinol: ["kr"], bojrevive: ["kr"], bojcalming: ["kr"], bojwater: ["kr"], bojbalm: ["kr"], abibsun: ["kr", "nocast"], abibjericho: ["kr"], numbuzin5: ["kr"], manyooil: ["kr"], drjartceramidin: ["kr"], innisfreeretinol: ["kr"], kombucha: ["kr"], bentonsnail: ["kr"], klairsmidnight: ["kr"], medihealtea: ["kr"], laneigelip: ["kr"], romand: ["kr"], clio: ["kr"], amosgreentea: ["kr"], skinaqua: ["jp", "nocast"], ultimune: ["jp"], suisai: ["jp"], hatomugi: ["jp"], shuuemura: ["jp"], mujitoner: ["jp"], cicaplast: ["eu"], effaclargel: ["eu"], hyalub5: ["eu"], lrpvitc: ["eu"], lrpretinol: ["eu"], lipikarsyndet: ["eu"], cleanance: ["eu"], xeracalm: ["eu"], sebiumgel: ["eu"], atodermhuile: ["eu"], ceravecream: ["eu"], cerevevisage: ["eu"], ceraveretinol: ["eu"], embryolisse: ["eu"], bariederm: ["eu"], sebiaclear: ["eu"], vinoperfect: ["eu"], supergoop: ["nocast"], unsun: ["nocast", "fonce"], topicrem: ["eu"], smjbco: ["afro"], ecostyler: ["afro"],
     roundlabtoner: ["kr"], drgred: ["kr"], medihealpad: ["kr"], isntreegreen: ["kr"], isntreeha: ["kr"], snature: ["kr"], althea: ["kr"], laboh: ["kr"], bojwatergel: ["kr"], cosrxbha: ["kr"], puritooat: ["kr"], haruharuess: ["kr"], isoi: ["kr"], biodance: ["kr"], eqqualberry: ["kr"], marymay: ["kr"], tirtir: ["kr"], drgroot: ["kr"], curelsebum: ["jp"], hadalabopremium: ["jp"], ihada: ["jp"], fancl: ["jp"], attenir: ["jp"], decorte: ["jp"], skii: ["jp"], fas: ["jp"], theanswer: ["jp"], dryu: ["cn"], hbn: ["cn"], biohyalux: ["cn"], quadha: ["cn"], medrepair: ["cn"], hapsode: ["cn"], chandobha: ["cn"], forestcabin: ["cn"], kans: ["cn"], biorrier: ["cn"], spes: ["cn"], spesshampoo: ["cn"], kono: ["cn"], dralva: ["cn"], comfy: ["cn"], guyu: ["cn"], pechoin: ["cn"], inoya: ["fonce"], uncover: ["fonce"], epara: ["fonce"], sukisuki: ["afro"], cmensah: ["afro"], ayaa: ["afro"],
@@ -2224,6 +2233,7 @@
     ["answers", "refills", "journal", "checks", "steps"].forEach(function (k) { if (!s[k]) s[k] = {}; });
     ["shelf", "wish", "scans", "favs"].forEach(function (k) { if (!s[k]) s[k] = []; });
     this.widget = host.getAttribute("data-widget") || "";
+    this.admin = host.hasAttribute("data-admin"); this.adminUrl = host.getAttribute("data-admin-url") || "";
     this.view = s.done ? "today" : "diag"; this.step = 0; this.photos = {}; this.zone = null;
     this.rtab = "matin"; this.ptab = "catalogue"; this.rsTab = "guides"; this.chat = []; this.busy = false;
     this.sheet = null; this.detail = null; this.scan = null; this.skin = null; this.query = "";
@@ -2253,6 +2263,7 @@
       html += this.nav();
     }
     if (this.detail) html += this.vDetail(this.detail);
+    if (this.mineId) html += this.vMine(this.mineId);
     if (this.story) html += this.vStory();
     if (this.sheet && ING[this.sheet]) html += this.vSheet(this.sheet);
     if (this.cam) html += "<div class='camview' role='dialog' aria-label='Scanner un code'><video id='camvideo' playsinline muted autoplay></video><div class='camframe'></div><p>" + esc(this.cam.msg) + "</p><div class='camacts'><label class='btn ghost' for='codephoto2'>Prendre une photo du code</label><input id='codephoto2' type='file' accept='image/*' capture='environment' data-codephoto='1' hidden><button class='btn' data-act='camstop'>Fermer</button></div></div>";
@@ -2491,6 +2502,8 @@
     if (p.own && P[p.key].colors) html += "<p class='alt-t'>Choisis ton coloris</p><div class='chipset'>" + P[p.key].colors.map(function (c) { return "<a class='chip' href='" + self.shop + "/cart/" + c[1] + ":1?utm_source=mon-rituel&utm_medium=app' target='_top' data-add='" + p.id + "'>" + c[0] + "</a>"; }).join("") + "</div>";
     if (p.own && P[p.key].scents) html += "<p class='alt-t'>Choisis ta senteur</p><div class='chipset'>" + P[p.key].scents.map(function (c) { return "<a class='chip' href='" + self.shop + "/cart/" + P[p.key].variants[c[0]] + ":1?utm_source=mon-rituel&utm_medium=app' target='_top' data-add='" + p.id + "' aria-pressed='" + (c[0] === scent) + "'>" + c[1] + "</a>"; }).join("") + "</div>";
     html += "<div class='acts'>" + (p.own ? "<a class='btn' href='" + this.cartUrl(p.key, scent) + "' target='_top' data-add='" + p.id + "'>Ajouter au panier · " + euro(p.price) + "</a>" : "<a class='btn' href='" + esc(this.extUrl(p)) + "' target='_blank' rel='noopener' data-ext='" + p.id + "'>Où l'acheter ↗</a>") + "<button class='btn ghost' data-detail='" + p.id + "'>Détails</button></div>";
+    var mv = this.mineFor("step", step) + this.mineFor("product", p.id.replace(/^[es]:/, ""));
+    if (mv) html += "<div class='acts minefor'>" + mv + "</div>";
     if (alts.length) html += "<p class='alt-t'>Autres options pour toi</p><div class='carousel'>" + alts.map(function (x) { return "<button class='mini' data-detail='" + x.p.id + "'><b>" + esc(x.p.name) + "</b><small>" + esc(x.p.brand) + " · " + esc(x.p.origin || "") + "</small>" + (x.p.med ? "<span class='fit medb'>Avis médical</span>" : "<span class='fit " + bandClass(x.s) + "'>" + x.s + " % adapté</span>") + "</button>"; }).join("") + "</div>";
     return html + "</article>";
   };
@@ -2521,6 +2534,7 @@
     var s = this.state, a = s.answers, today = iso(), self = this, R = buildRoutine(a);
     var html = "<div class='todayhead'><h3>Aujourd'hui</h3><span class='hacts'><button class='pluspill' data-view='plus'>Sunsoari+</button><button class='acctbtn' data-view='compte' aria-label='Mon compte et mes favoris'>" + icon("heart") + "</button></span></div>";
     html += "<figure class='amb low'><img src='" + photo(AMB.today) + "' alt='' loading='lazy'><figcaption><small>Ton moment à toi</small><b>" + esc(this.goalLabel()) + "</b></figcaption></figure>";
+    html += this.adminBox() + this.mineStrip("accueil", "Nouveau chez Sunsoari");
     if (s.done) html += this.meteoCard();
     if (s.done) html += "<button class='reco-card esp' data-view='espace'><b>Mon espace soin" + (a.prenom ? " · " + esc(a.prenom) : "") + "</b><span>Routine à cocher, planner, évolution, semaine, solaire, produits, diagnostic</span></button>";
     html += "<div class='week'>";
@@ -3244,8 +3258,45 @@
     STORIES.forEach(function (st, i) { items.push({ id: "story:" + i, type: "article", title: st.title, sub: st.rub, open: "data-story='" + i + "'", img: st.img ? photo(st.img) : "" }); });
     Object.keys(TUTOS).forEach(function (k) { items.push({ id: "tuto:" + k, type: "video", title: TUTOS[k].title, sub: "Tutoriel", open: "data-tuto='" + k + "'" }); });
     GUIDES.forEach(function (g, i) { items.push({ id: "guide:" + i, type: "article", title: g.title, sub: g.tag, open: "data-guide='" + i + "'" }); });
-    (window.SUNSOARI_CONTENT || []).forEach(function (c) { if (c && c.id && c.url) items.push({ id: "ext:" + c.id, type: c.type || "post", title: c.title || "", sub: c.src || "", url: c.url, img: c.img || "" }); });
+    this.mine().forEach(function (c) { if (!c.draft) items.push({ id: "ext:" + c.id, type: c.type === "video" ? "video" : c.type === "article" ? "article" : "post", title: c.title, sub: "Sunsoari", open: "data-mine='" + esc(c.id) + "'", img: c.poster || "" }); });
     return items;
+  };
+  // ---------- Mes contenus (vidéos et photos de Sunsoari, gérés dans Shopify) ----------
+  // window.SUNSOARI_CONTENT = [{ id, type: "video"|"photo"|"post"|"article", title, file, poster, url, place: ["accueil","academie"], step, product, draft }]
+  // file : vidéo ou photo déposée dans Shopify (Contenu > Fichiers). url : lien TikTok, Instagram, YouTube…
+  A.mine = function () {
+    var admin = this.admin;
+    return (window.SUNSOARI_CONTENT || []).filter(function (c) { return c && c.id && (c.file || c.url) && (!c.draft || admin); }).map(function (c) {
+      var pl = c.place || ["academie"]; if (typeof pl === "string") pl = pl.split(/[,;]\s*/);
+      return { id: String(c.id), type: c.type || (/\.(mp4|mov|webm)(\?|$)/i.test(c.file || "") ? "video" : c.file ? "photo" : "post"), title: c.title || "", file: c.file || "", poster: c.poster || (c.type === "photo" ? c.file : ""), url: c.url || "", place: pl, step: c.step || "", product: c.product || "", draft: !!c.draft };
+    });
+  };
+  A.mineCard = function (c) {
+    var bg = c.poster ? " style=\"background-image:url('" + esc(c.poster) + "')\"" : "";
+    return "<button class='minecard" + (c.poster ? " ph" : "") + "' data-mine='" + esc(c.id) + "'" + bg + ">" + (c.type === "video" ? "<span class='play'>" + icon("play") + "</span>" : "") + (c.draft ? "<span class='draft'>Brouillon</span>" : "") + "<b>" + esc(c.title) + "</b></button>";
+  };
+  A.mineStrip = function (place, title) {
+    var l = this.mine().filter(function (c) { return c.place.indexOf(place) > -1; }), self = this;
+    if (!l.length) return "";
+    return "<p class='sect left'>" + esc(title) + "</p><div class='carousel mine'>" + l.map(function (c) { return self.mineCard(c); }).join("") + "</div>";
+  };
+  A.mineFor = function (key, val) {
+    return this.mine().filter(function (c) { return c[key] && c[key] === val; }).map(function (c) { return "<button class='btn ghost' data-mine='" + esc(c.id) + "'>" + ic(c.type === "video" ? "play" : "spark") + " " + esc(c.title || "Voir") + "</button>"; }).join("");
+  };
+  A.vMine = function (id) {
+    var c = this.mine().filter(function (x) { return x.id === id; })[0];
+    if (!c) return "";
+    var media = c.type === "video" && c.file ? "<video class='minevid' src='" + esc(c.file) + "'" + (c.poster ? " poster='" + esc(c.poster) + "'" : "") + " controls playsinline preload='metadata'></video>" : c.file ? "<img class='minevid' src='" + esc(c.file) + "' alt='" + esc(c.title) + "'>" : "";
+    return "<div class='sheetbg' data-act='closemine'></div><div class='sheet' role='dialog' aria-label='" + esc(c.title) + "'><button class='x' data-act='closemine' aria-label='Fermer'>×</button><span class='tag'>Sunsoari" + (c.draft ? " · brouillon, visible par toi seule" : "") + "</span><h3>" + esc(c.title) + "</h3>" + media + (c.url ? "<a class='btn' href='" + esc(c.url) + "' target='_blank' rel='noopener'>Voir sur " + esc(/tiktok/.test(c.url) ? "TikTok" : /instagram/.test(c.url) ? "Instagram" : /youtu/.test(c.url) ? "YouTube" : /pinterest/.test(c.url) ? "Pinterest" : "le site") + " ↗</a>" : "") + "<div class='acts'>" + this.favBtn("ext:" + c.id) + "</div></div>";
+  };
+  // Espace créatrice : visible seulement quand Fanta est connectée avec l'étiquette Shopify « sunsoari-admin ».
+  A.adminBox = function () {
+    if (!this.admin) return "";
+    var l = this.mine(), pub = l.filter(function (c) { return !c.draft; }).length, dr = l.length - pub, u = this.adminUrl;
+    return "<div class='whybox adminbox'><b>" + ic("spark") + " Mon espace créatrice</b><p>" + pub + " contenu" + (pub > 1 ? "s" : "") + " en ligne" + (dr ? " · " + dr + " brouillon" + (dr > 1 ? "s" : "") + " (visibles par toi seule)" : "") + ".</p>" +
+      (u ? "<a class='btn' href='" + esc(u) + "/content/metaobjects/entries/sunsoari_contenu/new' target='_blank' rel='noopener'>Ajouter une vidéo ou une photo</a><a class='btn ghost' href='" + esc(u) + "/content/metaobjects/entries/sunsoari_contenu' target='_blank' rel='noopener'>Gérer mes contenus</a><a class='btn link' href='" + esc(u) + "/content/files' target='_blank' rel='noopener'>Mes fichiers Shopify</a>" : "") +
+      "<ol class='tipl'><li>Dans Shopify, ajoute un « Contenu Sunsoari » : un titre, ta vidéo ou ta photo, ou un lien TikTok ou Instagram.</li><li>Choisis où il apparaît : accueil, Académie, une étape de routine ou un produit.</li><li>Laisse « Publié » décoché pour un brouillon : tu le vois ici, les clientes non.</li></ol>" +
+      (l.length ? "<div class='carousel mine'>" + l.map(this.mineCard).join("") + "</div>" : "") + "</div>";
   };
   A.favBtn = function (id) { var on = this.state.favs.indexOf(id) > -1; return "<button class='favbtn' data-fav='" + esc(id) + "' aria-pressed='" + on + "' aria-label='" + (on ? "Retirer de mes favoris" : "Ajouter à mes favoris") + "'>" + icon("heart") + "</button>"; };
   A.contentRow = function (c) {
@@ -3255,7 +3306,7 @@
   // ---------- Mon compte ----------
   A.vCompte = function () {
     var s = this.state, self = this, name = this.host.getAttribute("data-customer-name"), a = s.answers;
-    var html = this.widget ? "" : "<div class='todayhead'><h3>Mon compte</h3></div>";
+    var html = this.widget ? "" : "<div class='todayhead'><h3>Mon compte</h3></div>" + this.adminBox();
     if (!this.widget) {
       if (name) html += "<div class='acct'><b>Bonjour " + esc(name) + "</b><p>Ton diagnostic, ta routine et tes favoris sont liés à ton compte Sunsoari.</p><div class='acts'><a class='btn ghost' href='" + esc(this.shop) + "/account' target='_top'>Mes commandes</a><a class='btn link' href='" + esc(this.shop) + "/account/logout' target='_top'>Me déconnecter</a></div></div>";
       else html += "<div class='acct'><b>Connecte-toi</b><p>Pour retrouver ton diagnostic, ta routine, ton suivi et tes favoris sur ton téléphone et ton ordinateur.</p><div class='acts'><a class='btn' href='" + esc(this.host.getAttribute("data-login-url") || this.shop + "/account/login") + "' target='_top'>Me connecter</a><a class='btn ghost' href='" + esc(this.host.getAttribute("data-register-url") || this.shop + "/account/register") + "' target='_top'>Créer mon compte</a></div><small>Sans compte, tout reste enregistré sur cet appareil.</small></div>";
@@ -3286,6 +3337,7 @@
     if (this.rsTab === "ingredients") return html + this.vIngredients();
     if (this.rsTab === "tendances") return html + this.vTrends();
     if (this.guide) return html + this.vGuide();
+    html += this.mineStrip("academie", "Tutos et coulisses Sunsoari");
     html += "<button class='reco-card' data-rstab='lexique'><b>" + ic("book") + " Le lexique</b><span>" + Object.keys(GLOSSAIRE).length + " mots expliqués simplement : douche, peau, routine, soleil, cheveux</span></button>";
     ["Sunsoari", "Mythe ou vérité", "Académie"].forEach(function (rub) {
       html += "<p class='sect left'>" + esc(rub) + "</p><div class='carousel stories'>" + STORIES.map(function (st, i) { return st.rub === rub ? "<button class='storycard " + st.tone + (st.img ? " ph" : "") + "' data-story='" + i + "'" + (st.img ? " style=\"background-image:linear-gradient(180deg,rgba(251,248,243,0) 35%,rgba(251,248,243,.92) 78%),url('" + photo(st.img) + "')\"" : "") + "><span class='tag'>" + (rub === "Mythe ou vérité" ? "Mythe ou vérité" : rub === "Académie" ? "Académie" : "Sunsoari") + " · " + st.slides.length + " écrans" + (storyLocked(i) && !self.hasPlus() ? " · " + ic("lock") + " Sunsoari+" : "") + "</span><b>" + esc(st.title) + "</b></button>" : ""; }).join("") + "</div>";
@@ -3377,6 +3429,8 @@
     if ((p.rev || []).length) html += "<p class='revnote'>" + p.rev.map(function (r) { return "<span class='made rev'>" + esc(REV_LABEL[r]) + "</span>"; }).join("") + "<small>Repère de réputation publique, pas un avis vérifié Sunsoari. Les avis de nos clientes, par type de peau et carnation, arrivent bientôt.</small></p>";
     if (p.step && STEP_FREQ[p.step]) html += "<p class='care'><b>Comment l'utiliser :</b> " + esc(STEP_FREQ[p.step]) + "</p>";
     var tk = TUTOS[p.step] ? p.step : p.step === "douche" ? "douche" : p.step === "nettoyant" ? "demaquillant" : null;
+    var mv2 = this.mineFor("product", p.id.replace(/^[es]:/, ""));
+    if (mv2) html += "<div class='acts minefor'>" + mv2 + "</div>";
     if (tk) html += "<button class='btn ghost' data-tuto='" + tk + "'>▶ Tutoriel : " + esc(TUTOS[tk].title) + "</button>";
     html += "<div class='acts'>" + (p.own ? "<a class='btn' href='" + this.cartUrl(p.key, R.scent) + "' target='_top' data-add='" + p.id + "'>Ajouter au panier · " + euro(p.price) + "</a>" : p.id.indexOf("x:") ? "<a class='btn' href='" + esc(this.extUrl(p)) + "' target='_blank' rel='noopener' data-ext='" + p.id + "'>Où l'acheter ↗</a>" : "") + "<button class='btn ghost' data-shelf='" + p.id + "'>" + (this.state.shelf.indexOf(p.id) > -1 ? "Sur mon étagère ✓" : "Ajouter à mon étagère") + "</button><button class='btn ghost' data-wish='" + p.id + "'>" + (this.state.wish.indexOf(p.id) > -1 ? ic("heart") + " Dans mes souhaits" : ic("heart") + " Souhaits") + "</button></div>";
     html += "<div class='qchips'>" + this.questionsFor(p).map(function (q) { return "<button class='qchip' data-ask='" + esc(q) + "' data-pid='" + p.id + "'>" + esc(q) + "</button>"; }).join("") + "</div>";
@@ -3395,6 +3449,8 @@
     var d = t.dataset, s = this.state, self = this;
     if (d.act === "closesheet") { this.sheet = null; return this.render(); }
     if (d.act === "closedetail") { this.detail = null; return this.render(); }
+    if (d.act === "closemine") { this.mineId = null; return this.render(); }
+    if (d.mine) { this.mineId = d.mine; return this.render(); }
     if (d.ask) { this.sheet = null; return this.ask(d.ask, d.pid || (d.scanctx ? (this.scan && this.scan.result && this.scan.result.id) : null)); }
     if (d.ing) { this.sheet = d.ing; return this.render(); }
     if (d.detail) { this.detail = d.detail; return this.render(); }

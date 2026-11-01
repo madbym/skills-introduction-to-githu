@@ -14,6 +14,54 @@
   la synchronisation entre appareils est décrite dans le cahier des charges.
 {% endcomment %}
 
+{%- liquid
+  assign is_admin = false
+  if customer and customer.tags contains 'sunsoari-admin'
+    assign is_admin = true
+  endif
+  assign store_handle = shop.permanent_domain | remove: '.myshopify.com'
+-%}
+
+{%- comment -%}
+  Les vidéos et photos de Fanta : métaobjets « Contenu Sunsoari » (type sunsoari_contenu),
+  créés dans Shopify > Contenu > Métaobjets. Les brouillons (« Publié » décoché) ne sont
+  envoyés qu'à la fondatrice connectée (étiquette client « sunsoari-admin »).
+{%- endcomment -%}
+<script>
+  window.SUNSOARI_CONTENT = [
+  {%- for c in shop.metaobjects.sunsoari_contenu.values -%}
+    {%- assign pub = c.publie.value -%}
+    {%- if pub == true or is_admin -%}
+      {%- assign f = c.fichier.value -%}
+      {%- assign furl = nil -%}
+      {%- assign fposter = nil -%}
+      {%- if f.media_type == 'video' -%}
+        {%- for src in f.sources -%}{%- if src.mime_type == 'video/mp4' -%}{%- assign furl = src.url -%}{%- break -%}{%- endif -%}{%- endfor -%}
+        {%- assign fposter = f.preview_image | image_url: width: 600 -%}
+      {%- elsif f.media_type == 'image' -%}
+        {%- assign furl = f | image_url: width: 1400 -%}
+        {%- assign fposter = f | image_url: width: 600 -%}
+      {%- elsif f -%}
+        {%- assign furl = f.url -%}
+      {%- endif -%}
+      {%- if c.vignette.value -%}{%- assign fposter = c.vignette.value | image_url: width: 600 -%}{%- endif -%}
+      {
+        "id": {{ c.system.handle | json }},
+        "type": {{ c.type.value | default: '' | json }},
+        "title": {{ c.titre.value | json }},
+        "file": {{ furl | json }},
+        "poster": {{ fposter | json }},
+        "url": {{ c.lien.value | json }},
+        "place": {{ c.emplacement.value | json }},
+        "step": {{ c.etape.value | json }},
+        "product": {{ c.produit.value | json }},
+        "draft": {% if pub == true %}false{% else %}true{% endif %}
+      }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+  ];
+</script>
+
 <div class="page-width" style="padding-block: {{ section.settings.padding }}px;">
   {%- if section.settings.heading != blank -%}
     <h2 class="h2" style="text-align:center;margin-bottom:24px;">{{ section.settings.heading }}</h2>
@@ -30,6 +78,7 @@
     {%- if section.settings.email_endpoint != blank %} data-email-endpoint="{{ section.settings.email_endpoint }}"{% endif %}
     {%- if customer %} data-customer-name="{{ customer.first_name | escape }}"{% endif %}
     {%- if customer and customer.tags contains 'sunsoari-plus' %} data-plus{% endif %}
+    {%- if is_admin %} data-admin data-admin-url="https://admin.shopify.com/store/{{ store_handle }}"{% endif %}
     data-login-url="{{ routes.account_login_url }}"
     data-register-url="{{ routes.account_register_url }}"></div>
 </div>

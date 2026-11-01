@@ -350,6 +350,17 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
   - l'assistante IA ne les prescrit jamais : elle donne l'indication et les contre-indications, puis renvoie vers un professionnel ;
   - **les fiches doivent être relues par un pharmacien avant la mise en ligne.**
 
+## 5 sexvicies. Espace créatrice : les vidéos et photos de Fanta
+- **Source :** les contenus viennent des métaobjets Shopify `sunsoari_contenu` (titre, type, fichier, vignette, lien, emplacement, étape, produit, publié). La section Liquid les transmet à l'app sous la forme `window.SUNSOARI_CONTENT`. Le mode d'emploi est dans `AJOUTER-MES-VIDEOS.md`.
+- **Où les contenus apparaissent :**
+  - accueil : « Nouveau chez Sunsoari » ;
+  - Ressources : « Tutos et coulisses Sunsoari » ;
+  - sous une étape de routine (`etape`) et sur une fiche produit (`produit`) ;
+  - dans les favoris des clientes.
+- **Lecture :** les vidéos se lisent dans l'app (`A.vMine`). Les liens TikTok, Instagram et YouTube ouvrent la plateforme.
+- **Espace privé :** l'étiquette client `sunsoari-admin` ajoute `data-admin` et `data-admin-url` à la balise. L'encadré « Mon espace créatrice » (`A.adminBox`) donne le nombre de contenus en ligne et de brouillons, et des liens directs vers l'admin Shopify. Les brouillons ne sont envoyés par le serveur qu'à la fondatrice connectée.
+- **Pour Emergent et Bloxks :** garder la même structure de contenu. Le serveur peut lire les mêmes métaobjets avec l'API Storefront.
+
 ## 5 ter. Mobile et web
 Une seule application, responsive : site web (ordinateur et mobile) + application installable sur l'écran d'accueil (PWA : manifeste, icônes, mode plein écran). Plus tard, si besoin, versions App Store et Google Play (attention : Apple prélève une commission sur les abonnements vendus dans l'application).
 

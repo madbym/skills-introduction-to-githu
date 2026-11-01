@@ -15,7 +15,7 @@ Tu vas construire « Mon Rituel · Sunsoari », l'application beauté de la bout
 3. `sunsoari-app.js` : le prototype complet et validé (environ 2 800 lignes).
 
 **Règle principale :** le prototype est la référence. Reprends **exactement** ses données, ses textes et sa logique :
-- **données** : catalogue Sunsoari `P` avec les identifiants de variantes Shopify, plus de 220 produits d'autres marques `EXT`, ingrédients `ING`, questions `QUESTIONS` avec leurs `skipIf`, émojis `EMO` ;
+- **données** : catalogue Sunsoari `P` avec les identifiants de variantes Shopify, plus de 220 produits d'autres marques `EXT`, ingrédients `ING`, questions `QUESTIONS` avec leurs `skipIf`, icônes `ICONS` et `EMO` (aucun émoji : ne remets pas d'émojis) ;
 - **moteur** : `skinProfile`, `tagsOf`, `hairTags`, `fitScore`, `pickFor`, `buildRoutine`, `introPlan`, `eveningCalendar`, `insights`, `scalpGuide`, `forYou`, `hairOptions` ;
 - **guides** : `TEXTURES`, `POROSITY`, `SUPP`.
 

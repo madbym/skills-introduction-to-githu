@@ -5,7 +5,7 @@
 |---|---|
 | `PROMPT-BLOXKS.md` | Les 3 messages à envoyer à Bloxks, un par un |
 | `CAHIER-DES-CHARGES-APP.md` | Le cahier des charges complet |
-| `sunsoari-app.js` | La référence : questions (`QUESTIONS`), émojis (`EMO`), explications des réponses (`OPT_DEF`), lexique (`GLOSSAIRE`), test de peau (`skinProfile`), moteur de recommandation (`buildRoutine`, `pickFor`, `fitScore`, `insights`, `scalpGuide`, `hairOptions`), catalogue de plus de 220 produits (`P`, `EXT`), abonnement (`PLANS`, `PLUS_TABS`) |
+| `sunsoari-app.js` | La référence : questions (`QUESTIONS`), icônes au trait (`ICONS`, `EMO`, `SWATCH`, `MONO`), explications des réponses (`OPT_DEF`), lexique (`GLOSSAIRE`), test de peau (`skinProfile`), moteur de recommandation (`buildRoutine`, `pickFor`, `fitScore`, `insights`, `scalpGuide`, `hairOptions`), catalogue de plus de 220 produits (`P`, `EXT`), abonnement (`PLANS`, `PLUS_TABS`) |
 | `demo.html` | La version web à ouvrir dans un navigateur, pour voir le parcours en vrai |
 | `img/` | 16 photos d'ambiance Sunsoari |
 | `app/` | Logo et icônes de l'application |

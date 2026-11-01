@@ -34,11 +34,11 @@ Crée une application mobile iOS et Android, en français, avec tutoiement, appe
 - un écran « Avant de commencer » avec deux chemins : « L'essentiel » en 5 minutes (environ 31 écrans) ou « Le diagnostic complet » en 15 minutes (environ 51 écrans) ; la liste des questions réservées au complet est `FULL_ONLY` ;
 - une question par écran, 45 à 50 écrans selon les réponses ; les questions dont on connaît déjà la réponse sont sautées, et « Qu'aimerais-tu améliorer ? » est pré-coché ;
 - les mots compliqués des réponses portent un astérisque \* expliqué sous la question (`OPT_DEF`) ;
-- réponses en grandes pilules avec un émoji, passage automatique à l'écran suivant après un choix unique ;
-- barre de progression en 5 parties : 🚿 douche, 🧖🏾 visage, 🧴 corps, 💇🏾 cheveux, ✨ envies ;
+- réponses en grandes pilules avec une icône dessinée au trait fin dans une pastille ronde (jamais d'émoji ; nuancier de couleurs pour la carnation, monogrammes pour les origines et le budget), passage automatique à l'écran suivant après un choix unique ;
+- barre de progression en 5 parties : douche, visage, corps, cheveux, envies, chacune avec son icône (`SEC_ICO`) ;
 - un petit message d'encouragement au début de chaque partie, et le petit soleil Sunsoari (`SUNNY`) qui porte le sous-titre de chaque question dans une bulle ;
 - l'âge, les produits déjà utilisés et la situation particulière se répondent par cases à cocher ; la météo peau (UV, humidité, qualité de l'air) s'appuie sur Open-Meteo ;
-- les questions, les réponses et les émojis sont dans `QUESTIONS` et `EMO` du fichier joint : reprends-les exactement.
+- les questions, les réponses et les icônes sont dans `QUESTIONS`, `ICONS` et `EMO` (dessins SVG à reprendre tels quels) du fichier joint : reprends-les exactement.
 
 Le diagnostic couvre :
 - la douche et l'eau ;

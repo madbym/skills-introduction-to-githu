@@ -166,9 +166,90 @@
     tree: "<path d='M12 3l6 9h-4l4 6H6l4-6H6z'/><path d='M12 18v3'/>",
     shower: "<path d='M4 20V8a4 4 0 0 1 8 0'/><path d='M9 8h6'/><path d='M10 12v1M12 12v2M14 12v1M11 16v1M13 16v1'/>",
     none: "<circle cx='12' cy='12' r='8'/><path d='M7 17L17 7'/>",
-    coin: "<circle cx='12' cy='12' r='8'/><path d='M14.5 9.5a3 3 0 1 0 0 5M8 11h5M8 13h5'/>"
+    coin: "<circle cx='12' cy='12' r='8'/><path d='M14.5 9.5a3 3 0 1 0 0 5M8 11h5M8 13h5'/>",
+    stone: "<path d='M5 16c-1-4 2-8 7-8s8 3 7 7-4 4-7 4-6 0-7-3z'/><path d='M9 12c1-1 3-1 4 0'/>",
+    suitcase: "<rect x='4' y='8' width='16' height='11' rx='2'/><path d='M9 8V5h6v3M4 13h16'/>",
+    female: "<circle cx='12' cy='9' r='5'/><path d='M12 14v7M9 18h6'/>",
+    male: "<circle cx='10' cy='14' r='5'/><path d='M14 10l6-6M15 4h5v5'/>",
+    person: "<circle cx='12' cy='8' r='3.5'/><path d='M5 20c1-4 4-6 7-6s6 2 7 6'/>",
+    people: "<circle cx='9' cy='8' r='3'/><circle cx='17' cy='9' r='2.5'/><path d='M3 19c1-3.5 3-5 6-5s5 1.5 6 5M15 14c3 0 5 1.5 6 4.5'/>",
+    crack: "<path d='M4 20h16'/><path d='M7 20l2-5 3 2 2-6 3 3 1-6'/>",
+    tzone: "<path d='M12 3c4.5 0 7 3.5 7 8s-3 10-7 10-7-5.5-7-10 2.5-8 7-8z'/><path d='M8 8h8M12 8v8'/>",
+    shine: "<path d='M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z'/><path d='M18 16l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z'/>",
+    calm: "<circle cx='12' cy='12' r='9'/><path d='M8.5 10.5c.5-.7 1.5-.7 2 0M13.5 10.5c.5-.7 1.5-.7 2 0M8.5 14.5c2 2 5 2 7 0'/>",
+    shuffle: "<path d='M4 7h4l8 10h4M4 17h4l2-2.5M14 9.5L16 7h4'/><path d='M18 5l2 2-2 2M18 15l2 2-2 2'/>",
+    bubble: "<circle cx='9' cy='13' r='5'/><circle cx='17' cy='7' r='3'/><circle cx='18' cy='16' r='2'/>",
+    nose: "<path d='M12 4c0 5-3 8-3 11a3 3 0 0 0 3 2 3 3 0 0 0 3-2'/><path d='M8 17c-1 0-2-.5-2-1.5M16 17c1 0 2-.5 2-1.5'/>",
+    search: "<circle cx='11' cy='11' r='6'/><path d='M20 20l-4.5-4.5'/>",
+    flake: "<path d='M6 18C6 10 10 6 18 5c0 8-4 13-12 13z'/><path d='M9 15l3-3M11 17l1-2M7 13l2-1'/>",
+    snow: "<path d='M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9'/><path d='M10 5l2 2 2-2M10 19l2-2 2 2'/>",
+    glass: "<path d='M6 4h12l-1.5 16h-9z'/><path d='M7 9c3 1.5 7-1.5 10 0'/>",
+    balance: "<path d='M12 4v16M8 20h8M5 7h14'/><path d='M5 7l-2.5 6a2.5 2.5 0 0 0 5 0zM19 7l-2.5 6a2.5 2.5 0 0 0 5 0z'/>",
+    cloudsun: "<circle cx='9' cy='9' r='3'/><path d='M9 3v1.5M3 9h1.5M4.8 4.8l1 1M13.2 4.8l-1 1'/><path d='M8 19h9a3.5 3.5 0 0 0 0-7 5 5 0 0 0-9.5 1.5A3 3 0 0 0 8 19z'/>",
+    shield: "<path d='M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z'/>",
+    umbrella: "<path d='M3 12a9 9 0 0 1 18 0z'/><path d='M12 12v6a2 2 0 0 0 4 0'/>",
+    eyeoff: "<path d='M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z'/><circle cx='12' cy='12' r='2.5'/><path d='M4 4l16 16'/>",
+    eye: "<path d='M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z'/><circle cx='12' cy='12' r='2.5'/>",
+    patch: "<rect x='3' y='8' width='18' height='8' rx='4' transform='rotate(-35 12 12)'/><path d='M10.5 11.5h.01M13.5 12.5h.01M12 10h.01M12 14h.01'/>",
+    stetho: "<path d='M6 3v6a4 4 0 0 0 8 0V3'/><path d='M10 13v2a5 5 0 0 0 10 0v-2'/><circle cx='20' cy='11' r='2'/>",
+    pill: "<rect x='3' y='8.5' width='18' height='7' rx='3.5' transform='rotate(-35 12 12)'/><path d='M9.5 8.5l5 7'/>",
+    alert: "<path d='M12 4l9 16H3z'/><path d='M12 10v4M12 17h.01'/>",
+    pulse: "<path d='M3 12h4l2-5 4 10 2-5h6'/>",
+    city: "<path d='M3 20h18M5 20V9h5v11M10 20V4h6v16M16 20v-8h3v8'/><path d='M7 12h1M7 15h1M12.5 7h1M12.5 10h1M12.5 13h1'/>",
+    screen: "<rect x='3' y='5' width='18' height='12' rx='2'/><path d='M9 20h6M12 17v3'/>",
+    sleep: "<path d='M19 14A7 7 0 1 1 10 5a5 5 0 0 0 9 9z'/><path d='M15 3h3l-3 3h3'/>",
+    lipstick: "<path d='M9 21h6v-8H9z'/><path d='M9.5 13V8l5-3v8'/>",
+    razor: "<rect x='4' y='4' width='16' height='5' rx='1.5'/><path d='M12 9v12'/><path d='M7 6.5h10'/>",
+    dot: "<circle cx='12' cy='12' r='8'/><circle cx='12' cy='12' r='3' fill='currentColor'/>",
+    mark: "<path d='M5 12c0-4 3-7 7-7'/><circle cx='14' cy='13' r='5'/><path d='M12 13h4'/>",
+    blush: "<circle cx='12' cy='12' r='8'/><path d='M8 13l1.5-1.5M10.5 14l1.5-1.5M13 13l1.5-1.5M15.5 14l1.5-1.5'/>",
+    haze: "<path d='M4 8h12M7 12h13M4 16h10M17 16h3'/>",
+    grain: "<circle cx='6' cy='6' r='1'/><circle cx='12' cy='6' r='1'/><circle cx='18' cy='6' r='1'/><circle cx='9' cy='12' r='1'/><circle cx='15' cy='12' r='1'/><circle cx='6' cy='18' r='1'/><circle cx='12' cy='18' r='1'/><circle cx='18' cy='18' r='1'/>",
+    hourglass: "<path d='M6 3h12M6 21h12M7 3c0 5 5 6 5 9s-5 4-5 9M17 3c0 5-5 6-5 9s5 4 5 9'/>",
+    pen: "<path d='M4 20l1-4L16 5l3 3L8 19z'/><path d='M14 7l3 3'/>",
+    pregnant: "<circle cx='11' cy='4.5' r='2'/><path d='M10 8c-2 2-2 5-1 7l1 6M12 8c1 2 5 3 5 6.5 0 2-2 3-4.5 3L13 21'/>",
+    cycle: "<path d='M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3'/><path d='M18 3v4h-4M6 21v-4h4'/>",
+    cotton: "<circle cx='12' cy='12' r='8'/><circle cx='12' cy='12' r='4'/>",
+    dropper: "<path d='M10 3h4v4h-4zM9 7h6'/><path d='M10.5 7v8l1.5 3 1.5-3V7'/><path d='M12 20.5v.5'/>",
+    jar: "<rect x='5' y='9' width='14' height='11' rx='3'/><rect x='6' y='5' width='12' height='4' rx='1.5'/><path d='M9 14h6'/>",
+    tube: "<path d='M8 3h8l-1 14H9z'/><path d='M10 17h4v4h-4zM8 7h8'/>",
+    flask: "<path d='M9 3h6M10 3v6L4.5 19A1.5 1.5 0 0 0 6 21h12a1.5 1.5 0 0 0 1.5-2L14 9V3'/><path d='M7 15h10'/>",
+    hive: "<path d='M12 3l4 2.3v4.6L12 12l-4-2.1V5.3zM8 12.2l4 2.1v4.6L8 21l-4-2.1v-4.6zM16 12.2l4 2.1v4.6L16 21l-4-2.1v-4.6z'/>",
+    burst: "<path d='M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3'/><circle cx='12' cy='12' r='2.5'/>",
+    sunrise: "<path d='M3 18h18M7 18a5 5 0 0 1 10 0'/><path d='M12 4v4M4.5 9.5l2 2M19.5 9.5l-2 2M9.5 6.5L12 4l2.5 2.5'/>",
+    beard: "<path d='M5 7v4c0 5 3 9 7 9s7-4 7-9V7'/><path d='M9 13c1.5-1 4.5-1 6 0M10 16.5h4'/>",
+    zigzag: "<path d='M6 3l3 3-3 3 3 3-3 3 3 3-3 3M13 3l3 3-3 3 3 3-3 3 3 3-3 3'/>",
+    ice: "<path d='M12 3l8 4.5v9L12 21l-8-4.5v-9z'/><path d='M4 7.5l8 4.5 8-4.5M12 12v9'/>",
+    sponge: "<rect x='4' y='6' width='16' height='12' rx='3'/><circle cx='9' cy='10' r='1'/><circle cx='15' cy='11' r='1.3'/><circle cx='11' cy='14.5' r='.9'/><circle cx='16' cy='15' r='.7'/>",
+    oil: "<path d='M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z'/><path d='M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5'/>",
+    recede: "<path d='M5 20c0-9 3-15 7-15s7 6 7 15'/><path d='M8 9c1.5 1.5 2.5 1.5 4 0 1.5 1.5 2.5 1.5 4 0'/>",
+    fall: "<path d='M7 4c3 0 5 2 5 5-3 0-5-2-5-5zM14 12c3 0 5 2 5 5-3 0-5-2-5-5z'/><path d='M6 15v4M4 17l2 2 2-2'/>",
+    ring: "<circle cx='12' cy='12' r='8' stroke-dasharray='2.5 2.5'/><circle cx='12' cy='12' r='3'/>",
+    braid: "<path d='M9 3c0 3 6 3 6 6s-6 3-6 6 6 3 6 6M15 3c0 3-6 3-6 6s6 3 6 6-6 3-6 6'/>",
+    bow: "<path d='M12 12L5 7v10zM12 12l7-5v10z'/><circle cx='12' cy='12' r='1.5'/>",
+    wind: "<path d='M3 9h11a3 3 0 1 0-3-3M3 15h15a3 3 0 1 1-3 3M3 12h8'/>",
+    cal: "<rect x='4' y='5' width='16' height='15' rx='2'/><path d='M4 10h16M9 3v4M15 3v4'/>",
+    citrus: "<circle cx='12' cy='12' r='8'/><circle cx='12' cy='12' r='5'/><path d='M12 7v10M7 12h10M8.5 8.5l7 7M15.5 8.5l-7 7'/>",
+    gift: "<rect x='4' y='9' width='16' height='11' rx='1.5'/><path d='M3 9h18M12 9v11M12 9c-2-4-6-4-6-1.5S10 9 12 9zM12 9c2-4 6-4 6-1.5S14 9 12 9z'/>",
+    pool: "<path d='M8 15V5a2 2 0 0 1 4 0M16 15V5a2 2 0 0 1 4 0M8 8h8M8 12h8'/><path d='M3 18c2-1.5 4 1.5 6 0s4 1.5 6 0 4 1.5 6 0'/>",
+    lock: "<rect x='5' y='11' width='14' height='9' rx='2'/><path d='M8 11V8a4 4 0 0 1 8 0v3'/>",
+    mic: "<rect x='9' y='3' width='6' height='11' rx='3'/><path d='M5 11a7 7 0 0 0 14 0M12 18v3'/>",
+    book: "<path d='M12 6c-2-1.5-5-2-8-1.5v14c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5v-14c-3-.5-6 0-8 1.5zM12 6v14'/>",
+    spark: "<path d='M12 3v4M12 17v4M3 12h4M17 12h4'/><path d='M12 8l1.2 2.8L16 12l-2.8 1.2L12 16l-1.2-2.8L8 12l2.8-1.2z'/>",
+    timer: "<circle cx='12' cy='13' r='8'/><path d='M12 9v4l2.5 2M10 2h4'/>",
+    check: "<circle cx='12' cy='12' r='9'/><path d='M8 12l3 3 5-6'/>",
+    bolt: "<path d='M13 3L5 14h6l-1 7 8-11h-6z'/>",
+    towel: "<rect x='5' y='4' width='14' height='16' rx='2'/><path d='M5 15h14M9 4v11'/>",
+    soap: "<rect x='4' y='10' width='16' height='9' rx='4'/><circle cx='9' cy='6' r='2'/><circle cx='15' cy='5' r='1.3'/>",
+    bottle: "<path d='M10 3h4v3h-4z'/><path d='M9 6h6l1 3v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9z'/><path d='M8 13h8'/>",
+    face: "<path d='M12 3c4.5 0 7 3.5 7 8s-3 10-7 10-7-5.5-7-10 2.5-8 7-8z'/><path d='M9.5 11h.01M14.5 11h.01M10 15c1 1 3 1 4 0'/>",
+    hair: "<path d='M5 21V11a7 7 0 0 1 14 0v10'/><path d='M9 21v-7c0-3 1.5-5 3-6 1.5 1 3 3 3 6v7'/>",
+    cloud: "<path d='M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 2A3 3 0 0 0 7 18z'/>",
+    mapleaf: "<path d='M5 19C5 9 11 5 20 4c-1 9-5 15-15 15z'/><path d='M5 19l8-8'/>"
   };
   function icon(name) { return name && ICONS[name] ? "<svg viewBox='0 0 24 24' aria-hidden='true'>" + ICONS[name] + "</svg>" : ""; }
+  // Petite icône en ligne, à la taille du texte.
+  function ic(name) { return name && ICONS[name] ? "<svg class='i' viewBox='0 0 24 24' aria-hidden='true'>" + ICONS[name] + "</svg>" : ""; }
 
   var PLACEHOLDER = "data:image/svg+xml," + encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='#efe6d8'/><circle cx='50' cy='42' r='16' fill='#c9853f' opacity='.55'/><path d='M14 74c12-8 24-8 36 0s24 8 36 0' stroke='#2f6f7e' stroke-width='3' fill='none' opacity='.6'/></svg>");
   var DAYS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
@@ -319,7 +400,7 @@
     ".trend-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:4px}",
     ".made.trend{background:var(--water-soft);color:var(--water)}",
     "@media (max-width:560px){.top,.body{padding-left:16px;padding-right:16px}.hero{grid-template-columns:1fr}.hero img{max-width:220px;margin:0 auto}}",
-    ".ico.emo{font-size:26px;line-height:1;transition:transform .2s}", ".opt[aria-pressed=true] .ico.emo{transform:scale(1.15)}", ".opt{transition:border-color .2s,background .2s,transform .12s}", ".opt:active{transform:scale(.98)}",
+    ".opt .ico{width:42px;height:42px;border-radius:50%;background:var(--sand);color:var(--water);transition:background .2s,color .2s,transform .2s}", ".opt .ico svg{width:22px;height:22px;stroke-width:1.5}", ".opt[aria-pressed=true] .ico{background:var(--water);color:#fff;transform:scale(1.06)}", ".ico.mono{font-family:var(--display);font-size:19px;letter-spacing:-.02em;color:var(--water)}", ".ico.sw{background:var(--sw);box-shadow:inset 0 0 0 3px var(--paper),0 0 0 1px var(--line)}", ".opt[aria-pressed=true] .ico.sw{background:var(--sw);box-shadow:inset 0 0 0 3px var(--paper),0 0 0 2px var(--water)}", "svg.i{display:inline-block;width:1.15em;height:1.15em;vertical-align:-.2em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}", ".pathcard .pe svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}", ".mic svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}", ".opt{transition:border-color .2s,background .2s,transform .12s}", ".opt:active{transform:scale(.98)}",
     ".welcome{margin:-6px 0 0}", ".whero{position:relative;height:440px;border-radius:30px;overflow:hidden;background:var(--water-soft) center/cover no-repeat;box-shadow:0 18px 40px -24px rgba(4,40,80,.45)}",
     ".whero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,40,80,.28) 0%,rgba(4,40,80,0) 28%,rgba(251,248,243,0) 46%,rgba(251,248,243,.9) 76%,#fbf8f3 100%)}",
     ".wbrand{position:absolute;z-index:1;top:18px;left:20px;color:#fff;font-size:12px;letter-spacing:.38em;font-weight:600}", ".wsun{position:absolute;z-index:1;top:8px;right:12px;width:62px;height:62px}", ".wsun .sunny{width:62px;height:62px;animation:sunspin 40s linear infinite}",
@@ -819,54 +900,15 @@
       obs: [["cuirGras", "Racines grasses"], ["cuirSec", "Sécheresse"], ["cuirPellicules", "Pellicules"], ["cuirSensible", "Rougeurs"], ["secs", "Casse, pointes sèches"]] }
   };
 
-  // Un émoji par réponse : le même langage visuel dans tout le diagnostic.
-  var EMO = {
-    "lieu.maison": "🏠", "lieu.voyage": "✈️", "lieu.deux": "🧳", "flexible.oui": "🚿", "flexible.non": "🚫", "eau.douce": "💧", "eau.moyenne": "💦", "eau.calcaire": "🪨",
-    "genre.femme": "👩🏾", "genre.homme": "👨🏾", "genre.autre": "🧑🏾", "genre.nsp": "🤫",
-    "pt_apres.tire": "🏜️", "pt_apres.tzone": "🎯", "pt_apres.brille": "✨", "pt_apres.ok": "😌",
-    "pt_soir.mat": "🏜️", "pt_soir.tz": "🎯", "pt_soir.tout": "✨", "pt_soir.var": "🎲",
-    "pt_pores.peu": "🫧", "pt_pores.nez": "👃🏾", "pt_pores.joues": "🔍", "pt_peaux.souvent": "🍂", "pt_peaux.hiver": "❄️", "pt_peaux.rare": "👌",
-    "pt_creme.boit": "🥤", "pt_creme.ok": "😌", "pt_creme.zones": "⚖️", "pt_creme.brille": "✨", "pt_deshy.oui": "👍", "pt_deshy.non": "👎",
-    "pt_reac.souvent": "🔥", "pt_reac.parfois": "🌤️", "pt_reac.rare": "🛡️", "pt_reac2.souvent": "🔥", "pt_reac2.parfois": "🌤️", "pt_reac2.rare": "🛡️",
-    "spfHabit.tlj": "☀️", "spfHabit.ete": "🏖️", "spfHabit.jamais": "🙈", "saisons.hiver": "❄️", "saisons.ete": "🌞", "saisons.change": "🍃", "saisons.stable": "⚖️",
-    "antecedents.eczema": "🩹", "antecedents.rosacee": "🌹", "antecedents.psoriasis": "🩹", "antecedents.acne": "🩺", "antecedents.traitement": "💊", "antecedents.allergies": "🤧",
-    "modeVie.soleil": "☀️", "modeVie.sport": "🏃🏾", "modeVie.ville": "🏙️", "modeVie.ecrans": "💻", "modeVie.sommeil": "😴", "modeVie.maquillage": "💄", "modeVie.rasage": "🪒",
-    "carnation.claire": "🖐🏻", "carnation.mate": "🖐🏽", "carnation.foncee": "🖐🏾", "carnation.tresfoncee": "🖐🏿",
-    "situation.hormones": "Un déséquilibre des hormones (syndrome des ovaires polykystiques, thyroïde, arrêt de la pilule, post-partum…) peut faire varier la peau : boutons, sécheresse, taches.",
-    "situation.autoimmune": "Une maladie où le système immunitaire s'attaque au corps (lupus, vitiligo, thyroïdite…). La peau peut être plus réactive : on garde une routine très douce.",
-    "produitsDeja.tonique": "Une lotion appliquée après le nettoyage, avant le sérum.",
-    "produitsDeja.serum": "Un soin concentré en actifs, en petite quantité, avant la crème.",
-    "concerns.secheresse": "🏜️", "concerns.imperfections": "🔴", "concerns.pointsnoirs": "⚫", "concerns.brillance": "✨", "concerns.marques": "🟤", "concerns.cernes": "🐼", "concerns.rougeurs": "🌹", "concerns.teint": "🌫️", "concerns.texture": "🍊", "concerns.taches": "🎯", "concerns.rides": "⏳", "concerns.rasage": "🪒", "pourqui.moi": "🙋🏾", "pourqui.proche": "💞", "ageT.a18": "🌱", "ageT.a25": "🌸", "ageT.a35": "☀️", "ageT.a45": "🌤️", "ageT.a55": "🌙",
-    "situation.enceinte": "🤰🏾", "situation.menopause": "🌙", "situation.hormones": "🔄", "situation.autoimmune": "🛡️",
-    "produitsDeja.nettoyant": "🫧", "produitsDeja.demaquillant": "🧴", "produitsDeja.tonique": "💧", "produitsDeja.serum": "🧪", "produitsDeja.hydratant": "🧴", "produitsDeja.yeux": "👁️", "produitsDeja.spf": "☀️", "produitsDeja.exfoliant": "✨", "produitsDeja.aucun": "🌱", "concerns.acne": "😣", "concerns.plaques": "🩹", "concerns.autre": "✍️",
-    "pt_lavage.tire": "🏜️", "pt_lavage.joues": "⚖️", "pt_lavage.picote": "🔥", "pt_lavage.ok": "😌", "pt_apres.tire2": "🏜️",
-    "pt_boutons.rare": "🙂", "pt_boutons.parfois": "🌤️", "pt_boutons.souvent": "🔴", "pt_boutons.beaucoup": "😣",
-    "tachesNiveau.t1": "🌱", "tachesNiveau.t2": "🌿", "tachesNiveau.t3": "🌳", "tachesNiveau.t4": "🩺",
-    "reactions.reactifHE": "🌸", "reactions.acides": "🧪", "reactions.ruche": "🐝", "reacCause.fort": "💥", "reacCause.peeling": "🧖🏾", "reacCause.medicament": "💊", "reacCause.soleil": "☀️", "reacCause.melange": "🧪",
-    "valeurs.vegan": "🌱", "grossesse.oui": "🤰🏾", "grossesse.menopause": "🌙", "grossesse.non": "🙂",
-    "barbe.rase": "🪒", "barbe.courte": "🧔🏾", "barbe.longue": "🧔🏾‍♂️", "barbe.non": "🙂",
-    "routine.deux": "🌗", "routine.matin": "🌅", "routine.soir": "🌙", "routine.aucune": "🌱",
-    "corps.corpsOk": "😌", "corps.corpsSec": "🏜️", "corps.corpsTresSec": "🦎", "corps.corpsSensible": "🔥",
-    "corpsEnvies.corpsNourrir": "🧈", "corpsEnvies.corpsMarques": "🍊", "corpsEnvies.corpsSenteur": "🌸",
-    "texture.raides": "〰️", "texture.ondules": "🌊", "texture.boucles": "➰", "texture.crepus": "🌀",
-    "texDetail2.2A": "🌊", "texDetail2.2B": "🌊", "texDetail2.2C": "➰", "texDetail3.3A": "➰", "texDetail3.3B": "➰", "texDetail3.3C": "🌀", "texDetail4.4A": "🌀", "texDetail4.4B": "⚡", "texDetail4.4C": "🌀",
-    "porosite.porBasse": "🧊", "porosite.porMoy": "⚖️", "porosite.porHaute": "🧽",
-    "cheveux.secs": "🏜️", "cheveux.colores": "🎨", "cheveux.fins": "🪶", "cheveux.ok": "💪🏾",
-    "cuir.cuirGras": "🫒", "cuir.cuirSec": "🏜️", "cuir.cuirPellicules": "❄️", "cuir.cuirSensible": "🔥", "cuir.cuirOk": "😌",
-    "cuirSignes.squamesGrasses": "🫒", "cuirSignes.plaques": "🩹", "cuirSignes.tempes": "↩️", "cuirSignes.chute": "🍂", "cuirSignes.zones": "⭕", "cuirSignes.boutonsCuir": "🔴",
-    "cuirDiag.dsDiag": "🩺", "cuirDiag.psoDiag": "🩺", "cuirDiag.tractionDiag": "🩺", "cuirDiag.androDiag": "🩺", "cuirDiag.peladeDiag": "🩺",
-    "coiffures.tresses": "👩🏾‍🦱", "coiffures.perruques": "💇🏾", "coiffures.defrisage": "🧪", "coiffures.chaleur": "🔥", "coiffures.queue": "🎀", "coiffures.libres": "🕊️",
-    "lavage.l1": "🚿", "lavage.l2": "🫧", "lavage.l3": "📅", "lavage.l4": "🗓️",
-    "envies.senteur": "🌸", "envies.chlore": "🏊🏾", "envies.soin": "💧", "envies.soir": "🌙", "envies.jet": "🚿", "envies.sansparfum": "🚫",
-    "senteur.hinoki": "🌲", "senteur.fleur": "🌸", "senteur.patchouli": "🌹", "senteur.fruite": "🍊", "senteur.decouverte": "🎁", "senteur.ocean": "🌊", "senteur.pin": "🌲", "senteur.sans": "🫧",
-    "origines.Corée": "🇰🇷", "origines.Japon": "🇯🇵", "origines.Chine": "🇨🇳", "origines.Afrique": "🌍", "origines.toutes": "🌏",
-    "format.essentielle": "🌱", "format.complete": "🌸", "format.equilibree": "🌿",
-    "budgetSoin.b30": "💶", "budgetSoin.b60": "💶💶", "budgetSoin.b100": "💶💶💶", "budgetSoin.b100p": "💎", "budget.petit": "💶", "budget.moyen": "💶💶", "budget.grand": "💎"
-  };
-  var EMO_DEFAULT = { nsp: "🤔", aucun: "🙂", aucune: "🙂", rien: "🙂", aucunSigne: "🙂", rienDiag: "🙂", corpsRien: "🙂", libres: "🕊️", none: "🙂", non: "🙂" };
-  function emo(qid, v) { return EMO[qid + "." + v] || EMO_DEFAULT[v] || ""; }
-  var SEC_EMO = ["🚿", "🧖🏾", "🧴", "💇🏾", "✨"];
-  var CHEERS = ["", "Ta douche, c'est noté 💧 On passe à ton visage.", "Ton visage n'a plus de secret pour nous 🌸 Au tour de ton corps.", "Corps noté ✅ Place à tes cheveux !", "Presque fini 🎉 Plus que tes envies."];
+  // Une icône dessinée par réponse (ICONS), le même trait fin dans tout le diagnostic.
+  var EMO = { "lieu.maison": "home", "lieu.voyage": "plane", "lieu.deux": "suitcase", "flexible.oui": "shower", "flexible.non": "no", "eau.douce": "drop", "eau.moyenne": "drops", "eau.calcaire": "stone", "genre.femme": "female", "genre.homme": "male", "genre.autre": "person", "genre.nsp": "ask", "pt_apres.tire": "crack", "pt_apres.tire2": "crack", "pt_apres.tzone": "tzone", "pt_apres.brille": "shine", "pt_apres.ok": "calm", "pt_soir.mat": "crack", "pt_soir.tz": "tzone", "pt_soir.tout": "shine", "pt_soir.var": "shuffle", "pt_pores.peu": "bubble", "pt_pores.nez": "nose", "pt_pores.joues": "search", "pt_peaux.souvent": "flake", "pt_peaux.hiver": "snow", "pt_peaux.rare": "check", "pt_creme.boit": "glass", "pt_creme.ok": "calm", "pt_creme.zones": "balance", "pt_creme.brille": "shine", "pt_deshy.oui": "yes", "pt_deshy.non": "no", "pt_reac.souvent": "flame", "pt_reac.parfois": "cloudsun", "pt_reac.rare": "shield", "spfHabit.tlj": "sun", "spfHabit.ete": "umbrella", "spfHabit.jamais": "eyeoff", "saisons.hiver": "snow", "saisons.ete": "sun", "saisons.change": "leaf", "saisons.stable": "balance", "antecedents.eczema": "patch", "antecedents.rosacee": "blush", "antecedents.psoriasis": "patch", "antecedents.acne": "stetho", "antecedents.traitement": "pill", "antecedents.allergies": "alert", "modeVie.soleil": "sun", "modeVie.sport": "pulse", "modeVie.ville": "city", "modeVie.ecrans": "screen", "modeVie.sommeil": "sleep", "modeVie.maquillage": "lipstick", "modeVie.rasage": "razor", "concerns.secheresse": "crack", "concerns.imperfections": "dot", "concerns.pointsnoirs": "dots", "concerns.brillance": "shine", "concerns.marques": "mark", "concerns.cernes": "eye", "concerns.rougeurs": "blush", "concerns.teint": "haze", "concerns.texture": "grain", "concerns.taches": "spots", "concerns.rides": "hourglass", "concerns.rasage": "razor", "concerns.acne": "dot", "concerns.plaques": "patch", "concerns.autre": "pen", "pourqui.moi": "person", "pourqui.proche": "people", "ageT.a18": "sprout", "ageT.a25": "flower", "ageT.a35": "sun", "ageT.a45": "cloudsun", "ageT.a55": "moon", "situation.enceinte": "pregnant", "situation.menopause": "moon", "situation.hormones": "cycle", "situation.autoimmune": "shield", "produitsDeja.nettoyant": "bubble", "produitsDeja.demaquillant": "cotton", "produitsDeja.tonique": "drop", "produitsDeja.serum": "dropper", "produitsDeja.hydratant": "jar", "produitsDeja.yeux": "eye", "produitsDeja.spf": "sun", "produitsDeja.exfoliant": "grain", "produitsDeja.aucun": "sprout", "pt_lavage.tire": "crack", "pt_lavage.joues": "balance", "pt_lavage.picote": "flame", "pt_lavage.ok": "calm", "pt_boutons.rare": "calm", "pt_boutons.parfois": "cloudsun", "pt_boutons.souvent": "dot", "pt_boutons.beaucoup": "dots", "tachesNiveau.t1": "sprout", "tachesNiveau.t2": "leaf", "tachesNiveau.t3": "tree", "tachesNiveau.t4": "stetho", "reactions.reactifHE": "flower", "reactions.acides": "flask", "reactions.ruche": "hive", "reacCause.fort": "burst", "reacCause.peeling": "grain", "reacCause.medicament": "pill", "reacCause.soleil": "sun", "reacCause.melange": "flask", "valeurs.vegan": "leaf", "grossesse.oui": "pregnant", "grossesse.menopause": "moon", "grossesse.non": "calm", "barbe.rase": "razor", "barbe.courte": "beard", "barbe.longue": "beard", "barbe.non": "calm", "routine.deux": "sunmoon", "routine.matin": "sunrise", "routine.soir": "moon", "routine.aucune": "sprout", "corps.corpsOk": "calm", "corps.corpsSec": "crack", "corps.corpsTresSec": "flake", "corps.corpsSensible": "flame", "corpsEnvies.corpsNourrir": "jar", "corpsEnvies.corpsMarques": "mark", "corpsEnvies.corpsSenteur": "flower", "texture.raides": "straight", "texture.ondules": "wavy", "texture.boucles": "curly", "texture.crepus": "coily", "texDetail2.2A": "wavy", "texDetail2.2B": "wavy", "texDetail2.2C": "curly", "texDetail3.3A": "curly", "texDetail3.3B": "curly", "texDetail3.3C": "coily", "texDetail4.4A": "coily", "texDetail4.4B": "zigzag", "texDetail4.4C": "coily", "porosite.porBasse": "ice", "porosite.porMoy": "balance", "porosite.porHaute": "sponge", "cheveux.secs": "dry", "cheveux.colores": "color", "cheveux.fins": "thin", "cheveux.ok": "check", "cuir.cuirGras": "oil", "cuir.cuirSec": "crack", "cuir.cuirPellicules": "snow", "cuir.cuirSensible": "flame", "cuir.cuirOk": "calm", "cuirSignes.squamesGrasses": "oil", "cuirSignes.plaques": "patch", "cuirSignes.tempes": "recede", "cuirSignes.chute": "fall", "cuirSignes.zones": "ring", "cuirSignes.boutonsCuir": "dot", "cuirDiag.dsDiag": "stetho", "cuirDiag.psoDiag": "stetho", "cuirDiag.tractionDiag": "stetho", "cuirDiag.androDiag": "stetho", "cuirDiag.peladeDiag": "stetho", "coiffures.tresses": "braid", "coiffures.perruques": "hair", "coiffures.defrisage": "flask", "coiffures.chaleur": "flame", "coiffures.queue": "bow", "coiffures.libres": "wind", "lavage.l1": "shower", "lavage.l2": "bubble", "lavage.l3": "cal", "lavage.l4": "cal", "envies.senteur": "flower", "envies.chlore": "pool", "envies.soin": "drop", "envies.soir": "moon", "envies.jet": "shower", "envies.sansparfum": "none", "senteur.hinoki": "tree", "senteur.fleur": "flower", "senteur.patchouli": "leaf", "senteur.fruite": "citrus", "senteur.decouverte": "gift", "senteur.ocean": "wave", "senteur.pin": "tree", "senteur.sans": "bubble", "format.essentielle": "sprout", "format.complete": "flower", "format.equilibree": "leaf" };
+  // Monogrammes (origines, budget) et nuanciers (carnation) à la place des drapeaux et des mains.
+  var MONO = { "origines.Corée": "한", "origines.Japon": "日", "origines.Chine": "中", "origines.Afrique": "Af", "origines.toutes": "∞", "budgetSoin.b30": "€", "budgetSoin.b60": "€€", "budgetSoin.b100": "€€€", "budgetSoin.b100p": "€€€€", "budget.petit": "€", "budget.moyen": "€€", "budget.grand": "€€€" };
+  var SWATCH = { "carnation.claire": "#f1d6bf", "carnation.mate": "#c99a72", "carnation.foncee": "#8a5a3b", "carnation.tresfoncee": "#4a2f22" };
+  var EMO_DEFAULT = { nsp: "ask", aucun: "calm", aucune: "calm", rien: "calm", aucunSigne: "calm", rienDiag: "calm", corpsRien: "calm", libres: "wind", none: "calm", non: "calm" };
+  function optIcon(qid, v, fb) { var k = qid + "." + v; if (SWATCH[k]) return "<span class='ico sw' style='--sw:" + SWATCH[k] + "'></span>"; if (MONO[k]) return "<span class='ico mono'>" + MONO[k] + "</span>"; var n = EMO[k] || EMO_DEFAULT[v] || fb; return "<span class='ico'>" + icon(n) + "</span>"; }
+  var SEC_ICO = ["shower", "face", "bottle", "hair", "spark"];
+  var CHEERS = ["", "Ta douche, c'est noté. On passe à ton visage.", "Ton visage n'a plus de secret pour nous. Au tour de ton corps.", "Corps noté. Place à tes cheveux !", "Presque fini. Plus que tes envies."];
   // « C'est quoi ? » : les mots du filtre, expliqués simplement.
   var GLOSSAIRE = {
     // Douche
@@ -917,7 +959,7 @@
     dermsebo: ["cheveux", "C'est quoi, la dermatite séborrhéique ?", "Une inflammation fréquente et bénigne des zones riches en sébum : squames grasses, rougeurs, démangeaisons, sur le cuir chevelu, les sourcils ou les ailes du nez. Elle va et vient. Un médecin peut la confirmer."],
     psoriasis: ["cheveux", "C'est quoi, le psoriasis du cuir chevelu ?", "Une maladie inflammatoire de la peau, non contagieuse, avec des plaques épaisses et des squames blanches ou argentées. Elle se traite avec un médecin ; les soins cosmétiques accompagnent."]
   };
-  var LEX_CATS = [["douche", "🚿 La douche"], ["peau", "🧖🏾 La peau"], ["routine", "🧴 La routine"], ["soleil", "☀️ Le soleil"], ["cheveux", "💇🏾 Les cheveux"]];
+  var LEX_CATS = [["douche", "La douche", "shower"], ["peau", "La peau", "face"], ["routine", "La routine", "bottle"], ["soleil", "Le soleil", "sun"], ["cheveux", "Les cheveux", "hair"]];
   function glossaire(keys) { return "<div class='advice lex'>" + (keys || Object.keys(GLOSSAIRE)).map(function (k) { var g = GLOSSAIRE[k]; return g ? "<details><summary>" + esc(g[1]) + "</summary><p>" + esc(g[2]) + "</p></details>" : ""; }).join("") + "</div>"; }
   function lexCat(cat) { return Object.keys(GLOSSAIRE).filter(function (k) { return GLOSSAIRE[k][0] === cat; }); }
   // Les mots d'une routine, d'après ses étapes.
@@ -1315,7 +1357,7 @@
     ".hacts{display:flex;gap:8px;align-items:center}.acctbtn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--water)}.acctbtn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7}",
     ".acct{background:#fff;border-radius:20px;padding:16px;margin-bottom:12px}.acct p{margin:6px 0 10px;font-size:14px;color:var(--muted)}.acct small{color:var(--muted);font-size:12px}",
     ".clist{display:grid;gap:8px;margin-bottom:12px}.crow{display:flex;align-items:center;gap:8px;background:#fff;border-radius:16px;padding:8px}.crow-main{flex:1;min-width:0;display:flex;align-items:center;gap:10px;border:0;background:none;font:inherit;color:var(--ink);text-align:left;cursor:pointer;text-decoration:none;padding:0}.crow-main img,.cico{width:52px;height:52px;border-radius:12px;object-fit:cover;flex:none;background:var(--sand-soft);display:flex;align-items:center;justify-content:center}.cico svg{width:22px;height:22px;fill:none;stroke:var(--water);stroke-width:1.6}.crow-main span{display:flex;flex-direction:column;min-width:0}.crow-main small{color:var(--muted);font-size:11px}.crow-main b{font-weight:500;font-size:14px}",
-    ".favbtn{width:38px;height:38px;flex:none;border-radius:50%;border:1px solid var(--line);background:#fff;color:#C06F55;font-size:18px;cursor:pointer}.favbtn[aria-pressed=true]{background:#fbefe4}.shead .favbtn{background:rgba(255,255,255,.25);border-color:transparent;color:#fff}",
+    ".favbtn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;vertical-align:middle}", ".favbtn[aria-pressed=true] svg{fill:currentColor}", ".favbtn{width:38px;height:38px;flex:none;border-radius:50%;border:1px solid var(--line);background:#fff;color:#C06F55;font-size:18px;cursor:pointer}.favbtn[aria-pressed=true]{background:#fbefe4}.shead .favbtn{background:rgba(255,255,255,.25);border-color:transparent;color:#fff}",
     ".advice{display:grid;gap:8px;margin-bottom:10px}.advice details{background:#fff;border-radius:16px;padding:12px 14px}.advice summary{cursor:pointer;font-weight:600}.advice p{margin:8px 0 0;font-size:14px;color:var(--ink)}",
     ".dodont{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:8px}.whybox.do li::marker{color:#2E6B57}.whybox.dont li::marker{color:#C06F55}.guide{margin:6px 0 10px;padding-left:20px;display:grid;gap:6px;font-size:14px}.types{background:#fff;border-radius:16px;padding:10px 14px;margin:10px 0}.types summary{cursor:pointer;font-weight:600}.types p{font-size:14px}",
     ".tipl{margin:6px 0 0;padding-left:18px;display:grid;gap:6px;font-size:14px}.myth{background:#fff4e8;border-radius:18px;padding:14px;margin:10px 0}.myth p{margin:6px 0 0;font-size:14px}.srcs{margin:12px 0;font-size:13px}.srcs ul{padding-left:18px}.srcs a{color:var(--water)}.srcs small{color:var(--muted)}",
@@ -1336,7 +1378,7 @@
     ".mood p{margin:0 0 10px}",
     ".mood div{display:flex;justify-content:space-between;gap:4px}",
     ".mood button{font:inherit;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;color:var(--muted);font-size:11px;padding:4px}",
-    ".mood button span{font-size:26px;width:46px;height:46px;border-radius:50%;background:var(--sand-soft);display:flex;align-items:center;justify-content:center}",
+    ".mood button span{font-size:28px;color:var(--water);width:46px;height:46px;border-radius:50%;background:var(--sand-soft);display:flex;align-items:center;justify-content:center}",
     ".mood button[aria-pressed=true] span{background:var(--water-soft);outline:2px solid var(--water)}",
     ".reco-card{font:inherit;width:100%;text-align:left;display:flex;flex-direction:column;gap:2px;background:linear-gradient(135deg,var(--water-soft),var(--sand));border:0;border-radius:20px;padding:16px;margin-top:14px;cursor:pointer;color:var(--ink)}",
     ".reco-card span{font-size:13px;color:var(--muted)}",
@@ -1963,7 +2005,7 @@
     this.mount.innerHTML = html;
     clearInterval(this.tick);
     var tm = this.mount.querySelector("[data-timer]");
-    if (tm) { var end = +tm.getAttribute("data-timer"), me = this; this.tick = setInterval(function () { if (!tm.isConnected) return clearInterval(me.tick); if (Date.now() >= end) { clearInterval(me.tick); tm.textContent = "✅ Les 5 minutes sont passées : regarde ta peau et réponds."; return; } tm.textContent = "⏱ Encore " + fmtLeft(end) + ". Tu peux attendre, ou répondre maintenant."; }, 1000); }
+    if (tm) { var end = +tm.getAttribute("data-timer"), me = this; this.tick = setInterval(function () { if (!tm.isConnected) return clearInterval(me.tick); if (Date.now() >= end) { clearInterval(me.tick); tm.textContent = "Les 5 minutes sont passées : regarde ta peau et réponds."; return; } tm.textContent = "Encore " + fmtLeft(end) + ". Tu peux attendre, ou répondre maintenant."; }, 1000); }
     if (changed) {
       var body = this.mount.querySelector(".body"); if (body) body.classList.add("enter");
       try { var top = this.host.getBoundingClientRect().top; if (top < 0) window.scrollBy({ top: top - 8, behavior: "smooth" }); } catch (e) {}
@@ -1999,12 +2041,12 @@
       var inSec = qs.filter(function (x) { return x.sec === i; }), done = inSec.filter(function (x) { return qs.indexOf(x) < step; }).length;
       return "<span class='seg'><i style='width:" + (q.sec > i ? 100 : q.sec < i ? 0 : Math.max(6, Math.round(done / inSec.length * 100))) + "%'></i></span>";
     }).join("");
-    var html = "<div class='qhead'><button class='back' data-act='prev' aria-label='Retour'" + (step === 0 ? " disabled" : "") + "><svg viewBox='0 0 24 24'><path d='M15 5l-7 7 7 7'/></svg></button><div class='segs'>" + segs + "</div><span class='qcount'>" + Math.round(step / Math.max(1, qs.length - 1) * 100) + " %</span></div>" + (step > 0 && qs[step - 1].sec !== q.sec && CHEERS[q.sec] ? "<p class='cheer'>" + esc(CHEERS[q.sec]) + "</p>" : "") + "<p class='kicker'>" + (q.kicker ? "👋🏾 " + q.kicker : SEC_EMO[q.sec] + " " + SECTIONS[q.sec]) + "</p>";
+    var html = "<div class='qhead'><button class='back' data-act='prev' aria-label='Retour'" + (step === 0 ? " disabled" : "") + "><svg viewBox='0 0 24 24'><path d='M15 5l-7 7 7 7'/></svg></button><div class='segs'>" + segs + "</div><span class='qcount'>" + Math.round(step / Math.max(1, qs.length - 1) * 100) + " %</span></div>" + (step > 0 && qs[step - 1].sec !== q.sec && CHEERS[q.sec] ? "<p class='cheer'>" + esc(CHEERS[q.sec]) + "</p>" : "") + "<p class='kicker'>" + (q.kicker ? q.kicker : ic(SEC_ICO[q.sec]) + " " + SECTIONS[q.sec]) + "</p>";
     if (q.kind === "prepa") return this.vInfo(q);
     if (q.type === "info") return html + this.vInfo(q);
     if (q.type === "text") {
       var dict = this.dictating;
-      html += "<div class='q'>" + bubble(q.sub) + "<h3>" + esc(q.title) + "</h3><div class='tfields'>" + q.fields.map(function (f) { var v = esc(a[f[0]] || ""); return "<label><span class='flab'>" + esc(f[1]) + (f[2] !== "number" ? "<button type='button' class='micsm" + (dict === f[0] ? " on" : "") + "' data-dictate='" + f[0] + "' aria-label='" + (dict === f[0] ? "Arrêter la dictée" : "Dicter") + "'>" + (dict === f[0] ? "■ Stop" : "🎤 Dicter") + "</button>" : "") + "</span>" + (f[2] === "area" ? "<textarea data-field='" + f[0] + "' rows='3' placeholder='" + esc(f[3]) + "'>" + v + "</textarea>" : "<input data-field='" + f[0] + "' type='" + f[2] + "' value='" + v + "' placeholder='" + esc(f[3]) + "'" + (f[2] === "number" ? " min='10' max='99' inputmode='numeric'" : "") + ">") + "</label>"; }).join("") + "</div>" + (this.dictMsg ? "<p class='why'>" + esc(this.dictMsg) + "</p>" : "") + "<p class='note'>Astuce : le micro 🎤 du clavier de ton téléphone permet aussi de dicter, dans n'importe quel champ.</p></div>";
+      html += "<div class='q'>" + bubble(q.sub) + "<h3>" + esc(q.title) + "</h3><div class='tfields'>" + q.fields.map(function (f) { var v = esc(a[f[0]] || ""); return "<label><span class='flab'>" + esc(f[1]) + (f[2] !== "number" ? "<button type='button' class='micsm" + (dict === f[0] ? " on" : "") + "' data-dictate='" + f[0] + "' aria-label='" + (dict === f[0] ? "Arrêter la dictée" : "Dicter") + "'>" + (dict === f[0] ? "■ Stop" : ic("mic") + " Dicter") + "</button>" : "") + "</span>" + (f[2] === "area" ? "<textarea data-field='" + f[0] + "' rows='3' placeholder='" + esc(f[3]) + "'>" + v + "</textarea>" : "<input data-field='" + f[0] + "' type='" + f[2] + "' value='" + v + "' placeholder='" + esc(f[3]) + "'" + (f[2] === "number" ? " min='10' max='99' inputmode='numeric'" : "") + ">") + "</label>"; }).join("") + "</div>" + (this.dictMsg ? "<p class='why'>" + esc(this.dictMsg) + "</p>" : "") + "<p class='note'>Astuce : le micro du clavier de ton téléphone permet aussi de dicter, dans n'importe quel champ.</p></div>";
       return html + "<div class='cta'><button class='btn big' data-act='next'>Continuer</button></div>";
     }
     if (q.type === "photo") return html + this.vPhotoStep(q);
@@ -2017,12 +2059,12 @@
     if (q.prefill && a[q.id] === undefined) { var pf = q.prefill(a); if (pf.length) { a[q.id] = pf; this.prefilled[q.id] = true; this.save(); val = a[q.id]; } }
     var hidden = q.hideOpts ? q.hideOpts(a) : [];
     html += "<div class='q'>" + bubble(q.sub) + "<h3>" + esc(qtitle) + "</h3>";
-    if (q.timer && this.state.washAt && Date.now() - this.state.washAt < 300000) html += "<p class='timer' data-timer='" + (this.state.washAt + 300000) + "'>⏱ Encore " + fmtLeft(this.state.washAt + 300000) + ". Tu peux attendre, ou répondre maintenant.</p>";
-    if (this.prefilled[q.id]) html += "<p class='cheer'>✨ On a déjà coché ce que tu nous as dit. Décoche ou ajoute si besoin.</p>";
+    if (q.timer && this.state.washAt && Date.now() - this.state.washAt < 300000) html += "<p class='timer' data-timer='" + (this.state.washAt + 300000) + "'>Encore " + fmtLeft(this.state.washAt + 300000) + ". Tu peux attendre, ou répondre maintenant.</p>";
+    if (this.prefilled[q.id]) html += "<p class='cheer'>On a déjà coché ce que tu nous as dit. Décoche ou ajoute si besoin.</p>";
     if (q.link) html += "<a class='ext' href='" + q.link[1] + "' target='_blank' rel='noopener'>" + esc(q.link[0]) + " ↗</a>";
     html += "<div class='opts'>" + q.options.filter(function (o) { return hidden.indexOf(o[0]) < 0; }).map(function (o) {
       var on = q.multi ? (val || []).indexOf(o[0]) > -1 : val === o[0];
-      return "<button class='opt' data-q='" + q.id + "' data-v='" + esc(o[0]) + "' aria-pressed='" + on + "'><span class='ico" + (emo(q.id, o[0]) ? " emo" : "") + "'>" + (emo(q.id, o[0]) || icon(o[3])) + "</span><span class='lbl'><span>" + esc(o[1]) + (OPT_DEF[q.id + "." + o[0]] ? "<sup class='ast'>*</sup>" : "") + "</span>" + (o[2] ? "<small>" + esc(o[2]) + "</small>" : "") + "</span><span class='" + (q.multi ? "chk" : "rad") + "'></span></button>";
+      return "<button class='opt' data-q='" + q.id + "' data-v='" + esc(o[0]) + "' aria-pressed='" + on + "'>" + optIcon(q.id, o[0], o[3]) + "<span class='lbl'><span>" + esc(o[1]) + (OPT_DEF[q.id + "." + o[0]] ? "<sup class='ast'>*</sup>" : "") + "</span>" + (o[2] ? "<small>" + esc(o[2]) + "</small>" : "") + "</span><span class='" + (q.multi ? "chk" : "rad") + "'></span></button>";
     }).join("") + "</div>";
     var defl = q.options.filter(function (o) { return OPT_DEF[q.id + "." + o[0]]; });
     if (defl.length) html += "<details class='defs'><summary>* Ce que veulent dire ces mots</summary><dl>" + defl.map(function (o) { return "<dt>" + esc(o[1]) + "</dt><dd>" + esc(OPT_DEF[q.id + "." + o[0]]) + "</dd>"; }).join("") + (q.id === "pt_boutons" ? "<dt>Acné</dt><dd>" + esc(OPT_DEF["concerns.acne"]) + "</dd>" : "") + "</dl></details>";
@@ -2041,7 +2083,7 @@
     var html = "<p class='kicker'>" + (a.prenom ? esc(a.prenom) + ", voici ta peau" : "Ton résultat") + "</p><h3>" + esc(label) + "</h3><p>" + esc(I.what) + "</p>" + whyBox;
     if (sp.acne) html += "<div class='whybox'><b>À tendance acnéique</b><p>Ta peau fait facilement des boutons. Choisis des produits « non comédogènes », ne perce pas tes boutons (ils laissent des marques, surtout sur peau mate à foncée) et introduis un seul actif à la fois. Si tes boutons sont nombreux, douloureux, sous la peau ou laissent des marques, un médecin ou un ou une dermatologue peut te proposer un traitement : l'acné se soigne.</p></div>";
     html += "<div class='whybox'><b>Pourquoi ta peau est comme ça</b><p>" + esc(W.why) + "</p></div>";
-    html += "<div class='dodont'><div class='whybox do'><b>Ce qui t'aide</b><ul class='tipl'>" + I.tips.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div><div class='whybox dont'><b>À éviter</b><ul class='tipl'>" + W.avoid.concat(sp.sensible ? ["Cumuler plusieurs actifs forts le même soir", "Les parfums et l'alcool asséchant"] : []).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div></div>";
+    html += "<div class='dodont'><div class='whybox do'><b>Ce qui t'aide</b><ul class='tipl'>" + I.tips.map(function (t) { var p = t.split("|"); return "<li>" + ic(p[0]) + " " + esc(p[1]) + "</li>"; }).join("") + "</ul></div><div class='whybox dont'><b>À éviter</b><ul class='tipl'>" + W.avoid.concat(sp.sensible ? ["Cumuler plusieurs actifs forts le même soir", "Les parfums et l'alcool asséchant"] : []).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div></div>";
     if (a.carnation === "foncee" || a.carnation === "tresfoncee" || a.carnation === "mate") html += "<div class='myth'><b>Peau mate à foncée</b><p>La moindre inflammation (bouton percé, irritation, gommage trop fort) peut laisser une marque brune qui dure des mois. La crème solaire chaque matin et la douceur sont tes meilleures alliées.</p></div>";
     if (a.spfHabit && a.spfHabit !== "tlj") html += "<div class='myth'><b>Ta priorité numéro un</b><p>Une crème solaire tous les matins, toute l'année, même par temps gris : les UVA traversent les nuages et les vitres. C'est le geste qui protège le plus ta peau, quel que soit son type.</p></div>";
     if (sp.type === "grasse" || sp.type === "mixte") html += "<div class='myth'><b>Idée reçue</b><p>« Une peau grasse n'a pas besoin de crème. » <strong>Faux.</strong> Le sébum (le gras) et l'eau sont deux choses différentes. Une peau grasse peut manquer d'eau, et une peau privée d'hydratation tiraille et peut devenir plus inconfortable. La bonne réponse : une texture légère, pas l'absence de crème.</p></div>";
@@ -2056,7 +2098,7 @@
     if (mv.indexOf("sommeil") > -1) ex.push("Le manque de sommeil et le stress se voient sur la peau : une routine du soir simple et régulière aide à la garder confortable.");
     if (ex.length) html += "<div class='whybox'><b>Petites astuces pour ton quotidien</b><ul class='tipl'>" + ex.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>";
     if ((a.antecedents || []).some(function (x) { return x !== "aucun"; })) html += "<p class='care'>Tu as un antécédent suivi par un médecin : ses conseils passent avant les nôtres. On garde ta routine douce et sans actif irritant.</p>";
-    html += "<button class='btn' data-ask='" + esc("Explique-moi simplement mon type de peau : " + label.toLowerCase() + ". Voici ce que j'ai observé : " + sp.why.join(" ") + " Pourquoi ma peau est comme ça, et comment en prendre soin au quotidien ?") + "'>🤖 Explique-moi ma peau</button>";
+    html += "<button class='btn' data-ask='" + esc("Explique-moi simplement mon type de peau : " + label.toLowerCase() + ". Voici ce que j'ai observé : " + sp.why.join(" ") + " Pourquoi ma peau est comme ça, et comment en prendre soin au quotidien ?") + "'>" + ic("spark") + " Explique-moi ma peau</button>";
     var wa = this.host.getAttribute("data-whatsapp");
     if (wa) html += this.sendBox(label);
     if (false) html += "<div class='whybox'><b>Ton rituel personnalisé par Sunsoari</b><p>Envoie ton résultat et 3 photos (face, profil gauche, profil droit, à la lumière du jour, sans maquillage ni filtre) : on te prépare ton espace soin, avec ta routine jour par jour et ton suivi.</p><a class='btn' href='https://wa.me/" + esc(wa.replace(/\D/g, "").replace(/^0/, "33")) + "?text=" + encodeURIComponent("Bonjour Sunsoari, voici mon test de peau : " + label + ". Carnation : " + (a.carnation || "non précisée") + ". Saisons : " + (a.saisons || []).join(", ") + ". Quotidien : " + (a.modeVie || []).join(", ") + ". Crème solaire : " + (a.spfHabit || "non précisé") + ". J'ajoute mes 3 photos.") + "' target='_blank' rel='noopener'>Envoyer sur WhatsApp</a><small class='sub'>Tu choisis toi-même ce que tu envoies. Les photos ne partent jamais automatiquement.</small></div>";
@@ -2085,8 +2127,8 @@
     // Page d'accueil : l'univers Sunsoari (l'eau, le soleil, la maison), puis le choix du parcours.
     if (q.kind === "prepa") return "<div class='welcome'><div class='whero' style=\"background-image:url('" + photo(AMB.accueilV) + "')\"><span class='wbrand'>SUNSOARI</span><span class='wsun'>" + SUNNY + "</span><div class='wtext'><p class='kicker'>Mon Rituel</p><h1>Ta maison de soin, <em>solaire</em> et pure</h1><p>Un diagnostic doux pour ta peau, tes cheveux et ta douche, inspiré des rituels d'Afrique et d'Asie.</p></div></div>" +
       "<div class='wname'><span><b>Sun</b>la lumière</span><span><b>Sunsu</b>la pureté</span><span><b>So</b>la maison</span></div>" +
-      "<p class='wq'>Comment veux-tu commencer ?</p><div class='wpaths'><button class='pathcard main' data-act='modeexpress'><span class='pe'>⚡</span><span><b>L'essentiel</b><small>5 minutes · photo de ton visage, ton type de peau et ta routine</small></span><span class='pa'>→</span></button><button class='pathcard' data-act='modefull'><span class='pe'>🌿</span><span><b>Le diagnostic complet</b><small>15 minutes · visage, corps et cheveux en détail</small></span><span class='pa'>→</span></button></div>" +
-      "<details class='wprep'><summary>🧴 Pour des réponses justes</summary><ul><li>🏠 Sois chez toi, ou près d'un lavabo.</li><li>🧼 Garde ton nettoyant habituel et une serviette à portée de main.</li><li>💧 On te demandera de te laver le visage, puis d'attendre 5 minutes sans rien mettre. Un minuteur t'accompagne.</li><li>🕊️ Pas de lavabo sous la main ? Tu pourras répondre de mémoire.</li></ul></details>" +
+      "<p class='wq'>Comment veux-tu commencer ?</p><div class='wpaths'><button class='pathcard main' data-act='modeexpress'><span class='pe'>" + icon("bolt") + "</span><span><b>L'essentiel</b><small>5 minutes · photo de ton visage, ton type de peau et ta routine</small></span><span class='pa'>→</span></button><button class='pathcard' data-act='modefull'><span class='pe'>" + icon("leaf") + "</span><span><b>Le diagnostic complet</b><small>15 minutes · visage, corps et cheveux en détail</small></span><span class='pa'>→</span></button></div>" +
+      "<details class='wprep'><summary>" + ic("bottle") + " Pour des réponses justes</summary><ul><li>" + ic("home") + " Sois chez toi, ou près d'un lavabo.</li><li>" + ic("soap") + " Garde ton nettoyant habituel et une serviette à portée de main.</li><li>" + ic("drop") + " On te demandera de te laver le visage, puis d'attendre 5 minutes sans rien mettre. Un minuteur t'accompagne.</li><li>" + ic("wind") + " Pas de lavabo sous la main ? Tu pourras répondre de mémoire.</li></ul></details>" +
       "<p class='wfoot'>Gratuit · sans inscription · tu pourras compléter ton diagnostic plus tard</p></div>";
     if (q.kind === "test") return html + "<h3>Découvrons ton type de peau</h3><p class='sub'>Beaucoup de personnes ne le connaissent pas, ou se trompent : une peau qui brille peut aussi manquer d'eau. On regarde plusieurs signes, pas un seul.</p><p class='alt-t'>Le test du visage nu, en 2 minutes</p><ol class='guide'><li>Lave ton visage avec ton nettoyant habituel, ou à l'eau tiède.</li><li>Sèche en tamponnant, sans frotter.</li><li>Ne mets rien : ni crème, ni maquillage.</li><li>Dis-nous tout de suite ce que tu ressens. Puis réponds aux questions suivantes pendant que les 5 minutes passent : on te redemandera ensuite comment est ta peau.</li></ol><details class='types'><summary>Les types de peau en bref</summary>" + ["normale", "seche", "mixte", "grasse"].map(function (k) { return "<p><b>" + SKIN_INFO[k].t + "</b> · " + esc(SKIN_WHY[k].why) + "</p>"; }).join("") + "<p>Une peau peut aussi être <b>sensible</b>, <b>déshydratée</b> ou <b>à tendance acnéique</b>, quel que soit son type : on le regarde aussi.</p></details></div><div class='cta'><button class='btn big' data-act='washdone'>C'est fait, mon visage est lavé</button><button class='btn link' data-act='washmemo'>Je ne peux pas maintenant : je réponds de mémoire</button></div>";
     if (q.kind === "peau") return html + this.skinResult(true) + glossaire(["deshy", "barriere", "sebum"]) + "</div><div class='cta'><button class='btn big' data-act='next'>Continuer</button></div>";
@@ -2238,7 +2280,7 @@
       var c = (s.checks[today] || {})[blk[0]] || [];
       html += "<div class='plan'><b>" + blk[1] + "</b>" + (blk[2].length ? blk[2].map(function (it) { var p = byId(it.id), on = c.indexOf(it.step) > -1; var later = (intro[it.id] || 1) > cw; if (later) return "<p class='pstep later'><span class='tick'></span><span>" + esc(STEP_LABEL[it.step] || it.step) + " · <small>à partir de la semaine " + intro[it.id] + "</small></span></p>"; return "<button class='pstep' data-check='" + blk[0] + "|" + it.step + "' aria-pressed='" + on + "'><span class='tick'>" + (on ? "✓" : "") + "</span><span>" + esc(STEP_LABEL[it.step] || it.step) + " · <small>" + esc(p ? p.name : "") + "</small></span></button>"; }).join("") : "<p class='empty'>Un nettoyage doux suffit.</p>") + "</div>";
     });
-    html += "<p class='sect'>Journal de peau</p><div class='mood'><p>Comment ta peau se sent-elle aujourd'hui ?</p><div>" + [["1", "Mauvais", "☹"], ["2", "Bof", "🙁"], ["3", "Ça va", "🙂"], ["4", "Bien", "😊"], ["5", "Génial", "😄"]].map(function (m) { return "<button data-mood='" + m[0] + "' aria-pressed='" + (s.journal[today] === m[0]) + "'><span>" + m[2] + "</span><small>" + m[1] + "</small></button>"; }).join("") + "</div></div>";
+    html += "<p class='sect'>Journal de peau</p><div class='mood'><p>Comment ta peau se sent-elle aujourd'hui ?</p><div>" + [["1", "Mauvais", -3], ["2", "Bof", -1.5], ["3", "Ça va", 0], ["4", "Bien", 1.8], ["5", "Génial", 3.2]].map(function (m) { return "<button data-mood='" + m[0] + "' aria-pressed='" + (s.journal[today] === m[0]) + "'><span><svg class='i' viewBox='0 0 24 24' aria-hidden='true'><circle cx='12' cy='12' r='9'/><path d='M9 10h.01M15 10h.01'/><path d='M8 15q4 " + m[2] + " 8 0'/></svg></span><small>" + m[1] + "</small></button>"; }).join("") + "</div></div>";
     var tips = insights(a);
     if (tips.length) html += "<p class='sect'>Mes conseils personnalisés</p><div class='advice'>" + tips.map(function (t) { return "<details><summary>" + esc(t[0]) + "</summary><p>" + esc(t[1]) + "</p></details>"; }).join("") + "</div>";
     html += "<details class='compare'><summary>Ce que tu peux attendre, et quand</summary><div class='delays'>" + [["Semaines 2 à 4", "Une peau plus confortable, moins de réactions"], ["Semaines 6 à 10", "Une petite poussée est possible quand les actifs arrivent : elle doit se calmer"], ["Mois 3 à 4", "Un grain de peau plus régulier"], ["Mois 4 à 6", "Des marques qui s'estompent, avec la protection solaire chaque jour"]].map(function (x) { return "<p><b>" + x[0] + "</b><span>" + x[1] + "</span></p>"; }).join("") + "</div><p class='note'>Repères généraux : chaque peau va à son rythme. Brûlure, rougeur qui dure, démangeaisons, plaques ou peau qui pèle : arrête le dernier produit ajouté et demande conseil à un ou une dermatologue.</p></details>";
@@ -2275,7 +2317,7 @@
   A.hasPlus = function () { return this.host.hasAttribute("data-plus") || (this.state.plusUntil || 0) > Date.now(); };
   A.lockCard = function (tab) {
     var t = PLUS_TABS[tab];
-    return "<div class='whybox lock'><b>🔒 " + esc(t[0]) + " avec Sunsoari+</b><ul class='tipl'>" + t[1].map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul><p class='sub'>7 jours gratuits, puis " + PLANS.mensuel.price + " par mois ou " + PLANS.annuel.price + " par an. Sans engagement.</p><button class='btn big' data-view='plus'>Essayer gratuitement</button></div><p class='note'>Ton diagnostic, ta routine et tes recommandations restent gratuits, pour toujours.</p>";
+    return "<div class='whybox lock'><b>" + ic("lock") + " " + esc(t[0]) + " avec Sunsoari+</b><ul class='tipl'>" + t[1].map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul><p class='sub'>7 jours gratuits, puis " + PLANS.mensuel.price + " par mois ou " + PLANS.annuel.price + " par an. Sans engagement.</p><button class='btn big' data-view='plus'>Essayer gratuitement</button></div><p class='note'>Ton diagnostic, ta routine et tes recommandations restent gratuits, pour toujours.</p>";
   };
   var PAY = [["applepay", "Apple Pay", "Paiement en un geste sur iPhone, iPad et Mac"], ["carte", "Carte bancaire", "CB, Visa, Mastercard"], ["paypal", "PayPal", "Avec ton compte PayPal"], ["klarna", "Klarna", "Paiement fractionné, avec l'abonnement annuel"]];
   A.vPlus = function () {
@@ -2335,7 +2377,7 @@
     if (this.ptab === "routines") html += "<button class='reco-card' data-view='reveal'><b>Ma routine Sunsoari</b><span>Créée " + (s.doneAt ? "le " + new Date(s.doneAt).toLocaleDateString("fr-FR") : "après ton diagnostic") + " · Matin, Soir, Hebdo, Douche</span></button><button class='btn link' data-act='restart'>Refaire mon diagnostic</button>";
     else {
       var ids = this.ptab === "etagere" ? s.shelf : this.ptab === "souhaits" ? s.wish : s.scans.map(function (x) { return x.id; });
-      if (!ids.length) html += "<p class='empty'>" + { etagere: "Ajoute ici les produits que tu utilises : on vérifie qu'ils vont bien ensemble.", souhaits: "Touche ♡ sur un produit pour le garder ici.", scans: "Aucun scan pour l'instant." }[this.ptab] + "</p><button class='btn ghost' data-view='scan'>Scanner un produit</button>";
+      if (!ids.length) html += "<p class='empty'>" + { etagere: "Ajoute ici les produits que tu utilises : on vérifie qu'ils vont bien ensemble.", souhaits: "Touche le cœur sur un produit pour le garder ici.", scans: "Aucun scan pour l'instant." }[this.ptab] + "</p><button class='btn ghost' data-view='scan'>Scanner un produit</button>";
       else html += "<div class='list'>" + ids.map(function (id) { var p = byId(id) || (s.scans.filter(function (x) { return x.id === id; })[0] || {}).p; return p ? self.rowProduct(p) : ""; }).join("") + "</div>";
       if (this.ptab === "etagere" && s.shelf.length > 1) html += this.shelfCheck();
     }
@@ -2499,12 +2541,12 @@
   // Dans une page intégrée (iframe), le navigateur peut interdire le micro : on le détecte, puis on bascule sur la dictée du clavier.
   var MIC = { blocked: false };
   try { var pp = document.permissionsPolicy || document.featurePolicy; if (pp && pp.allowsFeature && !pp.allowsFeature("microphone")) MIC.blocked = true; } catch (e) {}
-  var MIC_MSG = "Le micro intégré n'est pas autorisé sur cette page. Touche le champ, puis le 🎤 du clavier de ton téléphone : la dictée du clavier marche partout.";
+  var MIC_MSG = "Le micro intégré n'est pas autorisé sur cette page. Touche le champ, puis le micro du clavier de ton téléphone : la dictée du clavier marche partout.";
   function micFailed(err) { return ["not-allowed", "service-not-allowed", "audio-capture"].indexOf(err) > -1; }
   A.vVoice = function () {
     var v = this.voice = this.voice || { text: "", rec: false }, a = this.state.answers, filled = this.voiceFilled;
     var html = "<div class='q'><h3>Raconte-moi ta peau, en quelques phrases</h3><p class='sub'>Parle comme à une amie : qui tu es, ton âge, ton rythme de vie, ta routine, ce qui te gêne sur la peau, les cheveux ou le corps, ton budget. On remplit tes réponses pour toi, tu vérifies ensuite.</p></div>";
-    html += "<div class='voicebox'><button class='mic" + (v.rec ? " on" : "") + "' data-act='" + (v.rec ? "voicestop" : "voicestart") + "' aria-label='" + (v.rec ? "Arrêter" : "Parler") + "'>" + (v.rec ? "■" : "🎤") + "</button><span>" + (v.rec ? "Je t'écoute\u2026 touche pour arrêter" : SpeechRec && !MIC.blocked ? "Touche le micro et parle" : "Touche la zone de texte, puis le 🎤 de ton clavier") + "</span></div>";
+    html += "<div class='voicebox'><button class='mic" + (v.rec ? " on" : "") + "' data-act='" + (v.rec ? "voicestop" : "voicestart") + "' aria-label='" + (v.rec ? "Arrêter" : "Parler") + "'>" + (v.rec ? "■" : icon("mic")) + "</button><span>" + (v.rec ? "Je t'écoute\u2026 touche pour arrêter" : SpeechRec && !MIC.blocked ? "Touche le micro et parle" : "Touche la zone de texte, puis le micro de ton clavier") + "</span></div>";
     html += "<textarea id='voicetext' data-voicetext='1' rows='6' placeholder='Ex. : Je m&#39;appelle Awa, j&#39;ai 32 ans, je suis entrepreneure et maman. J'ai la peau mixte, des boutons sur le menton et des marques. Cheveux crépus secs. Je fais une routine le soir seulement. Budget 40 € par mois.'>" + esc(v.text) + "</textarea>";
     html += "<div class='ex'>" + ["Je suis…, j'ai … ans", "Mon métier, mon rythme", "Ma routine aujourd'hui", "Peau, cheveux, corps : ce qui me gêne", "Mon budget"].map(function (x) { return "<span>" + x + "</span>"; }).join("") + "</div>";
     if (this.voiceMsg) html += "<p class='why'>" + esc(this.voiceMsg) + "</p>";
@@ -2516,7 +2558,7 @@
   A.dictate = function (field) {
     var self = this, a = this.state.answers;
     if (this.dictating === field) { try { this.recog && this.recog.stop(); } catch (e) {} this.dictating = null; return this.render(); }
-    if (!SpeechRec || MIC.blocked) { this.dictMsg = MIC.blocked ? MIC_MSG : "La dictée intégrée n'existe pas sur ce navigateur : touche le champ, puis le 🎤 de ton clavier."; this.render(); alertField(this, field); return; }
+    if (!SpeechRec || MIC.blocked) { this.dictMsg = MIC.blocked ? MIC_MSG : "La dictée intégrée n'existe pas sur ce navigateur : touche le champ, puis le micro de ton clavier."; this.render(); alertField(this, field); return; }
     try {
       if (this.recog) try { this.recog.stop(); } catch (e) {}
       var rec = this.recog = new SpeechRec(), base = a[field] ? String(a[field]).trim() + " " : "";
@@ -2670,7 +2712,7 @@
     var self = this, s = this.state, a = s.answers, sp = skinProfile(a), tab = this.etab || "routine", plus = this.hasPlus();
     var chips = [a.age ? (/ans/.test(a.age) ? a.age : a.age + " ans") : "", sp ? SKIN_INFO[sp.type].t + (sp.sensible ? ", sensible" : "") : "", (a.concerns || []).filter(function (c) { return c !== "aucune"; }).slice(0, 3).map(function (c) { return TAG_LABEL[c] || c; }).join(" · ")].filter(Boolean);
     var html = "<div class='esphead'><p class='kicker'>Ton espace soin · Diagnostic du " + new Date(s.doneAt || Date.now()).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) + "</p><h3>Le rituel " + (a.prenom ? "de " + esc(a.prenom) : "de ta peau") + "</h3><div class='chips'>" + chips.map(function (c) { return "<span>" + esc(c) + "</span>"; }).join("") + "</div></div>";
-    html += "<div class='etabs' role='tablist'>" + ESP_TABS.map(function (t) { return "<button role='tab' data-etab='" + t[0] + "' aria-selected='" + (tab === t[0]) + "'>" + t[1] + (PLUS_TABS[t[0]] && !plus ? " 🔒" : "") + "</button>"; }).join("") + "</div>";
+    html += "<div class='etabs' role='tablist'>" + ESP_TABS.map(function (t) { return "<button role='tab' data-etab='" + t[0] + "' aria-selected='" + (tab === t[0]) + "'>" + t[1] + (PLUS_TABS[t[0]] && !plus ? " " + ic("lock") : "") + "</button>"; }).join("") + "</div>";
     if (PLUS_TABS[tab] && !plus) return html + this.lockCard(tab);
     return html + ({ routine: this.eRoutine, planner: this.ePlanner, evolution: this.eEvolution, semaine: this.eSemaine, soleil: this.eSoleil, reco: this.eReco, cheveux: this.eCheveux, produits: this.eProduits, diagnostic: this.eDiagnostic, astuces: this.eAstuces }[tab] || this.eRoutine).call(this);
   };
@@ -2753,17 +2795,17 @@
   };
   A.meteoCard = function () {
     var a = this.state.answers;
-    if (!a.ville) return "<div class='whybox'><b>🌤️ Ma météo peau</b><p class='sub'>Indique ta ville pour adapter tes conseils au soleil, à l'humidité et à la pollution du jour.</p><button class='btn ghost' data-act='editville'>Ajouter ma ville</button></div>";
+    if (!a.ville) return "<div class='whybox'><b>" + ic("cloudsun") + " Ma météo peau</b><p class='sub'>Indique ta ville pour adapter tes conseils au soleil, à l'humidité et à la pollution du jour.</p><button class='btn ghost' data-act='editville'>Ajouter ma ville</button></div>";
     this.loadMeteo();
     var m = this.meteo || {};
-    if (m.err) return "<div class='whybox'><b>🌤️ Ma météo peau</b><p>" + esc(m.err) + "</p></div>";
-    if (!m.data) return "<div class='whybox'><b>🌤️ Ma météo peau</b><p class='sub'>Chargement de la météo de " + esc(a.ville) + "…</p></div>";
+    if (m.err) return "<div class='whybox'><b>" + ic("cloudsun") + " Ma météo peau</b><p>" + esc(m.err) + "</p></div>";
+    if (!m.data) return "<div class='whybox'><b>" + ic("cloudsun") + " Ma météo peau</b><p class='sub'>Chargement de la météo de " + esc(a.ville) + "…</p></div>";
     var d = m.data, tips = [];
     var uv = Math.round(d.uv || 0);
-    tips.push(uv >= 8 ? "☀️ UV très forts (" + uv + ") : crème solaire généreuse, à renouveler toutes les 2 heures dehors, et l'ombre aux heures chaudes." : uv >= 6 ? "☀️ UV forts (" + uv + ") : crème solaire le matin et retouche à midi si tu sors." : uv >= 3 ? "🌤️ UV modérés (" + uv + ") : ta crème solaire du matin suffit, retouche si tu restes dehors." : "☁️ UV faibles (" + uv + ") : garde ta crème solaire du matin, les UVA traversent les nuages.");
-    if (d.hum != null) tips.push(d.hum < 40 ? "🏜️ Air sec (" + d.hum + " % d'humidité) : une crème un peu plus riche, et pense à tes lèvres." : d.hum > 75 ? "💧 Air humide (" + d.hum + " %) : des textures légères suffisent, en gel ou en lait." : "💧 Humidité confortable (" + d.hum + " %).");
-    if (d.aqi != null) tips.push(d.aqi > 60 ? "🏙️ Air pollué aujourd'hui (indice " + Math.round(d.aqi) + ") : un vrai nettoyage le soir, en deux temps si tu portes du maquillage ou de la crème solaire." : "🍃 Qualité de l'air correcte (indice " + Math.round(d.aqi) + ").");
-    return "<div class='whybox'><b>🌤️ Ma météo peau · " + esc(m.place || a.ville) + (d.temp != null ? " · " + Math.round(d.temp) + " °C" : "") + "</b><ul class='tipl'>" + tips.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul><small>Données Open-Meteo, mises à jour à chaque ouverture.</small></div>";
+    tips.push(uv >= 8 ? "sun|UV très forts (" + uv + ") : crème solaire généreuse, à renouveler toutes les 2 heures dehors, et l'ombre aux heures chaudes." : uv >= 6 ? "sun|UV forts (" + uv + ") : crème solaire le matin et retouche à midi si tu sors." : uv >= 3 ? "cloudsun|UV modérés (" + uv + ") : ta crème solaire du matin suffit, retouche si tu restes dehors." : "cloud|UV faibles (" + uv + ") : garde ta crème solaire du matin, les UVA traversent les nuages.");
+    if (d.hum != null) tips.push(d.hum < 40 ? "crack|Air sec (" + d.hum + " % d'humidité) : une crème un peu plus riche, et pense à tes lèvres." : d.hum > 75 ? "drop|Air humide (" + d.hum + " %) : des textures légères suffisent, en gel ou en lait." : "drop|Humidité confortable (" + d.hum + " %).");
+    if (d.aqi != null) tips.push(d.aqi > 60 ? "city|Air pollué aujourd'hui (indice " + Math.round(d.aqi) + ") : un vrai nettoyage le soir, en deux temps si tu portes du maquillage ou de la crème solaire." : "leaf|Qualité de l'air correcte (indice " + Math.round(d.aqi) + ").");
+    return "<div class='whybox'><b>" + ic("cloudsun") + " Ma météo peau · " + esc(m.place || a.ville) + (d.temp != null ? " · " + Math.round(d.temp) + " °C" : "") + "</b><ul class='tipl'>" + tips.map(function (t) { var p = t.split("|"); return "<li>" + ic(p[0]) + " " + esc(p[1]) + "</li>"; }).join("") + "</ul><small>Données Open-Meteo, mises à jour à chaque ouverture.</small></div>";
   };
   A.eSoleil = function () {
     var R = buildRoutine(this.state.answers), spf = R.matin.filter(function (x) { return x.step === "spf"; }).map(function (x) { return byId(x.id); }).filter(Boolean);
@@ -2805,7 +2847,7 @@
   A.eDiagnostic = function () {
     var s = this.state, a = s.answers, an = s.analysis, d0 = (s.evo || []).filter(function (e) { return e.day0; })[0];
     var html = "<p class='sub'>Analyse à partir de tes réponses" + (an ? " et de tes photos" : "") + ". C'est un diagnostic cosmétique, pas un avis médical.</p>";
-    if (s.mode === "express") html += "<div class='whybox'><b>🌿 Affine ton diagnostic</b><p>Tu as fait l'essentiel. En 10 minutes de plus (photo, pores, saisons, texture précise de tes cheveux, porosité…), ta routine sera encore plus juste. Tes réponses déjà données sont gardées.</p><button class='btn' data-act='affiner'>Compléter mon diagnostic</button></div>";
+    if (s.mode === "express") html += "<div class='whybox'><b>" + ic("leaf") + " Affine ton diagnostic</b><p>Tu as fait l'essentiel. En 10 minutes de plus (photo, pores, saisons, texture précise de tes cheveux, porosité…), ta routine sera encore plus juste. Tes réponses déjà données sont gardées.</p><button class='btn' data-act='affiner'>Compléter mon diagnostic</button></div>";
     if (d0 && d0.photos.some(Boolean)) html += "<p class='sect left'>Tes photos du jour 0</p><div class='ph3'>" + d0.photos.map(function (p, k) { return p ? "<img src='" + p + "' alt='" + CAP_SLOTS[k][1] + "'>" : "<i></i>"; }).join("") + "</div>";
     if (an && an.resume) html += "<div class='whybox'><b>Ce que nous avons observé</b><p>" + esc(an.resume) + "</p>" + (an.points.length ? "<ul class='tipl'>" + an.points.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul>" : "") + "</div>";
     if (an && an.dermato) html += "<p class='care'>" + esc(an.dermato) + "</p>";
@@ -2929,7 +2971,7 @@
     (window.SUNSOARI_CONTENT || []).forEach(function (c) { if (c && c.id && c.url) items.push({ id: "ext:" + c.id, type: c.type || "post", title: c.title || "", sub: c.src || "", url: c.url, img: c.img || "" }); });
     return items;
   };
-  A.favBtn = function (id) { var on = this.state.favs.indexOf(id) > -1; return "<button class='favbtn' data-fav='" + esc(id) + "' aria-pressed='" + on + "' aria-label='" + (on ? "Retirer de mes favoris" : "Ajouter à mes favoris") + "'>" + (on ? "♥" : "♡") + "</button>"; };
+  A.favBtn = function (id) { var on = this.state.favs.indexOf(id) > -1; return "<button class='favbtn' data-fav='" + esc(id) + "' aria-pressed='" + on + "' aria-label='" + (on ? "Retirer de mes favoris" : "Ajouter à mes favoris") + "'>" + icon("heart") + "</button>"; };
   A.contentRow = function (c) {
     var go = c.url ? "<a class='crow-main' href='" + esc(c.url) + "' target='_blank' rel='noopener'>" : "<button class='crow-main' " + c.open + ">";
     return "<div class='crow'>" + go + (c.img ? "<img src='" + esc(c.img) + "' alt=''>" : "<i class='cico'>" + icon(c.type === "video" ? "sun" : c.type === "post" ? "heart" : "leaf") + "</i>") + "<span><small>" + esc({ video: "Vidéo", post: "Post", article: "Article" }[c.type] + (c.sub ? " · " + c.sub : "")) + "</small><b>" + esc(c.title) + "</b></span>" + (c.url ? "</a>" : "</button>") + this.favBtn(c.id) + "</div>";
@@ -2948,14 +2990,14 @@
     html += "<p class='sect left'>Mes favoris</p><div class='seg-tabs'>" + tabs.map(function (t) { return "<button data-ftab='" + t[0] + "' aria-pressed='" + (tab === t[0]) + "'>" + t[1] + "</button>"; }).join("") + "</div>";
     if (tab === "produits") {
       var list = s.wish.map(byId).filter(Boolean);
-      if (!list.length) html += "<p class='empty'>Touche ♡ sur un produit pour le retrouver ici.</p>";
+      if (!list.length) html += "<p class='empty'>Touche le cœur sur un produit pour le retrouver ici.</p>";
       else {
         html += "<div class='list'>" + list.map(function (p) { return self.rowProduct(p); }).join("") + "</div>";
         if (list.some(function (p) { return p.own; })) html += "<button class='btn big' data-act='addallcart'>Ajouter mes produits Sunsoari au panier</button>";
       }
     } else {
       var items = this.contentItems().filter(function (c) { return c.type === tab && s.favs.indexOf(c.id) > -1; });
-      html += items.length ? "<div class='clist'>" + items.map(function (c) { return self.contentRow(c); }).join("") + "</div>" : "<p class='empty'>Touche ♡ sur " + ({ article: "un article ou un guide", video: "une vidéo ou un tutoriel", post: "un post" })[tab] + " pour le garder ici.</p>";
+      html += items.length ? "<div class='clist'>" + items.map(function (c) { return self.contentRow(c); }).join("") + "</div>" : "<p class='empty'>Touche le cœur sur " + ({ article: "un article ou un guide", video: "une vidéo ou un tutoriel", post: "un post" })[tab] + " pour le garder ici.</p>";
     }
     return html;
   };
@@ -2964,13 +3006,13 @@
   A.vRessources = function () {
     var self = this, tabs = [["guides", "Guides"], ["lexique", "Lexique"], ["ingredients", "Ingrédients"], ["tendances", "Tendances"]];
     var html = "<div class='todayhead'><h3>Ressources</h3></div><div class='seg-tabs'>" + tabs.map(function (t) { return "<button data-rstab='" + t[0] + "' aria-pressed='" + (self.rsTab === t[0]) + "'>" + t[1] + "</button>"; }).join("") + "</div>";
-    if (this.rsTab === "lexique") return html + "<p class='sub'>Les mots de la beauté, expliqués simplement. Touche une question pour lire la réponse.</p>" + LEX_CATS.map(function (c) { return "<p class='sect left'>" + c[1] + "</p>" + glossaire(lexCat(c[0])); }).join("");
+    if (this.rsTab === "lexique") return html + "<p class='sub'>Les mots de la beauté, expliqués simplement. Touche une question pour lire la réponse.</p>" + LEX_CATS.map(function (c) { return "<p class='sect left'>" + ic(c[2]) + " " + c[1] + "</p>" + glossaire(lexCat(c[0])); }).join("");
     if (this.rsTab === "ingredients") return html + this.vIngredients();
     if (this.rsTab === "tendances") return html + this.vTrends();
     if (this.guide) return html + this.vGuide();
-    html += "<button class='reco-card' data-rstab='lexique'><b>📖 Le lexique</b><span>" + Object.keys(GLOSSAIRE).length + " mots expliqués simplement : douche, peau, routine, soleil, cheveux</span></button>";
+    html += "<button class='reco-card' data-rstab='lexique'><b>" + ic("book") + " Le lexique</b><span>" + Object.keys(GLOSSAIRE).length + " mots expliqués simplement : douche, peau, routine, soleil, cheveux</span></button>";
     ["Sunsoari", "Mythe ou vérité", "Académie"].forEach(function (rub) {
-      html += "<p class='sect left'>" + esc(rub) + "</p><div class='carousel stories'>" + STORIES.map(function (st, i) { return st.rub === rub ? "<button class='storycard " + st.tone + (st.img ? " ph" : "") + "' data-story='" + i + "'" + (st.img ? " style=\"background-image:linear-gradient(180deg,rgba(251,248,243,0) 35%,rgba(251,248,243,.92) 78%),url('" + photo(st.img) + "')\"" : "") + "><span class='tag'>" + (rub === "Mythe ou vérité" ? "Mythe ou vérité" : rub === "Académie" ? "Académie" : "Sunsoari") + " · " + st.slides.length + " écrans" + (storyLocked(i) && !self.hasPlus() ? " · 🔒 Sunsoari+" : "") + "</span><b>" + esc(st.title) + "</b></button>" : ""; }).join("") + "</div>";
+      html += "<p class='sect left'>" + esc(rub) + "</p><div class='carousel stories'>" + STORIES.map(function (st, i) { return st.rub === rub ? "<button class='storycard " + st.tone + (st.img ? " ph" : "") + "' data-story='" + i + "'" + (st.img ? " style=\"background-image:linear-gradient(180deg,rgba(251,248,243,0) 35%,rgba(251,248,243,.92) 78%),url('" + photo(st.img) + "')\"" : "") + "><span class='tag'>" + (rub === "Mythe ou vérité" ? "Mythe ou vérité" : rub === "Académie" ? "Académie" : "Sunsoari") + " · " + st.slides.length + " écrans" + (storyLocked(i) && !self.hasPlus() ? " · " + ic("lock") + " Sunsoari+" : "") + "</span><b>" + esc(st.title) + "</b></button>" : ""; }).join("") + "</div>";
     });
     html += "<p class='sect left'>Tutoriels</p><div class='carousel stories'>" + Object.keys(TUTOS).map(function (k) { return "<button class='storycard water' data-tuto='" + k + "'><span class='tag'>Tutoriel · " + TUTOS[k].slides.length + " étapes</span><b>" + esc(TUTOS[k].title) + "</b></button>"; }).join("") + "</div><p class='sect left'>Guides</p>";
     var feed = this.contentItems();
@@ -3059,7 +3101,7 @@
     if (p.step && STEP_FREQ[p.step]) html += "<p class='care'><b>Comment l'utiliser :</b> " + esc(STEP_FREQ[p.step]) + "</p>";
     var tk = TUTOS[p.step] ? p.step : p.step === "douche" ? "douche" : p.step === "nettoyant" ? "demaquillant" : null;
     if (tk) html += "<button class='btn ghost' data-tuto='" + tk + "'>▶ Tutoriel : " + esc(TUTOS[tk].title) + "</button>";
-    html += "<div class='acts'>" + (p.own ? "<a class='btn' href='" + this.cartUrl(p.key, R.scent) + "' target='_top' data-add='" + p.id + "'>Ajouter au panier · " + euro(p.price) + "</a>" : p.id.indexOf("x:") ? "<a class='btn' href='" + esc(this.extUrl(p)) + "' target='_blank' rel='noopener' data-ext='" + p.id + "'>Où l'acheter ↗</a>" : "") + "<button class='btn ghost' data-shelf='" + p.id + "'>" + (this.state.shelf.indexOf(p.id) > -1 ? "Sur mon étagère ✓" : "Ajouter à mon étagère") + "</button><button class='btn ghost' data-wish='" + p.id + "'>" + (this.state.wish.indexOf(p.id) > -1 ? "♥ Dans mes souhaits" : "♡ Souhaits") + "</button></div>";
+    html += "<div class='acts'>" + (p.own ? "<a class='btn' href='" + this.cartUrl(p.key, R.scent) + "' target='_top' data-add='" + p.id + "'>Ajouter au panier · " + euro(p.price) + "</a>" : p.id.indexOf("x:") ? "<a class='btn' href='" + esc(this.extUrl(p)) + "' target='_blank' rel='noopener' data-ext='" + p.id + "'>Où l'acheter ↗</a>" : "") + "<button class='btn ghost' data-shelf='" + p.id + "'>" + (this.state.shelf.indexOf(p.id) > -1 ? "Sur mon étagère ✓" : "Ajouter à mon étagère") + "</button><button class='btn ghost' data-wish='" + p.id + "'>" + (this.state.wish.indexOf(p.id) > -1 ? ic("heart") + " Dans mes souhaits" : ic("heart") + " Souhaits") + "</button></div>";
     html += "<div class='qchips'>" + this.questionsFor(p).map(function (q) { return "<button class='qchip' data-ask='" + esc(q) + "' data-pid='" + p.id + "'>" + esc(q) + "</button>"; }).join("") + "</div>";
     if (!p.own && p.id.indexOf("x:")) html += "<p class='note'>Marque non vendue par Sunsoari et non partenaire. Vérifie la liste d'ingrédients sur l'emballage : les formules varient selon les pays.</p>";
     return html + "</div>";

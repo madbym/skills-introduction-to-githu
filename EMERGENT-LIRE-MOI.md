@@ -22,7 +22,7 @@ Les fichiers `sunsoari-rituel.js` et `sunsoari-beaute.js` sont d'anciennes versi
 
 ## Ce que fait l'application aujourd'hui
 - **Deux chemins au choix** : « L'essentiel » en 5 minutes (environ 31 écrans) ou « Le diagnostic complet » en 15 minutes (environ 51 écrans), à compléter plus tard depuis l'espace soin (`FULL_ONLY`).
-- **Diagnostic complet de 45 à 51 écrans selon les réponses**, une question par écran, avec un émoji par réponse, une barre de progression en 5 parties et un message d'encouragement à chaque nouvelle partie. Il couvre :
+- **Diagnostic complet de 45 à 51 écrans selon les réponses**, une question par écran, avec une icône dessinée au trait par réponse (pas d'émoji), une barre de progression en 5 parties et un message d'encouragement à chaque nouvelle partie. Il couvre :
   - un écran « Avant de commencer » (10 à 15 minutes, être près d'un lavabo) ;
   - la douche ;
   - la photo ou la vidéo du visage ;

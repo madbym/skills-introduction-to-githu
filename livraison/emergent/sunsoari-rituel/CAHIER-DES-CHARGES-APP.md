@@ -296,8 +296,8 @@ Déjà dans le prototype (`sunsoari-app.js`, onglet Aujourd'hui) : le plan d'int
 
 ## 5 novodecies. Deux chemins : l'essentiel ou le complet
 - Dès l'écran « Avant de commencer », la cliente choisit **⚡ L'essentiel · 5 minutes** (environ 31 écrans) ou **🌿 Le diagnostic complet · 15 minutes** (environ 51 écrans).
-- L'essentiel garde ce qui change la routine ou la sécurité : douche, âge, genre, test du visage nu (lavage, fin de journée, réactions, boutons, 5 minutes après), crème solaire, antécédents, carnation, préoccupations, situation particulière, produits déjà utilisés, corps, texture et état des cheveux, cuir chevelu, lavage, envies douche, senteur et budget.
-- Les questions réservées au complet sont listées dans `FULL_ONLY` : « Raconte-moi », photos, pores, zones rêches, crème, déshydratation, saisons, quotidien, ville, cause des réactions, convictions, noms des produits, envies corps, sous-type de cheveux, porosité, diagnostics du cuir chevelu, coiffures, marques, format et notes.
+- L'essentiel garde ce qui change la routine ou la sécurité : douche, photo ou vidéo du visage (facultative), âge, genre, test du visage nu (lavage, fin de journée, réactions, boutons, 5 minutes après), crème solaire, antécédents, carnation, préoccupations, situation particulière, produits déjà utilisés, corps, texture et état des cheveux, cuir chevelu, lavage, envies douche, senteur et budget.
+- Les questions réservées au complet sont listées dans `FULL_ONLY` : « Raconte-moi », photo du cuir chevelu, pores, zones rêches, crème, déshydratation, saisons, quotidien, ville, cause des réactions, convictions, noms des produits, envies corps, sous-type de cheveux, porosité, diagnostics du cuir chevelu, coiffures, marques, format et notes.
 - Dans l'espace soin, l'onglet Diagnostic propose **« Compléter mon diagnostic »** : l'app reprend à la première question restée sans réponse, et les réponses déjà données sont gardées.
 
 ## 5 vicies. Portrait modèle sur l'écran photo

@@ -87,6 +87,9 @@ Suis la section 2 du cahier des charges :
 
 ---
 
+## Message 7 · Finalisation (novembre 2026)
+Voir `MESSAGE-EMERGENT-FINALISATION.md` : mise à jour vers la version finale, vidéo d'accueil, espace créatrice (métaobjets Shopify `sunsoari_contenu`), catalogue de plus de 460 produits et médicaments.
+
 ## Ce que je ne veux pas
 - Pas de faux avis, pas de compteur d'inscrites inventé, pas de compte à rebours, pas de « résultats garantis ».
 - Pas de produits « blanchissants » ou « éclaircissants ».

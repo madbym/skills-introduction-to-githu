@@ -402,7 +402,7 @@
     ".made.trend{background:var(--water-soft);color:var(--water)}",
     "@media (max-width:560px){.top,.body{padding-left:16px;padding-right:16px}.hero{grid-template-columns:1fr}.hero img{max-width:220px;margin:0 auto}}",
     ".opt .ico{width:42px;height:42px;border-radius:50%;background:var(--sand);color:var(--water);transition:background .2s,color .2s,transform .2s}", ".opt .ico svg{width:22px;height:22px;stroke-width:1.5}", ".opt[aria-pressed=true] .ico{background:var(--water);color:#fff;transform:scale(1.06)}", ".ico.mono{font-family:var(--display);font-size:19px;letter-spacing:-.02em;color:var(--water)}", ".ico.sw{background:var(--sw);box-shadow:inset 0 0 0 3px var(--paper),0 0 0 1px var(--line)}", ".opt[aria-pressed=true] .ico.sw{background:var(--sw);box-shadow:inset 0 0 0 3px var(--paper),0 0 0 2px var(--water)}", "svg.i{display:inline-block;width:1.15em;height:1.15em;vertical-align:-.2em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}", ".pathcard .pe svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}", ".mic svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}", ".opt{transition:border-color .2s,background .2s,transform .12s}", ".opt:active{transform:scale(.98)}",
-    ".welcome{margin:-6px 0 0}", ".whero{position:relative;height:440px;border-radius:30px;overflow:hidden;background:var(--water-soft) center/cover no-repeat;box-shadow:0 18px 40px -24px rgba(4,40,80,.45)}",
+    ".welcome{margin:-6px 0 0}", ".wvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}", ".whero{position:relative;height:440px;border-radius:30px;overflow:hidden;background:var(--water-soft) center/cover no-repeat;box-shadow:0 18px 40px -24px rgba(4,40,80,.45)}",
     ".whero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,40,80,.28) 0%,rgba(4,40,80,0) 28%,rgba(251,248,243,0) 46%,rgba(251,248,243,.9) 76%,#fbf8f3 100%)}",
     ".wbrand{position:absolute;z-index:1;top:18px;left:20px;color:#fff;font-size:12px;letter-spacing:.38em;font-weight:600}", ".wsun{position:absolute;z-index:1;top:8px;right:12px;width:62px;height:62px}", ".wsun .sunny{width:62px;height:62px;animation:sunspin 40s linear infinite}",
     "@keyframes sunspin{to{transform:rotate(360deg)}}", ".wtext{position:absolute;z-index:1;left:20px;right:20px;bottom:18px}", ".wtext .kicker{color:var(--water);margin:0 0 4px}",
@@ -2233,6 +2233,7 @@
     ["answers", "refills", "journal", "checks", "steps"].forEach(function (k) { if (!s[k]) s[k] = {}; });
     ["shelf", "wish", "scans", "favs"].forEach(function (k) { if (!s[k]) s[k] = []; });
     this.widget = host.getAttribute("data-widget") || "";
+    this.homeVideo = host.getAttribute("data-home-video") || ""; this.homeVideoSmall = host.getAttribute("data-home-video-mobile") || "";
     this.admin = host.hasAttribute("data-admin"); this.adminUrl = host.getAttribute("data-admin-url") || "";
     this.view = s.done ? "today" : "diag"; this.step = 0; this.photos = {}; this.zone = null;
     this.rtab = "matin"; this.ptab = "catalogue"; this.rsTab = "guides"; this.chat = []; this.busy = false;
@@ -2395,7 +2396,7 @@
     var p = this.progressPct(), a = this.state.answers;
     var html = "<div class='info'>";
     // Page d'accueil : l'univers Sunsoari (l'eau, le soleil, la maison), puis le choix du parcours.
-    if (q.kind === "prepa") return "<div class='welcome'><div class='whero' style=\"background-image:url('" + photo(AMB.accueilV) + "')\"><span class='wbrand'>SUNSOARI</span><span class='wsun'>" + SUNNY + "</span><div class='wtext'><p class='kicker'>Mon Rituel</p><h1>Ta maison de soin, <em>solaire</em> et pure</h1><p>Un diagnostic doux pour ta peau, tes cheveux et ta douche, inspiré des rituels d'Afrique et d'Asie.</p></div></div>" +
+    if (q.kind === "prepa") return "<div class='welcome'><div class='whero' style=\"background-image:url('" + photo(AMB.accueilV) + "')\">" + this.heroVideo() + "<span class='wbrand'>SUNSOARI</span><span class='wsun'>" + SUNNY + "</span><div class='wtext'><p class='kicker'>Mon Rituel</p><h1>Ta maison de soin, <em>solaire</em> et pure</h1><p>Un diagnostic doux pour ta peau, tes cheveux et ta douche, inspiré des rituels d'Afrique et d'Asie.</p></div></div>" +
       "<div class='wname'><span><b>Sun</b>la lumière</span><span><b>Sunsu</b>la pureté</span><span><b>So</b>la maison</span></div>" +
       "<p class='wq'>Comment veux-tu commencer ?</p><div class='wpaths'><button class='pathcard main' data-act='modeexpress'><span class='pe'>" + icon("bolt") + "</span><span><b>L'essentiel</b><small>5 minutes · photo de ton visage, ton type de peau et ta routine</small></span><span class='pa'>→</span></button><button class='pathcard' data-act='modefull'><span class='pe'>" + icon("leaf") + "</span><span><b>Le diagnostic complet</b><small>15 minutes · visage, corps et cheveux en détail</small></span><span class='pa'>→</span></button></div>" +
       "<details class='wprep'><summary>" + ic("bottle") + " Pour des réponses justes</summary><ul><li>" + ic("home") + " Sois chez toi, ou près d'un lavabo.</li><li>" + ic("soap") + " Garde ton nettoyant habituel et une serviette à portée de main.</li><li>" + ic("drop") + " On te demandera de te laver le visage, puis d'attendre 5 minutes sans rien mettre. Un minuteur t'accompagne.</li><li>" + ic("wind") + " Pas de lavabo sous la main ? Tu pourras répondre de mémoire.</li></ul></details>" +
@@ -3264,6 +3265,13 @@
   // ---------- Mes contenus (vidéos et photos de Sunsoari, gérés dans Shopify) ----------
   // window.SUNSOARI_CONTENT = [{ id, type: "video"|"photo"|"post"|"article", title, file, poster, url, place: ["accueil","academie"], step, product, draft }]
   // file : vidéo ou photo déposée dans Shopify (Contenu > Fichiers). url : lien TikTok, Instagram, YouTube…
+  // Vidéo d'ambiance en fond de l'accueil (réglage Shopify « Vidéo d'accueil »). Muette, en boucle, jamais bloquante.
+  A.heroVideo = function () {
+    var small = window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
+    var src = (small && this.homeVideoSmall) || this.homeVideo || this.homeVideoSmall;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    return src && !reduce ? "<video class='wvid' src='" + esc(src) + "' poster='" + esc(photo(AMB.accueilV)) + "' autoplay muted loop playsinline preload='metadata' aria-hidden='true'></video>" : "";
+  };
   A.mine = function () {
     var admin = this.admin;
     return (window.SUNSOARI_CONTENT || []).filter(function (c) { return c && c.id && (c.file || c.url) && (!c.draft || admin); }).map(function (c) {

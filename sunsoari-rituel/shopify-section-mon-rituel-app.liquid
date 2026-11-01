@@ -20,6 +20,18 @@
     assign is_admin = true
   endif
   assign store_handle = shop.permanent_domain | remove: '.myshopify.com'
+  assign home_video_url = nil
+  assign home_video_mobile_url = nil
+  for src in section.settings.home_video.sources
+    if src.mime_type == 'video/mp4'
+      assign home_video_url = src.url
+    endif
+  endfor
+  for src in section.settings.home_video_mobile.sources
+    if src.mime_type == 'video/mp4'
+      assign home_video_mobile_url = src.url
+    endif
+  endfor
 -%}
 
 {%- comment -%}
@@ -78,6 +90,8 @@
     {%- if section.settings.email_endpoint != blank %} data-email-endpoint="{{ section.settings.email_endpoint }}"{% endif %}
     {%- if customer %} data-customer-name="{{ customer.first_name | escape }}"{% endif %}
     {%- if customer and customer.tags contains 'sunsoari-plus' %} data-plus{% endif %}
+    {%- if home_video_url %} data-home-video="{{ home_video_url }}"{% endif %}
+    {%- if home_video_mobile_url %} data-home-video-mobile="{{ home_video_mobile_url }}"{% endif %}
     {%- if is_admin %} data-admin data-admin-url="https://admin.shopify.com/store/{{ store_handle }}"{% endif %}
     data-login-url="{{ routes.account_login_url }}"
     data-register-url="{{ routes.account_register_url }}"></div>
@@ -96,6 +110,8 @@
     ] },
     { "type": "text", "id": "whatsapp", "label": "Numéro WhatsApp pour le rituel personnalisé", "default": "0781737521" },
     { "type": "text", "id": "instagram", "label": "Compte Instagram (sans @)", "default": "sunsoari" },
+    { "type": "video", "id": "home_video", "label": "Vidéo d'accueil (ordinateur)", "info": "Vidéo d'ambiance muette, en boucle, en fond de l'accueil. Format paysage ou carré, idéalement moins de 15 Mo." },
+    { "type": "video", "id": "home_video_mobile", "label": "Vidéo d'accueil (téléphone)", "info": "Version verticale ou plus légère pour le téléphone. Si vide, la vidéo ordinateur est utilisée." },
     { "type": "image_picker", "id": "face_model", "label": "Portrait modèle du visage (créatrice IA)", "info": "Photo verticale 3:4, visage de face et centré. Mention « créé par IA » affichée automatiquement." },
     { "type": "text", "id": "img_base", "label": "Adresse des images (dossier Fichiers Shopify)" },
     { "type": "url", "id": "contact_url", "label": "Lien de contact" },

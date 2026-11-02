@@ -1861,7 +1861,7 @@
     ".list{display:flex;flex-direction:column;gap:8px}",
     ".prow{font:inherit;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border:0;border-radius:16px;padding:12px 14px;cursor:pointer;color:var(--ink)}",
     ".prow span{display:flex;flex-direction:column;min-width:0}",
-    ".prow small{color:var(--muted);font-size:12px}", ".prow .fit{flex:none;display:inline-block;white-space:nowrap}", ".fit.medb{background:#f6e7dd;color:#9a4f2c}", ".minecard{flex:none;width:132px;height:176px;border:0;border-radius:18px;background:var(--sand) center/cover;position:relative;display:flex;align-items:flex-end;padding:10px;text-align:left;font:inherit;cursor:pointer;color:var(--ink);overflow:hidden}", ".minecard.ph{color:#fff}", ".minecard.ph::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.55))}", ".minecard b{position:relative;z-index:1;font-size:13px;line-height:1.25}", ".minecard .play{position:absolute;z-index:1;top:10px;left:10px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.9);color:var(--water);display:flex;align-items:center;justify-content:center}", ".minecard .play svg{width:14px;height:14px;fill:currentColor}", ".minecard .draft{position:absolute;z-index:1;top:10px;right:8px;font-size:10px;background:var(--sun);color:#fff;border-radius:999px;padding:2px 7px}", ".minevid{width:100%;max-height:62vh;border-radius:16px;background:#000;margin:10px 0;object-fit:contain}", ".adminbox{border:1px dashed var(--sun)}", ".adminbox .btn{margin:4px 6px 4px 0}", ".medbox{background:#fbf1ea;border:1px solid #f0d9c8;border-radius:16px;padding:14px;margin:12px 0}", ".medbox p{margin:6px 0;font-size:14px}", ".medbox small{display:block;color:var(--muted);font-size:12px;margin-top:8px}",
+    ".prow small{color:var(--muted);font-size:12px}", ".prow .fit{flex:none;display:inline-block;white-space:nowrap}", ".fit.medb{background:#f6e7dd;color:#9a4f2c}", ".minecard{flex:none;width:132px;height:176px;border:0;border-radius:18px;background:var(--sand) center/cover;position:relative;display:flex;align-items:flex-end;padding:10px;text-align:left;font:inherit;cursor:pointer;color:var(--ink);overflow:hidden}", ".minecard.ph{color:#fff}", ".minecard.ph::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.55))}", ".minecard b{position:relative;z-index:1;font-size:13px;line-height:1.25}", ".minecard .play{position:absolute;z-index:1;top:10px;left:10px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.9);color:var(--water);display:flex;align-items:center;justify-content:center}", ".minecard .play svg{width:14px;height:14px;fill:currentColor}", ".minecard .draft{position:absolute;z-index:1;top:10px;right:8px;font-size:10px;background:var(--sun);color:#fff;border-radius:999px;padding:2px 7px}", ".minevid{width:100%;max-height:62vh;border-radius:16px;background:#000;margin:10px 0;object-fit:contain}", ".adminbox{border:1px dashed var(--sun)}", ".mixh{margin:10px 0 2px;font-weight:600;font-size:14px;display:flex;align-items:center;gap:6px}", ".mixh.ok{color:var(--sage)}", ".mixh.ko{color:#9a4f2c}", ".adminbox .btn{margin:4px 6px 4px 0}", ".medbox{background:#fbf1ea;border:1px solid #f0d9c8;border-radius:16px;padding:14px;margin:12px 0}", ".medbox p{margin:6px 0;font-size:14px}", ".medbox small{display:block;color:var(--muted);font-size:12px;margin-top:8px}",
     ".coll{background:#fff;border-radius:20px;padding:14px;margin-bottom:10px}",
     ".coll p{margin:2px 0 10px;font-size:13px;color:var(--muted)}",
     ".coll .mini{background:var(--sand-soft);border:0}",
@@ -2078,6 +2078,27 @@
       ["Le cuir chevelu", "Démangeaisons, plaques ou chute inhabituelle : parles-en à un ou une dermatologue."]
     ] }
   ];
+  // Guide des associations d'ingrédients, ajouté en dernier pour garder les numéros des autres guides (favoris).
+  var MIX_GUIDE = GUIDES.length;
+  GUIDES.push(
+    { tag: "Ingrédients", title: "Les bons mélanges d'ingrédients", sub: "Ce qui va ensemble, ce qu'il vaut mieux séparer.", days: [
+      ["Ça va bien ensemble · Niacinamide + acide hyaluronique", "Un duo doux, matin ou soir, pour hydrater et équilibrer le sébum."],
+      ["Ça va bien ensemble · Vitamine C + crème solaire", "Le matin, la vitamine C complète la crème solaire face aux effets du soleil. Elle ne la remplace jamais."],
+      ["Ça va bien ensemble · Rétinoïde + céramides ou panthénol", "Une crème réparatrice après le rétinoïde limite les rougeurs et la sécheresse."],
+      ["Ça va bien ensemble · Acide azélaïque + niacinamide", "Pour les rougeurs, les marques et les imperfections. Un duo bien toléré."],
+      ["Ça va bien ensemble · Acide tranexamique + niacinamide", "Un duo courant contre les taches, toujours avec une crème solaire."],
+      ["Ça va bien ensemble · Centella, heartleaf, panthénol", "Des ingrédients apaisants qui s'associent à presque tout."],
+      ["Idée reçue · Vitamine C + niacinamide", "Elles peuvent s'utiliser ensemble. Si ta peau rougit, sépare-les : vitamine C le matin, niacinamide le soir."],
+      ["À séparer · Rétinoïde + acides exfoliants (AHA, BHA)", "Pas le même soir : alterne un soir rétinoïde, un soir exfoliant."],
+      ["À séparer · Rétinoïde + vitamine C", "Vitamine C le matin, rétinoïde le soir."],
+      ["À séparer · Vitamine C + acides exfoliants", "Vitamine C le matin, acides le soir, pour limiter les picotements."],
+      ["À séparer · Peroxyde de benzoyle + rétinoïde", "Ne les superpose pas, sauf si c'est une formule associée prescrite (comme Epiduo). Sinon, un le matin et l'autre le soir, sur avis."],
+      ["À éviter · Plusieurs exfoliants à la fois", "Un seul exfoliant, 1 à 3 fois par semaine. Trop d'acides abîme la barrière cutanée."],
+      ["À éviter · Actifs forts sur peau irritée", "Coup de soleil, eczéma, peau qui brûle : pause des rétinoïdes et des acides jusqu'à ce que la peau soit calme."],
+      ["Grossesse et allaitement", "Pas de rétinoïdes. Pour les acides forts et les huiles essentielles, demande l'avis d'un médecin ou d'une sage-femme."],
+      ["Toujours", "Introduis un seul nouveau produit à la fois, et teste-le 48 heures sur une petite zone (derrière l'oreille ou au creux du coude)."]
+    ] }
+  );
   // ---------------------------------------------------------------------------
   // SCORE DE COMPATIBILITÉ · transparent, calculé sur l'appareil
   // Tolérance (45 %) · Objectifs (35 %) · Type de peau (20 %).
@@ -2246,7 +2267,7 @@
     for (var i = 0; i < k.length; i++) { h ^= k.charCodeAt(i); h = Math.imul(h, 16777619); }
     return (h >>> 0) % 7;
   }
-  function pickFor(zone, step, a, opts) {
+  function rankFor(zone, step, a, opts) {
     opts = opts || {};
     var tags = tagsOf(a), origins = a.origines || [];
     var list = allProducts().filter(function (p) { return !p.own && !p.med && p.zone === zone && p.step === step && (opts.exclude || []).indexOf(p.id) < 0; }).map(function (p) {
@@ -2276,7 +2297,13 @@
       var brandPen = (opts.brands || []).indexOf(p.brand) > -1 ? 12 : 0;
       return { p: p, bad: bad, score: fitScore(p, a).total + spec + needHit * 6 + Math.min(pref, 1) * 8 + orig + revB + heritage - brandPen + seedOf(a, p.id) };
     }).filter(function (x) { return !x.bad; }).sort(function (x, y) { return y.score - x.score; });
-    return list.length ? list[0].p : null;
+    return list;
+  }
+  function pickFor(zone, step, a, opts) { var l = rankFor(zone, step, a, opts); return l.length ? l[0].p : null; }
+  // 2 à 4 autres produits compatibles pour la même étape (mêmes filtres de sécurité), 1 par marque.
+  function compatibles(p, a, n) {
+    var seen = {}; seen[p.brand] = 1;
+    return rankFor(p.zone, p.step, a, { exclude: [p.id] }).filter(function (x) { if (seen[x.p.brand]) return false; seen[x.p.brand] = 1; return true; }).slice(0, n || 4).map(function (x) { return { p: x.p, s: fitScore(x.p, a).total }; });
   }
 
   function buildRoutine(a) {
@@ -2432,6 +2459,28 @@
     return groups;
   }
 
+  // Les bons mélanges et ceux à séparer, calculés sur les produits de la routine.
+  function actsOf(list) { var t = []; (list || []).forEach(function (it) { var p = it && byId(it.id); if (p) t = t.concat(p.act || []); }); return t; }
+  function mixAdvice(R) {
+    var m = actsOf(R.matin), so = actsOf(R.soir), h = actsOf(R.hebdo), all = m.concat(so).concat(h);
+    var has = function (l, x) { return l.indexOf(x) > -1; }, any = function (l, xs) { return xs.some(function (x) { return l.indexOf(x) > -1; }); };
+    var acid = ["aha", "bha", "pha"], good = [], warn = [];
+    if (has(all, "niacinamide") && has(all, "hyaluronique")) good.push(["Niacinamide + acide hyaluronique", "Un duo doux qui hydrate et équilibre, matin ou soir."]);
+    if (has(m, "vitc") && has(m, "spf")) good.push(["Vitamine C le matin + crème solaire", "Elles se complètent face aux effets du soleil."]);
+    if (has(all, "retinoides") && any(all, ["ceramides", "panthenol", "hyaluronique", "squalane"])) good.push(["Rétinoïde + céramides, panthénol ou acide hyaluronique", "La crème apaise et limite les irritations du rétinoïde."]);
+    if (any(all, acid) && any(all, ["ceramides", "hyaluronique", "panthenol"])) good.push(["Exfoliant + soin hydratant", "On compense le tiraillement que peuvent laisser les acides."]);
+    if (has(all, "azelaique") && has(all, "niacinamide")) good.push(["Acide azélaïque + niacinamide", "Rougeurs, marques et imperfections : un duo bien toléré."]);
+    if (has(all, "tranexamique") && any(all, ["niacinamide", "vitc", "arbutine"])) good.push(["Acide tranexamique + niacinamide ou vitamine C", "Un duo courant pour les taches, à utiliser avec une crème solaire."]);
+    if (has(all, "centella") && any(all, ["retinoides", "aha", "bha", "vitc"])) good.push(["Centella + actifs forts", "La centella apaise : elle s'associe à presque tout."]);
+    if (has(all, "vitc") && has(all, "niacinamide")) good.push(["Vitamine C + niacinamide", "Contrairement à une idée reçue, elles peuvent s'utiliser ensemble. Si ta peau rougit, sépare-les : vitamine C le matin, niacinamide le soir."]);
+    if (has(so, "retinoides") && any(so, acid)) warn.push(["Rétinoïde + acides exfoliants le même soir", "Trop irritant. Alterne : un soir rétinoïde, un soir exfoliant."]);
+    if (has(so, "retinoides") && any(h, acid)) warn.push(["Rétinoïde et exfoliant de la semaine", "Les soirs où tu utilises ton exfoliant ou ton masque aux acides, saute ton rétinoïde."]);
+    if ((has(m, "retinoides") && has(m, "vitc")) || (has(so, "retinoides") && has(so, "vitc"))) warn.push(["Rétinoïde + vitamine C au même moment", "Sépare-les : vitamine C le matin, rétinoïde le soir."]);
+    if ((has(m, "vitc") && any(m, acid)) || (has(so, "vitc") && any(so, acid))) warn.push(["Vitamine C + acides exfoliants ensemble", "Sépare-les pour limiter les picotements : vitamine C le matin, acides le soir."]);
+    if (acid.filter(function (x) { return has(so.concat(h), x); }).length >= 2 || (any(so, acid) && any(h, acid))) warn.push(["Plusieurs exfoliants", "Un seul exfoliant à la fois, 1 à 3 fois par semaine selon ta peau."]);
+    if (any(all, ["retinoides", "aha", "bha", "vitc"]) && !has(m, "spf")) warn.push(["Actifs qui sensibilisent au soleil", "Rétinoïde, acides et vitamine C demandent une crème solaire chaque matin."]);
+    return { good: good, warn: warn };
+  }
   function alternatives(p, a, n) {
     return allProducts().filter(function (x) { return x.id !== p.id && x.zone === p.zone && x.step === p.step; })
       .map(function (x) { return { p: x, s: fitScore(x, a).total }; }).sort(function (x, y) { return y.s - x.s; }).slice(0, n || 4);
@@ -2702,6 +2751,7 @@
     if (this.rtab === "douche" && R.reco.why.length) html += "<p class='why big'>" + esc(R.reco.why.join(" ")) + "</p>";
     if (!list.length) html += "<p class='empty'>Rien à ajouter ici pour ton profil : ta routine reste courte, c'est voulu.</p>";
     list.forEach(function (it, i) { html += self.routineCard(byId(it.id), it.step, i + 1, R.reco.scent); });
+    if (this.rtab === "matin" || this.rtab === "soir" || this.rtab === "hebdo") html += this.mixBox(R);
     if (this.rtab === "douche") html += this.shiftCollection(R.reco) + this.compareBox(R.reco);
     html += "<div class='cta row'><button class='btn ghost' data-act='addroutine'>Tout ajouter à mon étagère</button><button class='btn' data-view='today'>Continuer</button></div>";
     return html;
@@ -2729,9 +2779,17 @@
     var m = p.med;
     return "<div class='medbox'><b>Médicament · " + esc(m.statut) + "</b><p><b>Indication :</b> " + esc(m.ind) + "</p><p><b>Contre-indications :</b> " + esc(m.ci) + "</p><p><b>Précautions :</b> " + esc(m.prec) + "</p><small>Information générale, qui ne remplace ni la notice ni l'avis d'un médecin, d'un ou une dermatologue ou d'un pharmacien. Demande conseil avant de l'utiliser, surtout si tu es enceinte, allaites ou suis un autre traitement.</small></div>";
   };
+  A.mixBox = function (R) {
+    var mx = mixAdvice(R);
+    if (!mx.good.length && !mx.warn.length) return "";
+    return "<div class='whybox mixbox'><b>" + ic("flask") + " Tes ingrédients ensemble</b>" +
+      (mx.good.length ? "<p class='mixh ok'>" + ic("check") + " Ce qui va bien ensemble</p><ul class='tipl'>" + mx.good.map(function (g) { return "<li><b>" + esc(g[0]) + "</b> : " + esc(g[1]) + "</li>"; }).join("") + "</ul>" : "") +
+      (mx.warn.length ? "<p class='mixh ko'>" + ic("alert") + " À séparer ou à surveiller</p><ul class='tipl'>" + mx.warn.map(function (g) { return "<li><b>" + esc(g[0]) + "</b> : " + esc(g[1]) + "</li>"; }).join("") + "</ul>" : "") +
+      "<button class='btn link' data-act='mixguide'>Voir tous les bons mélanges</button></div>";
+  };
   A.routineCard = function (p, step, n, scent) {
     if (!p) return "";
-    var a = this.state.answers, s = fitScore(p, a), self = this, alts = p.own ? [] : alternatives(p, a, 4);
+    var a = this.state.answers, s = fitScore(p, a), self = this, alts = p.own ? [] : compatibles(p, a, 4);
     var html = "<article class='rcard'><div class='rtop'><span class='num'>" + n + "</span>" + (p.img ? "<img class='pthumb' src='" + esc(p.img) + "' alt='" + esc(p.name) + "' loading='lazy'>" : "<span class='ptile' aria-hidden='true'>" + esc(p.brand.replace(/[^A-Za-z\u00C0-\u00FF ]/g, "").split(" ").filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join("").toUpperCase()) + "</span>") + "<div class='rinfo'><small>" + esc(STEP_LABEL[step] || (step === "douche" ? "Ton rituel douche" : step === "recharge" ? "Recharge" : step)) + "</small><b>" + esc(p.name) + "</b><span>" + esc(p.brand) + (p.price ? " · " + euro(p.price) : "") + (p.origin ? " · " + esc(p.origin) : "") + "</span><div class='badges'>" + this.scoreBadge(s) + (p.madeIn ? "<span class='made'>Fabriqué " + esc(p.madeIn) + "</span>" : "") + (p.trend ? "<span class='made trend'>Tendance 2026</span>" : "") + (p.rev || []).map(function (r) { return "<span class='made rev'>" + esc(REV_LABEL[r]) + "</span>"; }).join("") + (p.founder ? "<span class='made fnd'>" + esc(p.founder) + "</span>" : "") + "</div></div><button class='heart' data-wish='" + p.id + "' aria-pressed='" + (this.state.wish.indexOf(p.id) > -1) + "' aria-label='Ajouter à mes souhaits'>♡</button></div>";
     html += "<div class='whybox'><b>Pourquoi on l'a choisi</b><p>" + esc(this.whyFor(p, s)) + "</p>" + this.actChips(p.act) + "<div class='qchips'>" + this.questionsFor(p).map(function (q) { return "<button class='qchip' data-ask='" + esc(q) + "' data-pid='" + p.id + "'>" + esc(q) + "</button>"; }).join("") + "</div></div>";
     if (p.own && P[p.key].colors) html += "<p class='alt-t'>Choisis ton coloris</p><div class='chipset'>" + P[p.key].colors.map(function (c) { return "<a class='chip' href='" + self.shop + "/cart/" + c[1] + ":1?utm_source=mon-rituel&utm_medium=app' target='_top' data-add='" + p.id + "'>" + c[0] + "</a>"; }).join("") + "</div>";
@@ -2739,7 +2797,7 @@
     html += "<div class='acts'>" + (p.own ? "<a class='btn' href='" + this.cartUrl(p.key, scent) + "' target='_top' data-add='" + p.id + "'>Ajouter au panier · " + euro(p.price) + "</a>" : "<a class='btn' href='" + esc(this.extUrl(p)) + "' target='_blank' rel='noopener' data-ext='" + p.id + "'>Où l'acheter ↗</a>") + "<button class='btn ghost' data-detail='" + p.id + "'>Détails</button></div>";
     var mv = this.mineFor("step", step) + this.mineFor("product", p.id.replace(/^[es]:/, ""));
     if (mv) html += "<div class='acts minefor'>" + mv + "</div>";
-    if (alts.length) html += "<p class='alt-t'>Autres options pour toi</p><div class='carousel'>" + alts.map(function (x) { return "<button class='mini' data-detail='" + x.p.id + "'><b>" + esc(x.p.name) + "</b><small>" + esc(x.p.brand) + " · " + esc(x.p.origin || "") + "</small>" + (x.p.med ? "<span class='fit medb'>Avis médical</span>" : "<span class='fit " + bandClass(x.s) + "'>" + x.s + " % adapté</span>") + "</button>"; }).join("") + "</div>";
+    if (alts.length) html += "<p class='alt-t'>" + (alts.length + 1) + " produits compatibles avec ton profil · touche pour comparer</p><div class='carousel'>" + alts.map(function (x) { return "<button class='mini' data-detail='" + x.p.id + "'><b>" + esc(x.p.name) + "</b><small>" + esc(x.p.brand) + " · " + esc(x.p.origin || "") + "</small>" + (x.p.med ? "<span class='fit medb'>Avis médical</span>" : "<span class='fit " + bandClass(x.s) + "'>" + x.s + " % adapté</span>") + "</button>"; }).join("") + "</div>";
     return html + "</article>";
   };
   A.whyFor = function (p, s) {
@@ -3713,6 +3771,7 @@
     if (d.act === "storyprev") { this.story.s = Math.max(0, this.story.s - 1); return this.render(); }
     if (d.act === "storynext") { var len = this.story.tuto ? TUTOS[this.story.tuto].slides.length : STORIES[this.story.i].slides.length; if (this.story.s < len - 1) this.story.s++; else this.story = null; return this.render(); }
     if (d.guide) { this.guide = d.guide === "close" ? null : { i: +d.guide }; return this.render(); }
+    if (d.act === "mixguide") { this.view = "ressources"; this.rsTab = "guides"; this.guide = { i: MIX_GUIDE }; return this.render(); }
     if (d.wish) { var w = s.wish.indexOf(d.wish); if (w > -1) s.wish.splice(w, 1); else s.wish.push(d.wish); this.save(); return this.render(); }
     if (d.shelf) { var h = s.shelf.indexOf(d.shelf); if (h > -1) s.shelf.splice(h, 1); else s.shelf.push(d.shelf); this.save(); return this.render(); }
     if (d.mood) { s.journal[iso()] = d.mood; this.save(); if (d.mood <= "2") this.chat.push({ role: "assistant", content: "Ta peau traverse un jour difficile. Garde une routine douce : nettoyant doux, hydratant, protection solaire, et pas de nouvel actif aujourd'hui. Si l'inconfort dure, parles-en à un ou une dermatologue." }); return this.render(); }

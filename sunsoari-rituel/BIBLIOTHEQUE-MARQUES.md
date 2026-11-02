@@ -307,3 +307,19 @@ Aucune marque japonaise **créée spécifiquement** pour les peaux noires n'a é
 | NINELESS | Hydra Max Deep Infusion Serum | Peau sèche ou mature | Hydratation. |
 
 Je n'ai pas trouvé de gamme NINELESS officiellement « peau mature » : ses sérums ciblent surtout l'éclat, les taches et l'hydratation, des besoins fréquents après 40 ans.
+
+## Bibliothèque visage élargie (novembre 2026)
+
+228 produits ajoutés, du monde entier : Corée, Japon, France, États-Unis, Royaume-Uni, Canada, Espagne, Allemagne, Suisse, Inde, Australie, Nigeria. Chaque catégorie compte au moins 10 produits pour chaque type de peau (sèche, mixte à grasse, normale, sensible).
+
+| Catégorie | Total au catalogue |
+|---|---|
+| Démaquillants (huiles, baumes, laits, eaux micellaires) | 49 |
+| Nettoyants | 51 |
+| Toniques et disques (toner pads) | 53 |
+| Sérums | 107 |
+| Masques | 40 |
+| Hydratants (crèmes et gels) | 90 |
+| Solaires | 43 |
+
+Ce sont des références connues, ajoutées pour enrichir les recommandations : cela ne veut pas dire que Sunsoari les vend. Les noms viennent de mémoire et de catalogues publics : vérifie la référence exacte et sa liste INCI avant de mettre un produit en avant.

@@ -14,7 +14,7 @@ L'application est hébergée sur GitHub (dépôt public) et servie par jsDelivr,
   {%- if customer and customer.tags contains 'sunsoari-admin' %} data-admin data-admin-url="https://admin.shopify.com/store/{{ shop.permanent_domain | remove: '.myshopify.com' }}"{% endif %}
   data-login-url="{{ routes.account_login_url }}"
   data-register-url="{{ routes.account_register_url }}"></div>
-<script charset="utf-8" src="https://cdn.jsdelivr.net/gh/madbym/skills-introduction-to-githu@cfb52074713911d09fc7c506e4a0b29934d389e9/sunsoari-rituel/sunsoari-app.js" defer></script>
+<script charset="utf-8" src="https://cdn.jsdelivr.net/gh/madbym/skills-introduction-to-githu@ec2569d6fd60874bc674a07a7d02d5e7501d5d9b/sunsoari-rituel/sunsoari-app.js" defer></script>
 {%- endif -%}
 ```
 

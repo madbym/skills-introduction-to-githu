@@ -3172,7 +3172,7 @@
     var self = this, plan = this.plan || "annuel", pay = this.pay || "applepay";
     if (pay === "klarna" && plan === "mensuel") pay = "applepay";
     var html = "<figure class='amb short'><img src='" + photo(AMB.plus) + "' alt='' loading='lazy'></figure><div class='plushead'><span class='tag'>Sunsoari+</span><h3>Va plus loin dans ton rituel</h3><p>7 jours d'essai gratuit, puis " + PLANS[plan].price + " " + PLANS[plan].per + ".</p></div>";
-    html += "<ul class='perks'>" + ["Mon planner et mes rappels (routine, recharges)", "Mon évolution : photos et ressenti dans le temps", "Ma semaine : mon plan d'introduction, produit par produit", "Les vidéos et stories de l'Académie", "L'analyse photo et vidéo par l'IA", "L'assistante beauté sans limite", "Un nouveau diagnostic à chaque saison"].map(function (x) { return "<li>" + icon("heart") + "<span>" + esc(x) + "</span></li>"; }).join("") + "</ul>";
+    html += "<ul class='perks'>" + ["Mon planner et mes rappels (routine, recharges)", "Mon évolution : photos et ressenti dans le temps", "Ma semaine : mon plan d'introduction, produit par produit", "Les stories, guides et pas-à-pas de l'Académie (et les vidéos dès leur sortie)", "L'analyse photo et vidéo par l'IA", "L'assistante beauté sans limite", "Un nouveau diagnostic à chaque saison"].map(function (x) { return "<li>" + icon("heart") + "<span>" + esc(x) + "</span></li>"; }).join("") + "</ul>";
     html += "<div class='plans'>" + Object.keys(PLANS).map(function (k) { var P2 = PLANS[k]; return "<button class='plan2' data-plan='" + k + "' aria-pressed='" + (plan === k) + "'>" + (k === "annuel" ? "<span class='best'>Meilleure offre</span>" : "") + "<b>" + P2.label + "</b><span class='pr'>" + P2.price + " <small>" + P2.per + "</small></span><small>" + P2.note + "</small></button>"; }).join("") + "</div>";
     html += "<p class='alt-t'>Moyen de paiement</p><div class='paylist'>" + PAY.map(function (m) { var off = m[0] === "klarna" && plan === "mensuel"; return "<button class='pay' data-pay='" + m[0] + "' aria-pressed='" + (pay === m[0]) + "'" + (off ? " disabled" : "") + "><b>" + m[1] + "</b><small>" + esc(off ? "Disponible avec l'abonnement annuel" : m[2]) + "</small><span class='rad'></span></button>"; }).join("") + "</div>";
     var co = this.host.getAttribute("data-checkout-url");
@@ -3826,7 +3826,8 @@
   A.contentItems = function () {
     var items = [];
     STORIES.forEach(function (st, i) { items.push({ id: "story:" + i, type: "article", title: st.title, sub: st.rub, open: "data-story='" + i + "'", img: st.img ? photo(st.img) : "" }); });
-    Object.keys(TUTOS).forEach(function (k) { items.push({ id: "tuto:" + k, type: "video", title: TUTOS[k].title, sub: "Tutoriel", open: "data-tuto='" + k + "'" }); });
+    var self = this;
+    Object.keys(TUTOS).forEach(function (k) { var v = self.tutoVideo(k); items.push({ id: "tuto:" + k, type: v ? "video" : "article", title: TUTOS[k].title, sub: v ? "Tutoriel vidéo" : "Pas-à-pas", open: "data-tuto='" + k + "'" }); });
     GUIDES.forEach(function (g, i) { items.push({ id: "guide:" + i, type: "article", title: g.title, sub: g.tag, open: "data-guide='" + i + "'" }); });
     this.mine().forEach(function (c) { if (!c.draft) items.push({ id: "ext:" + c.id, type: c.type === "video" ? "video" : c.type === "article" ? "article" : "post", title: c.title, sub: "Sunsoari", open: "data-mine='" + esc(c.id) + "'", img: c.poster || "" }); });
     return items;
@@ -3840,6 +3841,12 @@
     var src = (small && this.homeVideoSmall) || this.homeVideo || this.homeVideoSmall;
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     return src && !reduce ? "<video class='wvid' src='" + esc(src) + "' poster='" + esc(photo(AMB.accueilV)) + "' autoplay muted loop playsinline preload='metadata' aria-hidden='true'></video>" : "";
+  };
+  // Tant qu'un tutoriel n'a pas de vidéo, il s'affiche comme un pas-à-pas illustré (pas de ▶ vide).
+  A.tutoVideo = function (k) {
+    if (TUTOS[k] && TUTOS[k].video) return TUTOS[k].video;
+    var v = this.mine().filter(function (c) { return !c.draft && c.type === "video" && c.file && c.step === k; })[0];
+    return v ? v.file : "";
   };
   A.mine = function () {
     var admin = this.admin;
@@ -3890,7 +3897,8 @@
       if (s.done && !name && !s.emailSent && !s.answers.email) html += "<button class='reco-card' data-act='finopen'><b>Reçois ta routine par e-mail</b><span>Et crée ton espace pour le retrouver partout</span></button>";
       if (s.done) html += "<button class='reco-card' data-view='reveal'><b>" + (a.prenom ? esc(a.prenom) + ", ta routine" : "Ma routine") + "</b><span>Diagnostic du " + new Date(s.doneAt || Date.now()).toLocaleDateString("fr-FR") + "</span></button>";
     }
-    var tab = this.ftab || "produits", tabs = [["produits", "Produits"], ["article", "Articles"], ["video", "Vidéos"], ["post", "Posts"]];
+    var allC = this.contentItems(), tabs = [["produits", "Produits"], ["article", "Articles"], ["video", "Vidéos"], ["post", "Posts"]].filter(function (t) { return t[0] === "produits" || t[0] === "article" || allC.some(function (c) { return c.type === t[0]; }); });
+    var tab = tabs.some(function (t) { return t[0] === self.ftab; }) ? this.ftab : "produits";
     html += "<p class='sect left'>Mes favoris</p><div class='seg-tabs'>" + tabs.map(function (t) { return "<button data-ftab='" + t[0] + "' aria-pressed='" + (tab === t[0]) + "'>" + t[1] + "</button>"; }).join("") + "</div>";
     if (tab === "produits") {
       var list = s.wish.map(byId).filter(Boolean);
@@ -3919,7 +3927,7 @@
     ["Sunsoari", "Mythe ou vérité", "Académie"].forEach(function (rub) {
       html += "<p class='sect left'>" + esc(rub) + "</p><div class='carousel stories'>" + STORIES.map(function (st, i) { return st.rub === rub ? "<button class='storycard " + st.tone + (st.img ? " ph" : "") + "' data-story='" + i + "'" + (st.img ? " style=\"background-image:linear-gradient(180deg,rgba(251,248,243,0) 35%,rgba(251,248,243,.92) 78%),url('" + photo(st.img) + "')\"" : "") + "><span class='tag'>" + (rub === "Mythe ou vérité" ? "Mythe ou vérité" : rub === "Académie" ? "Académie" : "Sunsoari") + " · " + st.slides.length + " écrans" + (storyLocked(i) && !self.hasPlus() ? " · " + ic("lock") + " Sunsoari+" : "") + "</span><b>" + esc(st.title) + "</b></button>" : ""; }).join("") + "</div>";
     });
-    html += "<p class='sect left'>Tutoriels</p><div class='carousel stories'>" + Object.keys(TUTOS).map(function (k) { return "<button class='storycard water' data-tuto='" + k + "'><span class='tag'>Tutoriel · " + TUTOS[k].slides.length + " étapes</span><b>" + esc(TUTOS[k].title) + "</b></button>"; }).join("") + "</div><p class='sect left'>Guides</p>";
+    html += "<p class='sect left'>Pas-à-pas</p><div class='carousel stories'>" + Object.keys(TUTOS).map(function (k) { return "<button class='storycard water' data-tuto='" + k + "'><span class='tag'>" + (self.tutoVideo(k) ? "Tutoriel vidéo" : "Pas-à-pas") + " · " + TUTOS[k].slides.length + " étapes</span><b>" + esc(TUTOS[k].title) + "</b></button>"; }).join("") + "</div><p class='sect left'>Guides</p>";
     var feed = this.contentItems();
     html += "<p class='sect left'>À garder en favoris</p><div class='clist'>" + feed.filter(function (c) { return c.type !== "article" || c.id.indexOf("story:") === 0; }).slice(0, 14).map(function (c) { return self.contentRow(c); }).join("") + "</div>";
     html += "<div class='guides'>" + GUIDES.map(function (g, i) { return "<button class='guide' data-guide='" + i + "'><span class='tag'>" + esc(g.tag) + "</span><b>" + esc(g.title) + "</b><small>" + esc(g.sub) + "</small></button>"; }).join("") + "</div>";
@@ -3930,6 +3938,8 @@
     var lab = { mythe: "Mythe", verite: "Vérité", astuce: "Astuce", etape: "Étape" }[sl.k] || "";
     var html = "<div class='storyview " + data.tone + "' role='dialog' aria-label='" + esc(data.title) + "'><div class='sbar'>" + data.slides.map(function (x, i) { return "<i class='" + (i < st.s ? "done" : i === st.s ? "now" : "") + "'></i>"; }).join("") + "</div>";
     html += "<div class='shead'><span>" + esc(data.title) + "</span>" + this.favBtn(st.tuto ? "tuto:" + st.tuto : "story:" + st.i) + "<button class='x light' data-act='closestory' aria-label='Fermer'>×</button></div>";
+    var tv = st.tuto && st.s === 0 ? this.tutoVideo(st.tuto) : "";
+    if (tv) html += "<video class='minevid' src='" + esc(tv) + "' controls playsinline preload='metadata'></video>";
     html += "<div class='sbody'>" + (lab ? "<span class='slab " + sl.k + "'>" + lab + "</span>" : "") + "<h3>" + esc(sl.t) + "</h3>" + (sl.d ? "<p>" + esc(sl.d) + "</p>" : "") + "</div>";
     html += "<button class='snav prev' data-act='storyprev' aria-label='Écran précédent'></button><button class='snav next' data-act='storynext' aria-label='Écran suivant'></button>";
     html += "<p class='shint'>" + (st.s < data.slides.length - 1 ? "Touche à droite pour continuer" : "Touche pour terminer") + "</p></div>";
@@ -4008,7 +4018,7 @@
     var tk = TUTOS[p.step] ? p.step : p.step === "douche" ? "douche" : p.step === "nettoyant" ? "demaquillant" : null;
     var mv2 = this.mineFor("product", p.id.replace(/^[es]:/, ""));
     if (mv2) html += "<div class='acts minefor'>" + mv2 + "</div>";
-    if (tk) html += "<button class='btn ghost' data-tuto='" + tk + "'>▶ Tutoriel : " + esc(TUTOS[tk].title) + "</button>";
+    if (tk) html += "<button class='btn ghost' data-tuto='" + tk + "'>" + (this.tutoVideo(tk) ? "▶ Tutoriel vidéo : " : ic("book") + " Le pas-à-pas : ") + esc(TUTOS[tk].title) + "</button>";
     html += "<div class='acts'>" + (p.own ? "<a class='btn' href='" + this.cartUrl(p.key, R.scent) + "' target='_top' data-add='" + p.id + "'>Ajouter au panier · " + euro(p.price) + "</a>" : p.id.indexOf("x:") ? "<a class='btn' href='" + esc(this.extUrl(p)) + "' target='_blank' rel='noopener' data-ext='" + p.id + "'>Où l'acheter ↗</a>" : "") + "<button class='btn ghost' data-shelf='" + p.id + "'>" + (this.state.shelf.indexOf(p.id) > -1 ? "Sur mon étagère ✓" : "Ajouter à mon étagère") + "</button><button class='btn ghost' data-wish='" + p.id + "'>" + (this.state.wish.indexOf(p.id) > -1 ? ic("heart") + " Dans mes souhaits" : ic("heart") + " Souhaits") + "</button></div>";
     html += "<div class='qchips'>" + this.questionsFor(p).map(function (q) { return "<button class='qchip' data-ask='" + esc(q) + "' data-pid='" + p.id + "'>" + esc(q) + "</button>"; }).join("") + "</div>";
     if (!p.own && p.id.indexOf("x:")) html += "<p class='note'>Marque non vendue par Sunsoari et non partenaire. Vérifie la liste d'ingrédients sur l'emballage : les formules varient selon les pays.</p>";

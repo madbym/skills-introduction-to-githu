@@ -323,3 +323,23 @@ Je n'ai pas trouvé de gamme NINELESS officiellement « peau mature » : ses sé
 | Solaires | 43 |
 
 Ce sont des références connues, ajoutées pour enrichir les recommandations : cela ne veut pas dire que Sunsoari les vend. Les noms viennent de mémoire et de catalogues publics : vérifie la référence exacte et sa liste INCI avant de mettre un produit en avant.
+
+## Asie, Afrique et Turquie : 273 produits visage de plus (novembre 2026)
+
+Démaquillants 40, nettoyants 40, toniques et disques 36, sérums 39, masques 38, hydratants 42, solaires 38.
+
+| Origine | Produits ajoutés |
+|---|---|
+| Corée | 97 |
+| Japon | 47 |
+| Turquie | 30 |
+| Inde | 20 |
+| Chine | 15 |
+| Indonésie | 14 |
+| Taïwan | 13 |
+| Vietnam | 8 |
+| Afrique (Afrique du Sud, Ghana, Maroc, Kenya, Togo) et diaspora | 20 |
+
+**Les « gammes » :** pour la Turquie, la Chine et l'Afrique, plusieurs marques ne publient pas de nom de produit précis accessible en ligne. Ces entrées portent le mot « Gamme » ou la mention « vérifie la référence exacte ». L'app les place après les produits précis dans les recommandations.
+
+Le catalogue compte maintenant **plus de 960 produits**.

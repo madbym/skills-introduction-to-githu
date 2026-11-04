@@ -1,0 +1,14 @@
+@page { margin:0 }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,sans-serif;color:#2e211a;-webkit-print-color-adjust:exact}
+.st{width:35mm;height:25mm;padding:1.4mm 1.6mm;background:#fff;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}
+.st.cut{outline:0.1mm dashed #bbb}
+.t1{font-size:5.4pt;font-weight:700;letter-spacing:.02em;line-height:1.05}
+.t2{font-size:4.6pt;font-weight:500;line-height:1.1;color:#8a5a36}
+.row{display:flex;justify-content:space-between;align-items:flex-end}
+.qty{font-size:5.4pt;font-weight:700}
+.p{font-size:3.7pt;line-height:1.18}
+.p b{font-weight:600}
+.ic{display:flex;gap:.8mm;align-items:center}
+.ic svg{height:3.6mm;width:auto}
+.ft{font-size:3.4pt;line-height:1.15;color:#4a382c}
